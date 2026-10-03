@@ -2,7 +2,7 @@ name: Publicar painel
 
 on:
   push:
-    branches: [main]
+    branches: [develope]
   workflow_dispatch:
 
 permissions:
