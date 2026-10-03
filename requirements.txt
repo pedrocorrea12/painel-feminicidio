@@ -1,0 +1,2 @@
+# Dependências documentadas em docs/AMBIENTE.md.
+

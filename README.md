@@ -66,4 +66,3 @@ C:\Users\User\anaconda3\python.exe pipeline\fetch_populacao_feminina.py
 
 O painel diferencia explicitamente notificações do SINAN, mortes por agressão do SIM e feminicídio jurídico-policial.
 
-

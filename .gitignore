@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Dados brutos e intermediarios: nunca publicar no repositorio
+data/bronze/**
+!data/bronze/README.md
+data/silver/**
+!data/silver/README.md
+
+# Dados Gold agregados e publicaveis permanecem versionados
+
+# Ambientes e ferramentas
+.env
+.env.*
+!.env.example
+.sites-runtime/
+dashboard/.openai/
+dashboard/.git.sites-backup/
+tools/sites-package.ps1
+.DS_Store
+Thumbs.db
+
