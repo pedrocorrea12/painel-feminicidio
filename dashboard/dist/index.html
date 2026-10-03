@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Indicadores de violência contra a mulher em Santa Catarina, com dados do SINAN e referências do SIM.">
+  <title>Violência contra a mulher — Santa Catarina</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131722'/%3E%3Cpath d='M18 45V31M32 45V20M46 45V12' stroke='%23ff3d71' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir para o início">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Observatório <strong>Elas</strong></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#territorios">Série histórica</a>
+      <a href="#municipios">Municípios</a>
+      <a href="#metodologia">Metodologia</a>
+    </nav>
+    <span class="source-pill">SINAN + População · 2015–2024</span>
+  </header>
+
+  <main id="inicio">
+    <section class="intro shell" aria-labelledby="titulo">
+      <div>
+        <p class="eyebrow">20 anos da Lei Maria da Penha</p>
+        <h1 id="titulo">A violência deixa rastros.<br><span>Os dados ajudam a enxergá-los.</span></h1>
+      </div>
+      <p class="lede">Notificações de violência interpessoal contra mulheres, organizadas pelo território de residência da vítima. Explore o Brasil, Santa Catarina e Florianópolis.</p>
+    </section>
+
+    <section class="workspace shell" id="territorios" aria-labelledby="explorar-titulo">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Visão territorial</p>
+          <h2 id="explorar-titulo">O que foi notificado</h2>
+        </div>
+        <div class="segmented" role="group" aria-label="Selecionar território">
+          <button type="button" data-territorio="brasil">Brasil</button>
+          <button type="button" data-territorio="santa_catarina" class="active" aria-pressed="true">Santa Catarina</button>
+          <button type="button" data-territorio="florianopolis">Florianópolis</button>
+        </div>
+      </div>
+
+      <div class="metric-grid" aria-live="polite">
+        <article class="metric featured"><span>Notificações em 2024</span><strong id="kpi-total">—</strong><small id="kpi-variacao">carregando série</small></article>
+        <article class="metric warning"><span>Taxa em 2024</span><strong id="kpi-taxa">—</strong><small id="kpi-populacao">por 100 mil mulheres</small></article>
+        <article class="metric"><span>Parceiro ou ex-parceiro</span><strong id="kpi-parceiro">—</strong><small id="kpi-percentual">— do total</small></article>
+        <article class="metric"><span>Ocorridas na residência</span><strong id="kpi-residencia">—</strong><small>local informado como residência</small></article>
+      </div>
+
+      <article class="panel chart-panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">2015–2024</p><h3>Evolução das notificações</h3></div>
+          <div class="legend"><span><i class="dot total"></i>Total</span><span><i class="dot partner"></i>Parceiro/ex</span></div>
+        </div>
+        <div id="series-chart" class="chart" role="img" aria-label="Gráfico da evolução anual das notificações"></div>
+      </article>
+    </section>
+
+    <section class="municipal shell" id="municipios" aria-labelledby="municipios-titulo">
+      <div class="section-head">
+        <div><p class="eyebrow">Santa Catarina · 2024</p><h2 id="municipios-titulo">Onde o vínculo íntimo aparece mais</h2></div>
+        <p class="section-note">Ranking por número de notificações envolvendo parceiro ou ex-parceiro. Volume não é taxa populacional.</p>
+      </div>
+      <div class="split-grid">
+        <article class="panel ranking-panel">
+          <div id="ranking" class="ranking" aria-label="Ranking municipal"></div>
+        </article>
+        <aside class="insight-card">
+          <p class="eyebrow">Florianópolis</p>
+          <strong>120</strong>
+          <p>notificações envolveram parceiro ou ex-parceiro em 2024.</p>
+          <div class="rule"></div>
+          <p class="quiet">O indicador mede notificações registradas na saúde. Um valor menor pode refletir menos violência, menor acesso ao serviço ou subnotificação.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="profile shell" aria-labelledby="perfil-titulo">
+      <div class="section-head">
+        <div><p class="eyebrow">Perfil das notificações</p><h2 id="perfil-titulo">A violência assume formas diferentes</h2></div>
+      </div>
+      <div class="split-grid equal">
+        <article class="panel"><h3>Por raça/cor</h3><div id="race-chart" class="bar-list"></div></article>
+        <article class="panel"><h3>Tipos registrados</h3><p class="quiet">Uma notificação pode conter mais de um tipo.</p><div id="type-chart" class="bar-list accent"></div></article>
+      </div>
+    </section>
+
+    <section class="method shell" id="metodologia" aria-labelledby="metodo-titulo">
+      <div><p class="eyebrow">Como ler</p><h2 id="metodo-titulo">Três fenômenos, um denominador</h2></div>
+      <div class="method-grid">
+        <article><span>01</span><h3>SINAN</h3><p>Notificações feitas pela rede de saúde. Não representam todas as ocorrências.</p></article>
+        <article><span>02</span><h3>SIM</h3><p>Mortes de mulheres por agressão, CID-10 X85–Y09. Não identifica motivação de gênero.</p></article>
+        <article><span>03</span><h3>Sinesp</h3><p>Classificação jurídico-policial de feminicídio. Integração prevista para a próxima etapa.</p></article>
+        <article><span>04</span><h3>População feminina</h3><p>Denominador do Ministério da Saúde/RIPSA usado para calcular taxas por 100 mil mulheres.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell"><span>Fontes: Ministério da Saúde · DataSUS · IBGE</span><span id="updated">Atualização dos dados: —</span></footer>
+  <noscript>Este painel precisa de JavaScript para carregar os dados.</noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
+
