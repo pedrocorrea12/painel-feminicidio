@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Indicadores de violência contra a mulher em Santa Catarina, com dados do SINAN e referências do SIM.">
   <title>Violência contra a mulher — Santa Catarina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;650;750&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131722'/%3E%3Cpath d='M18 45V31M32 45V20M46 45V12' stroke='%23ff3d71' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="editorial.css">
 </head>
 <body>
   <header class="topbar">
@@ -19,23 +22,23 @@
       <a href="#municipios">Municípios</a>
       <a href="#metodologia">Metodologia</a>
     </nav>
-    <span class="source-pill">SINAN + População · 2015–2024</span>
+    <span class="source-note">SINAN · 2015–2024</span>
   </header>
 
   <main id="inicio">
     <section class="intro shell" aria-labelledby="titulo">
       <div>
-        <p class="eyebrow">20 anos da Lei Maria da Penha</p>
-        <h1 id="titulo">A violência deixa rastros.<br><span>Os dados ajudam a enxergá-los.</span></h1>
+        <p class="eyebrow">Caderno de dados · Santa Catarina</p>
+        <h1 id="titulo">Notificações contra mulheres, <span>território por território.</span></h1>
       </div>
-      <p class="lede">Notificações de violência interpessoal contra mulheres, organizadas pelo território de residência da vítima. Explore o Brasil, Santa Catarina e Florianópolis.</p>
+      <p class="lede">Uma leitura de 2015 a 2024 dos registros feitos pela rede de saúde, organizados pelo município de residência da vítima. Os números mostram notificações — não a totalidade da violência.</p>
     </section>
 
     <section class="workspace shell" id="territorios" aria-labelledby="explorar-titulo">
       <div class="section-head">
         <div>
           <p class="eyebrow">Visão territorial</p>
-          <h2 id="explorar-titulo">O que foi notificado</h2>
+          <h2 id="explorar-titulo">A série em números</h2>
         </div>
         <div class="segmented" role="group" aria-label="Selecionar território">
           <button type="button" data-territorio="brasil">Brasil</button>
@@ -45,8 +48,8 @@
       </div>
 
       <div class="metric-grid" aria-live="polite">
-        <article class="metric featured"><span>Notificações em 2024</span><strong id="kpi-total">—</strong><small id="kpi-variacao">carregando série</small></article>
-        <article class="metric warning"><span>Taxa em 2024</span><strong id="kpi-taxa">—</strong><small id="kpi-populacao">por 100 mil mulheres</small></article>
+        <article class="metric featured"><span>Notificações registradas em 2024</span><strong id="kpi-total">—</strong><small id="kpi-variacao">carregando série</small></article>
+        <article class="metric warning"><span>Taxa por 100 mil mulheres</span><strong id="kpi-taxa">—</strong><small id="kpi-populacao">população usada no cálculo</small></article>
         <article class="metric"><span>Parceiro ou ex-parceiro</span><strong id="kpi-parceiro">—</strong><small id="kpi-percentual">— do total</small></article>
         <article class="metric"><span>Ocorridas na residência</span><strong id="kpi-residencia">—</strong><small>local informado como residência</small></article>
       </div>
@@ -83,9 +86,9 @@
       <div class="section-head">
         <div><p class="eyebrow">Perfil das notificações</p><h2 id="perfil-titulo">A violência assume formas diferentes</h2></div>
       </div>
-      <div class="split-grid equal">
-        <article class="panel"><h3>Por raça/cor</h3><div id="race-chart" class="bar-list"></div></article>
-        <article class="panel"><h3>Tipos registrados</h3><p class="quiet">Uma notificação pode conter mais de um tipo.</p><div id="type-chart" class="bar-list accent"></div></article>
+      <div class="split-grid equal profile-grid">
+        <article class="panel"><p class="table-kicker">Distribuição registrada</p><h3>Por raça/cor</h3><div id="race-chart" class="bar-list"></div></article>
+        <article class="panel"><p class="table-kicker">Categorias não excludentes</p><h3>Tipos registrados</h3><p class="quiet">Uma notificação pode conter mais de um tipo.</p><div id="type-chart" class="bar-list accent"></div></article>
       </div>
     </section>
 
