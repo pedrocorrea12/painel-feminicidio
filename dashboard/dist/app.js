@@ -43,8 +43,8 @@ function renderSeries(series) {
     ${series.map(d => `<text x="${x(d.ano)}" y="${height-12}" text-anchor="middle">${d.ano}</text>`).join('')}
     <path class="line-total" d="${linePath(total, x, y)}"/>
     <path class="line-partner" d="${linePath(partner, x, y)}"/>
-    ${total.map(d => `<circle cx="${x(d.ano)}" cy="${y(d.valor)}" r="4" fill="#5b4acb"><title>${d.ano}: ${format.format(d.valor)}</title></circle>`).join('')}
-    ${partner.map(d => `<circle cx="${x(d.ano)}" cy="${y(d.valor)}" r="3" fill="#e82f68"><title>${d.ano}: ${format.format(d.valor)}</title></circle>`).join('')}
+    ${total.map(d => `<circle cx="${x(d.ano)}" cy="${y(d.valor)}" r="4" fill="#1d1b18"><title>${d.ano}: ${format.format(d.valor)}</title></circle>`).join('')}
+    ${partner.map(d => `<circle cx="${x(d.ano)}" cy="${y(d.valor)}" r="3" fill="#981f35"><title>${d.ano}: ${format.format(d.valor)}</title></circle>`).join('')}
   </svg>`;
   target.setAttribute('aria-label', `Evolução das notificações em ${territoryLabel[current]}, de ${format.format(series[0].notificacoes)} em ${series[0].ano} para ${format.format(series.at(-1).notificacoes)} em ${series.at(-1).ano}. A taxa mais recente é ${Number(series.at(-1).taxa_notificacoes_100mil).toLocaleString('pt-BR', { maximumFractionDigits: 1 })} por 100 mil mulheres.`);
 }
@@ -58,21 +58,27 @@ function compact(value) {
 function renderRanking() {
   const top = data.municipios_sc_2024.slice(0, 10);
   const max = top[0].parceiro;
-  document.querySelector('#ranking').innerHTML = top.map((d, index) => `<div class="rank-row">
+  document.querySelector('#ranking').innerHTML = top.map((d, index) => {
+    const share = d.parceiro / max * 100;
+    return `<div class="rank-row" aria-label="${d.municipio}: ${format.format(d.parceiro)} notificações, ${percent(share)} do maior valor do ranking">
     <span class="position">${String(index + 1).padStart(2, '0')}</span>
     <span>${d.municipio}</span>
-    <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${d.parceiro/max*100}%"></span></span>
+    <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:${share}%"></span></span>
     <strong>${format.format(d.parceiro)}</strong>
-  </div>`).join('');
+  </div>`;
+  }).join('');
 }
 
 function renderBars(selector, items, labelKey) {
   const max = Math.max(...items.map(d => d.notificacoes));
-  document.querySelector(selector).innerHTML = items.map(d => `<div class="bar-item">
+  document.querySelector(selector).innerHTML = items.map(d => {
+    const share = d.notificacoes / max * 100;
+    return `<div class="bar-item" aria-label="${d[labelKey]}: ${format.format(d.notificacoes)} notificações, ${percent(share)} do maior valor desta tabela">
     <span>${d[labelKey]}</span>
-    <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:${d.notificacoes/max*100}%"></span></span>
-    <strong>${compact(d.notificacoes)}</strong>
-  </div>`).join('');
+    <span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--bar-size:${share}%"></span></span>
+    <strong>${format.format(d.notificacoes)}</strong>
+  </div>`;
+  }).join('');
 }
 
 function updateTerritory(next) {
