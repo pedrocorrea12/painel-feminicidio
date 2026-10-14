@@ -150,19 +150,40 @@ button { color: inherit; }
 .municipal-table { max-height: 620px; overflow: auto; }
 .municipal-table thead { position: sticky; top: 0; z-index: 1; background: var(--paper); }
 
-.method-layout { padding: 3.5rem 0 6rem; display: grid; grid-template-columns: .75fr 1.25fr; gap: 5rem; }
+.method-layout { padding: 3.5rem 0 6rem; display: grid; grid-template-columns: minmax(260px, .55fr) minmax(0, 1.45fr); gap: 5rem; align-items: start; }
 .method-lead { border-top: 5px solid var(--wine); padding-top: 1.5rem; }
 .pull-quote { margin: 0 0 1.5rem; font-family: var(--serif); font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.2; }
-.method-lead > p:last-child { color: var(--muted); }
-.method-list { border-top: 2px solid var(--ink); }
-.method-list article { display: grid; grid-template-columns: 45px 1fr; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
-.method-list article > span { color: var(--wine); font-size: .7rem; font-weight: 800; }
-.method-list h2 { margin: 0 0 .3rem; font-family: var(--serif); font-size: 1.35rem; font-weight: 400; }
-.method-list p { margin: 0; color: var(--muted); font-size: .86rem; }
-.technical-notes { grid-column: 1 / -1; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line-dark); }
-.technical-notes div { padding: 1rem 1rem 0 0; }
-.technical-notes dt { color: var(--muted); font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.technical-notes dd { margin: .3rem 0 0; font-size: .82rem; }
+.method-lead > p:nth-child(2) { color: var(--muted); }
+.method-summary { margin: 2rem 0 0; border-top: 1px solid var(--line-dark); }
+.method-summary div { display: grid; grid-template-columns: 85px 1fr; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid var(--line); }
+.method-summary dt { color: var(--muted); font-size: .65rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.method-summary dd { margin: 0; font-size: .78rem; }
+.method-detail { min-width: 0; }
+.method-section { margin-bottom: 4.5rem; }
+.method-section > header { display: grid; grid-template-columns: 35px 1fr; gap: 1rem; padding-bottom: 1.2rem; border-bottom: 2px solid var(--ink); }
+.method-section > header h2 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 400; line-height: 1; }
+.method-section > header p:not(.section-index) { margin: .4rem 0 0; color: var(--muted); font-size: .78rem; }
+.source-record { display: grid; grid-template-columns: minmax(210px, .7fr) minmax(0, 1.3fr); gap: 2.2rem; padding: 1.7rem 0; border-bottom: 1px solid var(--line); }
+.source-record__title h3 { margin: .2rem 0 .45rem; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; line-height: 1.15; }
+.source-record__title > p:not(.source-tag) { margin: 0 0 .7rem; color: var(--muted); font-size: .78rem; }
+.source-record__title a { color: var(--ink); font-size: .72rem; font-weight: 700; text-underline-offset: 3px; }
+.source-tag { margin: 0; color: var(--wine); font-size: .65rem; font-weight: 800; letter-spacing: .12em; }
+.source-record dl { margin: 0; }
+.source-record dl div { display: grid; grid-template-columns: 120px 1fr; gap: 1rem; padding: .55rem 0; border-bottom: 1px dotted var(--line); }
+.source-record dl div:last-child { border-bottom: 0; }
+.source-record dt { color: var(--muted); font-size: .64rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
+.source-record dd { min-width: 0; margin: 0; font-size: .78rem; line-height: 1.55; }
+.method-detail code { font-family: "SFMono-Regular", Consolas, monospace; font-size: .74rem; overflow-wrap: anywhere; }
+.formula-list { display: grid; grid-template-columns: repeat(2, 1fr); }
+.formula-list article { padding: 1.35rem 1.7rem 1.45rem 0; border-bottom: 1px solid var(--line); }
+.formula-list article:nth-child(even) { padding-left: 1.7rem; border-left: 1px solid var(--line); }
+.formula-list h3 { margin: 0 0 .3rem; font-family: var(--serif); font-size: 1.15rem; font-weight: 400; }
+.formula-list p { min-height: 2.5rem; margin: 0 0 .65rem; color: var(--muted); font-size: .76rem; }
+.formula-list code { display: block; color: var(--wine); font-weight: 700; }
+.reading-rules { margin-bottom: 0; }
+.reading-rules ul { margin: 0; padding: 0; list-style: none; }
+.reading-rules li { position: relative; padding: 1rem 0 1rem 2rem; border-bottom: 1px solid var(--line); font-size: .84rem; }
+.reading-rules li::before { content: ""; position: absolute; left: 0; top: 1.55rem; width: 12px; height: 2px; background: var(--wine); }
 
 .site-footer { padding: 2rem 0; border-top: 1px solid var(--line-dark); background: var(--ink); color: #e5e3dc; font-size: .76rem; }
 .site-footer .content-width { display: flex; justify-content: space-between; gap: 2rem; }
@@ -181,7 +202,9 @@ button { color: inherit; }
   .stat:nth-child(2) { border-right: 0; }
   .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .split-analysis, .split-analysis.wide-left, .method-layout { grid-template-columns: 1fr; gap: 3rem; }
-  .technical-notes { grid-template-columns: 1fr 1fr; }
+  .method-lead { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; }
+  .method-lead .pull-quote { grid-row: span 2; }
+  .method-summary { margin-top: 0; }
   .finding { grid-template-columns: 1fr; gap: .8rem; }
 }
 
@@ -197,6 +220,13 @@ button { color: inherit; }
   .compare-method h1 { font-size: 2.8rem; }
   .compare-method__meta { align-items: flex-start; flex-direction: column; gap: .55rem; }
   .compare-method__meta button { margin: .35rem 0 0; }
+  .method-lead { display: block; }
+  .method-summary { margin-top: 2rem; }
+  .source-record { grid-template-columns: 1fr; gap: 1.2rem; }
+  .source-record dl div { grid-template-columns: 1fr; gap: .2rem; }
+  .formula-list { grid-template-columns: 1fr; }
+  .formula-list article, .formula-list article:nth-child(even) { padding: 1.15rem 0; border-left: 0; }
+  .formula-list p { min-height: 0; }
   .control-field, .control-field select { width: 100%; }
   .segmented { width: 100%; }
   .segmented div { display: grid; grid-template-columns: repeat(3, 1fr); }

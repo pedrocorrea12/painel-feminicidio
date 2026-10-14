@@ -7,8 +7,8 @@
       2024
     ],
     "fontes": [
-      "SINAN/Violência — DataSUS",
-      "População municipal por sexo e idade — Ministério da Saúde/RIPSA"
+      "SINAN/Violência: DataSUS",
+      "População municipal por sexo e idade: Ministério da Saúde/RIPSA"
     ],
     "territorio_padrao": "Residência da vítima",
     "metodologia_taxa": "Notificações divididas pela população feminina, multiplicadas por 100 mil.",

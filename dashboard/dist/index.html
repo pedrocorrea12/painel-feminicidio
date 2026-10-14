@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Indicadores comparados sobre notificações de violência contra mulheres no Brasil, em Santa Catarina e nos municípios catarinenses.">
-  <title>Violência contra a mulher — panorama territorial</title>
+  <title>Violência contra a mulher: panorama territorial</title>
   <link rel="stylesheet" href="editorial.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
         <a href="#comparar" class="publication-name">Violência contra a mulher</a>
         <p>Panorama territorial de notificações</p>
       </div>
-      <div class="header-meta"><span>SINAN</span><strong>2015—2024</strong></div>
+      <div class="header-meta"><span>SINAN</span><strong>2015 a 2024</strong></div>
     </div>
     <nav class="main-nav" aria-label="Navegação principal">
       <div class="nav-inner">
@@ -54,7 +54,7 @@
         </div>
         <div class="compare-method__meta">
           <p><strong>Fonte</strong> SINAN · Ministério da Saúde</p>
-          <p><strong>Período</strong> 2015–2024</p>
+          <p><strong>Período</strong> 2015 a 2024</p>
           <button type="button" data-view-target="dados">Ver metodologia completa <span aria-hidden="true">→</span></button>
         </div>
       </div>
@@ -158,15 +158,66 @@
         <p class="dek">O que cada número representa, como foi calculado e quais limites devem acompanhar a leitura.</p>
       </div>
       <div class="content-width method-layout">
-        <article class="method-lead"><p class="pull-quote">Notificação não é sinônimo de ocorrência, denúncia policial ou feminicídio.</p><p>O painel acompanha registros feitos na rede de saúde. A variação observada pode refletir mudanças na violência, no acesso ao serviço, na capacidade de identificação e na qualidade do preenchimento.</p></article>
-        <div class="method-list">
-          <article><span>01</span><div><h2>SINAN</h2><p>Notificações de violência interpessoal contra mulheres. Excluem-se lesões autoprovocadas; o território é o município de residência da vítima.</p></div></article>
-          <article><span>02</span><div><h2>Taxas</h2><p>Número de notificações dividido pela população feminina residente e multiplicado por 100 mil. Use a taxa para comparar territórios de tamanhos diferentes.</p></div></article>
-          <article><span>03</span><div><h2>Números absolutos</h2><p>Dimensionam a demanda registrada. Permanecem visíveis nos rótulos, nas leituras por ano e nas tabelas, mesmo quando o gráfico exibe taxas.</p></div></article>
-          <article><span>04</span><div><h2>Pequenos números</h2><p>Taxas municipais baseadas em poucos registros oscilam muito. O painel sinaliza séries sem volume suficiente para uma comparação estável.</p></div></article>
-          <article><span>05</span><div><h2>SIM</h2><p>Mortes por agressão (CID-10 X85–Y09) são apresentadas apenas como referência distinta. O sistema não identifica, sozinho, motivação de gênero.</p></div></article>
+        <aside class="method-lead">
+          <p class="pull-quote">Notificação não é sinônimo de ocorrência, denúncia policial ou feminicídio.</p>
+          <p>O painel acompanha registros feitos na rede de saúde. Mudanças nos valores podem refletir a violência, o acesso aos serviços, a identificação dos casos e a qualidade do preenchimento.</p>
+          <dl class="method-summary">
+            <div><dt>Período</dt><dd>2015 a 2024</dd></div>
+            <div><dt>Território</dt><dd>Residência da vítima</dd></div>
+            <div><dt>Atualização</dt><dd id="data-updated">Não informada</dd></div>
+          </dl>
+        </aside>
+
+        <div class="method-detail">
+          <section class="method-section" aria-labelledby="fontes-title">
+            <header><p class="section-index">01</p><div><h2 id="fontes-title">Fontes e campos utilizados</h2><p>Os nomes abaixo são os campos originais lidos no tratamento.</p></div></header>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">SINAN</p><h3>Notificações de violência</h3><p>Arquivos nacionais VIOL do DataSUS. Uma linha corresponde a uma notificação.</p><a href="https://datasus.saude.gov.br/transferencia-de-arquivos/" target="_blank" rel="noopener">Consultar fonte oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>CS_SEXO = F</code> e <code>LES_AUTOP = 2</code>. Mantém mulheres e exclui lesões autoprovocadas.</dd></div>
+                <div><dt>Território e ano</dt><dd><code>ID_MN_RESI</code>, <code>SG_UF</code> e <code>NU_ANO</code>. O município é o de residência.</dd></div>
+                <div><dt>Parceiro ou ex</dt><dd><code>REL_CONJ</code>, <code>REL_EXCON</code>, <code>REL_NAMO</code> e <code>REL_EXNAM</code>. O valor 1 em qualquer campo identifica o vínculo.</dd></div>
+                <div><dt>Perfil</dt><dd><code>NU_IDADE_N</code>, <code>CS_RACA</code>, <code>VIOL_FISIC</code>, <code>VIOL_PSICO</code>, <code>VIOL_SEXU</code>, <code>VIOL_NEGLI</code>, <code>VIOL_FINAN</code> e <code>VIOL_TORT</code>.</dd></div>
+              </dl>
+            </article>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">SIM</p><h3>Óbitos de mulheres por agressão</h3><p>Registros definitivos de mortalidade. São uma referência separada e não classificam feminicídio.</p><a href="https://dadosabertos.saude.gov.br/dataset/sim" target="_blank" rel="noopener">Consultar fonte oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>SEXO = 2</code> e <code>CAUSABAS</code> entre X85 e X99 ou entre Y00 e Y09.</dd></div>
+                <div><dt>Território e ano</dt><dd><code>CODMUNRES</code> define a residência. O ano vem do arquivo anual e é conferido com <code>DTOBITO</code>.</dd></div>
+                <div><dt>Campos lidos</dt><dd><code>DTOBITO</code>, <code>SEXO</code>, <code>RACACOR</code>, <code>IDADE</code>, <code>CODMUNRES</code>, <code>CODMUNOCOR</code> e <code>CAUSABAS</code>.</dd></div>
+              </dl>
+            </article>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">POPULAÇÃO</p><h3>População feminina residente</h3><p>Estimativas municipais por sexo do Ministério da Saúde e RIPSA. Formam o denominador das taxas.</p><a href="https://demas-dados-abertos.s3.amazonaws.com/csv/ripsa014dm.csv.zip" target="_blank" rel="noopener">Baixar arquivo oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>sg_categoria = PESSOA1</code> e <code>ds_item_categoria = Feminino</code>.</dd></div>
+                <div><dt>Campos usados</dt><dd><code>co_anomes</code>, <code>co_ibge</code>, <code>no_municipio</code>, <code>sg_uf</code> e <code>vl_indicador_calculado_mun</code>.</dd></div>
+                <div><dt>Validação</dt><dd>A soma dos 5.570 municípios é comparada a <code>vl_indicador_calculado_br</code> em cada ano.</dd></div>
+              </dl>
+            </article>
+          </section>
+
+          <section class="method-section calculations" aria-labelledby="calculos-title">
+            <header><p class="section-index">02</p><div><h2 id="calculos-title">Cálculos exibidos</h2><p>As fórmulas são aplicadas separadamente para Brasil, UF e município.</p></div></header>
+            <div class="formula-list">
+              <article><h3>Notificações</h3><p>Contagem das linhas do SINAN após os filtros de sexo e violência interpessoal.</p><code>número de registros filtrados</code></article>
+              <article><h3>Taxa de notificações</h3><p>Permite comparar territórios com populações diferentes.</p><code>(notificações ÷ população feminina) × 100.000</code></article>
+              <article><h3>Parceiro ou ex</h3><p>Conta registros com pelo menos um dos quatro campos de vínculo igual a 1.</p><code>REL_CONJ ou REL_EXCON ou REL_NAMO ou REL_EXNAM</code></article>
+              <article><h3>Percentual de parceiro ou ex</h3><p>Mostra a participação desses vínculos no total notificado.</p><code>(registros de parceiro ou ex ÷ notificações) × 100</code></article>
+              <article><h3>Índice 2015 = 100</h3><p>Compara a trajetória de cada território com seu próprio volume inicial.</p><code>(notificações do ano ÷ notificações de 2015) × 100</code></article>
+              <article><h3>Taxa de óbitos por agressão</h3><p>Usada somente na referência do SIM.</p><code>(óbitos femininos por agressão ÷ população feminina) × 100.000</code></article>
+            </div>
+          </section>
+
+          <section class="method-section reading-rules" aria-labelledby="leitura-title">
+            <header><p class="section-index">03</p><div><h2 id="leitura-title">Regras de leitura</h2></div></header>
+            <ul><li>O painel publicado usa bases de saúde e população. Ainda não inclui registros policiais ou dados do Sinesp.</li><li>O painel mantém o número absoluto junto da taxa para não esconder a escala real.</li><li>Municípios com menos de cinco notificações no ano recebem sinalização de cautela. O dado não é excluído.</li><li>Tipos de violência podem se sobrepor porque uma notificação pode registrar mais de um tipo.</li><li>Óbito por agressão no SIM não equivale automaticamente a feminicídio.</li></ul>
+          </section>
         </div>
-        <dl class="technical-notes"><div><dt>Período</dt><dd>2015 a 2024</dd></div><div><dt>Unidade territorial</dt><dd>Brasil, UF e município de residência</dd></div><div><dt>Atualização do pacote</dt><dd id="data-updated">—</dd></div><div><dt>Fonte</dt><dd>Ministério da Saúde · SINAN e população feminina de referência</dd></div></dl>
       </div>
     </section>
   </main>
