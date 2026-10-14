@@ -30,10 +30,33 @@
 
   <main id="conteudo">
     <section class="view active" data-view="comparar" id="comparar" aria-labelledby="comparar-title">
-      <div class="page-intro content-width">
-        <p class="eyebrow">Leitura comparada</p>
-        <h1 id="comparar-title">Um município em contexto</h1>
-        <p class="dek">A mesma medida para Brasil, Santa Catarina e o município selecionado. Taxa para comparar; número absoluto para dimensionar.</p>
+      <div class="compare-method content-width">
+        <div class="compare-method__head">
+          <div>
+            <p class="eyebrow">Antes de comparar</p>
+            <h1 id="comparar-title">Como ler estes dados</h1>
+          </div>
+          <p class="compare-method__lede">O painel acompanha notificações feitas pela rede de saúde. Elas ajudam a dimensionar o registro da violência, mas não representam todas as ocorrências.</p>
+        </div>
+        <div class="compare-method__principles" aria-label="Orientações para leitura dos dados">
+          <article>
+            <span>01</span>
+            <div><h2>O que é contado</h2><p>Notificações de violência interpessoal contra mulheres no SINAN, organizadas pelo município de residência.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><h2>Como comparar</h2><p>Use a taxa por 100 mil mulheres entre territórios. O número absoluto aparece junto para mostrar o volume registrado.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><h2>O que não significa</h2><p>Notificação não é denúncia policial nem feminicídio. Diferenças também refletem acesso à rede e qualidade do registro.</p></div>
+          </article>
+        </div>
+        <div class="compare-method__meta">
+          <p><strong>Fonte</strong> SINAN · Ministério da Saúde</p>
+          <p><strong>Período</strong> 2015–2024</p>
+          <button type="button" data-view-target="dados">Ver metodologia completa <span aria-hidden="true">→</span></button>
+        </div>
       </div>
 
       <div class="control-band">
