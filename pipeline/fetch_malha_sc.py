@@ -25,6 +25,14 @@ SAIDA = ROOT / "dashboard" / "atlas" / "data" / "malha_sc.json"
 CASAS = 3
 
 
+def reparar_nome(texto: str) -> str:
+    """Desfaz dupla codificação (UTF-8 lido como latin-1) quando presente."""
+    try:
+        return texto.encode("latin-1").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return texto
+
+
 def _anel(pontos: list) -> list:
     saida = []
     for x, y in pontos:
@@ -57,9 +65,8 @@ def main() -> None:
     bruto = json.loads(BRONZE.read_text(encoding="utf-8"))
 
     pop = pd.read_parquet(POPULACAO, columns=["id_municipio", "municipio", "sigla_uf"])
-    nomes = dict(
-        zip(*pop.loc[pop.sigla_uf.eq("SC")].drop_duplicates("id_municipio")[["id_municipio", "municipio"]].T.values)
-    )
+    dimensao = pop.loc[pop.sigla_uf.eq("SC")].drop_duplicates("id_municipio")
+    nomes = {i: reparar_nome(n) for i, n in zip(dimensao.id_municipio, dimensao.municipio)}
 
     features = []
     for item in bruto["features"]:

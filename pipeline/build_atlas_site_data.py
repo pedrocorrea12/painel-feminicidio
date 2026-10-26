@@ -68,6 +68,14 @@ def slug(texto: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", base.lower()).strip("_")
 
 
+def reparar_nome(texto: str) -> str:
+    """Desfaz dupla codificação (UTF-8 lido como latin-1) quando presente."""
+    try:
+        return texto.encode("latin-1").decode("utf-8")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return texto
+
+
 def ler(nome: str) -> pd.DataFrame:
     return pd.read_csv(
         ATLAS / nome, dtype={"id_territorio": "string"},
@@ -145,7 +153,7 @@ def nomes_municipios(base: pd.DataFrame) -> dict[str, str]:
         base.fonte.eq("SIM") & base.nivel_territorial.eq("municipio"),
         ["id_territorio", "territorio"],
     ].drop_duplicates("id_territorio")
-    return dict(zip(sim.id_territorio, sim.territorio))
+    return {i: reparar_nome(n) for i, n in zip(sim.id_territorio, sim.territorio)}
 
 
 def avaliar_suficiencia(base: pd.DataFrame) -> pd.DataFrame:
