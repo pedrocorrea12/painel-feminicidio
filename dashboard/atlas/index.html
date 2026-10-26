@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Atlas territorial da violência no Brasil, em Santa Catarina e nos municípios catarinenses, com dados de saúde e segurança pública.">
+  <meta name="color-scheme" content="light dark">
+  <title>Territórios da Violência</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      var tema = localStorage.getItem("atlas-tema");
+      if (tema === "claro" || tema === "escuro") document.documentElement.dataset.tema = tema;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="top-rule"></div>
+    <div class="wrap header-inner">
+      <div class="publication">
+        <a href="#visao-geral" class="publication-name">Territórios da Violência</a>
+        <p>Atlas de Santa Catarina, com contexto nacional</p>
+      </div>
+      <div class="header-meta">
+        <span>Atualizado em</span>
+        <strong id="meta-atualizado">carregando</strong>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar" id="barra">
+    <div class="wrap toolbar-inner">
+      <nav class="main-nav" aria-label="Seções do atlas">
+        <a class="nav-link" href="#visao-geral">Visão geral</a>
+        <a class="nav-link" href="#evolucao">Evolução</a>
+        <a class="nav-link" href="#mapa">Mapa</a>
+        <a class="nav-link" href="#desigualdades">Desigualdades</a>
+        <a class="nav-link" href="#mulheres">Mulheres</a>
+        <a class="nav-link" href="#recente">Recente</a>
+        <a class="nav-link" href="#metodologia">Metodologia</a>
+      </nav>
+      <div class="controls">
+        <button class="territory-button" id="abrir-territorio" type="button" aria-haspopup="dialog">
+          <span class="territory-label">Território</span>
+          <strong id="territorio-atual">Santa Catarina</strong>
+        </button>
+        <button class="theme-button" id="alternar-tema" type="button" aria-label="Alternar tema claro e escuro">
+          <span aria-hidden="true" id="icone-tema">◐</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="territory-dialog" id="dialogo-territorio" aria-labelledby="titulo-territorio">
+    <form method="dialog" class="dialog-head">
+      <h2 id="titulo-territorio">Escolher território</h2>
+      <button class="close-button" value="fechar" aria-label="Fechar">×</button>
+    </form>
+    <label class="search-field">
+      <span>Buscar município ou estado</span>
+      <input id="busca-territorio" type="search" autocomplete="off" placeholder="Ex.: Florianópolis">
+    </label>
+    <div class="territory-list" id="lista-territorios" role="listbox" aria-label="Territórios disponíveis"></div>
+  </dialog>
+
+  <main id="conteudo" class="wrap">
+    <section class="atlas-section" id="visao-geral" data-etapa="4">
+      <p class="kicker">Visão geral</p>
+      <h1 id="titulo-pagina">Violência em Santa Catarina</h1>
+      <p class="dek">Indicadores de violência letal, sexual e autoprovocada, com valor absoluto e taxa por 100 mil habitantes.</p>
+      <div class="notice" role="note">As fontes medem coisas diferentes e não se somam: SINAN (notificações da saúde), SIM (óbitos) e Sinesp (registros policiais).</div>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Cartões de indicadores</p>
+        <p>Entram na Etapa 4. Esta área mostrará um cartão por indicador, com valor, taxa, variação desde 2015 e miniatura da série.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="evolucao" data-etapa="4">
+      <p class="kicker">Evolução</p>
+      <h2>Série histórica</h2>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Gráfico de linhas</p>
+        <p>Entra na Etapa 4. Comparará o território escolhido, Santa Catarina e o Brasil, com anos preliminares em tracejado.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="mapa" data-etapa="5">
+      <p class="kicker">Mapa</p>
+      <h2>Comparação entre municípios de Santa Catarina</h2>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Mapa por município e ranking</p>
+        <p>Entra na Etapa 5. Municípios com menos de 5 casos aparecerão hachurados e fora do ranking.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="desigualdades" data-etapa="6">
+      <p class="kicker">Desigualdades</p>
+      <h2>Sexo, idade, raça ou cor e trabalho</h2>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Recortes de desigualdade</p>
+        <p>Entra na Etapa 6, com a nota do que cada recorte não mede.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="mulheres" data-etapa="7">
+      <p class="kicker">Violência contra a mulher</p>
+      <h2>Notificações, óbitos e feminicídio</h2>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Capítulo dedicado</p>
+        <p>Entra na Etapa 7. Reunirá o painel atual, com SINAN, SIM e Sinesp em blocos separados.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="recente" data-etapa="7">
+      <p class="kicker">Monitoramento</p>
+      <h2>Dados recentes</h2>
+      <div class="notice" role="note">Dados provisórios: 2025 é preliminar e 2026 vai até agosto. Podem mudar.</div>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">2025 e 2026</p>
+        <p>Entra na Etapa 7, com comparação do mesmo período em anos anteriores.</p>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="metodologia" data-etapa="8">
+      <p class="kicker">Metodologia</p>
+      <h2>Fontes, regras e downloads</h2>
+      <div class="placeholder" data-bloco>
+        <p class="placeholder-title">Fontes e critérios</p>
+        <p>Entra na Etapa 8. Por ora, os dados abertos estão disponíveis para download:</p>
+        <ul class="download-list" id="lista-downloads"></ul>
+      </div>
+    </section>
+
+    <section class="state-readout" aria-label="Estado atual da página (esqueleto)">
+      <p class="kicker">Estado da página (esqueleto)</p>
+      <dl id="estado-atual"></dl>
+      <p class="small">O endereço desta página guarda território, indicador, ano e sexo. Copie o link para compartilhar esta visão.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Fontes: SINAN e SIM (Ministério da Saúde), Sinesp VDE (Ministério da Justiça e Segurança Pública), IBGE, Censo 2022 e RAIS.</p>
+      <p>Território: SIM e SINAN usam o município de residência; o Sinesp usa o local do fato.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
