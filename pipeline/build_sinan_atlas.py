@@ -193,7 +193,7 @@ def construir_gold() -> tuple[pd.DataFrame, pd.DataFrame]:
         dim.loc[dim.sigla_uf.eq("SC"), ["id_municipio", "municipio"]].rename(columns={"id_municipio": "id_territorio", "municipio": "territorio"}).assign(nivel_territorial="municipio"),
     ], ignore_index=True)
     grade = territorios.merge(pd.DataFrame({"ano": list(ANOS)}), how="cross").merge(pd.DataFrame({"indicador": INDICADORES}), how="cross").merge(pd.DataFrame({"sexo": ["total", "feminino", "masculino", "não informado"]}), how="cross")
-    resultado = grade.merge(contagem, on=["ano", "nivel_territorial", "id_territorio", "territorio", "indicador", "sexo"], how="left", validate="one_to_one")
+    resultado = grade.merge(contagem.drop(columns="territorio"), on=["ano", "nivel_territorial", "id_territorio", "indicador", "sexo"], how="left", validate="one_to_one")
     resultado.notificacoes = resultado.notificacoes.fillna(0).astype("int64")
     resultado = resultado.merge(denominadores_territorio(), on=["ano", "nivel_territorial", "id_territorio", "territorio", "sexo"], how="left", validate="many_to_one")
     resultado.loc[resultado.sexo.eq("não informado"), "populacao"] = pd.NA
