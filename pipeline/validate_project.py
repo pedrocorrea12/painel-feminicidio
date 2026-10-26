@@ -396,9 +396,44 @@ def main() -> None:
     conexao.close()
     assert divergencias == 0
 
+    validar_dados_site(ROOT)
+
     print(
         "Projeto validado: SINAN, SIM, Sinesp, população, raça, RAIS, atlas, Gold, análises e dimensões OK."
     )
+
+
+def validar_dados_site(root: Path) -> None:
+    """Confere os arquivos do site do atlas contra a Gold do atlas."""
+
+    dados = root / "dashboard" / "atlas" / "data"
+    if not dados.exists():
+        return
+    manifesto = json.loads((dados / "manifesto.json").read_text(encoding="utf-8"))
+    assert manifesto["territorios"] == {"brasil": 1, "ufs": 27, "municipios_sc": 295}
+    assert len(list((dados / "municipio").glob("*.json"))) == 295
+    for arquivo in dados.rglob("*.json"):
+        assert arquivo.stat().st_size < 2_000_000, f"{arquivo.name} acima de 2 MB"
+    for indicador in manifesto["indicadores"]:
+        assert indicador["municipal"] == ("arquivo_mapa" in indicador)
+
+    gold = pd.read_csv(
+        root / "data" / "gold" / "atlas" / "sinan_violencia_territorio_ano.csv",
+        dtype={"id_territorio": "string"},
+        encoding="utf-8-sig",
+    )
+    gold = gold.loc[
+        gold.nivel_territorial.eq("municipio")
+        & gold.indicador.eq("notificacoes_interpessoais")
+        & gold.sexo.eq("feminino")
+        & gold.ano.eq(2024)
+    ]
+    mapa = json.loads(
+        (dados / "mapa" / "sinan_notificacoes_interpessoais.json").read_text(encoding="utf-8")
+    )
+    tabela = pd.DataFrame(mapa["linhas"], columns=mapa["colunas"])
+    site = tabela.loc[tabela.sexo.eq("feminino") & tabela.ano.eq(2024), "valor"].sum()
+    assert site == gold.notificacoes.sum() == 9647, (site, gold.notificacoes.sum())
 
 
 if __name__ == "__main__":
