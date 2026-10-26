@@ -23,3 +23,12 @@ tools/sites-package.ps1
 .DS_Store
 Thumbs.db
 
+
+# Artefatos gerados e copias de trabalho
+.publish-pages/
+backups/
+entrega/
+outputs/
+dashboard/prototipos/**/data.json
+dashboard/prototipos/**/preview*.png
+*.xlsx.inspect.ndjson
