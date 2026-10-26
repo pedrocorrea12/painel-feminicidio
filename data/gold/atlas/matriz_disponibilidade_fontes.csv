@@ -1,0 +1,7 @@
+﻿fonte,indicadores_catalogados,periodo_bronze,brasil,uf,municipio_sc,mensal,sexo,idade,raca,principal_pendencia
+IBGE,2,2012 a 2024; 2015 a 2024,sim,sim,sim,não,sim,sim,não,obter denominadores posteriores a 2024 quando a fonte os publicar
+Sinesp VDE,31,2019 a 2026,sim,sim,sim,sim,sim,sim,não,manter alertas de comparabilidade e atualizar a cobertura a cada carga
+Censo 2022,1,2022,sim,sim,sim,não,sim,não,sim,"incluir população geral por sexo, idade e raça se necessário"
+SIM,4,2015 a 2026,sim,sim,sim,sim,sim,sim,sim,manter 2025 e 2026 sem taxa até haver denominadores compatíveis
+SINAN,9,2015 a 2025,sim,sim,sim,sim,sim,sim,sim,manter tipos coexistentes e 2025 sem taxa até haver denominador compatível
+RAIS,1,2019 a 2025,sim,sim,sim,não,sim,não,sim,"manter como contexto socioeconômico, sem inferência causal"

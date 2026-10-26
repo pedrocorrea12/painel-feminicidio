@@ -1,0 +1,40 @@
+{
+  "fonte": "Sinesp VDE, Ministério da Justiça e Segurança Pública",
+  "periodo": "2019 a agosto de 2026",
+  "unidade": "vítimas",
+  "territorio_referencia": "local do fato",
+  "abrangencia_incluida": "Estadual",
+  "abrangencias_excluidas": [
+    "Polícia Federal",
+    "Polícia Rodoviária Federal"
+  ],
+  "eventos_prioritarios": [
+    "Pessoa Desaparecida",
+    "Pessoa Localizada",
+    "Suicídio",
+    "Feminicídio",
+    "Tentativa de feminicídio",
+    "Homicídio doloso",
+    "Tentativa de homicídio",
+    "Estupro",
+    "Estupro de vulnerável"
+  ],
+  "indicador_derivado": {
+    "nome": "Violência sexual policial, soma das classificações",
+    "calculo": "Estupro mais Estupro de vulnerável",
+    "ressalva": "não elimina quebras de classificação entre UFs e anos"
+  },
+  "regras": [
+    "linhas repetidas no mesmo mês são somadas",
+    "zero significa ausência de ocorrência quando a linha mensal existe",
+    "mês sem linha seria tratado como lacuna",
+    "taxas usam população total ou do sexo correspondente",
+    "taxas são calculadas somente até 2024",
+    "2026 cobre janeiro a agosto e permanece parcial",
+    "estupro, estupro de vulnerável, pessoa desaparecida e pessoa localizada não têm detalhamento municipal no arquivo atual"
+  ],
+  "quebras_conhecidas": [
+    "Santa Catarina muda a classificação de Estupro entre 2019 e 2020",
+    "Espírito Santo, Rondônia e Maranhão têm quedas atípicas em anos específicos para estupro"
+  ]
+}

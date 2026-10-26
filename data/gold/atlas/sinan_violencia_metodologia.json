@@ -1,0 +1,18 @@
+{
+  "fonte": "SINAN Violência, arquivos nacionais anuais do DataSUS",
+  "territorio": "município de residência da pessoa notificada",
+  "interpessoal": "LES_AUTOP igual a 2",
+  "autoprovocada": "LES_AUTOP igual a 1",
+  "tipos": {
+    "violencia_fisica": "VIOL_FISIC igual a 1 e LES_AUTOP igual a 2",
+    "violencia_psicologica": "VIOL_PSICO igual a 1 e LES_AUTOP igual a 2",
+    "violencia_sexual": "VIOL_SEXU igual a 1 e LES_AUTOP igual a 2",
+    "violencia_financeira": "VIOL_FINAN igual a 1 e LES_AUTOP igual a 2",
+    "negligencia": "VIOL_NEGLI igual a 1 e LES_AUTOP igual a 2",
+    "tortura": "VIOL_TORT igual a 1 e LES_AUTOP igual a 2",
+    "trafico_pessoas": "VIOL_TRAF igual a 1 e LES_AUTOP igual a 2"
+  },
+  "unidade": "notificações, não pessoas únicas",
+  "limite": "tipos de violência podem coexistir no mesmo registro",
+  "taxas": "calculadas de 2015 a 2024; 2025 permanece sem taxa"
+}

@@ -1,0 +1,22 @@
+{
+  "indicadores_catalogados": 48,
+  "fontes": [
+    "Censo 2022",
+    "IBGE",
+    "RAIS",
+    "SIM",
+    "SINAN",
+    "Sinesp VDE"
+  ],
+  "por_prontidao": {
+    "pronto com ressalva": 30,
+    "pronto": 18
+  },
+  "por_prioridade": {
+    "1": 21,
+    "2": 10,
+    "3": 17
+  },
+  "eventos_sinesp": 31,
+  "proxima_etapa": "prototipar a navegação do atlas com as camadas validadas, sem alterar o painel publicado"
+}

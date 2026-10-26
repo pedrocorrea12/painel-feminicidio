@@ -1,0 +1,2377 @@
+﻿ano,territorio,indicador,grupo_etario,notificacoes,populacao,taxa_100mil,situacao_dado
+2015,Brasil,notificacoes_interpessoais,0 a 4 anos,17890,14679432.0,121.87,definitivo
+2015,Brasil,notificacoes_interpessoais,5 a 9 anos,11434,14841043.0,77.04,definitivo
+2015,Brasil,notificacoes_interpessoais,10 a 14 anos,16770,15981250.0,104.94,definitivo
+2015,Brasil,notificacoes_interpessoais,15 a 19 anos,24629,17083436.0,144.17,definitivo
+2015,Brasil,notificacoes_interpessoais,20 a 29 anos,32402,33775807.0,95.93,definitivo
+2015,Brasil,notificacoes_interpessoais,30 a 39 anos,27985,32950916.0,84.93,definitivo
+2015,Brasil,notificacoes_interpessoais,40 a 49 anos,15743,26585523.0,59.22,definitivo
+2015,Brasil,notificacoes_interpessoais,50 a 59 anos,7895,21588617.0,36.57,definitivo
+2015,Brasil,notificacoes_interpessoais,60 a 69 anos,5373,13924549.0,38.59,definitivo
+2015,Brasil,notificacoes_interpessoais,70 a 79 anos,3181,7431138.0,42.81,definitivo
+2015,Brasil,notificacoes_interpessoais,80 anos e mais,2131,3561931.0,59.83,definitivo
+2015,Brasil,notificacoes_interpessoais,Idade não informada,410,,,definitivo
+2015,Brasil,notificacoes_autoprovocadas,0 a 4 anos,531,14679432.0,3.62,definitivo
+2015,Brasil,notificacoes_autoprovocadas,5 a 9 anos,167,14841043.0,1.13,definitivo
+2015,Brasil,notificacoes_autoprovocadas,10 a 14 anos,2453,15981250.0,15.35,definitivo
+2015,Brasil,notificacoes_autoprovocadas,15 a 19 anos,6486,17083436.0,37.97,definitivo
+2015,Brasil,notificacoes_autoprovocadas,20 a 29 anos,10533,33775807.0,31.19,definitivo
+2015,Brasil,notificacoes_autoprovocadas,30 a 39 anos,8905,32950916.0,27.03,definitivo
+2015,Brasil,notificacoes_autoprovocadas,40 a 49 anos,5763,26585523.0,21.68,definitivo
+2015,Brasil,notificacoes_autoprovocadas,50 a 59 anos,3003,21588617.0,13.91,definitivo
+2015,Brasil,notificacoes_autoprovocadas,60 a 69 anos,1128,13924549.0,8.1,definitivo
+2015,Brasil,notificacoes_autoprovocadas,70 a 79 anos,478,7431138.0,6.43,definitivo
+2015,Brasil,notificacoes_autoprovocadas,80 anos e mais,205,3561931.0,5.76,definitivo
+2015,Brasil,notificacoes_autoprovocadas,Idade não informada,37,,,definitivo
+2015,Brasil,violencia_fisica,0 a 4 anos,4648,14679432.0,31.66,definitivo
+2015,Brasil,violencia_fisica,5 a 9 anos,4182,14841043.0,28.18,definitivo
+2015,Brasil,violencia_fisica,10 a 14 anos,7997,15981250.0,50.04,definitivo
+2015,Brasil,violencia_fisica,15 a 19 anos,19800,17083436.0,115.9,definitivo
+2015,Brasil,violencia_fisica,20 a 29 anos,28520,33775807.0,84.44,definitivo
+2015,Brasil,violencia_fisica,30 a 39 anos,24428,32950916.0,74.13,definitivo
+2015,Brasil,violencia_fisica,40 a 49 anos,13531,26585523.0,50.9,definitivo
+2015,Brasil,violencia_fisica,50 a 59 anos,6669,21588617.0,30.89,definitivo
+2015,Brasil,violencia_fisica,60 a 69 anos,4214,13924549.0,30.26,definitivo
+2015,Brasil,violencia_fisica,70 a 79 anos,1904,7431138.0,25.62,definitivo
+2015,Brasil,violencia_fisica,80 anos e mais,935,3561931.0,26.25,definitivo
+2015,Brasil,violencia_fisica,Idade não informada,288,,,definitivo
+2015,Brasil,violencia_psicologica,0 a 4 anos,2089,14679432.0,14.23,definitivo
+2015,Brasil,violencia_psicologica,5 a 9 anos,3167,14841043.0,21.34,definitivo
+2015,Brasil,violencia_psicologica,10 a 14 anos,4691,15981250.0,29.35,definitivo
+2015,Brasil,violencia_psicologica,15 a 19 anos,6287,17083436.0,36.8,definitivo
+2015,Brasil,violencia_psicologica,20 a 29 anos,11954,33775807.0,35.39,definitivo
+2015,Brasil,violencia_psicologica,30 a 39 anos,11521,32950916.0,34.96,definitivo
+2015,Brasil,violencia_psicologica,40 a 49 anos,6551,26585523.0,24.64,definitivo
+2015,Brasil,violencia_psicologica,50 a 59 anos,3137,21588617.0,14.53,definitivo
+2015,Brasil,violencia_psicologica,60 a 69 anos,1940,13924549.0,13.93,definitivo
+2015,Brasil,violencia_psicologica,70 a 79 anos,1095,7431138.0,14.74,definitivo
+2015,Brasil,violencia_psicologica,80 anos e mais,634,3561931.0,17.8,definitivo
+2015,Brasil,violencia_psicologica,Idade não informada,111,,,definitivo
+2015,Brasil,violencia_sexual,0 a 4 anos,3429,14679432.0,23.36,definitivo
+2015,Brasil,violencia_sexual,5 a 9 anos,4607,14841043.0,31.04,definitivo
+2015,Brasil,violencia_sexual,10 a 14 anos,7290,15981250.0,45.62,definitivo
+2015,Brasil,violencia_sexual,15 a 19 anos,3489,17083436.0,20.42,definitivo
+2015,Brasil,violencia_sexual,20 a 29 anos,2719,33775807.0,8.05,definitivo
+2015,Brasil,violencia_sexual,30 a 39 anos,1665,32950916.0,5.05,definitivo
+2015,Brasil,violencia_sexual,40 a 49 anos,890,26585523.0,3.35,definitivo
+2015,Brasil,violencia_sexual,50 a 59 anos,397,21588617.0,1.84,definitivo
+2015,Brasil,violencia_sexual,60 a 69 anos,152,13924549.0,1.09,definitivo
+2015,Brasil,violencia_sexual,70 a 79 anos,83,7431138.0,1.12,definitivo
+2015,Brasil,violencia_sexual,80 anos e mais,22,3561931.0,0.62,definitivo
+2015,Brasil,violencia_sexual,Idade não informada,38,,,definitivo
+2015,Brasil,violencia_financeira,0 a 4 anos,102,14679432.0,0.69,definitivo
+2015,Brasil,violencia_financeira,5 a 9 anos,60,14841043.0,0.4,definitivo
+2015,Brasil,violencia_financeira,10 a 14 anos,69,15981250.0,0.43,definitivo
+2015,Brasil,violencia_financeira,15 a 19 anos,155,17083436.0,0.91,definitivo
+2015,Brasil,violencia_financeira,20 a 29 anos,475,33775807.0,1.41,definitivo
+2015,Brasil,violencia_financeira,30 a 39 anos,630,32950916.0,1.91,definitivo
+2015,Brasil,violencia_financeira,40 a 49 anos,418,26585523.0,1.57,definitivo
+2015,Brasil,violencia_financeira,50 a 59 anos,260,21588617.0,1.2,definitivo
+2015,Brasil,violencia_financeira,60 a 69 anos,320,13924549.0,2.3,definitivo
+2015,Brasil,violencia_financeira,70 a 79 anos,305,7431138.0,4.1,definitivo
+2015,Brasil,violencia_financeira,80 anos e mais,250,3561931.0,7.02,definitivo
+2015,Brasil,violencia_financeira,Idade não informada,12,,,definitivo
+2015,Brasil,negligencia,0 a 4 anos,11283,14679432.0,76.86,definitivo
+2015,Brasil,negligencia,5 a 9 anos,3895,14841043.0,26.24,definitivo
+2015,Brasil,negligencia,10 a 14 anos,3079,15981250.0,19.27,definitivo
+2015,Brasil,negligencia,15 a 19 anos,2136,17083436.0,12.5,definitivo
+2015,Brasil,negligencia,20 a 29 anos,302,33775807.0,0.89,definitivo
+2015,Brasil,negligencia,30 a 39 anos,270,32950916.0,0.82,definitivo
+2015,Brasil,negligencia,40 a 49 anos,200,26585523.0,0.75,definitivo
+2015,Brasil,negligencia,50 a 59 anos,259,21588617.0,1.2,definitivo
+2015,Brasil,negligencia,60 a 69 anos,615,13924549.0,4.42,definitivo
+2015,Brasil,negligencia,70 a 79 anos,1049,7431138.0,14.12,definitivo
+2015,Brasil,negligencia,80 anos e mais,1128,3561931.0,31.67,definitivo
+2015,Brasil,negligencia,Idade não informada,69,,,definitivo
+2015,Brasil,tortura,0 a 4 anos,234,14679432.0,1.59,definitivo
+2015,Brasil,tortura,5 a 9 anos,280,14841043.0,1.89,definitivo
+2015,Brasil,tortura,10 a 14 anos,422,15981250.0,2.64,definitivo
+2015,Brasil,tortura,15 a 19 anos,712,17083436.0,4.17,definitivo
+2015,Brasil,tortura,20 a 29 anos,1244,33775807.0,3.68,definitivo
+2015,Brasil,tortura,30 a 39 anos,1111,32950916.0,3.37,definitivo
+2015,Brasil,tortura,40 a 49 anos,610,26585523.0,2.29,definitivo
+2015,Brasil,tortura,50 a 59 anos,303,21588617.0,1.4,definitivo
+2015,Brasil,tortura,60 a 69 anos,188,13924549.0,1.35,definitivo
+2015,Brasil,tortura,70 a 79 anos,121,7431138.0,1.63,definitivo
+2015,Brasil,tortura,80 anos e mais,80,3561931.0,2.25,definitivo
+2015,Brasil,tortura,Idade não informada,16,,,definitivo
+2015,Brasil,trafico_pessoas,0 a 4 anos,12,14679432.0,0.08,definitivo
+2015,Brasil,trafico_pessoas,5 a 9 anos,2,14841043.0,0.01,definitivo
+2015,Brasil,trafico_pessoas,10 a 14 anos,14,15981250.0,0.09,definitivo
+2015,Brasil,trafico_pessoas,15 a 19 anos,13,17083436.0,0.08,definitivo
+2015,Brasil,trafico_pessoas,20 a 29 anos,22,33775807.0,0.07,definitivo
+2015,Brasil,trafico_pessoas,30 a 39 anos,22,32950916.0,0.07,definitivo
+2015,Brasil,trafico_pessoas,40 a 49 anos,9,26585523.0,0.03,definitivo
+2015,Brasil,trafico_pessoas,50 a 59 anos,4,21588617.0,0.02,definitivo
+2015,Brasil,trafico_pessoas,60 a 69 anos,2,13924549.0,0.01,definitivo
+2015,Brasil,trafico_pessoas,70 a 79 anos,3,7431138.0,0.04,definitivo
+2015,Brasil,trafico_pessoas,80 anos e mais,3,3561931.0,0.08,definitivo
+2015,Brasil,trafico_pessoas,Idade não informada,1,,,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1053,460507.0,228.66,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,474,445565.0,106.38,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,655,468322.0,139.86,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,922,552427.0,166.9,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1324,1204961.0,109.88,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1124,1144481.0,98.21,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,818,957205.0,85.46,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,442,811254.0,54.48,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,244,500319.0,48.77,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,128,241786.0,52.94,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,80 anos e mais,74,103087.0,71.78,definitivo
+2015,Santa Catarina,notificacoes_interpessoais,Idade não informada,14,,,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,39,460507.0,8.47,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,8,445565.0,1.8,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,152,468322.0,32.46,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,373,552427.0,67.52,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,767,1204961.0,63.65,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,623,1144481.0,54.44,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,549,957205.0,57.35,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,254,811254.0,31.31,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,123,500319.0,24.58,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,36,241786.0,14.89,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,10,103087.0,9.7,definitivo
+2015,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,2,,,definitivo
+2015,Santa Catarina,violencia_fisica,0 a 4 anos,184,460507.0,39.96,definitivo
+2015,Santa Catarina,violencia_fisica,5 a 9 anos,133,445565.0,29.85,definitivo
+2015,Santa Catarina,violencia_fisica,10 a 14 anos,281,468322.0,60.0,definitivo
+2015,Santa Catarina,violencia_fisica,15 a 19 anos,796,552427.0,144.09,definitivo
+2015,Santa Catarina,violencia_fisica,20 a 29 anos,1187,1204961.0,98.51,definitivo
+2015,Santa Catarina,violencia_fisica,30 a 39 anos,1009,1144481.0,88.16,definitivo
+2015,Santa Catarina,violencia_fisica,40 a 49 anos,736,957205.0,76.89,definitivo
+2015,Santa Catarina,violencia_fisica,50 a 59 anos,394,811254.0,48.57,definitivo
+2015,Santa Catarina,violencia_fisica,60 a 69 anos,211,500319.0,42.17,definitivo
+2015,Santa Catarina,violencia_fisica,70 a 79 anos,73,241786.0,30.19,definitivo
+2015,Santa Catarina,violencia_fisica,80 anos e mais,40,103087.0,38.8,definitivo
+2015,Santa Catarina,violencia_fisica,Idade não informada,9,,,definitivo
+2015,Santa Catarina,violencia_psicologica,0 a 4 anos,100,460507.0,21.72,definitivo
+2015,Santa Catarina,violencia_psicologica,5 a 9 anos,145,445565.0,32.54,definitivo
+2015,Santa Catarina,violencia_psicologica,10 a 14 anos,188,468322.0,40.14,definitivo
+2015,Santa Catarina,violencia_psicologica,15 a 19 anos,273,552427.0,49.42,definitivo
+2015,Santa Catarina,violencia_psicologica,20 a 29 anos,459,1204961.0,38.09,definitivo
+2015,Santa Catarina,violencia_psicologica,30 a 39 anos,435,1144481.0,38.01,definitivo
+2015,Santa Catarina,violencia_psicologica,40 a 49 anos,332,957205.0,34.68,definitivo
+2015,Santa Catarina,violencia_psicologica,50 a 59 anos,175,811254.0,21.57,definitivo
+2015,Santa Catarina,violencia_psicologica,60 a 69 anos,97,500319.0,19.39,definitivo
+2015,Santa Catarina,violencia_psicologica,70 a 79 anos,51,241786.0,21.09,definitivo
+2015,Santa Catarina,violencia_psicologica,80 anos e mais,21,103087.0,20.37,definitivo
+2015,Santa Catarina,violencia_psicologica,Idade não informada,8,,,definitivo
+2015,Santa Catarina,violencia_sexual,0 a 4 anos,148,460507.0,32.14,definitivo
+2015,Santa Catarina,violencia_sexual,5 a 9 anos,188,445565.0,42.19,definitivo
+2015,Santa Catarina,violencia_sexual,10 a 14 anos,300,468322.0,64.06,definitivo
+2015,Santa Catarina,violencia_sexual,15 a 19 anos,119,552427.0,21.54,definitivo
+2015,Santa Catarina,violencia_sexual,20 a 29 anos,84,1204961.0,6.97,definitivo
+2015,Santa Catarina,violencia_sexual,30 a 39 anos,58,1144481.0,5.07,definitivo
+2015,Santa Catarina,violencia_sexual,40 a 49 anos,34,957205.0,3.55,definitivo
+2015,Santa Catarina,violencia_sexual,50 a 59 anos,21,811254.0,2.59,definitivo
+2015,Santa Catarina,violencia_sexual,60 a 69 anos,6,500319.0,1.2,definitivo
+2015,Santa Catarina,violencia_sexual,70 a 79 anos,10,241786.0,4.14,definitivo
+2015,Santa Catarina,violencia_sexual,80 anos e mais,1,103087.0,0.97,definitivo
+2015,Santa Catarina,violencia_sexual,Idade não informada,3,,,definitivo
+2015,Santa Catarina,violencia_financeira,0 a 4 anos,6,460507.0,1.3,definitivo
+2015,Santa Catarina,violencia_financeira,5 a 9 anos,3,445565.0,0.67,definitivo
+2015,Santa Catarina,violencia_financeira,10 a 14 anos,2,468322.0,0.43,definitivo
+2015,Santa Catarina,violencia_financeira,15 a 19 anos,3,552427.0,0.54,definitivo
+2015,Santa Catarina,violencia_financeira,20 a 29 anos,9,1204961.0,0.75,definitivo
+2015,Santa Catarina,violencia_financeira,30 a 39 anos,22,1144481.0,1.92,definitivo
+2015,Santa Catarina,violencia_financeira,40 a 49 anos,16,957205.0,1.67,definitivo
+2015,Santa Catarina,violencia_financeira,50 a 59 anos,13,811254.0,1.6,definitivo
+2015,Santa Catarina,violencia_financeira,60 a 69 anos,17,500319.0,3.4,definitivo
+2015,Santa Catarina,violencia_financeira,70 a 79 anos,8,241786.0,3.31,definitivo
+2015,Santa Catarina,violencia_financeira,80 anos e mais,8,103087.0,7.76,definitivo
+2015,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2015,Santa Catarina,negligencia,0 a 4 anos,807,460507.0,175.24,definitivo
+2015,Santa Catarina,negligencia,5 a 9 anos,201,445565.0,45.11,definitivo
+2015,Santa Catarina,negligencia,10 a 14 anos,190,468322.0,40.57,definitivo
+2015,Santa Catarina,negligencia,15 a 19 anos,41,552427.0,7.42,definitivo
+2015,Santa Catarina,negligencia,20 a 29 anos,46,1204961.0,3.82,definitivo
+2015,Santa Catarina,negligencia,30 a 39 anos,29,1144481.0,2.53,definitivo
+2015,Santa Catarina,negligencia,40 a 49 anos,13,957205.0,1.36,definitivo
+2015,Santa Catarina,negligencia,50 a 59 anos,20,811254.0,2.47,definitivo
+2015,Santa Catarina,negligencia,60 a 69 anos,25,500319.0,5.0,definitivo
+2015,Santa Catarina,negligencia,70 a 79 anos,46,241786.0,19.03,definitivo
+2015,Santa Catarina,negligencia,80 anos e mais,38,103087.0,36.86,definitivo
+2015,Santa Catarina,negligencia,Idade não informada,3,,,definitivo
+2015,Santa Catarina,tortura,0 a 4 anos,16,460507.0,3.47,definitivo
+2015,Santa Catarina,tortura,5 a 9 anos,22,445565.0,4.94,definitivo
+2015,Santa Catarina,tortura,10 a 14 anos,34,468322.0,7.26,definitivo
+2015,Santa Catarina,tortura,15 a 19 anos,48,552427.0,8.69,definitivo
+2015,Santa Catarina,tortura,20 a 29 anos,98,1204961.0,8.13,definitivo
+2015,Santa Catarina,tortura,30 a 39 anos,96,1144481.0,8.39,definitivo
+2015,Santa Catarina,tortura,40 a 49 anos,72,957205.0,7.52,definitivo
+2015,Santa Catarina,tortura,50 a 59 anos,35,811254.0,4.31,definitivo
+2015,Santa Catarina,tortura,60 a 69 anos,17,500319.0,3.4,definitivo
+2015,Santa Catarina,tortura,70 a 79 anos,15,241786.0,6.2,definitivo
+2015,Santa Catarina,tortura,80 anos e mais,7,103087.0,6.79,definitivo
+2015,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2015,Santa Catarina,trafico_pessoas,0 a 4 anos,0,460507.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,5 a 9 anos,0,445565.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,10 a 14 anos,1,468322.0,0.21,definitivo
+2015,Santa Catarina,trafico_pessoas,15 a 19 anos,0,552427.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1204961.0,0.08,definitivo
+2015,Santa Catarina,trafico_pessoas,30 a 39 anos,1,1144481.0,0.09,definitivo
+2015,Santa Catarina,trafico_pessoas,40 a 49 anos,0,957205.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,50 a 59 anos,0,811254.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,60 a 69 anos,0,500319.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,70 a 79 anos,0,241786.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,80 anos e mais,0,103087.0,0.0,definitivo
+2015,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2016,Brasil,notificacoes_interpessoais,0 a 4 anos,19052,14705019.0,129.56,definitivo
+2016,Brasil,notificacoes_interpessoais,5 a 9 anos,12060,14662314.0,82.25,definitivo
+2016,Brasil,notificacoes_interpessoais,10 a 14 anos,18808,15735526.0,119.53,definitivo
+2016,Brasil,notificacoes_interpessoais,15 a 19 anos,26718,16928752.0,157.83,definitivo
+2016,Brasil,notificacoes_interpessoais,20 a 29 anos,33475,33590312.0,99.66,definitivo
+2016,Brasil,notificacoes_interpessoais,30 a 39 anos,28794,33324599.0,86.4,definitivo
+2016,Brasil,notificacoes_interpessoais,40 a 49 anos,16241,26944608.0,60.28,definitivo
+2016,Brasil,notificacoes_interpessoais,50 a 59 anos,8275,22109407.0,37.43,definitivo
+2016,Brasil,notificacoes_interpessoais,60 a 69 anos,6256,14479976.0,43.2,definitivo
+2016,Brasil,notificacoes_interpessoais,70 a 79 anos,3859,7696509.0,50.14,definitivo
+2016,Brasil,notificacoes_interpessoais,80 anos e mais,2494,3694903.0,67.5,definitivo
+2016,Brasil,notificacoes_interpessoais,Idade não informada,558,,,definitivo
+2016,Brasil,notificacoes_autoprovocadas,0 a 4 anos,722,14705019.0,4.91,definitivo
+2016,Brasil,notificacoes_autoprovocadas,5 a 9 anos,335,14662314.0,2.28,definitivo
+2016,Brasil,notificacoes_autoprovocadas,10 a 14 anos,2900,15735526.0,18.43,definitivo
+2016,Brasil,notificacoes_autoprovocadas,15 a 19 anos,7829,16928752.0,46.25,definitivo
+2016,Brasil,notificacoes_autoprovocadas,20 a 29 anos,11747,33590312.0,34.97,definitivo
+2016,Brasil,notificacoes_autoprovocadas,30 a 39 anos,9946,33324599.0,29.85,definitivo
+2016,Brasil,notificacoes_autoprovocadas,40 a 49 anos,6609,26944608.0,24.53,definitivo
+2016,Brasil,notificacoes_autoprovocadas,50 a 59 anos,3353,22109407.0,15.17,definitivo
+2016,Brasil,notificacoes_autoprovocadas,60 a 69 anos,1268,14479976.0,8.76,definitivo
+2016,Brasil,notificacoes_autoprovocadas,70 a 79 anos,493,7696509.0,6.41,definitivo
+2016,Brasil,notificacoes_autoprovocadas,80 anos e mais,199,3694903.0,5.39,definitivo
+2016,Brasil,notificacoes_autoprovocadas,Idade não informada,88,,,definitivo
+2016,Brasil,violencia_fisica,0 a 4 anos,4561,14705019.0,31.02,definitivo
+2016,Brasil,violencia_fisica,5 a 9 anos,4145,14662314.0,28.27,definitivo
+2016,Brasil,violencia_fisica,10 a 14 anos,8425,15735526.0,53.54,definitivo
+2016,Brasil,violencia_fisica,15 a 19 anos,21021,16928752.0,124.17,definitivo
+2016,Brasil,violencia_fisica,20 a 29 anos,29263,33590312.0,87.12,definitivo
+2016,Brasil,violencia_fisica,30 a 39 anos,25092,33324599.0,75.3,definitivo
+2016,Brasil,violencia_fisica,40 a 49 anos,14034,26944608.0,52.08,definitivo
+2016,Brasil,violencia_fisica,50 a 59 anos,6835,22109407.0,30.91,definitivo
+2016,Brasil,violencia_fisica,60 a 69 anos,4785,14479976.0,33.05,definitivo
+2016,Brasil,violencia_fisica,70 a 79 anos,2309,7696509.0,30.0,definitivo
+2016,Brasil,violencia_fisica,80 anos e mais,1087,3694903.0,29.42,definitivo
+2016,Brasil,violencia_fisica,Idade não informada,347,,,definitivo
+2016,Brasil,violencia_psicologica,0 a 4 anos,2274,14705019.0,15.46,definitivo
+2016,Brasil,violencia_psicologica,5 a 9 anos,3351,14662314.0,22.85,definitivo
+2016,Brasil,violencia_psicologica,10 a 14 anos,4904,15735526.0,31.17,definitivo
+2016,Brasil,violencia_psicologica,15 a 19 anos,6424,16928752.0,37.95,definitivo
+2016,Brasil,violencia_psicologica,20 a 29 anos,12604,33590312.0,37.52,definitivo
+2016,Brasil,violencia_psicologica,30 a 39 anos,11887,33324599.0,35.67,definitivo
+2016,Brasil,violencia_psicologica,40 a 49 anos,6844,26944608.0,25.4,definitivo
+2016,Brasil,violencia_psicologica,50 a 59 anos,3509,22109407.0,15.87,definitivo
+2016,Brasil,violencia_psicologica,60 a 69 anos,2119,14479976.0,14.63,definitivo
+2016,Brasil,violencia_psicologica,70 a 79 anos,1166,7696509.0,15.15,definitivo
+2016,Brasil,violencia_psicologica,80 anos e mais,617,3694903.0,16.7,definitivo
+2016,Brasil,violencia_psicologica,Idade não informada,153,,,definitivo
+2016,Brasil,violencia_sexual,0 a 4 anos,3556,14705019.0,24.18,definitivo
+2016,Brasil,violencia_sexual,5 a 9 anos,4954,14662314.0,33.79,definitivo
+2016,Brasil,violencia_sexual,10 a 14 anos,8170,15735526.0,51.92,definitivo
+2016,Brasil,violencia_sexual,15 a 19 anos,3926,16928752.0,23.19,definitivo
+2016,Brasil,violencia_sexual,20 a 29 anos,3292,33590312.0,9.8,definitivo
+2016,Brasil,violencia_sexual,30 a 39 anos,1908,33324599.0,5.73,definitivo
+2016,Brasil,violencia_sexual,40 a 49 anos,1000,26944608.0,3.71,definitivo
+2016,Brasil,violencia_sexual,50 a 59 anos,427,22109407.0,1.93,definitivo
+2016,Brasil,violencia_sexual,60 a 69 anos,197,14479976.0,1.36,definitivo
+2016,Brasil,violencia_sexual,70 a 79 anos,83,7696509.0,1.08,definitivo
+2016,Brasil,violencia_sexual,80 anos e mais,34,3694903.0,0.92,definitivo
+2016,Brasil,violencia_sexual,Idade não informada,66,,,definitivo
+2016,Brasil,violencia_financeira,0 a 4 anos,129,14705019.0,0.88,definitivo
+2016,Brasil,violencia_financeira,5 a 9 anos,56,14662314.0,0.38,definitivo
+2016,Brasil,violencia_financeira,10 a 14 anos,99,15735526.0,0.63,definitivo
+2016,Brasil,violencia_financeira,15 a 19 anos,185,16928752.0,1.09,definitivo
+2016,Brasil,violencia_financeira,20 a 29 anos,550,33590312.0,1.64,definitivo
+2016,Brasil,violencia_financeira,30 a 39 anos,694,33324599.0,2.08,definitivo
+2016,Brasil,violencia_financeira,40 a 49 anos,475,26944608.0,1.76,definitivo
+2016,Brasil,violencia_financeira,50 a 59 anos,309,22109407.0,1.4,definitivo
+2016,Brasil,violencia_financeira,60 a 69 anos,304,14479976.0,2.1,definitivo
+2016,Brasil,violencia_financeira,70 a 79 anos,328,7696509.0,4.26,definitivo
+2016,Brasil,violencia_financeira,80 anos e mais,257,3694903.0,6.96,definitivo
+2016,Brasil,violencia_financeira,Idade não informada,13,,,definitivo
+2016,Brasil,negligencia,0 a 4 anos,12200,14705019.0,82.96,definitivo
+2016,Brasil,negligencia,5 a 9 anos,3895,14662314.0,26.56,definitivo
+2016,Brasil,negligencia,10 a 14 anos,3418,15735526.0,21.72,definitivo
+2016,Brasil,negligencia,15 a 19 anos,2427,16928752.0,14.34,definitivo
+2016,Brasil,negligencia,20 a 29 anos,410,33590312.0,1.22,definitivo
+2016,Brasil,negligencia,30 a 39 anos,287,33324599.0,0.86,definitivo
+2016,Brasil,negligencia,40 a 49 anos,211,26944608.0,0.78,definitivo
+2016,Brasil,negligencia,50 a 59 anos,286,22109407.0,1.29,definitivo
+2016,Brasil,negligencia,60 a 69 anos,885,14479976.0,6.11,definitivo
+2016,Brasil,negligencia,70 a 79 anos,1329,7696509.0,17.27,definitivo
+2016,Brasil,negligencia,80 anos e mais,1392,3694903.0,37.67,definitivo
+2016,Brasil,negligencia,Idade não informada,149,,,definitivo
+2016,Brasil,tortura,0 a 4 anos,281,14705019.0,1.91,definitivo
+2016,Brasil,tortura,5 a 9 anos,326,14662314.0,2.22,definitivo
+2016,Brasil,tortura,10 a 14 anos,467,15735526.0,2.97,definitivo
+2016,Brasil,tortura,15 a 19 anos,737,16928752.0,4.35,definitivo
+2016,Brasil,tortura,20 a 29 anos,1349,33590312.0,4.02,definitivo
+2016,Brasil,tortura,30 a 39 anos,1154,33324599.0,3.46,definitivo
+2016,Brasil,tortura,40 a 49 anos,674,26944608.0,2.5,definitivo
+2016,Brasil,tortura,50 a 59 anos,330,22109407.0,1.49,definitivo
+2016,Brasil,tortura,60 a 69 anos,187,14479976.0,1.29,definitivo
+2016,Brasil,tortura,70 a 79 anos,106,7696509.0,1.38,definitivo
+2016,Brasil,tortura,80 anos e mais,67,3694903.0,1.81,definitivo
+2016,Brasil,tortura,Idade não informada,13,,,definitivo
+2016,Brasil,trafico_pessoas,0 a 4 anos,10,14705019.0,0.07,definitivo
+2016,Brasil,trafico_pessoas,5 a 9 anos,7,14662314.0,0.05,definitivo
+2016,Brasil,trafico_pessoas,10 a 14 anos,7,15735526.0,0.04,definitivo
+2016,Brasil,trafico_pessoas,15 a 19 anos,14,16928752.0,0.08,definitivo
+2016,Brasil,trafico_pessoas,20 a 29 anos,29,33590312.0,0.09,definitivo
+2016,Brasil,trafico_pessoas,30 a 39 anos,24,33324599.0,0.07,definitivo
+2016,Brasil,trafico_pessoas,40 a 49 anos,11,26944608.0,0.04,definitivo
+2016,Brasil,trafico_pessoas,50 a 59 anos,4,22109407.0,0.02,definitivo
+2016,Brasil,trafico_pessoas,60 a 69 anos,2,14479976.0,0.01,definitivo
+2016,Brasil,trafico_pessoas,70 a 79 anos,1,7696509.0,0.01,definitivo
+2016,Brasil,trafico_pessoas,80 anos e mais,3,3694903.0,0.08,definitivo
+2016,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1330,471471.0,282.1,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,443,448626.0,98.75,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,717,464753.0,154.28,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,803,543474.0,147.75,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,989,1212545.0,81.56,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,929,1175161.0,79.05,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,563,969604.0,58.06,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,354,836995.0,42.29,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,265,526113.0,50.37,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,122,254539.0,47.93,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,80 anos e mais,71,108192.0,65.62,definitivo
+2016,Santa Catarina,notificacoes_interpessoais,Idade não informada,17,,,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,54,471471.0,11.45,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,19,448626.0,4.24,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,162,464753.0,34.86,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,442,543474.0,81.33,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,764,1212545.0,63.01,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,704,1175161.0,59.91,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,528,969604.0,54.46,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,278,836995.0,33.21,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,118,526113.0,22.43,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,35,254539.0,13.75,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,14,108192.0,12.94,definitivo
+2016,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,7,,,definitivo
+2016,Santa Catarina,violencia_fisica,0 a 4 anos,187,471471.0,39.66,definitivo
+2016,Santa Catarina,violencia_fisica,5 a 9 anos,123,448626.0,27.42,definitivo
+2016,Santa Catarina,violencia_fisica,10 a 14 anos,259,464753.0,55.73,definitivo
+2016,Santa Catarina,violencia_fisica,15 a 19 anos,663,543474.0,121.99,definitivo
+2016,Santa Catarina,violencia_fisica,20 a 29 anos,836,1212545.0,68.95,definitivo
+2016,Santa Catarina,violencia_fisica,30 a 39 anos,797,1175161.0,67.82,definitivo
+2016,Santa Catarina,violencia_fisica,40 a 49 anos,506,969604.0,52.19,definitivo
+2016,Santa Catarina,violencia_fisica,50 a 59 anos,301,836995.0,35.96,definitivo
+2016,Santa Catarina,violencia_fisica,60 a 69 anos,211,526113.0,40.11,definitivo
+2016,Santa Catarina,violencia_fisica,70 a 79 anos,78,254539.0,30.64,definitivo
+2016,Santa Catarina,violencia_fisica,80 anos e mais,39,108192.0,36.05,definitivo
+2016,Santa Catarina,violencia_fisica,Idade não informada,7,,,definitivo
+2016,Santa Catarina,violencia_psicologica,0 a 4 anos,73,471471.0,15.48,definitivo
+2016,Santa Catarina,violencia_psicologica,5 a 9 anos,123,448626.0,27.42,definitivo
+2016,Santa Catarina,violencia_psicologica,10 a 14 anos,190,464753.0,40.88,definitivo
+2016,Santa Catarina,violencia_psicologica,15 a 19 anos,242,543474.0,44.53,definitivo
+2016,Santa Catarina,violencia_psicologica,20 a 29 anos,404,1212545.0,33.32,definitivo
+2016,Santa Catarina,violencia_psicologica,30 a 39 anos,392,1175161.0,33.36,definitivo
+2016,Santa Catarina,violencia_psicologica,40 a 49 anos,252,969604.0,25.99,definitivo
+2016,Santa Catarina,violencia_psicologica,50 a 59 anos,157,836995.0,18.76,definitivo
+2016,Santa Catarina,violencia_psicologica,60 a 69 anos,109,526113.0,20.72,definitivo
+2016,Santa Catarina,violencia_psicologica,70 a 79 anos,59,254539.0,23.18,definitivo
+2016,Santa Catarina,violencia_psicologica,80 anos e mais,21,108192.0,19.41,definitivo
+2016,Santa Catarina,violencia_psicologica,Idade não informada,0,,,definitivo
+2016,Santa Catarina,violencia_sexual,0 a 4 anos,148,471471.0,31.39,definitivo
+2016,Santa Catarina,violencia_sexual,5 a 9 anos,190,448626.0,42.35,definitivo
+2016,Santa Catarina,violencia_sexual,10 a 14 anos,364,464753.0,78.32,definitivo
+2016,Santa Catarina,violencia_sexual,15 a 19 anos,142,543474.0,26.13,definitivo
+2016,Santa Catarina,violencia_sexual,20 a 29 anos,113,1212545.0,9.32,definitivo
+2016,Santa Catarina,violencia_sexual,30 a 39 anos,66,1175161.0,5.62,definitivo
+2016,Santa Catarina,violencia_sexual,40 a 49 anos,38,969604.0,3.92,definitivo
+2016,Santa Catarina,violencia_sexual,50 a 59 anos,20,836995.0,2.39,definitivo
+2016,Santa Catarina,violencia_sexual,60 a 69 anos,7,526113.0,1.33,definitivo
+2016,Santa Catarina,violencia_sexual,70 a 79 anos,1,254539.0,0.39,definitivo
+2016,Santa Catarina,violencia_sexual,80 anos e mais,3,108192.0,2.77,definitivo
+2016,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2016,Santa Catarina,violencia_financeira,0 a 4 anos,6,471471.0,1.27,definitivo
+2016,Santa Catarina,violencia_financeira,5 a 9 anos,3,448626.0,0.67,definitivo
+2016,Santa Catarina,violencia_financeira,10 a 14 anos,7,464753.0,1.51,definitivo
+2016,Santa Catarina,violencia_financeira,15 a 19 anos,6,543474.0,1.1,definitivo
+2016,Santa Catarina,violencia_financeira,20 a 29 anos,11,1212545.0,0.91,definitivo
+2016,Santa Catarina,violencia_financeira,30 a 39 anos,11,1175161.0,0.94,definitivo
+2016,Santa Catarina,violencia_financeira,40 a 49 anos,10,969604.0,1.03,definitivo
+2016,Santa Catarina,violencia_financeira,50 a 59 anos,13,836995.0,1.55,definitivo
+2016,Santa Catarina,violencia_financeira,60 a 69 anos,17,526113.0,3.23,definitivo
+2016,Santa Catarina,violencia_financeira,70 a 79 anos,10,254539.0,3.93,definitivo
+2016,Santa Catarina,violencia_financeira,80 anos e mais,5,108192.0,4.62,definitivo
+2016,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2016,Santa Catarina,negligencia,0 a 4 anos,1109,471471.0,235.22,definitivo
+2016,Santa Catarina,negligencia,5 a 9 anos,193,448626.0,43.02,definitivo
+2016,Santa Catarina,negligencia,10 a 14 anos,197,464753.0,42.39,definitivo
+2016,Santa Catarina,negligencia,15 a 19 anos,42,543474.0,7.73,definitivo
+2016,Santa Catarina,negligencia,20 a 29 anos,34,1212545.0,2.8,definitivo
+2016,Santa Catarina,negligencia,30 a 39 anos,22,1175161.0,1.87,definitivo
+2016,Santa Catarina,negligencia,40 a 49 anos,8,969604.0,0.83,definitivo
+2016,Santa Catarina,negligencia,50 a 59 anos,16,836995.0,1.91,definitivo
+2016,Santa Catarina,negligencia,60 a 69 anos,27,526113.0,5.13,definitivo
+2016,Santa Catarina,negligencia,70 a 79 anos,34,254539.0,13.36,definitivo
+2016,Santa Catarina,negligencia,80 anos e mais,32,108192.0,29.58,definitivo
+2016,Santa Catarina,negligencia,Idade não informada,14,,,definitivo
+2016,Santa Catarina,tortura,0 a 4 anos,12,471471.0,2.55,definitivo
+2016,Santa Catarina,tortura,5 a 9 anos,18,448626.0,4.01,definitivo
+2016,Santa Catarina,tortura,10 a 14 anos,23,464753.0,4.95,definitivo
+2016,Santa Catarina,tortura,15 a 19 anos,32,543474.0,5.89,definitivo
+2016,Santa Catarina,tortura,20 a 29 anos,34,1212545.0,2.8,definitivo
+2016,Santa Catarina,tortura,30 a 39 anos,34,1175161.0,2.89,definitivo
+2016,Santa Catarina,tortura,40 a 49 anos,32,969604.0,3.3,definitivo
+2016,Santa Catarina,tortura,50 a 59 anos,10,836995.0,1.19,definitivo
+2016,Santa Catarina,tortura,60 a 69 anos,13,526113.0,2.47,definitivo
+2016,Santa Catarina,tortura,70 a 79 anos,3,254539.0,1.18,definitivo
+2016,Santa Catarina,tortura,80 anos e mais,1,108192.0,0.92,definitivo
+2016,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2016,Santa Catarina,trafico_pessoas,0 a 4 anos,0,471471.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,5 a 9 anos,0,448626.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,10 a 14 anos,1,464753.0,0.22,definitivo
+2016,Santa Catarina,trafico_pessoas,15 a 19 anos,0,543474.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1212545.0,0.08,definitivo
+2016,Santa Catarina,trafico_pessoas,30 a 39 anos,2,1175161.0,0.17,definitivo
+2016,Santa Catarina,trafico_pessoas,40 a 49 anos,0,969604.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,50 a 59 anos,1,836995.0,0.12,definitivo
+2016,Santa Catarina,trafico_pessoas,60 a 69 anos,0,526113.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,70 a 79 anos,0,254539.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,80 anos e mais,0,108192.0,0.0,definitivo
+2016,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2017,Brasil,notificacoes_interpessoais,0 a 4 anos,24891,14647172.0,169.94,definitivo
+2017,Brasil,notificacoes_interpessoais,5 a 9 anos,13900,14581565.0,95.33,definitivo
+2017,Brasil,notificacoes_interpessoais,10 a 14 anos,22276,15476458.0,143.93,definitivo
+2017,Brasil,notificacoes_interpessoais,15 a 19 anos,31472,16710472.0,188.34,definitivo
+2017,Brasil,notificacoes_interpessoais,20 a 29 anos,40560,33411073.0,121.4,definitivo
+2017,Brasil,notificacoes_interpessoais,30 a 39 anos,33760,33555614.0,100.61,definitivo
+2017,Brasil,notificacoes_interpessoais,40 a 49 anos,19803,27379708.0,72.33,definitivo
+2017,Brasil,notificacoes_interpessoais,50 a 59 anos,10070,22587605.0,44.58,definitivo
+2017,Brasil,notificacoes_interpessoais,60 a 69 anos,7547,15039714.0,50.18,definitivo
+2017,Brasil,notificacoes_interpessoais,70 a 79 anos,4616,7983938.0,57.82,definitivo
+2017,Brasil,notificacoes_interpessoais,80 anos e mais,3013,3838238.0,78.5,definitivo
+2017,Brasil,notificacoes_interpessoais,Idade não informada,0,,,definitivo
+2017,Brasil,notificacoes_autoprovocadas,0 a 4 anos,1040,14647172.0,7.1,definitivo
+2017,Brasil,notificacoes_autoprovocadas,5 a 9 anos,441,14581565.0,3.02,definitivo
+2017,Brasil,notificacoes_autoprovocadas,10 a 14 anos,5596,15476458.0,36.16,definitivo
+2017,Brasil,notificacoes_autoprovocadas,15 a 19 anos,13443,16710472.0,80.45,definitivo
+2017,Brasil,notificacoes_autoprovocadas,20 a 29 anos,17791,33411073.0,53.25,definitivo
+2017,Brasil,notificacoes_autoprovocadas,30 a 39 anos,13397,33555614.0,39.92,definitivo
+2017,Brasil,notificacoes_autoprovocadas,40 a 49 anos,8998,27379708.0,32.86,definitivo
+2017,Brasil,notificacoes_autoprovocadas,50 a 59 anos,4797,22587605.0,21.24,definitivo
+2017,Brasil,notificacoes_autoprovocadas,60 a 69 anos,1724,15039714.0,11.46,definitivo
+2017,Brasil,notificacoes_autoprovocadas,70 a 79 anos,718,7983938.0,8.99,definitivo
+2017,Brasil,notificacoes_autoprovocadas,80 anos e mais,256,3838238.0,6.67,definitivo
+2017,Brasil,notificacoes_autoprovocadas,Idade não informada,0,,,definitivo
+2017,Brasil,violencia_fisica,0 a 4 anos,5862,14647172.0,40.02,definitivo
+2017,Brasil,violencia_fisica,5 a 9 anos,4590,14581565.0,31.48,definitivo
+2017,Brasil,violencia_fisica,10 a 14 anos,9747,15476458.0,62.98,definitivo
+2017,Brasil,violencia_fisica,15 a 19 anos,24417,16710472.0,146.12,definitivo
+2017,Brasil,violencia_fisica,20 a 29 anos,35637,33411073.0,106.66,definitivo
+2017,Brasil,violencia_fisica,30 a 39 anos,29698,33555614.0,88.5,definitivo
+2017,Brasil,violencia_fisica,40 a 49 anos,17184,27379708.0,62.76,definitivo
+2017,Brasil,violencia_fisica,50 a 59 anos,8445,22587605.0,37.39,definitivo
+2017,Brasil,violencia_fisica,60 a 69 anos,5908,15039714.0,39.28,definitivo
+2017,Brasil,violencia_fisica,70 a 79 anos,2688,7983938.0,33.67,definitivo
+2017,Brasil,violencia_fisica,80 anos e mais,1221,3838238.0,31.81,definitivo
+2017,Brasil,violencia_fisica,Idade não informada,0,,,definitivo
+2017,Brasil,violencia_psicologica,0 a 4 anos,2831,14647172.0,19.33,definitivo
+2017,Brasil,violencia_psicologica,5 a 9 anos,3412,14581565.0,23.4,definitivo
+2017,Brasil,violencia_psicologica,10 a 14 anos,5445,15476458.0,35.18,definitivo
+2017,Brasil,violencia_psicologica,15 a 19 anos,7249,16710472.0,43.38,definitivo
+2017,Brasil,violencia_psicologica,20 a 29 anos,14498,33411073.0,43.39,definitivo
+2017,Brasil,violencia_psicologica,30 a 39 anos,13227,33555614.0,39.42,definitivo
+2017,Brasil,violencia_psicologica,40 a 49 anos,7892,27379708.0,28.82,definitivo
+2017,Brasil,violencia_psicologica,50 a 59 anos,4063,22587605.0,17.99,definitivo
+2017,Brasil,violencia_psicologica,60 a 69 anos,2347,15039714.0,15.61,definitivo
+2017,Brasil,violencia_psicologica,70 a 79 anos,1296,7983938.0,16.23,definitivo
+2017,Brasil,violencia_psicologica,80 anos e mais,694,3838238.0,18.08,definitivo
+2017,Brasil,violencia_psicologica,Idade não informada,0,,,definitivo
+2017,Brasil,violencia_sexual,0 a 4 anos,4426,14647172.0,30.22,definitivo
+2017,Brasil,violencia_sexual,5 a 9 anos,5580,14581565.0,38.27,definitivo
+2017,Brasil,violencia_sexual,10 a 14 anos,9655,15476458.0,62.39,definitivo
+2017,Brasil,violencia_sexual,15 a 19 anos,5087,16710472.0,30.44,definitivo
+2017,Brasil,violencia_sexual,20 a 29 anos,4119,33411073.0,12.33,definitivo
+2017,Brasil,violencia_sexual,30 a 39 anos,2356,33555614.0,7.02,definitivo
+2017,Brasil,violencia_sexual,40 a 49 anos,1279,27379708.0,4.67,definitivo
+2017,Brasil,violencia_sexual,50 a 59 anos,525,22587605.0,2.32,definitivo
+2017,Brasil,violencia_sexual,60 a 69 anos,227,15039714.0,1.51,definitivo
+2017,Brasil,violencia_sexual,70 a 79 anos,66,7983938.0,0.83,definitivo
+2017,Brasil,violencia_sexual,80 anos e mais,33,3838238.0,0.86,definitivo
+2017,Brasil,violencia_sexual,Idade não informada,0,,,definitivo
+2017,Brasil,violencia_financeira,0 a 4 anos,185,14647172.0,1.26,definitivo
+2017,Brasil,violencia_financeira,5 a 9 anos,114,14581565.0,0.78,definitivo
+2017,Brasil,violencia_financeira,10 a 14 anos,159,15476458.0,1.03,definitivo
+2017,Brasil,violencia_financeira,15 a 19 anos,226,16710472.0,1.35,definitivo
+2017,Brasil,violencia_financeira,20 a 29 anos,600,33411073.0,1.8,definitivo
+2017,Brasil,violencia_financeira,30 a 39 anos,671,33555614.0,2.0,definitivo
+2017,Brasil,violencia_financeira,40 a 49 anos,537,27379708.0,1.96,definitivo
+2017,Brasil,violencia_financeira,50 a 59 anos,333,22587605.0,1.47,definitivo
+2017,Brasil,violencia_financeira,60 a 69 anos,327,15039714.0,2.17,definitivo
+2017,Brasil,violencia_financeira,70 a 79 anos,394,7983938.0,4.93,definitivo
+2017,Brasil,violencia_financeira,80 anos e mais,262,3838238.0,6.83,definitivo
+2017,Brasil,violencia_financeira,Idade não informada,0,,,definitivo
+2017,Brasil,negligencia,0 a 4 anos,15885,14647172.0,108.45,definitivo
+2017,Brasil,negligencia,5 a 9 anos,4738,14581565.0,32.49,definitivo
+2017,Brasil,negligencia,10 a 14 anos,4029,15476458.0,26.03,definitivo
+2017,Brasil,negligencia,15 a 19 anos,2791,16710472.0,16.7,definitivo
+2017,Brasil,negligencia,20 a 29 anos,450,33411073.0,1.35,definitivo
+2017,Brasil,negligencia,30 a 39 anos,328,33555614.0,0.98,definitivo
+2017,Brasil,negligencia,40 a 49 anos,276,27379708.0,1.01,definitivo
+2017,Brasil,negligencia,50 a 59 anos,356,22587605.0,1.58,definitivo
+2017,Brasil,negligencia,60 a 69 anos,1008,15039714.0,6.7,definitivo
+2017,Brasil,negligencia,70 a 79 anos,1639,7983938.0,20.53,definitivo
+2017,Brasil,negligencia,80 anos e mais,1717,3838238.0,44.73,definitivo
+2017,Brasil,negligencia,Idade não informada,0,,,definitivo
+2017,Brasil,tortura,0 a 4 anos,381,14647172.0,2.6,definitivo
+2017,Brasil,tortura,5 a 9 anos,365,14581565.0,2.5,definitivo
+2017,Brasil,tortura,10 a 14 anos,633,15476458.0,4.09,definitivo
+2017,Brasil,tortura,15 a 19 anos,932,16710472.0,5.58,definitivo
+2017,Brasil,tortura,20 a 29 anos,1650,33411073.0,4.94,definitivo
+2017,Brasil,tortura,30 a 39 anos,1516,33555614.0,4.52,definitivo
+2017,Brasil,tortura,40 a 49 anos,854,27379708.0,3.12,definitivo
+2017,Brasil,tortura,50 a 59 anos,405,22587605.0,1.79,definitivo
+2017,Brasil,tortura,60 a 69 anos,239,15039714.0,1.59,definitivo
+2017,Brasil,tortura,70 a 79 anos,152,7983938.0,1.9,definitivo
+2017,Brasil,tortura,80 anos e mais,87,3838238.0,2.27,definitivo
+2017,Brasil,tortura,Idade não informada,0,,,definitivo
+2017,Brasil,trafico_pessoas,0 a 4 anos,13,14647172.0,0.09,definitivo
+2017,Brasil,trafico_pessoas,5 a 9 anos,10,14581565.0,0.07,definitivo
+2017,Brasil,trafico_pessoas,10 a 14 anos,23,15476458.0,0.15,definitivo
+2017,Brasil,trafico_pessoas,15 a 19 anos,13,16710472.0,0.08,definitivo
+2017,Brasil,trafico_pessoas,20 a 29 anos,38,33411073.0,0.11,definitivo
+2017,Brasil,trafico_pessoas,30 a 39 anos,25,33555614.0,0.07,definitivo
+2017,Brasil,trafico_pessoas,40 a 49 anos,7,27379708.0,0.03,definitivo
+2017,Brasil,trafico_pessoas,50 a 59 anos,5,22587605.0,0.02,definitivo
+2017,Brasil,trafico_pessoas,60 a 69 anos,3,15039714.0,0.02,definitivo
+2017,Brasil,trafico_pessoas,70 a 79 anos,3,7983938.0,0.04,definitivo
+2017,Brasil,trafico_pessoas,80 anos e mais,1,3838238.0,0.03,definitivo
+2017,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1576,480483.0,328.0,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,483,456320.0,105.85,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,760,463137.0,164.1,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,775,532505.0,145.54,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1151,1218480.0,94.46,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,995,1203243.0,82.69,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,600,986223.0,60.84,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,380,860590.0,44.16,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,249,552208.0,45.09,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,176,268634.0,65.52,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,80 anos e mais,81,113636.0,71.28,definitivo
+2017,Santa Catarina,notificacoes_interpessoais,Idade não informada,0,,,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,50,480483.0,10.41,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,10,456320.0,2.19,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,396,463137.0,85.5,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,693,532505.0,130.14,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,1034,1218480.0,84.86,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,927,1203243.0,77.04,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,724,986223.0,73.41,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,445,860590.0,51.71,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,121,552208.0,21.91,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,54,268634.0,20.1,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,8,113636.0,7.04,definitivo
+2017,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,0,,,definitivo
+2017,Santa Catarina,violencia_fisica,0 a 4 anos,212,480483.0,44.12,definitivo
+2017,Santa Catarina,violencia_fisica,5 a 9 anos,112,456320.0,24.54,definitivo
+2017,Santa Catarina,violencia_fisica,10 a 14 anos,277,463137.0,59.81,definitivo
+2017,Santa Catarina,violencia_fisica,15 a 19 anos,609,532505.0,114.37,definitivo
+2017,Santa Catarina,violencia_fisica,20 a 29 anos,980,1218480.0,80.43,definitivo
+2017,Santa Catarina,violencia_fisica,30 a 39 anos,876,1203243.0,72.8,definitivo
+2017,Santa Catarina,violencia_fisica,40 a 49 anos,541,986223.0,54.86,definitivo
+2017,Santa Catarina,violencia_fisica,50 a 59 anos,334,860590.0,38.81,definitivo
+2017,Santa Catarina,violencia_fisica,60 a 69 anos,187,552208.0,33.86,definitivo
+2017,Santa Catarina,violencia_fisica,70 a 79 anos,116,268634.0,43.18,definitivo
+2017,Santa Catarina,violencia_fisica,80 anos e mais,43,113636.0,37.84,definitivo
+2017,Santa Catarina,violencia_fisica,Idade não informada,0,,,definitivo
+2017,Santa Catarina,violencia_psicologica,0 a 4 anos,106,480483.0,22.06,definitivo
+2017,Santa Catarina,violencia_psicologica,5 a 9 anos,101,456320.0,22.13,definitivo
+2017,Santa Catarina,violencia_psicologica,10 a 14 anos,192,463137.0,41.46,definitivo
+2017,Santa Catarina,violencia_psicologica,15 a 19 anos,266,532505.0,49.95,definitivo
+2017,Santa Catarina,violencia_psicologica,20 a 29 anos,475,1218480.0,38.98,definitivo
+2017,Santa Catarina,violencia_psicologica,30 a 39 anos,415,1203243.0,34.49,definitivo
+2017,Santa Catarina,violencia_psicologica,40 a 49 anos,256,986223.0,25.96,definitivo
+2017,Santa Catarina,violencia_psicologica,50 a 59 anos,163,860590.0,18.94,definitivo
+2017,Santa Catarina,violencia_psicologica,60 a 69 anos,96,552208.0,17.38,definitivo
+2017,Santa Catarina,violencia_psicologica,70 a 79 anos,73,268634.0,27.17,definitivo
+2017,Santa Catarina,violencia_psicologica,80 anos e mais,22,113636.0,19.36,definitivo
+2017,Santa Catarina,violencia_psicologica,Idade não informada,0,,,definitivo
+2017,Santa Catarina,violencia_sexual,0 a 4 anos,204,480483.0,42.46,definitivo
+2017,Santa Catarina,violencia_sexual,5 a 9 anos,206,456320.0,45.14,definitivo
+2017,Santa Catarina,violencia_sexual,10 a 14 anos,390,463137.0,84.21,definitivo
+2017,Santa Catarina,violencia_sexual,15 a 19 anos,171,532505.0,32.11,definitivo
+2017,Santa Catarina,violencia_sexual,20 a 29 anos,160,1218480.0,13.13,definitivo
+2017,Santa Catarina,violencia_sexual,30 a 39 anos,97,1203243.0,8.06,definitivo
+2017,Santa Catarina,violencia_sexual,40 a 49 anos,40,986223.0,4.06,definitivo
+2017,Santa Catarina,violencia_sexual,50 a 59 anos,11,860590.0,1.28,definitivo
+2017,Santa Catarina,violencia_sexual,60 a 69 anos,12,552208.0,2.17,definitivo
+2017,Santa Catarina,violencia_sexual,70 a 79 anos,1,268634.0,0.37,definitivo
+2017,Santa Catarina,violencia_sexual,80 anos e mais,1,113636.0,0.88,definitivo
+2017,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2017,Santa Catarina,violencia_financeira,0 a 4 anos,7,480483.0,1.46,definitivo
+2017,Santa Catarina,violencia_financeira,5 a 9 anos,4,456320.0,0.88,definitivo
+2017,Santa Catarina,violencia_financeira,10 a 14 anos,8,463137.0,1.73,definitivo
+2017,Santa Catarina,violencia_financeira,15 a 19 anos,13,532505.0,2.44,definitivo
+2017,Santa Catarina,violencia_financeira,20 a 29 anos,17,1218480.0,1.4,definitivo
+2017,Santa Catarina,violencia_financeira,30 a 39 anos,20,1203243.0,1.66,definitivo
+2017,Santa Catarina,violencia_financeira,40 a 49 anos,13,986223.0,1.32,definitivo
+2017,Santa Catarina,violencia_financeira,50 a 59 anos,14,860590.0,1.63,definitivo
+2017,Santa Catarina,violencia_financeira,60 a 69 anos,18,552208.0,3.26,definitivo
+2017,Santa Catarina,violencia_financeira,70 a 79 anos,21,268634.0,7.82,definitivo
+2017,Santa Catarina,violencia_financeira,80 anos e mais,8,113636.0,7.04,definitivo
+2017,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2017,Santa Catarina,negligencia,0 a 4 anos,1272,480483.0,264.73,definitivo
+2017,Santa Catarina,negligencia,5 a 9 anos,238,456320.0,52.16,definitivo
+2017,Santa Catarina,negligencia,10 a 14 anos,219,463137.0,47.29,definitivo
+2017,Santa Catarina,negligencia,15 a 19 anos,46,532505.0,8.64,definitivo
+2017,Santa Catarina,negligencia,20 a 29 anos,36,1218480.0,2.95,definitivo
+2017,Santa Catarina,negligencia,30 a 39 anos,27,1203243.0,2.24,definitivo
+2017,Santa Catarina,negligencia,40 a 49 anos,5,986223.0,0.51,definitivo
+2017,Santa Catarina,negligencia,50 a 59 anos,17,860590.0,1.98,definitivo
+2017,Santa Catarina,negligencia,60 a 69 anos,27,552208.0,4.89,definitivo
+2017,Santa Catarina,negligencia,70 a 79 anos,42,268634.0,15.63,definitivo
+2017,Santa Catarina,negligencia,80 anos e mais,39,113636.0,34.32,definitivo
+2017,Santa Catarina,negligencia,Idade não informada,0,,,definitivo
+2017,Santa Catarina,tortura,0 a 4 anos,24,480483.0,4.99,definitivo
+2017,Santa Catarina,tortura,5 a 9 anos,10,456320.0,2.19,definitivo
+2017,Santa Catarina,tortura,10 a 14 anos,29,463137.0,6.26,definitivo
+2017,Santa Catarina,tortura,15 a 19 anos,55,532505.0,10.33,definitivo
+2017,Santa Catarina,tortura,20 a 29 anos,71,1218480.0,5.83,definitivo
+2017,Santa Catarina,tortura,30 a 39 anos,73,1203243.0,6.07,definitivo
+2017,Santa Catarina,tortura,40 a 49 anos,41,986223.0,4.16,definitivo
+2017,Santa Catarina,tortura,50 a 59 anos,18,860590.0,2.09,definitivo
+2017,Santa Catarina,tortura,60 a 69 anos,15,552208.0,2.72,definitivo
+2017,Santa Catarina,tortura,70 a 79 anos,13,268634.0,4.84,definitivo
+2017,Santa Catarina,tortura,80 anos e mais,3,113636.0,2.64,definitivo
+2017,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2017,Santa Catarina,trafico_pessoas,0 a 4 anos,1,480483.0,0.21,definitivo
+2017,Santa Catarina,trafico_pessoas,5 a 9 anos,0,456320.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,10 a 14 anos,0,463137.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,15 a 19 anos,1,532505.0,0.19,definitivo
+2017,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1218480.0,0.08,definitivo
+2017,Santa Catarina,trafico_pessoas,30 a 39 anos,0,1203243.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,40 a 49 anos,0,986223.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,50 a 59 anos,0,860590.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,60 a 69 anos,0,552208.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,70 a 79 anos,0,268634.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,80 anos e mais,0,113636.0,0.0,definitivo
+2017,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2018,Brasil,notificacoes_interpessoais,0 a 4 anos,27664,14636517.0,189.01,definitivo
+2018,Brasil,notificacoes_interpessoais,5 a 9 anos,16103,14518069.0,110.92,definitivo
+2018,Brasil,notificacoes_interpessoais,10 a 14 anos,24553,15246274.0,161.04,definitivo
+2018,Brasil,notificacoes_interpessoais,15 a 19 anos,32534,16442716.0,197.86,definitivo
+2018,Brasil,notificacoes_interpessoais,20 a 29 anos,45798,33247806.0,137.75,definitivo
+2018,Brasil,notificacoes_interpessoais,30 a 39 anos,39048,33628251.0,116.12,definitivo
+2018,Brasil,notificacoes_interpessoais,40 a 49 anos,22895,27897621.0,82.07,definitivo
+2018,Brasil,notificacoes_interpessoais,50 a 59 anos,11295,23022266.0,49.06,definitivo
+2018,Brasil,notificacoes_interpessoais,60 a 69 anos,8687,15603592.0,55.67,definitivo
+2018,Brasil,notificacoes_interpessoais,70 a 79 anos,5215,8296971.0,62.85,definitivo
+2018,Brasil,notificacoes_interpessoais,80 anos e mais,3416,3988955.0,85.64,definitivo
+2018,Brasil,notificacoes_interpessoais,Idade não informada,12,,,definitivo
+2018,Brasil,notificacoes_autoprovocadas,0 a 4 anos,702,14636517.0,4.8,definitivo
+2018,Brasil,notificacoes_autoprovocadas,5 a 9 anos,421,14518069.0,2.9,definitivo
+2018,Brasil,notificacoes_autoprovocadas,10 a 14 anos,7548,15246274.0,49.51,definitivo
+2018,Brasil,notificacoes_autoprovocadas,15 a 19 anos,19095,16442716.0,116.13,definitivo
+2018,Brasil,notificacoes_autoprovocadas,20 a 29 anos,24186,33247806.0,72.74,definitivo
+2018,Brasil,notificacoes_autoprovocadas,30 a 39 anos,17149,33628251.0,51.0,definitivo
+2018,Brasil,notificacoes_autoprovocadas,40 a 49 anos,11570,27897621.0,41.47,definitivo
+2018,Brasil,notificacoes_autoprovocadas,50 a 59 anos,5622,23022266.0,24.42,definitivo
+2018,Brasil,notificacoes_autoprovocadas,60 a 69 anos,1979,15603592.0,12.68,definitivo
+2018,Brasil,notificacoes_autoprovocadas,70 a 79 anos,753,8296971.0,9.08,definitivo
+2018,Brasil,notificacoes_autoprovocadas,80 anos e mais,245,3988955.0,6.14,definitivo
+2018,Brasil,notificacoes_autoprovocadas,Idade não informada,2,,,definitivo
+2018,Brasil,violencia_fisica,0 a 4 anos,6124,14636517.0,41.84,definitivo
+2018,Brasil,violencia_fisica,5 a 9 anos,5073,14518069.0,34.94,definitivo
+2018,Brasil,violencia_fisica,10 a 14 anos,10143,15246274.0,66.53,definitivo
+2018,Brasil,violencia_fisica,15 a 19 anos,24750,16442716.0,150.52,definitivo
+2018,Brasil,violencia_fisica,20 a 29 anos,40239,33247806.0,121.03,definitivo
+2018,Brasil,violencia_fisica,30 a 39 anos,34353,33628251.0,102.16,definitivo
+2018,Brasil,violencia_fisica,40 a 49 anos,19806,27897621.0,71.0,definitivo
+2018,Brasil,violencia_fisica,50 a 59 anos,9461,23022266.0,41.09,definitivo
+2018,Brasil,violencia_fisica,60 a 69 anos,6622,15603592.0,42.44,definitivo
+2018,Brasil,violencia_fisica,70 a 79 anos,2935,8296971.0,35.37,definitivo
+2018,Brasil,violencia_fisica,80 anos e mais,1294,3988955.0,32.44,definitivo
+2018,Brasil,violencia_fisica,Idade não informada,8,,,definitivo
+2018,Brasil,violencia_psicologica,0 a 4 anos,2778,14636517.0,18.98,definitivo
+2018,Brasil,violencia_psicologica,5 a 9 anos,3733,14518069.0,25.71,definitivo
+2018,Brasil,violencia_psicologica,10 a 14 anos,5742,15246274.0,37.66,definitivo
+2018,Brasil,violencia_psicologica,15 a 19 anos,7685,16442716.0,46.74,definitivo
+2018,Brasil,violencia_psicologica,20 a 29 anos,15399,33247806.0,46.32,definitivo
+2018,Brasil,violencia_psicologica,30 a 39 anos,14547,33628251.0,43.26,definitivo
+2018,Brasil,violencia_psicologica,40 a 49 anos,8795,27897621.0,31.53,definitivo
+2018,Brasil,violencia_psicologica,50 a 59 anos,4249,23022266.0,18.46,definitivo
+2018,Brasil,violencia_psicologica,60 a 69 anos,2562,15603592.0,16.42,definitivo
+2018,Brasil,violencia_psicologica,70 a 79 anos,1431,8296971.0,17.25,definitivo
+2018,Brasil,violencia_psicologica,80 anos e mais,773,3988955.0,19.38,definitivo
+2018,Brasil,violencia_psicologica,Idade não informada,3,,,definitivo
+2018,Brasil,violencia_sexual,0 a 4 anos,5409,14636517.0,36.96,definitivo
+2018,Brasil,violencia_sexual,5 a 9 anos,6689,14518069.0,46.07,definitivo
+2018,Brasil,violencia_sexual,10 a 14 anos,11423,15246274.0,74.92,definitivo
+2018,Brasil,violencia_sexual,15 a 19 anos,5655,16442716.0,34.39,definitivo
+2018,Brasil,violencia_sexual,20 a 29 anos,4621,33247806.0,13.9,definitivo
+2018,Brasil,violencia_sexual,30 a 39 anos,2612,33628251.0,7.77,definitivo
+2018,Brasil,violencia_sexual,40 a 49 anos,1386,27897621.0,4.97,definitivo
+2018,Brasil,violencia_sexual,50 a 59 anos,598,23022266.0,2.6,definitivo
+2018,Brasil,violencia_sexual,60 a 69 anos,227,15603592.0,1.45,definitivo
+2018,Brasil,violencia_sexual,70 a 79 anos,104,8296971.0,1.25,definitivo
+2018,Brasil,violencia_sexual,80 anos e mais,45,3988955.0,1.13,definitivo
+2018,Brasil,violencia_sexual,Idade não informada,0,,,definitivo
+2018,Brasil,violencia_financeira,0 a 4 anos,145,14636517.0,0.99,definitivo
+2018,Brasil,violencia_financeira,5 a 9 anos,117,14518069.0,0.81,definitivo
+2018,Brasil,violencia_financeira,10 a 14 anos,153,15246274.0,1.0,definitivo
+2018,Brasil,violencia_financeira,15 a 19 anos,226,16442716.0,1.37,definitivo
+2018,Brasil,violencia_financeira,20 a 29 anos,669,33247806.0,2.01,definitivo
+2018,Brasil,violencia_financeira,30 a 39 anos,902,33628251.0,2.68,definitivo
+2018,Brasil,violencia_financeira,40 a 49 anos,629,27897621.0,2.25,definitivo
+2018,Brasil,violencia_financeira,50 a 59 anos,408,23022266.0,1.77,definitivo
+2018,Brasil,violencia_financeira,60 a 69 anos,431,15603592.0,2.76,definitivo
+2018,Brasil,violencia_financeira,70 a 79 anos,438,8296971.0,5.28,definitivo
+2018,Brasil,violencia_financeira,80 anos e mais,351,3988955.0,8.8,definitivo
+2018,Brasil,violencia_financeira,Idade não informada,0,,,definitivo
+2018,Brasil,negligencia,0 a 4 anos,17483,14636517.0,119.45,definitivo
+2018,Brasil,negligencia,5 a 9 anos,5267,14518069.0,36.28,definitivo
+2018,Brasil,negligencia,10 a 14 anos,4277,15246274.0,28.05,definitivo
+2018,Brasil,negligencia,15 a 19 anos,2774,16442716.0,16.87,definitivo
+2018,Brasil,negligencia,20 a 29 anos,437,33247806.0,1.31,definitivo
+2018,Brasil,negligencia,30 a 39 anos,340,33628251.0,1.01,definitivo
+2018,Brasil,negligencia,40 a 49 anos,232,27897621.0,0.83,definitivo
+2018,Brasil,negligencia,50 a 59 anos,355,23022266.0,1.54,definitivo
+2018,Brasil,negligencia,60 a 69 anos,1256,15603592.0,8.05,definitivo
+2018,Brasil,negligencia,70 a 79 anos,1902,8296971.0,22.92,definitivo
+2018,Brasil,negligencia,80 anos e mais,1992,3988955.0,49.94,definitivo
+2018,Brasil,negligencia,Idade não informada,5,,,definitivo
+2018,Brasil,tortura,0 a 4 anos,262,14636517.0,1.79,definitivo
+2018,Brasil,tortura,5 a 9 anos,344,14518069.0,2.37,definitivo
+2018,Brasil,tortura,10 a 14 anos,549,15246274.0,3.6,definitivo
+2018,Brasil,tortura,15 a 19 anos,869,16442716.0,5.29,definitivo
+2018,Brasil,tortura,20 a 29 anos,1609,33247806.0,4.84,definitivo
+2018,Brasil,tortura,30 a 39 anos,1563,33628251.0,4.65,definitivo
+2018,Brasil,tortura,40 a 49 anos,858,27897621.0,3.08,definitivo
+2018,Brasil,tortura,50 a 59 anos,384,23022266.0,1.67,definitivo
+2018,Brasil,tortura,60 a 69 anos,229,15603592.0,1.47,definitivo
+2018,Brasil,tortura,70 a 79 anos,135,8296971.0,1.63,definitivo
+2018,Brasil,tortura,80 anos e mais,94,3988955.0,2.36,definitivo
+2018,Brasil,tortura,Idade não informada,1,,,definitivo
+2018,Brasil,trafico_pessoas,0 a 4 anos,18,14636517.0,0.12,definitivo
+2018,Brasil,trafico_pessoas,5 a 9 anos,10,14518069.0,0.07,definitivo
+2018,Brasil,trafico_pessoas,10 a 14 anos,13,15246274.0,0.09,definitivo
+2018,Brasil,trafico_pessoas,15 a 19 anos,21,16442716.0,0.13,definitivo
+2018,Brasil,trafico_pessoas,20 a 29 anos,38,33247806.0,0.11,definitivo
+2018,Brasil,trafico_pessoas,30 a 39 anos,40,33628251.0,0.12,definitivo
+2018,Brasil,trafico_pessoas,40 a 49 anos,14,27897621.0,0.05,definitivo
+2018,Brasil,trafico_pessoas,50 a 59 anos,7,23022266.0,0.03,definitivo
+2018,Brasil,trafico_pessoas,60 a 69 anos,4,15603592.0,0.03,definitivo
+2018,Brasil,trafico_pessoas,70 a 79 anos,3,8296971.0,0.04,definitivo
+2018,Brasil,trafico_pessoas,80 anos e mais,0,3988955.0,0.0,definitivo
+2018,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1667,490571.0,339.81,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,569,465539.0,122.22,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,795,464767.0,171.05,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,732,520808.0,140.55,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1133,1223744.0,92.58,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,918,1228568.0,74.72,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,583,1007720.0,57.85,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,386,881929.0,43.77,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,287,578865.0,49.58,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,176,284139.0,61.94,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,80 anos e mais,94,119477.0,78.68,definitivo
+2018,Santa Catarina,notificacoes_interpessoais,Idade não informada,0,,,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,21,490571.0,4.28,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,14,465539.0,3.01,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,402,464767.0,86.49,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,987,520808.0,189.51,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,1497,1223744.0,122.33,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1167,1228568.0,94.99,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1001,1007720.0,99.33,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,503,881929.0,57.03,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,161,578865.0,27.81,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,54,284139.0,19.0,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,16,119477.0,13.39,definitivo
+2018,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,1,,,definitivo
+2018,Santa Catarina,violencia_fisica,0 a 4 anos,214,490571.0,43.62,definitivo
+2018,Santa Catarina,violencia_fisica,5 a 9 anos,133,465539.0,28.57,definitivo
+2018,Santa Catarina,violencia_fisica,10 a 14 anos,249,464767.0,53.58,definitivo
+2018,Santa Catarina,violencia_fisica,15 a 19 anos,597,520808.0,114.63,definitivo
+2018,Santa Catarina,violencia_fisica,20 a 29 anos,982,1223744.0,80.25,definitivo
+2018,Santa Catarina,violencia_fisica,30 a 39 anos,823,1228568.0,66.99,definitivo
+2018,Santa Catarina,violencia_fisica,40 a 49 anos,516,1007720.0,51.2,definitivo
+2018,Santa Catarina,violencia_fisica,50 a 59 anos,339,881929.0,38.44,definitivo
+2018,Santa Catarina,violencia_fisica,60 a 69 anos,231,578865.0,39.91,definitivo
+2018,Santa Catarina,violencia_fisica,70 a 79 anos,115,284139.0,40.47,definitivo
+2018,Santa Catarina,violencia_fisica,80 anos e mais,47,119477.0,39.34,definitivo
+2018,Santa Catarina,violencia_fisica,Idade não informada,0,,,definitivo
+2018,Santa Catarina,violencia_psicologica,0 a 4 anos,90,490571.0,18.35,definitivo
+2018,Santa Catarina,violencia_psicologica,5 a 9 anos,120,465539.0,25.78,definitivo
+2018,Santa Catarina,violencia_psicologica,10 a 14 anos,207,464767.0,44.54,definitivo
+2018,Santa Catarina,violencia_psicologica,15 a 19 anos,234,520808.0,44.93,definitivo
+2018,Santa Catarina,violencia_psicologica,20 a 29 anos,416,1223744.0,33.99,definitivo
+2018,Santa Catarina,violencia_psicologica,30 a 39 anos,403,1228568.0,32.8,definitivo
+2018,Santa Catarina,violencia_psicologica,40 a 49 anos,252,1007720.0,25.01,definitivo
+2018,Santa Catarina,violencia_psicologica,50 a 59 anos,162,881929.0,18.37,definitivo
+2018,Santa Catarina,violencia_psicologica,60 a 69 anos,89,578865.0,15.37,definitivo
+2018,Santa Catarina,violencia_psicologica,70 a 79 anos,72,284139.0,25.34,definitivo
+2018,Santa Catarina,violencia_psicologica,80 anos e mais,30,119477.0,25.11,definitivo
+2018,Santa Catarina,violencia_psicologica,Idade não informada,0,,,definitivo
+2018,Santa Catarina,violencia_sexual,0 a 4 anos,226,490571.0,46.07,definitivo
+2018,Santa Catarina,violencia_sexual,5 a 9 anos,238,465539.0,51.12,definitivo
+2018,Santa Catarina,violencia_sexual,10 a 14 anos,447,464767.0,96.18,definitivo
+2018,Santa Catarina,violencia_sexual,15 a 19 anos,173,520808.0,33.22,definitivo
+2018,Santa Catarina,violencia_sexual,20 a 29 anos,169,1223744.0,13.81,definitivo
+2018,Santa Catarina,violencia_sexual,30 a 39 anos,86,1228568.0,7.0,definitivo
+2018,Santa Catarina,violencia_sexual,40 a 49 anos,51,1007720.0,5.06,definitivo
+2018,Santa Catarina,violencia_sexual,50 a 59 anos,18,881929.0,2.04,definitivo
+2018,Santa Catarina,violencia_sexual,60 a 69 anos,16,578865.0,2.76,definitivo
+2018,Santa Catarina,violencia_sexual,70 a 79 anos,1,284139.0,0.35,definitivo
+2018,Santa Catarina,violencia_sexual,80 anos e mais,2,119477.0,1.67,definitivo
+2018,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2018,Santa Catarina,violencia_financeira,0 a 4 anos,5,490571.0,1.02,definitivo
+2018,Santa Catarina,violencia_financeira,5 a 9 anos,2,465539.0,0.43,definitivo
+2018,Santa Catarina,violencia_financeira,10 a 14 anos,6,464767.0,1.29,definitivo
+2018,Santa Catarina,violencia_financeira,15 a 19 anos,9,520808.0,1.73,definitivo
+2018,Santa Catarina,violencia_financeira,20 a 29 anos,8,1223744.0,0.65,definitivo
+2018,Santa Catarina,violencia_financeira,30 a 39 anos,25,1228568.0,2.03,definitivo
+2018,Santa Catarina,violencia_financeira,40 a 49 anos,15,1007720.0,1.49,definitivo
+2018,Santa Catarina,violencia_financeira,50 a 59 anos,12,881929.0,1.36,definitivo
+2018,Santa Catarina,violencia_financeira,60 a 69 anos,23,578865.0,3.97,definitivo
+2018,Santa Catarina,violencia_financeira,70 a 79 anos,21,284139.0,7.39,definitivo
+2018,Santa Catarina,violencia_financeira,80 anos e mais,7,119477.0,5.86,definitivo
+2018,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2018,Santa Catarina,negligencia,0 a 4 anos,1332,490571.0,271.52,definitivo
+2018,Santa Catarina,negligencia,5 a 9 anos,253,465539.0,54.35,definitivo
+2018,Santa Catarina,negligencia,10 a 14 anos,206,464767.0,44.32,definitivo
+2018,Santa Catarina,negligencia,15 a 19 anos,44,520808.0,8.45,definitivo
+2018,Santa Catarina,negligencia,20 a 29 anos,41,1223744.0,3.35,definitivo
+2018,Santa Catarina,negligencia,30 a 39 anos,19,1228568.0,1.55,definitivo
+2018,Santa Catarina,negligencia,40 a 49 anos,11,1007720.0,1.09,definitivo
+2018,Santa Catarina,negligencia,50 a 59 anos,13,881929.0,1.47,definitivo
+2018,Santa Catarina,negligencia,60 a 69 anos,42,578865.0,7.26,definitivo
+2018,Santa Catarina,negligencia,70 a 79 anos,50,284139.0,17.6,definitivo
+2018,Santa Catarina,negligencia,80 anos e mais,43,119477.0,35.99,definitivo
+2018,Santa Catarina,negligencia,Idade não informada,0,,,definitivo
+2018,Santa Catarina,tortura,0 a 4 anos,7,490571.0,1.43,definitivo
+2018,Santa Catarina,tortura,5 a 9 anos,5,465539.0,1.07,definitivo
+2018,Santa Catarina,tortura,10 a 14 anos,15,464767.0,3.23,definitivo
+2018,Santa Catarina,tortura,15 a 19 anos,42,520808.0,8.06,definitivo
+2018,Santa Catarina,tortura,20 a 29 anos,67,1223744.0,5.48,definitivo
+2018,Santa Catarina,tortura,30 a 39 anos,58,1228568.0,4.72,definitivo
+2018,Santa Catarina,tortura,40 a 49 anos,30,1007720.0,2.98,definitivo
+2018,Santa Catarina,tortura,50 a 59 anos,13,881929.0,1.47,definitivo
+2018,Santa Catarina,tortura,60 a 69 anos,12,578865.0,2.07,definitivo
+2018,Santa Catarina,tortura,70 a 79 anos,7,284139.0,2.46,definitivo
+2018,Santa Catarina,tortura,80 anos e mais,4,119477.0,3.35,definitivo
+2018,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2018,Santa Catarina,trafico_pessoas,0 a 4 anos,0,490571.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,5 a 9 anos,0,465539.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,10 a 14 anos,0,464767.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,15 a 19 anos,0,520808.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,20 a 29 anos,0,1223744.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,30 a 39 anos,0,1228568.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1007720.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,50 a 59 anos,0,881929.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,60 a 69 anos,0,578865.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,70 a 79 anos,0,284139.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,80 anos e mais,0,119477.0,0.0,definitivo
+2018,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2019,Brasil,notificacoes_interpessoais,0 a 4 anos,27846,14570633.0,191.11,definitivo
+2019,Brasil,notificacoes_interpessoais,5 a 9 anos,17185,14506665.0,118.46,definitivo
+2019,Brasil,notificacoes_interpessoais,10 a 14 anos,25814,15044385.0,171.59,definitivo
+2019,Brasil,notificacoes_interpessoais,15 a 19 anos,31720,16161907.0,196.26,definitivo
+2019,Brasil,notificacoes_interpessoais,20 a 29 anos,52078,33170226.0,157.0,definitivo
+2019,Brasil,notificacoes_interpessoais,30 a 39 anos,44422,33584919.0,132.27,definitivo
+2019,Brasil,notificacoes_interpessoais,40 a 49 anos,26849,28491342.0,94.24,definitivo
+2019,Brasil,notificacoes_interpessoais,50 a 59 anos,13152,23419261.0,56.16,definitivo
+2019,Brasil,notificacoes_interpessoais,60 a 69 anos,9285,16171929.0,57.41,definitivo
+2019,Brasil,notificacoes_interpessoais,70 a 79 anos,5511,8638628.0,63.79,definitivo
+2019,Brasil,notificacoes_interpessoais,80 anos e mais,3602,4140204.0,87.0,definitivo
+2019,Brasil,notificacoes_interpessoais,Idade não informada,451,,,definitivo
+2019,Brasil,notificacoes_autoprovocadas,0 a 4 anos,310,14570633.0,2.13,definitivo
+2019,Brasil,notificacoes_autoprovocadas,5 a 9 anos,434,14506665.0,2.99,definitivo
+2019,Brasil,notificacoes_autoprovocadas,10 a 14 anos,11838,15044385.0,78.69,definitivo
+2019,Brasil,notificacoes_autoprovocadas,15 a 19 anos,29535,16161907.0,182.74,definitivo
+2019,Brasil,notificacoes_autoprovocadas,20 a 29 anos,35723,33170226.0,107.7,definitivo
+2019,Brasil,notificacoes_autoprovocadas,30 a 39 anos,22869,33584919.0,68.09,definitivo
+2019,Brasil,notificacoes_autoprovocadas,40 a 49 anos,14844,28491342.0,52.1,definitivo
+2019,Brasil,notificacoes_autoprovocadas,50 a 59 anos,6946,23419261.0,29.66,definitivo
+2019,Brasil,notificacoes_autoprovocadas,60 a 69 anos,2524,16171929.0,15.61,definitivo
+2019,Brasil,notificacoes_autoprovocadas,70 a 79 anos,886,8638628.0,10.26,definitivo
+2019,Brasil,notificacoes_autoprovocadas,80 anos e mais,360,4140204.0,8.7,definitivo
+2019,Brasil,notificacoes_autoprovocadas,Idade não informada,409,,,definitivo
+2019,Brasil,violencia_fisica,0 a 4 anos,5402,14570633.0,37.07,definitivo
+2019,Brasil,violencia_fisica,5 a 9 anos,5164,14506665.0,35.6,definitivo
+2019,Brasil,violencia_fisica,10 a 14 anos,9750,15044385.0,64.81,definitivo
+2019,Brasil,violencia_fisica,15 a 19 anos,23412,16161907.0,144.86,definitivo
+2019,Brasil,violencia_fisica,20 a 29 anos,45229,33170226.0,136.35,definitivo
+2019,Brasil,violencia_fisica,30 a 39 anos,38476,33584919.0,114.56,definitivo
+2019,Brasil,violencia_fisica,40 a 49 anos,22861,28491342.0,80.24,definitivo
+2019,Brasil,violencia_fisica,50 a 59 anos,10785,23419261.0,46.05,definitivo
+2019,Brasil,violencia_fisica,60 a 69 anos,6882,16171929.0,42.56,definitivo
+2019,Brasil,violencia_fisica,70 a 79 anos,2955,8638628.0,34.21,definitivo
+2019,Brasil,violencia_fisica,80 anos e mais,1325,4140204.0,32.0,definitivo
+2019,Brasil,violencia_fisica,Idade não informada,283,,,definitivo
+2019,Brasil,violencia_psicologica,0 a 4 anos,2582,14570633.0,17.72,definitivo
+2019,Brasil,violencia_psicologica,5 a 9 anos,4097,14506665.0,28.24,definitivo
+2019,Brasil,violencia_psicologica,10 a 14 anos,6254,15044385.0,41.57,definitivo
+2019,Brasil,violencia_psicologica,15 a 19 anos,7804,16161907.0,48.29,definitivo
+2019,Brasil,violencia_psicologica,20 a 29 anos,17100,33170226.0,51.55,definitivo
+2019,Brasil,violencia_psicologica,30 a 39 anos,16234,33584919.0,48.34,definitivo
+2019,Brasil,violencia_psicologica,40 a 49 anos,9921,28491342.0,34.82,definitivo
+2019,Brasil,violencia_psicologica,50 a 59 anos,4933,23419261.0,21.06,definitivo
+2019,Brasil,violencia_psicologica,60 a 69 anos,2876,16171929.0,17.78,definitivo
+2019,Brasil,violencia_psicologica,70 a 79 anos,1553,8638628.0,17.98,definitivo
+2019,Brasil,violencia_psicologica,80 anos e mais,807,4140204.0,19.49,definitivo
+2019,Brasil,violencia_psicologica,Idade não informada,142,,,definitivo
+2019,Brasil,violencia_sexual,0 a 4 anos,5934,14570633.0,40.73,definitivo
+2019,Brasil,violencia_sexual,5 a 9 anos,7329,14506665.0,50.52,definitivo
+2019,Brasil,violencia_sexual,10 a 14 anos,12553,15044385.0,83.44,definitivo
+2019,Brasil,violencia_sexual,15 a 19 anos,5953,16161907.0,36.83,definitivo
+2019,Brasil,violencia_sexual,20 a 29 anos,5266,33170226.0,15.88,definitivo
+2019,Brasil,violencia_sexual,30 a 39 anos,3010,33584919.0,8.96,definitivo
+2019,Brasil,violencia_sexual,40 a 49 anos,1656,28491342.0,5.81,definitivo
+2019,Brasil,violencia_sexual,50 a 59 anos,678,23419261.0,2.9,definitivo
+2019,Brasil,violencia_sexual,60 a 69 anos,252,16171929.0,1.56,definitivo
+2019,Brasil,violencia_sexual,70 a 79 anos,122,8638628.0,1.41,definitivo
+2019,Brasil,violencia_sexual,80 anos e mais,49,4140204.0,1.18,definitivo
+2019,Brasil,violencia_sexual,Idade não informada,62,,,definitivo
+2019,Brasil,violencia_financeira,0 a 4 anos,115,14570633.0,0.79,definitivo
+2019,Brasil,violencia_financeira,5 a 9 anos,100,14506665.0,0.69,definitivo
+2019,Brasil,violencia_financeira,10 a 14 anos,169,15044385.0,1.12,definitivo
+2019,Brasil,violencia_financeira,15 a 19 anos,259,16161907.0,1.6,definitivo
+2019,Brasil,violencia_financeira,20 a 29 anos,998,33170226.0,3.01,definitivo
+2019,Brasil,violencia_financeira,30 a 39 anos,1160,33584919.0,3.45,definitivo
+2019,Brasil,violencia_financeira,40 a 49 anos,820,28491342.0,2.88,definitivo
+2019,Brasil,violencia_financeira,50 a 59 anos,525,23419261.0,2.24,definitivo
+2019,Brasil,violencia_financeira,60 a 69 anos,495,16171929.0,3.06,definitivo
+2019,Brasil,violencia_financeira,70 a 79 anos,458,8638628.0,5.3,definitivo
+2019,Brasil,violencia_financeira,80 anos e mais,346,4140204.0,8.36,definitivo
+2019,Brasil,violencia_financeira,Idade não informada,8,,,definitivo
+2019,Brasil,negligencia,0 a 4 anos,17795,14570633.0,122.13,definitivo
+2019,Brasil,negligencia,5 a 9 anos,5588,14506665.0,38.52,definitivo
+2019,Brasil,negligencia,10 a 14 anos,4345,15044385.0,28.88,definitivo
+2019,Brasil,negligencia,15 a 19 anos,2938,16161907.0,18.18,definitivo
+2019,Brasil,negligencia,20 a 29 anos,495,33170226.0,1.49,definitivo
+2019,Brasil,negligencia,30 a 39 anos,386,33584919.0,1.15,definitivo
+2019,Brasil,negligencia,40 a 49 anos,312,28491342.0,1.1,definitivo
+2019,Brasil,negligencia,50 a 59 anos,449,23419261.0,1.92,definitivo
+2019,Brasil,negligencia,60 a 69 anos,1386,16171929.0,8.57,definitivo
+2019,Brasil,negligencia,70 a 79 anos,1984,8638628.0,22.97,definitivo
+2019,Brasil,negligencia,80 anos e mais,2049,4140204.0,49.49,definitivo
+2019,Brasil,negligencia,Idade não informada,97,,,definitivo
+2019,Brasil,tortura,0 a 4 anos,235,14570633.0,1.61,definitivo
+2019,Brasil,tortura,5 a 9 anos,332,14506665.0,2.29,definitivo
+2019,Brasil,tortura,10 a 14 anos,549,15044385.0,3.65,definitivo
+2019,Brasil,tortura,15 a 19 anos,876,16161907.0,5.42,definitivo
+2019,Brasil,tortura,20 a 29 anos,1794,33170226.0,5.41,definitivo
+2019,Brasil,tortura,30 a 39 anos,1632,33584919.0,4.86,definitivo
+2019,Brasil,tortura,40 a 49 anos,914,28491342.0,3.21,definitivo
+2019,Brasil,tortura,50 a 59 anos,428,23419261.0,1.83,definitivo
+2019,Brasil,tortura,60 a 69 anos,218,16171929.0,1.35,definitivo
+2019,Brasil,tortura,70 a 79 anos,134,8638628.0,1.55,definitivo
+2019,Brasil,tortura,80 anos e mais,94,4140204.0,2.27,definitivo
+2019,Brasil,tortura,Idade não informada,18,,,definitivo
+2019,Brasil,trafico_pessoas,0 a 4 anos,14,14570633.0,0.1,definitivo
+2019,Brasil,trafico_pessoas,5 a 9 anos,12,14506665.0,0.08,definitivo
+2019,Brasil,trafico_pessoas,10 a 14 anos,17,15044385.0,0.11,definitivo
+2019,Brasil,trafico_pessoas,15 a 19 anos,17,16161907.0,0.11,definitivo
+2019,Brasil,trafico_pessoas,20 a 29 anos,30,33170226.0,0.09,definitivo
+2019,Brasil,trafico_pessoas,30 a 39 anos,28,33584919.0,0.08,definitivo
+2019,Brasil,trafico_pessoas,40 a 49 anos,18,28491342.0,0.06,definitivo
+2019,Brasil,trafico_pessoas,50 a 59 anos,1,23419261.0,0.0,definitivo
+2019,Brasil,trafico_pessoas,60 a 69 anos,10,16171929.0,0.06,definitivo
+2019,Brasil,trafico_pessoas,70 a 79 anos,1,8638628.0,0.01,definitivo
+2019,Brasil,trafico_pessoas,80 anos e mais,1,4140204.0,0.02,definitivo
+2019,Brasil,trafico_pessoas,Idade não informada,3,,,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1570,498897.0,314.69,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,602,476152.0,126.43,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,892,469384.0,190.04,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,730,509689.0,143.22,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1286,1230077.0,104.55,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1081,1251766.0,86.36,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,711,1033793.0,68.78,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,384,900919.0,42.62,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,299,606330.0,49.31,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,156,301016.0,51.82,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,80 anos e mais,97,125700.0,77.17,definitivo
+2019,Santa Catarina,notificacoes_interpessoais,Idade não informada,3,,,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,5,498897.0,1.0,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,25,476152.0,5.25,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,700,469384.0,149.13,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1526,509689.0,299.4,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,2203,1230077.0,179.09,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1632,1251766.0,130.38,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1167,1033793.0,112.89,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,632,900919.0,70.15,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,193,606330.0,31.83,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,59,301016.0,19.6,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,21,125700.0,16.71,definitivo
+2019,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,10,,,definitivo
+2019,Santa Catarina,violencia_fisica,0 a 4 anos,185,498897.0,37.08,definitivo
+2019,Santa Catarina,violencia_fisica,5 a 9 anos,146,476152.0,30.66,definitivo
+2019,Santa Catarina,violencia_fisica,10 a 14 anos,267,469384.0,56.88,definitivo
+2019,Santa Catarina,violencia_fisica,15 a 19 anos,532,509689.0,104.38,definitivo
+2019,Santa Catarina,violencia_fisica,20 a 29 anos,1088,1230077.0,88.45,definitivo
+2019,Santa Catarina,violencia_fisica,30 a 39 anos,974,1251766.0,77.81,definitivo
+2019,Santa Catarina,violencia_fisica,40 a 49 anos,651,1033793.0,62.97,definitivo
+2019,Santa Catarina,violencia_fisica,50 a 59 anos,336,900919.0,37.3,definitivo
+2019,Santa Catarina,violencia_fisica,60 a 69 anos,239,606330.0,39.42,definitivo
+2019,Santa Catarina,violencia_fisica,70 a 79 anos,93,301016.0,30.9,definitivo
+2019,Santa Catarina,violencia_fisica,80 anos e mais,49,125700.0,38.98,definitivo
+2019,Santa Catarina,violencia_fisica,Idade não informada,1,,,definitivo
+2019,Santa Catarina,violencia_psicologica,0 a 4 anos,75,498897.0,15.03,definitivo
+2019,Santa Catarina,violencia_psicologica,5 a 9 anos,124,476152.0,26.04,definitivo
+2019,Santa Catarina,violencia_psicologica,10 a 14 anos,198,469384.0,42.18,definitivo
+2019,Santa Catarina,violencia_psicologica,15 a 19 anos,215,509689.0,42.18,definitivo
+2019,Santa Catarina,violencia_psicologica,20 a 29 anos,467,1230077.0,37.97,definitivo
+2019,Santa Catarina,violencia_psicologica,30 a 39 anos,415,1251766.0,33.15,definitivo
+2019,Santa Catarina,violencia_psicologica,40 a 49 anos,271,1033793.0,26.21,definitivo
+2019,Santa Catarina,violencia_psicologica,50 a 59 anos,152,900919.0,16.87,definitivo
+2019,Santa Catarina,violencia_psicologica,60 a 69 anos,106,606330.0,17.48,definitivo
+2019,Santa Catarina,violencia_psicologica,70 a 79 anos,49,301016.0,16.28,definitivo
+2019,Santa Catarina,violencia_psicologica,80 anos e mais,26,125700.0,20.68,definitivo
+2019,Santa Catarina,violencia_psicologica,Idade não informada,0,,,definitivo
+2019,Santa Catarina,violencia_sexual,0 a 4 anos,256,498897.0,51.31,definitivo
+2019,Santa Catarina,violencia_sexual,5 a 9 anos,287,476152.0,60.27,definitivo
+2019,Santa Catarina,violencia_sexual,10 a 14 anos,538,469384.0,114.62,definitivo
+2019,Santa Catarina,violencia_sexual,15 a 19 anos,189,509689.0,37.08,definitivo
+2019,Santa Catarina,violencia_sexual,20 a 29 anos,223,1230077.0,18.13,definitivo
+2019,Santa Catarina,violencia_sexual,30 a 39 anos,116,1251766.0,9.27,definitivo
+2019,Santa Catarina,violencia_sexual,40 a 49 anos,73,1033793.0,7.06,definitivo
+2019,Santa Catarina,violencia_sexual,50 a 59 anos,35,900919.0,3.88,definitivo
+2019,Santa Catarina,violencia_sexual,60 a 69 anos,15,606330.0,2.47,definitivo
+2019,Santa Catarina,violencia_sexual,70 a 79 anos,5,301016.0,1.66,definitivo
+2019,Santa Catarina,violencia_sexual,80 anos e mais,0,125700.0,0.0,definitivo
+2019,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2019,Santa Catarina,violencia_financeira,0 a 4 anos,3,498897.0,0.6,definitivo
+2019,Santa Catarina,violencia_financeira,5 a 9 anos,0,476152.0,0.0,definitivo
+2019,Santa Catarina,violencia_financeira,10 a 14 anos,5,469384.0,1.07,definitivo
+2019,Santa Catarina,violencia_financeira,15 a 19 anos,2,509689.0,0.39,definitivo
+2019,Santa Catarina,violencia_financeira,20 a 29 anos,24,1230077.0,1.95,definitivo
+2019,Santa Catarina,violencia_financeira,30 a 39 anos,20,1251766.0,1.6,definitivo
+2019,Santa Catarina,violencia_financeira,40 a 49 anos,21,1033793.0,2.03,definitivo
+2019,Santa Catarina,violencia_financeira,50 a 59 anos,21,900919.0,2.33,definitivo
+2019,Santa Catarina,violencia_financeira,60 a 69 anos,22,606330.0,3.63,definitivo
+2019,Santa Catarina,violencia_financeira,70 a 79 anos,13,301016.0,4.32,definitivo
+2019,Santa Catarina,violencia_financeira,80 anos e mais,11,125700.0,8.75,definitivo
+2019,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2019,Santa Catarina,negligencia,0 a 4 anos,1218,498897.0,244.14,definitivo
+2019,Santa Catarina,negligencia,5 a 9 anos,236,476152.0,49.56,definitivo
+2019,Santa Catarina,negligencia,10 a 14 anos,208,469384.0,44.31,definitivo
+2019,Santa Catarina,negligencia,15 a 19 anos,53,509689.0,10.4,definitivo
+2019,Santa Catarina,negligencia,20 a 29 anos,31,1230077.0,2.52,definitivo
+2019,Santa Catarina,negligencia,30 a 39 anos,16,1251766.0,1.28,definitivo
+2019,Santa Catarina,negligencia,40 a 49 anos,10,1033793.0,0.97,definitivo
+2019,Santa Catarina,negligencia,50 a 59 anos,16,900919.0,1.78,definitivo
+2019,Santa Catarina,negligencia,60 a 69 anos,35,606330.0,5.77,definitivo
+2019,Santa Catarina,negligencia,70 a 79 anos,50,301016.0,16.61,definitivo
+2019,Santa Catarina,negligencia,80 anos e mais,50,125700.0,39.78,definitivo
+2019,Santa Catarina,negligencia,Idade não informada,2,,,definitivo
+2019,Santa Catarina,tortura,0 a 4 anos,13,498897.0,2.61,definitivo
+2019,Santa Catarina,tortura,5 a 9 anos,18,476152.0,3.78,definitivo
+2019,Santa Catarina,tortura,10 a 14 anos,27,469384.0,5.75,definitivo
+2019,Santa Catarina,tortura,15 a 19 anos,35,509689.0,6.87,definitivo
+2019,Santa Catarina,tortura,20 a 29 anos,62,1230077.0,5.04,definitivo
+2019,Santa Catarina,tortura,30 a 39 anos,43,1251766.0,3.44,definitivo
+2019,Santa Catarina,tortura,40 a 49 anos,45,1033793.0,4.35,definitivo
+2019,Santa Catarina,tortura,50 a 59 anos,24,900919.0,2.66,definitivo
+2019,Santa Catarina,tortura,60 a 69 anos,13,606330.0,2.14,definitivo
+2019,Santa Catarina,tortura,70 a 79 anos,3,301016.0,1.0,definitivo
+2019,Santa Catarina,tortura,80 anos e mais,2,125700.0,1.59,definitivo
+2019,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2019,Santa Catarina,trafico_pessoas,0 a 4 anos,0,498897.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,5 a 9 anos,0,476152.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,10 a 14 anos,0,469384.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,15 a 19 anos,0,509689.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,20 a 29 anos,0,1230077.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,30 a 39 anos,0,1251766.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1033793.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,50 a 59 anos,0,900919.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,60 a 69 anos,0,606330.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,70 a 79 anos,0,301016.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,80 anos e mais,0,125700.0,0.0,definitivo
+2019,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2020,Brasil,notificacoes_interpessoais,0 a 4 anos,24133,14349330.0,168.18,definitivo
+2020,Brasil,notificacoes_interpessoais,5 a 9 anos,13232,14609239.0,90.57,definitivo
+2020,Brasil,notificacoes_interpessoais,10 a 14 anos,19513,14830142.0,131.58,definitivo
+2020,Brasil,notificacoes_interpessoais,15 a 19 anos,23690,15893053.0,149.06,definitivo
+2020,Brasil,notificacoes_interpessoais,20 a 29 anos,43701,33146264.0,131.84,definitivo
+2020,Brasil,notificacoes_interpessoais,30 a 39 anos,37761,33462446.0,112.85,definitivo
+2020,Brasil,notificacoes_interpessoais,40 a 49 anos,23754,29125629.0,81.56,definitivo
+2020,Brasil,notificacoes_interpessoais,50 a 59 anos,11560,23769343.0,48.63,definitivo
+2020,Brasil,notificacoes_interpessoais,60 a 69 anos,7869,16721048.0,47.06,definitivo
+2020,Brasil,notificacoes_interpessoais,70 a 79 anos,4315,8988696.0,48.0,definitivo
+2020,Brasil,notificacoes_interpessoais,80 anos e mais,2893,4269699.0,67.76,definitivo
+2020,Brasil,notificacoes_interpessoais,Idade não informada,1,,,definitivo
+2020,Brasil,notificacoes_autoprovocadas,0 a 4 anos,434,14349330.0,3.02,definitivo
+2020,Brasil,notificacoes_autoprovocadas,5 a 9 anos,253,14609239.0,1.73,definitivo
+2020,Brasil,notificacoes_autoprovocadas,10 a 14 anos,6902,14830142.0,46.54,definitivo
+2020,Brasil,notificacoes_autoprovocadas,15 a 19 anos,20932,15893053.0,131.71,definitivo
+2020,Brasil,notificacoes_autoprovocadas,20 a 29 anos,29300,33146264.0,88.4,definitivo
+2020,Brasil,notificacoes_autoprovocadas,30 a 39 anos,18303,33462446.0,54.7,definitivo
+2020,Brasil,notificacoes_autoprovocadas,40 a 49 anos,11930,29125629.0,40.96,definitivo
+2020,Brasil,notificacoes_autoprovocadas,50 a 59 anos,5723,23769343.0,24.08,definitivo
+2020,Brasil,notificacoes_autoprovocadas,60 a 69 anos,2180,16721048.0,13.04,definitivo
+2020,Brasil,notificacoes_autoprovocadas,70 a 79 anos,825,8988696.0,9.18,definitivo
+2020,Brasil,notificacoes_autoprovocadas,80 anos e mais,323,4269699.0,7.56,definitivo
+2020,Brasil,notificacoes_autoprovocadas,Idade não informada,185,,,definitivo
+2020,Brasil,violencia_fisica,0 a 4 anos,4357,14349330.0,30.36,definitivo
+2020,Brasil,violencia_fisica,5 a 9 anos,3552,14609239.0,24.31,definitivo
+2020,Brasil,violencia_fisica,10 a 14 anos,6366,14830142.0,42.93,definitivo
+2020,Brasil,violencia_fisica,15 a 19 anos,16820,15893053.0,105.83,definitivo
+2020,Brasil,violencia_fisica,20 a 29 anos,37593,33146264.0,113.42,definitivo
+2020,Brasil,violencia_fisica,30 a 39 anos,32390,33462446.0,96.8,definitivo
+2020,Brasil,violencia_fisica,40 a 49 anos,20110,29125629.0,69.05,definitivo
+2020,Brasil,violencia_fisica,50 a 59 anos,9453,23769343.0,39.77,definitivo
+2020,Brasil,violencia_fisica,60 a 69 anos,5692,16721048.0,34.04,definitivo
+2020,Brasil,violencia_fisica,70 a 79 anos,2314,8988696.0,25.74,definitivo
+2020,Brasil,violencia_fisica,80 anos e mais,1063,4269699.0,24.9,definitivo
+2020,Brasil,violencia_fisica,Idade não informada,0,,,definitivo
+2020,Brasil,violencia_psicologica,0 a 4 anos,2021,14349330.0,14.08,definitivo
+2020,Brasil,violencia_psicologica,5 a 9 anos,2981,14609239.0,20.4,definitivo
+2020,Brasil,violencia_psicologica,10 a 14 anos,4562,14830142.0,30.76,definitivo
+2020,Brasil,violencia_psicologica,15 a 19 anos,5831,15893053.0,36.69,definitivo
+2020,Brasil,violencia_psicologica,20 a 29 anos,14414,33146264.0,43.49,definitivo
+2020,Brasil,violencia_psicologica,30 a 39 anos,13867,33462446.0,41.44,definitivo
+2020,Brasil,violencia_psicologica,40 a 49 anos,9182,29125629.0,31.53,definitivo
+2020,Brasil,violencia_psicologica,50 a 59 anos,4367,23769343.0,18.37,definitivo
+2020,Brasil,violencia_psicologica,60 a 69 anos,2449,16721048.0,14.65,definitivo
+2020,Brasil,violencia_psicologica,70 a 79 anos,1179,8988696.0,13.12,definitivo
+2020,Brasil,violencia_psicologica,80 anos e mais,621,4269699.0,14.54,definitivo
+2020,Brasil,violencia_psicologica,Idade não informada,0,,,definitivo
+2020,Brasil,violencia_sexual,0 a 4 anos,5030,14349330.0,35.05,definitivo
+2020,Brasil,violencia_sexual,5 a 9 anos,6102,14609239.0,41.77,definitivo
+2020,Brasil,violencia_sexual,10 a 14 anos,10933,14830142.0,73.72,definitivo
+2020,Brasil,violencia_sexual,15 a 19 anos,5061,15893053.0,31.84,definitivo
+2020,Brasil,violencia_sexual,20 a 29 anos,4774,33146264.0,14.4,definitivo
+2020,Brasil,violencia_sexual,30 a 39 anos,2669,33462446.0,7.98,definitivo
+2020,Brasil,violencia_sexual,40 a 49 anos,1368,29125629.0,4.7,definitivo
+2020,Brasil,violencia_sexual,50 a 59 anos,604,23769343.0,2.54,definitivo
+2020,Brasil,violencia_sexual,60 a 69 anos,250,16721048.0,1.5,definitivo
+2020,Brasil,violencia_sexual,70 a 79 anos,106,8988696.0,1.18,definitivo
+2020,Brasil,violencia_sexual,80 anos e mais,46,4269699.0,1.08,definitivo
+2020,Brasil,violencia_sexual,Idade não informada,1,,,definitivo
+2020,Brasil,violencia_financeira,0 a 4 anos,102,14349330.0,0.71,definitivo
+2020,Brasil,violencia_financeira,5 a 9 anos,45,14609239.0,0.31,definitivo
+2020,Brasil,violencia_financeira,10 a 14 anos,118,14830142.0,0.8,definitivo
+2020,Brasil,violencia_financeira,15 a 19 anos,195,15893053.0,1.23,definitivo
+2020,Brasil,violencia_financeira,20 a 29 anos,791,33146264.0,2.39,definitivo
+2020,Brasil,violencia_financeira,30 a 39 anos,989,33462446.0,2.96,definitivo
+2020,Brasil,violencia_financeira,40 a 49 anos,727,29125629.0,2.5,definitivo
+2020,Brasil,violencia_financeira,50 a 59 anos,451,23769343.0,1.9,definitivo
+2020,Brasil,violencia_financeira,60 a 69 anos,377,16721048.0,2.25,definitivo
+2020,Brasil,violencia_financeira,70 a 79 anos,301,8988696.0,3.35,definitivo
+2020,Brasil,violencia_financeira,80 anos e mais,246,4269699.0,5.76,definitivo
+2020,Brasil,violencia_financeira,Idade não informada,0,,,definitivo
+2020,Brasil,negligencia,0 a 4 anos,15745,14349330.0,109.73,definitivo
+2020,Brasil,negligencia,5 a 9 anos,4313,14609239.0,29.52,definitivo
+2020,Brasil,negligencia,10 a 14 anos,3005,14830142.0,20.26,definitivo
+2020,Brasil,negligencia,15 a 19 anos,2119,15893053.0,13.33,definitivo
+2020,Brasil,negligencia,20 a 29 anos,377,33146264.0,1.14,definitivo
+2020,Brasil,negligencia,30 a 39 anos,284,33462446.0,0.85,definitivo
+2020,Brasil,negligencia,40 a 49 anos,237,29125629.0,0.81,definitivo
+2020,Brasil,negligencia,50 a 59 anos,303,23769343.0,1.27,definitivo
+2020,Brasil,negligencia,60 a 69 anos,1205,16721048.0,7.21,definitivo
+2020,Brasil,negligencia,70 a 79 anos,1540,8988696.0,17.13,definitivo
+2020,Brasil,negligencia,80 anos e mais,1652,4269699.0,38.69,definitivo
+2020,Brasil,negligencia,Idade não informada,0,,,definitivo
+2020,Brasil,tortura,0 a 4 anos,248,14349330.0,1.73,definitivo
+2020,Brasil,tortura,5 a 9 anos,232,14609239.0,1.59,definitivo
+2020,Brasil,tortura,10 a 14 anos,388,14830142.0,2.62,definitivo
+2020,Brasil,tortura,15 a 19 anos,656,15893053.0,4.13,definitivo
+2020,Brasil,tortura,20 a 29 anos,1503,33146264.0,4.53,definitivo
+2020,Brasil,tortura,30 a 39 anos,1438,33462446.0,4.3,definitivo
+2020,Brasil,tortura,40 a 49 anos,864,29125629.0,2.97,definitivo
+2020,Brasil,tortura,50 a 59 anos,371,23769343.0,1.56,definitivo
+2020,Brasil,tortura,60 a 69 anos,194,16721048.0,1.16,definitivo
+2020,Brasil,tortura,70 a 79 anos,129,8988696.0,1.44,definitivo
+2020,Brasil,tortura,80 anos e mais,72,4269699.0,1.69,definitivo
+2020,Brasil,tortura,Idade não informada,0,,,definitivo
+2020,Brasil,trafico_pessoas,0 a 4 anos,15,14349330.0,0.1,definitivo
+2020,Brasil,trafico_pessoas,5 a 9 anos,6,14609239.0,0.04,definitivo
+2020,Brasil,trafico_pessoas,10 a 14 anos,16,14830142.0,0.11,definitivo
+2020,Brasil,trafico_pessoas,15 a 19 anos,14,15893053.0,0.09,definitivo
+2020,Brasil,trafico_pessoas,20 a 29 anos,26,33146264.0,0.08,definitivo
+2020,Brasil,trafico_pessoas,30 a 39 anos,24,33462446.0,0.07,definitivo
+2020,Brasil,trafico_pessoas,40 a 49 anos,9,29125629.0,0.03,definitivo
+2020,Brasil,trafico_pessoas,50 a 59 anos,8,23769343.0,0.03,definitivo
+2020,Brasil,trafico_pessoas,60 a 69 anos,4,16721048.0,0.02,definitivo
+2020,Brasil,trafico_pessoas,70 a 79 anos,1,8988696.0,0.01,definitivo
+2020,Brasil,trafico_pessoas,80 anos e mais,1,4269699.0,0.02,definitivo
+2020,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1742,502973.0,346.34,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,645,490242.0,131.57,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,733,474670.0,154.42,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,541,500340.0,108.13,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1080,1235752.0,87.4,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,926,1272795.0,72.75,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,648,1063328.0,60.94,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,318,917080.0,34.68,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,227,634171.0,35.79,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,121,318721.0,37.96,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,80 anos e mais,74,131903.0,56.1,definitivo
+2020,Santa Catarina,notificacoes_interpessoais,Idade não informada,0,,,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,6,502973.0,1.19,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,12,490242.0,2.45,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,404,474670.0,85.11,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1075,500340.0,214.85,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,1681,1235752.0,136.03,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1154,1272795.0,90.67,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,909,1063328.0,85.49,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,455,917080.0,49.61,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,166,634171.0,26.18,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,63,318721.0,19.77,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,16,131903.0,12.13,definitivo
+2020,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,5,,,definitivo
+2020,Santa Catarina,violencia_fisica,0 a 4 anos,151,502973.0,30.02,definitivo
+2020,Santa Catarina,violencia_fisica,5 a 9 anos,114,490242.0,23.25,definitivo
+2020,Santa Catarina,violencia_fisica,10 a 14 anos,176,474670.0,37.08,definitivo
+2020,Santa Catarina,violencia_fisica,15 a 19 anos,366,500340.0,73.15,definitivo
+2020,Santa Catarina,violencia_fisica,20 a 29 anos,918,1235752.0,74.29,definitivo
+2020,Santa Catarina,violencia_fisica,30 a 39 anos,836,1272795.0,65.68,definitivo
+2020,Santa Catarina,violencia_fisica,40 a 49 anos,575,1063328.0,54.08,definitivo
+2020,Santa Catarina,violencia_fisica,50 a 59 anos,269,917080.0,29.33,definitivo
+2020,Santa Catarina,violencia_fisica,60 a 69 anos,186,634171.0,29.33,definitivo
+2020,Santa Catarina,violencia_fisica,70 a 79 anos,78,318721.0,24.47,definitivo
+2020,Santa Catarina,violencia_fisica,80 anos e mais,44,131903.0,33.36,definitivo
+2020,Santa Catarina,violencia_fisica,Idade não informada,0,,,definitivo
+2020,Santa Catarina,violencia_psicologica,0 a 4 anos,74,502973.0,14.71,definitivo
+2020,Santa Catarina,violencia_psicologica,5 a 9 anos,89,490242.0,18.15,definitivo
+2020,Santa Catarina,violencia_psicologica,10 a 14 anos,132,474670.0,27.81,definitivo
+2020,Santa Catarina,violencia_psicologica,15 a 19 anos,125,500340.0,24.98,definitivo
+2020,Santa Catarina,violencia_psicologica,20 a 29 anos,344,1235752.0,27.84,definitivo
+2020,Santa Catarina,violencia_psicologica,30 a 39 anos,307,1272795.0,24.12,definitivo
+2020,Santa Catarina,violencia_psicologica,40 a 49 anos,213,1063328.0,20.03,definitivo
+2020,Santa Catarina,violencia_psicologica,50 a 59 anos,115,917080.0,12.54,definitivo
+2020,Santa Catarina,violencia_psicologica,60 a 69 anos,98,634171.0,15.45,definitivo
+2020,Santa Catarina,violencia_psicologica,70 a 79 anos,43,318721.0,13.49,definitivo
+2020,Santa Catarina,violencia_psicologica,80 anos e mais,23,131903.0,17.44,definitivo
+2020,Santa Catarina,violencia_psicologica,Idade não informada,0,,,definitivo
+2020,Santa Catarina,violencia_sexual,0 a 4 anos,275,502973.0,54.67,definitivo
+2020,Santa Catarina,violencia_sexual,5 a 9 anos,336,490242.0,68.54,definitivo
+2020,Santa Catarina,violencia_sexual,10 a 14 anos,441,474670.0,92.91,definitivo
+2020,Santa Catarina,violencia_sexual,15 a 19 anos,167,500340.0,33.38,definitivo
+2020,Santa Catarina,violencia_sexual,20 a 29 anos,195,1235752.0,15.78,definitivo
+2020,Santa Catarina,violencia_sexual,30 a 39 anos,89,1272795.0,6.99,definitivo
+2020,Santa Catarina,violencia_sexual,40 a 49 anos,74,1063328.0,6.96,definitivo
+2020,Santa Catarina,violencia_sexual,50 a 59 anos,20,917080.0,2.18,definitivo
+2020,Santa Catarina,violencia_sexual,60 a 69 anos,11,634171.0,1.73,definitivo
+2020,Santa Catarina,violencia_sexual,70 a 79 anos,4,318721.0,1.26,definitivo
+2020,Santa Catarina,violencia_sexual,80 anos e mais,4,131903.0,3.03,definitivo
+2020,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2020,Santa Catarina,violencia_financeira,0 a 4 anos,8,502973.0,1.59,definitivo
+2020,Santa Catarina,violencia_financeira,5 a 9 anos,0,490242.0,0.0,definitivo
+2020,Santa Catarina,violencia_financeira,10 a 14 anos,6,474670.0,1.26,definitivo
+2020,Santa Catarina,violencia_financeira,15 a 19 anos,5,500340.0,1.0,definitivo
+2020,Santa Catarina,violencia_financeira,20 a 29 anos,16,1235752.0,1.29,definitivo
+2020,Santa Catarina,violencia_financeira,30 a 39 anos,16,1272795.0,1.26,definitivo
+2020,Santa Catarina,violencia_financeira,40 a 49 anos,15,1063328.0,1.41,definitivo
+2020,Santa Catarina,violencia_financeira,50 a 59 anos,6,917080.0,0.65,definitivo
+2020,Santa Catarina,violencia_financeira,60 a 69 anos,6,634171.0,0.95,definitivo
+2020,Santa Catarina,violencia_financeira,70 a 79 anos,7,318721.0,2.2,definitivo
+2020,Santa Catarina,violencia_financeira,80 anos e mais,8,131903.0,6.07,definitivo
+2020,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2020,Santa Catarina,negligencia,0 a 4 anos,1378,502973.0,273.97,definitivo
+2020,Santa Catarina,negligencia,5 a 9 anos,235,490242.0,47.94,definitivo
+2020,Santa Catarina,negligencia,10 a 14 anos,185,474670.0,38.97,definitivo
+2020,Santa Catarina,negligencia,15 a 19 anos,37,500340.0,7.39,definitivo
+2020,Santa Catarina,negligencia,20 a 29 anos,12,1235752.0,0.97,definitivo
+2020,Santa Catarina,negligencia,30 a 39 anos,10,1272795.0,0.79,definitivo
+2020,Santa Catarina,negligencia,40 a 49 anos,5,1063328.0,0.47,definitivo
+2020,Santa Catarina,negligencia,50 a 59 anos,8,917080.0,0.87,definitivo
+2020,Santa Catarina,negligencia,60 a 69 anos,16,634171.0,2.52,definitivo
+2020,Santa Catarina,negligencia,70 a 79 anos,37,318721.0,11.61,definitivo
+2020,Santa Catarina,negligencia,80 anos e mais,33,131903.0,25.02,definitivo
+2020,Santa Catarina,negligencia,Idade não informada,0,,,definitivo
+2020,Santa Catarina,tortura,0 a 4 anos,14,502973.0,2.78,definitivo
+2020,Santa Catarina,tortura,5 a 9 anos,8,490242.0,1.63,definitivo
+2020,Santa Catarina,tortura,10 a 14 anos,15,474670.0,3.16,definitivo
+2020,Santa Catarina,tortura,15 a 19 anos,6,500340.0,1.2,definitivo
+2020,Santa Catarina,tortura,20 a 29 anos,48,1235752.0,3.88,definitivo
+2020,Santa Catarina,tortura,30 a 39 anos,51,1272795.0,4.01,definitivo
+2020,Santa Catarina,tortura,40 a 49 anos,28,1063328.0,2.63,definitivo
+2020,Santa Catarina,tortura,50 a 59 anos,13,917080.0,1.42,definitivo
+2020,Santa Catarina,tortura,60 a 69 anos,13,634171.0,2.05,definitivo
+2020,Santa Catarina,tortura,70 a 79 anos,9,318721.0,2.82,definitivo
+2020,Santa Catarina,tortura,80 anos e mais,1,131903.0,0.76,definitivo
+2020,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2020,Santa Catarina,trafico_pessoas,0 a 4 anos,0,502973.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,5 a 9 anos,0,490242.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,10 a 14 anos,1,474670.0,0.21,definitivo
+2020,Santa Catarina,trafico_pessoas,15 a 19 anos,0,500340.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,20 a 29 anos,0,1235752.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,30 a 39 anos,1,1272795.0,0.08,definitivo
+2020,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1063328.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,50 a 59 anos,0,917080.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,60 a 69 anos,0,634171.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,70 a 79 anos,0,318721.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,80 anos e mais,0,131903.0,0.0,definitivo
+2020,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2021,Brasil,notificacoes_interpessoais,0 a 4 anos,28804,14102904.0,204.24,definitivo
+2021,Brasil,notificacoes_interpessoais,5 a 9 anos,16638,14638890.0,113.66,definitivo
+2021,Brasil,notificacoes_interpessoais,10 a 14 anos,23903,14653596.0,163.12,definitivo
+2021,Brasil,notificacoes_interpessoais,15 a 19 anos,24664,15663254.0,157.46,definitivo
+2021,Brasil,notificacoes_interpessoais,20 a 29 anos,46994,33065916.0,142.12,definitivo
+2021,Brasil,notificacoes_interpessoais,30 a 39 anos,40763,33284526.0,122.47,definitivo
+2021,Brasil,notificacoes_interpessoais,40 a 49 anos,26591,29739189.0,89.41,definitivo
+2021,Brasil,notificacoes_interpessoais,50 a 59 anos,12678,24052250.0,52.71,definitivo
+2021,Brasil,notificacoes_interpessoais,60 a 69 anos,8977,17222091.0,52.12,definitivo
+2021,Brasil,notificacoes_interpessoais,70 a 79 anos,5169,9324120.0,55.44,definitivo
+2021,Brasil,notificacoes_interpessoais,80 anos e mais,3328,4356906.0,76.38,definitivo
+2021,Brasil,notificacoes_interpessoais,Idade não informada,886,,,definitivo
+2021,Brasil,notificacoes_autoprovocadas,0 a 4 anos,402,14102904.0,2.85,definitivo
+2021,Brasil,notificacoes_autoprovocadas,5 a 9 anos,363,14638890.0,2.48,definitivo
+2021,Brasil,notificacoes_autoprovocadas,10 a 14 anos,10472,14653596.0,71.46,definitivo
+2021,Brasil,notificacoes_autoprovocadas,15 a 19 anos,24896,15663254.0,158.95,definitivo
+2021,Brasil,notificacoes_autoprovocadas,20 a 29 anos,35223,33065916.0,106.52,definitivo
+2021,Brasil,notificacoes_autoprovocadas,30 a 39 anos,20736,33284526.0,62.3,definitivo
+2021,Brasil,notificacoes_autoprovocadas,40 a 49 anos,13767,29739189.0,46.29,definitivo
+2021,Brasil,notificacoes_autoprovocadas,50 a 59 anos,6225,24052250.0,25.88,definitivo
+2021,Brasil,notificacoes_autoprovocadas,60 a 69 anos,2355,17222091.0,13.67,definitivo
+2021,Brasil,notificacoes_autoprovocadas,70 a 79 anos,923,9324120.0,9.9,definitivo
+2021,Brasil,notificacoes_autoprovocadas,80 anos e mais,329,4356906.0,7.55,definitivo
+2021,Brasil,notificacoes_autoprovocadas,Idade não informada,578,,,definitivo
+2021,Brasil,violencia_fisica,0 a 4 anos,4558,14102904.0,32.32,definitivo
+2021,Brasil,violencia_fisica,5 a 9 anos,4289,14638890.0,29.3,definitivo
+2021,Brasil,violencia_fisica,10 a 14 anos,7133,14653596.0,48.68,definitivo
+2021,Brasil,violencia_fisica,15 a 19 anos,16511,15663254.0,105.41,definitivo
+2021,Brasil,violencia_fisica,20 a 29 anos,39809,33065916.0,120.39,definitivo
+2021,Brasil,violencia_fisica,30 a 39 anos,34387,33284526.0,103.31,definitivo
+2021,Brasil,violencia_fisica,40 a 49 anos,22185,29739189.0,74.6,definitivo
+2021,Brasil,violencia_fisica,50 a 59 anos,10157,24052250.0,42.23,definitivo
+2021,Brasil,violencia_fisica,60 a 69 anos,6120,17222091.0,35.54,definitivo
+2021,Brasil,violencia_fisica,70 a 79 anos,2670,9324120.0,28.64,definitivo
+2021,Brasil,violencia_fisica,80 anos e mais,1121,4356906.0,25.73,definitivo
+2021,Brasil,violencia_fisica,Idade não informada,469,,,definitivo
+2021,Brasil,violencia_psicologica,0 a 4 anos,2344,14102904.0,16.62,definitivo
+2021,Brasil,violencia_psicologica,5 a 9 anos,3858,14638890.0,26.35,definitivo
+2021,Brasil,violencia_psicologica,10 a 14 anos,5734,14653596.0,39.13,definitivo
+2021,Brasil,violencia_psicologica,15 a 19 anos,6225,15663254.0,39.74,definitivo
+2021,Brasil,violencia_psicologica,20 a 29 anos,15514,33065916.0,46.92,definitivo
+2021,Brasil,violencia_psicologica,30 a 39 anos,15137,33284526.0,45.48,definitivo
+2021,Brasil,violencia_psicologica,40 a 49 anos,10287,29739189.0,34.59,definitivo
+2021,Brasil,violencia_psicologica,50 a 59 anos,4845,24052250.0,20.14,definitivo
+2021,Brasil,violencia_psicologica,60 a 69 anos,2751,17222091.0,15.97,definitivo
+2021,Brasil,violencia_psicologica,70 a 79 anos,1355,9324120.0,14.53,definitivo
+2021,Brasil,violencia_psicologica,80 anos e mais,646,4356906.0,14.83,definitivo
+2021,Brasil,violencia_psicologica,Idade não informada,230,,,definitivo
+2021,Brasil,violencia_sexual,0 a 4 anos,5793,14102904.0,41.08,definitivo
+2021,Brasil,violencia_sexual,5 a 9 anos,7292,14638890.0,49.81,definitivo
+2021,Brasil,violencia_sexual,10 a 14 anos,13752,14653596.0,93.85,definitivo
+2021,Brasil,violencia_sexual,15 a 19 anos,5890,15663254.0,37.6,definitivo
+2021,Brasil,violencia_sexual,20 a 29 anos,5370,33065916.0,16.24,definitivo
+2021,Brasil,violencia_sexual,30 a 39 anos,3069,33284526.0,9.22,definitivo
+2021,Brasil,violencia_sexual,40 a 49 anos,1701,29739189.0,5.72,definitivo
+2021,Brasil,violencia_sexual,50 a 59 anos,695,24052250.0,2.89,definitivo
+2021,Brasil,violencia_sexual,60 a 69 anos,273,17222091.0,1.59,definitivo
+2021,Brasil,violencia_sexual,70 a 79 anos,94,9324120.0,1.01,definitivo
+2021,Brasil,violencia_sexual,80 anos e mais,49,4356906.0,1.12,definitivo
+2021,Brasil,violencia_sexual,Idade não informada,109,,,definitivo
+2021,Brasil,violencia_financeira,0 a 4 anos,115,14102904.0,0.82,definitivo
+2021,Brasil,violencia_financeira,5 a 9 anos,85,14638890.0,0.58,definitivo
+2021,Brasil,violencia_financeira,10 a 14 anos,157,14653596.0,1.07,definitivo
+2021,Brasil,violencia_financeira,15 a 19 anos,209,15663254.0,1.33,definitivo
+2021,Brasil,violencia_financeira,20 a 29 anos,945,33065916.0,2.86,definitivo
+2021,Brasil,violencia_financeira,30 a 39 anos,1234,33284526.0,3.71,definitivo
+2021,Brasil,violencia_financeira,40 a 49 anos,883,29739189.0,2.97,definitivo
+2021,Brasil,violencia_financeira,50 a 59 anos,524,24052250.0,2.18,definitivo
+2021,Brasil,violencia_financeira,60 a 69 anos,443,17222091.0,2.57,definitivo
+2021,Brasil,violencia_financeira,70 a 79 anos,374,9324120.0,4.01,definitivo
+2021,Brasil,violencia_financeira,80 anos e mais,255,4356906.0,5.85,definitivo
+2021,Brasil,violencia_financeira,Idade não informada,13,,,definitivo
+2021,Brasil,negligencia,0 a 4 anos,19492,14102904.0,138.21,definitivo
+2021,Brasil,negligencia,5 a 9 anos,5577,14638890.0,38.1,definitivo
+2021,Brasil,negligencia,10 a 14 anos,3781,14653596.0,25.8,definitivo
+2021,Brasil,negligencia,15 a 19 anos,2348,15663254.0,14.99,definitivo
+2021,Brasil,negligencia,20 a 29 anos,427,33065916.0,1.29,definitivo
+2021,Brasil,negligencia,30 a 39 anos,311,33284526.0,0.93,definitivo
+2021,Brasil,negligencia,40 a 49 anos,239,29739189.0,0.8,definitivo
+2021,Brasil,negligencia,50 a 59 anos,366,24052250.0,1.52,definitivo
+2021,Brasil,negligencia,60 a 69 anos,1634,17222091.0,9.49,definitivo
+2021,Brasil,negligencia,70 a 79 anos,1969,9324120.0,21.12,definitivo
+2021,Brasil,negligencia,80 anos e mais,1985,4356906.0,45.56,definitivo
+2021,Brasil,negligencia,Idade não informada,266,,,definitivo
+2021,Brasil,tortura,0 a 4 anos,251,14102904.0,1.78,definitivo
+2021,Brasil,tortura,5 a 9 anos,316,14638890.0,2.16,definitivo
+2021,Brasil,tortura,10 a 14 anos,504,14653596.0,3.44,definitivo
+2021,Brasil,tortura,15 a 19 anos,644,15663254.0,4.11,definitivo
+2021,Brasil,tortura,20 a 29 anos,1661,33065916.0,5.02,definitivo
+2021,Brasil,tortura,30 a 39 anos,1496,33284526.0,4.49,definitivo
+2021,Brasil,tortura,40 a 49 anos,897,29739189.0,3.02,definitivo
+2021,Brasil,tortura,50 a 59 anos,416,24052250.0,1.73,definitivo
+2021,Brasil,tortura,60 a 69 anos,195,17222091.0,1.13,definitivo
+2021,Brasil,tortura,70 a 79 anos,106,9324120.0,1.14,definitivo
+2021,Brasil,tortura,80 anos e mais,75,4356906.0,1.72,definitivo
+2021,Brasil,tortura,Idade não informada,28,,,definitivo
+2021,Brasil,trafico_pessoas,0 a 4 anos,17,14102904.0,0.12,definitivo
+2021,Brasil,trafico_pessoas,5 a 9 anos,9,14638890.0,0.06,definitivo
+2021,Brasil,trafico_pessoas,10 a 14 anos,20,14653596.0,0.14,definitivo
+2021,Brasil,trafico_pessoas,15 a 19 anos,14,15663254.0,0.09,definitivo
+2021,Brasil,trafico_pessoas,20 a 29 anos,30,33065916.0,0.09,definitivo
+2021,Brasil,trafico_pessoas,30 a 39 anos,28,33284526.0,0.08,definitivo
+2021,Brasil,trafico_pessoas,40 a 49 anos,13,29739189.0,0.04,definitivo
+2021,Brasil,trafico_pessoas,50 a 59 anos,5,24052250.0,0.02,definitivo
+2021,Brasil,trafico_pessoas,60 a 69 anos,4,17222091.0,0.02,definitivo
+2021,Brasil,trafico_pessoas,70 a 79 anos,3,9324120.0,0.03,definitivo
+2021,Brasil,trafico_pessoas,80 anos e mais,1,4356906.0,0.02,definitivo
+2021,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,2132,504760.0,422.38,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,773,502866.0,153.72,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,842,479180.0,175.72,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,530,498260.0,106.37,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1052,1236664.0,85.07,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,882,1291881.0,68.27,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,561,1094485.0,51.26,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,301,929554.0,32.38,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,251,660955.0,37.98,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,176,336058.0,52.37,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,80 anos e mais,96,136985.0,70.08,definitivo
+2021,Santa Catarina,notificacoes_interpessoais,Idade não informada,22,,,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,3,504760.0,0.59,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,9,502866.0,1.79,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,628,479180.0,131.06,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1205,498260.0,241.84,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,1732,1236664.0,140.05,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1151,1291881.0,89.09,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,885,1094485.0,80.86,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,426,929554.0,45.83,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,171,660955.0,25.87,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,61,336058.0,18.15,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,19,136985.0,13.87,definitivo
+2021,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,29,,,definitivo
+2021,Santa Catarina,violencia_fisica,0 a 4 anos,123,504760.0,24.37,definitivo
+2021,Santa Catarina,violencia_fisica,5 a 9 anos,119,502866.0,23.66,definitivo
+2021,Santa Catarina,violencia_fisica,10 a 14 anos,157,479180.0,32.76,definitivo
+2021,Santa Catarina,violencia_fisica,15 a 19 anos,300,498260.0,60.21,definitivo
+2021,Santa Catarina,violencia_fisica,20 a 29 anos,844,1236664.0,68.25,definitivo
+2021,Santa Catarina,violencia_fisica,30 a 39 anos,762,1291881.0,58.98,definitivo
+2021,Santa Catarina,violencia_fisica,40 a 49 anos,494,1094485.0,45.14,definitivo
+2021,Santa Catarina,violencia_fisica,50 a 59 anos,248,929554.0,26.68,definitivo
+2021,Santa Catarina,violencia_fisica,60 a 69 anos,172,660955.0,26.02,definitivo
+2021,Santa Catarina,violencia_fisica,70 a 79 anos,104,336058.0,30.95,definitivo
+2021,Santa Catarina,violencia_fisica,80 anos e mais,32,136985.0,23.36,definitivo
+2021,Santa Catarina,violencia_fisica,Idade não informada,8,,,definitivo
+2021,Santa Catarina,violencia_psicologica,0 a 4 anos,43,504760.0,8.52,definitivo
+2021,Santa Catarina,violencia_psicologica,5 a 9 anos,99,502866.0,19.69,definitivo
+2021,Santa Catarina,violencia_psicologica,10 a 14 anos,120,479180.0,25.04,definitivo
+2021,Santa Catarina,violencia_psicologica,15 a 19 anos,103,498260.0,20.67,definitivo
+2021,Santa Catarina,violencia_psicologica,20 a 29 anos,250,1236664.0,20.22,definitivo
+2021,Santa Catarina,violencia_psicologica,30 a 39 anos,226,1291881.0,17.49,definitivo
+2021,Santa Catarina,violencia_psicologica,40 a 49 anos,151,1094485.0,13.8,definitivo
+2021,Santa Catarina,violencia_psicologica,50 a 59 anos,87,929554.0,9.36,definitivo
+2021,Santa Catarina,violencia_psicologica,60 a 69 anos,62,660955.0,9.38,definitivo
+2021,Santa Catarina,violencia_psicologica,70 a 79 anos,41,336058.0,12.2,definitivo
+2021,Santa Catarina,violencia_psicologica,80 anos e mais,15,136985.0,10.95,definitivo
+2021,Santa Catarina,violencia_psicologica,Idade não informada,4,,,definitivo
+2021,Santa Catarina,violencia_sexual,0 a 4 anos,251,504760.0,49.73,definitivo
+2021,Santa Catarina,violencia_sexual,5 a 9 anos,341,502866.0,67.81,definitivo
+2021,Santa Catarina,violencia_sexual,10 a 14 anos,508,479180.0,106.01,definitivo
+2021,Santa Catarina,violencia_sexual,15 a 19 anos,211,498260.0,42.35,definitivo
+2021,Santa Catarina,violencia_sexual,20 a 29 anos,212,1236664.0,17.14,definitivo
+2021,Santa Catarina,violencia_sexual,30 a 39 anos,123,1291881.0,9.52,definitivo
+2021,Santa Catarina,violencia_sexual,40 a 49 anos,48,1094485.0,4.39,definitivo
+2021,Santa Catarina,violencia_sexual,50 a 59 anos,20,929554.0,2.15,definitivo
+2021,Santa Catarina,violencia_sexual,60 a 69 anos,18,660955.0,2.72,definitivo
+2021,Santa Catarina,violencia_sexual,70 a 79 anos,3,336058.0,0.89,definitivo
+2021,Santa Catarina,violencia_sexual,80 anos e mais,2,136985.0,1.46,definitivo
+2021,Santa Catarina,violencia_sexual,Idade não informada,1,,,definitivo
+2021,Santa Catarina,violencia_financeira,0 a 4 anos,1,504760.0,0.2,definitivo
+2021,Santa Catarina,violencia_financeira,5 a 9 anos,0,502866.0,0.0,definitivo
+2021,Santa Catarina,violencia_financeira,10 a 14 anos,3,479180.0,0.63,definitivo
+2021,Santa Catarina,violencia_financeira,15 a 19 anos,0,498260.0,0.0,definitivo
+2021,Santa Catarina,violencia_financeira,20 a 29 anos,7,1236664.0,0.57,definitivo
+2021,Santa Catarina,violencia_financeira,30 a 39 anos,7,1291881.0,0.54,definitivo
+2021,Santa Catarina,violencia_financeira,40 a 49 anos,8,1094485.0,0.73,definitivo
+2021,Santa Catarina,violencia_financeira,50 a 59 anos,7,929554.0,0.75,definitivo
+2021,Santa Catarina,violencia_financeira,60 a 69 anos,13,660955.0,1.97,definitivo
+2021,Santa Catarina,violencia_financeira,70 a 79 anos,10,336058.0,2.98,definitivo
+2021,Santa Catarina,violencia_financeira,80 anos e mais,5,136985.0,3.65,definitivo
+2021,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2021,Santa Catarina,negligencia,0 a 4 anos,1805,504760.0,357.6,definitivo
+2021,Santa Catarina,negligencia,5 a 9 anos,340,502866.0,67.61,definitivo
+2021,Santa Catarina,negligencia,10 a 14 anos,221,479180.0,46.12,definitivo
+2021,Santa Catarina,negligencia,15 a 19 anos,35,498260.0,7.02,definitivo
+2021,Santa Catarina,negligencia,20 a 29 anos,11,1236664.0,0.89,definitivo
+2021,Santa Catarina,negligencia,30 a 39 anos,5,1291881.0,0.39,definitivo
+2021,Santa Catarina,negligencia,40 a 49 anos,6,1094485.0,0.55,definitivo
+2021,Santa Catarina,negligencia,50 a 59 anos,13,929554.0,1.4,definitivo
+2021,Santa Catarina,negligencia,60 a 69 anos,46,660955.0,6.96,definitivo
+2021,Santa Catarina,negligencia,70 a 79 anos,57,336058.0,16.96,definitivo
+2021,Santa Catarina,negligencia,80 anos e mais,58,136985.0,42.34,definitivo
+2021,Santa Catarina,negligencia,Idade não informada,13,,,definitivo
+2021,Santa Catarina,tortura,0 a 4 anos,8,504760.0,1.58,definitivo
+2021,Santa Catarina,tortura,5 a 9 anos,6,502866.0,1.19,definitivo
+2021,Santa Catarina,tortura,10 a 14 anos,6,479180.0,1.25,definitivo
+2021,Santa Catarina,tortura,15 a 19 anos,13,498260.0,2.61,definitivo
+2021,Santa Catarina,tortura,20 a 29 anos,36,1236664.0,2.91,definitivo
+2021,Santa Catarina,tortura,30 a 39 anos,29,1291881.0,2.24,definitivo
+2021,Santa Catarina,tortura,40 a 49 anos,18,1094485.0,1.64,definitivo
+2021,Santa Catarina,tortura,50 a 59 anos,10,929554.0,1.08,definitivo
+2021,Santa Catarina,tortura,60 a 69 anos,1,660955.0,0.15,definitivo
+2021,Santa Catarina,tortura,70 a 79 anos,4,336058.0,1.19,definitivo
+2021,Santa Catarina,tortura,80 anos e mais,0,136985.0,0.0,definitivo
+2021,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2021,Santa Catarina,trafico_pessoas,0 a 4 anos,0,504760.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,5 a 9 anos,0,502866.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,10 a 14 anos,0,479180.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,15 a 19 anos,0,498260.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1236664.0,0.08,definitivo
+2021,Santa Catarina,trafico_pessoas,30 a 39 anos,1,1291881.0,0.08,definitivo
+2021,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1094485.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,50 a 59 anos,0,929554.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,60 a 69 anos,0,660955.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,70 a 79 anos,0,336058.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,80 anos e mais,0,136985.0,0.0,definitivo
+2021,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2022,Brasil,notificacoes_interpessoais,0 a 4 anos,31696,13820837.0,229.33,definitivo
+2022,Brasil,notificacoes_interpessoais,5 a 9 anos,20414,14588148.0,139.94,definitivo
+2022,Brasil,notificacoes_interpessoais,10 a 14 anos,30987,14575329.0,212.6,definitivo
+2022,Brasil,notificacoes_interpessoais,15 a 19 anos,28557,15402409.0,185.41,definitivo
+2022,Brasil,notificacoes_interpessoais,20 a 29 anos,54459,32864711.0,165.71,definitivo
+2022,Brasil,notificacoes_interpessoais,30 a 39 anos,46740,33088470.0,141.26,definitivo
+2022,Brasil,notificacoes_interpessoais,40 a 49 anos,32001,30328447.0,105.51,definitivo
+2022,Brasil,notificacoes_interpessoais,50 a 59 anos,14793,24330133.0,60.8,definitivo
+2022,Brasil,notificacoes_interpessoais,60 a 69 anos,10649,17735798.0,60.04,definitivo
+2022,Brasil,notificacoes_interpessoais,70 a 79 anos,6564,9688415.0,67.75,definitivo
+2022,Brasil,notificacoes_interpessoais,80 anos e mais,4197,4440286.0,94.52,definitivo
+2022,Brasil,notificacoes_interpessoais,Idade não informada,333,,,definitivo
+2022,Brasil,notificacoes_autoprovocadas,0 a 4 anos,787,13820837.0,5.69,definitivo
+2022,Brasil,notificacoes_autoprovocadas,5 a 9 anos,507,14588148.0,3.48,definitivo
+2022,Brasil,notificacoes_autoprovocadas,10 a 14 anos,13600,14575329.0,93.31,definitivo
+2022,Brasil,notificacoes_autoprovocadas,15 a 19 anos,30176,15402409.0,195.92,definitivo
+2022,Brasil,notificacoes_autoprovocadas,20 a 29 anos,41568,32864711.0,126.48,definitivo
+2022,Brasil,notificacoes_autoprovocadas,30 a 39 anos,24825,33088470.0,75.03,definitivo
+2022,Brasil,notificacoes_autoprovocadas,40 a 49 anos,16644,30328447.0,54.88,definitivo
+2022,Brasil,notificacoes_autoprovocadas,50 a 59 anos,7385,24330133.0,30.35,definitivo
+2022,Brasil,notificacoes_autoprovocadas,60 a 69 anos,2862,17735798.0,16.14,definitivo
+2022,Brasil,notificacoes_autoprovocadas,70 a 79 anos,1051,9688415.0,10.85,definitivo
+2022,Brasil,notificacoes_autoprovocadas,80 anos e mais,370,4440286.0,8.33,definitivo
+2022,Brasil,notificacoes_autoprovocadas,Idade não informada,381,,,definitivo
+2022,Brasil,violencia_fisica,0 a 4 anos,5418,13820837.0,39.2,definitivo
+2022,Brasil,violencia_fisica,5 a 9 anos,5362,14588148.0,36.76,definitivo
+2022,Brasil,violencia_fisica,10 a 14 anos,9995,14575329.0,68.57,definitivo
+2022,Brasil,violencia_fisica,15 a 19 anos,18705,15402409.0,121.44,definitivo
+2022,Brasil,violencia_fisica,20 a 29 anos,45055,32864711.0,137.09,definitivo
+2022,Brasil,violencia_fisica,30 a 39 anos,38883,33088470.0,117.51,definitivo
+2022,Brasil,violencia_fisica,40 a 49 anos,26277,30328447.0,86.64,definitivo
+2022,Brasil,violencia_fisica,50 a 59 anos,11751,24330133.0,48.3,definitivo
+2022,Brasil,violencia_fisica,60 a 69 anos,7195,17735798.0,40.57,definitivo
+2022,Brasil,violencia_fisica,70 a 79 anos,3134,9688415.0,32.35,definitivo
+2022,Brasil,violencia_fisica,80 anos e mais,1333,4440286.0,30.02,definitivo
+2022,Brasil,violencia_fisica,Idade não informada,260,,,definitivo
+2022,Brasil,violencia_psicologica,0 a 4 anos,2609,13820837.0,18.88,definitivo
+2022,Brasil,violencia_psicologica,5 a 9 anos,4486,14588148.0,30.75,definitivo
+2022,Brasil,violencia_psicologica,10 a 14 anos,7294,14575329.0,50.04,definitivo
+2022,Brasil,violencia_psicologica,15 a 19 anos,7074,15402409.0,45.93,definitivo
+2022,Brasil,violencia_psicologica,20 a 29 anos,17907,32864711.0,54.49,definitivo
+2022,Brasil,violencia_psicologica,30 a 39 anos,17372,33088470.0,52.5,definitivo
+2022,Brasil,violencia_psicologica,40 a 49 anos,12294,30328447.0,40.54,definitivo
+2022,Brasil,violencia_psicologica,50 a 59 anos,5735,24330133.0,23.57,definitivo
+2022,Brasil,violencia_psicologica,60 a 69 anos,3148,17735798.0,17.75,definitivo
+2022,Brasil,violencia_psicologica,70 a 79 anos,1711,9688415.0,17.66,definitivo
+2022,Brasil,violencia_psicologica,80 anos e mais,745,4440286.0,16.78,definitivo
+2022,Brasil,violencia_psicologica,Idade não informada,144,,,definitivo
+2022,Brasil,violencia_sexual,0 a 4 anos,6855,13820837.0,49.6,definitivo
+2022,Brasil,violencia_sexual,5 a 9 anos,8727,14588148.0,59.82,definitivo
+2022,Brasil,violencia_sexual,10 a 14 anos,16814,14575329.0,115.36,definitivo
+2022,Brasil,violencia_sexual,15 a 19 anos,6808,15402409.0,44.2,definitivo
+2022,Brasil,violencia_sexual,20 a 29 anos,6787,32864711.0,20.65,definitivo
+2022,Brasil,violencia_sexual,30 a 39 anos,3869,33088470.0,11.69,definitivo
+2022,Brasil,violencia_sexual,40 a 49 anos,2163,30328447.0,7.13,definitivo
+2022,Brasil,violencia_sexual,50 a 59 anos,857,24330133.0,3.52,definitivo
+2022,Brasil,violencia_sexual,60 a 69 anos,324,17735798.0,1.83,definitivo
+2022,Brasil,violencia_sexual,70 a 79 anos,135,9688415.0,1.39,definitivo
+2022,Brasil,violencia_sexual,80 anos e mais,63,4440286.0,1.42,definitivo
+2022,Brasil,violencia_sexual,Idade não informada,23,,,definitivo
+2022,Brasil,violencia_financeira,0 a 4 anos,155,13820837.0,1.12,definitivo
+2022,Brasil,violencia_financeira,5 a 9 anos,93,14588148.0,0.64,definitivo
+2022,Brasil,violencia_financeira,10 a 14 anos,149,14575329.0,1.02,definitivo
+2022,Brasil,violencia_financeira,15 a 19 anos,254,15402409.0,1.65,definitivo
+2022,Brasil,violencia_financeira,20 a 29 anos,1165,32864711.0,3.54,definitivo
+2022,Brasil,violencia_financeira,30 a 39 anos,1498,33088470.0,4.53,definitivo
+2022,Brasil,violencia_financeira,40 a 49 anos,1146,30328447.0,3.78,definitivo
+2022,Brasil,violencia_financeira,50 a 59 anos,623,24330133.0,2.56,definitivo
+2022,Brasil,violencia_financeira,60 a 69 anos,534,17735798.0,3.01,definitivo
+2022,Brasil,violencia_financeira,70 a 79 anos,472,9688415.0,4.87,definitivo
+2022,Brasil,violencia_financeira,80 anos e mais,260,4440286.0,5.86,definitivo
+2022,Brasil,violencia_financeira,Idade não informada,18,,,definitivo
+2022,Brasil,negligencia,0 a 4 anos,20293,13820837.0,146.83,definitivo
+2022,Brasil,negligencia,5 a 9 anos,6710,14588148.0,46.0,definitivo
+2022,Brasil,negligencia,10 a 14 anos,4811,14575329.0,33.01,definitivo
+2022,Brasil,negligencia,15 a 19 anos,2892,15402409.0,18.78,definitivo
+2022,Brasil,negligencia,20 a 29 anos,572,32864711.0,1.74,definitivo
+2022,Brasil,negligencia,30 a 39 anos,368,33088470.0,1.11,definitivo
+2022,Brasil,negligencia,40 a 49 anos,328,30328447.0,1.08,definitivo
+2022,Brasil,negligencia,50 a 59 anos,432,24330133.0,1.78,definitivo
+2022,Brasil,negligencia,60 a 69 anos,2045,17735798.0,11.53,definitivo
+2022,Brasil,negligencia,70 a 79 anos,2690,9688415.0,27.77,definitivo
+2022,Brasil,negligencia,80 anos e mais,2667,4440286.0,60.06,definitivo
+2022,Brasil,negligencia,Idade não informada,32,,,definitivo
+2022,Brasil,tortura,0 a 4 anos,257,13820837.0,1.86,definitivo
+2022,Brasil,tortura,5 a 9 anos,306,14588148.0,2.1,definitivo
+2022,Brasil,tortura,10 a 14 anos,549,14575329.0,3.77,definitivo
+2022,Brasil,tortura,15 a 19 anos,752,15402409.0,4.88,definitivo
+2022,Brasil,tortura,20 a 29 anos,1847,32864711.0,5.62,definitivo
+2022,Brasil,tortura,30 a 39 anos,1679,33088470.0,5.07,definitivo
+2022,Brasil,tortura,40 a 49 anos,1156,30328447.0,3.81,definitivo
+2022,Brasil,tortura,50 a 59 anos,457,24330133.0,1.88,definitivo
+2022,Brasil,tortura,60 a 69 anos,229,17735798.0,1.29,definitivo
+2022,Brasil,tortura,70 a 79 anos,135,9688415.0,1.39,definitivo
+2022,Brasil,tortura,80 anos e mais,76,4440286.0,1.71,definitivo
+2022,Brasil,tortura,Idade não informada,23,,,definitivo
+2022,Brasil,trafico_pessoas,0 a 4 anos,10,13820837.0,0.07,definitivo
+2022,Brasil,trafico_pessoas,5 a 9 anos,9,14588148.0,0.06,definitivo
+2022,Brasil,trafico_pessoas,10 a 14 anos,12,14575329.0,0.08,definitivo
+2022,Brasil,trafico_pessoas,15 a 19 anos,22,15402409.0,0.14,definitivo
+2022,Brasil,trafico_pessoas,20 a 29 anos,26,32864711.0,0.08,definitivo
+2022,Brasil,trafico_pessoas,30 a 39 anos,24,33088470.0,0.07,definitivo
+2022,Brasil,trafico_pessoas,40 a 49 anos,20,30328447.0,0.07,definitivo
+2022,Brasil,trafico_pessoas,50 a 59 anos,4,24330133.0,0.02,definitivo
+2022,Brasil,trafico_pessoas,60 a 69 anos,1,17735798.0,0.01,definitivo
+2022,Brasil,trafico_pessoas,70 a 79 anos,4,9688415.0,0.04,definitivo
+2022,Brasil,trafico_pessoas,80 anos e mais,2,4440286.0,0.05,definitivo
+2022,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,1843,505558.0,364.55,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,765,513270.0,149.04,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,1010,488050.0,206.95,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,608,497389.0,122.24,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1301,1231490.0,105.64,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1068,1309577.0,81.55,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,739,1127078.0,65.57,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,345,940542.0,36.68,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,300,688215.0,43.59,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,164,353973.0,46.33,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,80 anos e mais,112,141675.0,79.05,definitivo
+2022,Santa Catarina,notificacoes_interpessoais,Idade não informada,6,,,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,7,505558.0,1.38,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,17,513270.0,3.31,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,679,488050.0,139.13,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1367,497389.0,274.84,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,1990,1231490.0,161.59,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1411,1309577.0,107.74,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1061,1127078.0,94.14,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,468,940542.0,49.76,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,187,688215.0,27.17,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,46,353973.0,13.0,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,9,141675.0,6.35,definitivo
+2022,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,9,,,definitivo
+2022,Santa Catarina,violencia_fisica,0 a 4 anos,143,505558.0,28.29,definitivo
+2022,Santa Catarina,violencia_fisica,5 a 9 anos,117,513270.0,22.8,definitivo
+2022,Santa Catarina,violencia_fisica,10 a 14 anos,215,488050.0,44.05,definitivo
+2022,Santa Catarina,violencia_fisica,15 a 19 anos,312,497389.0,62.73,definitivo
+2022,Santa Catarina,violencia_fisica,20 a 29 anos,986,1231490.0,80.07,definitivo
+2022,Santa Catarina,violencia_fisica,30 a 39 anos,863,1309577.0,65.9,definitivo
+2022,Santa Catarina,violencia_fisica,40 a 49 anos,626,1127078.0,55.54,definitivo
+2022,Santa Catarina,violencia_fisica,50 a 59 anos,285,940542.0,30.3,definitivo
+2022,Santa Catarina,violencia_fisica,60 a 69 anos,213,688215.0,30.95,definitivo
+2022,Santa Catarina,violencia_fisica,70 a 79 anos,93,353973.0,26.27,definitivo
+2022,Santa Catarina,violencia_fisica,80 anos e mais,39,141675.0,27.53,definitivo
+2022,Santa Catarina,violencia_fisica,Idade não informada,3,,,definitivo
+2022,Santa Catarina,violencia_psicologica,0 a 4 anos,44,505558.0,8.7,definitivo
+2022,Santa Catarina,violencia_psicologica,5 a 9 anos,77,513270.0,15.0,definitivo
+2022,Santa Catarina,violencia_psicologica,10 a 14 anos,135,488050.0,27.66,definitivo
+2022,Santa Catarina,violencia_psicologica,15 a 19 anos,93,497389.0,18.7,definitivo
+2022,Santa Catarina,violencia_psicologica,20 a 29 anos,224,1231490.0,18.19,definitivo
+2022,Santa Catarina,violencia_psicologica,30 a 39 anos,237,1309577.0,18.1,definitivo
+2022,Santa Catarina,violencia_psicologica,40 a 49 anos,161,1127078.0,14.28,definitivo
+2022,Santa Catarina,violencia_psicologica,50 a 59 anos,82,940542.0,8.72,definitivo
+2022,Santa Catarina,violencia_psicologica,60 a 69 anos,53,688215.0,7.7,definitivo
+2022,Santa Catarina,violencia_psicologica,70 a 79 anos,41,353973.0,11.58,definitivo
+2022,Santa Catarina,violencia_psicologica,80 anos e mais,18,141675.0,12.71,definitivo
+2022,Santa Catarina,violencia_psicologica,Idade não informada,2,,,definitivo
+2022,Santa Catarina,violencia_sexual,0 a 4 anos,275,505558.0,54.4,definitivo
+2022,Santa Catarina,violencia_sexual,5 a 9 anos,375,513270.0,73.06,definitivo
+2022,Santa Catarina,violencia_sexual,10 a 14 anos,608,488050.0,124.58,definitivo
+2022,Santa Catarina,violencia_sexual,15 a 19 anos,241,497389.0,48.45,definitivo
+2022,Santa Catarina,violencia_sexual,20 a 29 anos,260,1231490.0,21.11,definitivo
+2022,Santa Catarina,violencia_sexual,30 a 39 anos,124,1309577.0,9.47,definitivo
+2022,Santa Catarina,violencia_sexual,40 a 49 anos,75,1127078.0,6.65,definitivo
+2022,Santa Catarina,violencia_sexual,50 a 59 anos,16,940542.0,1.7,definitivo
+2022,Santa Catarina,violencia_sexual,60 a 69 anos,15,688215.0,2.18,definitivo
+2022,Santa Catarina,violencia_sexual,70 a 79 anos,5,353973.0,1.41,definitivo
+2022,Santa Catarina,violencia_sexual,80 anos e mais,1,141675.0,0.71,definitivo
+2022,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2022,Santa Catarina,violencia_financeira,0 a 4 anos,0,505558.0,0.0,definitivo
+2022,Santa Catarina,violencia_financeira,5 a 9 anos,0,513270.0,0.0,definitivo
+2022,Santa Catarina,violencia_financeira,10 a 14 anos,3,488050.0,0.61,definitivo
+2022,Santa Catarina,violencia_financeira,15 a 19 anos,6,497389.0,1.21,definitivo
+2022,Santa Catarina,violencia_financeira,20 a 29 anos,9,1231490.0,0.73,definitivo
+2022,Santa Catarina,violencia_financeira,30 a 39 anos,19,1309577.0,1.45,definitivo
+2022,Santa Catarina,violencia_financeira,40 a 49 anos,16,1127078.0,1.42,definitivo
+2022,Santa Catarina,violencia_financeira,50 a 59 anos,7,940542.0,0.74,definitivo
+2022,Santa Catarina,violencia_financeira,60 a 69 anos,15,688215.0,2.18,definitivo
+2022,Santa Catarina,violencia_financeira,70 a 79 anos,15,353973.0,4.24,definitivo
+2022,Santa Catarina,violencia_financeira,80 anos e mais,4,141675.0,2.82,definitivo
+2022,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2022,Santa Catarina,negligencia,0 a 4 anos,1449,505558.0,286.61,definitivo
+2022,Santa Catarina,negligencia,5 a 9 anos,279,513270.0,54.36,definitivo
+2022,Santa Catarina,negligencia,10 a 14 anos,173,488050.0,35.45,definitivo
+2022,Santa Catarina,negligencia,15 a 19 anos,46,497389.0,9.25,definitivo
+2022,Santa Catarina,negligencia,20 a 29 anos,41,1231490.0,3.33,definitivo
+2022,Santa Catarina,negligencia,30 a 39 anos,16,1309577.0,1.22,definitivo
+2022,Santa Catarina,negligencia,40 a 49 anos,12,1127078.0,1.06,definitivo
+2022,Santa Catarina,negligencia,50 a 59 anos,18,940542.0,1.91,definitivo
+2022,Santa Catarina,negligencia,60 a 69 anos,55,688215.0,7.99,definitivo
+2022,Santa Catarina,negligencia,70 a 79 anos,53,353973.0,14.97,definitivo
+2022,Santa Catarina,negligencia,80 anos e mais,69,141675.0,48.7,definitivo
+2022,Santa Catarina,negligencia,Idade não informada,1,,,definitivo
+2022,Santa Catarina,tortura,0 a 4 anos,4,505558.0,0.79,definitivo
+2022,Santa Catarina,tortura,5 a 9 anos,4,513270.0,0.78,definitivo
+2022,Santa Catarina,tortura,10 a 14 anos,8,488050.0,1.64,definitivo
+2022,Santa Catarina,tortura,15 a 19 anos,9,497389.0,1.81,definitivo
+2022,Santa Catarina,tortura,20 a 29 anos,33,1231490.0,2.68,definitivo
+2022,Santa Catarina,tortura,30 a 39 anos,17,1309577.0,1.3,definitivo
+2022,Santa Catarina,tortura,40 a 49 anos,21,1127078.0,1.86,definitivo
+2022,Santa Catarina,tortura,50 a 59 anos,6,940542.0,0.64,definitivo
+2022,Santa Catarina,tortura,60 a 69 anos,1,688215.0,0.15,definitivo
+2022,Santa Catarina,tortura,70 a 79 anos,3,353973.0,0.85,definitivo
+2022,Santa Catarina,tortura,80 anos e mais,1,141675.0,0.71,definitivo
+2022,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2022,Santa Catarina,trafico_pessoas,0 a 4 anos,1,505558.0,0.2,definitivo
+2022,Santa Catarina,trafico_pessoas,5 a 9 anos,0,513270.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,10 a 14 anos,0,488050.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,15 a 19 anos,2,497389.0,0.4,definitivo
+2022,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1231490.0,0.08,definitivo
+2022,Santa Catarina,trafico_pessoas,30 a 39 anos,0,1309577.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1127078.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,50 a 59 anos,0,940542.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,60 a 69 anos,0,688215.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,70 a 79 anos,0,353973.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,80 anos e mais,0,141675.0,0.0,definitivo
+2022,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2023,Brasil,notificacoes_interpessoais,0 a 4 anos,41317,13421242.0,307.85,definitivo
+2023,Brasil,notificacoes_interpessoais,5 a 9 anos,29189,14589745.0,200.07,definitivo
+2023,Brasil,notificacoes_interpessoais,10 a 14 anos,41751,14515508.0,287.63,definitivo
+2023,Brasil,notificacoes_interpessoais,15 a 19 anos,36982,15169410.0,243.79,definitivo
+2023,Brasil,notificacoes_interpessoais,20 a 29 anos,71448,32576988.0,219.32,definitivo
+2023,Brasil,notificacoes_interpessoais,30 a 39 anos,61874,32893858.0,188.1,definitivo
+2023,Brasil,notificacoes_interpessoais,40 a 49 anos,43774,30910229.0,141.62,definitivo
+2023,Brasil,notificacoes_interpessoais,50 a 59 anos,20223,24636687.0,82.08,definitivo
+2023,Brasil,notificacoes_interpessoais,60 a 69 anos,15629,18291312.0,85.44,definitivo
+2023,Brasil,notificacoes_interpessoais,70 a 79 anos,9652,10117249.0,95.4,definitivo
+2023,Brasil,notificacoes_interpessoais,80 anos e mais,6200,4572930.0,135.58,definitivo
+2023,Brasil,notificacoes_interpessoais,Idade não informada,485,,,definitivo
+2023,Brasil,notificacoes_autoprovocadas,0 a 4 anos,604,13421242.0,4.5,definitivo
+2023,Brasil,notificacoes_autoprovocadas,5 a 9 anos,664,14589745.0,4.55,definitivo
+2023,Brasil,notificacoes_autoprovocadas,10 a 14 anos,14379,14515508.0,99.06,definitivo
+2023,Brasil,notificacoes_autoprovocadas,15 a 19 anos,35579,15169410.0,234.54,definitivo
+2023,Brasil,notificacoes_autoprovocadas,20 a 29 anos,56670,32576988.0,173.96,definitivo
+2023,Brasil,notificacoes_autoprovocadas,30 a 39 anos,34523,32893858.0,104.95,definitivo
+2023,Brasil,notificacoes_autoprovocadas,40 a 49 anos,23489,30910229.0,75.99,definitivo
+2023,Brasil,notificacoes_autoprovocadas,50 a 59 anos,10092,24636687.0,40.96,definitivo
+2023,Brasil,notificacoes_autoprovocadas,60 a 69 anos,3829,18291312.0,20.93,definitivo
+2023,Brasil,notificacoes_autoprovocadas,70 a 79 anos,1440,10117249.0,14.23,definitivo
+2023,Brasil,notificacoes_autoprovocadas,80 anos e mais,478,4572930.0,10.45,definitivo
+2023,Brasil,notificacoes_autoprovocadas,Idade não informada,700,,,definitivo
+2023,Brasil,violencia_fisica,0 a 4 anos,7176,13421242.0,53.47,definitivo
+2023,Brasil,violencia_fisica,5 a 9 anos,7620,14589745.0,52.23,definitivo
+2023,Brasil,violencia_fisica,10 a 14 anos,13265,14515508.0,91.39,definitivo
+2023,Brasil,violencia_fisica,15 a 19 anos,23455,15169410.0,154.62,definitivo
+2023,Brasil,violencia_fisica,20 a 29 anos,58566,32576988.0,179.78,definitivo
+2023,Brasil,violencia_fisica,30 a 39 anos,51177,32893858.0,155.58,definitivo
+2023,Brasil,violencia_fisica,40 a 49 anos,35999,30910229.0,116.46,definitivo
+2023,Brasil,violencia_fisica,50 a 59 anos,15912,24636687.0,64.59,definitivo
+2023,Brasil,violencia_fisica,60 a 69 anos,10300,18291312.0,56.31,definitivo
+2023,Brasil,violencia_fisica,70 a 79 anos,4430,10117249.0,43.79,definitivo
+2023,Brasil,violencia_fisica,80 anos e mais,1815,4572930.0,39.69,definitivo
+2023,Brasil,violencia_fisica,Idade não informada,409,,,definitivo
+2023,Brasil,violencia_psicologica,0 a 4 anos,3272,13421242.0,24.38,definitivo
+2023,Brasil,violencia_psicologica,5 a 9 anos,5814,14589745.0,39.85,definitivo
+2023,Brasil,violencia_psicologica,10 a 14 anos,9374,14515508.0,64.58,definitivo
+2023,Brasil,violencia_psicologica,15 a 19 anos,8873,15169410.0,58.49,definitivo
+2023,Brasil,violencia_psicologica,20 a 29 anos,22796,32576988.0,69.98,definitivo
+2023,Brasil,violencia_psicologica,30 a 39 anos,21967,32893858.0,66.78,definitivo
+2023,Brasil,violencia_psicologica,40 a 49 anos,16294,30910229.0,52.71,definitivo
+2023,Brasil,violencia_psicologica,50 a 59 anos,7580,24636687.0,30.77,definitivo
+2023,Brasil,violencia_psicologica,60 a 69 anos,4298,18291312.0,23.5,definitivo
+2023,Brasil,violencia_psicologica,70 a 79 anos,2255,10117249.0,22.29,definitivo
+2023,Brasil,violencia_psicologica,80 anos e mais,1019,4572930.0,22.28,definitivo
+2023,Brasil,violencia_psicologica,Idade não informada,189,,,definitivo
+2023,Brasil,violencia_sexual,0 a 4 anos,10261,13421242.0,76.45,definitivo
+2023,Brasil,violencia_sexual,5 a 9 anos,12365,14589745.0,84.75,definitivo
+2023,Brasil,violencia_sexual,10 a 14 anos,22330,14515508.0,153.84,definitivo
+2023,Brasil,violencia_sexual,15 a 19 anos,9002,15169410.0,59.34,definitivo
+2023,Brasil,violencia_sexual,20 a 29 anos,9061,32576988.0,27.81,definitivo
+2023,Brasil,violencia_sexual,30 a 39 anos,5625,32893858.0,17.1,definitivo
+2023,Brasil,violencia_sexual,40 a 49 anos,3096,30910229.0,10.02,definitivo
+2023,Brasil,violencia_sexual,50 a 59 anos,1203,24636687.0,4.88,definitivo
+2023,Brasil,violencia_sexual,60 a 69 anos,526,18291312.0,2.88,definitivo
+2023,Brasil,violencia_sexual,70 a 79 anos,191,10117249.0,1.89,definitivo
+2023,Brasil,violencia_sexual,80 anos e mais,94,4572930.0,2.06,definitivo
+2023,Brasil,violencia_sexual,Idade não informada,30,,,definitivo
+2023,Brasil,violencia_financeira,0 a 4 anos,160,13421242.0,1.19,definitivo
+2023,Brasil,violencia_financeira,5 a 9 anos,160,14589745.0,1.1,definitivo
+2023,Brasil,violencia_financeira,10 a 14 anos,202,14515508.0,1.39,definitivo
+2023,Brasil,violencia_financeira,15 a 19 anos,304,15169410.0,2.0,definitivo
+2023,Brasil,violencia_financeira,20 a 29 anos,1655,32576988.0,5.08,definitivo
+2023,Brasil,violencia_financeira,30 a 39 anos,2066,32893858.0,6.28,definitivo
+2023,Brasil,violencia_financeira,40 a 49 anos,1748,30910229.0,5.66,definitivo
+2023,Brasil,violencia_financeira,50 a 59 anos,955,24636687.0,3.88,definitivo
+2023,Brasil,violencia_financeira,60 a 69 anos,760,18291312.0,4.15,definitivo
+2023,Brasil,violencia_financeira,70 a 79 anos,674,10117249.0,6.66,definitivo
+2023,Brasil,violencia_financeira,80 anos e mais,441,4572930.0,9.64,definitivo
+2023,Brasil,violencia_financeira,Idade não informada,22,,,definitivo
+2023,Brasil,negligencia,0 a 4 anos,25034,13421242.0,186.53,definitivo
+2023,Brasil,negligencia,5 a 9 anos,9692,14589745.0,66.43,definitivo
+2023,Brasil,negligencia,10 a 14 anos,6735,14515508.0,46.4,definitivo
+2023,Brasil,negligencia,15 a 19 anos,4109,15169410.0,27.09,definitivo
+2023,Brasil,negligencia,20 a 29 anos,787,32576988.0,2.42,definitivo
+2023,Brasil,negligencia,30 a 39 anos,509,32893858.0,1.55,definitivo
+2023,Brasil,negligencia,40 a 49 anos,451,30910229.0,1.46,definitivo
+2023,Brasil,negligencia,50 a 59 anos,612,24636687.0,2.48,definitivo
+2023,Brasil,negligencia,60 a 69 anos,3415,18291312.0,18.67,definitivo
+2023,Brasil,negligencia,70 a 79 anos,4226,10117249.0,41.77,definitivo
+2023,Brasil,negligencia,80 anos e mais,4016,4572930.0,87.82,definitivo
+2023,Brasil,negligencia,Idade não informada,24,,,definitivo
+2023,Brasil,tortura,0 a 4 anos,307,13421242.0,2.29,definitivo
+2023,Brasil,tortura,5 a 9 anos,424,14589745.0,2.91,definitivo
+2023,Brasil,tortura,10 a 14 anos,735,14515508.0,5.06,definitivo
+2023,Brasil,tortura,15 a 19 anos,893,15169410.0,5.89,definitivo
+2023,Brasil,tortura,20 a 29 anos,2141,32576988.0,6.57,definitivo
+2023,Brasil,tortura,30 a 39 anos,2046,32893858.0,6.22,definitivo
+2023,Brasil,tortura,40 a 49 anos,1406,30910229.0,4.55,definitivo
+2023,Brasil,tortura,50 a 59 anos,568,24636687.0,2.31,definitivo
+2023,Brasil,tortura,60 a 69 anos,296,18291312.0,1.62,definitivo
+2023,Brasil,tortura,70 a 79 anos,194,10117249.0,1.92,definitivo
+2023,Brasil,tortura,80 anos e mais,105,4572930.0,2.3,definitivo
+2023,Brasil,tortura,Idade não informada,16,,,definitivo
+2023,Brasil,trafico_pessoas,0 a 4 anos,17,13421242.0,0.13,definitivo
+2023,Brasil,trafico_pessoas,5 a 9 anos,8,14589745.0,0.05,definitivo
+2023,Brasil,trafico_pessoas,10 a 14 anos,29,14515508.0,0.2,definitivo
+2023,Brasil,trafico_pessoas,15 a 19 anos,58,15169410.0,0.38,definitivo
+2023,Brasil,trafico_pessoas,20 a 29 anos,125,32576988.0,0.38,definitivo
+2023,Brasil,trafico_pessoas,30 a 39 anos,97,32893858.0,0.29,definitivo
+2023,Brasil,trafico_pessoas,40 a 49 anos,44,30910229.0,0.14,definitivo
+2023,Brasil,trafico_pessoas,50 a 59 anos,19,24636687.0,0.08,definitivo
+2023,Brasil,trafico_pessoas,60 a 69 anos,9,18291312.0,0.05,definitivo
+2023,Brasil,trafico_pessoas,70 a 79 anos,5,10117249.0,0.05,definitivo
+2023,Brasil,trafico_pessoas,80 anos e mais,3,4572930.0,0.07,definitivo
+2023,Brasil,trafico_pessoas,Idade não informada,2,,,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,2553,504102.0,506.45,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,1342,524343.0,255.94,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,1508,497960.0,302.84,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,904,499345.0,181.04,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1838,1221871.0,150.43,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1487,1326454.0,112.1,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,1127,1161828.0,97.0,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,575,952546.0,60.36,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,400,716334.0,55.84,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,274,374282.0,73.21,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,80 anos e mais,143,148147.0,96.53,definitivo
+2023,Santa Catarina,notificacoes_interpessoais,Idade não informada,11,,,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,22,504102.0,4.36,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,26,524343.0,4.96,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,759,497960.0,152.42,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1679,499345.0,336.24,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,2810,1221871.0,229.98,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1895,1326454.0,142.86,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1445,1161828.0,124.37,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,715,952546.0,75.06,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,239,716334.0,33.36,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,79,374282.0,21.11,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,22,148147.0,14.85,definitivo
+2023,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,25,,,definitivo
+2023,Santa Catarina,violencia_fisica,0 a 4 anos,222,504102.0,44.04,definitivo
+2023,Santa Catarina,violencia_fisica,5 a 9 anos,279,524343.0,53.21,definitivo
+2023,Santa Catarina,violencia_fisica,10 a 14 anos,316,497960.0,63.46,definitivo
+2023,Santa Catarina,violencia_fisica,15 a 19 anos,501,499345.0,100.33,definitivo
+2023,Santa Catarina,violencia_fisica,20 a 29 anos,1362,1221871.0,111.47,definitivo
+2023,Santa Catarina,violencia_fisica,30 a 39 anos,1183,1326454.0,89.19,definitivo
+2023,Santa Catarina,violencia_fisica,40 a 49 anos,926,1161828.0,79.7,definitivo
+2023,Santa Catarina,violencia_fisica,50 a 59 anos,469,952546.0,49.24,definitivo
+2023,Santa Catarina,violencia_fisica,60 a 69 anos,307,716334.0,42.86,definitivo
+2023,Santa Catarina,violencia_fisica,70 a 79 anos,150,374282.0,40.08,definitivo
+2023,Santa Catarina,violencia_fisica,80 anos e mais,53,148147.0,35.78,definitivo
+2023,Santa Catarina,violencia_fisica,Idade não informada,7,,,definitivo
+2023,Santa Catarina,violencia_psicologica,0 a 4 anos,60,504102.0,11.9,definitivo
+2023,Santa Catarina,violencia_psicologica,5 a 9 anos,145,524343.0,27.65,definitivo
+2023,Santa Catarina,violencia_psicologica,10 a 14 anos,210,497960.0,42.17,definitivo
+2023,Santa Catarina,violencia_psicologica,15 a 19 anos,155,499345.0,31.04,definitivo
+2023,Santa Catarina,violencia_psicologica,20 a 29 anos,290,1221871.0,23.73,definitivo
+2023,Santa Catarina,violencia_psicologica,30 a 39 anos,266,1326454.0,20.05,definitivo
+2023,Santa Catarina,violencia_psicologica,40 a 49 anos,228,1161828.0,19.62,definitivo
+2023,Santa Catarina,violencia_psicologica,50 a 59 anos,119,952546.0,12.49,definitivo
+2023,Santa Catarina,violencia_psicologica,60 a 69 anos,77,716334.0,10.75,definitivo
+2023,Santa Catarina,violencia_psicologica,70 a 79 anos,43,374282.0,11.49,definitivo
+2023,Santa Catarina,violencia_psicologica,80 anos e mais,19,148147.0,12.83,definitivo
+2023,Santa Catarina,violencia_psicologica,Idade não informada,1,,,definitivo
+2023,Santa Catarina,violencia_sexual,0 a 4 anos,452,504102.0,89.66,definitivo
+2023,Santa Catarina,violencia_sexual,5 a 9 anos,607,524343.0,115.76,definitivo
+2023,Santa Catarina,violencia_sexual,10 a 14 anos,888,497960.0,178.33,definitivo
+2023,Santa Catarina,violencia_sexual,15 a 19 anos,295,499345.0,59.08,definitivo
+2023,Santa Catarina,violencia_sexual,20 a 29 anos,335,1221871.0,27.42,definitivo
+2023,Santa Catarina,violencia_sexual,30 a 39 anos,195,1326454.0,14.7,definitivo
+2023,Santa Catarina,violencia_sexual,40 a 49 anos,110,1161828.0,9.47,definitivo
+2023,Santa Catarina,violencia_sexual,50 a 59 anos,41,952546.0,4.3,definitivo
+2023,Santa Catarina,violencia_sexual,60 a 69 anos,24,716334.0,3.35,definitivo
+2023,Santa Catarina,violencia_sexual,70 a 79 anos,11,374282.0,2.94,definitivo
+2023,Santa Catarina,violencia_sexual,80 anos e mais,3,148147.0,2.03,definitivo
+2023,Santa Catarina,violencia_sexual,Idade não informada,3,,,definitivo
+2023,Santa Catarina,violencia_financeira,0 a 4 anos,0,504102.0,0.0,definitivo
+2023,Santa Catarina,violencia_financeira,5 a 9 anos,4,524343.0,0.76,definitivo
+2023,Santa Catarina,violencia_financeira,10 a 14 anos,5,497960.0,1.0,definitivo
+2023,Santa Catarina,violencia_financeira,15 a 19 anos,4,499345.0,0.8,definitivo
+2023,Santa Catarina,violencia_financeira,20 a 29 anos,17,1221871.0,1.39,definitivo
+2023,Santa Catarina,violencia_financeira,30 a 39 anos,21,1326454.0,1.58,definitivo
+2023,Santa Catarina,violencia_financeira,40 a 49 anos,20,1161828.0,1.72,definitivo
+2023,Santa Catarina,violencia_financeira,50 a 59 anos,18,952546.0,1.89,definitivo
+2023,Santa Catarina,violencia_financeira,60 a 69 anos,11,716334.0,1.54,definitivo
+2023,Santa Catarina,violencia_financeira,70 a 79 anos,14,374282.0,3.74,definitivo
+2023,Santa Catarina,violencia_financeira,80 anos e mais,7,148147.0,4.73,definitivo
+2023,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2023,Santa Catarina,negligencia,0 a 4 anos,1895,504102.0,375.92,definitivo
+2023,Santa Catarina,negligencia,5 a 9 anos,431,524343.0,82.2,definitivo
+2023,Santa Catarina,negligencia,10 a 14 anos,247,497960.0,49.6,definitivo
+2023,Santa Catarina,negligencia,15 a 19 anos,60,499345.0,12.02,definitivo
+2023,Santa Catarina,negligencia,20 a 29 anos,35,1221871.0,2.86,definitivo
+2023,Santa Catarina,negligencia,30 a 39 anos,18,1326454.0,1.36,definitivo
+2023,Santa Catarina,negligencia,40 a 49 anos,7,1161828.0,0.6,definitivo
+2023,Santa Catarina,negligencia,50 a 59 anos,21,952546.0,2.2,definitivo
+2023,Santa Catarina,negligencia,60 a 69 anos,37,716334.0,5.17,definitivo
+2023,Santa Catarina,negligencia,70 a 79 anos,93,374282.0,24.85,definitivo
+2023,Santa Catarina,negligencia,80 anos e mais,73,148147.0,49.28,definitivo
+2023,Santa Catarina,negligencia,Idade não informada,1,,,definitivo
+2023,Santa Catarina,tortura,0 a 4 anos,7,504102.0,1.39,definitivo
+2023,Santa Catarina,tortura,5 a 9 anos,13,524343.0,2.48,definitivo
+2023,Santa Catarina,tortura,10 a 14 anos,16,497960.0,3.21,definitivo
+2023,Santa Catarina,tortura,15 a 19 anos,14,499345.0,2.8,definitivo
+2023,Santa Catarina,tortura,20 a 29 anos,17,1221871.0,1.39,definitivo
+2023,Santa Catarina,tortura,30 a 39 anos,20,1326454.0,1.51,definitivo
+2023,Santa Catarina,tortura,40 a 49 anos,18,1161828.0,1.55,definitivo
+2023,Santa Catarina,tortura,50 a 59 anos,13,952546.0,1.36,definitivo
+2023,Santa Catarina,tortura,60 a 69 anos,6,716334.0,0.84,definitivo
+2023,Santa Catarina,tortura,70 a 79 anos,5,374282.0,1.34,definitivo
+2023,Santa Catarina,tortura,80 anos e mais,1,148147.0,0.68,definitivo
+2023,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2023,Santa Catarina,trafico_pessoas,0 a 4 anos,0,504102.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,5 a 9 anos,0,524343.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,10 a 14 anos,1,497960.0,0.2,definitivo
+2023,Santa Catarina,trafico_pessoas,15 a 19 anos,0,499345.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,20 a 29 anos,1,1221871.0,0.08,definitivo
+2023,Santa Catarina,trafico_pessoas,30 a 39 anos,5,1326454.0,0.38,definitivo
+2023,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1161828.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,50 a 59 anos,2,952546.0,0.21,definitivo
+2023,Santa Catarina,trafico_pessoas,60 a 69 anos,0,716334.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,70 a 79 anos,0,374282.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,80 anos e mais,0,148147.0,0.0,definitivo
+2023,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2024,Brasil,notificacoes_interpessoais,0 a 4 anos,46271,13017992.0,355.44,definitivo
+2024,Brasil,notificacoes_interpessoais,5 a 9 anos,33201,14531027.0,228.48,definitivo
+2024,Brasil,notificacoes_interpessoais,10 a 14 anos,46591,14505688.0,321.19,definitivo
+2024,Brasil,notificacoes_interpessoais,15 a 19 anos,39091,14971635.0,261.1,definitivo
+2024,Brasil,notificacoes_interpessoais,20 a 29 anos,72579,32278607.0,224.85,definitivo
+2024,Brasil,notificacoes_interpessoais,30 a 39 anos,64206,32708600.0,196.3,definitivo
+2024,Brasil,notificacoes_interpessoais,40 a 49 anos,45231,31464840.0,143.75,definitivo
+2024,Brasil,notificacoes_interpessoais,50 a 59 anos,20864,24935747.0,83.67,definitivo
+2024,Brasil,notificacoes_interpessoais,60 a 69 anos,16216,18845303.0,86.05,definitivo
+2024,Brasil,notificacoes_interpessoais,70 a 79 anos,10508,10573106.0,99.38,definitivo
+2024,Brasil,notificacoes_interpessoais,80 anos e mais,6802,4751205.0,143.16,definitivo
+2024,Brasil,notificacoes_interpessoais,Idade não informada,423,,,definitivo
+2024,Brasil,notificacoes_autoprovocadas,0 a 4 anos,762,13017992.0,5.85,definitivo
+2024,Brasil,notificacoes_autoprovocadas,5 a 9 anos,731,14531027.0,5.03,definitivo
+2024,Brasil,notificacoes_autoprovocadas,10 a 14 anos,14484,14505688.0,99.85,definitivo
+2024,Brasil,notificacoes_autoprovocadas,15 a 19 anos,35126,14971635.0,234.62,definitivo
+2024,Brasil,notificacoes_autoprovocadas,20 a 29 anos,59216,32278607.0,183.45,definitivo
+2024,Brasil,notificacoes_autoprovocadas,30 a 39 anos,37617,32708600.0,115.01,definitivo
+2024,Brasil,notificacoes_autoprovocadas,40 a 49 anos,24936,31464840.0,79.25,definitivo
+2024,Brasil,notificacoes_autoprovocadas,50 a 59 anos,10783,24935747.0,43.24,definitivo
+2024,Brasil,notificacoes_autoprovocadas,60 a 69 anos,3788,18845303.0,20.1,definitivo
+2024,Brasil,notificacoes_autoprovocadas,70 a 79 anos,1417,10573106.0,13.4,definitivo
+2024,Brasil,notificacoes_autoprovocadas,80 anos e mais,535,4751205.0,11.26,definitivo
+2024,Brasil,notificacoes_autoprovocadas,Idade não informada,531,,,definitivo
+2024,Brasil,violencia_fisica,0 a 4 anos,7407,13017992.0,56.9,definitivo
+2024,Brasil,violencia_fisica,5 a 9 anos,8794,14531027.0,60.52,definitivo
+2024,Brasil,violencia_fisica,10 a 14 anos,15181,14505688.0,104.66,definitivo
+2024,Brasil,violencia_fisica,15 a 19 anos,24708,14971635.0,165.03,definitivo
+2024,Brasil,violencia_fisica,20 a 29 anos,59388,32278607.0,183.99,definitivo
+2024,Brasil,violencia_fisica,30 a 39 anos,52682,32708600.0,161.06,definitivo
+2024,Brasil,violencia_fisica,40 a 49 anos,37016,31464840.0,117.64,definitivo
+2024,Brasil,violencia_fisica,50 a 59 anos,16417,24935747.0,65.84,definitivo
+2024,Brasil,violencia_fisica,60 a 69 anos,10515,18845303.0,55.8,definitivo
+2024,Brasil,violencia_fisica,70 a 79 anos,4864,10573106.0,46.0,definitivo
+2024,Brasil,violencia_fisica,80 anos e mais,1984,4751205.0,41.76,definitivo
+2024,Brasil,violencia_fisica,Idade não informada,330,,,definitivo
+2024,Brasil,violencia_psicologica,0 a 4 anos,3519,13017992.0,27.03,definitivo
+2024,Brasil,violencia_psicologica,5 a 9 anos,6672,14531027.0,45.92,definitivo
+2024,Brasil,violencia_psicologica,10 a 14 anos,10355,14505688.0,71.39,definitivo
+2024,Brasil,violencia_psicologica,15 a 19 anos,9065,14971635.0,60.55,definitivo
+2024,Brasil,violencia_psicologica,20 a 29 anos,22077,32278607.0,68.4,definitivo
+2024,Brasil,violencia_psicologica,30 a 39 anos,21721,32708600.0,66.41,definitivo
+2024,Brasil,violencia_psicologica,40 a 49 anos,16215,31464840.0,51.53,definitivo
+2024,Brasil,violencia_psicologica,50 a 59 anos,7568,24935747.0,30.35,definitivo
+2024,Brasil,violencia_psicologica,60 a 69 anos,4202,18845303.0,22.3,definitivo
+2024,Brasil,violencia_psicologica,70 a 79 anos,2363,10573106.0,22.35,definitivo
+2024,Brasil,violencia_psicologica,80 anos e mais,1074,4751205.0,22.6,definitivo
+2024,Brasil,violencia_psicologica,Idade não informada,154,,,definitivo
+2024,Brasil,violencia_sexual,0 a 4 anos,10307,13017992.0,79.18,definitivo
+2024,Brasil,violencia_sexual,5 a 9 anos,13041,14531027.0,89.75,definitivo
+2024,Brasil,violencia_sexual,10 a 14 anos,24233,14505688.0,167.06,definitivo
+2024,Brasil,violencia_sexual,15 a 19 anos,9518,14971635.0,63.57,definitivo
+2024,Brasil,violencia_sexual,20 a 29 anos,9730,32278607.0,30.14,definitivo
+2024,Brasil,violencia_sexual,30 a 39 anos,6239,32708600.0,19.07,definitivo
+2024,Brasil,violencia_sexual,40 a 49 anos,3356,31464840.0,10.67,definitivo
+2024,Brasil,violencia_sexual,50 a 59 anos,1305,24935747.0,5.23,definitivo
+2024,Brasil,violencia_sexual,60 a 69 anos,518,18845303.0,2.75,definitivo
+2024,Brasil,violencia_sexual,70 a 79 anos,218,10573106.0,2.06,definitivo
+2024,Brasil,violencia_sexual,80 anos e mais,111,4751205.0,2.34,definitivo
+2024,Brasil,violencia_sexual,Idade não informada,31,,,definitivo
+2024,Brasil,violencia_financeira,0 a 4 anos,186,13017992.0,1.43,definitivo
+2024,Brasil,violencia_financeira,5 a 9 anos,175,14531027.0,1.2,definitivo
+2024,Brasil,violencia_financeira,10 a 14 anos,217,14505688.0,1.5,definitivo
+2024,Brasil,violencia_financeira,15 a 19 anos,368,14971635.0,2.46,definitivo
+2024,Brasil,violencia_financeira,20 a 29 anos,1864,32278607.0,5.77,definitivo
+2024,Brasil,violencia_financeira,30 a 39 anos,2332,32708600.0,7.13,definitivo
+2024,Brasil,violencia_financeira,40 a 49 anos,1916,31464840.0,6.09,definitivo
+2024,Brasil,violencia_financeira,50 a 59 anos,1006,24935747.0,4.03,definitivo
+2024,Brasil,violencia_financeira,60 a 69 anos,818,18845303.0,4.34,definitivo
+2024,Brasil,violencia_financeira,70 a 79 anos,792,10573106.0,7.49,definitivo
+2024,Brasil,violencia_financeira,80 anos e mais,509,4751205.0,10.71,definitivo
+2024,Brasil,violencia_financeira,Idade não informada,17,,,definitivo
+2024,Brasil,negligencia,0 a 4 anos,29397,13017992.0,225.82,definitivo
+2024,Brasil,negligencia,5 a 9 anos,11440,14531027.0,78.73,definitivo
+2024,Brasil,negligencia,10 a 14 anos,7365,14505688.0,50.77,definitivo
+2024,Brasil,negligencia,15 a 19 anos,4234,14971635.0,28.28,definitivo
+2024,Brasil,negligencia,20 a 29 anos,844,32278607.0,2.61,definitivo
+2024,Brasil,negligencia,30 a 39 anos,548,32708600.0,1.68,definitivo
+2024,Brasil,negligencia,40 a 49 anos,456,31464840.0,1.45,definitivo
+2024,Brasil,negligencia,50 a 59 anos,648,24935747.0,2.6,definitivo
+2024,Brasil,negligencia,60 a 69 anos,3595,18845303.0,19.08,definitivo
+2024,Brasil,negligencia,70 a 79 anos,4450,10573106.0,42.09,definitivo
+2024,Brasil,negligencia,80 anos e mais,4306,4751205.0,90.63,definitivo
+2024,Brasil,negligencia,Idade não informada,37,,,definitivo
+2024,Brasil,tortura,0 a 4 anos,346,13017992.0,2.66,definitivo
+2024,Brasil,tortura,5 a 9 anos,476,14531027.0,3.28,definitivo
+2024,Brasil,tortura,10 a 14 anos,763,14505688.0,5.26,definitivo
+2024,Brasil,tortura,15 a 19 anos,882,14971635.0,5.89,definitivo
+2024,Brasil,tortura,20 a 29 anos,2068,32278607.0,6.41,definitivo
+2024,Brasil,tortura,30 a 39 anos,1944,32708600.0,5.94,definitivo
+2024,Brasil,tortura,40 a 49 anos,1302,31464840.0,4.14,definitivo
+2024,Brasil,tortura,50 a 59 anos,574,24935747.0,2.3,definitivo
+2024,Brasil,tortura,60 a 69 anos,283,18845303.0,1.5,definitivo
+2024,Brasil,tortura,70 a 79 anos,168,10573106.0,1.59,definitivo
+2024,Brasil,tortura,80 anos e mais,89,4751205.0,1.87,definitivo
+2024,Brasil,tortura,Idade não informada,19,,,definitivo
+2024,Brasil,trafico_pessoas,0 a 4 anos,23,13017992.0,0.18,definitivo
+2024,Brasil,trafico_pessoas,5 a 9 anos,14,14531027.0,0.1,definitivo
+2024,Brasil,trafico_pessoas,10 a 14 anos,29,14505688.0,0.2,definitivo
+2024,Brasil,trafico_pessoas,15 a 19 anos,25,14971635.0,0.17,definitivo
+2024,Brasil,trafico_pessoas,20 a 29 anos,62,32278607.0,0.19,definitivo
+2024,Brasil,trafico_pessoas,30 a 39 anos,56,32708600.0,0.17,definitivo
+2024,Brasil,trafico_pessoas,40 a 49 anos,35,31464840.0,0.11,definitivo
+2024,Brasil,trafico_pessoas,50 a 59 anos,18,24935747.0,0.07,definitivo
+2024,Brasil,trafico_pessoas,60 a 69 anos,9,18845303.0,0.05,definitivo
+2024,Brasil,trafico_pessoas,70 a 79 anos,6,10573106.0,0.06,definitivo
+2024,Brasil,trafico_pessoas,80 anos e mais,7,4751205.0,0.15,definitivo
+2024,Brasil,trafico_pessoas,Idade não informada,0,,,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,3701,501275.0,738.32,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,1732,533039.0,324.93,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,1809,508785.0,355.55,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,1008,504176.0,199.93,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,1766,1210383.0,145.9,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1561,1342306.0,116.29,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,1181,1197956.0,98.58,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,609,963817.0,63.19,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,452,744412.0,60.72,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,269,395870.0,67.95,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,80 anos e mais,171,156422.0,109.32,definitivo
+2024,Santa Catarina,notificacoes_interpessoais,Idade não informada,11,,,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,21,501275.0,4.19,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,42,533039.0,7.88,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,839,508785.0,164.9,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1470,504176.0,291.56,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,2708,1210383.0,223.73,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,1859,1342306.0,138.49,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1387,1197956.0,115.78,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,660,963817.0,68.48,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,232,744412.0,31.17,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,77,395870.0,19.45,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,23,156422.0,14.7,definitivo
+2024,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,20,,,definitivo
+2024,Santa Catarina,violencia_fisica,0 a 4 anos,289,501275.0,57.65,definitivo
+2024,Santa Catarina,violencia_fisica,5 a 9 anos,349,533039.0,65.47,definitivo
+2024,Santa Catarina,violencia_fisica,10 a 14 anos,424,508785.0,83.34,definitivo
+2024,Santa Catarina,violencia_fisica,15 a 19 anos,562,504176.0,111.47,definitivo
+2024,Santa Catarina,violencia_fisica,20 a 29 anos,1325,1210383.0,109.47,definitivo
+2024,Santa Catarina,violencia_fisica,30 a 39 anos,1258,1342306.0,93.72,definitivo
+2024,Santa Catarina,violencia_fisica,40 a 49 anos,958,1197956.0,79.97,definitivo
+2024,Santa Catarina,violencia_fisica,50 a 59 anos,494,963817.0,51.25,definitivo
+2024,Santa Catarina,violencia_fisica,60 a 69 anos,305,744412.0,40.97,definitivo
+2024,Santa Catarina,violencia_fisica,70 a 79 anos,116,395870.0,29.3,definitivo
+2024,Santa Catarina,violencia_fisica,80 anos e mais,60,156422.0,38.36,definitivo
+2024,Santa Catarina,violencia_fisica,Idade não informada,9,,,definitivo
+2024,Santa Catarina,violencia_psicologica,0 a 4 anos,79,501275.0,15.76,definitivo
+2024,Santa Catarina,violencia_psicologica,5 a 9 anos,178,533039.0,33.39,definitivo
+2024,Santa Catarina,violencia_psicologica,10 a 14 anos,269,508785.0,52.87,definitivo
+2024,Santa Catarina,violencia_psicologica,15 a 19 anos,159,504176.0,31.54,definitivo
+2024,Santa Catarina,violencia_psicologica,20 a 29 anos,231,1210383.0,19.08,definitivo
+2024,Santa Catarina,violencia_psicologica,30 a 39 anos,240,1342306.0,17.88,definitivo
+2024,Santa Catarina,violencia_psicologica,40 a 49 anos,212,1197956.0,17.7,definitivo
+2024,Santa Catarina,violencia_psicologica,50 a 59 anos,97,963817.0,10.06,definitivo
+2024,Santa Catarina,violencia_psicologica,60 a 69 anos,77,744412.0,10.34,definitivo
+2024,Santa Catarina,violencia_psicologica,70 a 79 anos,55,395870.0,13.89,definitivo
+2024,Santa Catarina,violencia_psicologica,80 anos e mais,17,156422.0,10.87,definitivo
+2024,Santa Catarina,violencia_psicologica,Idade não informada,2,,,definitivo
+2024,Santa Catarina,violencia_sexual,0 a 4 anos,460,501275.0,91.77,definitivo
+2024,Santa Catarina,violencia_sexual,5 a 9 anos,657,533039.0,123.26,definitivo
+2024,Santa Catarina,violencia_sexual,10 a 14 anos,942,508785.0,185.15,definitivo
+2024,Santa Catarina,violencia_sexual,15 a 19 anos,338,504176.0,67.04,definitivo
+2024,Santa Catarina,violencia_sexual,20 a 29 anos,329,1210383.0,27.18,definitivo
+2024,Santa Catarina,violencia_sexual,30 a 39 anos,197,1342306.0,14.68,definitivo
+2024,Santa Catarina,violencia_sexual,40 a 49 anos,96,1197956.0,8.01,definitivo
+2024,Santa Catarina,violencia_sexual,50 a 59 anos,47,963817.0,4.88,definitivo
+2024,Santa Catarina,violencia_sexual,60 a 69 anos,20,744412.0,2.69,definitivo
+2024,Santa Catarina,violencia_sexual,70 a 79 anos,7,395870.0,1.77,definitivo
+2024,Santa Catarina,violencia_sexual,80 anos e mais,2,156422.0,1.28,definitivo
+2024,Santa Catarina,violencia_sexual,Idade não informada,0,,,definitivo
+2024,Santa Catarina,violencia_financeira,0 a 4 anos,7,501275.0,1.4,definitivo
+2024,Santa Catarina,violencia_financeira,5 a 9 anos,2,533039.0,0.38,definitivo
+2024,Santa Catarina,violencia_financeira,10 a 14 anos,3,508785.0,0.59,definitivo
+2024,Santa Catarina,violencia_financeira,15 a 19 anos,4,504176.0,0.79,definitivo
+2024,Santa Catarina,violencia_financeira,20 a 29 anos,11,1210383.0,0.91,definitivo
+2024,Santa Catarina,violencia_financeira,30 a 39 anos,11,1342306.0,0.82,definitivo
+2024,Santa Catarina,violencia_financeira,40 a 49 anos,19,1197956.0,1.59,definitivo
+2024,Santa Catarina,violencia_financeira,50 a 59 anos,12,963817.0,1.25,definitivo
+2024,Santa Catarina,violencia_financeira,60 a 69 anos,12,744412.0,1.61,definitivo
+2024,Santa Catarina,violencia_financeira,70 a 79 anos,11,395870.0,2.78,definitivo
+2024,Santa Catarina,violencia_financeira,80 anos e mais,9,156422.0,5.75,definitivo
+2024,Santa Catarina,violencia_financeira,Idade não informada,0,,,definitivo
+2024,Santa Catarina,negligencia,0 a 4 anos,2973,501275.0,593.09,definitivo
+2024,Santa Catarina,negligencia,5 a 9 anos,678,533039.0,127.2,definitivo
+2024,Santa Catarina,negligencia,10 a 14 anos,339,508785.0,66.63,definitivo
+2024,Santa Catarina,negligencia,15 a 19 anos,65,504176.0,12.89,definitivo
+2024,Santa Catarina,negligencia,20 a 29 anos,42,1210383.0,3.47,definitivo
+2024,Santa Catarina,negligencia,30 a 39 anos,16,1342306.0,1.19,definitivo
+2024,Santa Catarina,negligencia,40 a 49 anos,16,1197956.0,1.34,definitivo
+2024,Santa Catarina,negligencia,50 a 59 anos,36,963817.0,3.74,definitivo
+2024,Santa Catarina,negligencia,60 a 69 anos,86,744412.0,11.55,definitivo
+2024,Santa Catarina,negligencia,70 a 79 anos,110,395870.0,27.79,definitivo
+2024,Santa Catarina,negligencia,80 anos e mais,97,156422.0,62.01,definitivo
+2024,Santa Catarina,negligencia,Idade não informada,1,,,definitivo
+2024,Santa Catarina,tortura,0 a 4 anos,6,501275.0,1.2,definitivo
+2024,Santa Catarina,tortura,5 a 9 anos,10,533039.0,1.88,definitivo
+2024,Santa Catarina,tortura,10 a 14 anos,9,508785.0,1.77,definitivo
+2024,Santa Catarina,tortura,15 a 19 anos,11,504176.0,2.18,definitivo
+2024,Santa Catarina,tortura,20 a 29 anos,19,1210383.0,1.57,definitivo
+2024,Santa Catarina,tortura,30 a 39 anos,31,1342306.0,2.31,definitivo
+2024,Santa Catarina,tortura,40 a 49 anos,14,1197956.0,1.17,definitivo
+2024,Santa Catarina,tortura,50 a 59 anos,7,963817.0,0.73,definitivo
+2024,Santa Catarina,tortura,60 a 69 anos,2,744412.0,0.27,definitivo
+2024,Santa Catarina,tortura,70 a 79 anos,2,395870.0,0.51,definitivo
+2024,Santa Catarina,tortura,80 anos e mais,2,156422.0,1.28,definitivo
+2024,Santa Catarina,tortura,Idade não informada,0,,,definitivo
+2024,Santa Catarina,trafico_pessoas,0 a 4 anos,1,501275.0,0.2,definitivo
+2024,Santa Catarina,trafico_pessoas,5 a 9 anos,0,533039.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,10 a 14 anos,0,508785.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,15 a 19 anos,0,504176.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,20 a 29 anos,0,1210383.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,30 a 39 anos,0,1342306.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,40 a 49 anos,0,1197956.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,50 a 59 anos,0,963817.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,60 a 69 anos,0,744412.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,70 a 79 anos,0,395870.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,80 anos e mais,0,156422.0,0.0,definitivo
+2024,Santa Catarina,trafico_pessoas,Idade não informada,0,,,definitivo
+2025,Brasil,notificacoes_interpessoais,0 a 4 anos,47796,,,preliminar
+2025,Brasil,notificacoes_interpessoais,5 a 9 anos,32299,,,preliminar
+2025,Brasil,notificacoes_interpessoais,10 a 14 anos,47374,,,preliminar
+2025,Brasil,notificacoes_interpessoais,15 a 19 anos,40452,,,preliminar
+2025,Brasil,notificacoes_interpessoais,20 a 29 anos,78254,,,preliminar
+2025,Brasil,notificacoes_interpessoais,30 a 39 anos,69307,,,preliminar
+2025,Brasil,notificacoes_interpessoais,40 a 49 anos,49147,,,preliminar
+2025,Brasil,notificacoes_interpessoais,50 a 59 anos,23182,,,preliminar
+2025,Brasil,notificacoes_interpessoais,60 a 69 anos,16302,,,preliminar
+2025,Brasil,notificacoes_interpessoais,70 a 79 anos,10488,,,preliminar
+2025,Brasil,notificacoes_interpessoais,80 anos e mais,6637,,,preliminar
+2025,Brasil,notificacoes_interpessoais,Idade não informada,0,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,0 a 4 anos,2259,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,5 a 9 anos,1143,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,10 a 14 anos,17042,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,15 a 19 anos,38312,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,20 a 29 anos,64597,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,30 a 39 anos,42344,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,40 a 49 anos,28231,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,50 a 59 anos,11804,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,60 a 69 anos,4408,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,70 a 79 anos,1656,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,80 anos e mais,676,,,preliminar
+2025,Brasil,notificacoes_autoprovocadas,Idade não informada,0,,,preliminar
+2025,Brasil,violencia_fisica,0 a 4 anos,7624,,,preliminar
+2025,Brasil,violencia_fisica,5 a 9 anos,8778,,,preliminar
+2025,Brasil,violencia_fisica,10 a 14 anos,15508,,,preliminar
+2025,Brasil,violencia_fisica,15 a 19 anos,25423,,,preliminar
+2025,Brasil,violencia_fisica,20 a 29 anos,63102,,,preliminar
+2025,Brasil,violencia_fisica,30 a 39 anos,56550,,,preliminar
+2025,Brasil,violencia_fisica,40 a 49 anos,40318,,,preliminar
+2025,Brasil,violencia_fisica,50 a 59 anos,18344,,,preliminar
+2025,Brasil,violencia_fisica,60 a 69 anos,10950,,,preliminar
+2025,Brasil,violencia_fisica,70 a 79 anos,5041,,,preliminar
+2025,Brasil,violencia_fisica,80 anos e mais,2044,,,preliminar
+2025,Brasil,violencia_fisica,Idade não informada,0,,,preliminar
+2025,Brasil,violencia_psicologica,0 a 4 anos,3069,,,preliminar
+2025,Brasil,violencia_psicologica,5 a 9 anos,5844,,,preliminar
+2025,Brasil,violencia_psicologica,10 a 14 anos,9836,,,preliminar
+2025,Brasil,violencia_psicologica,15 a 19 anos,8931,,,preliminar
+2025,Brasil,violencia_psicologica,20 a 29 anos,20913,,,preliminar
+2025,Brasil,violencia_psicologica,30 a 39 anos,20732,,,preliminar
+2025,Brasil,violencia_psicologica,40 a 49 anos,15358,,,preliminar
+2025,Brasil,violencia_psicologica,50 a 59 anos,7263,,,preliminar
+2025,Brasil,violencia_psicologica,60 a 69 anos,3986,,,preliminar
+2025,Brasil,violencia_psicologica,70 a 79 anos,2256,,,preliminar
+2025,Brasil,violencia_psicologica,80 anos e mais,967,,,preliminar
+2025,Brasil,violencia_psicologica,Idade não informada,0,,,preliminar
+2025,Brasil,violencia_sexual,0 a 4 anos,10010,,,preliminar
+2025,Brasil,violencia_sexual,5 a 9 anos,12403,,,preliminar
+2025,Brasil,violencia_sexual,10 a 14 anos,23479,,,preliminar
+2025,Brasil,violencia_sexual,15 a 19 anos,9724,,,preliminar
+2025,Brasil,violencia_sexual,20 a 29 anos,10614,,,preliminar
+2025,Brasil,violencia_sexual,30 a 39 anos,6746,,,preliminar
+2025,Brasil,violencia_sexual,40 a 49 anos,3290,,,preliminar
+2025,Brasil,violencia_sexual,50 a 59 anos,1323,,,preliminar
+2025,Brasil,violencia_sexual,60 a 69 anos,509,,,preliminar
+2025,Brasil,violencia_sexual,70 a 79 anos,214,,,preliminar
+2025,Brasil,violencia_sexual,80 anos e mais,87,,,preliminar
+2025,Brasil,violencia_sexual,Idade não informada,0,,,preliminar
+2025,Brasil,violencia_financeira,0 a 4 anos,189,,,preliminar
+2025,Brasil,violencia_financeira,5 a 9 anos,102,,,preliminar
+2025,Brasil,violencia_financeira,10 a 14 anos,172,,,preliminar
+2025,Brasil,violencia_financeira,15 a 19 anos,352,,,preliminar
+2025,Brasil,violencia_financeira,20 a 29 anos,1674,,,preliminar
+2025,Brasil,violencia_financeira,30 a 39 anos,1934,,,preliminar
+2025,Brasil,violencia_financeira,40 a 49 anos,1607,,,preliminar
+2025,Brasil,violencia_financeira,50 a 59 anos,874,,,preliminar
+2025,Brasil,violencia_financeira,60 a 69 anos,746,,,preliminar
+2025,Brasil,violencia_financeira,70 a 79 anos,721,,,preliminar
+2025,Brasil,violencia_financeira,80 anos e mais,472,,,preliminar
+2025,Brasil,violencia_financeira,Idade não informada,0,,,preliminar
+2025,Brasil,negligencia,0 a 4 anos,30446,,,preliminar
+2025,Brasil,negligencia,5 a 9 anos,10593,,,preliminar
+2025,Brasil,negligencia,10 a 14 anos,7198,,,preliminar
+2025,Brasil,negligencia,15 a 19 anos,3657,,,preliminar
+2025,Brasil,negligencia,20 a 29 anos,706,,,preliminar
+2025,Brasil,negligencia,30 a 39 anos,500,,,preliminar
+2025,Brasil,negligencia,40 a 49 anos,468,,,preliminar
+2025,Brasil,negligencia,50 a 59 anos,687,,,preliminar
+2025,Brasil,negligencia,60 a 69 anos,2947,,,preliminar
+2025,Brasil,negligencia,70 a 79 anos,4024,,,preliminar
+2025,Brasil,negligencia,80 anos e mais,3950,,,preliminar
+2025,Brasil,negligencia,Idade não informada,0,,,preliminar
+2025,Brasil,tortura,0 a 4 anos,291,,,preliminar
+2025,Brasil,tortura,5 a 9 anos,408,,,preliminar
+2025,Brasil,tortura,10 a 14 anos,653,,,preliminar
+2025,Brasil,tortura,15 a 19 anos,872,,,preliminar
+2025,Brasil,tortura,20 a 29 anos,2038,,,preliminar
+2025,Brasil,tortura,30 a 39 anos,1862,,,preliminar
+2025,Brasil,tortura,40 a 49 anos,1335,,,preliminar
+2025,Brasil,tortura,50 a 59 anos,516,,,preliminar
+2025,Brasil,tortura,60 a 69 anos,251,,,preliminar
+2025,Brasil,tortura,70 a 79 anos,160,,,preliminar
+2025,Brasil,tortura,80 anos e mais,83,,,preliminar
+2025,Brasil,tortura,Idade não informada,0,,,preliminar
+2025,Brasil,trafico_pessoas,0 a 4 anos,12,,,preliminar
+2025,Brasil,trafico_pessoas,5 a 9 anos,9,,,preliminar
+2025,Brasil,trafico_pessoas,10 a 14 anos,22,,,preliminar
+2025,Brasil,trafico_pessoas,15 a 19 anos,19,,,preliminar
+2025,Brasil,trafico_pessoas,20 a 29 anos,68,,,preliminar
+2025,Brasil,trafico_pessoas,30 a 39 anos,69,,,preliminar
+2025,Brasil,trafico_pessoas,40 a 49 anos,63,,,preliminar
+2025,Brasil,trafico_pessoas,50 a 59 anos,39,,,preliminar
+2025,Brasil,trafico_pessoas,60 a 69 anos,15,,,preliminar
+2025,Brasil,trafico_pessoas,70 a 79 anos,6,,,preliminar
+2025,Brasil,trafico_pessoas,80 anos e mais,2,,,preliminar
+2025,Brasil,trafico_pessoas,Idade não informada,0,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,0 a 4 anos,4899,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,5 a 9 anos,2139,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,10 a 14 anos,2569,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,15 a 19 anos,1195,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,20 a 29 anos,2002,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,30 a 39 anos,1870,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,40 a 49 anos,1327,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,50 a 59 anos,710,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,60 a 69 anos,510,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,70 a 79 anos,331,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,80 anos e mais,177,,,preliminar
+2025,Santa Catarina,notificacoes_interpessoais,Idade não informada,0,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,0 a 4 anos,111,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,5 a 9 anos,52,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,10 a 14 anos,1138,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,15 a 19 anos,1910,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,20 a 29 anos,3147,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,30 a 39 anos,2207,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,40 a 49 anos,1690,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,50 a 59 anos,770,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,60 a 69 anos,279,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,70 a 79 anos,97,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,80 anos e mais,26,,,preliminar
+2025,Santa Catarina,notificacoes_autoprovocadas,Idade não informada,0,,,preliminar
+2025,Santa Catarina,violencia_fisica,0 a 4 anos,463,,,preliminar
+2025,Santa Catarina,violencia_fisica,5 a 9 anos,477,,,preliminar
+2025,Santa Catarina,violencia_fisica,10 a 14 anos,606,,,preliminar
+2025,Santa Catarina,violencia_fisica,15 a 19 anos,579,,,preliminar
+2025,Santa Catarina,violencia_fisica,20 a 29 anos,1471,,,preliminar
+2025,Santa Catarina,violencia_fisica,30 a 39 anos,1436,,,preliminar
+2025,Santa Catarina,violencia_fisica,40 a 49 anos,1087,,,preliminar
+2025,Santa Catarina,violencia_fisica,50 a 59 anos,553,,,preliminar
+2025,Santa Catarina,violencia_fisica,60 a 69 anos,373,,,preliminar
+2025,Santa Catarina,violencia_fisica,70 a 79 anos,173,,,preliminar
+2025,Santa Catarina,violencia_fisica,80 anos e mais,72,,,preliminar
+2025,Santa Catarina,violencia_fisica,Idade não informada,0,,,preliminar
+2025,Santa Catarina,violencia_psicologica,0 a 4 anos,97,,,preliminar
+2025,Santa Catarina,violencia_psicologica,5 a 9 anos,221,,,preliminar
+2025,Santa Catarina,violencia_psicologica,10 a 14 anos,417,,,preliminar
+2025,Santa Catarina,violencia_psicologica,15 a 19 anos,199,,,preliminar
+2025,Santa Catarina,violencia_psicologica,20 a 29 anos,313,,,preliminar
+2025,Santa Catarina,violencia_psicologica,30 a 39 anos,337,,,preliminar
+2025,Santa Catarina,violencia_psicologica,40 a 49 anos,240,,,preliminar
+2025,Santa Catarina,violencia_psicologica,50 a 59 anos,156,,,preliminar
+2025,Santa Catarina,violencia_psicologica,60 a 69 anos,81,,,preliminar
+2025,Santa Catarina,violencia_psicologica,70 a 79 anos,52,,,preliminar
+2025,Santa Catarina,violencia_psicologica,80 anos e mais,21,,,preliminar
+2025,Santa Catarina,violencia_psicologica,Idade não informada,0,,,preliminar
+2025,Santa Catarina,violencia_sexual,0 a 4 anos,565,,,preliminar
+2025,Santa Catarina,violencia_sexual,5 a 9 anos,712,,,preliminar
+2025,Santa Catarina,violencia_sexual,10 a 14 anos,1206,,,preliminar
+2025,Santa Catarina,violencia_sexual,15 a 19 anos,411,,,preliminar
+2025,Santa Catarina,violencia_sexual,20 a 29 anos,381,,,preliminar
+2025,Santa Catarina,violencia_sexual,30 a 39 anos,244,,,preliminar
+2025,Santa Catarina,violencia_sexual,40 a 49 anos,109,,,preliminar
+2025,Santa Catarina,violencia_sexual,50 a 59 anos,54,,,preliminar
+2025,Santa Catarina,violencia_sexual,60 a 69 anos,13,,,preliminar
+2025,Santa Catarina,violencia_sexual,70 a 79 anos,9,,,preliminar
+2025,Santa Catarina,violencia_sexual,80 anos e mais,3,,,preliminar
+2025,Santa Catarina,violencia_sexual,Idade não informada,0,,,preliminar
+2025,Santa Catarina,violencia_financeira,0 a 4 anos,8,,,preliminar
+2025,Santa Catarina,violencia_financeira,5 a 9 anos,4,,,preliminar
+2025,Santa Catarina,violencia_financeira,10 a 14 anos,4,,,preliminar
+2025,Santa Catarina,violencia_financeira,15 a 19 anos,9,,,preliminar
+2025,Santa Catarina,violencia_financeira,20 a 29 anos,16,,,preliminar
+2025,Santa Catarina,violencia_financeira,30 a 39 anos,19,,,preliminar
+2025,Santa Catarina,violencia_financeira,40 a 49 anos,17,,,preliminar
+2025,Santa Catarina,violencia_financeira,50 a 59 anos,8,,,preliminar
+2025,Santa Catarina,violencia_financeira,60 a 69 anos,9,,,preliminar
+2025,Santa Catarina,violencia_financeira,70 a 79 anos,15,,,preliminar
+2025,Santa Catarina,violencia_financeira,80 anos e mais,10,,,preliminar
+2025,Santa Catarina,violencia_financeira,Idade não informada,0,,,preliminar
+2025,Santa Catarina,negligencia,0 a 4 anos,3889,,,preliminar
+2025,Santa Catarina,negligencia,5 a 9 anos,857,,,preliminar
+2025,Santa Catarina,negligencia,10 a 14 anos,571,,,preliminar
+2025,Santa Catarina,negligencia,15 a 19 anos,72,,,preliminar
+2025,Santa Catarina,negligencia,20 a 29 anos,19,,,preliminar
+2025,Santa Catarina,negligencia,30 a 39 anos,21,,,preliminar
+2025,Santa Catarina,negligencia,40 a 49 anos,13,,,preliminar
+2025,Santa Catarina,negligencia,50 a 59 anos,26,,,preliminar
+2025,Santa Catarina,negligencia,60 a 69 anos,86,,,preliminar
+2025,Santa Catarina,negligencia,70 a 79 anos,114,,,preliminar
+2025,Santa Catarina,negligencia,80 anos e mais,96,,,preliminar
+2025,Santa Catarina,negligencia,Idade não informada,0,,,preliminar
+2025,Santa Catarina,tortura,0 a 4 anos,11,,,preliminar
+2025,Santa Catarina,tortura,5 a 9 anos,8,,,preliminar
+2025,Santa Catarina,tortura,10 a 14 anos,15,,,preliminar
+2025,Santa Catarina,tortura,15 a 19 anos,12,,,preliminar
+2025,Santa Catarina,tortura,20 a 29 anos,19,,,preliminar
+2025,Santa Catarina,tortura,30 a 39 anos,18,,,preliminar
+2025,Santa Catarina,tortura,40 a 49 anos,17,,,preliminar
+2025,Santa Catarina,tortura,50 a 59 anos,9,,,preliminar
+2025,Santa Catarina,tortura,60 a 69 anos,1,,,preliminar
+2025,Santa Catarina,tortura,70 a 79 anos,4,,,preliminar
+2025,Santa Catarina,tortura,80 anos e mais,2,,,preliminar
+2025,Santa Catarina,tortura,Idade não informada,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,0 a 4 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,5 a 9 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,10 a 14 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,15 a 19 anos,1,,,preliminar
+2025,Santa Catarina,trafico_pessoas,20 a 29 anos,1,,,preliminar
+2025,Santa Catarina,trafico_pessoas,30 a 39 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,40 a 49 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,50 a 59 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,60 a 69 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,70 a 79 anos,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,80 anos e mais,0,,,preliminar
+2025,Santa Catarina,trafico_pessoas,Idade não informada,0,,,preliminar
