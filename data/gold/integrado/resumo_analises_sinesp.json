@@ -1,0 +1,23 @@
+{
+  "gerado_em": "2026-10-14",
+  "linhas": {
+    "razao_uf": 168,
+    "tentativas": 224,
+    "municipios": 295,
+    "serie_mensal": 184,
+    "sazonalidade": 24,
+    "homicidios": 224
+  },
+  "controles": {
+    "razao_brasil_2019": 0.357,
+    "razao_brasil_2024": 0.4144,
+    "razao_sc_2019": 0.5088,
+    "razao_sc_2024": 0.5667,
+    "tentativas_brasil_2019": 2340,
+    "tentativas_brasil_2025": 4188,
+    "feminicidios_sc_2019_2024": 335,
+    "sinesp_sc_nao_informado_2019_2024": 0,
+    "soma_homicidio_doloso_feminicidio_permitida": true
+  },
+  "fonte_metodologia_sinesp": "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/estatistica/dados-nacionais-1/base-de-dados-e-notas-metodologicas-dos-gestores-estaduais-sinesp-vde-2022-e-2023"
+}
