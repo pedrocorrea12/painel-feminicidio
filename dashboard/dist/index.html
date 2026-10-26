@@ -3,178 +3,227 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Painel de indicadores sobre violência contra a mulher em Santa Catarina.">
-  <title>Panorama Mulher SC</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231a2333'/%3E%3Cpath d='M16 43h8V29h-8zm12 0h8V20h-8zm12 0h8V12h-8z' fill='%23d34d67'/%3E%3C/svg%3E">
+  <meta name="description" content="Indicadores comparados sobre notificações de violência contra mulheres no Brasil, em Santa Catarina e nos municípios catarinenses.">
+  <title>Violência contra a mulher: panorama territorial</title>
   <link rel="stylesheet" href="editorial.css">
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="brand-block">
-        <a class="brand" href="#visao-geral" aria-label="Panorama Mulher SC — início">
-          <span class="brand-monogram" aria-hidden="true">PM</span>
-          <span><strong>Panorama Mulher</strong><small>Santa Catarina</small></span>
-        </a>
-        <button class="sidebar-close" id="sidebar-close" type="button" aria-label="Fechar menu">×</button>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="top-rule"></div>
+    <div class="header-inner">
+      <div class="publication">
+        <a href="#comparar" class="publication-name">Violência contra a mulher</a>
+        <p>Panorama territorial de notificações</p>
       </div>
-
-      <p class="nav-label">Análises</p>
-      <nav class="side-nav" aria-label="Navegação principal">
-        <button class="nav-item active" type="button" data-view-target="visao-geral" aria-current="page">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z"/></svg>
-          <span>Visão geral</span>
-        </button>
-        <button class="nav-item" type="button" data-view-target="evolucao">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 5-5 4 3 7-9M4 20h16"/></svg>
-          <span>Evolução</span>
-        </button>
-        <button class="nav-item" type="button" data-view-target="territorios">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <span>Territórios</span>
-        </button>
-        <button class="nav-item" type="button" data-view-target="perfil">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0M16 6h5M16 10h5M17 14h4"/></svg>
-          <span>Perfil</span>
-        </button>
-        <button class="nav-item" type="button" data-view-target="metodologia">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg>
-          <span>Metodologia</span>
-        </button>
-      </nav>
-
-      <div class="sidebar-context">
-        <span class="status-dot" aria-hidden="true"></span>
-        <div><strong>Base consolidada</strong><small>SINAN · 2015–2024</small></div>
-      </div>
-      <p class="sidebar-foot">Dados de residência da vítima<br>Atualização anual</p>
-    </aside>
-
-    <div class="page-shell">
-      <header class="command-bar">
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <div class="page-heading">
-          <span id="page-context">Painel de indicadores</span>
-          <h1 id="page-title">Visão geral</h1>
-        </div>
-        <div class="toolbar">
-          <label class="field" for="territory-select">
-            <span>Território</span>
-            <select id="territory-select">
-              <option value="brasil">Brasil</option>
-              <option value="santa_catarina" selected>Santa Catarina</option>
-              <option value="florianopolis">Florianópolis</option>
-            </select>
-          </label>
-          <div class="updated-block"><span>Dados até</span><strong>2024</strong></div>
-        </div>
-      </header>
-
-      <main class="content" id="main-content">
-        <section class="view active" id="visao-geral" data-view="visao-geral" aria-labelledby="overview-title">
-          <div class="view-intro">
-            <div><p class="overline">Resumo executivo</p><h2 id="overview-title">Violência notificada pela rede de saúde</h2></div>
-            <p>Leitura dos registros de violência interpessoal contra mulheres. Notificação não equivale ao total de ocorrências.</p>
-          </div>
-
-          <div class="metric-grid" aria-live="polite">
-            <article class="metric-card primary"><div class="metric-label">Notificações em 2024</div><strong id="kpi-total">—</strong><span id="kpi-variacao">Carregando série</span></article>
-            <article class="metric-card"><div class="metric-label">Taxa por 100 mil mulheres</div><strong id="kpi-taxa">—</strong><span id="kpi-populacao">População usada no cálculo</span></article>
-            <article class="metric-card"><div class="metric-label">Parceiro ou ex-parceiro</div><strong id="kpi-parceiro">—</strong><span id="kpi-percentual">— do total</span></article>
-            <article class="metric-card"><div class="metric-label">Ocorridas na residência</div><strong id="kpi-residencia">—</strong><span>Local informado na ficha</span></article>
-          </div>
-
-          <div class="dashboard-grid overview-grid">
-            <article class="panel span-8">
-              <header class="panel-head"><div><span class="panel-kicker">Série histórica</span><h3>Notificações por ano</h3></div><div class="legend"><span><i class="key total"></i>Total</span><span><i class="key partner"></i>Parceiro/ex</span></div></header>
-              <div id="series-chart" class="chart" role="img" aria-label="Evolução anual das notificações"></div>
-            </article>
-            <article class="panel span-4 insight-panel">
-              <header class="panel-head"><div><span class="panel-kicker">Leitura rápida</span><h3>O que o recorte mostra</h3></div></header>
-              <div class="insight-number" id="insight-share">—</div>
-              <p id="insight-copy">Carregando síntese do território selecionado.</p>
-              <div class="divider"></div>
-              <dl class="mini-stats"><div><dt>Início da série</dt><dd id="insight-first">—</dd></div><div><dt>Último ano</dt><dd id="insight-last">—</dd></div></dl>
-            </article>
-            <article class="panel span-7">
-              <header class="panel-head"><div><span class="panel-kicker">Óbitos por agressão</span><h3>Referência SIM · Santa Catarina</h3></div><span class="scope-tag">CID X85–Y09</span></header>
-              <div id="sim-bars" class="sim-bars" aria-label="Óbitos de mulheres por agressão em Santa Catarina"></div>
-              <p class="panel-note">O SIM registra mortes por agressão, não a classificação jurídico-policial de feminicídio.</p>
-            </article>
-            <article class="panel span-5 definition-panel">
-              <span class="panel-kicker">Importante</span>
-              <h3>Os indicadores não são somáveis</h3>
-              <p>SINAN, SIM e Sinesp observam etapas diferentes do fenômeno. O painel mantém cada fonte identificada para evitar comparações indevidas.</p>
-              <button class="text-link" type="button" data-view-target="metodologia">Entender as fontes <span aria-hidden="true">→</span></button>
-            </article>
-          </div>
-        </section>
-
-        <section class="view" id="evolucao" data-view="evolucao" aria-labelledby="evolution-title" hidden>
-          <div class="view-intro">
-            <div><p class="overline">Série 2015–2024</p><h2 id="evolution-title">Evolução das notificações</h2></div>
-            <p>Compare volume absoluto, vínculo com parceiro e taxa populacional no território selecionado.</p>
-          </div>
-          <article class="panel evolution-panel">
-            <header class="panel-head"><div><span class="panel-kicker" id="evolution-territory">Santa Catarina</span><h3>Total e parceiro/ex-parceiro</h3></div><div class="legend"><span><i class="key total"></i>Total</span><span><i class="key partner"></i>Parceiro/ex</span></div></header>
-            <div id="evolution-chart" class="chart chart-large" role="img" aria-label="Série histórica detalhada"></div>
-          </article>
-          <article class="panel table-panel">
-            <header class="panel-head"><div><span class="panel-kicker">Detalhamento anual</span><h3>Valores da série</h3></div><span class="scope-tag">Taxas por 100 mil</span></header>
-            <div class="table-wrap"><table><thead><tr><th>Ano</th><th>Notificações</th><th>Parceiro/ex</th><th>% parceiro</th><th>Taxa total</th><th>Taxa parceiro</th></tr></thead><tbody id="series-table"></tbody></table></div>
-          </article>
-        </section>
-
-        <section class="view" id="territorios" data-view="territorios" aria-labelledby="territories-title" hidden>
-          <div class="view-intro">
-            <div><p class="overline">Municípios de SC · 2024</p><h2 id="territories-title">Distribuição territorial</h2></div>
-            <p>Volume de notificações por município de residência. Use taxa e volume em conjunto para interpretar o território.</p>
-          </div>
-          <div class="metric-strip"><div><span>Municípios analisados</span><strong>295</strong></div><div><span>Com registro de parceiro/ex</span><strong id="municipal-count">—</strong></div><div><span>Florianópolis</span><strong>120</strong><small>registros de parceiro/ex</small></div></div>
-          <div class="dashboard-grid territory-grid">
-            <article class="panel span-5"><header class="panel-head"><div><span class="panel-kicker">Ranking</span><h3>Maiores volumes</h3></div></header><div id="ranking" class="ranking"></div></article>
-            <article class="panel span-7 table-panel">
-              <header class="panel-head table-toolbar"><div><span class="panel-kicker">Consulta municipal</span><h3>Indicadores por município</h3></div><label class="search-field"><span class="sr-only">Buscar município</span><input id="municipality-search" type="search" placeholder="Buscar município"></label></header>
-              <div class="table-wrap municipal-table-wrap"><table><thead><tr><th>Município</th><th>Notificações</th><th>Parceiro/ex</th><th>% parceiro</th><th>Taxa/100 mil</th></tr></thead><tbody id="municipal-table"></tbody></table></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="view" id="perfil" data-view="perfil" aria-labelledby="profile-title" hidden>
-          <div class="view-intro">
-            <div><p class="overline">Santa Catarina · 2024</p><h2 id="profile-title">Perfil das notificações</h2></div>
-            <p>Características informadas nas fichas do SINAN. Categorias de violência podem aparecer simultaneamente.</p>
-          </div>
-          <div class="dashboard-grid profile-grid">
-            <article class="panel span-6"><header class="panel-head"><div><span class="panel-kicker">Raça/cor declarada</span><h3>Distribuição dos registros</h3></div></header><div id="race-chart" class="bar-list"></div></article>
-            <article class="panel span-6"><header class="panel-head"><div><span class="panel-kicker">Tipos de violência</span><h3>Categorias registradas</h3></div></header><div id="type-chart" class="bar-list accent"></div><p class="panel-note">Uma mesma notificação pode registrar mais de um tipo de violência.</p></article>
-            <article class="panel span-12 context-card"><div><span class="panel-kicker">Como interpretar</span><h3>Registro é também acesso à rede</h3></div><p>Diferenças entre municípios podem refletir prevalência, capacidade de identificação, acesso ao serviço e qualidade do preenchimento. Um número menor não significa automaticamente menor violência.</p></article>
-          </div>
-        </section>
-
-        <section class="view" id="metodologia" data-view="metodologia" aria-labelledby="method-title" hidden>
-          <div class="view-intro">
-            <div><p class="overline">Transparência</p><h2 id="method-title">Fontes e critérios</h2></div>
-            <p>Definições essenciais para interpretar os números sem misturar registros de saúde, mortalidade e classificação policial.</p>
-          </div>
-          <div class="source-grid">
-            <article class="source-card"><span class="source-code">01</span><div><h3>SINAN</h3><strong>Notificações de violência</strong><p>Registros feitos pela rede de saúde. O painel exclui lesão autoprovocada e usa o município de residência.</p></div></article>
-            <article class="source-card"><span class="source-code">02</span><div><h3>SIM</h3><strong>Mortes por agressão</strong><p>Óbitos de mulheres com causa básica CID-10 X85–Y09. O sistema não identifica motivação de gênero.</p></div></article>
-            <article class="source-card muted-source"><span class="source-code">03</span><div><h3>Sinesp</h3><strong>Feminicídio jurídico-policial</strong><p>Classificação da segurança pública. A integração ao painel está em desenvolvimento.</p></div></article>
-            <article class="source-card"><span class="source-code">04</span><div><h3>População</h3><strong>Denominador feminino</strong><p>Estimativas do Ministério da Saúde/RIPSA para o cálculo de taxas por 100 mil mulheres.</p></div></article>
-          </div>
-          <article class="panel method-detail">
-            <header class="panel-head"><div><span class="panel-kicker">Critérios adotados</span><h3>Ficha técnica</h3></div></header>
-            <dl><div><dt>Período consolidado</dt><dd>2015 a 2024</dd></div><div><dt>Referência territorial</dt><dd>Município de residência da vítima</dd></div><div><dt>População de referência</dt><dd>Mulheres residentes, todas as idades</dd></div><div><dt>Unidade das taxas</dt><dd>Registros por 100 mil mulheres</dd></div><div><dt>Atualização da camada Gold</dt><dd id="updated">—</dd></div></dl>
-          </article>
-        </section>
-      </main>
+      <div class="header-meta"><span>SINAN</span><strong>2015 a 2024</strong></div>
     </div>
-  </div>
-  <div class="scrim" id="scrim" hidden></div>
-  <noscript>Este painel precisa de JavaScript para carregar os dados.</noscript>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="nav-inner">
+        <button class="nav-link active" data-view-target="comparar" type="button">Comparar</button>
+        <button class="nav-link" data-view-target="brasil" type="button">Brasil</button>
+        <button class="nav-link" data-view-target="santa-catarina" type="button">Santa Catarina</button>
+        <button class="nav-link" data-view-target="dados" type="button">Sobre os dados</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="view active" data-view="comparar" id="comparar" aria-labelledby="comparar-title">
+      <div class="compare-method content-width">
+        <div class="compare-method__head">
+          <div>
+            <p class="eyebrow">Antes de comparar</p>
+            <h1 id="comparar-title">Como ler estes dados</h1>
+          </div>
+          <p class="compare-method__lede">O painel acompanha notificações feitas pela rede de saúde. Elas ajudam a dimensionar o registro da violência, mas não representam todas as ocorrências.</p>
+        </div>
+        <div class="compare-method__principles" aria-label="Orientações para leitura dos dados">
+          <article>
+            <span>01</span>
+            <div><h2>O que é contado</h2><p>Notificações de violência interpessoal contra mulheres no SINAN, organizadas pelo município de residência.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><h2>Como comparar</h2><p>Use a taxa por 100 mil mulheres entre territórios. O número absoluto aparece junto para mostrar o volume registrado.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><h2>O que não significa</h2><p>Notificação não é denúncia policial nem feminicídio. Diferenças também refletem acesso à rede e qualidade do registro.</p></div>
+          </article>
+        </div>
+        <div class="compare-method__meta">
+          <p><strong>Fonte</strong> SINAN · Ministério da Saúde</p>
+          <p><strong>Período</strong> 2015 a 2024</p>
+          <button type="button" data-view-target="dados">Ver metodologia completa <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+
+      <div class="control-band">
+        <div class="content-width controls">
+          <label class="control-field" for="municipio-select"><span>Município de Santa Catarina</span><select id="municipio-select"></select></label>
+          <fieldset class="segmented" aria-label="Medida do gráfico comparativo">
+            <legend>Medida</legend>
+            <div>
+              <button type="button" class="active" data-metric="rate">Taxa</button>
+              <button type="button" data-metric="absolute">Absoluto</button>
+              <button type="button" data-metric="index">Índice 2015=100</button>
+            </div>
+          </fieldset>
+          <label class="check-control"><input type="checkbox" id="all-labels"> <span>Exibir todos os rótulos</span></label>
+        </div>
+      </div>
+
+      <div class="content-width analysis-stack">
+        <div class="territory-key" id="territory-key" aria-label="Territórios comparados"></div>
+        <article class="chart-block">
+          <header class="section-heading compact"><div><p class="section-index">01</p><h2 id="compare-chart-title">Taxa de notificações</h2></div><p id="compare-chart-note">Registros por 100 mil mulheres; o valor absoluto aparece junto ao dado.</p></header>
+          <div id="compare-chart" class="svg-chart compare-chart" role="img"></div>
+          <p class="interaction-note">Passe o cursor ou toque em um ano para ler os três territórios.</p>
+        </article>
+
+        <aside class="finding" aria-live="polite"><p class="finding-label">O que os dados mostram</p><p id="compare-finding">Carregando análise comparativa.</p></aside>
+
+        <article class="data-section">
+          <header class="section-heading"><div><p class="section-index">02</p><h2>Série completa</h2></div><p>Taxa e, entre parênteses, total de notificações.</p></header>
+          <div class="table-wrap"><table class="data-table"><thead id="compare-table-head"></thead><tbody id="compare-table-body"></tbody></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-view="brasil" id="brasil" aria-labelledby="brasil-title" hidden>
+      <div class="page-intro content-width">
+        <p class="eyebrow">Cenário nacional</p>
+        <h1 id="brasil-title">Brasil</h1>
+        <p class="dek">Como o registro de violência evoluiu no país e como as Unidades da Federação se distribuem no ano mais recente.</p>
+      </div>
+      <div class="content-width analysis-stack">
+        <div class="stat-line" id="brasil-stats"></div>
+        <article class="chart-block">
+          <header class="section-heading"><div><p class="section-index">01</p><h2>Evolução nacional</h2></div><p>Taxa por 100 mil mulheres, com o total absoluto em cada ano.</p></header>
+          <div id="brasil-chart" class="svg-chart" role="img"></div>
+        </article>
+        <article class="split-analysis">
+          <div>
+            <header class="section-heading"><div><p class="section-index">02</p><h2>Onde SC se posiciona</h2></div></header>
+            <p class="prose" id="brasil-position"></p>
+            <div id="uf-ranking" class="rank-list"></div>
+          </div>
+          <div>
+            <header class="section-heading"><div><p class="section-index">03</p><h2>Perfil dos registros</h2></div><p>Brasil, 2024.</p></header>
+            <div id="brasil-profile" class="profile-groups"></div>
+          </div>
+        </article>
+        <article class="data-section">
+          <header class="section-heading"><div><p class="section-index">04</p><h2>Unidades da Federação</h2></div><p>Ordenadas pela taxa de 2024.</p></header>
+          <div class="table-wrap"><table class="data-table"><thead><tr><th>Posição</th><th>UF</th><th>Taxa/100 mil</th><th>Notificações</th><th>Parceiro/ex</th></tr></thead><tbody id="uf-table"></tbody></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-view="santa-catarina" id="santa-catarina" aria-labelledby="sc-title" hidden>
+      <div class="page-intro content-width">
+        <p class="eyebrow">Cenário estadual</p>
+        <h1 id="sc-title">Santa Catarina</h1>
+        <p class="dek">A trajetória do estado em relação ao país e as diferenças de escala entre seus 295 municípios.</p>
+      </div>
+      <div class="content-width analysis-stack">
+        <div class="stat-line" id="sc-stats"></div>
+        <article class="chart-block">
+          <header class="section-heading"><div><p class="section-index">01</p><h2>Estado e país</h2></div><p>Taxas comparáveis; os rótulos preservam os totais absolutos.</p></header>
+          <div id="sc-chart" class="svg-chart" role="img"></div>
+        </article>
+        <article class="split-analysis wide-left">
+          <div>
+            <header class="section-heading"><div><p class="section-index">02</p><h2>Taxa e volume municipal</h2></div><p>Cada ponto é um município em 2024.</p></header>
+            <div id="municipality-scatter" class="svg-chart scatter-chart" role="img"></div>
+          </div>
+          <div>
+            <header class="section-heading"><div><p class="section-index">03</p><h2>Perfil em SC</h2></div><p>Registros de 2024.</p></header>
+            <div id="sc-profile" class="profile-groups"></div>
+          </div>
+        </article>
+        <article class="data-section">
+          <header class="section-heading"><div><p class="section-index">04</p><h2>Municípios</h2></div><label class="search-field"><span>Filtrar</span><input type="search" id="municipality-search" placeholder="Nome do município"></label></header>
+          <p class="table-caption">Ordenação inicial pela taxa. Municípios com poucos registros recebem sinalização de cautela estatística.</p>
+          <div class="table-wrap municipal-table"><table class="data-table"><thead><tr><th>Posição</th><th>Município</th><th>Taxa/100 mil</th><th>Notificações</th><th>Parceiro/ex</th><th>Leitura</th></tr></thead><tbody id="municipality-table"></tbody></table></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view" data-view="dados" id="dados" aria-labelledby="dados-title" hidden>
+      <div class="page-intro content-width">
+        <p class="eyebrow">Transparência</p>
+        <h1 id="dados-title">Sobre os dados</h1>
+        <p class="dek">O que cada número representa, como foi calculado e quais limites devem acompanhar a leitura.</p>
+      </div>
+      <div class="content-width method-layout">
+        <aside class="method-lead">
+          <p class="pull-quote">Notificação não é sinônimo de ocorrência, denúncia policial ou feminicídio.</p>
+          <p>O painel acompanha registros feitos na rede de saúde. Mudanças nos valores podem refletir a violência, o acesso aos serviços, a identificação dos casos e a qualidade do preenchimento.</p>
+          <dl class="method-summary">
+            <div><dt>Período</dt><dd>2015 a 2024</dd></div>
+            <div><dt>Território</dt><dd>Residência da vítima</dd></div>
+            <div><dt>Atualização</dt><dd id="data-updated">Não informada</dd></div>
+          </dl>
+        </aside>
+
+        <div class="method-detail">
+          <section class="method-section" aria-labelledby="fontes-title">
+            <header><p class="section-index">01</p><div><h2 id="fontes-title">Fontes e campos utilizados</h2><p>Os nomes abaixo são os campos originais lidos no tratamento.</p></div></header>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">SINAN</p><h3>Notificações de violência</h3><p>Arquivos nacionais VIOL do DataSUS. Uma linha corresponde a uma notificação.</p><a href="https://datasus.saude.gov.br/transferencia-de-arquivos/" target="_blank" rel="noopener">Consultar fonte oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>CS_SEXO = F</code> e <code>LES_AUTOP = 2</code>. Mantém mulheres e exclui lesões autoprovocadas.</dd></div>
+                <div><dt>Território e ano</dt><dd><code>ID_MN_RESI</code>, <code>SG_UF</code> e <code>NU_ANO</code>. O município é o de residência.</dd></div>
+                <div><dt>Parceiro ou ex</dt><dd><code>REL_CONJ</code>, <code>REL_EXCON</code>, <code>REL_NAMO</code> e <code>REL_EXNAM</code>. O valor 1 em qualquer campo identifica o vínculo.</dd></div>
+                <div><dt>Perfil</dt><dd><code>NU_IDADE_N</code>, <code>CS_RACA</code>, <code>VIOL_FISIC</code>, <code>VIOL_PSICO</code>, <code>VIOL_SEXU</code>, <code>VIOL_NEGLI</code>, <code>VIOL_FINAN</code> e <code>VIOL_TORT</code>.</dd></div>
+              </dl>
+            </article>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">SIM</p><h3>Óbitos de mulheres por agressão</h3><p>Registros definitivos de mortalidade. São uma referência separada e não classificam feminicídio.</p><a href="https://dadosabertos.saude.gov.br/dataset/sim" target="_blank" rel="noopener">Consultar fonte oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>SEXO = 2</code> e <code>CAUSABAS</code> entre X85 e X99 ou entre Y00 e Y09.</dd></div>
+                <div><dt>Território e ano</dt><dd><code>CODMUNRES</code> define a residência. O ano vem do arquivo anual e é conferido com <code>DTOBITO</code>.</dd></div>
+                <div><dt>Campos lidos</dt><dd><code>DTOBITO</code>, <code>SEXO</code>, <code>RACACOR</code>, <code>IDADE</code>, <code>CODMUNRES</code>, <code>CODMUNOCOR</code> e <code>CAUSABAS</code>.</dd></div>
+              </dl>
+            </article>
+
+            <article class="source-record">
+              <div class="source-record__title"><p class="source-tag">POPULAÇÃO</p><h3>População feminina residente</h3><p>Estimativas municipais por sexo do Ministério da Saúde e RIPSA. Formam o denominador das taxas.</p><a href="https://demas-dados-abertos.s3.amazonaws.com/csv/ripsa014dm.csv.zip" target="_blank" rel="noopener">Baixar arquivo oficial</a></div>
+              <dl>
+                <div><dt>Filtro</dt><dd><code>sg_categoria = PESSOA1</code> e <code>ds_item_categoria = Feminino</code>.</dd></div>
+                <div><dt>Campos usados</dt><dd><code>co_anomes</code>, <code>co_ibge</code>, <code>no_municipio</code>, <code>sg_uf</code> e <code>vl_indicador_calculado_mun</code>.</dd></div>
+                <div><dt>Validação</dt><dd>A soma dos 5.570 municípios é comparada a <code>vl_indicador_calculado_br</code> em cada ano.</dd></div>
+              </dl>
+            </article>
+          </section>
+
+          <section class="method-section calculations" aria-labelledby="calculos-title">
+            <header><p class="section-index">02</p><div><h2 id="calculos-title">Cálculos exibidos</h2><p>As fórmulas são aplicadas separadamente para Brasil, UF e município.</p></div></header>
+            <div class="formula-list">
+              <article><h3>Notificações</h3><p>Contagem das linhas do SINAN após os filtros de sexo e violência interpessoal.</p><code>número de registros filtrados</code></article>
+              <article><h3>Taxa de notificações</h3><p>Permite comparar territórios com populações diferentes.</p><code>(notificações ÷ população feminina) × 100.000</code></article>
+              <article><h3>Parceiro ou ex</h3><p>Conta registros com pelo menos um dos quatro campos de vínculo igual a 1.</p><code>REL_CONJ ou REL_EXCON ou REL_NAMO ou REL_EXNAM</code></article>
+              <article><h3>Percentual de parceiro ou ex</h3><p>Mostra a participação desses vínculos no total notificado.</p><code>(registros de parceiro ou ex ÷ notificações) × 100</code></article>
+              <article><h3>Índice 2015 = 100</h3><p>Compara a trajetória de cada território com seu próprio volume inicial.</p><code>(notificações do ano ÷ notificações de 2015) × 100</code></article>
+              <article><h3>Taxa de óbitos por agressão</h3><p>Usada somente na referência do SIM.</p><code>(óbitos femininos por agressão ÷ população feminina) × 100.000</code></article>
+            </div>
+          </section>
+
+          <section class="method-section reading-rules" aria-labelledby="leitura-title">
+            <header><p class="section-index">03</p><div><h2 id="leitura-title">Regras de leitura</h2></div></header>
+            <ul><li>O painel publicado usa bases de saúde e população. Ainda não inclui registros policiais ou dados do Sinesp.</li><li>O painel mantém o número absoluto junto da taxa para não esconder a escala real.</li><li>Municípios com menos de cinco notificações no ano recebem sinalização de cautela. O dado não é excluído.</li><li>Tipos de violência podem se sobrepor porque uma notificação pode registrar mais de um tipo.</li><li>Óbito por agressão no SIM não equivale automaticamente a feminicídio.</li></ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="content-width"><p>Panorama territorial de notificações de violência contra mulheres</p><p>Leitura responsável exige taxa e volume em conjunto.</p></div></footer>
+  <noscript>Este painel precisa de JavaScript para carregar e comparar os dados.</noscript>
   <script src="app.js" defer></script>
 </body>
 </html>
