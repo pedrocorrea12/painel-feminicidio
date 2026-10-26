@@ -23,7 +23,7 @@ BRONZE = ROOT / "data" / "bronze" / "sim"
 POPULACAO = ROOT / "data" / "silver" / "populacao_feminina_municipio.parquet"
 OUT = ROOT / "data" / "silver" / "sim_mulheres_agressao.parquet"
 DATASET_URL = "https://dadosabertos.saude.gov.br/dataset/sim"
-ANOS = range(2015, 2025)
+ANOS = range(2015, 2027)
 USECOLS = ["DTOBITO", "SEXO", "RACACOR", "IDADE", "CODMUNRES", "CODMUNOCOR", "CAUSABAS"]
 
 
@@ -68,7 +68,13 @@ def _mapa_municipios() -> tuple[dict[str, str], dict[str, str]]:
     return mapa_id, mapa_uf
 
 
-def _processar_zip(caminho: Path, ano: int, mapa_id: dict, mapa_uf: dict) -> pd.DataFrame:
+def _processar_zip(
+    caminho: Path,
+    ano: int,
+    mapa_id: dict,
+    mapa_uf: dict,
+    situacao_dado: str,
+) -> pd.DataFrame:
     partes = []
     with zipfile.ZipFile(caminho) as arquivo_zip:
         nomes = [nome for nome in arquivo_zip.namelist() if nome.lower().endswith(".csv")]
@@ -83,7 +89,11 @@ def _processar_zip(caminho: Path, ano: int, mapa_id: dict, mapa_uf: dict) -> pd.
         else:
             quantidade = len(next(csv.reader(io.StringIO(primeira_linha), delimiter=";")))
             # Em 2022 o CSV tem 87 campos; em 2023, 86 e não traz ESTABDESCR.
-            indices = [2, 8, 9, 7, 15, 19, 45] if quantidade == 87 else [2, 8, 9, 7, 15, 18, 44]
+            indices = (
+                [2, 8, 9, 7, 15, 19, 45]
+                if quantidade == 87
+                else [3, 8, 9, 10, 16, 19, 45]
+            )
             if quantidade not in (86, 87):
                 raise RuntimeError(f"CSV sem cabeçalho com {quantidade} campos em {caminho.name}")
             opcoes_cabecalho = {"header": None, "usecols": indices}
@@ -112,7 +122,7 @@ def _processar_zip(caminho: Path, ano: int, mapa_id: dict, mapa_uf: dict) -> pd.
                     parte["ano"] = ano
                     parte["id_municipio"] = cod6.map(mapa_id)
                     parte["sigla_uf"] = cod6.map(mapa_uf)
-                    parte["situacao_dado"] = "definitivo"
+                    parte["situacao_dado"] = situacao_dado
                     partes.append(parte)
     if not partes:
         return pd.DataFrame(columns=USECOLS + ["ano", "id_municipio", "sigla_uf", "situacao_dado"])
@@ -128,7 +138,23 @@ def main() -> None:
     for ano, url in urls.items():
         caminho = BRONZE / f"Mortalidade_Geral_{ano}_csv.zip"
         _baixar(url, caminho)
-        filtrado = _processar_zip(caminho, ano, mapa_id, mapa_uf)
+        situacao_dado = (
+            "definitivo"
+            if ano <= 2024
+            else "preliminar" if ano == 2025 else "previa"
+        )
+        filtrado = _processar_zip(
+            caminho,
+            ano,
+            mapa_id,
+            mapa_uf,
+            situacao_dado,
+        )
+        if filtrado.empty:
+            raise RuntimeError(
+                f"Nenhum óbito feminino por agressão encontrado em {ano}; "
+                "verifique o esquema do arquivo antes de continuar"
+            )
         print(f"[{ano}] {len(filtrado)} óbitos femininos por agressão")
         partes.append(filtrado)
 
@@ -137,7 +163,11 @@ def main() -> None:
     manifesto = {
         "fonte": DATASET_URL,
         "criterio": "SEXO=2; CAUSABAS X85-X99 ou Y00-Y09; CODMUNRES",
-        "situacao": "definitivo",
+        "situacao": {
+            "2015 a 2024": "definitivo",
+            "2025": "preliminar",
+            "2026": "previa",
+        },
         "recursos": [{"ano": ano, "url": url} for ano, url in urls.items()],
     }
     (BRONZE / "manifesto.json").write_text(

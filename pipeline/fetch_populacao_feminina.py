@@ -25,7 +25,7 @@ URL_MUNICIPIOS = "https://servicodados.ibge.gov.br/api/v1/localidades/municipios
 BRONZE = ROOT / "data" / "bronze" / "ibge" / "ripsa014dm.csv.zip"
 MUNICIPIOS_BRASIL = ROOT / "data" / "bronze" / "ibge" / "municipios_brasil.json"
 SILVER = ROOT / "data" / "silver" / "populacao_feminina_municipio.parquet"
-ANOS = set(range(2015, 2025))
+ANO_INICIAL = 2015
 
 
 def _baixar(url: str, destino: Path) -> None:
@@ -71,7 +71,7 @@ def extrair() -> pd.DataFrame:
             leitor = csv.DictReader(texto)
             for linha in leitor:
                 ano = int(linha["co_anomes"][:4])
-                if ano not in ANOS:
+                if ano < ANO_INICIAL:
                     continue
                 if linha["sg_categoria"] != "PESSOA1":
                     continue
@@ -97,9 +97,12 @@ def extrair() -> pd.DataFrame:
     dados = pd.DataFrame(registros).sort_values(["ano", "id_municipio"])
     dados = dados.reset_index(drop=True)
 
-    esperado_anos = sorted(ANOS)
-    if sorted(dados["ano"].unique().tolist()) != esperado_anos:
-        raise ValueError("Cobertura anual incompleta")
+    anos_encontrados = sorted(dados["ano"].unique().tolist())
+    esperado_anos = list(range(ANO_INICIAL, max(anos_encontrados) + 1))
+    if anos_encontrados != esperado_anos:
+        raise ValueError(
+            f"Cobertura anual incompleta: {anos_encontrados} != {esperado_anos}"
+        )
     if dados.duplicated(["ano", "id_municipio"]).any():
         raise ValueError("Ha duplicidade na chave ano + id_municipio")
     if not dados.groupby("ano")["id_municipio"].nunique().eq(5570).all():

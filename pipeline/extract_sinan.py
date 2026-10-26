@@ -31,6 +31,7 @@ pysus.disable_progress_bars()
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_DIR = ROOT / "data" / "bronze" / "sinan" / "cache_bruto"
 OUT_PARQUET = ROOT / "data" / "silver" / "sinan_viol_mulheres_interpessoal.parquet"
+OUT_PRELIMINAR = ROOT / "data" / "silver" / "sinan_viol_mulheres_interpessoal_2025_preliminar.parquet"
 
 COLUNAS_MANTIDAS = [
     "NU_ANO", "DT_NOTIFIC", "DT_OCOR",
@@ -71,6 +72,13 @@ async def _baixar_ano(client, sinan, ano: int) -> pd.DataFrame:
         f for f in contents
         if f.name.upper().startswith("VIOL") and f.year == ano
     ]
+    situacao = "preliminar" if ano >= 2025 else "definitivo"
+    pasta_esperada = "PRELIM" if situacao == "preliminar" else "FINAIS"
+    candidatos_situacao = [
+        f for f in candidatos if pasta_esperada in str(f.path).upper()
+    ]
+    if candidatos_situacao:
+        candidatos = candidatos_situacao
     if not candidatos:
         print(f"[{ano}] arquivo VIOL nao encontrado no FTP - pulando.")
         return pd.DataFrame()
@@ -99,6 +107,7 @@ def _filtrar_e_padronizar(df: pd.DataFrame, ano: int) -> pd.DataFrame:
 
     filtrado["id_municipio"] = filtrado["ID_MN_RESI"]
     filtrado["ano"] = ano
+    filtrado["situacao_dado"] = "preliminar" if ano >= 2025 else "definitivo"
     return filtrado
 
 
@@ -116,13 +125,17 @@ async def extrair_sinan_viol(anos: list) -> pd.DataFrame:
         )
         partes.append(df_filtrado)
 
-    resultado = pd.concat(partes, ignore_index=True)
+    resultado = pd.concat([parte for parte in partes if not parte.empty], ignore_index=True)
 
     OUT_PARQUET.parent.mkdir(parents=True, exist_ok=True)
-    resultado.to_parquet(OUT_PARQUET, index=False)
+    definitivo = resultado.loc[resultado["situacao_dado"].eq("definitivo")].copy()
+    preliminar = resultado.loc[resultado["situacao_dado"].eq("preliminar")].copy()
+    definitivo.to_parquet(OUT_PARQUET, index=False)
+    preliminar.to_parquet(OUT_PRELIMINAR, index=False)
 
     print()
-    print(f"Salvo em: {OUT_PARQUET}")
+    print(f"Definitivo salvo em: {OUT_PARQUET}")
+    print(f"Preliminar salvo em: {OUT_PRELIMINAR}")
     print(f"Total de linhas: {len(resultado)}")
     print(f"Municipios distintos (id_municipio): {resultado['id_municipio'].nunique()}")
     print(f"Anos cobertos: {sorted(resultado['ano'].unique().tolist())}")
@@ -133,5 +146,5 @@ async def extrair_sinan_viol(anos: list) -> pd.DataFrame:
 if __name__ == "__main__":
     # Alinhado ao periodo do SIM ja validado (2015-2024).
     # FTP tem VIOL desde 2009 - trocar o range abaixo se quiser historico maior.
-    ANOS = list(range(2015, 2025))
+    ANOS = list(range(2015, 2026))
     asyncio.run(extrair_sinan_viol(ANOS))
