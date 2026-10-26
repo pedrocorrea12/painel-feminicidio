@@ -6,8 +6,9 @@
   --muted: #5a615d;
   --line: #cbc5ba;
   --line-dark: #8d928d;
-  --accent: #8d1734;
+  --accent: #0f4c5c;
   --accent-ink: #ffffff;
+  --women: #8d1734;
   --notice-bg: #f7ead2;
   --notice-line: #9b6b16;
   --max: 1240px;
@@ -25,8 +26,9 @@
     --muted: #a6aca8;
     --line: #3a4240;
     --line-dark: #6a726f;
-    --accent: #e0829a;
-    --accent-ink: #1a1214;
+    --accent: #7cc0cc;
+    --accent-ink: #0d1a1d;
+    --women: #e0829a;
     --notice-bg: #2b2415;
     --notice-line: #c99a3c;
   }
@@ -40,8 +42,9 @@
   --muted: #a6aca8;
   --line: #3a4240;
   --line-dark: #6a726f;
-  --accent: #e0829a;
-  --accent-ink: #1a1214;
+  --accent: #7cc0cc;
+  --accent-ink: #0d1a1d;
+  --women: #e0829a;
   --notice-bg: #2b2415;
   --notice-line: #c99a3c;
 }
@@ -122,6 +125,9 @@ a { color: var(--accent); }
 
 .site-footer { padding-block: 2rem; border-top: 1px solid var(--line-dark); color: var(--muted); font-size: .82rem; }
 .site-footer p { margin: 0 0 .4rem; }
+
+/* Capítulo Mulheres mantém o vinho como cor própria */
+#mulheres { --accent: var(--women); }
 
 /* Celular */
 @media (max-width: 760px) {
