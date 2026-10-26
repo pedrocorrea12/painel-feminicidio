@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulação local do painel de violência contra mulheres.">
+  <title>Painel de violência contra a mulher | Simulação local</title>
+  <link rel="stylesheet" href="styles.css?v=20261015">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+  <header class="masthead">
+    <div class="rule"></div>
+    <div class="masthead-inner">
+      <div><p class="publication">Violência contra a mulher</p><p class="subtitle">Panorama territorial</p></div>
+      <div class="environment"><span class="environment-dot" aria-hidden="true"></span>Simulação local</div>
+    </div>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <div class="nav-inner">
+        <button class="nav-link active" type="button" data-view-target="monitoramento">Monitoramento</button>
+        <button class="nav-link" type="button" data-view-target="historico">Séries históricas</button>
+        <button class="nav-link" type="button" data-view-target="indicadores">Indicadores propostos</button>
+        <button class="nav-link" type="button" data-view-target="desigualdades">Raça e trabalho</button>
+        <button class="nav-link" type="button" data-view-target="municipios">Municípios</button>
+        <button class="nav-link" type="button" data-view-target="metodologia">Metodologia</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="view active" data-view="monitoramento" id="monitoramento">
+      <div class="intro page-width">
+        <div><p class="eyebrow">Monitoramento recente</p><h1>2025 e 2026</h1></div>
+        <p class="intro-text">Dados completos, preliminares e parciais permanecem separados da série consolidada.</p>
+      </div>
+      <div class="control-band" aria-label="Controles do monitoramento">
+        <div class="page-width controls">
+          <fieldset class="year-control"><legend>Ano observado</legend><div><button type="button" data-year="2025">2025</button><button type="button" class="active" data-year="2026">2026</button></div></fieldset>
+          <label class="municipality-control" for="municipality"><span>Município de Santa Catarina</span><select id="municipality" data-municipality-select></select></label>
+          <div class="display-rule"><span>Regra desta tela</span><strong>Números absolutos e períodos equivalentes</strong></div>
+        </div>
+      </div>
+      <section class="page-width status-section" aria-labelledby="status-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="status-title">Cobertura disponível</h2></div><p id="coverage-summary">Carregando situação das bases.</p></header>
+        <div class="coverage-grid" id="coverage-grid"></div>
+      </section>
+      <section class="comparison-section" aria-labelledby="comparison-title">
+        <div class="page-width">
+          <header class="section-title comparison-heading"><div><p class="section-number">02</p><h2 id="comparison-title">Brasil, Santa Catarina e município</h2></div><p>O valor atual é comparado apenas com o mesmo período do ano anterior.</p></header>
+          <div class="territory-heading" id="territory-heading" aria-hidden="true"></div>
+          <div class="indicator-list" id="indicator-list" aria-live="polite"></div>
+        </div>
+      </section>
+      <section class="page-width reading-section" aria-labelledby="reading-title">
+        <header class="section-title"><div><p class="section-number">03</p><h2 id="reading-title">Leitura do período</h2></div><p>Descrição dos movimentos observados, sem atribuir causa.</p></header>
+        <div class="reading-grid" id="reading-grid"></div>
+      </section>
+    </section>
+
+    <section class="view" data-view="historico" id="historico" hidden>
+      <div class="intro page-width">
+        <div><p class="eyebrow">Série consolidada</p><h1>2019 a 2024</h1></div>
+        <p class="intro-text">A mesma medida para Brasil, Santa Catarina e o município selecionado. Taxa para comparar e número absoluto para dimensionar.</p>
+      </div>
+      <div class="control-band" aria-label="Controles da série histórica">
+        <div class="page-width history-controls">
+          <label class="municipality-control" for="history-municipality"><span>Município de Santa Catarina</span><select id="history-municipality" data-municipality-select></select></label>
+          <fieldset class="metric-control"><legend>Indicador</legend><div><button type="button" class="active" data-history-metric="sinan">Notificações</button><button type="button" data-history-metric="sim">Óbitos por agressão</button><button type="button" data-history-metric="sinesp">Feminicídios</button></div></fieldset>
+        </div>
+      </div>
+      <section class="page-width chart-section" aria-labelledby="history-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="history-title">Evolução territorial</h2></div><p id="history-note">Taxa por 100 mil mulheres, com o número absoluto em cada ponto.</p></header>
+        <div class="legend" id="history-legend"></div>
+        <div class="chart-shell" id="history-chart" role="img"></div>
+        <div class="table-wrap"><table class="data-table"><thead id="history-table-head"></thead><tbody id="history-table-body"></tbody></table></div>
+      </section>
+      <section class="page-width note-grid" aria-label="Regras da série histórica">
+        <article><span>Comparação</span><h3>Taxa por 100 mil mulheres</h3><p>Permite comparar territórios com populações diferentes.</p></article>
+        <article><span>Escala</span><h3>Número absoluto junto da taxa</h3><p>Evita que uma taxa municipal alta esconda um volume pequeno.</p></article>
+        <article><span>Fechamento</span><h3>Somente anos consolidados</h3><p>Os dados recentes ficam no monitoramento e não prolongam artificialmente a série.</p></article>
+      </section>
+    </section>
+
+    <section class="view" data-view="indicadores" id="indicadores" hidden>
+      <div class="intro page-width">
+        <div><p class="eyebrow">Saúde e segurança pública</p><h1>Indicadores propostos</h1></div>
+        <p class="intro-text">Razão de classificação, tentativas, mortes classificadas e sazonalidade.</p>
+      </div>
+      <section class="page-width chart-section" aria-labelledby="ratio-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="ratio-title">Razão entre feminicídios e mortes por agressão</h2></div><p>Feminicídios do Sinesp divididos pelos óbitos de mulheres por agressão do SIM.</p></header>
+        <div class="ratio-summary" id="ratio-summary"></div>
+        <div class="chart-shell" id="ratio-chart" role="img"></div>
+        <p class="method-warning">Indicador contextual de classificação. O SIM usa residência da vítima e o Sinesp usa local do fato. A razão não representa a parcela exata de um mesmo conjunto de casos.</p>
+      </section>
+      <section class="dark-section" aria-labelledby="attempt-title">
+        <div class="page-width">
+          <header class="section-title"><div><p class="section-number">02</p><h2 id="attempt-title">Tentativas e feminicídios consumados</h2></div><fieldset class="territory-toggle"><legend>Território</legend><div><button class="active" type="button" data-indicator-territory="BR">Brasil</button><button type="button" data-indicator-territory="SC">Santa Catarina</button></div></fieldset></header>
+          <div class="chart-shell dark-chart" id="attempt-chart" role="img"></div>
+          <p class="method-warning light">Tentativa registrada não equivale automaticamente a morte evitada. O indicador mede registros classificados pela segurança pública.</p>
+        </div>
+      </section>
+      <section class="page-width chart-section" aria-labelledby="homicide-title">
+        <header class="section-title"><div><p class="section-number">03</p><h2 id="homicide-title">Homicídio doloso e feminicídio</h2></div><p>Mulheres vítimas nas duas classificações policiais, mantendo os componentes visíveis.</p></header>
+        <div class="chart-shell" id="homicide-chart" role="img"></div>
+        <p class="method-warning">Na metodologia do Sinesp, homicídio doloso exclui feminicídio. A soma é possível, mas não inclui todas as formas de morte violenta.</p>
+      </section>
+      <section class="page-width chart-section" aria-labelledby="season-title">
+        <header class="section-title"><div><p class="section-number">04</p><h2 id="season-title">Sazonalidade mensal</h2></div><p>Índice médio de feminicídios entre 2019 e 2025. A média anual corresponde a 100.</p></header>
+        <div class="season-grid" id="season-chart"></div>
+      </section>
+    </section>
+
+    <section class="view" data-view="desigualdades" id="desigualdades" hidden>
+      <div class="intro page-width">
+        <div><p class="eyebrow">Desigualdades</p><h1>Raça e trabalho</h1></div>
+        <p class="intro-text">Mortalidade, notificações e emprego formal reunidos em uma leitura territorial, sem confundir as fontes.</p>
+      </div>
+      <div class="control-band" aria-label="Controles da visão de desigualdades">
+        <div class="page-width inequality-controls">
+          <fieldset class="territory-toggle"><legend>Território dos gráficos</legend><div><button class="active" type="button" data-inequality-territory="BR">Brasil</button><button type="button" data-inequality-territory="SC">Santa Catarina</button></div></fieldset>
+          <label class="municipality-control" for="inequality-municipality"><span>Município de Santa Catarina</span><select id="inequality-municipality" data-municipality-select></select></label>
+          <div class="display-rule"><span>Regra desta tela</span><strong>Raça informada e ausência de preenchimento visíveis</strong></div>
+        </div>
+      </div>
+      <section class="page-width chart-section" aria-labelledby="integrated-profile-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="integrated-profile-title">Onde as desigualdades se encontram</h2></div><p>Quatro medidas colocadas sobre a mesma referência, sem misturar os registros das fontes.</p></header>
+        <div class="relation-layout">
+          <div class="relation-profile" id="relation-profile"></div>
+          <aside class="relation-reading" id="relation-reading"></aside>
+        </div>
+        <p class="method-warning">A referência 1,0 muda de sentido conforme o indicador. Na violência, acima de 1 indica maior presença relativa. No emprego e no salário, abaixo de 1 indica distância em relação à referência.</p>
+      </section>
+      <section class="page-width chart-section" aria-labelledby="sim-race-title">
+        <header class="section-title"><div><p class="section-number">02</p><h2 id="sim-race-title">Mortes por agressão segundo raça</h2></div><p>Taxa anual por 100 mil mulheres. O denominador é fixo no Censo 2022.</p></header>
+        <div class="insight-summary" id="sim-race-summary"></div>
+        <div class="chart-shell" id="sim-race-chart" role="img"></div>
+        <p class="method-warning">Negra corresponde a preta mais parda. Os valores mostram mortes de mulheres por agressão no SIM, não feminicídios classificados pela polícia.</p>
+      </section>
+      <section class="dark-section" aria-labelledby="sinan-race-title">
+        <div class="page-width">
+          <header class="section-title"><div><p class="section-number">03</p><h2 id="sinan-race-title">Notificações e composição da população</h2></div><p>Índice de representação em 2024. Valor 1 indica participação igual à população feminina do Censo.</p></header>
+          <div class="insight-summary dark-cards" id="sinan-race-summary"></div>
+          <p class="method-warning light">O SINAN conta notificações. Uma mesma pessoa pode aparecer mais de uma vez. Este índice não mede risco individual.</p>
+        </div>
+      </section>
+      <section class="page-width chart-section" aria-labelledby="rais-title">
+        <header class="section-title"><div><p class="section-number">04</p><h2 id="rais-title">Mulheres no emprego formal</h2></div><p>Participação feminina e razão salarial na RAIS, de 2019 a 2025.</p></header>
+        <div class="split-charts">
+          <article><h3>Participação feminina</h3><div class="chart-shell compact-chart" id="rais-participation-chart" role="img"></div></article>
+          <article><h3>Salário médio das mulheres em relação ao dos homens</h3><div class="chart-shell compact-chart" id="rais-salary-chart" role="img"></div></article>
+        </div>
+        <p class="method-warning">A RAIS cobre vínculos formais. Raça ou cor é informada pelo empregador. A análise racial usa apenas 2024 e 2025.</p>
+      </section>
+      <section class="dark-section" aria-labelledby="employment-violence-title">
+        <div class="page-width">
+          <header class="section-title"><div><p class="section-number">05</p><h2 id="employment-violence-title">Emprego e feminicídios no tempo</h2></div><p>Desligamentos sem justa causa de mulheres e feminicídios, acumulados em 12 meses e convertidos em índice médio 100.</p></header>
+          <div class="legend relation-legend" id="employment-violence-legend"></div>
+          <div class="chart-shell dark-chart" id="employment-violence-chart" role="img"></div>
+          <div class="relation-note" id="employment-violence-note"></div>
+          <p class="method-warning light">As linhas permitem observar coincidências e diferenças de trajetória. Elas não demonstram que perda de emprego causa violência. A RAIS cobre apenas vínculos formais e o Sinesp registra ocorrências policiais.</p>
+        </div>
+      </section>
+      <section class="page-width chart-section" aria-labelledby="territorial-race-title">
+        <header class="section-title"><div><p class="section-number">06</p><h2 id="territorial-race-title">Brasil, Santa Catarina e município</h2></div><p id="territorial-race-note">Resumo das medidas com dado suficiente.</p></header>
+        <div class="stat-grid inequality-stats" id="inequality-stats"></div>
+      </section>
+    </section>
+
+    <section class="view" data-view="municipios" id="municipios" hidden>
+      <div class="intro page-width">
+        <div><p class="eyebrow">Santa Catarina</p><h1>Municípios</h1></div>
+        <p class="intro-text">O período de seis anos reduz a instabilidade das taxas e preserva o volume absoluto.</p>
+      </div>
+      <div class="control-band"><div class="page-width municipality-single-control"><label class="municipality-control" for="municipality-detail"><span>Município de Santa Catarina</span><select id="municipality-detail" data-municipality-select></select></label></div></div>
+      <section class="page-width municipality-summary" aria-labelledby="municipality-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="municipality-title">Resumo municipal</h2></div><p>Feminicídios pelo local do fato, de 2019 a 2024.</p></header>
+        <div class="stat-grid" id="municipality-stats"></div>
+        <div class="municipality-layout">
+          <div><h3 class="subheading">Série anual do município</h3><div class="table-wrap"><table class="data-table"><thead><tr><th>Ano</th><th>Notificações SINAN</th><th>Óbitos SIM</th><th>Feminicídios Sinesp</th></tr></thead><tbody id="municipality-history"></tbody></table></div></div>
+          <div><h3 class="subheading">Maiores taxas plurianuais</h3><div class="rank-list" id="municipality-ranking"></div></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="view" data-view="metodologia" id="metodologia" hidden>
+      <div class="intro page-width">
+        <div><p class="eyebrow">Metodologia</p><h1>Como cada indicador é construído</h1></div>
+        <p class="intro-text">Fonte, período, território e cálculo precisam permanecer junto da leitura.</p>
+      </div>
+      <section class="page-width method-catalog" aria-labelledby="catalog-title">
+        <header class="section-title"><div><p class="section-number">01</p><h2 id="catalog-title">Fontes e usos</h2></div></header>
+        <div class="source-catalog">
+          <article><p class="source-name">SINAN</p><h3>Notificações de violência interpessoal</h3><dl><div><dt>Território</dt><dd>Residência da vítima</dd></div><div><dt>Série consolidada</dt><dd>2015 a 2024</dd></div><div><dt>Atualização recente</dt><dd>2025 preliminar</dd></div><div><dt>Uso</dt><dd>Volume e taxa de notificações</dd></div></dl></article>
+          <article><p class="source-name">SIM</p><h3>Óbitos de mulheres por agressão</h3><dl><div><dt>Território</dt><dd>Residência da vítima</dd></div><div><dt>Série consolidada</dt><dd>2015 a 2024</dd></div><div><dt>Atualização recente</dt><dd>2025 preliminar e 2026 prévia</dd></div><div><dt>Uso</dt><dd>Volume e taxa de mortalidade</dd></div></dl></article>
+          <article><p class="source-name">Sinesp VDE</p><h3>Registros da segurança pública</h3><dl><div><dt>Território</dt><dd>Local do fato</dd></div><div><dt>Série completa</dt><dd>2019 a 2025</dd></div><div><dt>Atualização recente</dt><dd>2026 parcial</dd></div><div><dt>Uso</dt><dd>Feminicídio, tentativa e homicídio doloso</dd></div></dl></article>
+          <article><p class="source-name">População</p><h3>População feminina residente</h3><dl><div><dt>Território</dt><dd>Residência</dd></div><div><dt>Período</dt><dd>2015 a 2024</dd></div><div><dt>Uso</dt><dd>Denominador das taxas</dd></div><div><dt>Regra</dt><dd>Sem taxa recente até definir projeção</dd></div></dl></article>
+          <article><p class="source-name">Censo 2022</p><h3>Mulheres por cor ou raça</h3><dl><div><dt>Território</dt><dd>Brasil, UFs e municípios de Santa Catarina</dd></div><div><dt>Campo</dt><dd>Cor ou raça e sexo</dd></div><div><dt>Uso</dt><dd>Denominador fixo das taxas raciais</dd></div><div><dt>Regra</dt><dd>Negra corresponde a preta mais parda</dd></div></dl></article>
+          <article><p class="source-name">RAIS</p><h3>Vínculos formais de trabalho</h3><dl><div><dt>Território</dt><dd>Local do estabelecimento</dd></div><div><dt>Série por sexo</dt><dd>2019 a 2025</dd></div><div><dt>Recorte racial</dt><dd>2024 e 2025</dd></div><div><dt>Uso</dt><dd>Participação e razão salarial</dd></div></dl></article>
+        </div>
+      </section>
+      <section class="page-width method-catalog" aria-labelledby="rules-title">
+        <header class="section-title"><div><p class="section-number">02</p><h2 id="rules-title">Regras de leitura</h2></div></header>
+        <ol class="reading-rules">
+          <li><span>01</span><p>Notificação, óbito por agressão e feminicídio são indicadores diferentes. Eles não devem ser somados.</p></li>
+          <li><span>02</span><p>Dados parciais são comparados ao mesmo período do ano anterior.</p></li>
+          <li><span>03</span><p>Zero em base parcial significa nenhum registro localizado até a atualização.</p></li>
+          <li><span>04</span><p>Razões entre SIM e Sinesp são contextuais porque usam bases territoriais diferentes.</p></li>
+          <li><span>05</span><p>Taxas municipais plurianuais só recebem posição quando há pelo menos cinco vítimas no período.</p></li>
+          <li><span>06</span><p>Taxas por raça usam a população feminina do Censo 2022. A fatia sem raça informada permanece ao lado do resultado.</p></li>
+          <li><span>07</span><p>A RAIS mede vínculos formais no local do estabelecimento. Não representa toda a população ocupada nem a residência da trabalhadora.</p></li>
+        </ol>
+      </section>
+    </section>
+  </main>
+
+  <footer class="page-width footer"><p>Protótipo local. Nenhuma alteração foi publicada.</p><p>Fontes: SINAN, SIM, Sinesp VDE, Censo 2022, RAIS e população feminina.</p></footer>
+  <script src="app.js?v=20261015c"></script>
+</body>
+</html>
