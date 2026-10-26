@@ -223,7 +223,10 @@ def main() -> None:
     site = base.loc[base.sexo.isin(SEXOS_SITE)]
 
     if DADOS.exists():
-        shutil.rmtree(DADOS)
+        for item in DADOS.iterdir():
+            if item.name == "malha_sc.json":
+                continue
+            shutil.rmtree(item) if item.is_dir() else item.unlink()
 
     nacional = site.loc[~site.nivel_territorial.eq("municipio")]
     escrever(DADOS / "nacional.json", linhas(nacional, COLUNAS_SITE_NACIONAL))

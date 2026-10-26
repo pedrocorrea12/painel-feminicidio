@@ -417,6 +417,10 @@ def validar_dados_site(root: Path) -> None:
     for indicador in manifesto["indicadores"]:
         assert indicador["municipal"] == ("arquivo_mapa" in indicador)
 
+    malha = json.loads((dados / "malha_sc.json").read_text(encoding="utf-8"))
+    ids_malha = {item["id"] for item in malha["features"]}
+    assert ids_malha == {m["id"] for m in manifesto["municipios"]}, "malha não casa com municípios"
+
     gold = pd.read_csv(
         root / "data" / "gold" / "atlas" / "sinan_violencia_territorio_ano.csv",
         dtype={"id_territorio": "string"},
