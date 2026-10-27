@@ -346,8 +346,8 @@ def construir_gold_territorio(sim: pd.DataFrame, mapa_nome: dict[str, str]) -> p
 
     contagens = contagens_territoriais(sim, mapa_nome)
     resultado = grade.merge(
-        contagens,
-        on=["ano", "nivel_territorial", "id_territorio", "territorio", "grupo_causa", "sexo"],
+        contagens.drop(columns="territorio"),
+        on=["ano", "nivel_territorial", "id_territorio", "grupo_causa", "sexo"],
         how="left",
         validate="one_to_one",
     )

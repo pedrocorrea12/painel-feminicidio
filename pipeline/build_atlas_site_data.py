@@ -63,6 +63,26 @@ COLUNAS_SITE_NACIONAL = [
 ]
 
 
+RESSALVAS = {
+    "sim_agressao": "Óbitos por agressão (CID-10 X85 a Y09), pela residência da vítima. Não equivale a feminicídio nem a homicídio doloso policial. Taxas somente até 2024.",
+    "sim_suicidio": "Óbitos por lesão autoprovocada (CID-10 X60 a X84), pela residência da vítima. Taxas somente até 2024.",
+    "sim_acidente_transporte": "Óbitos por acidentes de transporte (CID-10 V01 a V99), pela residência da vítima. Taxas somente até 2024.",
+    "sinesp_estupro": "Registro policial pelo local do fato. Santa Catarina tem quebra de classificação entre 2019 e 2020; avalie junto de estupro de vulnerável. Sem detalhe municipal.",
+    "sinesp_estupro_de_vulneravel": "Registro policial pelo local do fato. Use junto de estupro: há quebra de classificação em Santa Catarina entre 2019 e 2020. Sem detalhe municipal.",
+    "sinesp_violencia_sexual_policial_soma_das_classificacoes": "Soma de estupro e estupro de vulnerável. Não elimina quebras de classificação entre UFs e anos; Santa Catarina tem quebra entre 2019 e 2020. Sem detalhe municipal.",
+    "sinesp_pessoa_desaparecida": "Registro pelo local do fato, com critérios informados pelos estados. Sem detalhe municipal.",
+    "sinesp_pessoa_localizada": "Registro pelo local do fato, com critérios informados pelos estados. Sem detalhe municipal.",
+}
+RESSALVA_SINAN = "Conta notificações, não pessoas; os tipos de violência podem coexistir no mesmo registro e não devem ser somados."
+RESSALVA_SINESP = "Registro policial pelo local do fato, com critérios informados pelos estados."
+
+
+def ressalva(identificador: str) -> str:
+    if identificador in RESSALVAS:
+        return RESSALVAS[identificador]
+    return RESSALVA_SINAN if identificador.startswith("sinan_") else RESSALVA_SINESP
+
+
 def slug(texto: str) -> str:
     base = unicodedata.normalize("NFKD", texto).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "_", base.lower()).strip("_")
@@ -134,6 +154,9 @@ def carregar() -> tuple[pd.DataFrame, list[dict]]:
             "municipal": identificador in municipais, "sexo": True,
         })
     partes.append(sinesp.assign(fonte="Sinesp VDE"))
+
+    for indicador in indicadores:
+        indicador["ressalva"] = ressalva(indicador["id"])
 
     base = pd.concat(partes, ignore_index=True)
     base["sexo"] = padronizar_sexo(base.sexo)

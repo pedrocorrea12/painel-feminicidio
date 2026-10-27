@@ -396,11 +396,37 @@ def main() -> None:
     conexao.close()
     assert divergencias == 0
 
+    validar_reconciliacao_municipal(ROOT)
     validar_dados_site(ROOT)
 
     print(
         "Projeto validado: SINAN, SIM, Sinesp, população, raça, RAIS, atlas, Gold, análises e dimensões OK."
     )
+
+
+def validar_reconciliacao_municipal(root: Path) -> None:
+    """A soma dos 295 municípios de SC deve igualar o total estadual."""
+    fontes = [
+        ("sim_mortalidade_territorio_ano", "grupo_causa", "obitos"),
+        ("sinan_violencia_territorio_ano", "indicador", "notificacoes"),
+        ("sinesp_prioridade_territorio_ano", "indicador", "valor_absoluto"),
+    ]
+    for arquivo, indicador, valor in fontes:
+        tabela = pd.read_csv(
+            root / "data" / "gold" / "atlas" / f"{arquivo}.csv",
+            dtype={"id_territorio": "string"},
+            encoding="utf-8-sig",
+            low_memory=False,
+        )
+        tabela = tabela.loc[tabela.sexo.isin(["total", "feminino", "masculino"])]
+        chaves = [indicador, "ano", "sexo"]
+        municipios = tabela.loc[tabela.nivel_territorial.eq("municipio")].groupby(chaves)[valor].sum()
+        estado = tabela.loc[
+            tabela.nivel_territorial.eq("uf") & tabela.id_territorio.eq("SC")
+        ].groupby(chaves)[valor].sum()
+        junto = pd.concat([municipios.rename("municipios"), estado.rename("estado")], axis=1).dropna()
+        divergentes = junto.loc[junto.municipios != junto.estado]
+        assert divergentes.empty, f"{arquivo}: municípios não fecham com SC: {divergentes.head()}"
 
 
 def validar_dados_site(root: Path) -> None:
