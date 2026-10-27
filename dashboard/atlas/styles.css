@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --paper: #f4f1eb;
   --paper-deep: #e9e4da;
   --surface: #fffefa;
@@ -9,6 +10,9 @@
   --accent: #0f4c5c;
   --accent-ink: #ffffff;
   --women: #8d1734;
+  --serie-a: #0f4c5c;
+  --serie-b: #a5691a;
+  --serie-c: #5f6663;
   --notice-bg: #f7ead2;
   --notice-line: #9b6b16;
   --max: 1240px;
@@ -19,6 +23,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema="claro"]) {
+    color-scheme: dark;
     --paper: #161a19;
     --paper-deep: #202625;
     --surface: #1d2322;
@@ -29,12 +34,16 @@
     --accent: #7cc0cc;
     --accent-ink: #0d1a1d;
     --women: #e0829a;
+    --serie-a: #7cc0cc;
+    --serie-b: #e0b05a;
+    --serie-c: #a8afac;
     --notice-bg: #2b2415;
     --notice-line: #c99a3c;
   }
 }
 
 :root[data-tema="escuro"] {
+  color-scheme: dark;
   --paper: #161a19;
   --paper-deep: #202625;
   --surface: #1d2322;
@@ -45,6 +54,9 @@
   --accent: #7cc0cc;
   --accent-ink: #0d1a1d;
   --women: #e0829a;
+  --serie-a: #7cc0cc;
+  --serie-b: #e0b05a;
+  --serie-c: #a8afac;
   --notice-bg: #2b2415;
   --notice-line: #c99a3c;
 }
@@ -52,7 +64,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; overflow-x: clip; }
 body { margin: 0; overflow-x: clip; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; }
-button, input { font: inherit; color: inherit; }
+button, input, select { font: inherit; color: inherit; }
 a { color: var(--accent); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
@@ -125,6 +137,71 @@ a { color: var(--accent); }
 
 .site-footer { padding-block: 2rem; border-top: 1px solid var(--line-dark); color: var(--muted); font-size: .82rem; }
 .site-footer p { margin: 0 0 .4rem; }
+
+/* Controles */
+.filter-row { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem 1.2rem; margin: 0 0 1.2rem; }
+.filter-label { color: var(--muted); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; align-self: center; }
+.segmented { display: inline-flex; border: 1px solid var(--line-dark); border-radius: 6px; overflow: hidden; background: var(--surface); }
+.segmented button { padding: .45rem .8rem; border: 0; border-right: 1px solid var(--line); background: none; cursor: pointer; font-size: .86rem; }
+.segmented button:last-child { border-right: 0; }
+.segmented button:hover { background: var(--paper-deep); }
+.segmented button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 650; }
+.select-field { display: grid; gap: .2rem; font-size: .72rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
+.select-field select { max-width: 100%; min-width: 15rem; padding: .5rem .6rem; border: 1px solid var(--line-dark); border-radius: 6px; background: var(--surface); font-size: .9rem; letter-spacing: 0; text-transform: none; }
+
+/* Cartões */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.card { display: flex; flex-direction: column; gap: .15rem; padding: 1rem 1.1rem 1.1rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); text-align: left; cursor: pointer; min-height: 14rem; }
+.card:hover { border-color: var(--accent); }
+.card-source { margin: 0; color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.card-title { margin: .1rem 0 .5rem; font-family: var(--serif); font-weight: 400; font-size: 1.25rem; line-height: 1.15; }
+.card-value { margin: 0; font-family: var(--serif); font-size: 2.4rem; line-height: 1; letter-spacing: -.03em; }
+.card-year { margin: 0; color: var(--muted); font-size: .8rem; }
+.card-rate { margin: .35rem 0 0; font-weight: 650; font-size: .95rem; }
+.card-var { margin: 0; color: var(--muted); font-size: .8rem; }
+.card-flag { margin: .3rem 0 0; padding: .25rem .5rem; border-left: 3px solid var(--notice-line); background: var(--notice-bg); font-size: .75rem; }
+.card-empty { color: var(--muted); }
+.spark { width: 100%; height: 2.2rem; margin-top: auto; padding-top: .5rem; }
+.spark-line { stroke: var(--serie-a); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.spark-dot { fill: var(--serie-a); }
+
+/* Gráfico */
+.chart-title { margin: 1rem 0 .5rem; font-family: var(--serif); font-weight: 400; font-size: 1.3rem; }
+.chart-wrap { min-height: 8rem; }
+.chart-box { position: relative; }
+.chart { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .tick { fill: var(--muted); font-size: 12px; font-family: var(--sans); }
+.chart .rotulo { font-size: 13px; font-weight: 650; font-family: var(--sans); }
+.chart .serie { stroke-width: 2.6; stroke-linecap: round; }
+.chart .tracejado { stroke-dasharray: 6 5; }
+.chart .ponto { stroke-width: 2; }
+.chart .ponto.oco { fill: var(--paper) !important; }
+.chart .guia { stroke: var(--line-dark); stroke-dasharray: 3 3; }
+.chart .s-a { stroke: var(--serie-a); fill: var(--serie-a); }
+.chart .s-b { stroke: var(--serie-b); fill: var(--serie-b); }
+.chart .s-c { stroke: var(--serie-c); fill: var(--serie-c); }
+.chart text.rotulo { stroke: none; }
+.chart-tip { position: absolute; top: .5rem; z-index: 2; max-width: 22rem; padding: .6rem .8rem; border: 1px solid var(--line-dark); border-radius: 6px; background: var(--surface); box-shadow: 0 4px 16px rgba(0, 0, 0, .15); font-size: .82rem; pointer-events: none; }
+.chart-tip[hidden] { display: none; }
+.tip-linha { margin-top: .2rem; }
+.tip-linha.s-a { color: var(--serie-a); }
+.tip-linha.s-b { color: var(--serie-b); }
+.tip-linha.s-c { color: var(--serie-c); }
+.chart-empty { padding: 1.2rem; border: 1px dashed var(--line-dark); border-radius: 8px; color: var(--muted); }
+.chart-notes { margin: .8rem 0; padding-left: 1.1rem; color: var(--muted); font-size: .84rem; }
+.chart-notes li { margin-bottom: .3rem; }
+.table-details summary { cursor: pointer; font-weight: 650; padding: .4rem 0; }
+.table-scroll { overflow-x: auto; }
+.data-table { border-collapse: collapse; font-size: .82rem; min-width: 100%; }
+.data-table th, .data-table td { padding: .3rem .6rem; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+.data-table thead th { position: sticky; top: 0; background: var(--paper); }
+.data-table tbody th { text-align: left; }
+
+@media (max-width: 760px) {
+  .select-field, .select-field select { width: 100%; min-width: 0; }
+  .card { min-height: 0; }
+}
 
 /* Capítulo Mulheres mantém o vinho como cor própria */
 #mulheres { --accent: var(--women); }

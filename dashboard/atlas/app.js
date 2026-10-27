@@ -1,3 +1,5 @@
+import { iniciarSecoes } from "./secoes.js";
+
 // Esqueleto do atlas: estado na URL, seletor de território, tema e navegação.
 // As seções de conteúdo escutam o evento "atlas:estado" (document) e leem
 // o estado por obterEstado(). Nenhum gráfico é desenhado nesta etapa.
@@ -15,7 +17,8 @@ const UFS = {
 const SEXOS = { total: "Todos", feminino: "Feminino", masculino: "Masculino" };
 const ANO_MIN = 2015;
 const ANO_MAX = 2026;
-const PADRAO = { t: "SC", i: "sim_agressao", a: "2024", s: "total" };
+const MEDIDAS = ["taxa", "absoluto"];
+const PADRAO = { t: "SC", i: "sim_agressao", a: "2024", s: "total", m: "taxa" };
 
 let manifesto = null;
 let territorios = [];
@@ -48,12 +51,13 @@ function validar(bruto) {
   const ano = Number(bruto.a);
   if (Number.isInteger(ano) && ano >= ANO_MIN && ano <= ANO_MAX) saida.a = String(ano);
   if (bruto.s in SEXOS) saida.s = bruto.s;
+  if (MEDIDAS.includes(bruto.m)) saida.m = bruto.m;
   return saida;
 }
 
 function lerUrl() {
   const p = new URLSearchParams(location.search);
-  return validar({ t: p.get("t"), i: p.get("i"), a: p.get("a"), s: p.get("s") });
+  return validar({ t: p.get("t"), i: p.get("i"), a: p.get("a"), s: p.get("s"), m: p.get("m") });
 }
 
 function escreverUrl(modo) {
@@ -239,6 +243,7 @@ async function iniciar() {
   preencherMetadados();
   configurarSeletor();
   configurarNavegacao();
+  iniciarSecoes({ manifesto, territorioPorId, definirEstado, obterEstado });
   window.addEventListener("popstate", () => {
     estado = lerUrl();
     atualizar();

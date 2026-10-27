@@ -72,19 +72,25 @@
       <h1 id="titulo-pagina">Violência em Santa Catarina</h1>
       <p class="dek">Indicadores de violência letal, sexual e autoprovocada, com valor absoluto e taxa por 100 mil habitantes.</p>
       <div class="notice" role="note">As fontes medem coisas diferentes e não se somam: SINAN (notificações da saúde), SIM (óbitos) e Sinesp (registros policiais).</div>
-      <div class="placeholder" data-bloco>
-        <p class="placeholder-title">Cartões de indicadores</p>
-        <p>Entram na Etapa 4. Esta área mostrará um cartão por indicador, com valor, taxa, variação desde 2015 e miniatura da série.</p>
+      <div class="filter-row">
+        <span class="filter-label">Mostrar</span>
+        <div id="controles-sexo-geral"></div>
       </div>
+      <div class="cards" id="cartoes" aria-live="polite"></div>
+      <p class="small">Valor e taxa do último ano consolidado com taxa disponível. A variação compara com o primeiro ano da série. Clique em um cartão para ver a evolução.</p>
     </section>
 
     <section class="atlas-section" id="evolucao" data-etapa="4">
       <p class="kicker">Evolução</p>
       <h2>Série histórica</h2>
-      <div class="placeholder" data-bloco>
-        <p class="placeholder-title">Gráfico de linhas</p>
-        <p>Entra na Etapa 4. Comparará o território escolhido, Santa Catarina e o Brasil, com anos preliminares em tracejado.</p>
-      </div>
+      <div class="filter-row" id="controles-evolucao"></div>
+      <h3 class="chart-title" id="titulo-grafico"></h3>
+      <div id="grafico" class="chart-wrap" aria-live="polite"></div>
+      <ul class="chart-notes" id="notas-grafico"></ul>
+      <details class="table-details">
+        <summary>Ver dados em tabela</summary>
+        <div id="tabela-grafico" class="table-scroll"></div>
+      </details>
     </section>
 
     <section class="atlas-section" id="mapa" data-etapa="5">
