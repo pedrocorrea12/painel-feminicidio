@@ -405,7 +405,7 @@ df = await load_result if inspect.iscoroutine(load_result) else load_result
 
 ## 11. Próximos passos
 
-Atualizado em 2026-10-26. Itens marcados como concluídos ficam para histórico.
+Atualizado em 2026-10-29. Itens marcados como concluídos ficam para histórico.
 
 1. ~~**SINAN via PySUS/FTP**~~ — **concluído em 2026-08-24.** VIOL vai até 2024
    consolidado + 2025 preliminar. Parquet filtrado pronto em
@@ -488,6 +488,64 @@ Atualizado em 2026-10-26. Itens marcados como concluídos ficam para histórico.
     vulnerável, pessoa desaparecida e pessoa localizada não têm identificação
     municipal no arquivo atual. O próximo passo é prototipar a navegação do
     atlas sem alterar o painel publicado.
+16. ~~**Estrutura navegável e mapa municipal do atlas**~~, **concluído em
+    2026-10-29.** A versão local em `dashboard/atlas/` reúne visão geral,
+    cartões, série histórica, seletor de território e estado da consulta na
+    URL. O mapa usa a malha dos 295 municípios de Santa Catarina e permite
+    escolher indicador, ano, sexo e período. A leitura padrão acumula três
+    anos, mantém o número absoluto acessível, sinaliza dado insuficiente por
+    hachura e limita o ranking a municípios com pelo menos cinco registros.
+    O clique no mapa ou no ranking seleciona o município e atualiza os demais
+    componentes. A validação de dados, a sintaxe do JavaScript e o teste no
+    navegador passaram sem erros. Nada foi migrado para `dashboard/dist/` e
+    nenhuma publicação foi feita. O próximo bloco é Desigualdades, com sexo,
+    idade, raça ou cor e trabalho, preservando as limitações de cada fonte.
+17. ~~**Navegação analítica e novos recortes do atlas**~~, **concluído em
+    2026-10-29.** A versão local em `dashboard/atlas/` passou a ter as seções
+    Panorama SC, Municípios, Comparar, Desigualdades, Mulheres, Monitoramento e
+    Dados e métodos. O território permanece disponível em todas as seções. A
+    comparação situa Santa Catarina entre as UFs, com Brasil, mediana estadual,
+    outro estado e município selecionado. Desigualdades incorpora idade, taxas
+    de mulheres por raça ou cor com denominador do Censo 2022 e indicadores da
+    RAIS. Mulheres reúne SINAN, SIM e Sinesp sem somar universos. Monitoramento
+    compara 2024, 2025 e 2026 no mesmo período mensal. O novo arquivo
+    `dashboard/atlas/data/desigualdades.json` é produzido por
+    `pipeline/build_atlas_site_data.py`. A referência visual aprovada está em
+    `docs/referencias-visuais/referencia-01-bi-claro.png`. A versão foi testada
+    em larguras de celular e desktop. Nenhuma publicação foi feita.
+18. ~~**Remodelagem compacta do atlas**~~, **concluído em 2026-10-29.** As
+    seções passaram a funcionar como visões independentes, sem empilhar todo o
+    conteúdo em uma página longa. O cabeçalho e a tipografia foram reduzidos, os
+    cartões ficaram mais densos e a série histórica passou a dividir a tela com
+    filtros e notas metodológicas. Desigualdades usa uma grade com idade ao lado
+    dos blocos de raça ou cor e trabalho. O seletor territorial principal ficou
+    restrito a Santa Catarina e seus municípios. Brasil e as demais UFs aparecem
+    na seção Comparar. A versão foi verificada em 390, 1.440 e 1.880 pixels de
+    largura. Nenhuma publicação foi feita.
+19. ~~**Aprofundamento de Desigualdades e Mulheres**~~, **concluído em
+    2026-10-29.** Em Desigualdades, a grade foi reequilibrada para impedir que
+    o gráfico de idade domine a tela. Quatro indicadores resumem a principal
+    faixa etária e a distância entre Santa Catarina e Brasil. Raça ou cor passou
+    a exibir taxas, razão, diferença, completude do campo e uma leitura calculada.
+    Trabalho e renda passou a mostrar participação feminina, razão e diferença
+    salarial, além de uma leitura calculada. Em Mulheres, os quatro cartões de
+    SINAN, SIM e Sinesp foram mantidos e ganharam duas análises: a razão entre
+    feminicídios policiais e mortes de mulheres por agressão de 2019 a 2024,
+    comparada com o Brasil, e a relação entre tentativas e feminicídios
+    consumados em 2024, 2025 e 2026 parcial. O recorte municipal permanece nos
+    cartões, mas a razão SIM e Sinesp é identificada como análise estadual,
+    devido à diferença entre residência e local do fato. A versão foi testada
+    no navegador sem erros. Nenhuma publicação foi feita. O próximo passo
+    autorizado é preparar e publicar esta versão no GitHub Pages.
+20. ~~**Revisão editorial dos quadros**~~, **concluído em 2026-10-29.** O
+    atlas deixou de usar cartões analíticos com borda completa, cantos
+    arredondados, sombra e faixa colorida superior. Panorama, série histórica,
+    mapa, comparações, Desigualdades, Mulheres e Dados e métodos passaram a ser
+    organizados por espaço, tipografia, linhas horizontais e divisores internos.
+    Contornos completos foram preservados apenas em componentes funcionais,
+    como filtros, botões, janela de território, dicas e amostras de legenda.
+    A linguagem foi conferida em tela ampla e celular, sem erros no console.
+    Nenhuma publicação foi feita.
 
 ### Fora de escopo, por decisão
 

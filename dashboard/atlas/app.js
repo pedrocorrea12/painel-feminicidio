@@ -1,18 +1,8 @@
 import { iniciarSecoes } from "./secoes.js";
 
-// Esqueleto do atlas: estado na URL, seletor de território, tema e navegação.
+// Base do atlas: estado na URL, seletor de território, tema e navegação.
 // As seções de conteúdo escutam o evento "atlas:estado" (document) e leem
-// o estado por obterEstado(). Nenhum gráfico é desenhado nesta etapa.
-
-const UFS = {
-  AC: "Acre", AL: "Alagoas", AM: "Amazonas", AP: "Amapá", BA: "Bahia",
-  CE: "Ceará", DF: "Distrito Federal", ES: "Espírito Santo", GO: "Goiás",
-  MA: "Maranhão", MG: "Minas Gerais", MS: "Mato Grosso do Sul",
-  MT: "Mato Grosso", PA: "Pará", PB: "Paraíba", PE: "Pernambuco", PI: "Piauí",
-  PR: "Paraná", RJ: "Rio de Janeiro", RN: "Rio Grande do Norte",
-  RO: "Rondônia", RR: "Roraima", RS: "Rio Grande do Sul", SC: "Santa Catarina",
-  SE: "Sergipe", SP: "São Paulo", TO: "Tocantins",
-};
+// o estado por obterEstado().
 
 const SEXOS = { total: "Todos", feminino: "Feminino", masculino: "Masculino" };
 const ANO_MIN = 2015;
@@ -32,8 +22,7 @@ function semAcento(texto) {
 
 function montarTerritorios() {
   territorios = [
-    { id: "BR", nome: "Brasil", tipo: "brasil", grupo: "País" },
-    ...Object.entries(UFS).map(([id, nome]) => ({ id, nome, tipo: "uf", grupo: "Estados" })),
+    { id: "SC", nome: "Santa Catarina", tipo: "uf", grupo: "Referência estadual" },
     ...manifesto.municipios.map((m) => ({
       id: m.id, nome: m.nome, tipo: "municipio", grupo: "Municípios de Santa Catarina",
     })),
@@ -91,7 +80,7 @@ function atualizar() {
   const indicador = manifesto.indicadores.find((i) => i.id === estado.i);
   $("territorio-atual").textContent = territorio.nome;
   $("titulo-pagina").textContent = `Violência ${preposicao(territorio)} ${territorio.nome}`;
-  document.title = `${territorio.nome} · Territórios da Violência`;
+  document.title = `${territorio.nome} · Dados da Violência em Santa Catarina`;
 
   const tipo = { brasil: "País", uf: "Estado", municipio: "Município de Santa Catarina" }[territorio.tipo];
   const linhas = [
@@ -173,7 +162,7 @@ function configurarSeletor() {
 function temaEfetivo() {
   const manual = document.documentElement.dataset.tema;
   if (manual) return manual;
-  return matchMedia("(prefers-color-scheme: dark)").matches ? "escuro" : "claro";
+  return "claro";
 }
 
 function configurarTema() {
@@ -186,24 +175,23 @@ function configurarTema() {
   });
 }
 
-/* Navegação: destaca a seção visível */
+/* Navegação: cada aba mostra uma única visão analítica. */
 function configurarNavegacao() {
   const links = [...document.querySelectorAll(".nav-link")];
   const secoes = links.map((a) => document.querySelector(a.getAttribute("href")));
-  const marcar = (id) => {
-    for (const a of links) {
-      if (a.getAttribute("href") === `#${id}`) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
+  const ids = new Set(secoes.filter(Boolean).map((s) => s.id));
+  const ativar = () => {
+    const id = ids.has(location.hash.slice(1)) ? location.hash.slice(1) : "panorama-sc";
+    for (const secao of secoes.filter(Boolean)) secao.hidden = secao.id !== id;
+    for (const link of links) {
+      const ativo = link.getAttribute("href") === `#${id}`;
+      link.toggleAttribute("aria-current", ativo);
     }
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
   };
-  const observador = new IntersectionObserver(
-    (entradas) => {
-      const visivel = entradas.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-      if (visivel) marcar(visivel.target.id);
-    },
-    { rootMargin: "-20% 0px -65% 0px" },
-  );
-  secoes.filter(Boolean).forEach((s) => observador.observe(s));
+  if (!ids.has(location.hash.slice(1))) history.replaceState(null, "", `${location.pathname}${location.search}#panorama-sc`);
+  window.addEventListener("hashchange", ativar);
+  ativar();
 }
 
 function tamanho(bytes) {
@@ -229,7 +217,7 @@ function preencherMetadados() {
 async function iniciar() {
   configurarTema();
   try {
-    const resposta = await fetch("data/manifesto.json");
+    const resposta = await fetch("data/manifesto.json", { cache: "no-store" });
     if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
     manifesto = await resposta.json();
   } catch (erro) {
@@ -240,6 +228,7 @@ async function iniciar() {
   }
   montarTerritorios();
   estado = lerUrl();
+  escreverUrl("replace");
   preencherMetadados();
   configurarSeletor();
   configurarNavegacao();

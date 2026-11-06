@@ -5,6 +5,7 @@ Saída em dashboard/atlas/data/:
   nacional.json         Brasil e 27 UFs, todos os indicadores
   idade.json            recortes etários de Brasil e Santa Catarina
   mensal.json           série mensal do Sinesp (Brasil e Santa Catarina)
+  desigualdades.json    raça ou cor e trabalho formal
   mapa/<indicador>.json municípios de Santa Catarina para um indicador
   municipio/<id>.json   todos os indicadores de um município
 
@@ -37,6 +38,8 @@ ATLAS = ROOT / "data" / "gold" / "atlas"
 SITE = ROOT / "dashboard" / "atlas"
 DADOS = SITE / "data"
 DOWNLOADS = SITE / "downloads"
+RACA = ROOT / "data" / "gold" / "raca"
+RAIS = ROOT / "data" / "gold" / "rais"
 
 MIN_CASOS = 5
 JANELA_ANOS = 3
@@ -240,6 +243,59 @@ def gerar_downloads(base: pd.DataFrame) -> list[dict]:
     return gerados
 
 
+def gerar_desigualdades() -> dict:
+    """Reúne recortes já validados de raça ou cor e trabalho formal."""
+    def csv(caminho: Path) -> pd.DataFrame:
+        return pd.read_csv(caminho, encoding="utf-8-sig", low_memory=False)
+
+    sim_mun = csv(RACA / "sim_raca_municipios_sc_2019_2024.csv")
+    sim_uf = csv(RACA / "sim_raca_uf_ano_2019_2024.csv")
+    sinan_mun = csv(RACA / "sinan_raca_municipios_sc_2019_2024.csv")
+    trabalho_ano = csv(RAIS / "emprego_formal_sexo_2019_2025.csv")
+    trabalho_mun = csv(RAIS / "emprego_formal_sexo_municipios_sc_2019_2025.csv")
+    salario_raca_mun = csv(RAIS / "razao_salarial_raca_municipios_sc_2024_2025.csv")
+
+    for df in [sim_mun, sinan_mun, trabalho_mun, salario_raca_mun]:
+        coluna = "municipio" if "municipio" in df.columns else "territorio"
+        df[coluna] = df[coluna].astype(str).map(reparar_nome)
+
+    return {
+        "sim_raca_municipios": linhas(sim_mun, [
+            "id_municipio", "municipio", "raca", "obitos_mulheres_agressao",
+            "populacao_feminina_raca", "taxa_anual_media_100mil_mulheres_censo2022",
+            "indice_representacao", "percentual_raca_nao_informada", "dado_suficiente",
+        ]),
+        "sim_raca_uf_ano": linhas(sim_uf, [
+            "ano", "sigla_uf", "raca", "obitos_mulheres_agressao",
+            "populacao_feminina_raca", "taxa_100mil_mulheres_censo2022",
+            "indice_representacao", "percentual_raca_nao_informada", "dado_suficiente",
+        ]),
+        "sinan_raca_municipios": linhas(sinan_mun, [
+            "id_municipio", "municipio", "raca", "notificacoes",
+            "indice_representacao", "percentual_raca_nao_informada", "dado_suficiente",
+        ]),
+        "trabalho_ano": linhas(trabalho_ano, [
+            "ano", "nivel_territorial", "id_territorio", "territorio",
+            "vinculos_total", "participacao_feminina_pct",
+            "remuneracao_media_homens", "remuneracao_media_mulheres",
+            "razao_salarial_mulher_homem",
+        ]),
+        "trabalho_municipios": linhas(trabalho_mun, [
+            "id_territorio", "territorio", "vinculos_total",
+            "participacao_feminina_pct", "remuneracao_media_homens",
+            "remuneracao_media_mulheres", "razao_salarial_mulher_homem",
+        ]),
+        "salario_raca_municipios": linhas(salario_raca_mun, [
+            "id_territorio", "territorio", "mulheres_negras_com_remuneracao",
+            "remuneracao_media_mulheres_negras", "remuneracao_media_homens_brancos",
+            "remuneracao_media_mulheres_brancas",
+            "razao_mulheres_negras_homens_brancos",
+            "razao_mulheres_negras_mulheres_brancas",
+            "piso_100_com_remuneracao_atendido",
+        ]),
+    }
+
+
 def main() -> None:
     base, indicadores = carregar()
     nomes = nomes_municipios(base)
@@ -302,6 +358,8 @@ def main() -> None:
         ["indicador", "territorio", "ano", "mes", "sexo", "valor", "situacao_dado"],
     ))
 
+    escrever(DADOS / "desigualdades.json", gerar_desigualdades())
+
     downloads = gerar_downloads(base)
 
     manifesto = {
@@ -330,6 +388,7 @@ def main() -> None:
             "nacional": "data/nacional.json",
             "idade": "data/idade.json",
             "mensal": "data/mensal.json",
+            "desigualdades": "data/desigualdades.json",
             "municipio": "data/municipio/{id}.json",
         },
     }

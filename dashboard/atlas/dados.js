@@ -8,13 +8,15 @@ const BRASIL = { id: "BR", nome: "Brasil", tipo: "brasil" };
 export function criarDados(manifesto) {
   const indicadores = new Map(manifesto.indicadores.map((i) => [i.id, i]));
   const promessas = new Map();
+  const mapas = new Map();
   let indiceNacional = null;
+  let linhasNacionais = null;
 
   function buscar(url) {
     if (!promessas.has(url)) {
       promessas.set(
         url,
-        fetch(url).then((r) => {
+        fetch(url, { cache: "no-store" }).then((r) => {
           if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`);
           return r.json();
         }),
@@ -44,9 +46,16 @@ export function criarDados(manifesto) {
     return indice;
   }
 
+  function paraObjetos(tabela) {
+    return tabela.linhas.map((linha) => Object.fromEntries(
+      tabela.colunas.map((nome, posicao) => [nome, linha[posicao]]),
+    ));
+  }
+
   async function nacional() {
     if (!indiceNacional) {
       const tabela = await buscar("data/nacional.json");
+      linhasNacionais = paraObjetos(tabela);
       indiceNacional = indexar(
         tabela,
         (l, c) => `${l[c.indicador]}|${l[c.id_territorio]}|${l[c.sexo]}`,
@@ -55,9 +64,43 @@ export function criarDados(manifesto) {
     return indiceNacional;
   }
 
+  async function comparacao(indicadorId, sexo, ano) {
+    await nacional();
+    return linhasNacionais.filter((linha) =>
+      linha.indicador === indicadorId
+      && linha.sexo === sexo
+      && linha.ano === ano
+      && linha.taxa != null,
+    );
+  }
+
   async function municipio(id) {
     const tabela = await buscar(`data/municipio/${id}.json`);
     return indexar(tabela, (l, c) => `${l[c.indicador]}|${l[c.sexo]}`);
+  }
+
+  async function mapa(indicadorId) {
+    const ind = indicadores.get(indicadorId);
+    if (!ind?.arquivo_mapa) return null;
+    if (!mapas.has(indicadorId)) {
+      mapas.set(indicadorId, buscar(ind.arquivo_mapa).then((tabela) => {
+        const col = Object.fromEntries(tabela.colunas.map((nome, posicao) => [nome, posicao]));
+        return tabela.linhas.map((linha) => ({
+          id: linha[col.id_territorio],
+          nome: linha[col.territorio],
+          ano: linha[col.ano],
+          sexo: linha[col.sexo],
+          valor: linha[col.valor],
+          taxa: linha[col.taxa],
+          suficiente: linha[col.suficiente],
+          valor3a: linha[col.valor_3a],
+          taxa3a: linha[col.taxa_3a],
+          suficiente3a: linha[col.suficiente_3a],
+          situacao: linha[col.situacao_dado],
+        }));
+      }));
+    }
+    return mapas.get(indicadorId);
   }
 
   return {
@@ -77,6 +120,27 @@ export function criarDados(manifesto) {
       }
       const indice = await nacional();
       return indice.get(`${indicadorId}|${territorio.id}|${sexo}`) ?? [];
+    },
+    mapa,
+    malha: () => buscar("data/malha_sc.json"),
+    comparacao,
+    idade: async (indicadorId, ano) => {
+      const tabela = await buscar("data/idade.json");
+      return paraObjetos(tabela).filter((linha) =>
+        linha.indicador === indicadorId && linha.ano === ano,
+      );
+    },
+    mensal: async (indicadorId, sexo) => {
+      const tabela = await buscar("data/mensal.json");
+      return paraObjetos(tabela).filter((linha) =>
+        linha.indicador === indicadorId && linha.sexo === sexo,
+      );
+    },
+    desigualdades: async () => {
+      const tabelas = await buscar("data/desigualdades.json");
+      return Object.fromEntries(
+        Object.entries(tabelas).map(([nome, tabela]) => [nome, paraObjetos(tabela)]),
+      );
     },
     SC,
     BRASIL,

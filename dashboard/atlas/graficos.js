@@ -12,6 +12,120 @@ function el(nome, atributos = {}, filhos = []) {
 export const fmtInteiro = new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 });
 export const fmtTaxa = new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
+function coordenadas(geometria) {
+  const saida = [];
+  const visitar = (item) => {
+    if (typeof item?.[0] === "number") saida.push(item);
+    else if (Array.isArray(item)) item.forEach(visitar);
+  };
+  visitar(geometria.coordinates);
+  return saida;
+}
+
+function quantil(valores, proporcao) {
+  if (!valores.length) return 0;
+  return valores[Math.min(valores.length - 1, Math.floor((valores.length - 1) * proporcao))];
+}
+
+function caminhoGeometria(geometria, X, Y) {
+  const poligonos = geometria.type === "Polygon" ? [geometria.coordinates] : geometria.coordinates;
+  return poligonos.flatMap((poligono) => poligono.map((anel) => {
+    const pontos = anel.map(([lon, lat], i) => `${i ? "L" : "M"}${X(lon).toFixed(1)},${Y(lat).toFixed(1)}`);
+    return `${pontos.join("")}Z`;
+  })).join("");
+}
+
+export function mapaMunicipal(container, malha, linhas, opcoes) {
+  container.replaceChildren();
+  const L = 720;
+  const A = 520;
+  const margem = 14;
+  const todosPontos = malha.features.flatMap((f) => coordenadas(f.geometry));
+  const longitudes = todosPontos.map((p) => p[0]);
+  const latitudes = todosPontos.map((p) => p[1]);
+  const minLon = Math.min(...longitudes);
+  const maxLon = Math.max(...longitudes);
+  const minLat = Math.min(...latitudes);
+  const maxLat = Math.max(...latitudes);
+  const escala = Math.min((L - 2 * margem) / (maxLon - minLon), (A - 2 * margem) / (maxLat - minLat));
+  const largura = (maxLon - minLon) * escala;
+  const altura = (maxLat - minLat) * escala;
+  const sobraX = (L - largura) / 2;
+  const sobraY = (A - altura) / 2;
+  const X = (lon) => sobraX + (lon - minLon) * escala;
+  const Y = (lat) => sobraY + (maxLat - lat) * escala;
+
+  const porId = new Map(linhas.map((linha) => [linha.id, linha]));
+  const valores = linhas.filter((linha) => linha.suficiente && linha.taxa != null).map((linha) => linha.taxa).sort((a, b) => a - b);
+  const limites = [0.2, 0.4, 0.6, 0.8].map((p) => quantil(valores, p));
+  const classe = (linha) => {
+    if (!linha?.suficiente || linha.taxa == null) return "map-insuficiente";
+    let indice = 0;
+    while (indice < limites.length && linha.taxa > limites[indice]) indice += 1;
+    return `map-q${indice}`;
+  };
+
+  const svg = el("svg", {
+    viewBox: `0 0 ${L} ${A}`,
+    class: "municipal-map",
+    role: "img",
+    "aria-label": opcoes.descricao,
+  });
+  const padrao = el("pattern", { id: "map-hatch", width: "7", height: "7", patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" });
+  padrao.append(
+    el("rect", { width: "7", height: "7", class: "map-hatch-bg" }),
+    el("line", { x1: "0", y1: "0", x2: "0", y2: "7", class: "map-hatch-line" }),
+  );
+  svg.append(el("defs", {}, [padrao]));
+  const dica = document.createElement("div");
+  dica.className = "map-tip";
+  dica.hidden = true;
+
+  const mostrar = (evento, feature, linha) => {
+    dica.replaceChildren();
+    dica.append(Object.assign(document.createElement("strong"), { textContent: feature.properties.nome }));
+    const texto = document.createElement("span");
+    if (!linha?.suficiente || linha.taxa == null) texto.textContent = "Dado insuficiente para comparação";
+    else texto.textContent = `${fmtTaxa.format(linha.taxa)} por 100 mil, ${fmtInteiro.format(linha.valor)} registros`;
+    dica.append(texto);
+    dica.hidden = false;
+    const caixa = container.getBoundingClientRect();
+    const alvo = evento.currentTarget.getBoundingClientRect();
+    const clientX = Number.isFinite(evento.clientX) && evento.clientX > 0 ? evento.clientX : alvo.right;
+    const clientY = Number.isFinite(evento.clientY) && evento.clientY > 0 ? evento.clientY : alvo.top;
+    dica.style.left = `${Math.max(8, Math.min(clientX - caixa.left + 12, caixa.width - 220))}px`;
+    dica.style.top = `${Math.max(8, clientY - caixa.top - 24)}px`;
+  };
+  const esconder = () => { dica.hidden = true; };
+
+  for (const feature of malha.features) {
+    const linha = porId.get(String(feature.id));
+    const path = el("path", {
+      d: caminhoGeometria(feature.geometry, X, Y),
+      class: `map-municipio ${classe(linha)}${feature.id === opcoes.selecionado ? " selecionado" : ""}`,
+      tabindex: "0",
+      role: "button",
+      "aria-label": linha?.suficiente && linha.taxa != null
+        ? `${feature.properties.nome}: ${fmtTaxa.format(linha.taxa)} por 100 mil, ${fmtInteiro.format(linha.valor)} registros`
+        : `${feature.properties.nome}: dado insuficiente`,
+    });
+    path.addEventListener("pointermove", (evento) => mostrar(evento, feature, linha));
+    path.addEventListener("pointerleave", esconder);
+    path.addEventListener("focus", (evento) => mostrar(evento, feature, linha));
+    path.addEventListener("blur", esconder);
+    path.addEventListener("click", () => opcoes.aoSelecionar(String(feature.id)));
+    path.addEventListener("keydown", (evento) => {
+      if (evento.key === "Enter" || evento.key === " ") {
+        evento.preventDefault();
+        opcoes.aoSelecionar(String(feature.id));
+      }
+    });
+    svg.append(path);
+  }
+  container.append(svg, dica);
+  return { limites, elegiveis: valores.length };
+}
+
 function escalaNice(maximo) {
   if (maximo <= 0) return { topo: 1, passo: 0.25 };
   const bruto = maximo / 4;
@@ -50,9 +164,9 @@ export function miniatura(pontos) {
 export function graficoLinhas(container, series, opcoes) {
   container.replaceChildren();
   const compacto = window.innerWidth < 600;
-  const L = compacto ? 400 : 760;
-  const A = compacto ? 340 : 380;
-  const m = compacto ? { e: 44, d: 100, t: 14, b: 30 } : { e: 54, d: 128, t: 16, b: 34 };
+  const L = compacto ? 400 : 960;
+  const A = compacto ? 270 : 300;
+  const m = compacto ? { e: 44, d: 94, t: 14, b: 30 } : { e: 54, d: 132, t: 16, b: 34 };
   const todos = series.flatMap((s) => s.pontos);
   const anos = todos.map((p) => p.ano);
   const x0 = Math.min(...anos);
