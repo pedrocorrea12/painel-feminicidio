@@ -1,4 +1,4 @@
-name: Publicar painel
+name: Publicar Atlas
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
       - name: Empacotar site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dashboard/dist
+          path: dashboard/atlas
 
       - name: Publicar
         id: deployment

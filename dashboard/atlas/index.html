@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dados da violência em Santa Catarina: fontes públicas integradas de saúde, segurança pública e contexto social, por município.">
+  <meta name="color-scheme" content="light dark">
+  <title>Dados da Violência em Santa Catarina</title>
+  <link rel="stylesheet" href="styles.css?v=20261105a">
+  <script>
+    try {
+      var tema = localStorage.getItem("atlas-tema");
+      if (tema === "claro" || tema === "escuro") document.documentElement.dataset.tema = tema;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="top-rule"></div>
+    <div class="wrap header-inner">
+      <div class="publication">
+        <a href="#panorama-sc" class="publication-name">Dados da Violência em Santa Catarina</a>
+        <p>Fontes públicas integradas: SIM, SINAN, Sinesp, IBGE, Censo e RAIS</p>
+      </div>
+      <div class="header-meta">
+        <span>Atualizado em</span>
+        <strong id="meta-atualizado">carregando</strong>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar" id="barra">
+    <div class="wrap toolbar-inner">
+      <nav class="main-nav" aria-label="Seções">
+        <a class="nav-link" href="#panorama-sc">Panorama</a>
+        <a class="nav-link" href="#municipios">Municípios</a>
+        <a class="nav-link" href="#comparar">Comparar</a>
+        <a class="nav-link" href="#desigualdades">Desigualdades</a>
+        <a class="nav-link" href="#mulheres">Mulheres</a>
+        <a class="nav-link" href="#monitoramento">Monitoramento</a>
+        <a class="nav-link" href="#dados-metodos">Dados e métodos</a>
+      </nav>
+      <div class="controls">
+        <button class="territory-button" id="abrir-territorio" type="button" aria-haspopup="dialog">
+          <span class="territory-label">Território</span>
+          <strong id="territorio-atual">Santa Catarina</strong>
+        </button>
+        <button class="theme-button" id="alternar-tema" type="button" aria-label="Alternar tema claro e escuro">
+          <span aria-hidden="true" id="icone-tema">◐</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="territory-dialog" id="dialogo-territorio" aria-labelledby="titulo-territorio">
+    <form method="dialog" class="dialog-head">
+      <h2 id="titulo-territorio">Escolher território</h2>
+      <button class="close-button" value="fechar" aria-label="Fechar">×</button>
+    </form>
+    <label class="search-field">
+      <span>Buscar município de Santa Catarina</span>
+      <input id="busca-territorio" type="search" autocomplete="off" placeholder="Ex.: Florianópolis">
+    </label>
+    <div class="territory-list" id="lista-territorios" role="listbox" aria-label="Territórios disponíveis"></div>
+  </dialog>
+
+  <main id="conteudo" class="wrap">
+    <section class="atlas-section" id="panorama-sc">
+      <p class="kicker">Panorama de Santa Catarina</p>
+      <h1 id="titulo-pagina">Violência em Santa Catarina</h1>
+      <p class="dek">Indicadores de violência letal, sexual e autoprovocada no estado e no município selecionado.</p>
+      <div class="notice" role="note">As fontes medem coisas diferentes e não se somam: SINAN registra notificações, SIM registra óbitos e Sinesp registra ocorrências policiais.</div>
+      <div class="filter-row">
+        <span class="filter-label">Mostrar</span>
+        <div id="controles-sexo-geral"></div>
+      </div>
+      <div class="cards" id="cartoes" aria-live="polite"></div>
+      <p class="small">Valor e taxa do último ano consolidado com taxa disponível. Clique em um indicador para examinar sua evolução.</p>
+
+      <div class="panorama-series" id="evolucao">
+        <div class="section-heading-inline">
+          <div>
+            <p class="kicker">Evolução</p>
+            <h2>Série histórica</h2>
+          </div>
+        </div>
+        <div class="history-layout">
+          <div class="history-main">
+            <h3 class="chart-title" id="titulo-grafico"></h3>
+            <div id="grafico" class="chart-wrap" aria-live="polite"></div>
+            <details class="table-details">
+              <summary>Ver dados em tabela</summary>
+              <div id="tabela-grafico" class="table-scroll"></div>
+            </details>
+          </div>
+          <aside class="history-side" aria-label="Filtros e observações da série">
+            <div class="filter-row" id="controles-evolucao"></div>
+            <ul class="chart-notes" id="notas-grafico"></ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="municipios">
+      <p class="kicker">Municípios</p>
+      <h2>Comparação entre municípios de Santa Catarina</h2>
+      <p class="section-dek">A taxa de três anos é o padrão para reduzir oscilações em municípios pequenos. O número absoluto permanece visível.</p>
+      <div class="map-controls" id="controles-mapa"></div>
+      <div class="map-notice" id="aviso-mapa" role="note" hidden></div>
+      <div class="map-layout" id="conteudo-mapa">
+        <div>
+          <h3 class="chart-title" id="titulo-mapa">Distribuição territorial</h3>
+          <div class="map-shell" id="mapa-sc" aria-live="polite"></div>
+          <div class="map-legend" id="legenda-mapa"></div>
+        </div>
+        <aside class="ranking-panel" aria-labelledby="titulo-ranking">
+          <p class="kicker">Taxas mais altas</p>
+          <h3 id="titulo-ranking">Ranking municipal</h3>
+          <ol class="ranking-list" id="ranking-mapa"></ol>
+          <p class="small">Só entram municípios com pelo menos 5 registros no período selecionado.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="comparar">
+      <p class="kicker">Comparar</p>
+      <h2>Comparação com o Brasil e outras unidades da federação</h2>
+      <p class="section-dek">Compare o estado com a taxa do Brasil, a mediana das unidades da federação e outro estado. Para municípios, a referência é Santa Catarina.</p>
+      <div class="comparison-controls" id="controles-comparacao"></div>
+      <div class="comparison-summary" id="resumo-comparacao" aria-live="polite"></div>
+      <div class="comparison-grid">
+        <div>
+          <h3 class="chart-title" id="titulo-comparacao">Posição entre os estados</h3>
+          <div class="comparison-bars" id="barras-comparacao"></div>
+        </div>
+        <aside class="comparison-table-panel">
+          <h3>Indicadores de referência</h3>
+          <div class="table-scroll" id="tabela-comparacao"></div>
+          <p class="small" id="nota-comparacao"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="desigualdades">
+      <p class="kicker">Desigualdades</p>
+      <h2>Sexo, idade, raça ou cor e trabalho</h2>
+      <p class="section-dek">Os recortes descrevem distribuições diferentes. Sexo, idade, raça ou cor e emprego não formam uma única população cruzada.</p>
+      <div class="inequality-grid">
+        <article class="evidence-panel evidence-panel-wide">
+          <p class="panel-number">01</p>
+          <h3>Idade</h3>
+          <div id="controles-idade"></div>
+          <div class="age-insights" id="resumo-idade"></div>
+          <div class="age-bars" id="grafico-idade" aria-live="polite"></div>
+          <p class="small">Taxas por idade estão disponíveis para Brasil e Santa Catarina. A base atual não cruza idade e sexo no denominador.</p>
+        </article>
+        <article class="evidence-panel">
+          <p class="panel-number">02</p>
+          <h3>Raça ou cor</h3>
+          <div id="resumo-raca"></div>
+          <p class="small">O denominador racial usa o Censo 2022. A leitura municipal utiliza o período de 2019 a 2024.</p>
+        </article>
+        <article class="evidence-panel">
+          <p class="panel-number">03</p>
+          <h3>Trabalho e renda</h3>
+          <div id="resumo-trabalho"></div>
+          <p class="small">A RAIS mede vínculos formais. Associação territorial não significa relação causal com a violência.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="atlas-section women-section" id="mulheres">
+      <p class="kicker">Violência contra a mulher</p>
+      <h2>Notificações, mortes e registros policiais</h2>
+      <p class="section-dek">Três fontes descrevem etapas distintas. Elas devem ser lidas em conjunto, mas nunca somadas.</p>
+      <div class="women-grid" id="resumo-mulheres" aria-live="polite"></div>
+      <div class="women-analysis-grid">
+        <article class="women-analysis-card">
+          <p class="panel-number">LEITURA 01</p>
+          <h3>Classificação policial e mortalidade</h3>
+          <p class="analysis-dek">A razão compara feminicídios do Sinesp com mortes de mulheres por agressão do SIM. Ela descreve classificação, não prevalência.</p>
+          <div id="mulheres-classificacao"></div>
+        </article>
+        <article class="women-analysis-card">
+          <p class="panel-number">LEITURA 02</p>
+          <h3>Tentativas e feminicídios consumados</h3>
+          <p class="analysis-dek">A relação entre tentativas e casos consumados ajuda a dimensionar a violência letal evitada.</p>
+          <div id="mulheres-tentativas"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="atlas-section" id="monitoramento">
+      <p class="kicker">Monitoramento</p>
+      <h2>Dados recentes de 2025 e 2026</h2>
+      <div class="notice" role="note">2025 é preliminar. Em 2026, o Sinesp cobre janeiro a agosto. Comparações usam o mesmo período de anos anteriores.</div>
+      <div class="monitor-controls" id="controles-monitoramento"></div>
+      <div class="monitor-summary" id="resumo-monitoramento"></div>
+      <div class="table-scroll" id="tabela-monitoramento"></div>
+    </section>
+
+    <section class="atlas-section" id="dados-metodos">
+      <p class="kicker">Dados e métodos</p>
+      <h2>Fontes, regras e downloads</h2>
+      <div class="method-grid">
+        <article><h3>SIM</h3><p>Óbitos pela residência da vítima. Agressões não equivalem automaticamente a feminicídio ou homicídio doloso policial.</p></article>
+        <article><h3>SINAN</h3><p>Notificações de saúde pela residência. Uma notificação pode conter mais de um tipo de violência.</p></article>
+        <article><h3>Sinesp VDE</h3><p>Registros policiais pelo local do fato. A classificação e a cobertura municipal variam conforme o evento.</p></article>
+        <article><h3>IBGE e Censo 2022</h3><p>Denominadores populacionais para taxas gerais, por sexo, idade e raça ou cor, conforme disponibilidade.</p></article>
+        <article><h3>RAIS</h3><p>Vínculos formais de trabalho, remuneração e participação feminina. Raça ou cor é usada somente em 2024 e 2025.</p></article>
+        <article><h3>Critério municipal</h3><p>Mapas e rankings exigem pelo menos cinco registros. A visualização padrão acumula três anos.</p></article>
+      </div>
+      <div class="downloads-block">
+        <h3>Baixar dados</h3>
+        <ul class="download-list" id="lista-downloads"></ul>
+      </div>
+      <details class="state-readout">
+        <summary>Estado atual da consulta</summary>
+        <dl id="estado-atual"></dl>
+        <p class="small">O endereço guarda território, indicador, ano e sexo. Copie o link para compartilhar esta visão.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Fontes: SINAN, SIM, Sinesp VDE, IBGE, Censo 2022 e RAIS.</p>
+      <p>SIM e SINAN usam residência. O Sinesp usa local do fato.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js?v=20261105a"></script>
+</body>
+</html>
