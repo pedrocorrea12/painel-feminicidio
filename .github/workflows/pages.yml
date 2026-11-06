@@ -2,7 +2,7 @@ name: Publicar Atlas
 
 on:
   push:
-    branches: [atlas]
+    branches: [develope]
   workflow_dispatch:
 
 permissions:
