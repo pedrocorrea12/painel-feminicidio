@@ -1,8 +1,8 @@
 // Seções de conteúdo: cartões da Visão geral e gráfico de Evolução.
 // Reagem ao evento "atlas:estado" disparado por app.js.
 
-import { criarDados } from "./dados.js";
-import { fmtInteiro, fmtTaxa, graficoLinhas, mapaMunicipal, miniatura } from "./graficos.js";
+import { criarDados } from "./dados.js?v=20261106c";
+import { fmtInteiro, fmtTaxa, graficoLinhas, mapaMunicipal, miniatura } from "./graficos.js?v=20261106c";
 
 const CARTOES = [
   { id: "sinesp_homicidio_doloso", titulo: "Homicídio doloso" },
@@ -49,6 +49,16 @@ function tag(nome, classe, texto) {
   if (classe) e.className = classe;
   if (texto !== undefined) e.textContent = texto;
   return e;
+}
+
+function notaDenominador2025(tipo) {
+  if (tipo === "estimado_proporcao_2024") {
+    return "A população de 2025 por sexo foi estimada aplicando a proporção de 2024 à população total oficial de 2025.";
+  }
+  if (tipo === "publicado") {
+    return "A taxa de 2025 usa a população total oficial do IBGE.";
+  }
+  return "";
 }
 
 export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obterEstado }) {
@@ -145,8 +155,8 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
     const rotulo = tag("label", "select-field map-year-field");
     rotulo.append(tag("span", "", "Ano de referência"));
     const seletor = document.createElement("select");
-    const atual = Math.min(2024, Math.max(janelaMapa === "3a" ? 2017 : 2015, Number(estado.a)));
-    for (let ano = 2024; ano >= (janelaMapa === "3a" ? 2017 : 2015); ano -= 1) {
+    const atual = Math.min(2025, Math.max(janelaMapa === "3a" ? 2017 : 2015, Number(estado.a)));
+    for (let ano = 2025; ano >= (janelaMapa === "3a" ? 2017 : 2015); ano -= 1) {
       const opcao = tag("option", "", String(ano));
       opcao.value = String(ano);
       opcao.selected = ano === atual;
@@ -178,10 +188,10 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
     const rotulo = tag("label", "select-field compact-field");
     rotulo.append(tag("span", "", rotuloTexto));
     const seletor = document.createElement("select");
-    for (let ano = 2024; ano >= 2015; ano -= 1) {
+    for (let ano = 2025; ano >= 2015; ano -= 1) {
       const opcao = tag("option", "", String(ano));
       opcao.value = String(ano);
-      opcao.selected = ano === Math.min(2024, Number(estado.a));
+      opcao.selected = ano === Math.min(2025, Number(estado.a));
       seletor.append(opcao);
     }
     seletor.addEventListener("change", () => definirEstado({ a: seletor.value }));
@@ -282,6 +292,9 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
     const cartoes = await Promise.all(CARTOES.map((c) => montarCartao(c, estado, territorio)));
     if (minhaRodada !== rodada) return;
     $("cartoes").replaceChildren(...cartoes);
+    $("nota-cartoes").textContent = estado.s === "total"
+      ? ""
+      : notaDenominador2025("estimado_proporcao_2024");
   }
 
   /* Evolução */
@@ -293,6 +306,7 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
         y: medida === "taxa" ? p.taxa : p.valor,
         valor: p.valor,
         taxa: p.taxa,
+        tipoDenominador: p.tipoDenominador,
         situacao: p.situacao,
         oco: !p.suficiente,
       }));
@@ -333,7 +347,11 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
       notas.push("Valores absolutos de territórios de tamanhos diferentes não se comparam no mesmo eixo. Escolha a taxa para comparar com Santa Catarina e o Brasil.");
     }
     if (estado.m === "taxa") {
-      notas.push("Taxas existem apenas até 2024, por falta de população estimada para 2025 em diante. Passe o mouse sobre os pontos para ver os valores absolutos.");
+      const pontos2025 = series.flatMap((s) => s.pontos).filter((p) => p.ano === 2025);
+      const tipos2025 = new Set(pontos2025.map((p) => p.tipoDenominador).filter(Boolean));
+      if (tipos2025.has("estimado_proporcao_2024")) notas.push(notaDenominador2025("estimado_proporcao_2024"));
+      else if (tipos2025.has("publicado")) notas.push(notaDenominador2025("publicado"));
+      else notas.push("Este indicador não possui taxa de 2025 com período anual completo.");
     }
     if (efetivo.tipo === "municipio") {
       notas.push("Pontos vazados indicam anos com menos de 5 casos: a taxa oscila muito em municípios pequenos.");
@@ -414,10 +432,15 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
     conteudo.hidden = false;
 
     const anoMinimo = janelaMapa === "3a" ? 2017 : 2015;
-    const ano = Math.min(2024, Math.max(anoMinimo, Number(estado.a)));
+    const ano = Math.min(2025, Math.max(anoMinimo, Number(estado.a)));
     const [tabela, malha] = await Promise.all([dados.mapa(estado.i), dados.malha()]);
     if (minhaRodada !== rodada) return;
     const base = tabela.filter((linha) => linha.ano === ano && linha.sexo === estado.s);
+    const nota2025 = ano === 2025
+      ? notaDenominador2025(base.find((linha) => linha.taxa != null)?.tipoDenominador)
+      : "";
+    aviso.hidden = !nota2025;
+    aviso.textContent = nota2025;
     const linhas = base.map((linha) => janelaMapa === "3a"
       ? { ...linha, valor: linha.valor3a, taxa: linha.taxa3a, suficiente: linha.suficiente3a }
       : linha);
@@ -472,10 +495,10 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
   }
 
   async function desenharComparacao(estado, territorio, minhaRodada) {
-    const ano = Math.min(2024, Number(estado.a));
+    const ano = Math.min(2025, Number(estado.a));
     $("controles-comparacao").replaceChildren(
       campoIndicador(estado),
-      campoAno(estado, "Ano consolidado"),
+      campoAno(estado, "Ano"),
       segmentado(SEXOS, estado.s, "s", "Sexo"),
       campoUfComparacao(estado),
     );
@@ -488,7 +511,7 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
       $("resumo-comparacao").replaceChildren(tag("p", "chart-empty", "Este indicador não possui taxa para o ano selecionado."));
       $("barras-comparacao").replaceChildren();
       $("tabela-comparacao").replaceChildren();
-      $("nota-comparacao").textContent = "Escolha outro ano consolidado para realizar a comparação.";
+      $("nota-comparacao").textContent = "Escolha outro ano para realizar a comparação.";
       return;
     }
     const ufs = linhas.filter((linha) => linha.nivel_territorial === "uf");
@@ -548,7 +571,10 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
     }
     tabela.append(thead, corpo);
     $("tabela-comparacao").replaceChildren(tabela);
-    $("nota-comparacao").textContent = `Taxa por 100 mil. A taxa Brasil usa o total nacional e sua população. A mediana representa o ponto central das 27 taxas estaduais. ${ind.ressalva}`;
+    const nota2025 = ano === 2025
+      ? notaDenominador2025(linhas.find((linha) => linha.taxa != null)?.tipo_denominador)
+      : "";
+    $("nota-comparacao").textContent = `Taxa por 100 mil. A taxa Brasil usa o total nacional e sua população. A mediana representa o ponto central das 27 taxas estaduais. ${nota2025} ${ind.ressalva}`.trim();
   }
 
   function barraIdade(rotulo, sc, br, maximo) {
@@ -718,13 +744,13 @@ export function iniciarSecoes({ manifesto, territorioPorId, definirEstado, obter
       const ind = dados.indicador(id);
       const { territorio: efetivo, substituido } = dados.resolver(territorio, id);
       const serie = await dados.serie(efetivo, id, "feminino");
-      const alvo = [...serie].reverse().find((p) => p.ano <= 2024 && p.taxa != null);
-      const recente = [...serie].reverse().find((p) => p.ano >= 2025);
+      const alvo = [...serie].reverse().find((p) => p.taxa != null);
+      const recente = [...serie].reverse().find((p) => alvo && p.ano > alvo.ano);
       const painel = tag("article", "women-panel");
       painel.append(tag("p", "card-source", `${ind.fonte} · ${ind.base_territorial}`), tag("h3", "", titulo));
       if (alvo) painel.append(
         tag("strong", "women-value", fmtInteiro.format(alvo.valor)),
-        tag("p", "women-rate", `${fmtTaxa.format(alvo.taxa)} por 100 mil em ${alvo.ano}`),
+        tag("p", "women-rate", `${fmtTaxa.format(alvo.taxa)} por 100 mil em ${alvo.ano}${alvo.situacao === "preliminar" ? ", dado preliminar" : ""}`),
       );
       else painel.append(tag("p", "chart-empty", "Sem taxa consolidada."));
       if (recente) painel.append(tag("p", "women-recent", `${recente.ano}: ${fmtInteiro.format(recente.valor)} ${ind.unidade}, ${recente.situacao}`));

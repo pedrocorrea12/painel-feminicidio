@@ -9,16 +9,21 @@ Complementa `REQUISITOS_ATLAS.md`. Status: rascunho para revisão.
 2. O território escolhido (Brasil, UF ou município de SC) vale para o site inteiro e fica sempre visível.
 3. Todo número aparece com valor absoluto, taxa por 100 mil e fonte.
 4. Tom editorial e sóbrio. Sem alarmismo, sem ranking de "mais perigoso".
+5. Textos informativos devem ser diretos. Não usar slogans, frases de efeito ou conclusões sem apoio nos dados.
+6. Notas metodológicas usam título, texto e linhas horizontais neutras. Não usar barra vertical colorida como recurso recorrente.
+7. Travessões devem aparecer apenas quando necessários à frase. Não devem substituir pontuação comum nem organizar listas.
 
 ## Estrutura global
 
 **Topo fixo:** nome do atlas à esquerda; ao centro, o seletor de território ("Santa Catarina", com busca de município); à direita, links Visão geral, Evolução, Mapa, Desigualdades, Mulheres, Recente, Metodologia.
 
+Ao lado do seletor de território, o controle `Limpar filtros` restaura Santa Catarina, indicador inicial, 2024, todos os sexos e taxa. A seção atual permanece aberta.
+
 **Rodapé:** fontes, data de atualização, como citar, link para os dados em CSV e para o repositório.
 
 ## Tela 1 — Visão geral
 
-- **Título e subtítulo** do território escolhido e do período consolidado (2015–2024).
+- **Título e subtítulo** do território escolhido e do período disponível em cada fonte.
 - **Faixa de cartões**, um por indicador principal: homicídio doloso, mortes por agressão, tentativa de homicídio, estupro (com estupro de vulnerável), suicídio, pessoas desaparecidas.
 - **Cada cartão mostra:** valor absoluto do último ano consolidado, taxa por 100 mil, variação frente a 2015 e uma miniatura da série. Uma etiqueta informa a fonte (Sinesp, SIM ou SINAN) e se o território é residência ou local do fato.
 - **Aviso fixo** sob a faixa: "As fontes medem coisas diferentes e não se somam."
@@ -29,7 +34,8 @@ Complementa `REQUISITOS_ATLAS.md`. Status: rascunho para revisão.
 - Seletor de indicador e de sexo (total, feminino, masculino).
 - **Gráfico de linhas** com o território escolhido, SC e Brasil, para comparar. Alternância entre valor absoluto e taxa.
 - Anos de 2025 e 2026 desenhados em tracejado, com legenda "preliminar" e "parcial até agosto".
-- 2025 e 2026 não têm taxa (falta denominador): ao escolher taxa, o gráfico termina em 2024 e explica o motivo.
+- Sinesp e SINAN têm taxas em 2025. A população total é a estimativa oficial do IBGE. A população por sexo é estimada com a proporção de 2024 aplicada à população total de 2025.
+- O SIM não tem taxa anual em 2025 porque o arquivo atual cobre apenas parte do ano. Em 2026, os valores parciais permanecem sem taxa anual.
 - Texto curto abaixo: o que a série mede e a ressalva de comparabilidade (por exemplo, a mudança de classificação de estupro em 2020 em SC).
 
 ## Tela 3 — Mapa
@@ -57,10 +63,10 @@ Capítulo que absorve o painel atual.
 
 ## Tela 6 — Recente
 
-- Mostra apenas 2025 (preliminar) e 2026 (janeiro a agosto), em contagem, sem taxa.
+- Mostra 2025 e 2026 em contagem para comparar períodos equivalentes. Taxas anuais não são usadas para 2026 parcial.
 - **Comparação com o mesmo período** de anos anteriores, por exemplo janeiro a agosto de 2026 contra janeiro a agosto de 2025.
 - Gráfico mensal do Sinesp para Brasil e SC.
-- Faixa de aviso permanente: "Dados provisórios; podem mudar."
+- Nota de período informa quais dados são preliminares ou parciais.
 
 ## Tela 7 — Metodologia e fontes
 

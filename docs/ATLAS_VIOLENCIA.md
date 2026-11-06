@@ -95,9 +95,14 @@ O processo `pipeline/fetch_populacao_geral.py` gera três bases Silver para os
 5.570 municípios, de 2015 a 2024. A soma dos sexos e a soma das idades são
 validadas contra a população total em cada município e ano.
 
+O processo `pipeline/build_populacao_2025.py` acrescenta a população total
+municipal oficial do IBGE para 2025. A população por sexo de 2025 é estimada
+aplicando a proporção municipal de 2024 à população total oficial de 2025. O
+arquivo registra o método usado no denominador.
+
 A fonte não cruza sexo e idade. Assim, o atlas poderá calcular taxas gerais,
 taxas por sexo e taxas por idade, mas não taxas conjuntas por sexo e idade com
-esta base. O ano de 2025 permanece sem denominador populacional nesta fonte.
+esta base. As taxas por idade permanecem limitadas a 2024.
 
 ## Mortalidade concluída
 
@@ -122,8 +127,9 @@ pessoas.
 
 A unidade é a notificação, não a pessoa. Um mesmo registro pode conter mais de
 um tipo de violência. Por isso, os tipos não podem ser somados. As Gold cobrem
-Brasil, 27 UFs e os 295 municípios de Santa Catarina. As taxas são calculadas
-até 2024. O ano de 2025 permanece como contagem preliminar sem taxa.
+Brasil, 27 UFs e os 295 municípios de Santa Catarina. Em 2025, as taxas usam a
+população total oficial e a população por sexo estimada. O numerador de 2025 é
+preliminar e deve permanecer identificado dessa forma.
 
 ## Registros policiais concluídos
 
@@ -138,10 +144,10 @@ catarinenses. Estupro, estupro de vulnerável, pessoa desaparecida e pessoa
 localizada aparecem somente como total estadual no arquivo atual e não devem
 ser apresentados por município.
 
-As taxas usam população total ou do sexo correspondente e terminam em 2024.
-Os valores de 2025 permanecem sem taxa por falta de denominador compatível.
-O ano de 2026 cobre janeiro a agosto e deve ser comparado somente com o mesmo
-período de anos anteriores.
+As taxas usam população total ou do sexo correspondente. Em 2025, a população
+total é oficial e a população por sexo é estimada com a proporção de 2024. O
+ano de 2026 cobre janeiro a agosto, não recebe taxa anual e deve ser comparado
+somente com o mesmo período de anos anteriores.
 
 A camada inclui o indicador derivado `Violência sexual policial, soma das
 classificações`. Ele facilita a leitura conjunta de estupro e estupro de

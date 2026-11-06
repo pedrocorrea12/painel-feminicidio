@@ -35,6 +35,11 @@ município e ano. Sexo e idade são recortes independentes da fonte, portanto n�
 há denominador combinado de sexo por idade. A base de idade preserva 81 idades
 simples e também informa o grupo etário analítico.
 
+`populacao_municipio_2025.parquet` contém a população total municipal oficial
+do IBGE para 2025. A população por sexo é estimada aplicando a proporção de
+2024 à população total de 2025. O campo `tipo_denominador_sexo` identifica o
+método.
+
 `indicadores_territorio_ano.parquet` é a Silver consolidada. Reúne Brasil, 27
 UFs e 5.570 municípios por ano, com notificações, vínculo com parceiro ou
 ex-parceiro, ocorrências na residência, população feminina, percentuais, taxas

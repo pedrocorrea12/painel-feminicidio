@@ -454,9 +454,9 @@ def _matriz_fontes(catalogo: pd.DataFrame) -> pd.DataFrame:
                 "raca": _sim_nao(disponivel(grupo.raca)),
                 "principal_pendencia": {
                     "Sinesp VDE": "manter alertas de comparabilidade e atualizar a cobertura a cada carga",
-                    "SIM": "manter 2025 e 2026 sem taxa até haver denominadores compatíveis",
-                    "SINAN": "manter tipos coexistentes e 2025 sem taxa até haver denominador compatível",
-                    "IBGE": "obter denominadores posteriores a 2024 quando a fonte os publicar",
+                    "SIM": "manter 2025 e 2026 sem taxa anual enquanto o numerador cobrir apenas parte do ano",
+                    "SINAN": "identificar 2025 como preliminar e informar o método do denominador por sexo",
+                    "IBGE": "obter população municipal publicada por sexo e idade para 2025 quando disponível",
                     "Censo 2022": "incluir população geral por sexo, idade e raça se necessário",
                     "RAIS": "manter como contexto socioeconômico, sem inferência causal",
                 }.get(fonte, "documentar regras"),

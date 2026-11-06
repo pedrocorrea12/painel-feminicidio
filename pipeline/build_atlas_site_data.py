@@ -54,15 +54,15 @@ SITUACAO = {
 }
 COLUNAS = [
     "indicador", "nivel_territorial", "id_territorio", "territorio", "ano", "sexo",
-    "valor", "populacao", "taxa", "meses_observados", "situacao_dado",
+    "valor", "populacao", "taxa", "tipo_denominador", "meses_observados", "situacao_dado",
 ]
 COLUNAS_SITE_MUNICIPIO = [
     "indicador", "ano", "sexo", "valor", "populacao", "taxa",
-    "suficiente", "valor_3a", "taxa_3a", "suficiente_3a", "situacao_dado",
+    "tipo_denominador", "suficiente", "valor_3a", "taxa_3a", "suficiente_3a", "situacao_dado",
 ]
 COLUNAS_SITE_NACIONAL = [
     "indicador", "nivel_territorial", "id_territorio", "territorio", "ano", "sexo",
-    "valor", "populacao", "taxa", "meses_observados", "situacao_dado",
+    "valor", "populacao", "taxa", "tipo_denominador", "meses_observados", "situacao_dado",
 ]
 
 
@@ -366,6 +366,15 @@ def main() -> None:
         "atualizado_em": date.today().isoformat(),
         "periodo_consolidado": [2015, 2024],
         "monitoramento": "2025 preliminar; 2026 parcial até agosto",
+        "taxas_2025": {
+            "populacao_total": "estimativa oficial do IBGE para 1º de julho de 2025",
+            "populacao_por_sexo": (
+                "estimativa calculada com a proporção por sexo de 2024 aplicada "
+                "à população total municipal oficial de 2025"
+            ),
+            "fontes_com_taxa": ["SINAN", "Sinesp VDE"],
+            "sim_sem_taxa": "o arquivo de 2025 cobre apenas parte do ano",
+        },
         "criterio_suficiencia": {
             "min_casos": MIN_CASOS,
             "janela_anos": JANELA_ANOS,

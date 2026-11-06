@@ -29,7 +29,8 @@
     "zero significa ausência de ocorrência quando a linha mensal existe",
     "mês sem linha seria tratado como lacuna",
     "taxas usam população total ou do sexo correspondente",
-    "taxas são calculadas somente até 2024",
+    "taxas de 2025 usam a população total oficial do IBGE",
+    "a população de 2025 por sexo é estimada com a proporção municipal de 2024",
     "2026 cobre janeiro a agosto e permanece parcial",
     "estupro, estupro de vulnerável, pessoa desaparecida e pessoa localizada não têm detalhamento municipal no arquivo atual"
   ],

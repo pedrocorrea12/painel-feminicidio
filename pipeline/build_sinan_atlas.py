@@ -19,6 +19,7 @@ SINAN_MULHERES_2025 = ROOT / "data" / "silver" / "sinan_viol_mulheres_interpesso
 POP_TOTAL = ROOT / "data" / "silver" / "populacao_municipio_ano.parquet"
 POP_SEXO = ROOT / "data" / "silver" / "populacao_municipio_sexo_ano.parquet"
 POP_IDADE = ROOT / "data" / "silver" / "populacao_municipio_idade_ano.parquet"
+POP_2025 = ROOT / "data" / "silver" / "populacao_municipio_2025.parquet"
 SILVER = ROOT / "data" / "silver" / "sinan_atlas_violencia.parquet"
 GOLD_TERRITORIO = ROOT / "data" / "gold" / "atlas" / "sinan_violencia_territorio_ano.csv"
 GOLD_IDADE = ROOT / "data" / "gold" / "atlas" / "sinan_violencia_idade_ano.csv"
@@ -173,13 +174,32 @@ def contagens() -> tuple[pd.DataFrame, pd.DataFrame]:
 def denominadores_territorio() -> pd.DataFrame:
     total = pd.read_parquet(POP_TOTAL)
     sexo = pd.read_parquet(POP_SEXO)
+    pop_2025 = pd.read_parquet(POP_2025)
+    total["tipo_denominador"] = "publicado"
+    sexo["tipo_denominador"] = "publicado"
+    total_2025 = pop_2025[
+        ["ano", "id_municipio", "municipio", "sigla_uf", "populacao"]
+    ].assign(sexo="total", tipo_denominador="publicado")
+    sexo_2025 = pd.concat(
+        [
+            pop_2025[
+                ["ano", "id_municipio", "municipio", "sigla_uf", "populacao_feminina_estimada"]
+            ].rename(columns={"populacao_feminina_estimada": "populacao"}).assign(sexo="feminino"),
+            pop_2025[
+                ["ano", "id_municipio", "municipio", "sigla_uf", "populacao_masculina_estimada"]
+            ].rename(columns={"populacao_masculina_estimada": "populacao"}).assign(sexo="masculino"),
+        ],
+        ignore_index=True,
+    ).assign(tipo_denominador="estimado_proporcao_2024")
+    total = pd.concat([total.assign(sexo="total"), total_2025], ignore_index=True)
+    sexo = pd.concat([sexo, sexo_2025], ignore_index=True)
     partes = []
-    for base, campo_sexo in [(total.assign(sexo="total"), "sexo"), (sexo, "sexo")]:
-        br = base.groupby(["ano", campo_sexo], as_index=False).agg(populacao=("populacao", "sum")).assign(nivel_territorial="brasil", id_territorio="BR", territorio="Brasil")
-        uf = base.groupby(["ano", "sigla_uf", campo_sexo], as_index=False).agg(populacao=("populacao", "sum")).assign(nivel_territorial="uf", id_territorio=lambda x: x.sigla_uf, territorio=lambda x: x.sigla_uf)
+    for base in [total, sexo]:
+        br = base.groupby(["ano", "sexo", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum")).assign(nivel_territorial="brasil", id_territorio="BR", territorio="Brasil")
+        uf = base.groupby(["ano", "sigla_uf", "sexo", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum")).assign(nivel_territorial="uf", id_territorio=lambda x: x.sigla_uf, territorio=lambda x: x.sigla_uf)
         mun = base.loc[base.sigla_uf.eq("SC")].rename(columns={"id_municipio": "id_territorio", "municipio": "territorio"}).assign(nivel_territorial="municipio")
         partes.extend([br, uf, mun])
-    colunas = ["ano", "nivel_territorial", "id_territorio", "territorio", "sexo", "populacao"]
+    colunas = ["ano", "nivel_territorial", "id_territorio", "territorio", "sexo", "populacao", "tipo_denominador"]
     return pd.concat([p[colunas] for p in partes], ignore_index=True)
 
 
@@ -197,6 +217,7 @@ def construir_gold() -> tuple[pd.DataFrame, pd.DataFrame]:
     resultado.notificacoes = resultado.notificacoes.fillna(0).astype("int64")
     resultado = resultado.merge(denominadores_territorio(), on=["ano", "nivel_territorial", "id_territorio", "territorio", "sexo"], how="left", validate="many_to_one")
     resultado.loc[resultado.sexo.eq("não informado"), "populacao"] = pd.NA
+    resultado.loc[resultado.sexo.eq("não informado"), "tipo_denominador"] = pd.NA
     resultado["taxa_100mil"] = resultado.notificacoes.div(resultado.populacao).mul(100_000).round(2)
     resultado["situacao_dado"] = resultado.ano.map(lambda a: "definitivo" if a <= 2024 else "preliminar")
     resultado.to_csv(GOLD_TERRITORIO, index=False, encoding="utf-8-sig")
@@ -225,7 +246,16 @@ def validar(territorio: pd.DataFrame, idade: pd.DataFrame) -> None:
     if territorio.duplicated(["ano", "nivel_territorial", "id_territorio", "indicador", "sexo"]).any(): raise ValueError("Chave territorial duplicada")
     if idade.duplicated(["ano", "territorio", "indicador", "grupo_etario"]).any(): raise ValueError("Chave etária duplicada")
     if territorio.loc[territorio.ano.le(2024) & territorio.sexo.isin(["total", "feminino", "masculino"]), "taxa_100mil"].isna().any(): raise ValueError("Taxa histórica ausente")
-    if territorio.loc[territorio.ano.eq(2025), "taxa_100mil"].notna().any(): raise ValueError("Taxa de 2025 calculada sem denominador")
+    taxas_2025 = territorio.loc[
+        territorio.ano.eq(2025) & territorio.sexo.isin(["total", "feminino", "masculino"])
+    ]
+    if taxas_2025.taxa_100mil.isna().any(): raise ValueError("Taxa de 2025 ausente")
+    if not taxas_2025.loc[taxas_2025.sexo.eq("total"), "tipo_denominador"].eq("publicado").all():
+        raise ValueError("Denominador total de 2025 não identificado como publicado")
+    if not taxas_2025.loc[
+        taxas_2025.sexo.isin(["feminino", "masculino"]), "tipo_denominador"
+    ].eq("estimado_proporcao_2024").all():
+        raise ValueError("Denominador por sexo de 2025 não identificado como estimado")
 
 
 def main() -> None:
@@ -240,7 +270,7 @@ def main() -> None:
         "tipos": {nome: f"{campo} igual a 1 e LES_AUTOP igual a 2" for nome, campo in TIPOS.items()},
         "unidade": "notificações, não pessoas únicas",
         "limite": "tipos de violência podem coexistir no mesmo registro",
-        "taxas": "calculadas de 2015 a 2024; 2025 permanece sem taxa",
+        "taxas": "2015 a 2024 usam população publicada; 2025 usa população total oficial e população por sexo estimada pela proporção de 2024",
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Gold territorial SINAN: {len(territorio)} linhas")
     print(f"Gold etária SINAN: {len(idade)} linhas")

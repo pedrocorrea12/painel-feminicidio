@@ -477,14 +477,18 @@ Atualizado em 2026-10-29. Itens marcados como concluídos ficam para histórico.
     `pipeline/build_sinan_atlas.py` processa 4.292.317 notificações de 2015 a
     2025 para todos os sexos. A camada separa violência interpessoal e
     autoprovocada e preserva sete marcações de tipo. As Gold territoriais e por
-    idade usam taxas até 2024. O controle de mulheres em violência interpessoal
-    coincide com a série anterior em todos os anos.
+    idade usam taxas até 2024. A camada territorial calcula taxas de 2025 com
+    população total oficial e população por sexo estimada pela proporção de
+    2024. O numerador de 2025 permanece identificado como preliminar. O controle
+    de mulheres em violência interpessoal coincide com a série anterior em todos
+    os anos.
 15. ~~**Sinesp prioritário para o atlas territorial**~~, **concluído em
     2026-10-26.** `pipeline/build_sinesp_atlas.py` validou os nove eventos
     prioritários em todas as UFs. Os 12 meses de 2019 a 2025 e os 8 meses de
     2026 estão presentes. A Gold anual reúne Brasil, UFs e os cinco eventos
     com cobertura dos 295 municípios de Santa Catarina. A Gold mensal reúne
-    Brasil e Santa Catarina. As taxas terminam em 2024. Estupro, estupro de
+    Brasil e Santa Catarina. As taxas de 2025 usam população total oficial e
+    população por sexo estimada pela proporção de 2024. Estupro, estupro de
     vulnerável, pessoa desaparecida e pessoa localizada não têm identificação
     municipal no arquivo atual. O próximo passo é prototipar a navegação do
     atlas sem alterar o painel publicado.

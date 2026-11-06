@@ -58,12 +58,13 @@ Painel territorial sobre violência no Brasil, nas UFs e nos municípios de Sant
 
 1. Não somar SINAN, SIM e Sinesp.
 2. Informar se o território é residência (SIM, SINAN) ou local do fato (Sinesp).
-3. Taxas somente até 2024; 2025 sem denominador populacional.
-4. 2026 cobre janeiro a agosto e só se compara com o mesmo período de outros anos.
-5. Estupro e estupro de vulnerável avaliados em conjunto (mudança de classificação em 2020).
-6. Municípios pequenos: sinalizar, sem ranquear sem critério.
-7. Tipos de violência do SINAN podem coexistir no mesmo registro e não são somáveis.
-8. Relação entre trabalho e violência é associação territorial, sem inferência causal.
+3. Em 2025, a população total municipal é oficial. A população por sexo é estimada com a proporção de 2024 e deve ser identificada como estimativa.
+4. Taxas anuais de 2025 só aparecem quando o numerador cobre o ano completo. Dados preliminares permanecem identificados.
+5. 2026 cobre janeiro a agosto e só se compara com o mesmo período de outros anos.
+6. Estupro e estupro de vulnerável avaliados em conjunto (mudança de classificação em 2020).
+7. Municípios pequenos: sinalizar, sem ranquear sem critério.
+8. Tipos de violência do SINAN podem coexistir no mesmo registro e não são somáveis.
+9. Relação entre trabalho e violência é associação territorial, sem inferência causal.
 
 ## 9. Fora desta versão
 

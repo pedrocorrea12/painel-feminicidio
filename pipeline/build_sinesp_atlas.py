@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SILVER = ROOT / "data" / "silver" / "sinesp_vde_ocorrencias.parquet"
 POP_TOTAL = ROOT / "data" / "silver" / "populacao_municipio_ano.parquet"
 POP_SEXO = ROOT / "data" / "silver" / "populacao_municipio_sexo_ano.parquet"
+POP_2025 = ROOT / "data" / "silver" / "populacao_municipio_2025.parquet"
 MAPA_MUNICIPIOS = ROOT / "data" / "gold" / "integrado" / "validacao_municipios_sinesp_sc.csv"
 GOLD = ROOT / "data" / "gold" / "atlas"
 COBERTURA_UF = GOLD / "sinesp_cobertura_evento_uf_ano.csv"
@@ -218,23 +219,42 @@ def adicionar_indicador_derivado(base: pd.DataFrame) -> pd.DataFrame:
 def denominadores() -> pd.DataFrame:
     total = pd.read_parquet(POP_TOTAL)
     sexo = pd.read_parquet(POP_SEXO)
+    pop_2025 = pd.read_parquet(POP_2025)
+    total["tipo_denominador"] = "publicado"
+    sexo["tipo_denominador"] = "publicado"
+    total_2025 = pop_2025[
+        ["ano", "id_municipio", "municipio", "sigla_uf", "populacao"]
+    ].assign(tipo_denominador="publicado")
+    sexo_2025 = pd.concat(
+        [
+            pop_2025[
+                ["ano", "id_municipio", "municipio", "sigla_uf", "populacao_feminina_estimada"]
+            ].rename(columns={"populacao_feminina_estimada": "populacao"}).assign(sexo="feminino"),
+            pop_2025[
+                ["ano", "id_municipio", "municipio", "sigla_uf", "populacao_masculina_estimada"]
+            ].rename(columns={"populacao_masculina_estimada": "populacao"}).assign(sexo="masculino"),
+        ],
+        ignore_index=True,
+    ).assign(tipo_denominador="estimado_proporcao_2024")
+    total = pd.concat([total, total_2025], ignore_index=True)
+    sexo = pd.concat([sexo, sexo_2025], ignore_index=True)
     partes = []
 
-    br = total.groupby("ano", as_index=False).agg(populacao=("populacao", "sum"))
+    br = total.groupby(["ano", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum"))
     partes.append(br.assign(nivel_territorial="brasil", id_territorio="BR", sexo="total"))
-    uf = total.groupby(["ano", "sigla_uf"], as_index=False).agg(populacao=("populacao", "sum"))
+    uf = total.groupby(["ano", "sigla_uf", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum"))
     partes.append(uf.assign(nivel_territorial="uf", id_territorio=uf.sigla_uf, sexo="total"))
     mun = total.loc[total.sigla_uf.eq("SC")].rename(columns={"id_municipio": "id_territorio"})
     partes.append(mun.assign(nivel_territorial="municipio", sexo="total"))
 
-    br_sexo = sexo.groupby(["ano", "sexo"], as_index=False).agg(populacao=("populacao", "sum"))
+    br_sexo = sexo.groupby(["ano", "sexo", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum"))
     partes.append(br_sexo.assign(nivel_territorial="brasil", id_territorio="BR"))
-    uf_sexo = sexo.groupby(["ano", "sigla_uf", "sexo"], as_index=False).agg(populacao=("populacao", "sum"))
+    uf_sexo = sexo.groupby(["ano", "sigla_uf", "sexo", "tipo_denominador"], as_index=False).agg(populacao=("populacao", "sum"))
     partes.append(uf_sexo.assign(nivel_territorial="uf", id_territorio=uf_sexo.sigla_uf))
     mun_sexo = sexo.loc[sexo.sigla_uf.eq("SC")].rename(columns={"id_municipio": "id_territorio"})
     partes.append(mun_sexo.assign(nivel_territorial="municipio"))
 
-    colunas = ["ano", "nivel_territorial", "id_territorio", "sexo", "populacao"]
+    colunas = ["ano", "nivel_territorial", "id_territorio", "sexo", "populacao", "tipo_denominador"]
     return pd.concat([parte[colunas] for parte in partes], ignore_index=True)
 
 
@@ -301,6 +321,7 @@ def construir_territorio_ano(base: pd.DataFrame) -> pd.DataFrame:
         validate="many_to_one",
     )
     resultado.loc[resultado.sexo.eq("não informado"), "populacao"] = pd.NA
+    resultado.loc[resultado.sexo.eq("não informado"), "tipo_denominador"] = pd.NA
     resultado["taxa_100mil"] = resultado.valor_absoluto.div(resultado.populacao).mul(100_000).round(2)
     resultado["meses_observados"] = resultado.ano.map(lambda ano: 8 if ano == 2026 else 12)
     resultado["periodo_completo"] = resultado.ano.ne(2026)
@@ -322,6 +343,7 @@ def construir_territorio_ano(base: pd.DataFrame) -> pd.DataFrame:
         "valor_absoluto",
         "populacao",
         "taxa_100mil",
+        "tipo_denominador",
         "meses_observados",
         "periodo_completo",
         "situacao_dado",
@@ -380,7 +402,15 @@ def validar(
         "Estupro",
         "Estupro de vulnerável",
     }
-    assert territorio.loc[territorio.ano.ge(2025), "taxa_100mil"].isna().all()
+    assert territorio.loc[territorio.ano.eq(2026), "taxa_100mil"].isna().all()
+    taxas_2025 = territorio.loc[
+        territorio.ano.eq(2025) & territorio.sexo.isin(["total", "feminino", "masculino"])
+    ]
+    assert taxas_2025.taxa_100mil.notna().all()
+    assert taxas_2025.loc[taxas_2025.sexo.eq("total"), "tipo_denominador"].eq("publicado").all()
+    assert taxas_2025.loc[
+        taxas_2025.sexo.isin(["feminino", "masculino"]), "tipo_denominador"
+    ].eq("estimado_proporcao_2024").all()
     assert not territorio.duplicated(
         ["nivel_territorial", "id_territorio", "ano", "indicador", "sexo"]
     ).any()
@@ -415,7 +445,8 @@ def escrever_metodologia() -> None:
             "zero significa ausência de ocorrência quando a linha mensal existe",
             "mês sem linha seria tratado como lacuna",
             "taxas usam população total ou do sexo correspondente",
-            "taxas são calculadas somente até 2024",
+            "taxas de 2025 usam a população total oficial do IBGE",
+            "a população de 2025 por sexo é estimada com a proporção municipal de 2024",
             "2026 cobre janeiro a agosto e permanece parcial",
             "estupro, estupro de vulnerável, pessoa desaparecida e pessoa localizada não têm detalhamento municipal no arquivo atual",
         ],
@@ -428,7 +459,7 @@ def escrever_metodologia() -> None:
 
 
 def main() -> None:
-    obrigatorios = [SILVER, POP_TOTAL, POP_SEXO, MAPA_MUNICIPIOS]
+    obrigatorios = [SILVER, POP_TOTAL, POP_SEXO, POP_2025, MAPA_MUNICIPIOS]
     ausentes = [str(caminho.relative_to(ROOT)) for caminho in obrigatorios if not caminho.exists()]
     if ausentes:
         raise FileNotFoundError(f"Arquivos ausentes: {ausentes}")
