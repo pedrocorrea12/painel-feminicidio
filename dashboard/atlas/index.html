@@ -6,7 +6,7 @@
   <meta name="description" content="Dados da violência em Santa Catarina: fontes públicas integradas de saúde, segurança pública e contexto social, por município.">
   <meta name="color-scheme" content="light dark">
   <title>Dados da Violência em Santa Catarina</title>
-  <link rel="stylesheet" href="styles.css?v=20261105a">
+  <link rel="stylesheet" href="styles.css?v=20261106c">
   <script>
     try {
       var tema = localStorage.getItem("atlas-tema");
@@ -47,6 +47,7 @@
           <span class="territory-label">Território</span>
           <strong id="territorio-atual">Santa Catarina</strong>
         </button>
+        <button class="reset-button" id="limpar-filtros" type="button" aria-label="Limpar filtros e restaurar a seleção inicial"><span class="reset-label-wide">Limpar filtros</span><span class="reset-label-short" aria-hidden="true">Limpar</span></button>
         <button class="theme-button" id="alternar-tema" type="button" aria-label="Alternar tema claro e escuro">
           <span aria-hidden="true" id="icone-tema">◐</span>
         </button>
@@ -71,12 +72,13 @@
       <p class="kicker">Panorama de Santa Catarina</p>
       <h1 id="titulo-pagina">Violência em Santa Catarina</h1>
       <p class="dek">Indicadores de violência letal, sexual e autoprovocada no estado e no município selecionado.</p>
-      <div class="notice" role="note">As fontes medem coisas diferentes e não se somam: SINAN registra notificações, SIM registra óbitos e Sinesp registra ocorrências policiais.</div>
+      <div class="notice" role="note"><strong class="notice-label">Nota metodológica</strong><span>SINAN registra notificações, SIM registra óbitos e Sinesp registra ocorrências policiais. Os valores não devem ser somados.</span></div>
       <div class="filter-row">
         <span class="filter-label">Mostrar</span>
         <div id="controles-sexo-geral"></div>
       </div>
       <div class="cards" id="cartoes" aria-live="polite"></div>
+      <p class="small" id="nota-cartoes"></p>
       <p class="small">Valor e taxa do último ano consolidado com taxa disponível. Clique em um indicador para examinar sua evolução.</p>
 
       <div class="panorama-series" id="evolucao">
@@ -174,8 +176,9 @@
     <section class="atlas-section women-section" id="mulheres">
       <p class="kicker">Violência contra a mulher</p>
       <h2>Notificações, mortes e registros policiais</h2>
-      <p class="section-dek">Três fontes descrevem etapas distintas. Elas devem ser lidas em conjunto, mas nunca somadas.</p>
+      <p class="section-dek">Cada fonte mede um fenômeno distinto. Os valores não são somados.</p>
       <div class="women-grid" id="resumo-mulheres" aria-live="polite"></div>
+      <p class="small">Nas taxas de 2025, a população por sexo é estimada aplicando a proporção de 2024 à população total oficial de 2025. Os dados do SINAN de 2025 são preliminares.</p>
       <div class="women-analysis-grid">
         <article class="women-analysis-card">
           <p class="panel-number">LEITURA 01</p>
@@ -186,7 +189,7 @@
         <article class="women-analysis-card">
           <p class="panel-number">LEITURA 02</p>
           <h3>Tentativas e feminicídios consumados</h3>
-          <p class="analysis-dek">A relação entre tentativas e casos consumados ajuda a dimensionar a violência letal evitada.</p>
+          <p class="analysis-dek">A relação compara tentativas e casos consumados registrados pelo Sinesp.</p>
           <div id="mulheres-tentativas"></div>
         </article>
       </div>
@@ -195,7 +198,7 @@
     <section class="atlas-section" id="monitoramento">
       <p class="kicker">Monitoramento</p>
       <h2>Dados recentes de 2025 e 2026</h2>
-      <div class="notice" role="note">2025 é preliminar. Em 2026, o Sinesp cobre janeiro a agosto. Comparações usam o mesmo período de anos anteriores.</div>
+      <div class="notice" role="note"><strong class="notice-label">Período dos dados</strong><span>O SINAN de 2025 é preliminar. Em 2026, o Sinesp cobre janeiro a agosto. As comparações usam o mesmo período dos anos anteriores.</span></div>
       <div class="monitor-controls" id="controles-monitoramento"></div>
       <div class="monitor-summary" id="resumo-monitoramento"></div>
       <div class="table-scroll" id="tabela-monitoramento"></div>
@@ -208,7 +211,7 @@
         <article><h3>SIM</h3><p>Óbitos pela residência da vítima. Agressões não equivalem automaticamente a feminicídio ou homicídio doloso policial.</p></article>
         <article><h3>SINAN</h3><p>Notificações de saúde pela residência. Uma notificação pode conter mais de um tipo de violência.</p></article>
         <article><h3>Sinesp VDE</h3><p>Registros policiais pelo local do fato. A classificação e a cobertura municipal variam conforme o evento.</p></article>
-        <article><h3>IBGE e Censo 2022</h3><p>Denominadores populacionais para taxas gerais, por sexo, idade e raça ou cor, conforme disponibilidade.</p></article>
+        <article><h3>IBGE e Censo 2022</h3><p>Em 2025, a população total municipal é oficial. A população por sexo é estimada aplicando a proporção de 2024 à população total de 2025.</p></article>
         <article><h3>RAIS</h3><p>Vínculos formais de trabalho, remuneração e participação feminina. Raça ou cor é usada somente em 2024 e 2025.</p></article>
         <article><h3>Critério municipal</h3><p>Mapas e rankings exigem pelo menos cinco registros. A visualização padrão acumula três anos.</p></article>
       </div>
@@ -231,6 +234,6 @@
     </div>
   </footer>
 
-  <script type="module" src="app.js?v=20261105a"></script>
+  <script type="module" src="app.js?v=20261106c"></script>
 </body>
 </html>

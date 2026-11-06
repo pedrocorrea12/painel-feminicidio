@@ -1,4 +1,4 @@
-import { iniciarSecoes } from "./secoes.js";
+import { iniciarSecoes } from "./secoes.js?v=20261106c";
 
 // Base do atlas: estado na URL, seletor de território, tema e navegação.
 // As seções de conteúdo escutam o evento "atlas:estado" (document) e leem
@@ -158,6 +158,15 @@ function configurarSeletor() {
   });
 }
 
+function configurarLimpeza() {
+  $("limpar-filtros").addEventListener("click", () => {
+    const secao = location.hash || "#panorama-sc";
+    const destino = `${location.pathname}${secao}`;
+    if (`${location.pathname}${location.search}${location.hash}` === destino) location.reload();
+    else location.assign(destino);
+  });
+}
+
 /* Tema */
 function temaEfetivo() {
   const manual = document.documentElement.dataset.tema;
@@ -231,6 +240,7 @@ async function iniciar() {
   escreverUrl("replace");
   preencherMetadados();
   configurarSeletor();
+  configurarLimpeza();
   configurarNavegacao();
   iniciarSecoes({ manifesto, territorioPorId, definirEstado, obterEstado });
   window.addEventListener("popstate", () => {
