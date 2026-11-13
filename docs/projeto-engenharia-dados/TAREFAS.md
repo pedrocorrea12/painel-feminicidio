@@ -92,6 +92,9 @@ da entrega.
 - T01: (vazio)
 - T02: **Entrega:** contratos da Silver do atlas e da Gold territorial, fixtures
   sintéticas, testes de esquema, tipo, chave, periodicidade e ano preliminar, e
-  documentação do SINAN. Validação final: 9 testes aprovados e Ruff sem erros.
-  **Pedidos:** nenhum. **Pendente:** revisão cruzada e decisão do dono sobre o merge.
+  documentação do SINAN. O contrato foi ajustado à representação real de mês,
+  idade e data anuláveis. Validação final: 16 testes aprovados, Ruff sem erros,
+  Silver real com 4.292.317 linhas aprovada e Gold real com 127.908 linhas
+  aprovada quando `id_territorio` é lido como texto. **Pedidos:** nenhum.
+  **Pendente:** nova revisão cruzada e decisão do dono sobre o merge.
 - T03: (vazio)
