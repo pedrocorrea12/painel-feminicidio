@@ -1,0 +1,3 @@
+ano,mes,data_ocorrencia,sexo,raca,idade_anos,grupo_etario,natureza_violencia,id_municipio_residencia,sigla_uf_residencia,violencia_fisica,violencia_psicologica,violencia_sexual,violencia_financeira,negligencia,tortura,trafico_pessoas,situacao_dado
+2024,6,2024-06-15,feminino,Parda,34,30 a 39 anos,interpessoal,4200001,SC,True,False,False,False,False,False,False,definitivo
+2025,2,2025-02-10,feminino,Branca,28,20 a 29 anos,autoprovocada,4200001,SC,False,False,False,False,False,False,False,preliminar

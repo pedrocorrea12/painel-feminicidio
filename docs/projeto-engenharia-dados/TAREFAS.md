@@ -10,8 +10,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | --- | --- | --- | --- | --- | --- |
 | T00 | Base: pacote, config, checagens (entrega 2) | Codex | engenharia-dados | integrada (53a05c1) | |
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | a fazer | |
-| T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | a fazer | |
-| T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | aprovada (revisão cruzada) | |
+| T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | integrada (aprovada com ressalvas) | |
+| T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | integrada | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
@@ -90,5 +90,11 @@ Cada agente anota abaixo, em sua tarefa, pedidos de arquivos extras e o resumo
 da entrega.
 
 - T01: (vazio)
-- T02: (vazio)
+- T02: **Entrega:** contratos da Silver do atlas e da Gold territorial, fixtures
+  sintéticas, testes de esquema, tipo, chave, periodicidade e ano preliminar, e
+  documentação do SINAN. O contrato foi ajustado à representação real de mês,
+  idade e data anuláveis. Validação final: 16 testes aprovados, Ruff sem erros,
+  Silver real com 4.292.317 linhas aprovada e Gold real com 127.908 linhas
+  aprovada quando `id_territorio` é lido como texto. **Pedidos:** nenhum.
+  **Revisão cruzada (Claude):** 1ª versão reprovada (rejeitava a Silver real); 2ª aprovada. **Ressalvas para tarefa futura:** o contrato ainda aceita `data_ocorrencia` fora de limites plausíveis (ex.: 1800 ou 2099), `idade_anos` negativa e `sexo` fora do domínio; falta guarda de proporção de datas no ano da notificação.
 - T03: entregue em 5 commits. Contrato em `contracts/sinesp.py` (bronze, silver, gold mensal/anual, cobertura mensal), 26 testes de contrato, fixtures sintéticas, `docs/contracts/sinesp.md`. `pytest` (29 passando no total) e `ruff check src tests` verdes; validado também contra Silver e Gold reais, só leitura. Pendente: reconciliação contra o Anuário e detecção de quebras de série (fora do escopo). Obs.: `contracts/__init__.py` é vazio, como em T02. Revisão cruzada pelo Codex (read-only) reprovou a 1ª versão; corrigidos: série inteira ausente na cobertura, desagregações e `arquivo_origem` no esquema, coerência situação x meses no Gold anual. Nova passada do Codex aprovou, sem achados acima de baixo.
