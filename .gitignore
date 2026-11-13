@@ -17,6 +17,7 @@ data/silver/**
 .env.*
 !.env.example
 .sites-runtime/
+.codex-attachments/
 dashboard/.openai/
 dashboard/.git.sites-backup/
 tools/sites-package.ps1

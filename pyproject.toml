@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "painel-dados-mulher"
+version = "0.1.0"
+description = "Pipeline de dados públicos de saúde e segurança do Painel de Violência contra a Mulher"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas==2.2.2",
+  "pyarrow==16.1.0",
+]
+
+[project.optional-dependencies]
+sinan = ["pysus==2.10.0"]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+painel-dados = "painel_dados.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
