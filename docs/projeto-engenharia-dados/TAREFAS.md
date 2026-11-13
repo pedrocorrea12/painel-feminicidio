@@ -9,7 +9,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | ID | Entrega | Dono | Branch | Status | Depende de |
 | --- | --- | --- | --- | --- | --- |
 | T00 | Base: pacote, config, checagens (entrega 2) | Codex | engenharia-dados | integrada (53a05c1) | |
-| T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | a fazer | |
+| T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | em revisão | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | a fazer | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | a fazer | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
@@ -89,6 +89,6 @@ Bloqueadas pelos Gates B e C e por aprovação explícita do dono. Não iniciar.
 Cada agente anota abaixo, em sua tarefa, pedidos de arquivos extras e o resumo
 da entrega.
 
-- T01: (vazio)
+- T01: entregue em `docs/baseline/`: inventário (386 artefatos, contagens e SHA-256), cadeia do pipeline, reprodução dos 8 construtores offline numa cópia (CSV idênticos; só carimbos de data mudam) e resultado do `validate_project.py`. Achado principal: o validador **falha hoje** por 2 asserções desatualizadas (taxa 2025 do SINAN, linha 327, e do SINESP, linha 360) depois do commit `e7dc7ed`; sem elas, o restante passa. Não reexecutados por exigirem rede ou Bronze: extract_*, fetch_*, build_silver, build_populacao_2025, build_sinan_atlas, build_sim_atlas, build_rais, build_atlas_catalog. Pendente: revisão cruzada.
 - T02: (vazio)
 - T03: (vazio)

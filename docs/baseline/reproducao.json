@@ -1,0 +1,70 @@
+{
+  "python": "3.12.7",
+  "execucoes": [
+    {
+      "script": "build_gold.py",
+      "codigo_saida": 0,
+      "segundos": 5.6,
+      "erro": ""
+    },
+    {
+      "script": "build_dashboard_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.0,
+      "erro": ""
+    },
+    {
+      "script": "build_integrated_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.7,
+      "erro": ""
+    },
+    {
+      "script": "build_sinesp_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 8.3,
+      "erro": ""
+    },
+    {
+      "script": "build_race_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.1,
+      "erro": ""
+    },
+    {
+      "script": "build_sinesp_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 40.4,
+      "erro": ""
+    },
+    {
+      "script": "build_atlas_prototype_data.py",
+      "codigo_saida": 0,
+      "segundos": 2.3,
+      "erro": ""
+    },
+    {
+      "script": "build_atlas_site_data.py",
+      "codigo_saida": 0,
+      "segundos": 10.6,
+      "erro": ""
+    }
+  ],
+  "alterados": [
+    "dashboard/atlas/data/manifesto.json",
+    "dashboard/dist/data/analise.json",
+    "dashboard/dist/data/painel.json",
+    "data/gold/analise.json",
+    "data/gold/integrado/resumo_analises_sinesp.json",
+    "data/gold/integrado/resumo_integracao.json",
+    "data/gold/painel.json",
+    "data/gold/raca/resumo_raca.json"
+  ],
+  "criados": [],
+  "removidos": [],
+  "total_comparado": 386,
+  "relatorios_docs_gerados": [
+    "RELATORIO_ANALISES_SINESP.md",
+    "RELATORIO_INTEGRACAO_DADOS.md"
+  ]
+}
