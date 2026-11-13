@@ -33,3 +33,4 @@ outputs/
 dashboard/prototipos/**/data.json
 dashboard/prototipos/**/preview*.png
 *.xlsx.inspect.ndjson
+*.egg-info/
