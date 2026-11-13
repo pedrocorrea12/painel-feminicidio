@@ -120,8 +120,11 @@ da entrega.
 - T03: entregue em 5 commits. Contrato em `contracts/sinesp.py` (bronze, silver, gold mensal/anual, cobertura mensal), 26 testes de contrato, fixtures sintéticas, `docs/contracts/sinesp.md`. `pytest` (29 passando no total) e `ruff check src tests` verdes; validado também contra Silver e Gold reais, só leitura. Pendente: reconciliação contra o Anuário e detecção de quebras de série (fora do escopo). Obs.: `contracts/__init__.py` é vazio, como em T02. Revisão cruzada pelo Codex (read-only) reprovou a 1ª versão; corrigidos: série inteira ausente na cobertura, desagregações e `arquivo_origem` no esquema, coerência situação x meses no Gold anual. Nova passada do Codex aprovou, sem achados acima de baixo.
 - T05: **Entrega:** módulo de publicação de diretórios com geração e validação
   em temporário no mesmo volume, troca com backup e restauração compatível com
-  Windows. Seis testes cobrem substituição válida, falhas de geração, validação
-  e troca, primeira publicação e limpeza dos temporários. Validação final: 48
-  testes aprovados e Ruff sem erros. **Pedidos:** nenhum. **Pendente:** revisão
-  cruzada e integração posterior com o validador após a T08.
+  Windows. A revisão acrescentou retorno estruturado e aviso para backup não
+  removido após publicação concluída, erro encadeado com o caminho do backup em
+  falha dupla, detecção prévia de backups órfãos e documentação da janela sem
+  destino entre as renomeações. Nove testes cobrem os fluxos de sucesso,
+  falha e recuperação. Validação final: 51 testes aprovados e Ruff sem erros.
+  **Pedidos:** nenhum. **Pendente:** nova revisão cruzada e integração posterior
+  com o validador após a T08.
 - T08: (vazio)
