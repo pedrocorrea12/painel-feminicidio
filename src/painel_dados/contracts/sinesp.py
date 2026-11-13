@@ -35,6 +35,9 @@ SILVER_OCORRENCIAS = {
     "municipio": "texto",
     "evento": "texto",
     "abrangencia": "texto",
+    "agente": "texto",
+    "arma": "texto",
+    "faixa_etaria": "texto",
     "vitimas_feminino": "numero",
     "vitimas_masculino": "numero",
     "vitimas_nao_informado": "numero",
@@ -51,6 +54,7 @@ SILVER_FEMINICIDIO = {
     "sigla_uf": "texto",
     "municipio": "texto",
     "vitimas_feminicidio": "inteiro",
+    "arquivo_origem": "texto",
     "situacao_dado": "texto",
 }
 
@@ -98,6 +102,12 @@ def _verificar_dominio(
 def _verificar_mes_e_medidas(frame: pd.DataFrame, nome: str, medidas: tuple[str, ...]) -> None:
     if not frame["mes"].between(1, 12).all():
         raise ValueError(f"{nome}: mes fora do intervalo 1 a 12")
+    _verificar_medidas_nao_negativas(frame, nome, medidas)
+
+
+def _verificar_medidas_nao_negativas(
+    frame: pd.DataFrame, nome: str, medidas: tuple[str, ...]
+) -> None:
     negativas = [c for c in medidas if (frame[c].dropna() < 0).any()]
     if negativas:
         raise ValueError(f"{nome}: medidas negativas em {negativas}")
@@ -160,8 +170,17 @@ def validar_gold_anual(frame: pd.DataFrame) -> None:
     _verificar_tipos(frame, GOLD_ANUAL, nome)
     _verificar_dominio(frame, "territorio", TERRITORIOS, nome)
     _verificar_dominio(frame, "situacao_dado", SITUACOES, nome)
+    _verificar_medidas_nao_negativas(frame, nome, COLUNAS_MEDIDA)
     if not frame["meses_informados"].between(1, 12).all():
         raise ValueError(f"{nome}: meses_informados fora do intervalo 1 a 12")
+    consolidado_incompleto = frame["situacao_dado"].eq("consolidado_publicacao") & frame[
+        "meses_informados"
+    ].lt(12)
+    if consolidado_incompleto.any():
+        raise ValueError(f"{nome}: ano consolidado com menos de 12 meses informados")
+    parcial_completo = frame["situacao_dado"].eq("parcial") & frame["meses_informados"].eq(12)
+    if parcial_completo.any():
+        raise ValueError(f"{nome}: ano parcial com 12 meses informados")
     assert_unique(frame, GOLD_ANUAL_CHAVE)
 
 
@@ -170,19 +189,26 @@ def validar_cobertura_mensal(
 ) -> None:
     """Falha se um ano consolidado não tiver os 12 meses dos eventos obrigatórios.
 
-    Anos ``parcial`` podem ter menos meses, mas não podem ter lacuna no meio:
-    os meses presentes devem formar a sequência 1..N.
+    Todo par (território, ano) presente na base deve trazer cada evento obrigatório:
+    o sumiço de uma série inteira também é falha. Anos ``parcial`` podem ter menos
+    meses, mas os meses devem formar a sequência 1..N, em que N é o último mês
+    publicado para o par.
     """
 
+    pares = mensal[["territorio", "ano"]].drop_duplicates()
     for evento in eventos_obrigatorios:
-        recorte = mensal.loc[mensal["evento"].str.lower().eq(evento.lower())]
-        if recorte.empty:
+        eventos = mensal["evento"].str.lower()
+        if not eventos.eq(evento.lower()).any():
             raise ValueError(f"cobertura mensal: evento ausente: {evento}")
-        grupos = recorte.groupby(["territorio", "ano"])
-        for (territorio, ano), grupo in grupos:
-            meses = sorted(set(grupo["mes"]))
-            parcial = grupo["situacao_dado"].eq("parcial").all()
-            esperado = list(range(1, (meses[-1] if parcial else 12) + 1))
+        for territorio, ano in pares.itertuples(index=False):
+            do_par = mensal.loc[mensal["territorio"].eq(territorio) & mensal["ano"].eq(ano)]
+            do_evento = do_par.loc[do_par["evento"].str.lower().eq(evento.lower())]
+            if do_evento.empty:
+                raise ValueError(f"cobertura mensal: série ausente: {evento} {territorio} {ano}")
+            parcial = do_par["situacao_dado"].eq("parcial").all()
+            ultimo = int(do_par["mes"].max()) if parcial else 12
+            meses = sorted(set(do_evento["mes"]))
+            esperado = list(range(1, ultimo + 1))
             if meses != esperado:
                 faltam = sorted(set(esperado).difference(meses))
                 raise ValueError(

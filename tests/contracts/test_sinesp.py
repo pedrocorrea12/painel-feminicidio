@@ -22,7 +22,11 @@ def ler(nome: str) -> pd.DataFrame:
 
 @pytest.fixture
 def silver() -> pd.DataFrame:
-    return ler("silver_ocorrencias.csv")
+    # Na Silver real as desagregações são "string" (nulas na maioria das linhas).
+    quadro = ler("silver_ocorrencias.csv")
+    for coluna in ["agente", "arma", "faixa_etaria"]:
+        quadro[coluna] = quadro[coluna].astype("string")
+    return quadro
 
 
 @pytest.fixture
@@ -142,3 +146,45 @@ def test_cobertura_aceita_ano_parcial_sem_lacuna(mensal) -> None:
 def test_cobertura_rejeita_evento_ausente(mensal) -> None:
     with pytest.raises(ValueError, match="evento ausente: Furto"):
         sinesp.validar_cobertura_mensal(mensal, eventos_obrigatorios=("Furto",))
+
+
+def test_cobertura_rejeita_serie_inteira_ausente(mensal) -> None:
+    sem_sc_2024 = mensal.loc[
+        ~(
+            (mensal.evento == "Feminicídio")
+            & (mensal.territorio == "Santa Catarina")
+            & (mensal.ano == 2024)
+        )
+    ]
+    with pytest.raises(ValueError, match="série ausente: Feminicídio Santa Catarina 2024"):
+        sinesp.validar_cobertura_mensal(sem_sc_2024)
+
+
+@pytest.mark.parametrize("coluna", ["agente", "arma", "faixa_etaria"])
+def test_silver_rejeita_desagregacao_removida(silver, coluna) -> None:
+    with pytest.raises(ValueError, match=f"Colunas obrigatórias ausentes.*{coluna}"):
+        sinesp.validar_silver_ocorrencias(silver.drop(columns=coluna))
+
+
+def test_silver_feminicidio_rejeita_arquivo_origem_removido() -> None:
+    quadro = ler("silver_feminicidio.csv").drop(columns="arquivo_origem")
+    with pytest.raises(ValueError, match="Colunas obrigatórias ausentes.*arquivo_origem"):
+        sinesp.validar_silver_feminicidio(quadro)
+
+
+def test_gold_anual_rejeita_consolidado_com_meses_faltando(anual) -> None:
+    anual.loc[anual.situacao_dado == "consolidado_publicacao", "meses_informados"] = 11
+    with pytest.raises(ValueError, match="ano consolidado com menos de 12 meses"):
+        sinesp.validar_gold_anual(anual)
+
+
+def test_gold_anual_rejeita_parcial_com_12_meses(anual) -> None:
+    anual.loc[anual.situacao_dado == "parcial", "meses_informados"] = 12
+    with pytest.raises(ValueError, match="ano parcial com 12 meses"):
+        sinesp.validar_gold_anual(anual)
+
+
+def test_gold_anual_rejeita_medida_negativa(anual) -> None:
+    anual.loc[0, "total_vitimas"] = -1
+    with pytest.raises(ValueError, match="medidas negativas.*total_vitimas"):
+        sinesp.validar_gold_anual(anual)
