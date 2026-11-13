@@ -1,0 +1,2071 @@
+{
+  "python": "3.12.7",
+  "segundos": 0.8,
+  "artefatos": [
+    {
+      "arquivo": "dashboard/atlas/data/desigualdades.json",
+      "bytes": 285658,
+      "sha256": "30a84c14c3ef617eab84341a5f390b53576cc7c3e050bc3dbac36c02f0d1fa4b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/idade.json",
+      "bytes": 292977,
+      "sha256": "6851398303f383e4c7db91dd2e0226b4b91317b095c8650b8bc7719cebfc1ac7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/malha_sc.json",
+      "bytes": 380758,
+      "sha256": "dcb22675c5675722e285f3641caf8a743954c8a8ac362a9358bb1aa2a73d0e24"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/manifesto.json",
+      "bytes": 20631,
+      "sha256": "48d6fc94e4189d70f27dff9dd9a3b930e6b3540da4ea5afedaa33753c96f8fa3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sim_acidente_transporte.json",
+      "bytes": 976106,
+      "sha256": "c2b2c3267be32cc6fe7c430e83332f4b1e16d4e0a16441d8921b3d55ae6b688f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sim_agressao.json",
+      "bytes": 960580,
+      "sha256": "b4b23e7c33eb45fc76015f09cff68ad85bb837579be7059a6d15b8141693b9c8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sim_suicidio.json",
+      "bytes": 969351,
+      "sha256": "3ad6eb5795fe3f8e106fcd4c93b5793da100e1b2ef54c382521a359affa545cc"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_negligencia.json",
+      "bytes": 951086,
+      "sha256": "f30a76103939e05b330f0f5af0b536ff230c65663dc97fca6b71bfb35bdda9bf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_notificacoes_autoprovocadas.json",
+      "bytes": 982637,
+      "sha256": "282f760ebb4f0815a57f6ac27c4e1e1544c91c659494186a34ba820f54c01180"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_notificacoes_interpessoais.json",
+      "bytes": 986626,
+      "sha256": "a8fbc266b3e6ce1616da9d4931f5838b25aba590fe04cefd4a83cf4fdb6daad1"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_tortura.json",
+      "bytes": 937926,
+      "sha256": "6b2696ab996ea43a51dcd253539c517f2fe068b55941f9342a768994661909e6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_trafico_pessoas.json",
+      "bytes": 923827,
+      "sha256": "0ecf336e2556fc2d103fad77f28d9d0ed3367e56738123ca333901bdf9a672c6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_violencia_financeira.json",
+      "bytes": 931728,
+      "sha256": "d0c67904acf1ea481408310d0281da0a00716d0aa8a10fe348a04847666302ce"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_violencia_fisica.json",
+      "bytes": 980299,
+      "sha256": "f675a8d27b6c577a8a84109abd6dfc14968a18b7b05c439005436fd69f193ca1"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_violencia_psicologica.json",
+      "bytes": 963717,
+      "sha256": "aa3df1743dd4fcccb94f87e8882882b09354df4438f9bc9f2959b9e9891d5752"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinan_violencia_sexual.json",
+      "bytes": 957770,
+      "sha256": "6070e38f0883e7e0e9ac494de4bcafe599bee6a7036f9ebc9818ac6e82ed3325"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinesp_feminicidio.json",
+      "bytes": 679775,
+      "sha256": "38534f936023048778249103996f7b0b1dbd3fac0e41deec785a7cb5f675bb0d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinesp_homicidio_doloso.json",
+      "bytes": 689700,
+      "sha256": "6bb81d399a2619231d0f9d2f2affbd33e1bf6586f83a824010c7f5afb189a35f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinesp_suicidio.json",
+      "bytes": 699687,
+      "sha256": "df1a7d938fb1539823b79397254c6cbd91d8c42d42b82cfe1ad353c3438d9ac4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinesp_tentativa_de_feminicidio.json",
+      "bytes": 682948,
+      "sha256": "cc83437cac3dd8b0e501fc38d3a55b40e01deb885efaa143403073cb4a8fe7d8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mapa/sinesp_tentativa_de_homicidio.json",
+      "bytes": 698522,
+      "sha256": "93a37441c6f27a0e66b81f4b007807835ca4ee5ed9cec7cabab79480588441fb"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/mensal.json",
+      "bytes": 438729,
+      "sha256": "b23a57ca6668e3cf4fe6ab0a290af96a6684e87862fc30d80ae712b9750f5a63"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200051.json",
+      "bytes": 50282,
+      "sha256": "20cd81455742a080acd9881b586f391907b679a1e0b0fa7950da1319e56e983f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200101.json",
+      "bytes": 51949,
+      "sha256": "5de7b47de4467700dc69c36cb060c3739756ecb97d3654f18f2dbd4695902a73"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200200.json",
+      "bytes": 51315,
+      "sha256": "61bd7fbbd60f9f15ec34dddc5713208b4a87f7b23433443ecacf960ed258d725"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200309.json",
+      "bytes": 50744,
+      "sha256": "cab5b04644315fe02418780195e7e44bd1372b35e8d61c8a36b92857b2666724"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200408.json",
+      "bytes": 51141,
+      "sha256": "3cb1b231c82cb03afa9b7c3ca172a183324b067f0d9179d123c6c372728da232"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200507.json",
+      "bytes": 50799,
+      "sha256": "bff5413ca15c5701564cfa3d8d8e0ecc16783406448b024e23d6229da369b8bf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200556.json",
+      "bytes": 50321,
+      "sha256": "d54dde564b085f8390754ed361330326b6e8e03f2f14290aae535a1298d64397"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200606.json",
+      "bytes": 50951,
+      "sha256": "8c3d243fcfc35a0a3326911613f7d8fe7e535f07cd4d6d54b45c2d710e8d5222"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200705.json",
+      "bytes": 51287,
+      "sha256": "215cb74683974b75a2843c5098e12f6cb46e98188b9eb6999512f59f005a0506"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200754.json",
+      "bytes": 49899,
+      "sha256": "2ad6a46c80574603aeb6a794b2d5e064c5342217a83bb724ac02d72185fe6b83"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200804.json",
+      "bytes": 51035,
+      "sha256": "d746a9812b8d8af7eff1fe6de71fa6b65e69ca0d812b9cf815914beaa9eb13ef"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4200903.json",
+      "bytes": 50876,
+      "sha256": "6209d88769edc7d3d362a5c9c0977064e1176d9bb533f21ac4a88593fef03121"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201000.json",
+      "bytes": 50447,
+      "sha256": "5ce8a84f24436d2e9888889eb8a487077c8c2b78e5c92f00fb5e2affb8991e7b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201109.json",
+      "bytes": 50225,
+      "sha256": "52f24a6ff89aa5139b259a38d11c1dac4bf159330962e57d867f25bf252742b7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201208.json",
+      "bytes": 51058,
+      "sha256": "d296371c5e1df2afd162efeebfb3f410aaed90c96bb594896ba94e9a2b87a380"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201257.json",
+      "bytes": 51429,
+      "sha256": "1b43db30c6d8a13d0bdacec3943ba72a8f3ac7d412a04fd32511a274c7415b45"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201273.json",
+      "bytes": 50457,
+      "sha256": "389d57adc947ff1acbc84b333df9a5ff06c4f66297e2b186bfcd926a0f6a4280"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201307.json",
+      "bytes": 52424,
+      "sha256": "da94513f6308f5a3bbdb89d5d8e3f7780ae7180b810e00f5d07fb7e4adc85002"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201406.json",
+      "bytes": 52500,
+      "sha256": "327a7c61773d9f5ab6254bdde13c4bb439bbffc6b73a7cbd46d3ccc63c6bbae7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201505.json",
+      "bytes": 50813,
+      "sha256": "8f1d78b7770cd7d082264b05ce02a783de7774a88bc07cfa4dbd45e9ccc5dde8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201604.json",
+      "bytes": 50610,
+      "sha256": "3dc21dd404ee1ad238cf8ddc93cd5a170f5a5d4bc9d8b9b2dc503496a3c8f0fe"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201653.json",
+      "bytes": 50308,
+      "sha256": "4a7f0cf6445fb154ff674b105e3da5f8bf7109f0b72c65c6b0cde7bfd93f07c4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201703.json",
+      "bytes": 51360,
+      "sha256": "fe22244d47c3da51be50b2536aa9fe1b3da16b9c475dc5e0f702dba749cdeeb5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201802.json",
+      "bytes": 50805,
+      "sha256": "2b2ffecb0c38c7588fa8a4cd9ec557e9f8a31a4031f2f78980a5aa1fbfdd8d99"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201901.json",
+      "bytes": 50829,
+      "sha256": "076e7b7e9d59493b85218fb0a94355cc57a1f609ac25673f980fc12c0d6e6d9e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4201950.json",
+      "bytes": 51783,
+      "sha256": "f2ac12debc5a05d4a933978f13c879ac294508d657bf860ccb99ddf3a0a64473"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202008.json",
+      "bytes": 52714,
+      "sha256": "9406a75b8a6447a3bc9c1edc221550684f199c6cbe72275e1ca053bd898d1ded"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202057.json",
+      "bytes": 51921,
+      "sha256": "9a62653505b6bbbacef34a6497cd976bfdb43121d7eb8d795f201a4675dd81d7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202073.json",
+      "bytes": 51617,
+      "sha256": "d24cf86776261cf1f3625ccec5bc6563809ff647adbff049c1fa00dbfc567589"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202081.json",
+      "bytes": 50929,
+      "sha256": "9decb13bbfc985dcad7687ee1610f27e60ca3acde66d7b018976d95bbeacd376"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202099.json",
+      "bytes": 50342,
+      "sha256": "d24907c11c3b982dce9d777a7f27bffec3f8cc8734b1c37cf1a3431ff1cb65b9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202107.json",
+      "bytes": 52341,
+      "sha256": "f3cdc0c291682c0d5a4d494d287a318f1dc88b3157c3dc61a9f846c7114b2613"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202131.json",
+      "bytes": 50725,
+      "sha256": "5fa137e28386e8b1c12c29219b3ef2b166ef1caaf3be1f7af6d13296db8e74e3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202156.json",
+      "bytes": 50446,
+      "sha256": "10a6a93dfa4f885d6865eed4affcfc3698a11b0d9e572b59498cbf1108c4aecd"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202206.json",
+      "bytes": 51491,
+      "sha256": "fb5537eef237e8091f9dfe30d2baaeddba351baa1f5eeb0d269e8fb79f314568"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202305.json",
+      "bytes": 52396,
+      "sha256": "fbc5b2ef1052d6ac25120bca7da9763b3025be39bdeed7177dd858475470206f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202404.json",
+      "bytes": 53322,
+      "sha256": "30cec3415842b5cfc1bd28187b1d4c47191a2ba31889d9d03ab912b165751f92"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202438.json",
+      "bytes": 50515,
+      "sha256": "8dc41ba63e8eeb84b75f0ef2341bec3d97a1886980facb8efa56e4bcd2e25b05"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202453.json",
+      "bytes": 51936,
+      "sha256": "35635007c43a3c3cbdab50638fe1418fa6a5f212c816d52496f275af6c07a3d0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202503.json",
+      "bytes": 50635,
+      "sha256": "f83e18616908eb3dd23b1b1503f67b5c911c6030d9281a8d1f3dbbc4af5ad533"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202537.json",
+      "bytes": 50899,
+      "sha256": "1029707e4e66d2e8885fc489c6db0b318c6c96180cbeab0bc643c51da613a319"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202578.json",
+      "bytes": 50237,
+      "sha256": "44b3e503a2e19fef4b049c36f026870ae56c77ef60b4b8e32a147feb8196a0af"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202602.json",
+      "bytes": 51059,
+      "sha256": "af16b484caf67dea979d88c574a5b0192243b95e57a9c3383968e67fd954b4f5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202701.json",
+      "bytes": 50880,
+      "sha256": "2d8cbea6883ca4197a42ccb13c39d2dad5eea54804d843e89af2735819e98971"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202800.json",
+      "bytes": 52018,
+      "sha256": "1cb005ce836b0f44e012a36cfd952f1dd86281041a488b2642b157ce4865ed8b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202859.json",
+      "bytes": 50394,
+      "sha256": "b676ef57fafff50a3886f1221c4938b183167c2b4e069ae47bf00510f7168af2"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202875.json",
+      "bytes": 50675,
+      "sha256": "9b360071b9a2fd84b384741a0b74ef4f0729d3d606f87a83e9668e4bf02639b2"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4202909.json",
+      "bytes": 52733,
+      "sha256": "67a8d92e1447f1845f5ff9b91793ff72fc15600e08958df594e920cdf44b5d52"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203006.json",
+      "bytes": 52508,
+      "sha256": "471a5138491b46cf9ade9b838b217acff87d3b99f92440c41b1f0e59bf9a6e3f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203105.json",
+      "bytes": 51278,
+      "sha256": "1f2a61fb7ed705f763b99af09c6cddcf7716ebc411b916d3a1e8696e8ba08a1a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203154.json",
+      "bytes": 50990,
+      "sha256": "8de6f34cba2a8bc5d5450977e90ca050827a2006e87f7317177bffce8bcce45c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203204.json",
+      "bytes": 52558,
+      "sha256": "83a62224bc9c5b38a5c2fa2a2d38361051aa2c7afbffbf6631462e527c71ca9d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203253.json",
+      "bytes": 50631,
+      "sha256": "b7772ccd6469cacd27b05cad03e6dc1aa3164209a7f47d376629eb5edb0838a0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203303.json",
+      "bytes": 51407,
+      "sha256": "832cf4532489caf8eaeddb27bdd67873fe6091ff9318ff2ffbdebfa14da8f0be"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203402.json",
+      "bytes": 50991,
+      "sha256": "1d33e065a9c2531e56b649f400dca07fcaf7229426a33dbca3ad8561c7ef22da"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203501.json",
+      "bytes": 51093,
+      "sha256": "81c9657ffaf5e113a29fe0540695488d99953af1404f0ade84db082f140a3f97"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203600.json",
+      "bytes": 51800,
+      "sha256": "152408749d58a0e2923911ddc2b3f1785fff71d28f8af22e169cc6ee9c6c973d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203709.json",
+      "bytes": 51365,
+      "sha256": "061186f3ef7bc20b8368a244e00fc921829478e2b3ce11430d8069ee7990b5e6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203808.json",
+      "bytes": 52196,
+      "sha256": "ac754d0fe54c2203868e1e4dfcf06277b7fbd9018420557a7d659fb8cc382091"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203907.json",
+      "bytes": 51734,
+      "sha256": "414c42e7d478ea40fec826bdbc1e752f0af3aa5fd5f880f11ea1944f13b4b1de"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4203956.json",
+      "bytes": 52025,
+      "sha256": "5f394b0b86fabbceb7bdbb30c48b6ebf70f650c06608e7a9c9670a08b6e13e9a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204004.json",
+      "bytes": 51355,
+      "sha256": "283c836fd1b5448e9584f29a1e24f24f5f98c93d1d2cd8c4173f72b2edc2f323"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204103.json",
+      "bytes": 50984,
+      "sha256": "3d94982df3c04cb121d4bb72f9041070c85a612d73f93b0dfd9d99def39fd3c3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204152.json",
+      "bytes": 50145,
+      "sha256": "0332983b4826ef5f4583bf741e52082a942bafcf7c36ac47659dec9fb2930ea3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204178.json",
+      "bytes": 50592,
+      "sha256": "d60fea523278e1698cc82bfaa0a0b7e657fd08be038ed37e959b480275584f89"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204194.json",
+      "bytes": 50691,
+      "sha256": "c1f16ab9acc32c3499c833fc446db691386231a7c1e6543d47305e1f3e243593"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204202.json",
+      "bytes": 53193,
+      "sha256": "fe794d59a44b9c5da80746e1746f12981b05ebf58a35e959bd0f5b139fc61fc9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204251.json",
+      "bytes": 51605,
+      "sha256": "5a9457dfa05566b6aefc0ed00ec527b3775d257e76754ddf986524893d79f942"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204301.json",
+      "bytes": 52183,
+      "sha256": "330bc1a41ae33918e51351c43a1bcda81015ecadf46ae6a31d6d584a44df4217"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204350.json",
+      "bytes": 50865,
+      "sha256": "24678d16b8f522e2082636653f5429b90a68ae8698b70479c9e94bf100955a80"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204400.json",
+      "bytes": 51332,
+      "sha256": "7ee5246864d3746065d9089ee06d6487fe01e745f5867327e4b9c7b7ce6449a2"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204459.json",
+      "bytes": 50479,
+      "sha256": "4cd93cf3ff5b8e37786f80dcf09effbe98f0f2fba4fd681d8cba6a4a3639f3ea"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204509.json",
+      "bytes": 51223,
+      "sha256": "0bb1256d1dd4442fe8c926e0471a688f44040d889dbf700f5e708a8ff228cb59"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204558.json",
+      "bytes": 51265,
+      "sha256": "d70ff52c99d0bbee46b3feca70d0a68f5fd33753195c9d45c2463561ee97141f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204608.json",
+      "bytes": 53582,
+      "sha256": "9f8a3be4eaf152ca835b1c81c39c9f4aa1524f848eeef39a6723df762c07ebc8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204707.json",
+      "bytes": 51289,
+      "sha256": "2a4b5476e2f85c41b93d6c7aa3a7f389125103af3a422b36b0e44438db21970f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204756.json",
+      "bytes": 49608,
+      "sha256": "9d099037897df8a7b46ce91457085dc2b00156574a83c9073a5ba4fbe23c6b1c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204806.json",
+      "bytes": 51838,
+      "sha256": "5fc98c3848f5148534cd38480aeaf96071bf72214d9a3d2f3efb3b00fc8fd8f5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4204905.json",
+      "bytes": 51039,
+      "sha256": "cae99a2d23285ecc69843e1f51e959576d98c15badc7950a5ce82d3d1cb65044"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205001.json",
+      "bytes": 51859,
+      "sha256": "7651d812b5db170e7e562ed31091f2c13d0a79751314325d44fdaabac7aedcc5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205100.json",
+      "bytes": 51120,
+      "sha256": "ded5d46868b94532c1b5cc819d6f67d996c2088b90c7464f24391ae95e9b72ee"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205159.json",
+      "bytes": 50369,
+      "sha256": "dba6b1feefeff96e73208869da2ea3cdcd8df8aab2af77661ed2f500f289ce29"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205175.json",
+      "bytes": 51506,
+      "sha256": "025011a033e07779f3c502ef8b61c85faf5323bed4ea441d6109d37d795379ab"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205191.json",
+      "bytes": 50366,
+      "sha256": "b473459ffbb803790adf416d6fb5a2fe6124492b247e8252f3872657e2b69e4c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205209.json",
+      "bytes": 50723,
+      "sha256": "0b3e7b06bb23e9e63a8f40db026476841755c72a57d57da112a332687247f874"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205308.json",
+      "bytes": 51357,
+      "sha256": "29f70bcd507979d63b220653079723bf356b5a60b29ce53102348f7467335b85"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205357.json",
+      "bytes": 50533,
+      "sha256": "5974b856bd0be2b19f23ccfd4dcd36410143f29447883af830d3a5a9dd4fe9ad"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205407.json",
+      "bytes": 53517,
+      "sha256": "3720397626bc04f3979eb9e0f0b6fa1e9f3730b6a9762946a86e0e414ab26945"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205431.json",
+      "bytes": 50401,
+      "sha256": "48593a31c1e69c4b83d62d6efa48ebed64e26c7553c62848d3b3b934b9de7653"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205456.json",
+      "bytes": 52342,
+      "sha256": "fcf21cf68ac04cdb883cbc2b65bd76618f87fe3aee29c26bbc318085fde7dd5c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205506.json",
+      "bytes": 52316,
+      "sha256": "da02a321b7822dd0c89c0974c973de3eaa5020632129f20c509b246f59384d93"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205555.json",
+      "bytes": 50250,
+      "sha256": "1b816980afbc3625c9e2cc5ca6c16163069ac04047f06c032302557505788cac"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205605.json",
+      "bytes": 51117,
+      "sha256": "fe5fa06351b763a30a4a0097d6f81acae4c23906de86422363a33267f64fb092"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205704.json",
+      "bytes": 51946,
+      "sha256": "321614b84c6f75d6e55720b72a466a4f820091603d882504913c888232ab61c0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205803.json",
+      "bytes": 51861,
+      "sha256": "544b0f4d9140e5941cda541d05fb6caf5c7f09c45a113d2a8942dadb3bc4409e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4205902.json",
+      "bytes": 52513,
+      "sha256": "e609ba613b2d84b3bad477143bd60f71e70de0303550c5bd65720af384ca5797"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206009.json",
+      "bytes": 51264,
+      "sha256": "026f42dd0ea8dd9c552d0adcc47d7a30f6818183cff245edd4b4ac8d9a1b8b6d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206108.json",
+      "bytes": 51059,
+      "sha256": "200db844d6b319a736822720829a1be8180299a2b2fdbbb60b93113050f67949"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206207.json",
+      "bytes": 51077,
+      "sha256": "b68b1ebd1ac2b2d26e25fe2e60255c46c3447f624e1dfce3782f02037a155df9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206306.json",
+      "bytes": 51812,
+      "sha256": "f5c95301198709615c0273507e305d6f28f810423bcfc53d87744b0ca8bf8034"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206405.json",
+      "bytes": 50912,
+      "sha256": "230aaa12ecf4c124fdabe28dc4d62f5cec20bd07a7b24b96ff400f3d9a32d7c7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206504.json",
+      "bytes": 52294,
+      "sha256": "4c2e50e89d193eead3caf6c0582550d89f79a152d0f0ef9382ace1208f04ca9d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206603.json",
+      "bytes": 51327,
+      "sha256": "afaa45de7e91ba3479a699a234d13ae0c6289956e175d63b9c96a65de58a8a2a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206652.json",
+      "bytes": 50991,
+      "sha256": "e81c616a82ae108044574dc60f84f701700a04f0c79aa2f1bd1c82b7d490e19f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206702.json",
+      "bytes": 52098,
+      "sha256": "301ed2b5ddef0175908ce4fd7c1a2213aef6a71476e43ce245bd6616db5f6c6e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206751.json",
+      "bytes": 49776,
+      "sha256": "51879eaaee069d5e97f4c3d4883c2f30ed9a2b00f624f1a1e6fb71e38e8e1218"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206801.json",
+      "bytes": 50390,
+      "sha256": "922473a1a1a0057eeefde4cf280df2e20cdaec6d8088cbb5999ca0d02bd8c69c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4206900.json",
+      "bytes": 51696,
+      "sha256": "44ee914e508347685996934515d6882c6b268a95c767ede557d2592573d6f14d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207007.json",
+      "bytes": 52264,
+      "sha256": "a051fc2515af9bfa5ee0c0fb6158bd2ae416517457c541d1f4bfafab102c1da1"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207106.json",
+      "bytes": 51666,
+      "sha256": "fc9a52243a6469e041673e7ceaf4a0658833a7a59f4df3bad7d8f208e79bda42"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207205.json",
+      "bytes": 51135,
+      "sha256": "5c16b6013f55af186f40412c07ca30630f352a19a12e58be3e891d06607e5671"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207304.json",
+      "bytes": 52043,
+      "sha256": "de517c63492c7f94d09d0f90fbdc9a0de78d8036cc36a13465642a3d00e408cf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207403.json",
+      "bytes": 51192,
+      "sha256": "32983b318846e64a9b44168817a7de0eda034350e1db285b7a5d4c7a6e048c42"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207502.json",
+      "bytes": 52112,
+      "sha256": "46e2ac10f3f7b86679d57e99e68259bc59327bb2788fce0db8d56dfb5774ef16"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207577.json",
+      "bytes": 50505,
+      "sha256": "8a90564ca8b9c770f9d827facab4bb19443f09f1020003c33b705200f38b8f2d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207601.json",
+      "bytes": 50486,
+      "sha256": "3ed2fe07189959aac241ba408d6a8a7192af59933debc5045d7a56a68211c50e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207650.json",
+      "bytes": 50967,
+      "sha256": "3f0235cb17a666b278125e993f1168d1b33d823694fd9c01998ff8df60a63ea9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207684.json",
+      "bytes": 51823,
+      "sha256": "cdbd609e51f64c23e4c00788b93ef99cbfb1d79a4575719b684df7ca60f2d60c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207700.json",
+      "bytes": 51088,
+      "sha256": "70dd146fb322f4f51cd5773e6b68652e32d036e38a78c5acf769431a19d22360"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207759.json",
+      "bytes": 50520,
+      "sha256": "4755abc0b59fe92b7962c18853753a98f95bc11f5425631fa1a5c4dd8061b0ef"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207809.json",
+      "bytes": 51401,
+      "sha256": "3510a7ba028be6f449f08c6c1a72dfa9ede6f608a0ab319bf17b4c748b0ad5ef"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207858.json",
+      "bytes": 49887,
+      "sha256": "9b0c3912319583c2c24c6f0ac15169f5820e2718ea2e2544f68792ef13d180fc"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4207908.json",
+      "bytes": 51288,
+      "sha256": "ea1e20fe3ca264cc971952dcd2cdbaa15a0ad911d649a5df58a63464bbe05c7a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208005.json",
+      "bytes": 51158,
+      "sha256": "f7d34aab44ea4e9dd219820d789ea099ea7f38d453a16d1c53aa8db915881992"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208104.json",
+      "bytes": 52280,
+      "sha256": "b1d34a0c72a8b96ee620b8ba41576bdc0e82eef16313cc8eb48a81d2321f8e0b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208203.json",
+      "bytes": 53497,
+      "sha256": "f2ae5a4c4720ef27ad014a7423cb1b69a4b1bd3a2624a80856cbfe904bdbdcaa"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208302.json",
+      "bytes": 52289,
+      "sha256": "0638f4af072e5ec2d35b963b9467b6611a1ea0bc3b57106728f82decc71b249e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208401.json",
+      "bytes": 51573,
+      "sha256": "b5052a0232e6425a0500f4c7eb5a93842af3bea6612c6ec479e41f10b4c239e3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208450.json",
+      "bytes": 52255,
+      "sha256": "3f158edb387bfb700b351399bed99d964092a0679b7edc7434a07e8510186425"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208500.json",
+      "bytes": 51815,
+      "sha256": "871340daea33e576eaf78a8a42e7c1ea1aa7145c06a380b9415eb3c2f5481451"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208609.json",
+      "bytes": 50703,
+      "sha256": "7f9bdfc5b6c4513f1371c26bb8fc520617c09a9beccd3f837f2e69af4b6053b6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208708.json",
+      "bytes": 51039,
+      "sha256": "d563855c3d0cbb2d670fc094da7a764d85d9003a1d90d22f9e1756e0613a1f46"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208807.json",
+      "bytes": 51851,
+      "sha256": "dfb86b0bbe4f87ceb0916ae1f97761a0456f38d0b3cdd25c3eba7f9a2dfeb5fa"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208906.json",
+      "bytes": 52569,
+      "sha256": "dac45efabd7c1b55a3ae6e229a0f5d04e69162e92cb7f892de150fd214b2d7e7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4208955.json",
+      "bytes": 49809,
+      "sha256": "afc004b59a4c1a82fbdf52a7abbe70896d0f422896c58c4e6194916f580a2040"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209003.json",
+      "bytes": 51906,
+      "sha256": "902d25e359e8f6fc80b84e04fab5242eebd3a54fbbbde8ce7e185993fc96fb77"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209102.json",
+      "bytes": 53691,
+      "sha256": "37d92955e42cd1ab5e9138881cf28d41de6b76c3a2e17835476bd387b824d4f8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209151.json",
+      "bytes": 51274,
+      "sha256": "a656117e7e78011629078cbeaf6d2a8f95657f852322df3cc68b084e55c6b2bf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209177.json",
+      "bytes": 50176,
+      "sha256": "164e5d3c6c88b43d2d3d687e4f9916e8d0c8da0c11033e7b4c08ad770d3b660e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209201.json",
+      "bytes": 50547,
+      "sha256": "923f718f8e0b49e82131e155bdb3cbfe86ecc99a17b64ec1489bce2ca607c218"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209300.json",
+      "bytes": 52650,
+      "sha256": "9f89c7d000a537edb15afde39df8802c92b6b30502684feaea12968a9b857b9d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209409.json",
+      "bytes": 52108,
+      "sha256": "2c51b06e46ecab1c71ff8e3a00d4b220a2fc3351513e4c07aa4dfa7d5589537e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209458.json",
+      "bytes": 50376,
+      "sha256": "28e34f036221e28a44f0addc0122325c6512306d1cc5590771ae5f696990d303"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209508.json",
+      "bytes": 50749,
+      "sha256": "ae6fb67514ac1edcaa7c58f3b3dac3b0fff79092010ff2144f57c05e6b0a1b23"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209607.json",
+      "bytes": 51470,
+      "sha256": "b008a06ae4ca1eb55998ebce6ab15dc49ee59e303f01a8d838ae9c630dd84d48"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209706.json",
+      "bytes": 51091,
+      "sha256": "05129bb58fa53d6dcd487c7fa4737a638fa574178cb246041672a94d5c4707df"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209805.json",
+      "bytes": 50487,
+      "sha256": "1e21a847e701a98da40c7816f79841b38b7e76efa0256c197f1daa667be2789d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209854.json",
+      "bytes": 51052,
+      "sha256": "b00f05bdf594965a3a37b9088dd5b05bad9edf502bfce2d52905e385e3b5f103"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4209904.json",
+      "bytes": 51402,
+      "sha256": "582f2ea4c535d5eb4bbdeac0f540a62f8893af3ac64fca4458d61152f6d49ce8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210001.json",
+      "bytes": 51719,
+      "sha256": "dfa5c9887f6eefa893195987c412b557fa6265f920be169b81f5f5ba6e399d37"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210035.json",
+      "bytes": 50806,
+      "sha256": "33c1ead7488d8f57ec8643267980e71763a60d6768af8604c4217bed65462fca"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210050.json",
+      "bytes": 49986,
+      "sha256": "f74372a3a05ab9374474e5eda1cff0db4390d08d52a28697d1f5bf1d09c315d4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210100.json",
+      "bytes": 52212,
+      "sha256": "f2e2760ec31bb52f37246b5daf20db01aac1023deb407f6ff0a1b4f966bfd4aa"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210209.json",
+      "bytes": 50844,
+      "sha256": "3930bd43c852b7cc0b7c343869f2a3f4366e207bd0c80deb51c70fe0f8ccd105"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210308.json",
+      "bytes": 50812,
+      "sha256": "99b87cbea3110fbb3b72706d21d8c8bc9b214c0622ef949b48ae9ab555c50566"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210407.json",
+      "bytes": 51142,
+      "sha256": "56992b8468b4c4df2f4dca156d1e7680622c0ce438d2038d2b6c0835e3c1af1d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210506.json",
+      "bytes": 51647,
+      "sha256": "836175dc987ae16649be7b892784749118afce1b3f47e1cf6a3c045e94fcb73d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210555.json",
+      "bytes": 50290,
+      "sha256": "c46dc4a3d9b8bbea380addea8a5692bff222b1430198ea92a86d886a924553cd"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210605.json",
+      "bytes": 51454,
+      "sha256": "e80c7f0b213cd11e44b523fd33b0d6942bcfce77b0cf21ade2966e6d3a14ec49"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210704.json",
+      "bytes": 50381,
+      "sha256": "7fa31d9a6190cf25c8c13853be4fcc37f51f8da3721ef95f1a761853da71f85f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210803.json",
+      "bytes": 50834,
+      "sha256": "fc5a30f2d1d5f1a33a433a25b593b42d611e570e0e389c7daaf86379351a3048"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210852.json",
+      "bytes": 50480,
+      "sha256": "e71c8c43079fcb00b5e8675db7aeaf7783e4255d15ef4556db7e68039cbd766c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4210902.json",
+      "bytes": 50717,
+      "sha256": "cf0cf0ead164cc2be589e3d421be0a8aedf13f027f9975236420d364fb714ffe"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211009.json",
+      "bytes": 51342,
+      "sha256": "cd4a4ba64ba9527aa46a3e323eed752f36d20fd1357cdb573fe74f3ccfe01d25"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211058.json",
+      "bytes": 51580,
+      "sha256": "797d12b889a6eabc7372f33f0d5c262d57806d9be8ae4e0046500352742ea506"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211108.json",
+      "bytes": 51083,
+      "sha256": "4683659c36cc92376ebaf48dbefa38b47e1c0d8f099826fc5e21622fd9a70bf9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211207.json",
+      "bytes": 51759,
+      "sha256": "448f04a9b9a80801fc0bd540d8b63d18aec9aec0660ef7e530bf2e86b12c5415"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211256.json",
+      "bytes": 50363,
+      "sha256": "0b8239df96452e2e590d831f75cb2b93c50641ed795e787b90fad5a964ddd2ab"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211306.json",
+      "bytes": 52529,
+      "sha256": "50de2cbb16b3201b7bc549541ce22341b98649b7a9f34722c2a36e9be795f4c1"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211405.json",
+      "bytes": 50745,
+      "sha256": "5413ecc7f9b0d5af33d31f4c012d1ed16653bf0bb00ee4ff63470dd7df3b3989"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211454.json",
+      "bytes": 51085,
+      "sha256": "ec04717803355395fe5dd07d605e253b5245881b599e3a5cd73a8a4c556ff06a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211504.json",
+      "bytes": 51178,
+      "sha256": "3eb1936db11d733ffedd848b37676224d79b467d9381300119213ed73c15ff52"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211603.json",
+      "bytes": 51630,
+      "sha256": "64752eb641e8e644266c69506a6889071796a0ce21445d4e8740b83a97fc4894"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211652.json",
+      "bytes": 50554,
+      "sha256": "69ed8118f20a8834fd9aa096b471dcd5ab144232b8d050312ac38a6b9e135b8a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211702.json",
+      "bytes": 51979,
+      "sha256": "2fcf23c1c97aafa21cf5b92ae3f2501c5aa4ee5a7e0b8c9a92ea9957b937bf7a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211751.json",
+      "bytes": 51338,
+      "sha256": "c7beb5d91522a42480af079217659fafca0a1563c7cf9f58f72270d4a358e22a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211801.json",
+      "bytes": 50478,
+      "sha256": "6c4d86a499bdc46f2fa0b4a065b7653cf38e67198821c005601f182bd5458329"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211850.json",
+      "bytes": 50699,
+      "sha256": "2da957e1e2857d8e2d496dd96289c17af7ae5e224ee64055fa1428fa4bd39baf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211876.json",
+      "bytes": 50395,
+      "sha256": "c1d79e70e64bb8166d832832b170c01a4fc679e68a938e82412a140ad9ba2bcc"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211892.json",
+      "bytes": 50761,
+      "sha256": "956fd50a4d41d565800fed3057414deac6171b755a94e2c0e016efd1658a29bf"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4211900.json",
+      "bytes": 53030,
+      "sha256": "47e66aa298a8d08985a514ee1facccc6b413a94310306e9276ce99777f78422a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212007.json",
+      "bytes": 51198,
+      "sha256": "d900a779d8692fa4e03a1f659f3540c998c62d75b5c3c137939a3da854914214"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212056.json",
+      "bytes": 50291,
+      "sha256": "4366a51b556427cb86327bb79c03d2f062aefbdf21afe54f4ef57fe95c9a333b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212106.json",
+      "bytes": 51563,
+      "sha256": "038d30bcd2380eb1791e51f58ffb7a91c6484c4da6b8d2f68b554af3651eb3cc"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212205.json",
+      "bytes": 51784,
+      "sha256": "8d2eb9c098082c82d600b1914f6f7c40b7fd3c579424767ed79c7082c1e4fff3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212239.json",
+      "bytes": 50780,
+      "sha256": "408e646f8abc576f54a5f4e65a13ca885e79afe63228778f7de306bb2cafa828"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212254.json",
+      "bytes": 51339,
+      "sha256": "a4ceb6d5a437c352c52026d23fc948bf2ff930231df57a19a3c7fa01d09be69f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212270.json",
+      "bytes": 50616,
+      "sha256": "e773d6e497065a7ff033727af878c4bf7cde2441213e6ac2b79f349a08165a2d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212304.json",
+      "bytes": 50903,
+      "sha256": "567eeb294cef1dd1b292c57ba31f7f4eb8f227f38c585305d7ae07dd248760ce"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212403.json",
+      "bytes": 50631,
+      "sha256": "7180b28d00d72d828ff9537c6e8637cd7bf27a1e305bbc7b9db1302d3fcf2be7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212502.json",
+      "bytes": 52246,
+      "sha256": "312b7416653c3516fa1671459e1f510c7fb3ae32283434cc0aac5ada5146c042"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212601.json",
+      "bytes": 50268,
+      "sha256": "e3a74abdb2084061b2c3e99c2e90abfc2e21102ab16033895d40ea6bcf09bfc6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212650.json",
+      "bytes": 50910,
+      "sha256": "8d62deee2766a3949a737c1318442b104621ff016682e5a4937a7192a1bf76e2"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212700.json",
+      "bytes": 51002,
+      "sha256": "4b0c102626f79f8400fece462a53c9314d71c18aec77911665c0d1e5b3074b21"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212809.json",
+      "bytes": 52379,
+      "sha256": "7b63904d252e0be14c93da37fcb872773900024880ac9595ea273eda094abda7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4212908.json",
+      "bytes": 51934,
+      "sha256": "517896b53aef8b2facf4705ad1cd32eec117e457c5f397011d49c44b4470b73d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213005.json",
+      "bytes": 50759,
+      "sha256": "9ee65b21650522c6a170c0960054c15d7059e6cfacda74005a0e85d7e9998372"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213104.json",
+      "bytes": 50574,
+      "sha256": "b66eaabbae5cd290839379ea48ca1360c9d4fe62f3136e5130639c77cd3dddef"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213153.json",
+      "bytes": 50481,
+      "sha256": "197240f2a5dbad4db48cc2b38cc54afbbdd1a2e977e6c1b9db6a6c7a805abb34"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213203.json",
+      "bytes": 52557,
+      "sha256": "76c645ade7f7b7607e16855aa6c265ab13105c7a37afc220df6ce16c1fa935b7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213302.json",
+      "bytes": 50700,
+      "sha256": "8a79f6651429400d6e94161c9394ae75eaa31a434601ddd8484ce6e9c6f8429a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213351.json",
+      "bytes": 50355,
+      "sha256": "075057d66cc0f1dd722288596266a4e477ddde31cea4a137d86919acd8f96cdb"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213401.json",
+      "bytes": 51625,
+      "sha256": "9cbdbe5e4e9ce281d0721903f44361892f59492beac6e991811bdbd26e81aea4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213500.json",
+      "bytes": 51940,
+      "sha256": "1bb00bcd817abcf459d695c3465ea4ac47c321e5c19425319a17f3fd680c6ff9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213609.json",
+      "bytes": 51867,
+      "sha256": "db2f3248e301289cda4daffc2d24701a278a9a31e91e0d253379c42a51d39875"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213708.json",
+      "bytes": 51997,
+      "sha256": "928f2d6ef08a475d61e95fb3acb753a49922d5b7566076e0df956e5bad324202"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213807.json",
+      "bytes": 51027,
+      "sha256": "9ac96a506ef3158b230c9dc2e4cffba52b3a90712e50171ce13b898cbb987b46"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4213906.json",
+      "bytes": 49952,
+      "sha256": "5ba901c9314bfd4bc8a9bab3d79045772319563d4dd8979caded336b2762f559"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214003.json",
+      "bytes": 51902,
+      "sha256": "9514bb770e9dbe634d6703b445c013c34d067eacfd64cc8b0fb6df426d50ece7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214102.json",
+      "bytes": 50722,
+      "sha256": "1f142def685412c111cedc9f471e2517fdb61d682130da11b6b0d85da8a03349"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214151.json",
+      "bytes": 51062,
+      "sha256": "d2e34e7dac42cae43a95c4113fd72d0b7a649f7fe45c119511eda965d68c1e47"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214201.json",
+      "bytes": 51268,
+      "sha256": "f1246c30b51f60e4f2dc68a8a6de1b82f75c5f09fa4d9ca2ad425276def01abe"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214300.json",
+      "bytes": 50446,
+      "sha256": "708b1a5db1f7d258de145fd3b7aaa0e451fa51f8d50d968f09e4e2d6e6ba9282"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214409.json",
+      "bytes": 51111,
+      "sha256": "fafda631b603234dbde7caf4dab451ea444ae54f2a5f09dd22302806d19d5839"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214508.json",
+      "bytes": 51148,
+      "sha256": "dc35eddacbb021475ae446e8458e3ef6f15090bee84788ba10c800d159fe37bb"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214607.json",
+      "bytes": 51136,
+      "sha256": "08670eb9dc5a4f9ceaa5b05257287c5d3f0a3f3d74516a70bff0d06fb7d5b689"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214706.json",
+      "bytes": 51219,
+      "sha256": "b2d9712b7309bc6b4a1f8db4998dec69646fd591074e02447c7048c22c7fa1dd"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214805.json",
+      "bytes": 52033,
+      "sha256": "aaf5ec8cf643401a6cba6b538f449ea3cc254584918fe63b964db9a1073f6b40"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4214904.json",
+      "bytes": 50756,
+      "sha256": "0a32bffab7696d682a07fc4f279e39194b3741bde693eb32cdb3d8ea85a3629c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215000.json",
+      "bytes": 51933,
+      "sha256": "973eee97051200d3d04548b0ea23283246de393868294c5f4445c7afc75f355b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215059.json",
+      "bytes": 50197,
+      "sha256": "ace72bd3c1c9f39ec251463b341ba1f9308947d3341f78619468f209f12dd94e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215075.json",
+      "bytes": 51078,
+      "sha256": "c68b8d527fb4c6f58a1088979cf961b7ddeaadb9d653985159876c7cb1bd85f7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215109.json",
+      "bytes": 51470,
+      "sha256": "76325bd00480cc72b3893824c6c88078334829e035fa3c746ea95f541e05960d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215208.json",
+      "bytes": 50541,
+      "sha256": "484a92502b45a9f221c9cec26146b95ce5e25178f8bff6ab51b6d4a09bf14e07"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215307.json",
+      "bytes": 51251,
+      "sha256": "b3826cce206ebcef1d1102e7b127c6b154f4e8fe2ad0b49091c5f9267153a76b"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215356.json",
+      "bytes": 50558,
+      "sha256": "be43b677846cb83ce0063336d304dcb3b18eb75d847ddbfdaccfa2e86cc81385"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215406.json",
+      "bytes": 51130,
+      "sha256": "973a5b9d929527c060a3055a9abaa21f38db510ad3be8ede315449d2f8c55a20"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215455.json",
+      "bytes": 51368,
+      "sha256": "df41b40fe2dcd23ecbcf42ccc3afd796ea4b44fbbb7a26500dc9bbee1de31380"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215505.json",
+      "bytes": 51531,
+      "sha256": "027122aaef2cfb698f0937e64be109435bbf6906375b41afe9efff53ada30aec"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215554.json",
+      "bytes": 50189,
+      "sha256": "64e274c89d7a9d1fd5b60ccdd4456ed597400a651b4c99b5d0dcce4c0a9c0d95"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215604.json",
+      "bytes": 50512,
+      "sha256": "876f2757ac895301ca25cecf08ac97275b5adaaf4abf2e79ec79f691cbb48161"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215653.json",
+      "bytes": 51050,
+      "sha256": "c61eb27be6e9307e2b501e1092e882958d98d5b4bc4cbcd2654b41db94f11a72"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215679.json",
+      "bytes": 50762,
+      "sha256": "85d90f6cd9864f9fb7182f4b21544d6c21442740a43e4a7392356741cbe081b6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215687.json",
+      "bytes": 51029,
+      "sha256": "e8ecfc85e7b864dad37163d635be0e3a902ab0f015f5c5cfb0601e8f0b217ee4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215695.json",
+      "bytes": 49628,
+      "sha256": "513c875d1957493ec2b47f7a93c61c5dd686eaaca54304e1161d5a3aaa8c49b7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215703.json",
+      "bytes": 52224,
+      "sha256": "cce7a0d92aafde118b36d855d4a09c2fcee0f042df3924955d21b8d6fcdc66ad"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215752.json",
+      "bytes": 50332,
+      "sha256": "efd02e1f4144bce5b7c2c4f52360d471620bc6db888cdc6057900041a723c2b6"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215802.json",
+      "bytes": 52222,
+      "sha256": "e0571ffe0e1deca0326dec48aef6384c8b6d9a859801af6b1b663e11a0977f6c"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4215901.json",
+      "bytes": 50563,
+      "sha256": "cadb4a463de0c0b4afff7601397c2957cb0192c204efe76dc7a4d5a5fff0a0e8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216008.json",
+      "bytes": 51157,
+      "sha256": "7fb87988f45a3ff8ede9d83e6e9d7c4ec2adf07968b7d0e854d1acb0af7aa887"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216057.json",
+      "bytes": 50906,
+      "sha256": "6df706cb08340b4a5992b2c27dbbb3fc0c52a7a9ec7190e5dfaedfb9c70353a8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216107.json",
+      "bytes": 51081,
+      "sha256": "fb5e0cce3374879792a77fe01be6ff51de8adc8c798c785fd5aff21a85664fdb"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216206.json",
+      "bytes": 52403,
+      "sha256": "950aad84039ef2353ec59625d62182cf51ad3694a70763d625eb2a3fd91cf175"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216255.json",
+      "bytes": 50441,
+      "sha256": "ab2fa659be16cfb6c51e6f8b7ecec258e91557dce06ec77f574cffb2f37f4ea9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216305.json",
+      "bytes": 51971,
+      "sha256": "abf1986ef3d8e22a42ed906ab9ffb3fc49b6eb8d5b0d700b90abe6362cd675d0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216354.json",
+      "bytes": 50662,
+      "sha256": "9d488b3fd48c35bd30b04152e06801e0d3a7682dd235ab87a429e56e607cb81a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216404.json",
+      "bytes": 50839,
+      "sha256": "ac9234f80b3988a7878b3ebc363e3e8ef6b52cfaa0b131fccd8803cd6a494d6d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216503.json",
+      "bytes": 51835,
+      "sha256": "e0b6628eec95a02b4bd663b24335df05b460499f5f41047fc34380871cd99b20"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216602.json",
+      "bytes": 53438,
+      "sha256": "69dca53e70170a759ce3a54fb127e8f4a13c7f133f71b84120ab144cfc393a23"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216701.json",
+      "bytes": 51768,
+      "sha256": "eb40fa00984c5f47bed1ef5ac7eee59e0578545ee703b296e4b9767820d7cdd3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216800.json",
+      "bytes": 51030,
+      "sha256": "614283faa5feab48c33b43d775b84d4f49de17406592f9633cd12655a176a7f7"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4216909.json",
+      "bytes": 51579,
+      "sha256": "fe3f2476252fb1314b4fde642d70cb41dfe1315f72e1bd4091fc5c24205bcf5d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217006.json",
+      "bytes": 51548,
+      "sha256": "b075dac91867877cceb885bac4e17ccd078465e1e2903f69f5c45b5780ea88ab"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217105.json",
+      "bytes": 50406,
+      "sha256": "545641d721cd6956f0bce94ead62d486e5da94e33dc441552b9ce215adf5370d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217154.json",
+      "bytes": 50415,
+      "sha256": "c1a8275bd7bdbb6d6100764e40d2e455d69cc9b65dac2238c419145d18503d02"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217204.json",
+      "bytes": 52455,
+      "sha256": "012767a730154dfc0f40f89aab9d394f1b2c969452b9f5b197fb23cb6a4ff2ba"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217253.json",
+      "bytes": 50712,
+      "sha256": "4656ed7537bea1788f8671426a0fd53d72ffe42ef3305881c1a6bba3484a9d52"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217303.json",
+      "bytes": 51129,
+      "sha256": "e4bfd7c5a73f09abcb73d74fde8871c3fb05371416edcc599c17b084b8099b92"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217402.json",
+      "bytes": 51804,
+      "sha256": "4618b693717d0413ceaf5288e677f9ab147e3b06e15621b26de4b3347f145b39"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217501.json",
+      "bytes": 51634,
+      "sha256": "164cdb1d0c56a2f0a9cab208e38172c29f6e6ed699158e0d9cec27da863a1877"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217550.json",
+      "bytes": 50045,
+      "sha256": "5418e6e76055a372f94a71a6123841a15b27be218ddc9c40d14a3ba8d818ae4e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217600.json",
+      "bytes": 51561,
+      "sha256": "48a62cff2e02af0d6f90137b50551e99116e6ed06efc42e7ffce7de8c744f99d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217709.json",
+      "bytes": 51999,
+      "sha256": "527bc60ca7d07f0f1d46b269ad1d664bea76caa5c7dd08483a9b88527ebec0b1"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217758.json",
+      "bytes": 50421,
+      "sha256": "6b8552b8cca8a7b8d80671fe4bdb42e169235175c302f839d6e5770072f94e16"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217808.json",
+      "bytes": 51481,
+      "sha256": "198d0d7be6fea1ffa878de007d8bfd6bf66b4aaf199d9b840dbe321ee206c891"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217907.json",
+      "bytes": 51111,
+      "sha256": "e99489f4ad4bb4531c604d4f53bf781ec2536c0950a3e4e8a1f43b2680de55b8"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4217956.json",
+      "bytes": 50629,
+      "sha256": "62fb4a6ddf1bc0b16e5a0d4647c0ec78ce0c79180e98c8000078dafbf5baa000"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218004.json",
+      "bytes": 52151,
+      "sha256": "e0650f20539d99e2c073125bfc5b144b5246df8a3e3f54e90fc9e986e6a7ed19"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218103.json",
+      "bytes": 50833,
+      "sha256": "722fc876f8630c86362ca39d9db78bcb5ab7d1ef1c0ea09fa14c6cbba4449b93"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218202.json",
+      "bytes": 51935,
+      "sha256": "f51326a8c41d81c78e62cbf79a2781ba95fde2eecc5424577647adc10ff38601"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218251.json",
+      "bytes": 50849,
+      "sha256": "a720e7e649b9c08d895179a7f76fbd4423e747d7e6cdfee629db3f46d1b63c3f"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218301.json",
+      "bytes": 52179,
+      "sha256": "27a8682bd1c3c73f8c754f7943c3ab38ac1e046a35d271a5ac8d37bcdb3e34a2"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218350.json",
+      "bytes": 51245,
+      "sha256": "aff5298f412afafad6cbf38f00ff157bb6f2488d3e0c1a1e68dd36bb1ec6f5a3"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218400.json",
+      "bytes": 50847,
+      "sha256": "44bcd273268b708505656cabe2fcba6738a24ff7c7a3d50006dba201fab48077"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218509.json",
+      "bytes": 51009,
+      "sha256": "a1b84f17f45960504c97d579fcca0b96d8b2c08a99ac911cff6ad85ce8ecf6c5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218608.json",
+      "bytes": 51577,
+      "sha256": "e5b6a5e6965a7d89ca73d3519e8c16b0e0bbdcc54bf4bcca0340f54a4073d6af"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218707.json",
+      "bytes": 52601,
+      "sha256": "c820031b28e38ca7e7dc0a9e3d250db3ed1888b28d60680eb41b9b6d980814b0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218756.json",
+      "bytes": 50918,
+      "sha256": "3316ecc95f837a60a3826f90dfd0ed1241fb941b6f4519a2882d53348d40f9af"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218806.json",
+      "bytes": 51159,
+      "sha256": "69e6d03d6c57602d0851f1122b57b88248986f976b1bb79b16ff568f4de02528"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218855.json",
+      "bytes": 50149,
+      "sha256": "1197d2d0abfcafe7e4ef0d84d8c8eeba193ce2fd9d5bfffd37485347d75dc566"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218905.json",
+      "bytes": 51319,
+      "sha256": "077b8c1683adc4cfb12dc55923c6dcbe018697a5224b82f39ade0f0dac40e8e4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4218954.json",
+      "bytes": 50237,
+      "sha256": "ec06625066d4ba311ee1e9cf9ef3b47bc9cdc56d956fb3193a7bd19b78b19861"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219002.json",
+      "bytes": 51726,
+      "sha256": "09ca6f97b1adfa0aa8be854f900408ddcd62a9b71ff36a25f58dab00c3d7d977"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219101.json",
+      "bytes": 50735,
+      "sha256": "015284fb0e7203f147ae3877076d9e0d0a86c41cfb02f24d85555ea1ec22d401"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219150.json",
+      "bytes": 50522,
+      "sha256": "6757c6080fb00cce08f107b7f4f67ded93fa2102ce99d830bb32a6b24f5950e4"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219176.json",
+      "bytes": 51027,
+      "sha256": "4a49fda5433227a4fbecbf29080ad1f599b6f657a7bdbfc3a67a91168472e59e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219200.json",
+      "bytes": 50876,
+      "sha256": "9e7bb748ccfddb25e9180786a8ca6fbedbcaf0899c1c915b3cdb248c1e8e8fc5"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219309.json",
+      "bytes": 52154,
+      "sha256": "7b699d307519366916089ae0d9be150518f025ece384e937195dfb8a664c52d9"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219358.json",
+      "bytes": 50952,
+      "sha256": "1f05aa9119e1e41609a0ad08ea23fbd41c5155edd14af11ddb50db03ab4f4d3e"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219408.json",
+      "bytes": 50964,
+      "sha256": "d992b35ee0f6116eeb5c7146df095619e7a66c14bcd35415edabc971706e94fa"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219507.json",
+      "bytes": 52437,
+      "sha256": "1c35baf787917954105fed3a96b0eda7d37b9649113058cf2d31506a5474f05d"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219606.json",
+      "bytes": 50333,
+      "sha256": "7bb16f9c150a26f7d293d98efc3fd70cdf4a61bc5f2da10e94ca814e81beb582"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219705.json",
+      "bytes": 52095,
+      "sha256": "08c51734c5cae744dda90ae24421dd82cee3ac3c2adc284de48b939ee0ca7e95"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4219853.json",
+      "bytes": 50420,
+      "sha256": "552d5ff92791fec1834b0919c2e7e924989060e7bdec2c7641504e78963e588a"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/municipio/4220000.json",
+      "bytes": 51834,
+      "sha256": "2e170834c71196092deec451b7d77648725ca59fc9880785b6811f7b933a47f0"
+    },
+    {
+      "arquivo": "dashboard/atlas/data/nacional.json",
+      "bytes": 1879299,
+      "sha256": "697a71fb303bbfbcc3413b4bacdd8361297e6a508de20af95df61ee2c1b94df8"
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sim.zip",
+      "bytes": 359977,
+      "sha256": "e098e76de26a89f9cf8aa3d53f4bd9b330eff9915016f096629c31780604654f",
+      "sha256_conteudo": "547c41c53fe890c8bcbdf4a7ed8720c822a93bfcbfade849657206005bcd216f"
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinan.zip",
+      "bytes": 1041909,
+      "sha256": "281aeeb5af351417ba1df210c1b07baecc717c1eb4d551d679aaeb2f6fd890b4",
+      "sha256_conteudo": "0b5e71156ef34fd2b992df23cd73463c0e554e877d2aceed8d02ebd6bd8f2680"
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinesp.zip",
+      "bytes": 433560,
+      "sha256": "e1ede81949b4977c773ef636c55b6e7492a7d690809c1a7b5348db8001772aa7",
+      "sha256_conteudo": "20ea8ed620e179bfe3eb0806d70c467a8a2af3124076dc35d04d4b4dc8fb7dd9"
+    },
+    {
+      "arquivo": "dashboard/dist/data/analise.json",
+      "bytes": 318231,
+      "sha256": "5ebbea0bc6e847f72e4cbcb3d1d410bdedfab69331a3ebf0a0a6c1166b433659"
+    },
+    {
+      "arquivo": "dashboard/dist/data/painel.json",
+      "bytes": 4486057,
+      "sha256": "2850a89935cc4475936fc4160a2dd95955ba369086179567df225fab48e8e151"
+    },
+    {
+      "arquivo": "dashboard/prototipos/atlas-violencia/data.json",
+      "bytes": 16354252,
+      "sha256": "175520e44f61cf0b022ed570b4be844b31996d224c89c72d7ec23b623a73302f"
+    },
+    {
+      "arquivo": "data/gold/analise.json",
+      "bytes": 318231,
+      "sha256": "5ebbea0bc6e847f72e4cbcb3d1d410bdedfab69331a3ebf0a0a6c1166b433659"
+    },
+    {
+      "arquivo": "data/gold/atlas/catalogo_indicadores.csv",
+      "bytes": 18866,
+      "sha256": "2a1a342d34aaf0831f0bc9e9d35294ec9a650a506fe31ab3815325c048d6232b",
+      "linhas": 48,
+      "colunas": 20
+    },
+    {
+      "arquivo": "data/gold/atlas/matriz_disponibilidade_fontes.csv",
+      "bytes": 874,
+      "sha256": "2c10afa97cd434ae9054b0ceaeb51a8067cddf7db1324ecd6494bd9fcbfee059",
+      "linhas": 6,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/atlas/resumo_catalogo.json",
+      "bytes": 434,
+      "sha256": "bf0498a712a98469c214c807995aa91e2acc54a1099448b7c6d091f953f15c37"
+    },
+    {
+      "arquivo": "data/gold/atlas/sim_mortalidade_idade_ano.csv",
+      "bytes": 70755,
+      "sha256": "26801f9955aaa066f60092fc382c9f5d417f253c978b7d806c8aa690db0e02bb",
+      "linhas": 864,
+      "colunas": 10
+    },
+    {
+      "arquivo": "data/gold/atlas/sim_mortalidade_metodologia.json",
+      "bytes": 708,
+      "sha256": "f2588d6de91e93e595f251593624bc0862a34519904f0bcbd9fee3df19b90836"
+    },
+    {
+      "arquivo": "data/gold/atlas/sim_mortalidade_territorio_ano.csv",
+      "bytes": 4248595,
+      "sha256": "7659c0fa63da0c7fe88da3cf1bee06931faa56c98b313b227a31b1eb59582cf9",
+      "linhas": 46512,
+      "colunas": 12
+    },
+    {
+      "arquivo": "data/gold/atlas/sinan_violencia_idade_ano.csv",
+      "bytes": 183662,
+      "sha256": "f5d289a3539ef3c04391776b3facbd6d98057ea0bf38abe42f259dc1afaa367a",
+      "linhas": 2376,
+      "colunas": 8
+    },
+    {
+      "arquivo": "data/gold/atlas/sinan_violencia_metodologia.json",
+      "bytes": 1003,
+      "sha256": "1ae639caf0200a5dc94729ff23420495dbb686537f8f4b76d0c3b8d6001e11e4"
+    },
+    {
+      "arquivo": "data/gold/atlas/sinan_violencia_territorio_ano.csv",
+      "bytes": 12205616,
+      "sha256": "34b6ccfa6f51a3c99dd96374fe4275c039ee1618ebdd9cbd7196d7f21e9799f8",
+      "linhas": 127908,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/atlas/sinesp_cobertura_evento_resumo.csv",
+      "bytes": 1864,
+      "sha256": "9d5a7a31b8a5ba40c0f84212bd592c9951cf4ca3f0cc1da8eb2fa81c745cb63f",
+      "linhas": 9,
+      "colunas": 12
+    },
+    {
+      "arquivo": "data/gold/atlas/sinesp_cobertura_evento_uf_ano.csv",
+      "bytes": 222019,
+      "sha256": "01f12463d42836578b67957522165a3e377376bdbd22ac3cfbea84963805fe1d",
+      "linhas": 1944,
+      "colunas": 16
+    },
+    {
+      "arquivo": "data/gold/atlas/sinesp_prioridade_mensal.csv",
+      "bytes": 714792,
+      "sha256": "09575fc00f096edf66cd4aea2f2090075336b1d4123dd3f5babd9789e3fe3a75",
+      "linhas": 7360,
+      "colunas": 9
+    },
+    {
+      "arquivo": "data/gold/atlas/sinesp_prioridade_metodologia.json",
+      "bytes": 1631,
+      "sha256": "0ba84886a470b2df3d91ff733b278a298e9cc9d7c24a247f162dffa761542488"
+    },
+    {
+      "arquivo": "data/gold/atlas/sinesp_prioridade_territorio_ano.csv",
+      "bytes": 7306178,
+      "sha256": "1b232b3c1786dfa4bdf81afd47b05cf89361f674a43b81f649247e17dadeb8d9",
+      "linhas": 56160,
+      "colunas": 15
+    },
+    {
+      "arquivo": "data/gold/ibge/censo2022_mulheres_cor_raca_municipios_sc.csv",
+      "bytes": 23894,
+      "sha256": "b8ba29f069d55511ea784d9d9ef3d073f86b5c101067a18e107b3862181271b5",
+      "linhas": 295,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/ibge/censo2022_mulheres_cor_raca_uf.csv",
+      "bytes": 2291,
+      "sha256": "c7f9982d22ccd9eb877f63887b3605d4223c43d1448fc90240de907c29942f85",
+      "linhas": 28,
+      "colunas": 12
+    },
+    {
+      "arquivo": "data/gold/integrado/historico_integrado_2019_2024.csv",
+      "bytes": 338407,
+      "sha256": "3aa46281e391428b51bfa878e403c4ab6a41f2f5ff795c385b7361089c5043d7",
+      "linhas": 1782,
+      "colunas": 22
+    },
+    {
+      "arquivo": "data/gold/integrado/homicidio_doloso_feminicidio_2019_2026.csv",
+      "bytes": 87606,
+      "sha256": "2ca5d1fb3af741e12846f2a8218d8c19a4a69e2c95a1a89dfc264b4d0d8dea07",
+      "linhas": 224,
+      "colunas": 22
+    },
+    {
+      "arquivo": "data/gold/integrado/monitoramento_atual_2025_2026.csv",
+      "bytes": 271103,
+      "sha256": "5a4b60056ac1df6f19ea55e4e4a939e3b87bccbe0b31cb561d49cead79fd8bdf",
+      "linhas": 1485,
+      "colunas": 20
+    },
+    {
+      "arquivo": "data/gold/integrado/razao_sim_sinesp_uf_2019_2024.csv",
+      "bytes": 24773,
+      "sha256": "b209edff4d01e0ed32ef9093177ce067e1eccd4f6529cc669ad002a889d279e6",
+      "linhas": 168,
+      "colunas": 18
+    },
+    {
+      "arquivo": "data/gold/integrado/resumo_analises_sinesp.json",
+      "bytes": 779,
+      "sha256": "9586cccded868eab18e9802ee4f44788f19a29b01238b133371b4b04b95a92fe"
+    },
+    {
+      "arquivo": "data/gold/integrado/resumo_integracao.json",
+      "bytes": 1003,
+      "sha256": "f1d1cb50f9df7485f59db61d60cac93ed63b750608e4bfec8ae823a7256f0634"
+    },
+    {
+      "arquivo": "data/gold/integrado/sinesp_sazonalidade_mes_2019_2025.csv",
+      "bytes": 1930,
+      "sha256": "bd73716f6e5820db08831467f66d626a91f6f2a70427b66c32667c9c1bf451a9",
+      "linhas": 24,
+      "colunas": 13
+    },
+    {
+      "arquivo": "data/gold/integrado/sinesp_serie_mensal_2019_2026.csv",
+      "bytes": 18549,
+      "sha256": "b75b0fa92927e5dc2768ae26e4a1268992a04d16b5c13c5193a92b3552fead1e",
+      "linhas": 184,
+      "colunas": 19
+    },
+    {
+      "arquivo": "data/gold/integrado/taxa_municipal_feminicidio_sc_2019_2024.csv",
+      "bytes": 54286,
+      "sha256": "8324f088a109dc3dbe7bbcbfea4fd0f63f19a9c337077099fbf0819ddf4371ca",
+      "linhas": 295,
+      "colunas": 16
+    },
+    {
+      "arquivo": "data/gold/integrado/tentativa_feminicidio_2019_2026.csv",
+      "bytes": 36388,
+      "sha256": "594ddda1c8de62809fcb88384cda67f50cc4c1da773dd423a290e6a6d63514f5",
+      "linhas": 224,
+      "colunas": 21
+    },
+    {
+      "arquivo": "data/gold/integrado/validacao_municipios_sinesp_sc.csv",
+      "bytes": 26787,
+      "sha256": "d01dd8f74875f4109dd9acc3d9db104ada88fc100ab7e7565174018beffcb83a",
+      "linhas": 296,
+      "colunas": 13
+    },
+    {
+      "arquivo": "data/gold/painel.json",
+      "bytes": 4486057,
+      "sha256": "2850a89935cc4475936fc4160a2dd95955ba369086179567df225fab48e8e151"
+    },
+    {
+      "arquivo": "data/gold/raca/resumo_raca.json",
+      "bytes": 601,
+      "sha256": "c0687e4d83ecbad6a4bb750b3bc98bcc8379a3f45093831e136b9dece809d445"
+    },
+    {
+      "arquivo": "data/gold/raca/sim_raca_municipios_sc_2019_2024.csv",
+      "bytes": 206092,
+      "sha256": "9e372bd8b9f6258759d55c504c97056ca9c0e86a74104a9936b4ff90b4b99ebe",
+      "linhas": 1770,
+      "colunas": 21
+    },
+    {
+      "arquivo": "data/gold/raca/sim_raca_uf_ano_2019_2024.csv",
+      "bytes": 109414,
+      "sha256": "6b2a74358caba456bb728e61bed0e12f12a2869780c21a5ca7106a1f70a58306",
+      "linhas": 1008,
+      "colunas": 18
+    },
+    {
+      "arquivo": "data/gold/raca/sinan_raca_municipios_sc_2019_2024.csv",
+      "bytes": 213090,
+      "sha256": "42e0a0b1fc752f8593d76e7e5ffbf30fbcb52134789e3b2253a55eab9f4fd691",
+      "linhas": 1770,
+      "colunas": 19
+    },
+    {
+      "arquivo": "data/gold/raca/sinan_raca_uf_2024.csv",
+      "bytes": 18222,
+      "sha256": "c9dfba5a20d6a55ec5188df31757d902e631628d36216aa31b3d69e5119e8878",
+      "linhas": 168,
+      "colunas": 16
+    },
+    {
+      "arquivo": "data/gold/rais/emprego_formal_sexo_2019_2025.csv",
+      "bytes": 28370,
+      "sha256": "8ce5ca74c953e1b3ff9b870dfad7981573ada6470867f1b445c7936e125cdd1b",
+      "linhas": 196,
+      "colunas": 19
+    },
+    {
+      "arquivo": "data/gold/rais/emprego_formal_sexo_municipios_sc_2019_2025.csv",
+      "bytes": 46099,
+      "sha256": "e3228cb0ca66e9dcf899d297e1708ee5d3fa0998b3c0a4b5856b64366970862c",
+      "linhas": 295,
+      "colunas": 21
+    },
+    {
+      "arquivo": "data/gold/rais/escolaridade_mulheres_raca_2024_2025.csv",
+      "bytes": 147941,
+      "sha256": "eae3d6c612b1049cdf2740a28d539687585d8907068efa8de6ded07f5c33cca9",
+      "linhas": 2455,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/rais/insercao_formal_mulheres_negras_2024_2025.csv",
+      "bytes": 4096,
+      "sha256": "0271b52d73249f13c1a5692f05e22f62a07039bd6b1c5f17172302698afc9e84",
+      "linhas": 56,
+      "colunas": 13
+    },
+    {
+      "arquivo": "data/gold/rais/movimentacao_mensal_sexo_2019_2025.csv",
+      "bytes": 255958,
+      "sha256": "d0f8ffa7cf464754f084c534081efb1556f859317dfa88263905603e0a10a4dd",
+      "linhas": 4704,
+      "colunas": 12
+    },
+    {
+      "arquivo": "data/gold/rais/qualidade_raca_rais_2024_2025.csv",
+      "bytes": 3019,
+      "sha256": "6709c35dfcbd2390ea86e772a55989bf27afbe37f2f876ee866a2df252c9d5b8",
+      "linhas": 56,
+      "colunas": 10
+    },
+    {
+      "arquivo": "data/gold/rais/razao_salarial_raca_2024_2025.csv",
+      "bytes": 4813,
+      "sha256": "b4c971a163e5cdbee86a4da6364f3ccba9075bf9b858d069e3d2bc7b2e282ec2",
+      "linhas": 56,
+      "colunas": 14
+    },
+    {
+      "arquivo": "data/gold/rais/razao_salarial_raca_municipios_sc_2024_2025.csv",
+      "bytes": 28425,
+      "sha256": "36f7dc6e1a035ce064a76a869f8ce5ec745bc7b44e76410d6fcbaf51c55bcb9b",
+      "linhas": 295,
+      "colunas": 15
+    },
+    {
+      "arquivo": "data/gold/rais/resumo_rais.json",
+      "bytes": 610,
+      "sha256": "9df73cb91a05fe21d50c27b6444f205a536a047b5e602c7c9d5ff21bbd3409b8"
+    },
+    {
+      "arquivo": "data/gold/rais/teste_embranquecimento_rais_censo_uf.csv",
+      "bytes": 5157,
+      "sha256": "cb10bd91f39958fa8b118d15c940474dabb6bb31162145d085daeed1855293a7",
+      "linhas": 81,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/sinesp/sinesp_feminicidio_sc_brasil_anual.csv",
+      "bytes": 321,
+      "sha256": "74f15d3b80b72c36766b17a57909dcb46437e2a94036403e387d1124f5000ec5",
+      "linhas": 8,
+      "colunas": 4
+    },
+    {
+      "arquivo": "data/gold/sinesp/sinesp_sc_brasil_anual.csv",
+      "bytes": 41680,
+      "sha256": "962ba4ab98ac5dc27144a55a5c056494879414fd112b8d2280c559b975cb9837",
+      "linhas": 480,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/sinesp/sinesp_sc_brasil_mensal.csv",
+      "bytes": 465861,
+      "sha256": "f8911dd1b8e7a29ef34fc2fb688f9c781f2a1e691dc29ad3c2bf05b808ebb70d",
+      "linhas": 5520,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/sinesp/sinesp_sc_municipios_anual.csv",
+      "bytes": 2071230,
+      "sha256": "d68a62d1b317edb0d5d3d4904ec90673e8cb7b7814b6b5d229b985a3a2e7d534",
+      "linhas": 23840,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/gold/sinesp/sinesp_uf_anual.csv",
+      "bytes": 475637,
+      "sha256": "f6de9002a07f0aa6f02cca3c2d9697d6335845c40c26dc0e65964d3348ba5347",
+      "linhas": 6480,
+      "colunas": 10
+    },
+    {
+      "arquivo": "data/silver/indicadores_territorio_ano.parquet",
+      "bytes": 1258553,
+      "sha256": "300bd0980ba974889e48a81f046f3cfa4d9afc11c4489e67f69508efefd71805",
+      "linhas": 55980,
+      "colunas": 15
+    },
+    {
+      "arquivo": "data/silver/populacao_feminina_municipio.parquet",
+      "bytes": 465591,
+      "sha256": "985846f6597a17fb80cd73ff0b3731cbfd1abd5bcc1cfb7131a7fbc39f7066b2",
+      "linhas": 55700,
+      "colunas": 5
+    },
+    {
+      "arquivo": "data/silver/populacao_municipio_2025.parquet",
+      "bytes": 194160,
+      "sha256": "0cccb0f1f16204e1d9df94fb9229fbcc553ed52a1bb1f58285fb054bbe8a3ab6",
+      "linhas": 5571,
+      "colunas": 8
+    },
+    {
+      "arquivo": "data/silver/populacao_municipio_ano.parquet",
+      "bytes": 488597,
+      "sha256": "3a8c8822d36e7e883fe3e658a022b479d2f2234bf31034b2be800520a4659aa2",
+      "linhas": 55700,
+      "colunas": 5
+    },
+    {
+      "arquivo": "data/silver/populacao_municipio_idade_ano.parquet",
+      "bytes": 18381569,
+      "sha256": "d51a6704d895d0a5daf9cb12c0066c709474027d0dffa15398526f4a96ce385e",
+      "linhas": 4511700,
+      "colunas": 9
+    },
+    {
+      "arquivo": "data/silver/populacao_municipio_sexo_ano.parquet",
+      "bytes": 851309,
+      "sha256": "0bdc958c206c48a6b9dfb74601ebf6da1ca04a96c39ae1cbd4ace1750a41309c",
+      "linhas": 111400,
+      "colunas": 6
+    },
+    {
+      "arquivo": "data/silver/rais_escolaridade_raca_sexo.parquet",
+      "bytes": 929436,
+      "sha256": "c883d1f15ee599ddcd365dcc0723fb3ceb898aa55653b3e95df25d40a642f298",
+      "linhas": 28064,
+      "colunas": 21
+    },
+    {
+      "arquivo": "data/silver/rais_movimentacao_mensal.parquet",
+      "bytes": 387099,
+      "sha256": "96ac6c46202f0aa748fc0e5f0a90adbac8581edef318717f25b8ab93aecaf721",
+      "linhas": 30900,
+      "colunas": 18
+    },
+    {
+      "arquivo": "data/silver/rais_vinculos_raca_sexo.parquet",
+      "bytes": 831957,
+      "sha256": "8f7902f0db7b1c29b2a18d8deee99e7156671b8422915034c542d5ccd7d1bdc0",
+      "linhas": 26036,
+      "colunas": 21
+    },
+    {
+      "arquivo": "data/silver/sim_atlas_mortalidade.parquet",
+      "bytes": 8920182,
+      "sha256": "8a45923b27e4e4ad7ce7624efb0242e3df55710bc42afdfda231351a2044cf4d",
+      "linhas": 1101514,
+      "colunas": 14
+    },
+    {
+      "arquivo": "data/silver/sim_mulheres_agressao.parquet",
+      "bytes": 485164,
+      "sha256": "0fe253d971069e8164165065f844bff2def2d8710bb8e0fbca6cfe1c1f02b472",
+      "linhas": 44831,
+      "colunas": 11
+    },
+    {
+      "arquivo": "data/silver/sinan_atlas_violencia.parquet",
+      "bytes": 23350495,
+      "sha256": "9890299e4685271303207c9d5460a3f39b783ab2e40d4aa9604a9ecf65ec1ecd",
+      "linhas": 4292317,
+      "colunas": 18
+    },
+    {
+      "arquivo": "data/silver/sinan_preliminar_territorio_ano.parquet",
+      "bytes": 53291,
+      "sha256": "00481a81e14a8903d1e5c3c7ef9670f90c487b472c3293db911fe56aa0288c1d",
+      "linhas": 5213,
+      "colunas": 6
+    },
+    {
+      "arquivo": "data/silver/sinan_viol_mulheres_interpessoal.parquet",
+      "bytes": 37113302,
+      "sha256": "81c4830aa1864db731a79e861581ae78ea045657e65b000b4d85ac9277aed940",
+      "linhas": 1863727,
+      "colunas": 74
+    },
+    {
+      "arquivo": "data/silver/sinan_viol_mulheres_interpessoal_2025_preliminar.parquet",
+      "bytes": 5905649,
+      "sha256": "9f2757e2219d699239b3dbe3cb144e9a1da6a4b26e86f4d898567a66f400bdac",
+      "linhas": 294188,
+      "colunas": 74
+    },
+    {
+      "arquivo": "data/silver/sinesp_feminicidio.parquet",
+      "bytes": 920731,
+      "sha256": "e2e652e2860235fa8062e56d6d566872a5c36a85c8b7a5b3ec2a315114dbd29f",
+      "linhas": 518123,
+      "colunas": 7
+    },
+    {
+      "arquivo": "data/silver/sinesp_vde_ocorrencias.parquet",
+      "bytes": 5875579,
+      "sha256": "4f69660af1390c60ddb208404f74ac331593b1fbaa42ad3ba67e2edb9b115c40",
+      "linhas": 5975255,
+      "colunas": 17
+    }
+  ]
+}

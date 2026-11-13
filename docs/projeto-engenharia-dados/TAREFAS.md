@@ -9,7 +9,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | ID | Entrega | Dono | Branch | Status | Depende de |
 | --- | --- | --- | --- | --- | --- |
 | T00 | Base: pacote, config, checagens (entrega 2) | Codex | engenharia-dados | integrada (53a05c1) | |
-| T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | a fazer | |
+| T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | integrada | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | integrada (aprovada com ressalvas) | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | integrada | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
@@ -89,7 +89,7 @@ Bloqueadas pelos Gates B e C e por aprovação explícita do dono. Não iniciar.
 Cada agente anota abaixo, em sua tarefa, pedidos de arquivos extras e o resumo
 da entrega.
 
-- T01: (vazio)
+- T01: entregue em `docs/baseline/`: inventário (390 artefatos, contagens e SHA-256), cadeia do pipeline, reprodução dos 9 construtores offline numa cópia (Parquets e CSV idênticos; só carimbos de data mudam, e o protótipo local estava desatualizado), `validador.json` e resultado do `validate_project.py`. Achado principal: o validador **falha hoje** por 2 asserções desatualizadas (taxa 2025 do SINAN, linha 327, e do SINESP, linha 360) depois do commit `e7dc7ed`; sem elas, o restante passa. Não reexecutados por exigirem rede ou Bronze: extract_*, fetch_*, build_populacao_2025, build_sinan_atlas, build_sim_atlas, build_rais. **Pedido:** registrar a T08 (validador e taxas de 2025), aprovada pelo dono, em branch própria. Revisão cruzada do Codex reprovou a 1ª versão; corrigidos escopo do quadro, cadeia, cobertura do coletor e evidências. Terceira passada do Codex aprovou.
 - T02: **Entrega:** contratos da Silver do atlas e da Gold territorial, fixtures
   sintéticas, testes de esquema, tipo, chave, periodicidade e ano preliminar, e
   documentação do SINAN. O contrato foi ajustado à representação real de mês,
