@@ -6,11 +6,21 @@ import os
 import shutil
 import tempfile
 import uuid
+import warnings
 from collections.abc import Callable
+from dataclasses import dataclass
 from pathlib import Path
 
 GeradorArtefatos = Callable[[Path], None]
 ValidadorArtefatos = Callable[[Path], None]
+
+
+@dataclass(frozen=True)
+class ResultadoPublicacao:
+    """Resultado de uma publicação concluída."""
+
+    destino: Path
+    backup_remanescente: Path | None = None
 
 
 def _existe(caminho: Path) -> bool:
@@ -32,7 +42,15 @@ def _restaurar_destino(destino: Path, backup: Path) -> None:
     os.replace(backup, destino)
 
 
-def _trocar_com_backup(temporario: Path, destino: Path) -> None:
+def _backup_orfao(destino: Path) -> Path | None:
+    encontrados = sorted(
+        destino.parent.glob(f".{destino.name}.backup-*"),
+        key=lambda caminho: caminho.name,
+    )
+    return encontrados[0] if encontrados else None
+
+
+def _trocar_com_backup(temporario: Path, destino: Path) -> Path | None:
     havia_destino = _existe(destino)
     backup = destino.parent / f".{destino.name}.backup-{uuid.uuid4().hex}"
 
@@ -43,35 +61,57 @@ def _trocar_com_backup(temporario: Path, destino: Path) -> None:
 
     try:
         os.replace(temporario, destino)
-    except BaseException:
+    except BaseException as erro_troca:
         if havia_destino:
             try:
                 _restaurar_destino(destino, backup)
             except BaseException as erro_restauracao:
-                raise RuntimeError(
-                    "Falha ao restaurar o destino publicado após erro na troca."
-                ) from erro_restauracao
+                falha = RuntimeError(
+                    "Falha na troca do destino publicado: "
+                    f"{erro_troca}. Falha também na restauração; "
+                    f"backup preservado em: {backup}"
+                )
+                falha.add_note(f"Erro de restauração: {erro_restauracao}")
+                raise falha from erro_troca
         raise
     else:
         if havia_destino:
-            _remover(backup)
+            try:
+                _remover(backup)
+            except OSError as erro_limpeza:
+                remanescente = backup if _existe(backup) else None
+                warnings.warn(
+                    "Publicação concluída, mas o backup não pôde ser removido: "
+                    f"{backup}. Erro: {erro_limpeza}",
+                    RuntimeWarning,
+                    stacklevel=3,
+                )
+                return remanescente
+    return None
 
 
 def publicar_diretorio(
     destino_publicado: str | Path,
     gerar_artefatos: GeradorArtefatos,
     validar_artefatos: ValidadorArtefatos,
-) -> None:
-    """Gera, valida e publica um diretório sem expor uma versão parcial.
+) -> ResultadoPublicacao:
+    """Gera, valida e publica um diretório com restauração em caso de falha.
 
     O diretório temporário e o backup são criados como irmãos do destino para
-    que as renomeações permaneçam no mesmo volume. Se geração, validação ou
-    troca falhar, a exceção original é propagada após a limpeza e, quando já
-    existia uma publicação, a versão anterior é restaurada.
+    que as renomeações permaneçam no mesmo volume. No Windows, há um intervalo
+    entre mover o destino para backup e instalar a nova versão em que o caminho
+    publicado não existe; portanto, a troca não é atômica em sentido estrito.
+    Se geração, validação ou troca falhar, a exceção original é propagada após
+    a limpeza e, quando já existia uma publicação, a versão anterior é
+    restaurada.
     """
 
     destino = Path(destino_publicado).resolve()
     destino.parent.mkdir(parents=True, exist_ok=True)
+    orfao = _backup_orfao(destino)
+    if orfao is not None:
+        raise RuntimeError(f"Backup órfão impede publicação: {orfao}")
+
     temporario = Path(
         tempfile.mkdtemp(prefix=f".{destino.name}.tmp-", dir=destino.parent)
     )
@@ -79,6 +119,7 @@ def publicar_diretorio(
     try:
         gerar_artefatos(temporario)
         validar_artefatos(temporario)
-        _trocar_com_backup(temporario, destino)
+        backup_remanescente = _trocar_com_backup(temporario, destino)
+        return ResultadoPublicacao(destino, backup_remanescente)
     finally:
         _remover(temporario)
