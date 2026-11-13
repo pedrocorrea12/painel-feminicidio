@@ -396,6 +396,7 @@ def main() -> None:
         sinesp_territorio.loc[sinesp_territorio.periodo_completo], "valor_absoluto"
     )
     # Só o último ano publicado pode ser parcial, e "completo" significa 12 meses.
+    assert sinesp_territorio.meses_observados.between(1, 12).all()
     assert sinesp_territorio.periodo_completo.eq(
         sinesp_territorio.meses_observados.eq(12)
     ).all()
