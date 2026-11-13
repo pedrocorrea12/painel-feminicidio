@@ -73,11 +73,11 @@ CHAVE_SERIE_TERRITORIAL = (
 
 _TIPOS_SILVER_ATLAS = {
     "ano": "inteiro",
-    "mes": "inteiro",
+    "mes": "inteiro anulável",
     "data_ocorrencia": "data",
     "sexo": "texto",
     "raca": "texto",
-    "idade_anos": "inteiro",
+    "idade_anos": "inteiro anulável",
     "grupo_etario": "texto",
     "natureza_violencia": "texto",
     "id_municipio_residencia": "texto",
@@ -127,6 +127,11 @@ def _serie_data(serie: pd.Series) -> bool:
 def _tipo_valido(serie: pd.Series, esperado: str) -> bool:
     if esperado == "inteiro":
         return bool(is_integer_dtype(serie.dtype))
+    if esperado == "inteiro anulável":
+        if not is_numeric_dtype(serie.dtype) or is_bool_dtype(serie.dtype):
+            return False
+        valores = serie.dropna()
+        return bool(valores.mod(1).eq(0).all())
     if esperado == "numerico":
         return bool(is_numeric_dtype(serie.dtype))
     if esperado == "booleano":
@@ -172,12 +177,25 @@ def validar_silver_atlas(quadro: pd.DataFrame) -> None:
 
     if not quadro["ano"].isin(ANOS_CONTRATO).all():
         raise ValueError("Contrato SINAN atlas: ano fora do período 2015 a 2025.")
-    if not quadro["mes"].between(1, 12).all():
+    mes_nulo = quadro["mes"].isna()
+    data_nula = quadro["data_ocorrencia"].isna()
+    if not mes_nulo.eq(data_nula).all():
+        raise ValueError(
+            "Contrato SINAN atlas: mes e data_ocorrencia devem ser nulos juntos."
+        )
+
+    meses_presentes = quadro.loc[~mes_nulo, "mes"]
+    if not meses_presentes.between(1, 12).all():
         raise ValueError("Contrato SINAN atlas: mês fora do intervalo 1 a 12.")
 
-    anos_data = pd.to_datetime(quadro["data_ocorrencia"], errors="coerce").dt.year
-    if anos_data.isna().any() or not anos_data.eq(quadro["ano"]).all():
-        raise ValueError("Contrato SINAN atlas: data_ocorrencia incompatível com o ano.")
+    linhas_com_data = ~data_nula
+    datas_presentes = pd.to_datetime(
+        quadro.loc[linhas_com_data, "data_ocorrencia"], errors="coerce"
+    )
+    meses_data = datas_presentes.dt.month
+    meses_registro = quadro.loc[linhas_com_data, "mes"]
+    if datas_presentes.isna().any() or not meses_data.eq(meses_registro).all():
+        raise ValueError("Contrato SINAN atlas: mes incompatível com data_ocorrencia.")
 
     naturezas = {"interpessoal", "autoprovocada"}
     if not quadro["natureza_violencia"].isin(naturezas).all():
