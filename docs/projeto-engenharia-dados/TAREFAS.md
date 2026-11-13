@@ -11,7 +11,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T00 | Base: pacote, config, checagens (entrega 2) | Codex | engenharia-dados | integrada (53a05c1) | |
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | a fazer | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | a fazer | |
-| T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | a fazer | |
+| T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | em revisão | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
@@ -91,4 +91,4 @@ da entrega.
 
 - T01: (vazio)
 - T02: (vazio)
-- T03: (vazio)
+- T03: entregue em 2 commits. Contrato em `contracts/sinesp.py` (bronze, silver, gold mensal/anual, cobertura mensal), 18 testes, fixtures sintéticas, `docs/contracts/sinesp.md`. `pytest` (21 passando no total) e `ruff check src tests` verdes; validado também contra Silver e Gold reais, só leitura. Pendente: reconciliação contra o Anuário e detecção de quebras de série (fora do escopo). Obs.: `contracts/__init__.py` é vazio, como em T02. Revisão cruzada pelo Codex ainda não feita.
