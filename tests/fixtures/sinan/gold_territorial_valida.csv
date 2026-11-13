@@ -1,0 +1,12 @@
+ano,nivel_territorial,id_territorio,territorio,indicador,sexo,notificacoes,populacao,tipo_denominador,taxa_100mil,situacao_dado
+2015,brasil,BR,Brasil,notificacoes_interpessoais,total,10,100000.0,publicado,10.0,definitivo
+2016,brasil,BR,Brasil,notificacoes_interpessoais,total,11,100000.0,publicado,11.0,definitivo
+2017,brasil,BR,Brasil,notificacoes_interpessoais,total,12,100000.0,publicado,12.0,definitivo
+2018,brasil,BR,Brasil,notificacoes_interpessoais,total,13,100000.0,publicado,13.0,definitivo
+2019,brasil,BR,Brasil,notificacoes_interpessoais,total,14,100000.0,publicado,14.0,definitivo
+2020,brasil,BR,Brasil,notificacoes_interpessoais,total,15,100000.0,publicado,15.0,definitivo
+2021,brasil,BR,Brasil,notificacoes_interpessoais,total,16,100000.0,publicado,16.0,definitivo
+2022,brasil,BR,Brasil,notificacoes_interpessoais,total,17,100000.0,publicado,17.0,definitivo
+2023,brasil,BR,Brasil,notificacoes_interpessoais,total,18,100000.0,publicado,18.0,definitivo
+2024,brasil,BR,Brasil,notificacoes_interpessoais,total,19,100000.0,publicado,19.0,definitivo
+2025,brasil,BR,Brasil,notificacoes_interpessoais,total,20,100000.0,publicado,20.0,preliminar
