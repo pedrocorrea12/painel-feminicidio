@@ -4,7 +4,7 @@
     {
       "script": "build_gold.py",
       "codigo_saida": 0,
-      "segundos": 5.6,
+      "segundos": 5.3,
       "erro": ""
     },
     {
@@ -16,13 +16,13 @@
     {
       "script": "build_integrated_analysis.py",
       "codigo_saida": 0,
-      "segundos": 2.7,
+      "segundos": 2.6,
       "erro": ""
     },
     {
       "script": "build_sinesp_analysis.py",
       "codigo_saida": 0,
-      "segundos": 8.3,
+      "segundos": 8.2,
       "erro": ""
     },
     {
@@ -34,35 +34,189 @@
     {
       "script": "build_sinesp_atlas.py",
       "codigo_saida": 0,
-      "segundos": 40.4,
+      "segundos": 40.3,
+      "erro": ""
+    },
+    {
+      "script": "build_atlas_catalog.py",
+      "codigo_saida": 0,
+      "segundos": 0.9,
       "erro": ""
     },
     {
       "script": "build_atlas_prototype_data.py",
       "codigo_saida": 0,
-      "segundos": 2.3,
+      "segundos": 2.2,
       "erro": ""
     },
     {
       "script": "build_atlas_site_data.py",
       "codigo_saida": 0,
-      "segundos": 10.6,
+      "segundos": 10.7,
       "erro": ""
     }
   ],
+  "total_comparado": 390,
   "alterados": [
-    "dashboard/atlas/data/manifesto.json",
-    "dashboard/dist/data/analise.json",
-    "dashboard/dist/data/painel.json",
-    "data/gold/analise.json",
-    "data/gold/integrado/resumo_analises_sinesp.json",
-    "data/gold/integrado/resumo_integracao.json",
-    "data/gold/painel.json",
-    "data/gold/raca/resumo_raca.json"
+    {
+      "arquivo": "dashboard/atlas/data/manifesto.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/atualizado_em",
+          "antes": "2026-11-06",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sim.zip",
+      "conteudo_igual": true
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinan.zip",
+      "conteudo_igual": true
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinesp.zip",
+      "conteudo_igual": true
+    },
+    {
+      "arquivo": "dashboard/dist/data/analise.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/meta/gerado_em",
+          "antes": "2026-10-14",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "dashboard/dist/data/painel.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/meta/atualizado",
+          "antes": "2026-10-15",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "dashboard/prototipos/atlas-violencia/data.json",
+      "total_diferencas": 38278,
+      "diferencas": [
+        {
+          "caminho": "/registros[10530]/taxa",
+          "antes": "None",
+          "depois": "9.33"
+        },
+        {
+          "caminho": "/registros[10531]/taxa",
+          "antes": "None",
+          "depois": "29.84"
+        },
+        {
+          "caminho": "/registros[10532]/taxa",
+          "antes": "None",
+          "depois": "0.74"
+        },
+        {
+          "caminho": "/registros[10533]/taxa",
+          "antes": "None",
+          "depois": "14.77"
+        },
+        {
+          "caminho": "/registros[10534]/taxa",
+          "antes": "None",
+          "depois": "39.86"
+        },
+        {
+          "caminho": "/registros[10535]/taxa",
+          "antes": "None",
+          "depois": "27.02"
+        },
+        {
+          "caminho": "/registros[10536]/taxa",
+          "antes": "None",
+          "depois": "7.77"
+        },
+        {
+          "caminho": "/registros[10537]/taxa",
+          "antes": "None",
+          "depois": "1.96"
+        },
+        {
+          "caminho": "/registros[10538]/taxa",
+          "antes": "None",
+          "depois": "15.88"
+        },
+        {
+          "caminho": "/registros[10539]/taxa",
+          "antes": "None",
+          "depois": "39.17"
+        }
+      ]
+    },
+    {
+      "arquivo": "data/gold/analise.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/meta/gerado_em",
+          "antes": "2026-10-14",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "data/gold/integrado/resumo_analises_sinesp.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/gerado_em",
+          "antes": "2026-10-14",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "data/gold/integrado/resumo_integracao.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/gerado_em",
+          "antes": "2026-10-14",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "data/gold/painel.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/meta/atualizado",
+          "antes": "2026-10-15",
+          "depois": "2026-11-13"
+        }
+      ]
+    },
+    {
+      "arquivo": "data/gold/raca/resumo_raca.json",
+      "total_diferencas": 1,
+      "diferencas": [
+        {
+          "caminho": "/gerado_em",
+          "antes": "2026-10-15",
+          "depois": "2026-11-13"
+        }
+      ]
+    }
   ],
   "criados": [],
   "removidos": [],
-  "total_comparado": 386,
   "relatorios_docs_gerados": [
     "RELATORIO_ANALISES_SINESP.md",
     "RELATORIO_INTEGRACAO_DADOS.md"

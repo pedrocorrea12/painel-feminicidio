@@ -9,9 +9,10 @@ Arquivos desta pasta:
 
 | Arquivo | Conteúdo |
 | --- | --- |
-| `coletar_baseline.py` | coletor reproduzível (inventário e teste de reprodução) |
-| `inventario.json` | 386 artefatos com bytes, linhas, colunas e SHA-256 |
-| `reproducao.json` | resultado da reconstrução dos construtores offline numa cópia |
+| `coletar_baseline.py` | coletor reproduzível (inventário, reprodução e validador) |
+| `inventario.json` | 390 artefatos com bytes e SHA-256; linhas e colunas para os 17 Parquets e os 39 CSV |
+| `reproducao.json` | reconstrução dos construtores offline numa cópia, com o que mudou em cada arquivo |
+| `validador.json` | asserções do `validate_project.py` que falham hoje e resultado do restante |
 
 ## Ambiente usado
 
@@ -36,11 +37,14 @@ orquestrador: cada script é rodado à mão.
 | --- | --- | --- | --- | --- |
 | 1. Extração | `extract_sinan.py`, `extract_sim.py`, `extract_sinesp.py` | sim | fontes públicas | Bronze e Silver |
 | 2. Dimensões | `fetch_ibge.py`, `fetch_malha_sc.py`, `fetch_populacao_feminina.py`, `fetch_populacao_geral.py` | sim | IBGE, MS | Bronze, Silver, malha do site |
-| 3. Silver | `build_silver.py`, `build_populacao_2025.py`, `build_sinan_atlas.py`, `build_sim_atlas.py`, `build_rais.py` | não | Bronze | Silver (e Gold da RAIS) |
-| 4. Gold do painel | `build_gold.py` (chama `build_silver`) | não | Silver | `data/gold/painel.json`, cópia em `dashboard/dist/data` |
+| 3. Silver e Gold por fonte | `build_populacao_2025.py`, `build_sinan_atlas.py`, `build_sim_atlas.py`, `build_rais.py` | só `build_populacao_2025.py` e `build_sim_atlas.py` referenciam URLs | Bronze | Silver; `build_sinan_atlas.py` e `build_sim_atlas.py` também escrevem a Gold do atlas, `build_rais.py` a Gold da RAIS |
+| 4. Silver territorial e Gold do painel | `build_silver.py`, `build_gold.py` (importa e executa `build_silver`) | não | Silver | `indicadores_territorio_ano.parquet`, `data/gold/painel.json`, cópia em `dashboard/dist/data` |
 | 5. Gold analítico | `build_dashboard_analysis.py`, `build_integrated_analysis.py`, `build_sinesp_analysis.py`, `build_race_analysis.py`, `build_sinesp_atlas.py` | não | Silver | `data/gold/{analise.json,integrado,raca,atlas}` e relatórios em `docs/` |
-| 6. Catálogo e site | `build_atlas_catalog.py`, `build_atlas_prototype_data.py`, `build_atlas_site_data.py` | não | Gold, Bronze (catálogo) | `data/gold/atlas`, `dashboard/atlas/data` |
+| 6. Catálogo, protótipo e site | `build_atlas_catalog.py`, `build_atlas_prototype_data.py`, `build_atlas_site_data.py` | não | Silver e Gold | `data/gold/atlas` (catálogo), `dashboard/prototipos/atlas-violencia/data.json`, `dashboard/atlas/data` e os ZIPs de `dashboard/atlas/downloads` |
 | 7. Validação | `validate_project.py` | não | Silver, Gold, site | nada |
+
+A coluna "Rede" e as entradas das etapas 1 a 3 vêm da leitura estática dos
+scripts (imports e constantes de caminho), não de execução.
 
 Não existe nenhum teste automatizado dos construtores nem verificação de que as
 etapas rodam na ordem certa.
@@ -48,9 +52,10 @@ etapas rodam na ordem certa.
 ## Contagens por camada
 
 Totais do inventário: 17 Silver (18,98 milhões de linhas, 106 MB), 49 arquivos
-Gold (297 mil linhas CSV, 34,8 MB), 318 JSONs do site do atlas (33,4 MB) e 2 do
-painel antigo (`dashboard/dist/data`). Bronze (1,4 GB) não foi inventariada: é
-cache de fontes externas e não é versionada.
+Gold (297 mil registros CSV, 34,8 MB), 318 JSONs do site do atlas (33,4 MB), 3
+ZIPs de download (1,8 MB), 2 JSONs do painel antigo (`dashboard/dist/data`) e o
+`data.json` do protótipo local (16,4 MB, ignorado pelo Git). Bronze (1,4 GB) não
+foi inventariada: é cache de fontes externas e não é versionada.
 
 | Silver | linhas | colunas | bytes | sha256 (12) |
 | --- | ---: | ---: | ---: | --- |
@@ -106,8 +111,10 @@ por dado inválido:
 | 327 | taxa SINAN 2025 (`sinan_violencia_territorio_ano.csv`) toda vazia | o commit `e7dc7ed` (6 nov) passou a publicar taxas de 2025: 8.721 de 11.628 linhas têm taxa (`tipo_denominador` = `estimado_proporcao_2024` ou `publicado`) |
 | 360 | taxa SINESP de 2025 em diante toda vazia | mesmo motivo, na Gold `sinesp_prioridade_territorio_ano.csv` |
 
-Rodando uma cópia do script sem essas duas asserções (copiada para fora do
-projeto, original intacto), **todas as demais asserções passam**. O contrato do
+O modo `validador` do coletor roda uma cópia temporária do script, fora do
+projeto e com o original intacto, e neutraliza uma a uma as asserções que
+falham. Resultado em `validador.json`: só essas duas falham e **todas as demais
+asserções passam** (4,5 s). O contrato do
 SINAN da T02 deve decidir explicitamente o que vale para a taxa de 2025;
 `docs/SINAN_ATLAS.md` ainda diz que a taxa de 2025 permanece vazia.
 
@@ -116,53 +123,71 @@ publicação segura (T05) enquanto não for atualizado.
 
 ## Reprodutibilidade dos construtores offline
 
-Oito construtores que não precisam de rede nem de Bronze foram executados numa
-cópia (`coletar_baseline.py reproduzir`) e os hashes de 386 artefatos foram
-comparados antes e depois:
+Nove construtores que não precisam de rede nem de Bronze foram executados numa
+cópia (`coletar_baseline.py reproduzir`) e 390 artefatos foram comparados antes
+e depois. `build_gold.py` executa `build_silver` internamente, então a Silver
+territorial também foi reconstruída.
 
 | Script | Saída | Tempo |
 | --- | --- | ---: |
-| `build_gold.py` | ok | 5,6 s |
+| `build_gold.py` (inclui `build_silver`) | ok | 5,3 s |
 | `build_dashboard_analysis.py` | ok | 2,0 s |
-| `build_integrated_analysis.py` | ok | 2,7 s |
-| `build_sinesp_analysis.py` | ok | 8,3 s |
+| `build_integrated_analysis.py` | ok | 2,6 s |
+| `build_sinesp_analysis.py` | ok | 8,2 s |
 | `build_race_analysis.py` | ok | 2,1 s |
-| `build_sinesp_atlas.py` | ok | 40,4 s |
-| `build_atlas_prototype_data.py` | ok | 2,3 s |
-| `build_atlas_site_data.py` | ok | 10,6 s |
+| `build_sinesp_atlas.py` | ok | 40,3 s |
+| `build_atlas_catalog.py` | ok | 0,9 s |
+| `build_atlas_prototype_data.py` | ok | 2,2 s |
+| `build_atlas_site_data.py` | ok | 10,7 s |
 
-Resultado: **todos os CSV e a maior parte dos JSON saíram idênticos byte a
-byte**. Mudaram apenas 8 arquivos, e em cada um a única diferença é um carimbo
-de data (`atualizado_em`, `meta.atualizado`, `gerado_em`): `manifesto.json`,
-`painel.json`, `analise.json`, `resumo_analises_sinesp.json`,
-`resumo_integracao.json`, `resumo_raca.json` e os espelhos em `dashboard/dist`.
-Os dois relatórios Markdown em `docs/` também só mudam a linha "Atualizado em".
+Resultado, com o detalhe de cada arquivo em `reproducao.json`:
+
+- **Os 17 Parquets, os 39 CSV e 322 dos 331 JSON saíram idênticos byte a byte.**
+- **8 JSONs** mudam em um único campo, o carimbo de data (`atualizado_em`,
+  `meta.atualizado`, `meta.gerado_em` ou `gerado_em`): `manifesto.json`,
+  `painel.json`, `analise.json`, `resumo_analises_sinesp.json`,
+  `resumo_integracao.json`, `resumo_raca.json` e os dois espelhos em
+  `dashboard/dist/data`.
+- **Os 3 ZIPs de download** mudam de hash, mas o conteúdo (nomes, CRC e tamanho
+  dos membros) é igual: a diferença é a data de modificação gravada no ZIP.
+- **O `data.json` do protótipo local estava desatualizado**: 38.278 valores
+  mudam, com taxas que passam de vazias a preenchidas. O arquivo é de 26 de
+  outubro, anterior à publicação das taxas de 2025. Ele é ignorado pelo Git e
+  não é publicado.
+
+Os dois relatórios Markdown que os construtores escrevem em `docs/` foram
+comparados à mão com `diff`: só muda a linha "Atualizado em". Essa comparação
+não está em `reproducao.json`, que apenas lista os relatórios gerados.
 
 Consequências para a publicação:
 
 - a Gold é determinística dado o mesmo Silver; a data de geração é o único
   ruído, e ela faz o Git acusar mudança mesmo sem mudança de dado;
+- os ZIPs precisam ser comparados por conteúdo, não por hash do arquivo;
 - `build_integrated_analysis.py` e `build_sinesp_analysis.py` escrevem relatórios
   em `docs/` e falham se a pasta não existir.
 
 ## O que não foi reexecutado
 
-Por exigirem rede, Bronze de 1,4 GB ou escreverem fora de áreas isoladas, ficam
-só inventariadas e **sem tempo nem reprodução medidos**: `extract_*`, `fetch_*`,
-`build_silver.py`, `build_populacao_2025.py`, `build_sinan_atlas.py`,
-`build_sim_atlas.py`, `build_rais.py` e `build_atlas_catalog.py`. A Silver
-correspondente está no inventário. O benchmark de tempo e memória dessas etapas
+Por exigirem rede ou o Bronze de 1,4 GB, ficam só inventariadas e **sem tempo
+nem reprodução medidos**: `extract_*`, `fetch_*`, `build_populacao_2025.py`,
+`build_sinan_atlas.py`, `build_sim_atlas.py` e `build_rais.py`. A Silver e a
+Gold que elas produzem estão no inventário. O benchmark de tempo e memória dessas etapas
 é insumo do Gate B.
 
 ## Como repetir
 
 ```powershell
 $py = "C:\Users\User\anaconda3\python.exe"
-# a raiz do projeto com Silver e Gold materializadas; a pasta COPIA deve estar vazia
-$py docs\baseline\coletar_baseline.py inventario C:\portfolio\painel-feminicidio --saida inventario.json
-$py docs\baseline\coletar_baseline.py reproduzir C:\portfolio\painel-feminicidio C:\temp\copia --saida reproducao.json
-$py pipeline\validate_project.py
+$raiz = "C:\portfolio\painel-feminicidio"   # projeto com Silver e Gold materializadas
+$saida = "C:\temp\baseline"                 # fora da raiz; C:\temp\copia deve estar vazia
+$py docs\baseline\coletar_baseline.py inventario $raiz --saida $saida\inventario.json
+$py docs\baseline\coletar_baseline.py reproduzir $raiz C:\temp\copia --saida $saida\reproducao.json
+$py docs\baseline\coletar_baseline.py validador $raiz --saida $saida\validador.json
 ```
+
+O coletor recusa `--saida` e `COPIA` dentro da raiz, para que a raiz nunca seja
+escrita. Os JSON desta pasta foram gerados num worktree separado da raiz.
 
 ## Achados para as próximas tarefas
 

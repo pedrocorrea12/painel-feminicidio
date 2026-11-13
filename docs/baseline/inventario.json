@@ -1,6 +1,6 @@
 {
   "python": "3.12.7",
-  "segundos": 0.5,
+  "segundos": 0.8,
   "artefatos": [
     {
       "arquivo": "dashboard/atlas/data/desigualdades.json",
@@ -1593,6 +1593,24 @@
       "sha256": "697a71fb303bbfbcc3413b4bacdd8361297e6a508de20af95df61ee2c1b94df8"
     },
     {
+      "arquivo": "dashboard/atlas/downloads/atlas_sim.zip",
+      "bytes": 359977,
+      "sha256": "e098e76de26a89f9cf8aa3d53f4bd9b330eff9915016f096629c31780604654f",
+      "sha256_conteudo": "547c41c53fe890c8bcbdf4a7ed8720c822a93bfcbfade849657206005bcd216f"
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinan.zip",
+      "bytes": 1041909,
+      "sha256": "281aeeb5af351417ba1df210c1b07baecc717c1eb4d551d679aaeb2f6fd890b4",
+      "sha256_conteudo": "0b5e71156ef34fd2b992df23cd73463c0e554e877d2aceed8d02ebd6bd8f2680"
+    },
+    {
+      "arquivo": "dashboard/atlas/downloads/atlas_sinesp.zip",
+      "bytes": 433560,
+      "sha256": "e1ede81949b4977c773ef636c55b6e7492a7d690809c1a7b5348db8001772aa7",
+      "sha256_conteudo": "20ea8ed620e179bfe3eb0806d70c467a8a2af3124076dc35d04d4b4dc8fb7dd9"
+    },
+    {
       "arquivo": "dashboard/dist/data/analise.json",
       "bytes": 318231,
       "sha256": "5ebbea0bc6e847f72e4cbcb3d1d410bdedfab69331a3ebf0a0a6c1166b433659"
@@ -1603,6 +1621,11 @@
       "sha256": "2850a89935cc4475936fc4160a2dd95955ba369086179567df225fab48e8e151"
     },
     {
+      "arquivo": "dashboard/prototipos/atlas-violencia/data.json",
+      "bytes": 16354252,
+      "sha256": "175520e44f61cf0b022ed570b4be844b31996d224c89c72d7ec23b623a73302f"
+    },
+    {
       "arquivo": "data/gold/analise.json",
       "bytes": 318231,
       "sha256": "5ebbea0bc6e847f72e4cbcb3d1d410bdedfab69331a3ebf0a0a6c1166b433659"
@@ -1611,13 +1634,15 @@
       "arquivo": "data/gold/atlas/catalogo_indicadores.csv",
       "bytes": 18866,
       "sha256": "2a1a342d34aaf0831f0bc9e9d35294ec9a650a506fe31ab3815325c048d6232b",
-      "linhas": 48
+      "linhas": 48,
+      "colunas": 20
     },
     {
       "arquivo": "data/gold/atlas/matriz_disponibilidade_fontes.csv",
       "bytes": 874,
       "sha256": "2c10afa97cd434ae9054b0ceaeb51a8067cddf7db1324ecd6494bd9fcbfee059",
-      "linhas": 6
+      "linhas": 6,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/atlas/resumo_catalogo.json",
@@ -1628,7 +1653,8 @@
       "arquivo": "data/gold/atlas/sim_mortalidade_idade_ano.csv",
       "bytes": 70755,
       "sha256": "26801f9955aaa066f60092fc382c9f5d417f253c978b7d806c8aa690db0e02bb",
-      "linhas": 864
+      "linhas": 864,
+      "colunas": 10
     },
     {
       "arquivo": "data/gold/atlas/sim_mortalidade_metodologia.json",
@@ -1639,13 +1665,15 @@
       "arquivo": "data/gold/atlas/sim_mortalidade_territorio_ano.csv",
       "bytes": 4248595,
       "sha256": "7659c0fa63da0c7fe88da3cf1bee06931faa56c98b313b227a31b1eb59582cf9",
-      "linhas": 46512
+      "linhas": 46512,
+      "colunas": 12
     },
     {
       "arquivo": "data/gold/atlas/sinan_violencia_idade_ano.csv",
       "bytes": 183662,
       "sha256": "f5d289a3539ef3c04391776b3facbd6d98057ea0bf38abe42f259dc1afaa367a",
-      "linhas": 2376
+      "linhas": 2376,
+      "colunas": 8
     },
     {
       "arquivo": "data/gold/atlas/sinan_violencia_metodologia.json",
@@ -1656,25 +1684,29 @@
       "arquivo": "data/gold/atlas/sinan_violencia_territorio_ano.csv",
       "bytes": 12205616,
       "sha256": "34b6ccfa6f51a3c99dd96374fe4275c039ee1618ebdd9cbd7196d7f21e9799f8",
-      "linhas": 127908
+      "linhas": 127908,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/atlas/sinesp_cobertura_evento_resumo.csv",
       "bytes": 1864,
       "sha256": "9d5a7a31b8a5ba40c0f84212bd592c9951cf4ca3f0cc1da8eb2fa81c745cb63f",
-      "linhas": 9
+      "linhas": 9,
+      "colunas": 12
     },
     {
       "arquivo": "data/gold/atlas/sinesp_cobertura_evento_uf_ano.csv",
       "bytes": 222019,
       "sha256": "01f12463d42836578b67957522165a3e377376bdbd22ac3cfbea84963805fe1d",
-      "linhas": 1944
+      "linhas": 1944,
+      "colunas": 16
     },
     {
       "arquivo": "data/gold/atlas/sinesp_prioridade_mensal.csv",
       "bytes": 714792,
       "sha256": "09575fc00f096edf66cd4aea2f2090075336b1d4123dd3f5babd9789e3fe3a75",
-      "linhas": 7360
+      "linhas": 7360,
+      "colunas": 9
     },
     {
       "arquivo": "data/gold/atlas/sinesp_prioridade_metodologia.json",
@@ -1685,43 +1717,50 @@
       "arquivo": "data/gold/atlas/sinesp_prioridade_territorio_ano.csv",
       "bytes": 7306178,
       "sha256": "1b232b3c1786dfa4bdf81afd47b05cf89361f674a43b81f649247e17dadeb8d9",
-      "linhas": 56160
+      "linhas": 56160,
+      "colunas": 15
     },
     {
       "arquivo": "data/gold/ibge/censo2022_mulheres_cor_raca_municipios_sc.csv",
       "bytes": 23894,
       "sha256": "b8ba29f069d55511ea784d9d9ef3d073f86b5c101067a18e107b3862181271b5",
-      "linhas": 295
+      "linhas": 295,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/ibge/censo2022_mulheres_cor_raca_uf.csv",
       "bytes": 2291,
       "sha256": "c7f9982d22ccd9eb877f63887b3605d4223c43d1448fc90240de907c29942f85",
-      "linhas": 28
+      "linhas": 28,
+      "colunas": 12
     },
     {
       "arquivo": "data/gold/integrado/historico_integrado_2019_2024.csv",
       "bytes": 338407,
       "sha256": "3aa46281e391428b51bfa878e403c4ab6a41f2f5ff795c385b7361089c5043d7",
-      "linhas": 1782
+      "linhas": 1782,
+      "colunas": 22
     },
     {
       "arquivo": "data/gold/integrado/homicidio_doloso_feminicidio_2019_2026.csv",
       "bytes": 87606,
       "sha256": "2ca5d1fb3af741e12846f2a8218d8c19a4a69e2c95a1a89dfc264b4d0d8dea07",
-      "linhas": 224
+      "linhas": 224,
+      "colunas": 22
     },
     {
       "arquivo": "data/gold/integrado/monitoramento_atual_2025_2026.csv",
       "bytes": 271103,
       "sha256": "5a4b60056ac1df6f19ea55e4e4a939e3b87bccbe0b31cb561d49cead79fd8bdf",
-      "linhas": 1485
+      "linhas": 1485,
+      "colunas": 20
     },
     {
       "arquivo": "data/gold/integrado/razao_sim_sinesp_uf_2019_2024.csv",
       "bytes": 24773,
       "sha256": "b209edff4d01e0ed32ef9093177ce067e1eccd4f6529cc669ad002a889d279e6",
-      "linhas": 168
+      "linhas": 168,
+      "colunas": 18
     },
     {
       "arquivo": "data/gold/integrado/resumo_analises_sinesp.json",
@@ -1737,31 +1776,36 @@
       "arquivo": "data/gold/integrado/sinesp_sazonalidade_mes_2019_2025.csv",
       "bytes": 1930,
       "sha256": "bd73716f6e5820db08831467f66d626a91f6f2a70427b66c32667c9c1bf451a9",
-      "linhas": 24
+      "linhas": 24,
+      "colunas": 13
     },
     {
       "arquivo": "data/gold/integrado/sinesp_serie_mensal_2019_2026.csv",
       "bytes": 18549,
       "sha256": "b75b0fa92927e5dc2768ae26e4a1268992a04d16b5c13c5193a92b3552fead1e",
-      "linhas": 184
+      "linhas": 184,
+      "colunas": 19
     },
     {
       "arquivo": "data/gold/integrado/taxa_municipal_feminicidio_sc_2019_2024.csv",
       "bytes": 54286,
       "sha256": "8324f088a109dc3dbe7bbcbfea4fd0f63f19a9c337077099fbf0819ddf4371ca",
-      "linhas": 295
+      "linhas": 295,
+      "colunas": 16
     },
     {
       "arquivo": "data/gold/integrado/tentativa_feminicidio_2019_2026.csv",
       "bytes": 36388,
       "sha256": "594ddda1c8de62809fcb88384cda67f50cc4c1da773dd423a290e6a6d63514f5",
-      "linhas": 224
+      "linhas": 224,
+      "colunas": 21
     },
     {
       "arquivo": "data/gold/integrado/validacao_municipios_sinesp_sc.csv",
       "bytes": 26787,
       "sha256": "d01dd8f74875f4109dd9acc3d9db104ada88fc100ab7e7565174018beffcb83a",
-      "linhas": 296
+      "linhas": 296,
+      "colunas": 13
     },
     {
       "arquivo": "data/gold/painel.json",
@@ -1777,73 +1821,85 @@
       "arquivo": "data/gold/raca/sim_raca_municipios_sc_2019_2024.csv",
       "bytes": 206092,
       "sha256": "9e372bd8b9f6258759d55c504c97056ca9c0e86a74104a9936b4ff90b4b99ebe",
-      "linhas": 1770
+      "linhas": 1770,
+      "colunas": 21
     },
     {
       "arquivo": "data/gold/raca/sim_raca_uf_ano_2019_2024.csv",
       "bytes": 109414,
       "sha256": "6b2a74358caba456bb728e61bed0e12f12a2869780c21a5ca7106a1f70a58306",
-      "linhas": 1008
+      "linhas": 1008,
+      "colunas": 18
     },
     {
       "arquivo": "data/gold/raca/sinan_raca_municipios_sc_2019_2024.csv",
       "bytes": 213090,
       "sha256": "42e0a0b1fc752f8593d76e7e5ffbf30fbcb52134789e3b2253a55eab9f4fd691",
-      "linhas": 1770
+      "linhas": 1770,
+      "colunas": 19
     },
     {
       "arquivo": "data/gold/raca/sinan_raca_uf_2024.csv",
       "bytes": 18222,
       "sha256": "c9dfba5a20d6a55ec5188df31757d902e631628d36216aa31b3d69e5119e8878",
-      "linhas": 168
+      "linhas": 168,
+      "colunas": 16
     },
     {
       "arquivo": "data/gold/rais/emprego_formal_sexo_2019_2025.csv",
       "bytes": 28370,
       "sha256": "8ce5ca74c953e1b3ff9b870dfad7981573ada6470867f1b445c7936e125cdd1b",
-      "linhas": 196
+      "linhas": 196,
+      "colunas": 19
     },
     {
       "arquivo": "data/gold/rais/emprego_formal_sexo_municipios_sc_2019_2025.csv",
       "bytes": 46099,
       "sha256": "e3228cb0ca66e9dcf899d297e1708ee5d3fa0998b3c0a4b5856b64366970862c",
-      "linhas": 295
+      "linhas": 295,
+      "colunas": 21
     },
     {
       "arquivo": "data/gold/rais/escolaridade_mulheres_raca_2024_2025.csv",
       "bytes": 147941,
       "sha256": "eae3d6c612b1049cdf2740a28d539687585d8907068efa8de6ded07f5c33cca9",
-      "linhas": 2455
+      "linhas": 2455,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/rais/insercao_formal_mulheres_negras_2024_2025.csv",
       "bytes": 4096,
       "sha256": "0271b52d73249f13c1a5692f05e22f62a07039bd6b1c5f17172302698afc9e84",
-      "linhas": 56
+      "linhas": 56,
+      "colunas": 13
     },
     {
       "arquivo": "data/gold/rais/movimentacao_mensal_sexo_2019_2025.csv",
       "bytes": 255958,
       "sha256": "d0f8ffa7cf464754f084c534081efb1556f859317dfa88263905603e0a10a4dd",
-      "linhas": 4704
+      "linhas": 4704,
+      "colunas": 12
     },
     {
       "arquivo": "data/gold/rais/qualidade_raca_rais_2024_2025.csv",
       "bytes": 3019,
       "sha256": "6709c35dfcbd2390ea86e772a55989bf27afbe37f2f876ee866a2df252c9d5b8",
-      "linhas": 56
+      "linhas": 56,
+      "colunas": 10
     },
     {
       "arquivo": "data/gold/rais/razao_salarial_raca_2024_2025.csv",
       "bytes": 4813,
       "sha256": "b4c971a163e5cdbee86a4da6364f3ccba9075bf9b858d069e3d2bc7b2e282ec2",
-      "linhas": 56
+      "linhas": 56,
+      "colunas": 14
     },
     {
       "arquivo": "data/gold/rais/razao_salarial_raca_municipios_sc_2024_2025.csv",
       "bytes": 28425,
       "sha256": "36f7dc6e1a035ce064a76a869f8ce5ec745bc7b44e76410d6fcbaf51c55bcb9b",
-      "linhas": 295
+      "linhas": 295,
+      "colunas": 15
     },
     {
       "arquivo": "data/gold/rais/resumo_rais.json",
@@ -1854,37 +1910,43 @@
       "arquivo": "data/gold/rais/teste_embranquecimento_rais_censo_uf.csv",
       "bytes": 5157,
       "sha256": "cb10bd91f39958fa8b118d15c940474dabb6bb31162145d085daeed1855293a7",
-      "linhas": 81
+      "linhas": 81,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/sinesp/sinesp_feminicidio_sc_brasil_anual.csv",
       "bytes": 321,
       "sha256": "74f15d3b80b72c36766b17a57909dcb46437e2a94036403e387d1124f5000ec5",
-      "linhas": 8
+      "linhas": 8,
+      "colunas": 4
     },
     {
       "arquivo": "data/gold/sinesp/sinesp_sc_brasil_anual.csv",
       "bytes": 41680,
       "sha256": "962ba4ab98ac5dc27144a55a5c056494879414fd112b8d2280c559b975cb9837",
-      "linhas": 480
+      "linhas": 480,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/sinesp/sinesp_sc_brasil_mensal.csv",
       "bytes": 465861,
       "sha256": "f8911dd1b8e7a29ef34fc2fb688f9c781f2a1e691dc29ad3c2bf05b808ebb70d",
-      "linhas": 5520
+      "linhas": 5520,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/sinesp/sinesp_sc_municipios_anual.csv",
       "bytes": 2071230,
       "sha256": "d68a62d1b317edb0d5d3d4904ec90673e8cb7b7814b6b5d229b985a3a2e7d534",
-      "linhas": 23840
+      "linhas": 23840,
+      "colunas": 11
     },
     {
       "arquivo": "data/gold/sinesp/sinesp_uf_anual.csv",
       "bytes": 475637,
       "sha256": "f6de9002a07f0aa6f02cca3c2d9697d6335845c40c26dc0e65964d3348ba5347",
-      "linhas": 6480
+      "linhas": 6480,
+      "colunas": 10
     },
     {
       "arquivo": "data/silver/indicadores_territorio_ano.parquet",
