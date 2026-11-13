@@ -12,7 +12,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | integrada | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | integrada (aprovada com ressalvas) | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | integrada | |
-| T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03, T08 |
+| T04 | CI: lint, testes e validação (entrega 5) | Codex | tarefa/t04-ci | em revisão | T02, T03, T08 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | Codex | tarefa/t05-publicacao-segura | integrada | T02, T03, T08 |
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
@@ -118,6 +118,14 @@ da entrega.
   aprovada quando `id_territorio` é lido como texto. **Pedidos:** nenhum.
   **Revisão cruzada (Claude):** 1ª versão reprovada (rejeitava a Silver real); 2ª aprovada. **Ressalvas para tarefa futura:** o contrato ainda aceita `data_ocorrencia` fora de limites plausíveis (ex.: 1800 ou 2099), `idade_anos` negativa e `sexo` fora do domínio; falta guarda de proporção de datas no ano da notificação.
 - T03: entregue em 5 commits. Contrato em `contracts/sinesp.py` (bronze, silver, gold mensal/anual, cobertura mensal), 26 testes de contrato, fixtures sintéticas, `docs/contracts/sinesp.md`. `pytest` (29 passando no total) e `ruff check src tests` verdes; validado também contra Silver e Gold reais, só leitura. Pendente: reconciliação contra o Anuário e detecção de quebras de série (fora do escopo). Obs.: `contracts/__init__.py` é vazio, como em T02. Revisão cruzada pelo Codex (read-only) reprovou a 1ª versão; corrigidos: série inteira ausente na cobertura, desagregações e `arquivo_origem` no esquema, coerência situação x meses no Gold anual. Nova passada do Codex aprovou, sem achados acima de baixo.
+- T04: **Entrega:** workflow de CI para `push` e `pull_request` em
+  `engenharia-dados` e `develope`, além de execução manual. Usa Ubuntu, Python
+  3.11, cache pip, permissões somente de leitura, concorrência por referência,
+  Ruff e pytest, sem deploy ou segredos. `pipeline/validate_project.py` fica fora
+  porque depende da Silver não versionada. Sintaxe e estrutura YAML validadas
+  localmente; 51 testes aprovados e Ruff sem erros. **Pedidos:** nenhum.
+  **Pendente:** revisão cruzada; a primeira execução real do workflow depende do
+  push pelo dono do projeto.
 - T05: **Entrega:** módulo de publicação de diretórios com geração e validação
   em temporário no mesmo volume, troca com backup e restauração compatível com
   Windows. A revisão acrescentou retorno estruturado e aviso para backup não
