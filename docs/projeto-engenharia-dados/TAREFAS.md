@@ -10,7 +10,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | --- | --- | --- | --- | --- | --- |
 | T00 | Base: pacote, config, checagens (entrega 2) | Codex | engenharia-dados | integrada (53a05c1) | |
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | a fazer | |
-| T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | a fazer | |
+| T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | em revisão | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | a fazer | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03 |
@@ -90,5 +90,8 @@ Cada agente anota abaixo, em sua tarefa, pedidos de arquivos extras e o resumo
 da entrega.
 
 - T01: (vazio)
-- T02: (vazio)
+- T02: **Entrega:** contratos da Silver do atlas e da Gold territorial, fixtures
+  sintéticas, testes de esquema, tipo, chave, periodicidade e ano preliminar, e
+  documentação do SINAN. Validação final: 9 testes aprovados e Ruff sem erros.
+  **Pedidos:** nenhum. **Pendente:** revisão cruzada e decisão do dono sobre o merge.
 - T03: (vazio)
