@@ -13,11 +13,11 @@ a Gold atuais (somente leitura).
 | Função | Alvo | O que verifica |
 | --- | --- | --- |
 | `validar_bronze` | xlsx normalizado | colunas `uf`, `municipio`, `evento`, `data_referencia`; extras são aceitas |
-| `validar_silver_ocorrencias` | `silver/sinesp_vde_ocorrencias.parquet` | colunas, tipos, `mes` 1 a 12, medidas não negativas, `abrangencia` e `situacao_dado` válidos |
+| `validar_silver_ocorrencias` | `silver/sinesp_vde_ocorrencias.parquet` | colunas (inclui `agente`, `arma`, `faixa_etaria`), tipos, `mes` 1 a 12, medidas não negativas, `abrangencia` e `situacao_dado` válidos |
 | `validar_silver_feminicidio` | `silver/sinesp_feminicidio.parquet` | colunas, tipos, `mes`, medida, situação |
 | `validar_gold_mensal` | `gold/sinesp/sinesp_sc_brasil_mensal.csv` | colunas, tipos, domínios, chave única |
-| `validar_gold_anual` | `gold/sinesp/sinesp_sc_brasil_anual.csv` | idem, mais `meses_informados` entre 1 e 12 |
-| `validar_cobertura_mensal` | Gold mensal | ano consolidado com 12 meses; ano parcial sem lacuna (1..N) |
+| `validar_gold_anual` | `gold/sinesp/sinesp_sc_brasil_anual.csv` | idem, medidas não negativas, `meses_informados` entre 1 e 12, ano consolidado com 12 meses e ano parcial com menos de 12 |
+| `validar_cobertura_mensal` | Gold mensal | todo par território/ano traz cada evento obrigatório; ano consolidado com 12 meses; ano parcial sem lacuna (1..N) |
 
 ## Granularidade e chaves
 
@@ -53,5 +53,6 @@ a Gold atuais (somente leitura).
 
 - Quebras de série dos estados (Estupro em SC 2019, ES, RO, MA) são problema de
   conteúdo, não de esquema, e **não** são detectadas por este contrato.
+- A matriz de nove eventos por 27 UFs continua validada em `pipeline/build_sinesp_atlas.py`, não aqui.
 - Não há checagem de reconciliação contra o Anuário (Brasil 2019 = 1.331
   feminicídios); fica para a tarefa de testes de reconciliação.
