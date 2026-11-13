@@ -13,8 +13,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | integrada (aprovada com ressalvas) | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | integrada | |
 | T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03, T08 |
-| T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03, T08 |
-| T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | aprovada (revisão cruzada) | T01, T02; aprovação do dono para tocar `pipeline/` |
+| T05 | Publicação Gold segura e atômica (entrega 6) | Codex | tarefa/t05-publicacao-segura | integrada | T02, T03, T08 |
+| T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -118,4 +118,16 @@ da entrega.
   aprovada quando `id_territorio` é lido como texto. **Pedidos:** nenhum.
   **Revisão cruzada (Claude):** 1ª versão reprovada (rejeitava a Silver real); 2ª aprovada. **Ressalvas para tarefa futura:** o contrato ainda aceita `data_ocorrencia` fora de limites plausíveis (ex.: 1800 ou 2099), `idade_anos` negativa e `sexo` fora do domínio; falta guarda de proporção de datas no ano da notificação.
 - T03: entregue em 5 commits. Contrato em `contracts/sinesp.py` (bronze, silver, gold mensal/anual, cobertura mensal), 26 testes de contrato, fixtures sintéticas, `docs/contracts/sinesp.md`. `pytest` (29 passando no total) e `ruff check src tests` verdes; validado também contra Silver e Gold reais, só leitura. Pendente: reconciliação contra o Anuário e detecção de quebras de série (fora do escopo). Obs.: `contracts/__init__.py` é vazio, como em T02. Revisão cruzada pelo Codex (read-only) reprovou a 1ª versão; corrigidos: série inteira ausente na cobertura, desagregações e `arquivo_origem` no esquema, coerência situação x meses no Gold anual. Nova passada do Codex aprovou, sem achados acima de baixo.
+- T05: **Entrega:** módulo de publicação de diretórios com geração e validação
+  em temporário no mesmo volume, troca com backup e restauração compatível com
+  Windows. A revisão acrescentou retorno estruturado e aviso para backup não
+  removido após publicação concluída, erro encadeado com o caminho do backup em
+  falha dupla, detecção prévia de backups órfãos e documentação da janela sem
+  destino entre as renomeações. Nove testes cobrem os fluxos de sucesso,
+  falha e recuperação. Validação final: 51 testes aprovados e Ruff sem erros.
+  **Pedidos:** nenhum. **Revisão cruzada (Claude):** 1ª versão reprovada (sucesso reportado como
+  falha quando o backup não era removido; restauração falha sem apontar o
+  backup); 2ª aprovada. **Ressalva:** um backup remanescente bloqueia as
+  publicações seguintes até limpeza manual; registrar no runbook. **Pendente:**
+  ligar o módulo ao pipeline e ao validador.
 - T08: as duas asserções desatualizadas de `pipeline/validate_project.py` foram trocadas por `_validar_taxas_territoriais` (taxa, população e `tipo_denominador` juntos; `publicado` até 2024; em 2025 `publicado` no total e `estimado_proporcao_2024` por sexo; taxa recalculada com tolerância de 0,0051) e por checagens de situação (SINAN 2025 `preliminar`; SINESP parcial sem taxa). `docs/SINAN_ATLAS.md` e `docs/SINESP_VDE.md` corrigidos. Verificado: o validador passa nos dados reais e falha em 10 adulterações feitas numa cópia (denominador inválido, 2025 não preliminar, taxa apagada, taxa errada, estimado em 2024, taxa em ano parcial, parcial virando consolidado). Sem mudança em dados, construtores ou dashboard. Fora do escopo e ainda pendente: `docs/SIM_ATLAS.md` e a asserção do SIM continuam exigindo taxa vazia em 2025 e 2026, o que confere com a Gold atual do SIM. Revisão cruzada do Codex: 1ª passada reprovou (ano parcial do Sinesp não confrontado com o ano); corrigido sem fixar 2026 no código (`periodo_completo` equivale a 12 meses, só o maior ano pode ser parcial, `meses_observados` entre 1 e 12); 2ª passada aprovou.
