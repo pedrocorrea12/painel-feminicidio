@@ -101,9 +101,11 @@ Resultados da carga atual:
   homicídio e suicídio têm linhas para os 295 municípios de Santa Catarina.
 - Estupro, estupro de vulnerável, pessoa desaparecida e pessoa localizada
   aparecem somente como total estadual e não suportam análise municipal.
-- As taxas são calculadas somente até 2024, último ano com denominador
-  populacional compatível.
-- A série de 2026 permanece parcial e não deve ser comparada com anos cheios.
+- As taxas são calculadas de 2019 a 2025. Até 2024 o denominador é a população
+  publicada; em 2025 o total usa a estimativa oficial do IBGE e os recortes por
+  sexo aplicam a proporção municipal de 2024 (`estimado_proporcao_2024`).
+- A série de 2026 permanece parcial, sem taxa, e não deve ser comparada com
+  anos cheios.
 
 Saídas:
 

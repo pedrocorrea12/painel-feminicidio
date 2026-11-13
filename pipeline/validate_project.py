@@ -12,6 +12,38 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 
 
+SEXOS_COM_TAXA = {"total", "feminino", "masculino"}
+ULTIMO_ANO_POPULACAO_PUBLICADA = 2024
+
+
+def _validar_taxas_territoriais(quadro: pd.DataFrame, coluna_valor: str) -> None:
+    """Confere a regra das taxas do atlas, incluindo os denominadores de 2025.
+
+    Até 2024 a população por sexo é publicada. Em 2025 só o total é publicado
+    (estimativa do IBGE); feminino e masculino usam a proporção municipal de
+    2024. Sexo não informado nunca tem denominador nem taxa.
+    """
+
+    tem_taxa = quadro.taxa_100mil.notna()
+    assert tem_taxa.eq(quadro.populacao.notna()).all()
+    assert tem_taxa.eq(quadro.tipo_denominador.notna()).all()
+    assert tem_taxa.eq(quadro.sexo.isin(SEXOS_COM_TAXA)).all()
+
+    ate_publicado = quadro.ano.le(ULTIMO_ANO_POPULACAO_PUBLICADA)
+    assert quadro.loc[tem_taxa & ate_publicado, "tipo_denominador"].eq("publicado").all()
+    depois = quadro.loc[tem_taxa & ~ate_publicado]
+    assert depois.ano.eq(2025).all()
+    assert depois.loc[depois.sexo.eq("total"), "tipo_denominador"].eq("publicado").all()
+    assert depois.loc[
+        depois.sexo.ne("total"), "tipo_denominador"
+    ].eq("estimado_proporcao_2024").all()
+
+    com_taxa = quadro.loc[tem_taxa]
+    assert com_taxa.populacao.gt(0).all()
+    recalculada = com_taxa[coluna_valor].div(com_taxa.populacao).mul(100_000)
+    assert (recalculada - com_taxa.taxa_100mil).abs().le(0.0051).all()
+
+
 def main() -> None:
     obrigatorios = [
         ROOT / "data" / "silver" / "populacao_feminina_municipio.parquet",
@@ -324,9 +356,12 @@ def main() -> None:
     assert not sinan_atlas_territorio.duplicated(
         ["ano", "nivel_territorial", "id_territorio", "indicador", "sexo"]
     ).any()
+    _validar_taxas_territoriais(sinan_atlas_territorio, "notificacoes")
+    sinan_2025 = sinan_atlas_territorio.loc[sinan_atlas_territorio.ano.eq(2025)]
+    assert sinan_2025.situacao_dado.eq("preliminar").all()
     assert sinan_atlas_territorio.loc[
-        sinan_atlas_territorio.ano.eq(2025), "taxa_100mil"
-    ].isna().all()
+        sinan_atlas_territorio.ano.le(2024), "situacao_dado"
+    ].eq("definitivo").all()
     sinan_atlas_idade = pd.read_csv(atlas / "sinan_violencia_idade_ano.csv")
     assert len(sinan_atlas_idade) == 2376
     assert not sinan_atlas_idade.duplicated(
@@ -357,7 +392,24 @@ def main() -> None:
     assert not sinesp_territorio.duplicated(
         ["nivel_territorial", "id_territorio", "ano", "indicador", "sexo"]
     ).any()
-    assert sinesp_territorio.loc[sinesp_territorio.ano.ge(2025), "taxa_100mil"].isna().all()
+    _validar_taxas_territoriais(
+        sinesp_territorio.loc[sinesp_territorio.periodo_completo], "valor_absoluto"
+    )
+    # Só o último ano publicado pode ser parcial, e "completo" significa 12 meses.
+    assert sinesp_territorio.meses_observados.between(1, 12).all()
+    assert sinesp_territorio.periodo_completo.eq(
+        sinesp_territorio.meses_observados.eq(12)
+    ).all()
+    assert sinesp_territorio.loc[~sinesp_territorio.periodo_completo, "ano"].eq(
+        sinesp_territorio.ano.max()
+    ).all()
+    # Ano parcial não tem denominador anual compatível: a taxa fica vazia.
+    sinesp_parcial = sinesp_territorio.loc[~sinesp_territorio.periodo_completo]
+    assert sinesp_parcial.situacao_dado.eq("parcial").all()
+    assert sinesp_parcial[["taxa_100mil", "populacao", "tipo_denominador"]].isna().all().all()
+    assert sinesp_territorio.loc[
+        sinesp_territorio.periodo_completo, "situacao_dado"
+    ].eq("consolidado_publicacao").all()
     assert sinesp_territorio.loc[
         sinesp_territorio.nivel_territorial.eq("municipio"), "id_territorio"
     ].nunique() == 295

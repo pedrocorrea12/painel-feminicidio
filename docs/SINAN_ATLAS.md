@@ -47,8 +47,15 @@ Taxa por 100 mil habitantes:
 
 `notificações de residentes / população residente x 100.000`
 
-As taxas são calculadas de 2015 a 2024. O ano de 2025 é preliminar e aparece
-somente como valor absoluto porque a base populacional local termina em 2024.
+As taxas territoriais são calculadas de 2015 a 2025. Até 2024 o denominador é a população
+publicada por sexo (`tipo_denominador = publicado`). Em 2025, que continua
+preliminar, o total usa a estimativa oficial do IBGE para 1º de julho de 2025
+(`publicado`) e os recortes feminino e masculino aplicam a proporção municipal
+de 2024 a esse total (`estimado_proporcao_2024`), conforme
+`pipeline/build_populacao_2025.py`. Linhas de sexo não informado não têm
+denominador nem taxa em nenhum ano. As taxas por grupo etário
+(`sinan_violencia_idade_ano.csv`) vão só até 2024, porque não há população por
+idade para 2025.
 
 ## Saídas
 
@@ -65,4 +72,7 @@ somente como valor absoluto porque a base populacional local termina em 2024.
    em cada ano.
 4. Brasil, UFs e municípios de Santa Catarina não podem ter chave duplicada.
 5. Tipos de violência não podem ser somados.
-6. A taxa de 2025 deve permanecer vazia.
+6. Taxa, população e `tipo_denominador` existem juntos, só para sexo total,
+   feminino e masculino. Até 2024 o denominador é `publicado`; em 2025 é
+   `publicado` para o total e `estimado_proporcao_2024` por sexo.
+7. O ano de 2025 permanece `preliminar`, mesmo com taxa.
