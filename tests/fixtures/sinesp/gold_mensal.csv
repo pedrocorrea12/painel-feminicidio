@@ -1,0 +1,61 @@
+territorio,ano,mes,evento,vitimas_feminino,vitimas_masculino,vitimas_nao_informado,total_vitimas,total_ocorrencias,total_peso,situacao_dado
+Brasil,2024,1,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,1,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,2,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,2,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,3,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,3,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,4,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,4,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,5,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,5,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,6,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,6,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,7,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,7,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,8,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,8,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,9,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,9,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,10,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,10,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,11,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,11,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2024,12,Feminicídio,30,0,0,30,0,0.0,consolidado_publicacao
+Brasil,2024,12,Estupro,50,0,0,50,0,0.0,consolidado_publicacao
+Brasil,2025,1,Feminicídio,30,0,0,30,0,0.0,parcial
+Brasil,2025,1,Estupro,50,0,0,50,0,0.0,parcial
+Brasil,2025,2,Feminicídio,30,0,0,30,0,0.0,parcial
+Brasil,2025,2,Estupro,50,0,0,50,0,0.0,parcial
+Brasil,2025,3,Feminicídio,30,0,0,30,0,0.0,parcial
+Brasil,2025,3,Estupro,50,0,0,50,0,0.0,parcial
+Santa Catarina,2024,1,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,1,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,2,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,2,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,3,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,3,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,4,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,4,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,5,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,5,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,6,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,6,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,7,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,7,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,8,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,8,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,9,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,9,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,10,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,10,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,11,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,11,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2024,12,Feminicídio,3,0,0,3,0,0.0,consolidado_publicacao
+Santa Catarina,2024,12,Estupro,5,0,0,5,0,0.0,consolidado_publicacao
+Santa Catarina,2025,1,Feminicídio,3,0,0,3,0,0.0,parcial
+Santa Catarina,2025,1,Estupro,5,0,0,5,0,0.0,parcial
+Santa Catarina,2025,2,Feminicídio,3,0,0,3,0,0.0,parcial
+Santa Catarina,2025,2,Estupro,5,0,0,5,0,0.0,parcial
+Santa Catarina,2025,3,Feminicídio,3,0,0,3,0,0.0,parcial
+Santa Catarina,2025,3,Estupro,5,0,0,5,0,0.0,parcial
