@@ -26,11 +26,11 @@ O arquivo `data/silver/sinan_atlas_violencia.parquet` segue o esquema abaixo.
 | Coluna | Tipo lógico | Regra |
 | --- | --- | --- |
 | `ano` | inteiro | entre 2015 e 2025 |
-| `mes` | inteiro | entre 1 e 12 |
-| `data_ocorrencia` | data | deve pertencer ao mesmo `ano` |
+| `mes` | numérico inteiro anulável | quando presente, entre 1 e 12 |
+| `data_ocorrencia` | data anulável | quando presente, seu mês deve coincidir com `mes` |
 | `sexo` | texto | classificação da pessoa notificada |
 | `raca` | texto | classificação de raça ou cor |
-| `idade_anos` | inteiro anulável | idade derivada de `NU_IDADE_N` |
+| `idade_anos` | numérico inteiro anulável | idade derivada de `NU_IDADE_N` |
 | `grupo_etario` | texto | faixa derivada da idade |
 | `natureza_violencia` | texto | `interpessoal` ou `autoprovocada` |
 | `id_municipio_residencia` | texto anulável | código IBGE de residência |
@@ -49,6 +49,24 @@ a dimensão territorial da análise, mas pode se repetir porque várias
 notificações podem ocorrer no mesmo município e ano. Inventar uma chave com
 esses campos eliminaria registros legítimos.
 
+Na materialização observada, `mes` e `idade_anos` são armazenados como
+`float64` por causa dos valores ausentes. O contrato aceita essa representação
+somente quando todos os valores presentes são inteiros; valores fracionários,
+como `3.5`, são rejeitados. `mes` e `data_ocorrencia` devem ser nulos juntos.
+Quando presentes, o mês deve estar entre 1 e 12 e coincidir com o mês de
+`data_ocorrencia`.
+
+O campo `ano` identifica o arquivo anual ou ano de referência da notificação;
+ele não é necessariamente o ano da ocorrência. Na Silver observada, 184.393
+datas presentes têm ano diferente de `ano`, principalmente notificações de
+ocorrências anteriores. Por isso o contrato não exige igualdade entre
+`data_ocorrencia.year` e `ano`.
+
+No artefato validado durante a revisão, 467 de 4.292.317 notificações
+(aproximadamente 0,0109%) possuem `mes` e `data_ocorrencia` nulos. Esses nulos
+são preservados porque representam ausência conjunta da data de ocorrência, e
+não uma quebra do contrato.
+
 ## Gold territorial
 
 O arquivo `data/gold/atlas/sinan_violencia_territorio_ano.csv` contém:
@@ -60,6 +78,11 @@ O arquivo `data/gold/atlas/sinan_violencia_territorio_ano.csv` contém:
 | `indicador`, `sexo` | texto |
 | `populacao`, `taxa_100mil` | numérico anulável |
 | `tipo_denominador`, `situacao_dado` | texto anulável |
+
+Ao carregar o CSV, `id_territorio` deve ser declarado como texto, por exemplo
+com `pd.read_csv(..., dtype={"id_territorio": "string"})`. Sem essa declaração,
+códigos municipais numéricos e identificadores como `BR` podem produzir uma
+coluna de tipos mistos, que é rejeitada pelo contrato.
 
 A chave de granularidade é:
 
@@ -83,8 +106,9 @@ regra estável nesta tarefa é a classificação explícita do ano como prelimin
 
 ## Validação
 
-`validar_silver_atlas` verifica colunas, tipos, intervalo anual, mês, coerência
-da data, natureza da violência e situação do dado.
+`validar_silver_atlas` verifica colunas, tipos lógicos, intervalo anual, nulos
+conjuntos de mês e data, coerência entre o mês e a data, natureza da violência e
+situação do dado.
 
 `validar_gold_territorial` verifica colunas, tipos, chave única, cobertura anual
 de cada série e situação do dado. As duas funções levantam `ValueError` com
