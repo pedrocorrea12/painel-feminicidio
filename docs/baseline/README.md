@@ -35,16 +35,19 @@ orquestrador: cada script é rodado à mão.
 
 | Etapa | Scripts | Rede | Lê | Escreve |
 | --- | --- | --- | --- | --- |
-| 1. Extração | `extract_sinan.py`, `extract_sim.py`, `extract_sinesp.py` | sim | fontes públicas | Bronze e Silver |
+| 1. Extração | `extract_sinan.py`, `extract_sim.py`, `extract_sinesp.py` | sim | fontes públicas | Bronze e Silver; `extract_sinesp.py` também escreve a Gold `data/gold/sinesp` |
 | 2. Dimensões | `fetch_ibge.py`, `fetch_malha_sc.py`, `fetch_populacao_feminina.py`, `fetch_populacao_geral.py` | sim | IBGE, MS | Bronze, Silver, malha do site |
 | 3. Silver e Gold por fonte | `build_populacao_2025.py`, `build_sinan_atlas.py`, `build_sim_atlas.py`, `build_rais.py` | só `build_populacao_2025.py` e `build_sim_atlas.py` referenciam URLs | Bronze | Silver; `build_sinan_atlas.py` e `build_sim_atlas.py` também escrevem a Gold do atlas, `build_rais.py` a Gold da RAIS |
-| 4. Silver territorial e Gold do painel | `build_silver.py`, `build_gold.py` (importa e executa `build_silver`) | não | Silver | `indicadores_territorio_ano.parquet`, `data/gold/painel.json`, cópia em `dashboard/dist/data` |
-| 5. Gold analítico | `build_dashboard_analysis.py`, `build_integrated_analysis.py`, `build_sinesp_analysis.py`, `build_race_analysis.py`, `build_sinesp_atlas.py` | não | Silver | `data/gold/{analise.json,integrado,raca,atlas}` e relatórios em `docs/` |
+| 4. Silver territorial e Gold do painel | `build_silver.py`, `build_gold.py` (importa e executa `build_silver`) | não | Silver; `build_gold.py` também lê a Gold de `raca` e `rais` | `indicadores_territorio_ano.parquet`, `sinan_preliminar_territorio_ano.parquet`, `data/gold/painel.json`, cópia em `dashboard/dist/data` |
+| 5. Gold analítico | `build_dashboard_analysis.py`, `build_integrated_analysis.py`, `build_sinesp_analysis.py`, `build_race_analysis.py`, `build_sinesp_atlas.py` | não | Silver; `build_race_analysis.py` lê `data/gold/ibge` e `build_sinesp_atlas.py` lê `data/gold/integrado/validacao_municipios_sinesp_sc.csv` | `data/gold/{analise.json,integrado,raca,atlas}` e relatórios em `docs/` |
 | 6. Catálogo, protótipo e site | `build_atlas_catalog.py`, `build_atlas_prototype_data.py`, `build_atlas_site_data.py` | não | Silver e Gold | `data/gold/atlas` (catálogo), `dashboard/prototipos/atlas-violencia/data.json`, `dashboard/atlas/data` e os ZIPs de `dashboard/atlas/downloads` |
 | 7. Validação | `validate_project.py` | não | Silver, Gold, site | nada |
 
-A coluna "Rede" e as entradas das etapas 1 a 3 vêm da leitura estática dos
-scripts (imports e constantes de caminho), não de execução.
+A coluna "Rede" e as entradas e saídas vêm da leitura estática dos scripts
+(imports e constantes de caminho); só as etapas 4 a 6 foram executadas. Há
+dependências entre etapas que a ordem alfabética não revela: `build_gold.py`
+precisa da Gold de `raca` e `rais`, e `build_sinesp_atlas.py` precisa de um CSV
+gerado em `data/gold/integrado`.
 
 Não existe nenhum teste automatizado dos construtores nem verificação de que as
 etapas rodam na ordem certa.
@@ -130,15 +133,15 @@ territorial também foi reconstruída.
 
 | Script | Saída | Tempo |
 | --- | --- | ---: |
-| `build_gold.py` (inclui `build_silver`) | ok | 5,3 s |
-| `build_dashboard_analysis.py` | ok | 2,0 s |
+| `build_gold.py` (inclui `build_silver`) | ok | 5,4 s |
+| `build_dashboard_analysis.py` | ok | 1,9 s |
 | `build_integrated_analysis.py` | ok | 2,6 s |
-| `build_sinesp_analysis.py` | ok | 8,2 s |
-| `build_race_analysis.py` | ok | 2,1 s |
-| `build_sinesp_atlas.py` | ok | 40,3 s |
+| `build_sinesp_analysis.py` | ok | 7,9 s |
+| `build_race_analysis.py` | ok | 2,0 s |
+| `build_sinesp_atlas.py` | ok | 39,6 s |
 | `build_atlas_catalog.py` | ok | 0,9 s |
-| `build_atlas_prototype_data.py` | ok | 2,2 s |
-| `build_atlas_site_data.py` | ok | 10,7 s |
+| `build_atlas_prototype_data.py` | ok | 2,3 s |
+| `build_atlas_site_data.py` | ok | 10,6 s |
 
 Resultado, com o detalhe de cada arquivo em `reproducao.json`:
 
@@ -155,9 +158,9 @@ Resultado, com o detalhe de cada arquivo em `reproducao.json`:
   outubro, anterior à publicação das taxas de 2025. Ele é ignorado pelo Git e
   não é publicado.
 
-Os dois relatórios Markdown que os construtores escrevem em `docs/` foram
-comparados à mão com `diff`: só muda a linha "Atualizado em". Essa comparação
-não está em `reproducao.json`, que apenas lista os relatórios gerados.
+Os dois relatórios Markdown que os construtores escrevem em `docs/` também são
+comparados com os originais (`relatorios_docs` em `reproducao.json`): em cada um
+só muda a linha "Atualizado em".
 
 Consequências para a publicação:
 

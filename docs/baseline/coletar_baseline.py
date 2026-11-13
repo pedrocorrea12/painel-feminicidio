@@ -166,6 +166,24 @@ def explicar_mudanca(arquivo: str, raiz: Path, copia: Path, antes: dict, depois:
     return registro
 
 
+def comparar_relatorio(original: Path, gerado: Path) -> dict:
+    """Compara um relatório Markdown gerado na cópia com o versionado na raiz."""
+
+    registro: dict = {"arquivo": gerado.name, "existe_na_raiz": original.exists()}
+    if original.exists():
+        antes = original.read_text(encoding="utf-8").splitlines()
+        depois = gerado.read_text(encoding="utf-8").splitlines()
+        registro["mesmo_numero_de_linhas"] = len(antes) == len(depois)
+        diferentes = [
+            {"linha": n, "antes": a[:80], "depois": d[:80]}
+            for n, (a, d) in enumerate(zip(antes, depois, strict=False), start=1)
+            if a != d
+        ]
+        registro["linhas_diferentes"] = len(diferentes)
+        registro["diferencas"] = diferentes[:10]
+    return registro
+
+
 def reproduzir(raiz: Path, copia: Path) -> dict:
     if copia.exists() and any(copia.iterdir()):
         raise SystemExit(f"{copia} não está vazio; use uma pasta nova.")
@@ -204,7 +222,10 @@ def reproduzir(raiz: Path, copia: Path) -> dict:
         "alterados": [explicar_mudanca(a, raiz, copia, antes, depois) for a in alterados],
         "criados": sorted(set(depois) - set(antes)),
         "removidos": sorted(set(antes) - set(depois)),
-        "relatorios_docs_gerados": sorted(p.name for p in (copia / "docs").iterdir()),
+        "relatorios_docs": [
+            comparar_relatorio(raiz / "docs" / p.name, p)
+            for p in sorted((copia / "docs").iterdir())
+        ],
     }
 
 

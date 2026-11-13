@@ -4,13 +4,13 @@
     {
       "script": "build_gold.py",
       "codigo_saida": 0,
-      "segundos": 5.3,
+      "segundos": 5.4,
       "erro": ""
     },
     {
       "script": "build_dashboard_analysis.py",
       "codigo_saida": 0,
-      "segundos": 2.0,
+      "segundos": 1.9,
       "erro": ""
     },
     {
@@ -22,19 +22,19 @@
     {
       "script": "build_sinesp_analysis.py",
       "codigo_saida": 0,
-      "segundos": 8.2,
+      "segundos": 7.9,
       "erro": ""
     },
     {
       "script": "build_race_analysis.py",
       "codigo_saida": 0,
-      "segundos": 2.1,
+      "segundos": 2.0,
       "erro": ""
     },
     {
       "script": "build_sinesp_atlas.py",
       "codigo_saida": 0,
-      "segundos": 40.3,
+      "segundos": 39.6,
       "erro": ""
     },
     {
@@ -46,13 +46,13 @@
     {
       "script": "build_atlas_prototype_data.py",
       "codigo_saida": 0,
-      "segundos": 2.2,
+      "segundos": 2.3,
       "erro": ""
     },
     {
       "script": "build_atlas_site_data.py",
       "codigo_saida": 0,
-      "segundos": 10.7,
+      "segundos": 10.6,
       "erro": ""
     }
   ],
@@ -217,8 +217,32 @@
   ],
   "criados": [],
   "removidos": [],
-  "relatorios_docs_gerados": [
-    "RELATORIO_ANALISES_SINESP.md",
-    "RELATORIO_INTEGRACAO_DADOS.md"
+  "relatorios_docs": [
+    {
+      "arquivo": "RELATORIO_ANALISES_SINESP.md",
+      "existe_na_raiz": true,
+      "mesmo_numero_de_linhas": true,
+      "linhas_diferentes": 1,
+      "diferencas": [
+        {
+          "linha": 3,
+          "antes": "Atualizado em 2026-10-14.",
+          "depois": "Atualizado em 2026-11-13."
+        }
+      ]
+    },
+    {
+      "arquivo": "RELATORIO_INTEGRACAO_DADOS.md",
+      "existe_na_raiz": true,
+      "mesmo_numero_de_linhas": true,
+      "linhas_diferentes": 1,
+      "diferencas": [
+        {
+          "linha": 3,
+          "antes": "Atualizado em 2026-10-14.",
+          "depois": "Atualizado em 2026-11-13."
+        }
+      ]
+    }
   ]
 }
