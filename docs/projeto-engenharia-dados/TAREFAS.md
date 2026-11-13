@@ -12,8 +12,9 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | em revisão | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | a fazer | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | a fazer | |
-| T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03 |
-| T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03 |
+| T04 | CI: lint, testes e validação (entrega 5) | a definir | tarefa/t04-ci | a fazer | T02, T03, T08 |
+| T05 | Publicação Gold segura e atômica (entrega 6) | a definir | tarefa/t05-publicacao-segura | a fazer | T02, T03, T08 |
+| T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | a fazer (aguarda T02) | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -71,7 +72,7 @@ arquivo. T01 também é independente.
 - **Arquivos permitidos:** `.github/workflows/ci.yml`. Python 3.11, `pip install -e
   ".[dev]"`, `ruff check src tests`, `pytest`. Sem deploy.
 - **Aceite:** workflow falha quando um teste de contrato falha. Só inicia após
-  T02 e T03 integradas.
+  T02, T03 e T08 integradas.
 
 ## T05 Publicação segura
 
@@ -79,6 +80,26 @@ arquivo. T01 também é independente.
   Mudanças em `pipeline/` ou `.github/` exigem aprovação do dono.
 - **Aceite:** Gold inválida não substitui a versão válida; escrita em caminho
   temporário seguida de troca atômica; teste simula falha no meio.
+
+## T08 Validador e documentação das taxas de 2025
+
+- **Dono:** Claude. **Branch:** `tarefa/t08-validador`. Só inicia depois que a T02
+  definir o contrato do SINAN para 2025 e com **aprovação do dono** para alterar
+  `pipeline/`.
+- **Origem:** achado da T01 (`docs/baseline/README.md`): o commit `e7dc7ed` passou a
+  publicar taxas de 2025 e `pipeline/validate_project.py` ainda exige que elas
+  fiquem vazias, o que o faz falhar hoje (linhas 327 e 360).
+- **Arquivos permitidos:** `pipeline/validate_project.py`, `docs/SINAN_ATLAS.md`
+  e, se mencionar a taxa de 2025, `docs/SINESP_VDE.md`. Nenhum construtor,
+  dado ou arquivo do dashboard.
+- **Escopo:** trocar as duas asserções por verificações do estado real, alinhadas
+  ao contrato da T02 (por exemplo: 2025 continua `preliminar`; a taxa só existe
+  onde há denominador, com `tipo_denominador` válido); corrigir a documentação
+  que ainda diz que a taxa de 2025 fica vazia. Sem mudar nenhum valor publicado.
+- **Aceite:** `validate_project.py` passa nos dados atuais; falha numa cópia em que
+  a taxa de 2025 tem `tipo_denominador` inválido ou em que a situação de 2025 deixa
+  de ser `preliminar`; documentação coerente com a Gold; nenhum arquivo fora da
+  lista alterado.
 
 ## T06 e T07
 
