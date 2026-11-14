@@ -5,8 +5,10 @@ Roda numa CÓPIA do repositório (nunca na raiz) para não alterar dados version
     python tools/medir_estagios.py --copia C:/caminho/vazio --saida docs/benchmark/medicoes.json
 
 Estágios de rede (extract_*, fetch_*) não são executados. Cada estágio roda em um
-subprocesso; o pico de memória é o maior pico do conjunto de trabalho
-de um processo da árvore, amostrado a cada 20 ms com psutil; pico sem psutil = None).
+subprocesso; o pico de memória é o maior entre o pico do conjunto de
+trabalho de um processo da árvore e a soma simultânea dos processos, amostrado a cada
+20 ms com psutil (sem psutil = None). Só o arquivo de resultados (--saida) é gravado
+onde você indicar; os estágios rodam e gravam apenas na cópia.
 """
 
 from __future__ import annotations
@@ -81,17 +83,22 @@ def acompanhar(processo: subprocess.Popen) -> tuple[float | None, str]:
         return None, erro
     raiz = psutil.Process(processo.pid)
     picos: dict[int, int] = {}
+    pico_soma = 0
     while processo.poll() is None:
+        soma = 0
         try:
             for p in [raiz, *raiz.children(recursive=True)]:
                 info = p.memory_info()
-                atual = getattr(info, "peak_wset", info.rss)
-                picos[p.pid] = max(picos.get(p.pid, 0), atual)
+                picos[p.pid] = max(picos.get(p.pid, 0), getattr(info, "peak_wset", info.rss))
+                soma += info.rss
         except psutil.Error:
             pass
+        pico_soma = max(pico_soma, soma)
         time.sleep(0.02)
     erro = processo.stderr.read() if processo.stderr else ""
-    return round(max(picos.values(), default=0) / 1024 / 1024, 1), erro
+    maior = max(picos.values(), default=0)
+    # Referência conservadora: o maior entre o pico de um processo e a soma simultânea.
+    return round(max(maior, pico_soma) / 1024 / 1024, 1), erro
 
 
 def medir(copia: Path, grupo: str, script: str) -> dict:
