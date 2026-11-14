@@ -56,11 +56,11 @@ steps:
 
 Observações sobre o OIDC:
 
-- A condição aceita `repo:<dono/nome>:ref:refs/heads/<branch>`. Jobs que usam
+- A condição compara por igualdade exata `repo:<dono/nome>:ref:refs/heads/<branch>`; a variável rejeita curingas nas branches. Jobs que usam
   `environment:` ganham outro `sub` (`...:environment:<nome>`) e **não** assumem este
   papel; se precisar, acrescente o padrão em `main.tf` conscientemente.
 - Cada conta só pode ter um provedor OIDC por URL: se já existir, use
-  `create_oidc_provider = false`.
+  `create_oidc_provider = false` (o plano falha se o provedor existente não aceitar a audiência `sts.amazonaws.com`).
 
 ## Remoção
 

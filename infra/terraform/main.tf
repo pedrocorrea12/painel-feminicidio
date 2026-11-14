@@ -2,6 +2,7 @@ data "aws_caller_identity" "atual" {}
 
 locals {
   nome_bucket = "${var.project}-${data.aws_caller_identity.atual.account_id}"
+
   assuntos_oidc = [
     for branch in var.github_branches :
     "repo:${var.github_repository}:ref:refs/heads/${branch}"
@@ -47,8 +48,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "dados" {
   bucket = aws_s3_bucket.dados.id
 
   rule {
-    bucket_key_enabled = true
-
     apply_server_side_encryption_by_default {
       sse_algorithm = "AES256"
     }
@@ -131,6 +130,13 @@ data "aws_iam_openid_connect_provider" "github_existente" {
   count = var.create_oidc_provider ? 0 : 1
 
   url = "https://token.actions.githubusercontent.com"
+
+  lifecycle {
+    postcondition {
+      condition     = contains(self.client_id_list, "sts.amazonaws.com")
+      error_message = "O provedor OIDC existente não aceita a audiência sts.amazonaws.com."
+    }
+  }
 }
 
 locals {
@@ -158,7 +164,7 @@ data "aws_iam_policy_document" "confianca_github" {
     }
 
     condition {
-      test     = "StringLike"
+      test     = "StringEquals"
       variable = "token.actions.githubusercontent.com:sub"
       values   = local.assuntos_oidc
     }

@@ -29,6 +29,11 @@ variable "github_branches" {
     condition     = length(var.github_branches) > 0
     error_message = "Informe ao menos uma branch."
   }
+
+  validation {
+    condition     = alltrue([for b in var.github_branches : can(regex("^[A-Za-z0-9_./-]+$", b))])
+    error_message = "Branches não podem conter curingas (*, ?, [ ]) nem caracteres especiais."
+  }
 }
 
 variable "create_oidc_provider" {

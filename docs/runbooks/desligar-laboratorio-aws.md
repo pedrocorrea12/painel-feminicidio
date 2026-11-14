@@ -12,9 +12,12 @@ ficar sem acompanhar a conta. O módulo está em `infra/terraform/`.
 
 ## 1. Parar novas execuções
 
-Desative ou remova qualquer workflow agendado que assuma o papel do laboratório
-(`workflow_dispatch` manual não precisa ser removido). Confirme na aba Actions que
-nenhuma execução está em andamento.
+1. Desabilite **inteiramente** qualquer workflow que assuma o papel do laboratório
+   (Actions > o workflow > Disable workflow), incluindo o disparo manual.
+2. Confirme na aba Actions que nenhuma execução está em andamento; cancele as ativas.
+3. Se a suspeita for de credencial ou configuração, remova também a capacidade de
+   assumir o papel (por exemplo, esvazie `github_branches` no plano ou apague o
+   papel) antes de seguir.
 
 ## 2. Destruir
 
@@ -35,11 +38,15 @@ não depende dela.
 aws s3 ls | Select-String "painel-feminicidio-lab"
 aws iam list-roles --query "Roles[?starts_with(RoleName,'painel-feminicidio-lab')].RoleName"
 aws logs describe-log-groups --log-group-name-prefix "/painel-feminicidio-lab"
-aws budgets describe-budgets --account-id <ID_DA_CONTA>
+aws budgets describe-budgets --account-id <ID_DA_CONTA> `
+  --query "Budgets[?Name=='painel-feminicidio-lab-mensal'].Name"
+aws iam list-open-id-connect-providers   # procure token.actions.githubusercontent.com
 ```
 
-Todos devem voltar vazios. O provedor OIDC só é removido se o módulo o criou
-(`create_oidc_provider = true`); se ele já existia, permanece de propósito.
+Os quatro primeiros devem voltar vazios (ajuste o prefixo se mudou `project`). Seus
+outros orçamentos da conta não são do laboratório e devem permanecer. O provedor
+OIDC só deve ter sumido se o módulo o criou (`create_oidc_provider = true`); se ele já
+existia, permanece de propósito.
 
 ## 4. Confirmar custo
 
@@ -55,8 +62,11 @@ recursos foram removidos.
 - **Recurso criado fora do Terraform:** liste e remova à mão apenas o que tem a tag
   `projeto=painel-feminicidio-lab`, depois execute `terraform state list` para
   checar divergência.
-- **Estado perdido:** remova manualmente na ordem papel → provedor OIDC (se criado
-  aqui) → bucket → logs → orçamento, e registre o incidente.
+- **Estado perdido:** remova manualmente, nesta ordem: (1) a política inline do papel
+  (`aws iam delete-role-policy`) e depois o papel; (2) o provedor OIDC, só se foi criado
+  aqui; (3) o bucket, **esvaziando antes todas as versões e delete markers** (a
+  exclusão manual não tem o `force_destroy` do Terraform); (4) o grupo de logs;
+  (5) o orçamento do laboratório. Registre o incidente.
 
 ## Evidências a guardar
 
