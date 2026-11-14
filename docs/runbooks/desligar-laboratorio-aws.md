@@ -15,9 +15,11 @@ ficar sem acompanhar a conta. O módulo está em `infra/terraform/`.
 1. Desabilite **inteiramente** qualquer workflow que assuma o papel do laboratório
    (Actions > o workflow > Disable workflow), incluindo o disparo manual.
 2. Confirme na aba Actions que nenhuma execução está em andamento; cancele as ativas.
-3. Se a suspeita for de credencial ou configuração, remova também a capacidade de
-   assumir o papel (por exemplo, esvazie `github_branches` no plano ou apague o
-   papel) antes de seguir.
+3. Se a suspeita for de credencial ou configuração, **revogue já** o acesso, sem esperar
+   o destroy (um plano não revoga nada): apague a política inline e o papel,
+   `aws iam delete-role-policy --role-name <projeto>-github-pipeline --policy-name <projeto>-pipeline`
+   e `aws iam delete-role --role-name <projeto>-github-pipeline`. O `terraform destroy`
+   seguinte reconcilia o estado, pois o recurso já ausente é tratado como removido.
 
 ## 2. Destruir
 
