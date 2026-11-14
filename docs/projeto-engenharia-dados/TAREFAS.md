@@ -21,6 +21,9 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T12 | Benchmark local do pipeline (Gate B) | Claude | tarefa/t12-benchmark | integrada | T09 |
 | T13 | Declarar `xlrd` e registrar a estimativa de custo (pedidos da T12) | Claude | tarefa/t13-xlrd-custos | integrada | T12 |
 | T14 | Terraform do laboratório AWS, só escrito e revisado, sem `apply` (preparação da T06) | Claude | tarefa/t14-terraform | integrada | T12; revisão estática do Codex |
+| T15 | Terraform sem federação OIDC (a conta bloqueia por SCP), lock file e ADR | Claude | tarefa/t15-terraform-sem-oidc | a fazer | T14; laboratório parcialmente aplicado pelo dono |
+| T16 | Publicar a Gold no bucket pelo login local (código e runbook) | Codex | tarefa/t16-publicar-gold-s3 | a fazer | nenhuma (segue a decisão do contexto acima) |
+| T17 | CI: `terraform fmt -check` e `validate` sem credenciais | Codex | tarefa/t17-ci-terraform | a fazer | T15 (lock file); ok do dono para tocar `.github/` |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -174,6 +177,64 @@ arquivo. T01 também é independente.
 - **Aceite:** `terraform fmt -check` e `validate` documentados (execução local fica
   para quando o binário existir; a CI pode rodá-los sem credenciais), revisão
   estática do Codex aprovada, sem segredos.
+
+## Contexto das T15 a T17: o laboratório AWS foi aplicado em parte
+
+Em 14/11/2026 o dono aplicou o Terraform da T14 numa conta do plano gratuito
+(região `us-east-2`, projeto `dados-violencia-sc-lab`). Foram criados: bucket S3,
+grupo de logs e orçamento. **Falhou** a criação do provedor OIDC do GitHub: uma
+política de controle de serviço (SCP) da organização nega
+`iam:CreateOpenIDConnectProvider`. Por isso também não existem o papel e a
+política que dependem dele. Não se tenta contornar a SCP nem criar chave de acesso
+de longa duração. Decisão: publicar pela sessão local do dono (`aws login`,
+credenciais temporárias) e manter o desenho OIDC no código, desligado por variável.
+O estado do Terraform está em `infra/terraform/terraform.tfstate` do worktree de
+integração (ignorado pelo Git; não apagar nem versionar).
+
+## T15 Terraform sem federação OIDC
+
+- **Dono:** Claude; revisão do Codex (modo leitura). **Branch:** `tarefa/t15-terraform-sem-oidc`.
+- **Arquivos permitidos:** `infra/terraform/**` (inclui `.terraform.lock.hcl` e
+  `.gitignore`), `docs/adr/0002-publicacao-aws-por-login-local.md` (novo),
+  `docs/runbooks/desligar-laboratorio-aws.md`, `docs/costs.md` (só uma nota).
+- **Escopo:** variável `habilitar_federacao_github` (padrão `true`) que liga ou desliga
+  provedor OIDC, papel e política; saída `papel_github_arn` nula quando desligada;
+  `terraform.tfvars.example` e README coerentes; versionar `.terraform.lock.hcl`;
+  ignorar `tfplan`; ADR com problema, mensagem da SCP, alternativa descartada
+  (chave fixa), consequências e caminho de volta; runbook de desligamento cobrindo o
+  estado parcial.
+- **Aceite:** `terraform fmt -check` e `validate` ok; com `habilitar_federacao_github =
+  false` o `plan` contra a conta real mostra **0 a criar, 0 a alterar, 0 a destruir**;
+  pytest e ruff verdes; nenhum segredo, estado ou plano versionado.
+
+## T16 Publicar a Gold no bucket pelo login local
+
+- **Dono:** Codex. **Branch:** `tarefa/t16-publicar-gold-s3`, a partir de
+  `engenharia-dados`; **pode começar já, em paralelo com a T15** (não compartilham arquivos).
+- **Arquivos permitidos:** `src/painel_dados/s3_sync.py` (novo),
+  `tests/test_s3_sync.py` (novo), `docs/runbooks/publicar-gold-na-aws.md` (novo),
+  `docs/runbooks/README.md` (só o índice). Não alterar `pyproject.toml` (sem boto3):
+  usar a AWS CLI por `subprocess`.
+- **Escopo:** função pura que monta o comando `aws s3 sync` da pasta Gold para
+  `s3://<bucket>/gold/<id-da-execução>/`, **simulação (`--dryrun`) por padrão**, valida
+  nome de bucket e prefixo, recusa caminhos fora de `data/gold`, não usa `--delete` e
+  escreve um manifesto com tamanho e SHA-256 de cada arquivo. Runbook: login
+  (`aws login`), credenciais temporárias, simulação, publicação, verificação por
+  listagem e checagem do manifesto, rollback por versão do objeto, limpeza.
+- **Aceite:** testes sem rede (comando montado, recusas, manifesto determinístico);
+  pytest e `ruff check src tests` verdes; nenhuma credencial no código; o runbook
+  cita `docs/runbooks/desligar-laboratorio-aws.md` para encerrar.
+
+## T17 CI do Terraform sem credenciais
+
+- **Dono:** Codex. **Branch:** `tarefa/t17-ci-terraform`, depois da T15 integrada.
+  **Só começa com o ok do dono para tocar `.github/`.**
+- **Arquivos permitidos:** `.github/workflows/ci.yml`.
+- **Escopo:** job separado que roda `terraform fmt -check -recursive`, `terraform init
+  -backend=false -input=false` e `terraform validate` em `infra/terraform`, sem
+  credenciais e sem `plan`; versão do Terraform fixa; ações fixadas como no job atual.
+- **Aceite:** YAML válido, job independente do job Python, nenhuma credencial ou
+  permissão além de `contents: read`; CI verde no GitHub depois de o dono fazer push.
 
 ## T12 Benchmark local do pipeline (Gate B)
 
