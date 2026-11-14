@@ -25,6 +25,9 @@ from pathlib import Path
 
 import pandas as pd
 
+from painel_dados.contracts.atlas_site import validar_diretorio_site
+from painel_dados.publish import publicar_diretorio
+
 from build_atlas_prototype_data import (
     SIM_NOMES,
     SINAN_EIXOS,
@@ -296,7 +299,8 @@ def gerar_desigualdades() -> dict:
     }
 
 
-def main() -> None:
+def gerar_dados(destino: Path) -> None:
+    """Escreve todos os arquivos de dados do site em ``destino``."""
     base, indicadores = carregar()
     nomes = nomes_municipios(base)
     mascara_mun = base.nivel_territorial.eq("municipio")
@@ -309,28 +313,27 @@ def main() -> None:
     base = avaliar_suficiencia(base)
     site = base.loc[base.sexo.isin(SEXOS_SITE)]
 
-    if DADOS.exists():
-        for item in DADOS.iterdir():
-            if item.name == "malha_sc.json":
-                continue
-            shutil.rmtree(item) if item.is_dir() else item.unlink()
+    malha = DADOS / "malha_sc.json"
+    if malha.is_file():
+        destino.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(malha, destino / malha.name)
 
     nacional = site.loc[~site.nivel_territorial.eq("municipio")]
-    escrever(DADOS / "nacional.json", linhas(nacional, COLUNAS_SITE_NACIONAL))
+    escrever(destino / "nacional.json", linhas(nacional, COLUNAS_SITE_NACIONAL))
 
     municipios = site.loc[site.nivel_territorial.eq("municipio")]
     por_indicador = {ind["id"]: ind for ind in indicadores}
     arquivos_mapa = []
     for identificador, recorte in municipios.groupby("indicador"):
         colunas = ["id_territorio", "territorio"] + COLUNAS_SITE_MUNICIPIO[1:]
-        escrever(DADOS / "mapa" / f"{identificador}.json", linhas(recorte, colunas))
+        escrever(destino / "mapa" / f"{identificador}.json", linhas(recorte, colunas))
         arquivos_mapa.append(identificador)
     for identificador in arquivos_mapa:
         por_indicador[identificador]["arquivo_mapa"] = f"data/mapa/{identificador}.json"
 
     for id_mun, recorte in municipios.groupby("id_territorio"):
         escrever(
-            DADOS / "municipio" / f"{id_mun}.json",
+            destino / "municipio" / f"{id_mun}.json",
             {"id": id_mun, "nome": nomes[id_mun],
              **linhas(recorte, COLUNAS_SITE_MUNICIPIO)},
         )
@@ -344,7 +347,7 @@ def main() -> None:
         ).assign(indicador=lambda d: "sinan_" + d.indicador),
     ], ignore_index=True)
     idade["situacao_dado"] = idade.situacao_dado.map(SITUACAO)
-    escrever(DADOS / "idade.json", linhas(
+    escrever(destino / "idade.json", linhas(
         idade.rename(columns={"taxa_100mil": "taxa"}),
         ["indicador", "territorio", "ano", "grupo_etario", "valor", "populacao", "taxa", "situacao_dado"],
     ))
@@ -353,12 +356,12 @@ def main() -> None:
     mensal = mensal.loc[mensal.sexo.isin(SEXOS_SITE)].copy()
     mensal["indicador"] = "sinesp_" + mensal.indicador.map(slug)
     mensal["situacao_dado"] = mensal.situacao_dado.map(SITUACAO)
-    escrever(DADOS / "mensal.json", linhas(
+    escrever(destino / "mensal.json", linhas(
         mensal.rename(columns={"valor_absoluto": "valor"}),
         ["indicador", "territorio", "ano", "mes", "sexo", "valor", "situacao_dado"],
     ))
 
-    escrever(DADOS / "desigualdades.json", gerar_desigualdades())
+    escrever(destino / "desigualdades.json", gerar_desigualdades())
 
     downloads = gerar_downloads(base)
 
@@ -401,8 +404,12 @@ def main() -> None:
             "municipio": "data/municipio/{id}.json",
         },
     }
-    escrever(DADOS / "manifesto.json", manifesto)
+    escrever(destino / "manifesto.json", manifesto)
 
+
+def main() -> None:
+    publicar_diretorio(DADOS, gerar_dados, validar_diretorio_site)
+    downloads = json.loads((DADOS / "manifesto.json").read_text(encoding="utf-8"))["downloads"]
     tamanhos = sorted(
         ((p.stat().st_size, p.relative_to(SITE).as_posix()) for p in DADOS.rglob("*.json")),
         reverse=True,
