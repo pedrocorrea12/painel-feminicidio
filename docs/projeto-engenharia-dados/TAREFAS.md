@@ -18,7 +18,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | integrada | T05, T01; aprovação do dono para tocar `pipeline/` |
 | T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
 | T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | integrada | T05, T09 |
-| T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
+| T12 | Benchmark local do pipeline (Gate B) | Claude | tarefa/t12-benchmark | a fazer | T09 |
+| T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
@@ -147,9 +148,25 @@ arquivo. T01 também é independente.
   `docs/contracts/atlas_site.md`; sem outras mudanças. **Fora do escopo:** colocar o
   `validate_project.py` na CI (depende da Silver, não versionada).
 
+## T12 Benchmark local do pipeline (Gate B)
+
+- **Dono:** Claude. **Branch:** `tarefa/t12-benchmark`. Sem custo, sem AWS.
+- **Arquivos permitidos:** `docs/benchmark/**` (novo) e, se necessário, um script de
+  medição em `tools/`. Somente leitura em `pipeline/`, `data/` e `dashboard/`.
+- **Escopo:** medir, numa cópia, tempo, pico de memória e volume de entrada e saída
+  dos estágios que rodam offline (os 9 construtores da T01) e, quando possível, dos
+  que dependem de rede ou Bronze (extract/fetch), anotando o que não foi medido.
+  Comparar executores (local, GitHub Actions, contêiner/Lambda) por limites de
+  memória, duração e dependências (pyarrow, pandas, duckdb). Recomendar o executor.
+- **Aceite:** `docs/benchmark/README.md` com comandos reproduzíveis, tabela de
+  medições e recomendação; estimativa de custo mensal preliminar para `docs/costs.md`.
+
 ## T06 e T07
 
-Bloqueadas pelos Gates B e C e por aprovação explícita do dono. Não iniciar.
+Bloqueadas. T06 só inicia com T12 concluída, estimativa de custo registrada em
+`docs/costs.md` e **aprovação explícita do dono**. Roteiro completo, incluindo o
+que o dono prepara na conta AWS: `AWS-PREPARACAO.md`. T07 só após o Gate C.
+Não iniciar.
 
 ## Pedidos e entregas
 

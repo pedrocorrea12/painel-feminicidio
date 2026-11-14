@@ -98,4 +98,4 @@ tenha teste de equivalência.
 ## Próximo marco
 
 Concluir o Gate A local para SINAN e SINESP mantendo o dashboard publicável.
-Somente depois disso será criado o primeiro recurso AWS.
+Somente depois disso será criado o primeiro recurso AWS. Roteiro em `AWS-PREPARACAO.md`.
