@@ -10,6 +10,15 @@ ficar sem acompanhar a conta. O módulo está em `infra/terraform/`.
 - fim do experimento, sem necessidade do laboratório;
 - credencial ou configuração suspeita.
 
+## Estado atual do laboratório (14/11/2026)
+
+O laboratório está **parcial**: existem bucket, grupo de logs e orçamento. Não existem
+provedor OIDC, papel nem política (a organização bloqueia o OIDC; ver ADR 0002).
+Assim, os passos de revogação do papel (1.3) e de verificação do provedor (3) não se
+aplicam enquanto `habilitar_federacao_github = false`. O estado do Terraform está
+em `infra/terraform/terraform.tfstate` do worktree de integração; sem ele use o
+passo 5 (estado perdido).
+
 ## 1. Parar novas execuções
 
 1. Desabilite **inteiramente** qualquer workflow que assuma o papel do laboratório
@@ -25,7 +34,7 @@ ficar sem acompanhar a conta. O módulo está em `infra/terraform/`.
 
 ```powershell
 cd infra\terraform
-$env:AWS_PROFILE = "painel-lab"
+# Credenciais temporárias do aws login (ver infra/terraform/README.md)
 terraform plan -destroy -out destruir.tfplan   # confira a lista: bucket, papel, logs, orçamento
 terraform apply destruir.tfplan
 ```
@@ -37,12 +46,12 @@ não depende dela.
 ## 3. Verificar que nada restou
 
 ```powershell
-aws s3 ls | Select-String "painel-feminicidio-lab"
-aws iam list-roles --query "Roles[?starts_with(RoleName,'painel-feminicidio-lab')].RoleName"
-aws logs describe-log-groups --log-group-name-prefix "/painel-feminicidio-lab"
+aws s3 ls | Select-String "dados-violencia-sc-lab"
+aws iam list-roles --query "Roles[?starts_with(RoleName,'dados-violencia-sc-lab')].RoleName"
+aws logs describe-log-groups --log-group-name-prefix "/dados-violencia-sc-lab"
 aws budgets describe-budgets --account-id <ID_DA_CONTA> `
-  --query "Budgets[?Name=='painel-feminicidio-lab-mensal'].Name"
-aws iam list-open-id-connect-providers   # procure token.actions.githubusercontent.com
+  --query "Budgets[?Name=='dados-violencia-sc-lab-mensal'].Name"
+aws iam list-open-id-connect-providers   # só relevante se a federação estiver ligada
 ```
 
 Os quatro primeiros devem voltar vazios (ajuste o prefixo se mudou `project`). Seus
@@ -52,7 +61,7 @@ existia, permanece de propósito.
 
 ## 4. Confirmar custo
 
-No Billing, abra Cost Explorer do mês e filtre por tag `projeto=painel-feminicidio-lab`.
+No Billing, abra Cost Explorer do mês e filtre por tag `projeto=dados-violencia-sc-lab`.
 O custo pode aparecer com atraso de até 24 horas. Registre em `docs/costs.md`:
 data, duração, volume processado, custo observado e a confirmação de que os
 recursos foram removidos.
@@ -62,7 +71,7 @@ recursos foram removidos.
 - **Erro de permissão:** confira o perfil ativo e o MFA.
 - **Bucket não vazio:** rode novamente; o `force_destroy` esvazia o bucket antes.
 - **Recurso criado fora do Terraform:** liste e remova à mão apenas o que tem a tag
-  `projeto=painel-feminicidio-lab`, depois execute `terraform state list` para
+  `projeto=dados-violencia-sc-lab`, depois execute `terraform state list` para
   checar divergência.
 - **Estado perdido:** remova manualmente, nesta ordem: (1) a política inline do papel
   (`aws iam delete-role-policy`) e depois o papel; (2) o provedor OIDC, só se foi criado

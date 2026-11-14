@@ -7,3 +7,7 @@ budget_limit_usd  = 5
 
 # Use false se a conta já tiver o provedor OIDC do GitHub (só existe um por URL).
 create_oidc_provider = true
+
+# Contas que bloqueiam iam:CreateOpenIDConnectProvider por SCP (plano gratuito):
+# desligue a federação. Provedor, papel e política deixam de ser criados.
+habilitar_federacao_github = true

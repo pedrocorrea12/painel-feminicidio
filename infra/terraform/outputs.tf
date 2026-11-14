@@ -4,8 +4,8 @@ output "bucket_dados" {
 }
 
 output "papel_github_arn" {
-  description = "ARN do papel que o workflow do GitHub deve assumir (role-to-assume)."
-  value       = aws_iam_role.github_pipeline.arn
+  description = "ARN do papel que o workflow do GitHub deve assumir (role-to-assume). Nulo se a federação estiver desligada."
+  value       = try(aws_iam_role.github_pipeline[0].arn, null)
 }
 
 output "grupo_de_logs" {
