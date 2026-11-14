@@ -44,7 +44,10 @@ def _gerar_site_valido(destino: Path) -> None:
     _escrever(destino / "nacional.json", unica)
     _escrever(destino / "idade.json", unica)
     _escrever(destino / "mensal.json", unica)
-    _escrever(destino / "desigualdades.json", {"x": 1})
+    _escrever(
+        destino / "desigualdades.json",
+        {nome: unica for nome in atlas_site.TABELAS_DESIGUALDADES},
+    )
     _escrever(destino / "malha_sc.json", {"type": "FeatureCollection"})
     _escrever(destino / "mapa" / "sim_a.json", unica)
     for i in ids:
@@ -116,6 +119,52 @@ def test_indicador_fora_do_manifesto(site: Path) -> None:
 def test_download_ausente(site: Path) -> None:
     (site.parent / "downloads" / "atlas_sim.zip").unlink()
     with pytest.raises(ValueError, match="Download ausente"):
+        validar_diretorio_site(site)
+
+
+def test_desigualdades_sem_tabela(site: Path) -> None:
+    conteudo = json.loads((site / "desigualdades.json").read_text(encoding="utf-8"))
+    del conteudo["trabalho_ano"]
+    _escrever(site / "desigualdades.json", conteudo)
+    with pytest.raises(ValueError, match="desigualdades.json: tabela ausente: trabalho_ano"):
+        validar_diretorio_site(site)
+
+
+def test_desigualdades_com_tabela_vazia(site: Path) -> None:
+    conteudo = json.loads((site / "desigualdades.json").read_text(encoding="utf-8"))
+    conteudo["sim_raca_uf_ano"] = _tabela(["ano"], [])
+    _escrever(site / "desigualdades.json", conteudo)
+    with pytest.raises(ValueError, match="desigualdades.json/sim_raca_uf_ano: tabela vazia"):
+        validar_diretorio_site(site)
+
+
+def test_nacional_sem_coluna_indicador(site: Path) -> None:
+    _escrever(site / "nacional.json", _tabela(["ano"], [[2024]]))
+    with pytest.raises(ValueError, match="nacional.json: coluna 'indicador' ausente"):
+        validar_diretorio_site(site)
+
+
+@pytest.mark.parametrize(
+    ("chave", "valor"),
+    [
+        ("indicadores", [{"rotulo": "sem id"}]),
+        ("downloads", [{"fonte": "SIM"}]),
+        ("territorios", ["lista"]),
+    ],
+)
+def test_manifesto_malformado_vira_value_error(site: Path, chave: str, valor) -> None:
+    manifesto = json.loads((site / "manifesto.json").read_text(encoding="utf-8"))
+    manifesto[chave] = valor
+    _escrever(site / "manifesto.json", manifesto)
+    with pytest.raises(ValueError, match="Estrutura inválida"):
+        validar_diretorio_site(site)
+
+
+def test_municipio_sem_id_vira_value_error(site: Path) -> None:
+    manifesto = json.loads((site / "manifesto.json").read_text(encoding="utf-8"))
+    manifesto["municipios"][0] = {"nome": "sem id"}
+    _escrever(site / "manifesto.json", manifesto)
+    with pytest.raises(ValueError, match="Estrutura inválida"):
         validar_diretorio_site(site)
 
 

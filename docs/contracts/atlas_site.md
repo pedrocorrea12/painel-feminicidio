@@ -16,6 +16,8 @@ publicada anterior é mantida.
   `municipios`, `indicadores`, `downloads`, `arquivos`; indicadores sem duplicata;
 - 295 municípios no manifesto e um arquivo `municipio/<id>.json` para cada um;
 - cada indicador com `arquivo_mapa` tem o arquivo correspondente em `mapa/`;
+- `desigualdades.json` com as seis tabelas esperadas, cada uma não vazia;
+- estruturas malformadas no manifesto viram `ValueError` ("Estrutura inválida");
 - tabelas (`colunas` + `linhas`) não vazias e com linhas da largura das colunas;
 - `nacional.json` só referencia indicadores do manifesto;
 - cada ZIP listado em `downloads` existe ao lado do diretório de dados.

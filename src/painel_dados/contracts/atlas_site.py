@@ -28,6 +28,14 @@ CHAVES_MANIFESTO = (
 )
 ARQUIVOS_DE_LINHAS = ("nacional.json", "idade.json", "mensal.json")
 MUNICIPIOS_SC = 295
+TABELAS_DESIGUALDADES = (
+    "sim_raca_municipios",
+    "sim_raca_uf_ano",
+    "sinan_raca_municipios",
+    "trabalho_ano",
+    "trabalho_municipios",
+    "salario_raca_municipios",
+)
 
 
 def _ler_json(caminho: Path, nome: str):
@@ -53,7 +61,15 @@ def _validar_tabela(conteudo: dict, nome: str) -> None:
 
 def validar_diretorio_site(diretorio: str | Path) -> None:
     """Confere arquivos obrigatórios, manifesto e consistência entre eles."""
-    raiz = Path(diretorio)
+    try:
+        _validar(Path(diretorio))
+    except (KeyError, TypeError, AttributeError, IndexError) as erro:
+        raise ValueError(
+            f"Estrutura inválida: {type(erro).__name__}: {erro}"
+        ) from erro
+
+
+def _validar(raiz: Path) -> None:
     for nome in ARQUIVOS_OBRIGATORIOS:
         if not (raiz / nome).is_file():
             raise ValueError(f"Arquivo obrigatório ausente: {nome}")
@@ -65,7 +81,11 @@ def validar_diretorio_site(diretorio: str | Path) -> None:
 
     for nome in ARQUIVOS_DE_LINHAS:
         _validar_tabela(_ler_json(raiz / nome, nome), nome)
-    _ler_json(raiz / "desigualdades.json", "desigualdades.json")
+    desigualdades = _ler_json(raiz / "desigualdades.json", "desigualdades.json")
+    for tabela in TABELAS_DESIGUALDADES:
+        if tabela not in desigualdades:
+            raise ValueError(f"desigualdades.json: tabela ausente: {tabela}")
+        _validar_tabela(desigualdades[tabela], f"desigualdades.json/{tabela}")
     _ler_json(raiz / "malha_sc.json", "malha_sc.json")
 
     indicadores = manifesto["indicadores"]
@@ -98,6 +118,8 @@ def validar_diretorio_site(diretorio: str | Path) -> None:
         _validar_tabela(_ler_json(mapa, caminho_mapa), caminho_mapa)
 
     nacional = _ler_json(raiz / "nacional.json", "nacional.json")
+    if "indicador" not in nacional["colunas"]:
+        raise ValueError("nacional.json: coluna 'indicador' ausente")
     posicao = nacional["colunas"].index("indicador")
     desconhecidos = {linha[posicao] for linha in nacional["linhas"]} - set(ids)
     if desconhecidos:
