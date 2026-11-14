@@ -18,7 +18,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | integrada | T05, T01; aprovação do dono para tocar `pipeline/` |
 | T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
 | T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | integrada | T05, T09 |
-| T12 | Benchmark local do pipeline (Gate B) | Claude | tarefa/t12-benchmark | a fazer | T09 |
+| T12 | Benchmark local do pipeline (Gate B) | Claude | tarefa/t12-benchmark | em revisão | T09 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -223,3 +223,4 @@ da entrega.
   referencia `docs/contracts/atlas_site.md` e registra que os ZIPs ainda ficam
   fora da troca. Validação final: 82 testes e Ruff verdes; `validate_project.py`
   passou com os dados locais. **Pedidos:** nenhum. **Revisão cruzada (Claude):** aprovada; instalação limpa em venv novo com `duckdb==1.5.6`, 82 testes e Ruff verdes; comandos do runbook (validar destino e backup, comparar por SHA-256, remover) executados numa cópia, sem diferenças.
+- T12: **Entrega:** `tools/medir_estagios.py` e `docs/benchmark/` (README, `medicoes.json`). 13 estágios sem rede, 3 repetições: pipeline completo em cerca de 183 s, pico de 5,2 GB (`build_sinan_atlas`); `build_sim_atlas` é o mais lento (76 s). Recomendação: GitHub Actions agendado como executor; AWS no laboratório para armazenamento durável, OIDC e logs; custo de ordem de grandeza abaixo de US$ 1 por mês. **Pedidos:** (1) declarar `xlrd` em `pyproject.toml` (estágio `build_populacao_2025` falha sem ele); (2) registrar a estimativa do benchmark em `docs/costs.md`. **Revisão cruzada (Codex):** 1ª passada reprovou (`--saida` ambíguo, memória só por processo, variação e executor local; corrigidos e medição refeita); 2ª aprovou. **Pendente:** medir os estágios de rede.
