@@ -1,0 +1,443 @@
+{
+  "ambiente": {
+    "so": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "cpus": 16
+  },
+  "tamanho_entrada_mb": {
+    "data/bronze": 1413.6,
+    "data/silver": 101.5,
+    "data/gold": 33.2
+  },
+  "medicoes": [
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_populacao_2025.py",
+      "codigo_saida": 0,
+      "segundos": 1.05,
+      "pico_memoria_mb": 125.9,
+      "arquivos_gravados": 1,
+      "mb_gravados": 0.19,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_populacao_2025.py",
+      "codigo_saida": 0,
+      "segundos": 1.04,
+      "pico_memoria_mb": 126.6,
+      "arquivos_gravados": 1,
+      "mb_gravados": 0.19,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_populacao_2025.py",
+      "codigo_saida": 0,
+      "segundos": 1.06,
+      "pico_memoria_mb": 126.9,
+      "arquivos_gravados": 1,
+      "mb_gravados": 0.19,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sinan_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 30.76,
+      "pico_memoria_mb": 5194.0,
+      "arquivos_gravados": 4,
+      "mb_gravados": 34.09,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sinan_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 30.75,
+      "pico_memoria_mb": 5211.6,
+      "arquivos_gravados": 4,
+      "mb_gravados": 34.09,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sinan_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 30.9,
+      "pico_memoria_mb": 5256.4,
+      "arquivos_gravados": 4,
+      "mb_gravados": 34.09,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sim_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 77.12,
+      "pico_memoria_mb": 1365.5,
+      "arquivos_gravados": 4,
+      "mb_gravados": 12.63,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sim_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 76.29,
+      "pico_memoria_mb": 1337.0,
+      "arquivos_gravados": 4,
+      "mb_gravados": 12.63,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_sim_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 76.39,
+      "pico_memoria_mb": 1348.6,
+      "arquivos_gravados": 4,
+      "mb_gravados": 12.63,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_rais.py",
+      "codigo_saida": 0,
+      "segundos": 1.61,
+      "pico_memoria_mb": 134.1,
+      "arquivos_gravados": 12,
+      "mb_gravados": 2.54,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_rais.py",
+      "codigo_saida": 0,
+      "segundos": 1.55,
+      "pico_memoria_mb": 135.5,
+      "arquivos_gravados": 12,
+      "mb_gravados": 2.54,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "bronze_para_silver",
+      "script": "build_rais.py",
+      "codigo_saida": 0,
+      "segundos": 1.55,
+      "pico_memoria_mb": 134.6,
+      "arquivos_gravados": 12,
+      "mb_gravados": 2.54,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "silver_para_gold",
+      "script": "build_gold.py",
+      "codigo_saida": 0,
+      "segundos": 5.9,
+      "pico_memoria_mb": 998.7,
+      "arquivos_gravados": 4,
+      "mb_gravados": 9.81,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "silver_para_gold",
+      "script": "build_gold.py",
+      "codigo_saida": 0,
+      "segundos": 5.76,
+      "pico_memoria_mb": 998.9,
+      "arquivos_gravados": 4,
+      "mb_gravados": 9.81,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "silver_para_gold",
+      "script": "build_gold.py",
+      "codigo_saida": 0,
+      "segundos": 5.69,
+      "pico_memoria_mb": 999.8,
+      "arquivos_gravados": 4,
+      "mb_gravados": 9.81,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_dashboard_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 1.95,
+      "pico_memoria_mb": 676.9,
+      "arquivos_gravados": 2,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_dashboard_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 1.93,
+      "pico_memoria_mb": 679.6,
+      "arquivos_gravados": 2,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_dashboard_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 1.9,
+      "pico_memoria_mb": 676.9,
+      "arquivos_gravados": 2,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_integrated_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.55,
+      "pico_memoria_mb": 658.9,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_integrated_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.54,
+      "pico_memoria_mb": 660.2,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_integrated_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.46,
+      "pico_memoria_mb": 659.7,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.61,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 8.09,
+      "pico_memoria_mb": 4053.3,
+      "arquivos_gravados": 7,
+      "mb_gravados": 0.21,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 8.32,
+      "pico_memoria_mb": 4088.9,
+      "arquivos_gravados": 7,
+      "mb_gravados": 0.21,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 8.06,
+      "pico_memoria_mb": 4012.3,
+      "arquivos_gravados": 7,
+      "mb_gravados": 0.21,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_race_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 2.03,
+      "pico_memoria_mb": 398.9,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.52,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_race_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 1.99,
+      "pico_memoria_mb": 414.6,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.52,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_race_analysis.py",
+      "codigo_saida": 0,
+      "segundos": 1.96,
+      "pico_memoria_mb": 403.3,
+      "arquivos_gravados": 5,
+      "mb_gravados": 0.52,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 39.02,
+      "pico_memoria_mb": 4326.8,
+      "arquivos_gravados": 5,
+      "mb_gravados": 7.86,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 38.2,
+      "pico_memoria_mb": 4278.5,
+      "arquivos_gravados": 5,
+      "mb_gravados": 7.86,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "gold_analitica",
+      "script": "build_sinesp_atlas.py",
+      "codigo_saida": 0,
+      "segundos": 38.88,
+      "pico_memoria_mb": 4272.8,
+      "arquivos_gravados": 5,
+      "mb_gravados": 7.86,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_catalog.py",
+      "codigo_saida": 0,
+      "segundos": 0.86,
+      "pico_memoria_mb": 91.7,
+      "arquivos_gravados": 3,
+      "mb_gravados": 0.02,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_catalog.py",
+      "codigo_saida": 0,
+      "segundos": 0.84,
+      "pico_memoria_mb": 91.6,
+      "arquivos_gravados": 3,
+      "mb_gravados": 0.02,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_catalog.py",
+      "codigo_saida": 0,
+      "segundos": 0.81,
+      "pico_memoria_mb": 91.9,
+      "arquivos_gravados": 3,
+      "mb_gravados": 0.02,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_prototype_data.py",
+      "codigo_saida": 0,
+      "segundos": 2.17,
+      "pico_memoria_mb": 146.8,
+      "arquivos_gravados": 1,
+      "mb_gravados": 15.66,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_prototype_data.py",
+      "codigo_saida": 0,
+      "segundos": 2.2,
+      "pico_memoria_mb": 146.8,
+      "arquivos_gravados": 1,
+      "mb_gravados": 15.66,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_prototype_data.py",
+      "codigo_saida": 0,
+      "segundos": 2.18,
+      "pico_memoria_mb": 146.3,
+      "arquivos_gravados": 1,
+      "mb_gravados": 15.66,
+      "erro": "",
+      "rodada": 3
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_site_data.py",
+      "codigo_saida": 0,
+      "segundos": 12.29,
+      "pico_memoria_mb": 260.3,
+      "arquivos_gravados": 320,
+      "mb_gravados": 33.23,
+      "erro": "",
+      "rodada": 1
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_site_data.py",
+      "codigo_saida": 0,
+      "segundos": 12.28,
+      "pico_memoria_mb": 261.2,
+      "arquivos_gravados": 320,
+      "mb_gravados": 33.23,
+      "erro": "",
+      "rodada": 2
+    },
+    {
+      "grupo": "site",
+      "script": "build_atlas_site_data.py",
+      "codigo_saida": 0,
+      "segundos": 12.02,
+      "pico_memoria_mb": 258.8,
+      "arquivos_gravados": 320,
+      "mb_gravados": 33.23,
+      "erro": "",
+      "rodada": 3
+    }
+  ]
+}
