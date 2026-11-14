@@ -19,6 +19,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
 | T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | integrada | T05, T09 |
 | T12 | Benchmark local do pipeline (Gate B) | Claude | tarefa/t12-benchmark | integrada | T09 |
+| T13 | Declarar `xlrd` e registrar a estimativa de custo (pedidos da T12) | Claude | tarefa/t13-xlrd-custos | a fazer | T12 |
+| T14 | Terraform do laboratório AWS, só escrito e revisado, sem `apply` (preparação da T06) | Claude | tarefa/t14-terraform | a fazer | T12; revisão estática do Codex |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -147,6 +149,31 @@ arquivo. T01 também é independente.
 - **Aceite:** `pytest` e `ruff check src tests` verdes; runbook referencia
   `docs/contracts/atlas_site.md`; sem outras mudanças. **Fora do escopo:** colocar o
   `validate_project.py` na CI (depende da Silver, não versionada).
+
+## T13 xlrd e estimativa de custo
+
+- **Dono:** Claude. **Branch:** `tarefa/t13-xlrd-custos`.
+- **Arquivos permitidos:** `pyproject.toml` (só `dependencies`), `docs/costs.md`.
+- **Escopo:** declarar `xlrd` (versão fixa) e registrar em `docs/costs.md` a estimativa
+  de `docs/benchmark/README.md` (volumes, serviços, orçamento de referência).
+- **Aceite:** instalação limpa num venv novo; `build_populacao_2025.py` roda numa
+  cópia; `pytest` e `ruff check src tests` verdes.
+
+## T14 Terraform do laboratório (sem apply)
+
+- **Dono:** Claude; revisão estática do Codex (modo leitura). **Branch:** `tarefa/t14-terraform`.
+- **Arquivos permitidos:** `infra/terraform/**`, `docs/runbooks/desligar-laboratorio-aws.md`
+  (novo), `docs/costs.md` (só se T13 já integrada).
+- **Regras:** nenhum `terraform apply`, nenhuma credencial, nenhum state versionado,
+  nenhum recurso criado. O código só é aplicado depois da aprovação do dono (T06).
+- **Escopo:** módulo mínimo e removível: S3 privado (versionado, criptografado, sem
+  acesso público, ciclo de vida), provedor OIDC do GitHub e papel de menor privilégio
+  restrito ao repositório e à branch, grupo de logs com retenção curta e orçamento
+  com alerta por e-mail. Variáveis para região, teto, e-mail e repositório. README
+  com os passos de `init/plan/apply/destroy` e runbook de desligamento.
+- **Aceite:** `terraform fmt -check` e `validate` documentados (execução local fica
+  para quando o binário existir; a CI pode rodá-los sem credenciais), revisão
+  estática do Codex aprovada, sem segredos.
 
 ## T12 Benchmark local do pipeline (Gate B)
 
