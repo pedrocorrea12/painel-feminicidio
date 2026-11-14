@@ -16,6 +16,11 @@ from painel_dados.quality import assert_required_columns, assert_unique
 
 ANOS_CONTRATO = tuple(range(2015, 2026))
 ANO_PRELIMINAR = 2025
+DATA_OCORRENCIA_MINIMA = pd.Timestamp("1900-01-01")
+DATA_OCORRENCIA_MAXIMA = pd.Timestamp(f"{max(ANOS_CONTRATO)}-12-31")
+IDADE_MAXIMA = 130
+PROPORCAO_MINIMA_DATAS_NO_ANO = 0.90
+SEXOS_VALIDOS = {"feminino", "masculino", "não informado"}
 
 TIPOS_VIOLENCIA = (
     "violencia_fisica",
@@ -196,6 +201,31 @@ def validar_silver_atlas(quadro: pd.DataFrame) -> None:
     meses_registro = quadro.loc[linhas_com_data, "mes"]
     if datas_presentes.isna().any() or not meses_data.eq(meses_registro).all():
         raise ValueError("Contrato SINAN atlas: mes incompatível com data_ocorrencia.")
+
+    if not datas_presentes.between(
+        DATA_OCORRENCIA_MINIMA, DATA_OCORRENCIA_MAXIMA
+    ).all():
+        raise ValueError(
+            "Contrato SINAN atlas: data_ocorrencia fora do intervalo "
+            "1900-01-01 a 2025-12-31."
+        )
+
+    anos_registro = quadro.loc[linhas_com_data, "ano"]
+    proporcao_datas_no_ano = datas_presentes.dt.year.eq(anos_registro).mean()
+    if (
+        datas_presentes.empty
+        or proporcao_datas_no_ano < PROPORCAO_MINIMA_DATAS_NO_ANO
+    ):
+        raise ValueError(
+            "Contrato SINAN atlas: menos de 90% das datas pertencem ao ano da notificação."
+        )
+
+    idades_presentes = quadro["idade_anos"].dropna()
+    if not idades_presentes.between(0, IDADE_MAXIMA).all():
+        raise ValueError("Contrato SINAN atlas: idade_anos fora do intervalo 0 a 130.")
+
+    if not quadro["sexo"].isin(SEXOS_VALIDOS).all():
+        raise ValueError("Contrato SINAN atlas: sexo inválido.")
 
     naturezas = {"interpessoal", "autoprovocada"}
     if not quadro["natureza_violencia"].isin(naturezas).all():

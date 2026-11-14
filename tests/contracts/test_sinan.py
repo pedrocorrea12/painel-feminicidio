@@ -214,3 +214,77 @@ def test_mes_nulo_sem_data_nula_falha() -> None:
         ),
     ):
         validar_silver_atlas(quadro)
+
+
+@pytest.mark.parametrize(
+    ("data_invalida", "mensagem"),
+    [
+        ("1899-06-15", "1900-01-01 a 2025-12-31"),
+        ("2026-06-15", "1900-01-01 a 2025-12-31"),
+    ],
+)
+def test_data_ocorrencia_fora_dos_limites_falha(
+    data_invalida: str, mensagem: str
+) -> None:
+    quadro = _silver_valida()
+    quadro.loc[0, "data_ocorrencia"] = pd.Timestamp(data_invalida)
+
+    with pytest.raises(ValueError, match=mensagem):
+        validar_silver_atlas(quadro)
+
+
+@pytest.mark.parametrize("data_valida", ["1900-06-15", "2025-06-15"])
+def test_data_ocorrencia_nos_limites_passa(data_valida: str) -> None:
+    quadro = pd.concat([_silver_valida().iloc[[0]]] * 10, ignore_index=True)
+    quadro.loc[0, "data_ocorrencia"] = pd.Timestamp(data_valida)
+
+    validar_silver_atlas(quadro)
+
+
+@pytest.mark.parametrize("idade_invalida", [-1, 131])
+def test_idade_fora_dos_limites_falha(idade_invalida: int) -> None:
+    quadro = _silver_valida()
+    quadro.loc[0, "idade_anos"] = idade_invalida
+
+    with pytest.raises(
+        ValueError,
+        match=r"^Contrato SINAN atlas: idade_anos fora do intervalo 0 a 130\.$",
+    ):
+        validar_silver_atlas(quadro)
+
+
+@pytest.mark.parametrize("idade_valida", [0, 130])
+def test_idade_nos_limites_passa(idade_valida: int) -> None:
+    quadro = _silver_valida()
+    quadro.loc[0, "idade_anos"] = idade_valida
+
+    validar_silver_atlas(quadro)
+
+
+def test_sexo_fora_do_dominio_falha() -> None:
+    quadro = _silver_valida()
+    quadro.loc[0, "sexo"] = "ignorado"
+
+    with pytest.raises(
+        ValueError,
+        match=r"^Contrato SINAN atlas: sexo inválido\.$",
+    ):
+        validar_silver_atlas(quadro)
+
+
+def test_proporcao_de_datas_no_ano_abaixo_de_90_porcento_falha() -> None:
+    quadro = pd.concat([_silver_valida().iloc[[0]]] * 10, ignore_index=True)
+    quadro.loc[[0, 1], "data_ocorrencia"] = pd.Timestamp("2023-06-15")
+
+    with pytest.raises(
+        ValueError,
+        match=r"^Contrato SINAN atlas: menos de 90% das datas pertencem ao ano da notificação\.$",
+    ):
+        validar_silver_atlas(quadro)
+
+
+def test_proporcao_de_datas_no_ano_igual_a_90_porcento_passa() -> None:
+    quadro = pd.concat([_silver_valida().iloc[[0]]] * 10, ignore_index=True)
+    quadro.loc[0, "data_ocorrencia"] = pd.Timestamp("2023-06-15")
+
+    validar_silver_atlas(quadro)
