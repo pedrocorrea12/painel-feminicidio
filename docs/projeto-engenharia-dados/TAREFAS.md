@@ -17,6 +17,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | integrada | T05, T01; aprovação do dono para tocar `pipeline/` |
 | T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
+| T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | a fazer | T05, T09 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -129,6 +130,22 @@ arquivo. T01 também é independente.
 - **Aceite:** um teste por regra nova (falha com valor inválido, passa com válido);
   a Silver e a Gold reais continuam aprovadas (só leitura, `id_territorio` como texto);
   `pytest` e `ruff check src tests` verdes; documentação atualizada.
+
+## T11 Dependência duckdb e runbook de publicação
+
+- **Dono:** Codex. **Branch:** `tarefa/t11-duckdb-runbook`.
+- **Arquivos permitidos:** `pyproject.toml` (só `dependencies`), `docs/runbooks/publicacao-gold.md`
+  (novo). Nada em `pipeline/`, `.github/` ou `src/`.
+- **Escopo:** (1) declarar `duckdb` em `dependencies`, com versão fixa igual à usada nos
+  scripts (`pip show duckdb` no venv; `build_sinan_atlas.py`, `fetch_populacao_geral.py`
+  e `validate_project.py` o importam); confirmar que `pip install -e ".[dev]"` e os 82
+  testes seguem verdes; (2) runbook curto em português sobre a publicação segura
+  (`painel_dados.publish` e `build_atlas_site_data.py`): o que fazer com backup órfão
+  `.data.backup-*` (identificar, comparar com o destino, restaurar ou remover) e com
+  `RuntimeWarning`, e o que significa a janela sem destino entre as renomeações.
+- **Aceite:** `pytest` e `ruff check src tests` verdes; runbook referencia
+  `docs/contracts/atlas_site.md`; sem outras mudanças. **Fora do escopo:** colocar o
+  `validate_project.py` na CI (depende da Silver, não versionada).
 
 ## T06 e T07
 
