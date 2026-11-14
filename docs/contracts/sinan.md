@@ -27,10 +27,10 @@ O arquivo `data/silver/sinan_atlas_violencia.parquet` segue o esquema abaixo.
 | --- | --- | --- |
 | `ano` | inteiro | entre 2015 e 2025 |
 | `mes` | numérico inteiro anulável | quando presente, entre 1 e 12 |
-| `data_ocorrencia` | data anulável | quando presente, seu mês deve coincidir com `mes` |
-| `sexo` | texto | classificação da pessoa notificada |
+| `data_ocorrencia` | data anulável | entre 1900-01-01 e 2025-12-31; seu mês deve coincidir com `mes` |
+| `sexo` | texto | `feminino`, `masculino` ou `não informado` |
 | `raca` | texto | classificação de raça ou cor |
-| `idade_anos` | numérico inteiro anulável | idade derivada de `NU_IDADE_N` |
+| `idade_anos` | numérico inteiro anulável | idade derivada de `NU_IDADE_N`, entre 0 e 130 |
 | `grupo_etario` | texto | faixa derivada da idade |
 | `natureza_violencia` | texto | `interpessoal` ou `autoprovocada` |
 | `id_municipio_residencia` | texto anulável | código IBGE de residência |
@@ -59,8 +59,15 @@ Quando presentes, o mês deve estar entre 1 e 12 e coincidir com o mês de
 O campo `ano` identifica o arquivo anual ou ano de referência da notificação;
 ele não é necessariamente o ano da ocorrência. Na Silver observada, 184.393
 datas presentes têm ano diferente de `ano`, principalmente notificações de
-ocorrências anteriores. Por isso o contrato não exige igualdade entre
-`data_ocorrencia.year` e `ano`.
+ocorrências anteriores. Por isso o contrato não exige igualdade linha a linha,
+mas exige que pelo menos 90% das datas presentes pertençam ao ano da
+notificação. A proporção observada é 95,70%.
+
+Os limites foram calibrados sem descartar a materialização real: há 6.094 datas
+anteriores a 2000, com mínimo em 1900-01-01, e 23 idades acima de 120, com
+máximo em 130. O contrato rejeita datas anteriores a 1900 ou posteriores ao fim
+do período contratado (2025-12-31), idades fora de 0 a 130 e classificações de
+sexo fora do domínio publicado.
 
 No artefato validado durante a revisão, 467 de 4.292.317 notificações
 (aproximadamente 0,0109%) possuem `mes` e `data_ocorrencia` nulos. Esses nulos
@@ -107,8 +114,9 @@ regra estável nesta tarefa é a classificação explícita do ano como prelimin
 ## Validação
 
 `validar_silver_atlas` verifica colunas, tipos lógicos, intervalo anual, nulos
-conjuntos de mês e data, coerência entre o mês e a data, natureza da violência e
-situação do dado.
+conjuntos de mês e data, coerência e limites da data, proporção mínima de datas
+no ano da notificação, limites de idade, domínio de sexo, natureza da violência
+e situação do dado.
 
 `validar_gold_territorial` verifica colunas, tipos, chave única, cobertura anual
 de cada série e situação do dado. As duas funções levantam `ValueError` com
