@@ -15,6 +15,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T04 | CI: lint, testes e validação (entrega 5) | Codex | tarefa/t04-ci | integrada | T02, T03, T08 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | Codex | tarefa/t05-publicacao-segura | integrada | T02, T03, T08 |
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
+| T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | a fazer | T05, T01; aprovação do dono para tocar `pipeline/` |
+| T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | a fazer | T02 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -99,6 +101,34 @@ arquivo. T01 também é independente.
   a taxa de 2025 tem `tipo_denominador` inválido ou em que a situação de 2025 deixa
   de ser `preliminar`; documentação coerente com a Gold; nenhum arquivo fora da
   lista alterado.
+
+## T09 Publicação segura do site do atlas
+
+- **Dono:** Claude. **Branch:** `tarefa/t09-publicacao-atlas`. Exige **aprovação do dono**
+  para alterar `pipeline/` (concedida em 2026-11-14).
+- **Arquivos permitidos:** `pipeline/build_atlas_site_data.py`,
+  `src/painel_dados/contracts/atlas_site.py`, `tests/contracts/test_atlas_site.py`,
+  `tests/fixtures/atlas_site/**`, `docs/contracts/atlas_site.md`.
+- **Escopo:** `dashboard/atlas/data` passa a ser gerado num diretório temporário e
+  trocado por `publicar_diretorio` só após validação. `malha_sc.json` (não gerado
+  pelo script) é preservado. Downloads (`dashboard/atlas/downloads`) ficam fora.
+- **Aceite:** saída idêntica à baseline da T01 exceto carimbos de data; falha de
+  validação mantém a versão anterior; testes cobrem o validador; `pytest` e
+  `ruff check src tests` verdes.
+
+## T10 Endurecer o contrato SINAN
+
+- **Dono:** Codex. **Branch:** `tarefa/t10-sinan-endurecimento`.
+- **Arquivos permitidos:** `src/painel_dados/contracts/sinan.py`,
+  `tests/contracts/test_sinan.py`, `tests/fixtures/sinan/**`, `docs/contracts/sinan.md`.
+- **Não tocar:** `pipeline/`, `pyproject.toml`, `quality/`, outros contratos.
+- **Escopo:** fechar as ressalvas da revisão da T02: rejeitar `data_ocorrencia` fora
+  de limites plausíveis (ex.: antes de 2000 ou depois do ano corrente), `idade_anos`
+  negativa ou irreal, `sexo` fora do domínio; guarda de proporção de datas no ano da
+  notificação (mínimo 90% das datas com o mesmo ano, calibrado nos dados reais).
+- **Aceite:** um teste por regra nova (falha com valor inválido, passa com válido);
+  a Silver e a Gold reais continuam aprovadas (só leitura, `id_territorio` como texto);
+  `pytest` e `ruff check src tests` verdes; documentação atualizada.
 
 ## T06 e T07
 
