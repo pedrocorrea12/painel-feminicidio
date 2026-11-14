@@ -33,3 +33,11 @@ Controles obrigatórios antes de aplicar: orçamento mensal com alerta (referên
 US$ 5, alertas a 50%, 80% e 100%), região registrada (`us-east-1` sugerida), e data
 prevista de revisão e destruição. Registrar aqui o custo observado após cada
 experimento.
+
+## Laboratório aplicado em parte (14/11/2026)
+
+Conta do plano gratuito (créditos de US$ 100, válidos até 14/05/2027), região
+`us-east-2`, projeto `dados-violencia-sc-lab`. Criados: bucket S3 (vazio), grupo
+de logs e orçamento de US$ 5. Sem federação OIDC (bloqueada por SCP, ADR 0002).
+Custo esperado nesta fase: zero a centavos. Registrar aqui o custo observado depois
+da primeira publicação da Gold (T16).

@@ -8,3 +8,5 @@ crash.*.log
 *.tfvars.json
 !terraform.tfvars.example
 *.tfplan
+*.tfplan
+tfplan

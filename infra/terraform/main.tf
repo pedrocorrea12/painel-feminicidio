@@ -120,14 +120,14 @@ resource "aws_cloudwatch_log_group" "pipeline" {
 # ---------------------------------------------------------------------------
 
 resource "aws_iam_openid_connect_provider" "github" {
-  count = var.create_oidc_provider ? 1 : 0
+  count = var.habilitar_federacao_github && var.create_oidc_provider ? 1 : 0
 
   url            = "https://token.actions.githubusercontent.com"
   client_id_list = ["sts.amazonaws.com"]
 }
 
 data "aws_iam_openid_connect_provider" "github_existente" {
-  count = var.create_oidc_provider ? 0 : 1
+  count = var.habilitar_federacao_github && !var.create_oidc_provider ? 1 : 0
 
   url = "https://token.actions.githubusercontent.com"
 
@@ -141,13 +141,19 @@ data "aws_iam_openid_connect_provider" "github_existente" {
 
 locals {
   arn_provedor_oidc = (
-    var.create_oidc_provider
-    ? aws_iam_openid_connect_provider.github[0].arn
-    : data.aws_iam_openid_connect_provider.github_existente[0].arn
+    !var.habilitar_federacao_github
+    ? null
+    : (
+      var.create_oidc_provider
+      ? aws_iam_openid_connect_provider.github[0].arn
+      : data.aws_iam_openid_connect_provider.github_existente[0].arn
+    )
   )
 }
 
 data "aws_iam_policy_document" "confianca_github" {
+  count = var.habilitar_federacao_github ? 1 : 0
+
   statement {
     effect  = "Allow"
     actions = ["sts:AssumeRoleWithWebIdentity"]
@@ -172,8 +178,10 @@ data "aws_iam_policy_document" "confianca_github" {
 }
 
 resource "aws_iam_role" "github_pipeline" {
+  count = var.habilitar_federacao_github ? 1 : 0
+
   name                 = "${var.project}-github-pipeline"
-  assume_role_policy   = data.aws_iam_policy_document.confianca_github.json
+  assume_role_policy   = data.aws_iam_policy_document.confianca_github[0].json
   max_session_duration = 3600
 }
 
@@ -201,8 +209,10 @@ data "aws_iam_policy_document" "permissoes_pipeline" {
 }
 
 resource "aws_iam_role_policy" "pipeline" {
+  count = var.habilitar_federacao_github ? 1 : 0
+
   name   = "${var.project}-pipeline"
-  role   = aws_iam_role.github_pipeline.id
+  role   = aws_iam_role.github_pipeline[0].id
   policy = data.aws_iam_policy_document.permissoes_pipeline.json
 }
 

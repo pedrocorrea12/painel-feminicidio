@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project" {
   description = "Prefixo dos nomes dos recursos."
   type        = string
-  default     = "painel-feminicidio-lab"
+  default     = "dados-violencia-sc-lab"
 }
 
 variable "github_repository" {
@@ -34,6 +34,16 @@ variable "github_branches" {
     condition     = alltrue([for b in var.github_branches : can(regex("^[A-Za-z0-9_./-]+$", b))])
     error_message = "Branches não podem conter curingas (*, ?, [ ]) nem caracteres especiais."
   }
+}
+
+variable "habilitar_federacao_github" {
+  description = <<-EOT
+    Liga a federação do GitHub Actions: provedor OIDC, papel e política. Use false em
+    contas que bloqueiam iam:CreateOpenIDConnectProvider por política de controle de
+    serviço (caso do plano gratuito). Ver docs/adr/0002-publicacao-aws-por-login-local.md.
+  EOT
+  type        = bool
+  default     = true
 }
 
 variable "create_oidc_provider" {
