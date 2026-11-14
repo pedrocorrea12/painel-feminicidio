@@ -85,7 +85,7 @@ confira os valores vigentes antes de decidir, pois mudam.
 
 Preços públicos de referência, não verificados nesta sessão; confirmar antes de usar.
 
-- **Lambda, execução completa:** 10 GB × 183 s ≈ ≈ 1.830 GB·s, na faixa de US$ 0,03 por
+- **Lambda, execução completa:** 10 GB × 183 s ≈ 1.830 GB·s, na faixa de US$ 0,03 por
   execução (arquitetura x86, preço de lista). Mensal com uma execução por mês:
   centavos.
 - **S3:** Bronze 1,4 GB + Silver/Gold ~0,14 GB no padrão: poucos centavos por mês.
