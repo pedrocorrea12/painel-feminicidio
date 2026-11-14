@@ -15,8 +15,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T04 | CI: lint, testes e validação (entrega 5) | Codex | tarefa/t04-ci | integrada | T02, T03, T08 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | Codex | tarefa/t05-publicacao-segura | integrada | T02, T03, T08 |
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
-| T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | em revisão | T05, T01; aprovação do dono para tocar `pipeline/` |
-| T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | a fazer | T02 |
+| T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | integrada | T05, T01; aprovação do dono para tocar `pipeline/` |
+| T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -171,3 +171,12 @@ da entrega.
   ligar o módulo ao pipeline e ao validador.
 - T08: as duas asserções desatualizadas de `pipeline/validate_project.py` foram trocadas por `_validar_taxas_territoriais` (taxa, população e `tipo_denominador` juntos; `publicado` até 2024; em 2025 `publicado` no total e `estimado_proporcao_2024` por sexo; taxa recalculada com tolerância de 0,0051) e por checagens de situação (SINAN 2025 `preliminar`; SINESP parcial sem taxa). `docs/SINAN_ATLAS.md` e `docs/SINESP_VDE.md` corrigidos. Verificado: o validador passa nos dados reais e falha em 10 adulterações feitas numa cópia (denominador inválido, 2025 não preliminar, taxa apagada, taxa errada, estimado em 2024, taxa em ano parcial, parcial virando consolidado). Sem mudança em dados, construtores ou dashboard. Fora do escopo e ainda pendente: `docs/SIM_ATLAS.md` e a asserção do SIM continuam exigindo taxa vazia em 2025 e 2026, o que confere com a Gold atual do SIM. Revisão cruzada do Codex: 1ª passada reprovou (ano parcial do Sinesp não confrontado com o ano); corrigido sem fixar 2026 no código (`periodo_completo` equivale a 12 meses, só o maior ano pode ser parcial, `meses_observados` entre 1 e 12); 2ª passada aprovou.
 - T09: `build_atlas_site_data.py` agora gera `dashboard/atlas/data` num diretório temporário (`gerar_dados`), valida com `validar_diretorio_site` (novo contrato `contracts/atlas_site.py`, 20 testes) e troca por `publicar_diretorio`; `malha_sc.json` é copiado da versão publicada. Execução sobre os dados reais: 318 arquivos idênticos aos versionados, exceto `atualizado_em`; ZIPs com mesmo CRC. 71 testes e Ruff verdes. **Pedidos:** nenhum. **Pendente:** ZIPs de `downloads` ainda são escritos fora da publicação segura; runbook do backup órfão; `validate_project.py` fora da CI.
+- T10: **Entrega:** o contrato SINAN agora limita `data_ocorrencia` ao período
+  1900-01-01 a 2025-12-31, `idade_anos` a 0–130, `sexo` ao domínio publicado e
+  exige no mínimo 90% das datas no ano da notificação. Os limites foram
+  calibrados na Silver real (95,70% no mesmo ano; mínimo 1900; idade máxima
+  130), sem descartar os 6.094 registros anteriores a 2000 nem as 23 idades
+  acima de 120. Foram acrescentados testes de falha e de fronteira válida para
+  cada regra. Validação final: 62 testes e Ruff verdes; Silver real com
+  4.292.317 linhas e Gold real com 127.908 linhas aprovadas. Documentação
+  atualizada. **Pedidos:** nenhum. **Revisão cruzada (Claude):** aprovada; 62 testes e Ruff verdes, Silver real aprovada e regras provadas com valores adulterados. **Ressalva:** os limites de data (1900) e idade (130) foram calibrados nos extremos reais, então só barram valores absurdos; um recorte mais estreito exigiria tratar os 6.094 registros pré-2000.
