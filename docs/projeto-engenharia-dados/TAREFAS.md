@@ -12,7 +12,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T01 | Baseline do pipeline atual (entrega 1) | Claude | tarefa/t01-baseline | integrada | |
 | T02 | Contratos e testes SINAN (entregas 3 e 4) | Codex | tarefa/t02-contratos-sinan | integrada (aprovada com ressalvas) | |
 | T03 | Contratos e testes SINESP (entregas 3 e 4) | Claude | tarefa/t03-contratos-sinesp | integrada | |
-| T04 | CI: lint, testes e validação (entrega 5) | Codex | tarefa/t04-ci | em revisão | T02, T03, T08 |
+| T04 | CI: lint, testes e validação (entrega 5) | Codex | tarefa/t04-ci | integrada | T02, T03, T08 |
 | T05 | Publicação Gold segura e atômica (entrega 6) | Codex | tarefa/t05-publicacao-segura | integrada | T02, T03, T08 |
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
@@ -124,8 +124,9 @@ da entrega.
   Ruff e pytest, sem deploy ou segredos. `pipeline/validate_project.py` fica fora
   porque depende da Silver não versionada. Sintaxe e estrutura YAML validadas
   localmente; 51 testes aprovados e Ruff sem erros. **Pedidos:** nenhum.
-  **Pendente:** revisão cruzada; a primeira execução real do workflow depende do
-  push pelo dono do projeto.
+  **Revisão cruzada (Claude):** aprovada; rodada num checkout limpo (sem `data/`)
+  com 51 testes e Ruff verdes. **Pendente:** a primeira execução real do workflow
+  depende do push pelo dono; o `validate_project.py` continua fora da CI.
 - T05: **Entrega:** módulo de publicação de diretórios com geração e validação
   em temporário no mesmo volume, troca com backup e restauração compatível com
   Windows. A revisão acrescentou retorno estruturado e aviso para backup não
