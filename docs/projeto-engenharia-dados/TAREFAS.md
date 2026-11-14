@@ -17,7 +17,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T08 | Atualizar o validador do projeto e a documentação de taxas 2025 (achado da T01) | Claude | tarefa/t08-validador | integrada | T01, T02; aprovação do dono para tocar `pipeline/` |
 | T09 | Ligar a publicação segura ao `build_atlas_site_data.py` (pendência da T05) | Claude | tarefa/t09-publicacao-atlas | integrada | T05, T01; aprovação do dono para tocar `pipeline/` |
 | T10 | Endurecer o contrato SINAN (ressalvas da T02) | Codex | tarefa/t10-sinan-endurecimento | integrada (aprovada com ressalvas) | T02 |
-| T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | a fazer | T05, T09 |
+| T11 | Dependência `duckdb` e runbook de publicação (pendências da T05/T09) | Codex | tarefa/t11-duckdb-runbook | em revisão | T05, T09 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | Gate A e Gate B, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -197,3 +197,12 @@ da entrega.
   cada regra. Validação final: 62 testes e Ruff verdes; Silver real com
   4.292.317 linhas e Gold real com 127.908 linhas aprovadas. Documentação
   atualizada. **Pedidos:** nenhum. **Revisão cruzada (Claude):** aprovada; 62 testes e Ruff verdes, Silver real aprovada e regras provadas com valores adulterados. **Ressalva:** os limites de data (1900) e idade (130) foram calibrados nos extremos reais, então só barram valores absurdos; um recorte mais estreito exigiria tratar os 6.094 registros pré-2000.
+- T11: **Entrega:** `duckdb==1.5.6`, versão usada pelo ambiente atual do
+  pipeline, foi declarada nas dependências do projeto e instalada pelo comando
+  `pip install -e ".[dev]"` num venv Python 3.11. O novo runbook
+  `docs/runbooks/publicacao-gold.md` descreve diagnóstico, validação por
+  contrato, comparação por SHA-256, restauração, quarentena e remoção segura de
+  `.data.backup-*`, além de `RuntimeWarning` e da janela sem destino no Windows;
+  referencia `docs/contracts/atlas_site.md` e registra que os ZIPs ainda ficam
+  fora da troca. Validação final: 82 testes e Ruff verdes; `validate_project.py`
+  passou com os dados locais. **Pedidos:** nenhum. **Pendente:** revisão cruzada.
