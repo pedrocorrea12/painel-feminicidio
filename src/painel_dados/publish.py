@@ -127,23 +127,26 @@ def publicar_diretorio(
         _remover(temporario)
 
 
-def _remover_backups(backups: list[tuple[Path, Path | None]]) -> Path | None:
-    remanescente = None
+def _remover_backups(backups: list[tuple[Path, Path | None]]) -> list[Path | None]:
+    """Remove os backups e devolve, na mesma ordem, o resíduo de cada destino."""
+
+    remanescentes: list[Path | None] = []
     for _, backup in backups:
-        if backup is None:
-            continue
-        try:
-            _remover(backup)
-        except OSError as erro_limpeza:
-            if _existe(backup):
-                remanescente = remanescente or backup
-            warnings.warn(
-                "Publicação concluída, mas o backup não pôde ser removido: "
-                f"{backup}. Erro: {erro_limpeza}",
-                RuntimeWarning,
-                stacklevel=4,
-            )
-    return remanescente
+        remanescente = None
+        if backup is not None:
+            try:
+                _remover(backup)
+            except OSError as erro_limpeza:
+                if _existe(backup):
+                    remanescente = backup
+                warnings.warn(
+                    "Publicação concluída, mas o backup não pôde ser removido: "
+                    f"{backup}. Erro: {erro_limpeza}",
+                    RuntimeWarning,
+                    stacklevel=4,
+                )
+        remanescentes.append(remanescente)
+    return remanescentes
 
 
 def _trocar_conjunto(
@@ -166,6 +169,7 @@ def _trocar_conjunto(
             instalados.add(destino)
     except BaseException as erro_troca:
         preservados: list[Path] = []
+        sem_reversao: list[Path] = []
         for destino, backup in reversed(backups):
             try:
                 if backup is not None:
@@ -175,23 +179,33 @@ def _trocar_conjunto(
             except BaseException as erro_restauracao:
                 if backup is not None and _existe(backup):
                     preservados.append(backup)
+                elif backup is None and _existe(destino):
+                    sem_reversao.append(destino)
                 erro_troca.add_note(
                     f"Erro de restauração de {destino}: {erro_restauracao}"
                 )
-        if preservados:
+        if preservados or sem_reversao:
+            detalhes = ""
+            if preservados:
+                detalhes += "backups preservados em: " + ", ".join(
+                    str(caminho) for caminho in preservados
+                )
+            if sem_reversao:
+                detalhes += "; " if detalhes else ""
+                detalhes += "versão nova não removida em: " + ", ".join(
+                    str(caminho) for caminho in sem_reversao
+                )
             falha = RuntimeError(
                 "Falha na troca conjunta dos destinos publicados: "
-                f"{erro_troca}. Falha também na restauração; "
-                "backups preservados em: "
-                + ", ".join(str(caminho) for caminho in preservados)
+                f"{erro_troca}. Falha também na restauração; {detalhes}"
             )
             raise falha from erro_troca
         raise
 
-    remanescente = _remover_backups(backups)
+    remanescentes = _remover_backups(backups)
     return tuple(
-        ResultadoPublicacao(destino, remanescente if backup is not None else None)
-        for destino, backup in backups
+        ResultadoPublicacao(destino, remanescente)
+        for (destino, _), remanescente in zip(backups, remanescentes, strict=True)
     )
 
 
@@ -215,6 +229,12 @@ def publicar_conjunto(
         raise ValueError("Nenhum destino informado para a publicação conjunta")
     if len(set(destinos)) != len(destinos):
         raise ValueError("Destinos duplicados na publicação conjunta")
+    for destino in destinos:
+        for outro in destinos:
+            if destino != outro and destino in outro.parents:
+                raise ValueError(
+                    f"Destinos aninhados na publicação conjunta: {destino} contém {outro}"
+                )
     for destino in destinos:
         destino.parent.mkdir(parents=True, exist_ok=True)
         orfao = _backup_orfao(destino)

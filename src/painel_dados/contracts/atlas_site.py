@@ -183,6 +183,8 @@ def _validar_zip(caminho: Path, arquivo: str, download: dict) -> None:
                 linhas = sum(1 for _ in csv.reader(texto)) - 1
     except (zipfile.BadZipFile, UnicodeDecodeError, csv.Error) as erro:
         raise ValueError(f"Download corrompido: {arquivo}") from erro
+    if linhas < 1:
+        raise ValueError(f"Download sem registros: {arquivo}")
     if linhas != download["linhas"]:
         raise ValueError(
             f"Download com contagem divergente: {arquivo} "

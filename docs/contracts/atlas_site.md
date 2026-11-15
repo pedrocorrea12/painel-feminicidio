@@ -3,9 +3,10 @@
 Implementação: `src/painel_dados/contracts/atlas_site.py`. Testes:
 `tests/contracts/test_atlas_site.py` (diretório sintético montado em `tmp_path`).
 
-`validar_diretorio_site(diretorio)` roda sobre o diretório **temporário** gerado por
-`pipeline/build_atlas_site_data.py`, antes de ele substituir `dashboard/atlas/data`
-via `painel_dados.publish.publicar_diretorio`. Falha levanta `ValueError` e a versão
+`validar_diretorio_site(diretorio, diretorio_downloads=None)` roda sobre os diretórios
+**temporários** gerados por `pipeline/build_atlas_site_data.py`, antes de eles
+substituírem `dashboard/atlas/data` e `dashboard/atlas/downloads` via
+`painel_dados.publish.publicar_conjunto`. Falha levanta `ValueError` e a versão
 publicada anterior é mantida.
 
 ## O que verifica
@@ -29,8 +30,11 @@ publicada anterior é mantida.
   cabeçalho); e nenhum arquivo fora do manifesto sobra no diretório. As mensagens
   começam por `Download ausente`, `Download com caminho inválido`,
   `Download com tamanho divergente`, `Download corrompido`,
-  `Download sem o CSV esperado`, `Download com contagem divergente` e
-  `Download fora do manifesto`.
+  `Download sem o CSV esperado`, `Download com contagem divergente`,
+  `Download sem registros` (CSV só com cabeçalho) e `Download fora do manifesto`.
+- a publicação conjunta rejeita destinos duplicados ou aninhados (um dentro do
+  outro) e, na reversão, informa por exceção qualquer backup preservado ou versão
+  nova que não pôde ser removida.
 
 ## Comportamento do pipeline
 

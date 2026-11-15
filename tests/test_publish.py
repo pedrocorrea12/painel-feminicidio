@@ -446,3 +446,69 @@ def test_conjunto_rejeita_destinos_duplicados_e_lista_vazia(tmp_path: Path) -> N
         ValueError, match="^Nenhum destino informado para a publicação conjunta$"
     ):
         modulo_publicacao.publicar_conjunto([], lambda _t: None, lambda _t: None)
+
+
+def test_conjunto_rejeita_destinos_aninhados(tmp_path: Path) -> None:
+    gerou = False
+
+    def gerar(_temporarios) -> None:
+        nonlocal gerou
+        gerou = True
+
+    with pytest.raises(ValueError, match="^Destinos aninhados na publicação conjunta: "):
+        modulo_publicacao.publicar_conjunto(
+            [tmp_path / "data", tmp_path / "data" / "downloads"], gerar, lambda _t: None
+        )
+    assert not gerou
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_falha_ao_remover_versao_nova_na_reversao_e_informada(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados = tmp_path / "data"
+    downloads = tmp_path / "downloads"
+    _escrever_versao(downloads, "anterior")
+    _replace_que_falha_na_segunda_instalacao(monkeypatch)
+    # Ordem [dados, downloads]: dados (inexistente) é instalado primeiro; a
+    # segunda troca falha e a remoção da versão nova de dados também.
+    remover_real = modulo_publicacao._remover
+
+    def remover_com_falha(caminho):
+        if Path(caminho) == dados.resolve():
+            raise OSError("remoção bloqueada")
+        return remover_real(caminho)
+
+    monkeypatch.setattr(modulo_publicacao, "_remover", remover_com_falha)
+
+    with pytest.raises(RuntimeError) as capturado:
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert "versão nova não removida em: " in str(capturado.value)
+    assert str(dados.resolve()) in str(capturado.value)
+    assert (downloads / "versao.txt").read_text(encoding="utf-8") == "anterior"
+
+
+def test_backup_remanescente_e_atribuido_so_ao_destino_dono(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    remover_real = modulo_publicacao._remover
+
+    def remover_com_falha(caminho):
+        if ".downloads.backup-" in Path(caminho).name:
+            raise OSError("remoção bloqueada")
+        return remover_real(caminho)
+
+    monkeypatch.setattr(modulo_publicacao, "_remover", remover_com_falha)
+
+    with pytest.warns(RuntimeWarning):
+        resultados = modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert resultados[0].backup_remanescente is None
+    assert resultados[1].backup_remanescente is not None
+    assert ".downloads.backup-" in resultados[1].backup_remanescente.name

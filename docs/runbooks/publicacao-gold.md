@@ -24,42 +24,45 @@ completo está em `docs/contracts/atlas_site.md`.
 1. Pare novas execuções de `build_atlas_site_data.py`; não faça duas publicações
    concorrentes.
 2. Feche processos que mantenham arquivos do atlas abertos.
-3. Liste o destino e todos os backups, sem remover nada:
+3. Liste os backups das duas pastas, sem remover nada:
 
 ```powershell
 $atlas = (Resolve-Path "dashboard/atlas").Path
-$destino = Join-Path $atlas "data"
-$backups = Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".data.backup-*" -or $_.Name -like ".downloads.backup-*" }
-$backups | Select-Object FullName, LastWriteTime
-Test-Path -LiteralPath $destino
+Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".data.backup-*" -or $_.Name -like ".downloads.backup-*" } | Select-Object FullName, LastWriteTime
 ```
 
-Se houver mais de um backup, trate cada um individualmente e preserve o mais
+Os dois destinos formam um conjunto: `data` e `downloads` devem voltar juntos à
+mesma versão. Os passos abaixo valem para **cada pasta separadamente**; defina
+`$nome` como `data` ou `downloads` e repita o procedimento para a outra. Se houver
+mais de um backup da mesma pasta, trate cada um individualmente e preserve o mais
 recente até concluir a recuperação.
+
+```powershell
+$nome = "data"   # depois repita com "downloads"
+$destino = Join-Path $atlas $nome
+$backup = Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".$nome.backup-*" } | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+Test-Path -LiteralPath $destino
+$backup.FullName
+```
 
 ## Validar destino e backup
 
-Valide o destino, quando existir, e cada candidato a backup. Para o diretório de
-dados, a validação confere que os ZIPs do manifesto existem em `downloads/`. Para
-validar a fundo os ZIPs (íntegros, com o CSV esperado e linhas e bytes iguais aos
-do manifesto), passe também o diretório de downloads (ou o backup
-`.downloads.backup-*`):
+Valide o conjunto atual (dados e ZIPs): confere o contrato, o tamanho, a integridade
+e a contagem de linhas de cada ZIP.
 
 ```powershell
 .venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data', r'dashboard/atlas/downloads'); print('dados e downloads válidos')"
 ```
 
-Os comandos abaixo validam a pasta de dados:
+Para validar a versão anterior, monte o par de backups (`.data.backup-*` com
+`.downloads.backup-*`) e passe os dois caminhos exatos:
 
 ```powershell
-.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data'); print('destino válido')"
-
-# Substitua pelo caminho exato listado na etapa anterior.
-$backup = $backups | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'$($backup.FullName)'); print('backup válido')"
+.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'<backup de data>', r'<backup de downloads>'); print('backups válidos')"
 ```
 
-Para comparar as árvores por caminho relativo, tamanho e SHA-256:
+Para comparar as árvores de uma pasta (`$destino` e `$backup` do passo anterior) por
+caminho relativo, tamanho e SHA-256:
 
 ```powershell
 function Get-Retrato([string]$raiz) {
@@ -83,6 +86,10 @@ explicada antes de qualquer remoção.
 
 ## Recuperar
 
+Decida pelo **conjunto**: nunca deixe `data` de uma versão com `downloads` de outra.
+Aplique o caso abaixo a cada pasta, com `$nome`, `$destino` e `$backup` definidos
+como na preparação.
+
 ### Destino ausente e backup válido
 
 Isso indica interrupção na janela entre as duas renomeações. Restaure o backup
@@ -90,8 +97,9 @@ validado no mesmo volume:
 
 ```powershell
 Move-Item -LiteralPath $backup.FullName -Destination $destino
-.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data'); print('restauração validada')"
 ```
+
+Depois de restaurar as duas pastas, rode a validação do conjunto (acima).
 
 ### Destino existente e válido
 
@@ -110,13 +118,14 @@ validado e comparado.
 Preserve o destino para diagnóstico e restaure o backup:
 
 ```powershell
-$quarentena = Join-Path $atlas (".data.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
+$quarentena = Join-Path $atlas (".$nome.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
 Move-Item -LiteralPath $destino -Destination $quarentena
 Move-Item -LiteralPath $backup.FullName -Destination $destino
-.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data'); print('restauração validada')"
 ```
 
-Mantenha a quarentena até registrar a causa e confirmar o site restaurado.
+Depois de restaurar as duas pastas, rode a validação do conjunto. Mantenha as
+quarentenas até registrar a causa e confirmar o site restaurado.
+
 
 ## Interpretar `RuntimeWarning`
 

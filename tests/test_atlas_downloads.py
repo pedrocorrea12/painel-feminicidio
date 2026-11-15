@@ -206,3 +206,13 @@ def test_publicacao_conjunta_troca_dados_e_downloads_juntos(
         assert pacote.namelist() == ["atlas_sim.csv"]
     validar_diretorio_site(dados)
     assert sorted(p.name for p in dados.parent.iterdir()) == ["data", "downloads"]
+
+
+def test_csv_so_com_cabecalho_e_rejeitado(tmp_path: Path) -> None:
+    dados = tmp_path / "atlas" / "data"
+    downloads = tmp_path / "atlas" / "downloads"
+    downloads.mkdir(parents=True)
+    entrada = _zip(downloads / "atlas_sim.zip", "atlas_sim.csv", [["indicador", "ano"]])
+    _site(dados, [entrada])
+    with pytest.raises(ValueError, match="^Download sem registros: downloads/atlas_sim.zip$"):
+        validar_diretorio_site(dados, diretorio_downloads=downloads)
