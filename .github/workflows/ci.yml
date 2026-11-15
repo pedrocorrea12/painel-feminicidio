@@ -33,7 +33,10 @@ jobs:
       - name: Verificar estilo
         run: python -m ruff check src tests
 
-      # Não executa pipeline/validate_project.py: data/silver não é versionada.
+      # O main completo depende da Silver real; esta etapa usa Gold sintética mínima.
+      - name: Validar projeto com fixtures sinteticas
+        run: python -m pytest tests/test_validate_project.py
+
       - name: Executar testes
         run: python -m pytest
 
