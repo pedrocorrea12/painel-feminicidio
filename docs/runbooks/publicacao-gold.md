@@ -1,17 +1,20 @@
 # Runbook: publicação segura da Gold do atlas
 
-Este procedimento cobre a publicação de `dashboard/atlas/data` feita por
-`pipeline/build_atlas_site_data.py`. O script gera os JSONs num diretório
-temporário, valida o contrato e chama `painel_dados.publish.publicar_diretorio`
-para trocar a versão publicada. O contrato completo está em
-`docs/contracts/atlas_site.md`.
-
-Os ZIPs de `dashboard/atlas/downloads` ainda são escritos fora dessa troca e
-devem ser verificados separadamente.
+Este procedimento cobre a publicação de `dashboard/atlas/data` e
+`dashboard/atlas/downloads` feita por `pipeline/build_atlas_site_data.py`. O
+script gera os JSONs e os ZIPs em diretórios temporários, valida o contrato
+(incluindo o conteúdo dos ZIPs) e chama
+`painel_dados.publish.publicar_conjunto` para trocar as duas pastas juntas; se
+qualquer etapa falhar, as duas permanecem na versão anterior. O contrato
+completo está em `docs/contracts/atlas_site.md`.
 
 ## Sintomas
 
-- `RuntimeError: Backup órfão impede publicação: ...\.data.backup-*`;
+- `RuntimeError: Backup órfão impede publicação: ...\.data.backup-*` (ou
+  `...\.downloads.backup-*`);
+- `RuntimeError: Falha na troca conjunta dos destinos publicados: ...` com a lista
+  de backups preservados: a restauração automática falhou, e cada backup listado
+  é a versão anterior daquela pasta;
 - `RuntimeWarning: Publicação concluída, mas o backup não pôde ser removido`;
 - `dashboard/atlas/data` ausente após interrupção durante a troca;
 - erro de validação antes da publicação (a versão anterior deve permanecer).
@@ -26,7 +29,7 @@ devem ser verificados separadamente.
 ```powershell
 $atlas = (Resolve-Path "dashboard/atlas").Path
 $destino = Join-Path $atlas "data"
-$backups = Get-ChildItem -LiteralPath $atlas -Directory -Filter ".data.backup-*"
+$backups = Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".data.backup-*" -or $_.Name -like ".downloads.backup-*" }
 $backups | Select-Object FullName, LastWriteTime
 Test-Path -LiteralPath $destino
 ```
@@ -36,8 +39,17 @@ recente até concluir a recuperação.
 
 ## Validar destino e backup
 
-Valide o destino, quando existir, e cada candidato a backup. A validação também
-confere os ZIPs referenciados pelo manifesto:
+Valide o destino, quando existir, e cada candidato a backup. Para o diretório de
+dados, a validação confere que os ZIPs do manifesto existem em `downloads/`. Para
+validar a fundo os ZIPs (íntegros, com o CSV esperado e linhas e bytes iguais aos
+do manifesto), passe também o diretório de downloads (ou o backup
+`.downloads.backup-*`):
+
+```powershell
+.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data', r'dashboard/atlas/downloads'); print('dados e downloads válidos')"
+```
+
+Os comandos abaixo validam a pasta de dados:
 
 ```powershell
 .venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data'); print('destino válido')"
