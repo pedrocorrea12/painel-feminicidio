@@ -12,3 +12,8 @@ do pipeline. Os primeiros runbooks deverão cobrir:
 
 Cada procedimento deve registrar sintomas, diagnóstico, ação segura, validação
 da recuperação e evidência que pode ser compartilhada sem dados sensíveis.
+
+## Procedimentos disponíveis
+
+- [Publicar a Gold na AWS](publicar-gold-na-aws.md)
+- [Desligar o laboratório AWS](desligar-laboratorio-aws.md)
