@@ -137,17 +137,18 @@ backup existir, a próxima publicação será bloqueada de propósito.
 
 ## Janela sem destino no Windows
 
-A troca usa duas renomeações no mesmo volume: `data` vira backup e o temporário
-vira `data`. Entre elas há um intervalo curto em que `dashboard/atlas/data` não
-existe; portanto, a operação não é atômica em sentido estrito no Windows. Uma
+A troca de cada pasta usa duas renomeações no mesmo volume: `data` (ou `downloads`)
+vira backup e o temporário vira a pasta. Entre elas há um intervalo curto em que
+`dashboard/atlas/data` (ou `downloads`) não existe; portanto, a operação não é atômica em sentido estrito no Windows. Uma
 interrupção nessa janela deixa o backup para restauração. Execute a publicação
 sem concorrência e, quando possível, fora de uma janela de acesso intenso.
 
 ## Encerramento e evidências
 
 1. Rode `pipeline/validate_project.py` no ambiente que possui a Silver local.
-2. Confirme que não restaram `.data.tmp-*`, `.data.backup-*` nem quarentenas sem
-   justificativa.
+2. Confirme que não restaram `.data.tmp-*`, `.data.backup-*`, `.downloads.tmp-*`,
+   `.downloads.backup-*` nem quarentenas (`.data.quarentena-*`,
+   `.downloads.quarentena-*`) sem justificativa.
 3. Registre horário, comando, mensagem de erro ou aviso, caminho recuperado,
    resultado da validação e hashes comparados. Não anexe dados pessoais nem
    artefatos brutos ao registro do incidente.
