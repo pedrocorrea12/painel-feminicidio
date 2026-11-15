@@ -31,7 +31,7 @@ def test_comando_sync_usa_dryrun_por_padrao_e_nao_exclui(tmp_path: Path) -> None
         "dados-violencia-sc-lab-123456789012",
         "20261114T120000Z-abc1234",
         raiz_projeto=raiz,
-        perfil="painel-lab",
+        perfil="lab-painel",
     )
 
     assert comando == (
@@ -40,9 +40,10 @@ def test_comando_sync_usa_dryrun_por_padrao_e_nao_exclui(tmp_path: Path) -> None
         "sync",
         str(gold.resolve()),
         "s3://dados-violencia-sc-lab-123456789012/gold/20261114T120000Z-abc1234/",
+        "--no-follow-symlinks",
         "--dryrun",
         "--profile",
-        "painel-lab",
+        "lab-painel",
     )
     assert "--delete" not in comando
 
@@ -60,6 +61,24 @@ def test_comando_real_remove_apenas_dryrun(tmp_path: Path) -> None:
 
     assert "--dryrun" not in comando
     assert "--delete" not in comando
+
+
+@pytest.mark.parametrize("simulacao", [True, False])
+def test_comando_sync_nao_segue_links_simbolicos(
+    tmp_path: Path,
+    simulacao: bool,
+) -> None:
+    raiz, gold = _projeto_com_gold(tmp_path)
+
+    comando = montar_comando_sync(
+        gold,
+        "dados-violencia-sc-lab-123456789012",
+        "execucao-001",
+        raiz_projeto=raiz,
+        simulacao=simulacao,
+    )
+
+    assert "--no-follow-symlinks" in comando
 
 
 @pytest.mark.parametrize(

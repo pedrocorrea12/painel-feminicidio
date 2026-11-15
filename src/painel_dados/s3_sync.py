@@ -104,7 +104,7 @@ def montar_comando_sync(
     _validar_perfil(perfil)
 
     destino = f"s3://{bucket}/{prefixo}/{id_execucao}/"
-    comando = ["aws", "s3", "sync", str(origem), destino]
+    comando = ["aws", "s3", "sync", str(origem), destino, "--no-follow-symlinks"]
     if simulacao:
         comando.append("--dryrun")
     if perfil is not None:
