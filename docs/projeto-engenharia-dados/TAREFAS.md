@@ -25,6 +25,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T16 | Publicar a Gold no bucket pelo login local (código e runbook) | Codex | tarefa/t16-publicar-gold-s3 | integrada | nenhuma (segue a decisão do contexto acima) |
 | T17 | CI: `terraform fmt -check` e `validate` sem credenciais | Codex | tarefa/t17-ci-terraform | integrada | T15 (lock file); ok do dono para tocar `.github/` |
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
+| T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | pendente | T18; ok do dono para tocar `.github/` |
+| T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | pendente | T05 (publicação segura) |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -268,6 +270,46 @@ integração (ignorado pelo Git; não apagar nem versionar).
 - **Aceite:** `docs/benchmark/README.md` com comandos reproduzíveis, tabela de
   medições e recomendação; estimativa de custo mensal preliminar para `docs/costs.md`.
 
+## T19 `validate_project.py` na CI
+
+- **Dono:** Codex. **Branch:** `tarefa/t19-validate-project-ci`, a partir de `engenharia-dados`.
+  **Só altera `.github/` com o ok do dono.**
+- **Contexto:** o validador lê `data/silver` e `data/gold`, que não são versionadas, e por isso
+  o job de CI não o executa (comentário em `.github/workflows/ci.yml`). Hoje a única garantia
+  automática sobre os dados vem dos testes com fixtures.
+- **Arquivos permitidos:** `.github/workflows/ci.yml`; `tests/test_validate_project.py` e
+  fixtures novas em `tests/fixtures/validate_project/` (todas novas); `docs/runbooks/` apenas
+  se criar um runbook novo para a validação. **Não alterar** `pipeline/validate_project.py`
+  nem scripts de `pipeline/` sem registrar o pedido na seção "Pedidos e entregas".
+- **Escopo:** primeiro **analisar** e registrar em "Entrega" quais asserções dependem de
+  dados reais e quais dependem só de estrutura; depois propor e implementar o menor
+  caminho que rode o validador na CI sem versionar dados reais nem pessoais (por exemplo,
+  fixtures sintéticas pequenas, ou separar a parte estrutural da parte que exige a Silver).
+  Se a solução exigir mudar o validador, registrar como pedido e parar.
+- **Aceite:** a CI executa a validação e falha quando uma fixture é adulterada (teste que
+  prova a falha, com mensagem estável); nenhum dado real, pessoal ou segredo no repositório;
+  pytest e `ruff check src tests` verdes; CI verde no GitHub depois do push do dono. Sem push.
+
+## T20 ZIPs na publicação segura
+
+- **Dono:** Claude. **Branch:** `tarefa/t20-zips-publicacao-segura`, a partir de `engenharia-dados`.
+- **Contexto:** `build_atlas_site_data.py` publica `dashboard/atlas/data` pela troca segura
+  (`publicar_diretorio`), mas os ZIPs de `dashboard/atlas/downloads` são gravados direto, fora
+  dela: uma falha no meio pode deixar um ZIP novo ao lado de dados antigos.
+- **Arquivos permitidos:** `pipeline/build_atlas_site_data.py` (só a geração e a validação dos
+  ZIPs; autorizado por esta tarefa), `src/painel_dados/publish.py` apenas se for indispensável
+  (registrar o motivo em "Pedidos"), `tests/test_publish.py` e `tests/test_atlas_downloads.py`
+  (novo), `docs/contracts/atlas_site.md` e `docs/runbooks/` para a documentação. Nada em
+  `dashboard/atlas/` além do que o script regenera.
+- **Escopo:** gerar os ZIPs no diretório temporário, validar (abre, contém o CSV esperado,
+  linhas e bytes batem com o manifesto do site) e trocar com backup, mantendo a restauração
+  em caso de falha. Descrever no contrato que `data/` e `downloads/` passam a ser publicados
+  juntos, e o que acontece se um deles falhar.
+- **Aceite:** testes sem rede cobrindo ZIP corrompido, CSV ausente e contagem divergente
+  (a versão anterior permanece); site e ZIPs regenerados sem diferença de conteúdo além dos
+  carimbos de data; pytest e `ruff check src tests` verdes. Sem push.
+- **Fora do escopo:** mudar o formato dos ZIPs ou das colunas.
+
 ## T06 e T07
 
 T06: **aplicada em parte** com aprovação do dono (S3 privado, logs e orçamento);
@@ -278,7 +320,16 @@ foi integrado à `develope` pelo PR #1 (merge `def2685`). Pendente: registrar o
 custo observado em `docs/costs.md` após a primeira fatura e desligar o
 laboratório (`docs/runbooks/desligar-laboratorio-aws.md`) antes de 14/05/2027.
 
-T07 continua bloqueada, só após o Gate C. Não iniciar sem decisão do dono.
+T07 continua **bloqueada**. Só o dono a libera, depois de confirmar **todos** os itens do
+Gate C (`docs/projeto-engenharia-dados/README.md`). Situação em 15/11/2026, sem nenhum
+item confirmado ainda:
+
+| Item do Gate C | Situação | O que falta |
+| --- | --- | --- |
+| CI visível e aprovado | CI verde no PR 1 e na `develope` | confirmar; T19 amplia o que a CI valida |
+| Incidentes simulados e recuperação demonstrada | não feito | simular falhas (Gold inválida, ZIP corrompido, backup órfão) e registrar; T20 cobre os ZIPs |
+| Métricas reais, limitações e custos observados | parcial: benchmark e estimativa existem | registrar o custo da primeira fatura AWS em `docs/costs.md` |
+| Nenhum segredo ou dado pessoal desnecessário | não confirmado | varredura final do repositório antes da demo |
 
 ## Pedidos e entregas
 
