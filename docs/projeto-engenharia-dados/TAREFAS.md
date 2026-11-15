@@ -24,6 +24,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T15 | Terraform sem federação OIDC (a conta bloqueia por SCP), lock file e ADR | Claude | tarefa/t15-terraform-sem-oidc | integrada | T14; laboratório parcialmente aplicado pelo dono |
 | T16 | Publicar a Gold no bucket pelo login local (código e runbook) | Codex | tarefa/t16-publicar-gold-s3 | integrada | nenhuma (segue a decisão do contexto acima) |
 | T17 | CI: `terraform fmt -check` e `validate` sem credenciais | Codex | tarefa/t17-ci-terraform | integrada | T15 (lock file); ok do dono para tocar `.github/` |
+| T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | a fazer | T17 |
 | T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -235,6 +236,24 @@ integração (ignorado pelo Git; não apagar nem versionar).
   credenciais e sem `plan`; versão do Terraform fixa; ações fixadas como no job atual.
 - **Aceite:** YAML válido, job independente do job Python, nenhuma credencial ou
   permissão além de `contents: read`; CI verde no GitHub depois de o dono fazer push.
+
+## T18 Marcar artefatos gerados no Git
+
+- **Dono:** Codex. **Branch:** `tarefa/t18-artefatos-gerados`, a partir de `engenharia-dados`.
+- **Arquivos permitidos:** `.gitattributes` (novo, na raiz). Nenhum outro (arquivo compartilhado:
+  só esta tarefa o cria).
+- **Contexto:** `dashboard/dist/data/painel.json` tem 4,4 MB e 122 mil linhas (conteúdo gerado
+  pelo commit `484aaef`, anterior às tarefas T09 a T17), o que torna ilegível o diff de um PR
+  para `develope`. O Pages publica só `dashboard/atlas`, então nada disso afeta o site.
+- **Escopo:** marcar como `linguist-generated=true` (o GitHub recolhe o diff e não conta nas
+  estatísticas) os artefatos gerados e grandes: `dashboard/dist/data/**`, `data/gold/**`,
+  `dashboard/atlas/data/**` e `dashboard/atlas/downloads/**`. Não usar `-diff` nem `binary`,
+  para o conteúdo continuar revisável quando alguém quiser. Não alterar normalização de
+  fim de linha (nada de `text=auto` nem `eol`), para não reescrever arquivos.
+- **Aceite:** `git check-attr linguist-generated` retorna `set` para amostras de cada caminho
+  e `unspecified` para `src/`, `tests/`, `docs/` e `infra/`; `git status` sem outros arquivos
+  modificados após a criação; pytest e `ruff check src tests` verdes. Sem push.
+- **Fora do escopo (decisão do dono):** remover ou parar de versionar `dashboard/dist/`.
 
 ## T12 Benchmark local do pipeline (Gate B)
 
