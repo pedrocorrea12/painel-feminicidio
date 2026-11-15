@@ -20,13 +20,14 @@ import re
 import shutil
 import unicodedata
 import zipfile
+from collections.abc import Sequence
 from datetime import date
 from pathlib import Path
 
 import pandas as pd
 
 from painel_dados.contracts.atlas_site import validar_diretorio_site
-from painel_dados.publish import publicar_diretorio
+from painel_dados.publish import publicar_conjunto
 
 from build_atlas_prototype_data import (
     SIM_NOMES,
@@ -226,12 +227,12 @@ def escrever(caminho: Path, conteudo: dict) -> None:
     )
 
 
-def gerar_downloads(base: pd.DataFrame) -> list[dict]:
-    DOWNLOADS.mkdir(parents=True, exist_ok=True)
+def gerar_downloads(base: pd.DataFrame, destino_downloads: Path) -> list[dict]:
+    destino_downloads.mkdir(parents=True, exist_ok=True)
     gerados = []
     for fonte, nome in [("SIM", "sim"), ("SINAN", "sinan"), ("Sinesp VDE", "sinesp")]:
         parte = base.loc[base.fonte.eq(fonte), COLUNAS]
-        destino = DOWNLOADS / f"atlas_{nome}.zip"
+        destino = destino_downloads / f"atlas_{nome}.zip"
         with zipfile.ZipFile(destino, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
             z.writestr(
                 f"atlas_{nome}.csv",
@@ -299,8 +300,8 @@ def gerar_desigualdades() -> dict:
     }
 
 
-def gerar_dados(destino: Path) -> None:
-    """Escreve todos os arquivos de dados do site em ``destino``."""
+def gerar_dados(destino: Path, destino_downloads: Path) -> None:
+    """Escreve os dados do site em ``destino`` e os ZIPs em ``destino_downloads``."""
     base, indicadores = carregar()
     nomes = nomes_municipios(base)
     mascara_mun = base.nivel_territorial.eq("municipio")
@@ -363,7 +364,7 @@ def gerar_dados(destino: Path) -> None:
 
     escrever(destino / "desigualdades.json", gerar_desigualdades())
 
-    downloads = gerar_downloads(base)
+    downloads = gerar_downloads(base, destino_downloads)
 
     manifesto = {
         "atualizado_em": date.today().isoformat(),
@@ -407,8 +408,18 @@ def gerar_dados(destino: Path) -> None:
     escrever(destino / "manifesto.json", manifesto)
 
 
+def gerar_site(temporarios: Sequence[Path]) -> None:
+    dados, downloads = temporarios
+    gerar_dados(dados, downloads)
+
+
+def validar_site(temporarios: Sequence[Path]) -> None:
+    dados, downloads = temporarios
+    validar_diretorio_site(dados, diretorio_downloads=downloads)
+
+
 def main() -> None:
-    publicar_diretorio(DADOS, gerar_dados, validar_diretorio_site)
+    publicar_conjunto([DADOS, DOWNLOADS], gerar_site, validar_site)
     downloads = json.loads((DADOS / "manifesto.json").read_text(encoding="utf-8"))["downloads"]
     tamanhos = sorted(
         ((p.stat().st_size, p.relative_to(SITE).as_posix()) for p in DADOS.rglob("*.json")),
