@@ -36,3 +36,26 @@ jobs:
       # Não executa pipeline/validate_project.py: data/silver não é versionada.
       - name: Executar testes
         run: python -m pytest
+
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra/terraform
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar Terraform
+        uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: "1.17.1"
+
+      - name: Verificar formatacao
+        run: terraform fmt -check -recursive
+
+      - name: Inicializar sem backend
+        run: terraform init -backend=false -input=false
+
+      - name: Validar configuracao
+        run: terraform validate
