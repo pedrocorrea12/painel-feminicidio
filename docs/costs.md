@@ -41,3 +41,12 @@ Conta do plano gratuito (créditos de US$ 100, válidos até 14/05/2027), regiã
 de logs e orçamento de US$ 5. Sem federação OIDC (bloqueada por SCP, ADR 0002).
 Custo esperado nesta fase: zero a centavos. Registrar aqui o custo observado depois
 da primeira publicação da Gold (T16).
+
+## Primeira publicação da Gold (14/11/2026)
+
+Execução `20261115T013546Z-c752be7` (commit c752be7), pelo runbook
+`docs/runbooks/publicar-gold-na-aws.md` e login local temporário. 53 objetos
+(52 arquivos da Gold e o manifesto), 34,8 MB, em `gold/<id-da-execução>/` do bucket
+privado. Verificado: contagem de objetos, hash do manifesto igual ao local, objeto
+criptografado e acesso público bloqueado. Custo observado: a registrar após a
+primeira fatura (esperado: centavos de armazenamento e requisições).
