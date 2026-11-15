@@ -20,13 +20,13 @@ da conta ou saída sensível no repositório.
 Autentique o perfil local e confirme a identidade antes de publicar:
 
 ```powershell
-aws login --profile painel-lab
-aws sts get-caller-identity --profile painel-lab
+aws login --profile lab-painel
+aws sts get-caller-identity --profile lab-painel
 ```
 
 Defina o bucket e um identificador imutável para a execução. Se o estado local
 do Terraform estiver disponível, o nome do bucket pode ser consultado com
-`terraform -chdir=infra/terraform output -raw bucket_name`.
+`terraform -chdir=infra/terraform output -raw bucket_dados`.
 
 ```powershell
 $bucket = "NOME-DO-BUCKET"
@@ -42,7 +42,7 @@ O modo padrão é dry-run. Ele cria `data/gold/manifesto.json`, com tamanho e
 SHA-256 de cada artefato, e apenas mostra o que o AWS CLI enviaria:
 
 ```powershell
-.venv\Scripts\python -c "import os; from pathlib import Path; from painel_dados.s3_sync import sincronizar_gold; r = sincronizar_gold(Path('data/gold'), os.environ['PAINEL_BUCKET'], os.environ['PAINEL_EXECUCAO'], perfil='painel-lab'); print(r.processo.stdout)"
+.venv\Scripts\python -c "import os; from pathlib import Path; from painel_dados.s3_sync import sincronizar_gold; r = sincronizar_gold(Path('data/gold'), os.environ['PAINEL_BUCKET'], os.environ['PAINEL_EXECUCAO'], perfil='lab-painel'); print(r.processo.stdout)"
 ```
 
 Confira se o destino exibido é exatamente
@@ -54,7 +54,7 @@ a origem, o bucket ou o prefixo não forem os esperados.
 Após revisar o dry-run, execute a mesma operação com `simulacao=False`:
 
 ```powershell
-.venv\Scripts\python -c "import os; from pathlib import Path; from painel_dados.s3_sync import sincronizar_gold; r = sincronizar_gold(Path('data/gold'), os.environ['PAINEL_BUCKET'], os.environ['PAINEL_EXECUCAO'], perfil='painel-lab', simulacao=False); print(r.processo.stdout)"
+.venv\Scripts\python -c "import os; from pathlib import Path; from painel_dados.s3_sync import sincronizar_gold; r = sincronizar_gold(Path('data/gold'), os.environ['PAINEL_BUCKET'], os.environ['PAINEL_EXECUCAO'], perfil='lab-painel', simulacao=False); print(r.processo.stdout)"
 ```
 
 Não reutilize um identificador de execução. Um prefixo novo preserva a versão
@@ -65,11 +65,11 @@ anterior e simplifica a reversão.
 Liste os objetos e confirme a presença do manifesto:
 
 ```powershell
-aws s3 ls "s3://$bucket/gold/$execucao/" --recursive --profile painel-lab
+aws s3 ls "s3://$bucket/gold/$execucao/" --recursive --profile lab-painel
 $verificacao = Join-Path $env:TEMP "painel-gold-$execucao"
 New-Item -ItemType Directory -Force -Path $verificacao | Out-Null
 aws s3 cp "s3://$bucket/gold/$execucao/manifesto.json" `
-  "$verificacao\manifesto.json" --profile painel-lab
+  "$verificacao\manifesto.json" --profile lab-painel
 Get-FileHash data/gold/manifesto.json, "$verificacao\manifesto.json" `
   -Algorithm SHA256
 ```
@@ -88,7 +88,7 @@ bucket:
 
 ```powershell
 aws s3api list-object-versions --bucket $bucket `
-  --prefix "gold/$execucao/" --profile painel-lab --output table
+  --prefix "gold/$execucao/" --profile lab-painel --output table
 ```
 
 Recupere cada versão necessária em um diretório temporário, valide-a contra o
@@ -97,7 +97,7 @@ manifesto correspondente e só então envie-a novamente:
 ```powershell
 aws s3api get-object --bucket $bucket --key "CAMINHO-DA-CHAVE" `
   --version-id "ID-DA-VERSAO" "$verificacao\artefato-restaurado" `
-  --profile painel-lab
+  --profile lab-painel
 ```
 
 Nunca use `--delete` para reverter. Se a publicação nova estiver inválida,
@@ -108,7 +108,7 @@ registre o incidente antes de removê-la.
 Para remover somente um prefixo de execução comprovadamente inválido:
 
 ```powershell
-aws s3 rm "s3://$bucket/gold/$execucao/" --recursive --profile painel-lab
+aws s3 rm "s3://$bucket/gold/$execucao/" --recursive --profile lab-painel
 Remove-Item -LiteralPath data/gold/manifesto.json -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $verificacao -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item Env:PAINEL_BUCKET, Env:PAINEL_EXECUCAO -ErrorAction SilentlyContinue
