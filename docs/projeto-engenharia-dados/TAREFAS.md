@@ -25,7 +25,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T16 | Publicar a Gold no bucket pelo login local (código e runbook) | Codex | tarefa/t16-publicar-gold-s3 | integrada | nenhuma (segue a decisão do contexto acima) |
 | T17 | CI: `terraform fmt -check` e `validate` sem credenciais | Codex | tarefa/t17-ci-terraform | integrada | T15 (lock file); ok do dono para tocar `.github/` |
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
-| T06 | Laboratório AWS (entrega 7) | a definir | tarefa/t06-aws | bloqueada | T12, estimativa de custo, aprovação do dono |
+| T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
@@ -270,10 +270,15 @@ integração (ignorado pelo Git; não apagar nem versionar).
 
 ## T06 e T07
 
-Bloqueadas. T06 só inicia com T12 concluída, estimativa de custo registrada em
-`docs/costs.md` e **aprovação explícita do dono**. Roteiro completo, incluindo o
-que o dono prepara na conta AWS: `AWS-PREPARACAO.md`. T07 só após o Gate C.
-Não iniciar.
+T06: **aplicada em parte** com aprovação do dono (S3 privado, logs e orçamento);
+a federação OIDC do GitHub ficou desligada por variável porque uma SCP da
+organização da conta a bloqueia (ver `docs/adr/0002-publicacao-aws-por-login-local.md`).
+A primeira publicação da Gold foi feita por login local temporário. O trabalho
+foi integrado à `develope` pelo PR #1 (merge `def2685`). Pendente: registrar o
+custo observado em `docs/costs.md` após a primeira fatura e desligar o
+laboratório (`docs/runbooks/desligar-laboratorio-aws.md`) antes de 14/05/2027.
+
+T07 continua bloqueada, só após o Gate C. Não iniciar sem decisão do dono.
 
 ## Pedidos e entregas
 
