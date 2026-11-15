@@ -1,0 +1,10 @@
+﻿indicador,ano_inicial,ano_final,uf_anos_avaliados,uf_anos_completos,uf_anos_com_cobertura_municipal,sc_todos_anos_completos,sc_tem_cobertura_municipal,sc_minimo_municipios_informados,todos_uf_anos_completos,comparabilidade,ressalva_principal
+Estupro,2019,2026,216,216,0,True,False,0,True,classificação varia entre UFs e anos,Santa Catarina tem quebra de classificação entre 2019 e 2020; sem detalhamento municipal no arquivo atual
+Estupro de vulnerável,2019,2026,216,216,0,True,False,0,True,classificação varia entre UFs e anos,usar junto da categoria Estupro e manter a quebra de Santa Catarina sinalizada; sem detalhamento municipal no arquivo atual
+Feminicídio,2019,2026,216,216,216,True,True,295,True,comparável no período observado,local do fato e critérios informados pelos estados
+Homicídio doloso,2019,2026,216,216,216,True,True,295,True,comparável com ressalva de registro policial,local do fato e critérios informados pelos estados
+Pessoa Desaparecida,2019,2026,216,216,0,True,False,0,True,"séries separadas, sem razão direta entre registros",local do fato e critérios informados pelos estados; sem detalhamento municipal no arquivo atual
+Pessoa Localizada,2019,2026,216,216,0,True,False,0,True,"séries separadas, sem razão direta entre registros",local do fato e critérios informados pelos estados; sem detalhamento municipal no arquivo atual
+Suicídio,2019,2026,216,216,216,True,True,295,True,comparável com ressalva de registro policial,local do fato e critérios informados pelos estados
+Tentativa de feminicídio,2019,2026,216,216,216,True,True,295,True,comparável com ressalva de registro policial,local do fato e critérios informados pelos estados
+Tentativa de homicídio,2019,2026,216,216,216,True,True,295,True,comparável com ressalva de registro policial,local do fato e critérios informados pelos estados

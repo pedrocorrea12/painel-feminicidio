@@ -1,0 +1,13 @@
+# Copie para terraform.tfvars (ignorado pelo Git) e ajuste. Nada aqui é segredo.
+aws_region        = "us-east-1"
+github_repository = "dono/nome-do-repositorio"
+github_branches   = ["develope"]
+alert_email       = "voce@example.com"
+budget_limit_usd  = 5
+
+# Use false se a conta já tiver o provedor OIDC do GitHub (só existe um por URL).
+create_oidc_provider = true
+
+# Contas que bloqueiam iam:CreateOpenIDConnectProvider por SCP (plano gratuito):
+# desligue a federação. Provedor, papel e política deixam de ser criados.
+habilitar_federacao_github = true

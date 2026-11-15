@@ -1,0 +1,481 @@
+territorio,ano,evento,vitimas_feminino,vitimas_masculino,vitimas_nao_informado,total_vitimas,total_ocorrencias,total_peso,meses_informados,situacao_dado
+Brasil,2019,Apreensão de Cocaína,0,0,0,0,0,72862.833,12,consolidado_publicacao
+Brasil,2020,Apreensão de Cocaína,0,0,0,0,0,59331.843,12,consolidado_publicacao
+Brasil,2021,Apreensão de Cocaína,0,0,0,0,0,84629.969,12,consolidado_publicacao
+Brasil,2022,Apreensão de Cocaína,0,0,0,0,0,121314.622,12,consolidado_publicacao
+Brasil,2023,Apreensão de Cocaína,0,0,0,0,0,128617.167,12,consolidado_publicacao
+Brasil,2024,Apreensão de Cocaína,0,0,0,0,0,139237.042,12,consolidado_publicacao
+Brasil,2025,Apreensão de Cocaína,0,0,0,0,0,127740.511,12,consolidado_publicacao
+Brasil,2026,Apreensão de Cocaína,0,0,0,0,0,76727.022,8,parcial
+Brasil,2019,Apreensão de Maconha,0,0,0,0,0,776993.839,12,consolidado_publicacao
+Brasil,2020,Apreensão de Maconha,0,0,0,0,0,1352148.325,12,consolidado_publicacao
+Brasil,2021,Apreensão de Maconha,0,0,0,0,0,1414094.295,12,consolidado_publicacao
+Brasil,2022,Apreensão de Maconha,0,0,0,0,0,1220365.888,12,consolidado_publicacao
+Brasil,2023,Apreensão de Maconha,0,0,0,0,0,1259965.815,12,consolidado_publicacao
+Brasil,2024,Apreensão de Maconha,0,0,0,0,0,1410442.526,12,consolidado_publicacao
+Brasil,2025,Apreensão de Maconha,0,0,0,0,0,1454573.986,12,consolidado_publicacao
+Brasil,2026,Apreensão de Maconha,0,0,0,0,0,902572.864,8,parcial
+Brasil,2019,Arma de Fogo Apreendida,0,0,0,0,110575,0.0,12,consolidado_publicacao
+Brasil,2020,Arma de Fogo Apreendida,0,0,0,0,111034,0.0,12,consolidado_publicacao
+Brasil,2021,Arma de Fogo Apreendida,0,0,0,0,110249,0.0,12,consolidado_publicacao
+Brasil,2022,Arma de Fogo Apreendida,0,0,0,0,103685,0.0,12,consolidado_publicacao
+Brasil,2023,Arma de Fogo Apreendida,0,0,0,0,105388,0.0,12,consolidado_publicacao
+Brasil,2024,Arma de Fogo Apreendida,0,0,0,0,103152,0.0,12,consolidado_publicacao
+Brasil,2025,Arma de Fogo Apreendida,0,0,0,0,107889,0.0,12,consolidado_publicacao
+Brasil,2026,Arma de Fogo Apreendida,0,0,0,0,68332,0.0,8,parcial
+Brasil,2019,Atendimento pré-hospitalar,0,0,0,0,998901,0.0,12,consolidado_publicacao
+Brasil,2020,Atendimento pré-hospitalar,0,0,0,0,826666,0.0,12,consolidado_publicacao
+Brasil,2021,Atendimento pré-hospitalar,0,0,0,0,880426,0.0,12,consolidado_publicacao
+Brasil,2022,Atendimento pré-hospitalar,0,0,0,0,1015198,0.0,12,consolidado_publicacao
+Brasil,2023,Atendimento pré-hospitalar,0,0,0,0,1011705,0.0,12,consolidado_publicacao
+Brasil,2024,Atendimento pré-hospitalar,0,0,0,0,1022509,0.0,12,consolidado_publicacao
+Brasil,2025,Atendimento pré-hospitalar,0,0,0,0,1054625,0.0,12,consolidado_publicacao
+Brasil,2026,Atendimento pré-hospitalar,0,0,0,0,652013,0.0,8,parcial
+Brasil,2019,Busca e salvamento,0,0,0,0,412071,0.0,12,consolidado_publicacao
+Brasil,2020,Busca e salvamento,0,0,0,0,416466,0.0,12,consolidado_publicacao
+Brasil,2021,Busca e salvamento,0,0,0,0,454568,0.0,12,consolidado_publicacao
+Brasil,2022,Busca e salvamento,0,0,0,0,483682,0.0,12,consolidado_publicacao
+Brasil,2023,Busca e salvamento,0,0,0,0,499397,0.0,12,consolidado_publicacao
+Brasil,2024,Busca e salvamento,0,0,0,0,428968,0.0,12,consolidado_publicacao
+Brasil,2025,Busca e salvamento,0,0,0,0,523603,0.0,12,consolidado_publicacao
+Brasil,2026,Busca e salvamento,0,0,0,0,356430,0.0,8,parcial
+Brasil,2019,Combate a incêndios,0,0,0,0,284246,0.0,12,consolidado_publicacao
+Brasil,2020,Combate a incêndios,0,0,0,0,284502,0.0,12,consolidado_publicacao
+Brasil,2021,Combate a incêndios,0,0,0,0,288033,0.0,12,consolidado_publicacao
+Brasil,2022,Combate a incêndios,0,0,0,0,264770,0.0,12,consolidado_publicacao
+Brasil,2023,Combate a incêndios,0,0,0,0,273244,0.0,12,consolidado_publicacao
+Brasil,2024,Combate a incêndios,0,0,0,0,351611,0.0,12,consolidado_publicacao
+Brasil,2025,Combate a incêndios,0,0,0,0,348520,0.0,12,consolidado_publicacao
+Brasil,2026,Combate a incêndios,0,0,0,0,176738,0.0,8,parcial
+Brasil,2019,Emissão de Alvarás de licença,0,0,0,0,1201898,0.0,12,consolidado_publicacao
+Brasil,2020,Emissão de Alvarás de licença,0,0,0,0,1062612,0.0,12,consolidado_publicacao
+Brasil,2021,Emissão de Alvarás de licença,0,0,0,0,1239150,0.0,12,consolidado_publicacao
+Brasil,2022,Emissão de Alvarás de licença,0,0,0,0,1292323,0.0,12,consolidado_publicacao
+Brasil,2023,Emissão de Alvarás de licença,0,0,0,0,1341915,0.0,12,consolidado_publicacao
+Brasil,2024,Emissão de Alvarás de licença,0,0,0,0,1475819,0.0,12,consolidado_publicacao
+Brasil,2025,Emissão de Alvarás de licença,0,0,0,0,1770049,0.0,12,consolidado_publicacao
+Brasil,2026,Emissão de Alvarás de licença,0,0,0,0,1103237,0.0,8,parcial
+Brasil,2019,Estupro,25175,2686,497,28358,0,0.0,12,consolidado_publicacao
+Brasil,2020,Estupro,19531,1829,457,21817,0,0.0,12,consolidado_publicacao
+Brasil,2021,Estupro,19494,1714,509,21717,0,0.0,12,consolidado_publicacao
+Brasil,2022,Estupro,21087,1757,383,23227,0,0.0,12,consolidado_publicacao
+Brasil,2023,Estupro,22088,1747,227,24062,0,0.0,12,consolidado_publicacao
+Brasil,2024,Estupro,22736,2106,326,25168,0,0.0,12,consolidado_publicacao
+Brasil,2025,Estupro,18251,1492,166,19909,0,0.0,12,consolidado_publicacao
+Brasil,2026,Estupro,12362,1023,136,13521,0,0.0,8,parcial
+Brasil,2019,Estupro de vulnerável,41548,7432,272,49252,0,0.0,12,consolidado_publicacao
+Brasil,2020,Estupro de vulnerável,38567,6510,239,45316,0,0.0,12,consolidado_publicacao
+Brasil,2021,Estupro de vulnerável,44028,6629,364,51021,0,0.0,12,consolidado_publicacao
+Brasil,2022,Estupro de vulnerável,49781,7084,445,57310,0,0.0,12,consolidado_publicacao
+Brasil,2023,Estupro de vulnerável,54660,8530,645,63835,0,0.0,12,consolidado_publicacao
+Brasil,2024,Estupro de vulnerável,54514,8798,706,64018,0,0.0,12,consolidado_publicacao
+Brasil,2025,Estupro de vulnerável,53732,9043,915,63690,0,0.0,12,consolidado_publicacao
+Brasil,2026,Estupro de vulnerável,34906,6210,641,41757,0,0.0,8,parcial
+Brasil,2019,Feminicídio,1322,7,2,1331,0,0.0,12,consolidado_publicacao
+Brasil,2020,Feminicídio,1335,7,4,1346,0,0.0,12,consolidado_publicacao
+Brasil,2021,Feminicídio,1358,5,3,1366,0,0.0,12,consolidado_publicacao
+Brasil,2022,Feminicídio,1446,9,1,1456,0,0.0,12,consolidado_publicacao
+Brasil,2023,Feminicídio,1468,9,1,1478,0,0.0,12,consolidado_publicacao
+Brasil,2024,Feminicídio,1494,3,4,1501,0,0.0,12,consolidado_publicacao
+Brasil,2025,Feminicídio,1566,8,4,1578,0,0.0,12,consolidado_publicacao
+Brasil,2026,Feminicídio,969,11,3,983,0,0.0,8,parcial
+Brasil,2019,Furto de veículo,0,0,0,0,229956,0.0,12,consolidado_publicacao
+Brasil,2020,Furto de veículo,0,0,0,0,177982,0.0,12,consolidado_publicacao
+Brasil,2021,Furto de veículo,0,0,0,0,192858,0.0,12,consolidado_publicacao
+Brasil,2022,Furto de veículo,0,0,0,0,229487,0.0,12,consolidado_publicacao
+Brasil,2023,Furto de veículo,0,0,0,0,221250,0.0,12,consolidado_publicacao
+Brasil,2024,Furto de veículo,0,0,0,0,215808,0.0,12,consolidado_publicacao
+Brasil,2025,Furto de veículo,0,0,0,0,201926,0.0,12,consolidado_publicacao
+Brasil,2026,Furto de veículo,0,0,0,0,120891,0.0,8,parcial
+Brasil,2019,Homicídio doloso,2611,36042,575,39228,0,0.0,12,consolidado_publicacao
+Brasil,2020,Homicídio doloso,2666,38383,546,41595,0,0.0,12,consolidado_publicacao
+Brasil,2021,Homicídio doloso,2687,36037,562,39286,0,0.0,12,consolidado_publicacao
+Brasil,2022,Homicídio doloso,2515,35657,404,38576,0,0.0,12,consolidado_publicacao
+Brasil,2023,Homicídio doloso,2563,34351,415,37329,0,0.0,12,consolidado_publicacao
+Brasil,2024,Homicídio doloso,2313,32418,402,35133,0,0.0,12,consolidado_publicacao
+Brasil,2025,Homicídio doloso,2084,29056,378,31518,0,0.0,12,consolidado_publicacao
+Brasil,2026,Homicídio doloso,1214,16950,285,18449,0,0.0,8,parcial
+Brasil,2019,Lesão corporal seguida de morte,51,692,9,752,0,0.0,12,consolidado_publicacao
+Brasil,2020,Lesão corporal seguida de morte,68,611,6,685,0,0.0,12,consolidado_publicacao
+Brasil,2021,Lesão corporal seguida de morte,41,500,0,541,0,0.0,12,consolidado_publicacao
+Brasil,2022,Lesão corporal seguida de morte,52,567,1,620,0,0.0,12,consolidado_publicacao
+Brasil,2023,Lesão corporal seguida de morte,50,574,1,625,0,0.0,12,consolidado_publicacao
+Brasil,2024,Lesão corporal seguida de morte,68,698,4,770,0,0.0,12,consolidado_publicacao
+Brasil,2025,Lesão corporal seguida de morte,54,588,2,644,0,0.0,12,consolidado_publicacao
+Brasil,2026,Lesão corporal seguida de morte,18,349,1,368,0,0.0,8,parcial
+Brasil,2019,Mandado de prisão cumprido,0,0,0,0,220735,0.0,12,consolidado_publicacao
+Brasil,2020,Mandado de prisão cumprido,0,0,0,0,195693,0.0,12,consolidado_publicacao
+Brasil,2021,Mandado de prisão cumprido,0,0,0,0,210183,0.0,12,consolidado_publicacao
+Brasil,2022,Mandado de prisão cumprido,0,0,0,0,236534,0.0,12,consolidado_publicacao
+Brasil,2023,Mandado de prisão cumprido,0,0,0,0,256730,0.0,12,consolidado_publicacao
+Brasil,2024,Mandado de prisão cumprido,0,0,0,0,278192,0.0,12,consolidado_publicacao
+Brasil,2025,Mandado de prisão cumprido,0,0,0,0,294560,0.0,12,consolidado_publicacao
+Brasil,2026,Mandado de prisão cumprido,0,0,0,0,204750,0.0,8,parcial
+Brasil,2019,Morte de Agente do Estado,9,188,0,197,0,0.0,12,consolidado_publicacao
+Brasil,2020,Morte de Agente do Estado,8,206,0,214,0,0.0,12,consolidado_publicacao
+Brasil,2021,Morte de Agente do Estado,3,198,0,201,0,0.0,12,consolidado_publicacao
+Brasil,2022,Morte de Agente do Estado,4,183,0,187,0,0.0,12,consolidado_publicacao
+Brasil,2023,Morte de Agente do Estado,7,174,3,184,0,0.0,12,consolidado_publicacao
+Brasil,2024,Morte de Agente do Estado,8,191,1,200,0,0.0,12,consolidado_publicacao
+Brasil,2025,Morte de Agente do Estado,7,185,0,192,0,0.0,12,consolidado_publicacao
+Brasil,2026,Morte de Agente do Estado,4,65,0,69,0,0.0,8,parcial
+Brasil,2019,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4586,18217,538,23341,0,0.0,12,consolidado_publicacao
+Brasil,2020,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4102,18144,458,22704,0,0.0,12,consolidado_publicacao
+Brasil,2021,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4359,18420,448,23227,0,0.0,12,consolidado_publicacao
+Brasil,2022,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4654,19113,491,24258,0,0.0,12,consolidado_publicacao
+Brasil,2023,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4467,19042,272,23781,0,0.0,12,consolidado_publicacao
+Brasil,2024,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),5085,20704,423,26212,0,0.0,12,consolidado_publicacao
+Brasil,2025,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),4817,19955,302,25074,0,0.0,12,consolidado_publicacao
+Brasil,2026,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),3257,13216,220,16693,0,0.0,8,parcial
+Brasil,2019,Morte por intervenção de Agente do Estado,47,5404,176,5627,0,0.0,12,consolidado_publicacao
+Brasil,2020,Morte por intervenção de Agente do Estado,52,6240,225,6517,0,0.0,12,consolidado_publicacao
+Brasil,2021,Morte por intervenção de Agente do Estado,51,6228,269,6548,0,0.0,12,consolidado_publicacao
+Brasil,2022,Morte por intervenção de Agente do Estado,49,6218,192,6459,0,0.0,12,consolidado_publicacao
+Brasil,2023,Morte por intervenção de Agente do Estado,47,6148,202,6397,0,0.0,12,consolidado_publicacao
+Brasil,2024,Morte por intervenção de Agente do Estado,45,6070,121,6236,0,0.0,12,consolidado_publicacao
+Brasil,2025,Morte por intervenção de Agente do Estado,44,6422,123,6589,0,0.0,12,consolidado_publicacao
+Brasil,2026,Morte por intervenção de Agente do Estado,41,4220,70,4331,0,0.0,8,parcial
+Brasil,2019,Mortes a esclarecer (sem indício de crime),2952,9404,554,12910,0,0.0,12,consolidado_publicacao
+Brasil,2020,Mortes a esclarecer (sem indício de crime),2202,8697,437,11336,0,0.0,12,consolidado_publicacao
+Brasil,2021,Mortes a esclarecer (sem indício de crime),2132,7571,483,10186,0,0.0,12,consolidado_publicacao
+Brasil,2022,Mortes a esclarecer (sem indício de crime),2045,6451,508,9004,0,0.0,12,consolidado_publicacao
+Brasil,2023,Mortes a esclarecer (sem indício de crime),2795,9751,560,13106,0,0.0,12,consolidado_publicacao
+Brasil,2024,Mortes a esclarecer (sem indício de crime),3255,10217,515,13987,0,0.0,12,consolidado_publicacao
+Brasil,2025,Mortes a esclarecer (sem indício de crime),3213,9695,629,13537,0,0.0,12,consolidado_publicacao
+Brasil,2026,Mortes a esclarecer (sem indício de crime),2537,7757,447,10741,0,0.0,8,parcial
+Brasil,2019,Pessoa Desaparecida,32415,48462,429,81306,0,0.0,12,consolidado_publicacao
+Brasil,2020,Pessoa Desaparecida,23532,39237,382,63151,0,0.0,12,consolidado_publicacao
+Brasil,2021,Pessoa Desaparecida,23740,43088,534,67362,0,0.0,12,consolidado_publicacao
+Brasil,2022,Pessoa Desaparecida,26311,49989,598,76898,0,0.0,12,consolidado_publicacao
+Brasil,2023,Pessoa Desaparecida,26853,50564,751,78168,0,0.0,12,consolidado_publicacao
+Brasil,2024,Pessoa Desaparecida,28851,52069,660,81580,0,0.0,12,consolidado_publicacao
+Brasil,2025,Pessoa Desaparecida,30081,54334,651,85066,0,0.0,12,consolidado_publicacao
+Brasil,2026,Pessoa Desaparecida,20778,38041,482,59301,0,0.0,8,parcial
+Brasil,2019,Pessoa Localizada,20002,27710,2115,49827,0,0.0,12,consolidado_publicacao
+Brasil,2020,Pessoa Localizada,14232,21938,1391,37561,0,0.0,12,consolidado_publicacao
+Brasil,2021,Pessoa Localizada,14314,23140,1685,39139,0,0.0,12,consolidado_publicacao
+Brasil,2022,Pessoa Localizada,16468,26917,2009,45394,0,0.0,12,consolidado_publicacao
+Brasil,2023,Pessoa Localizada,18402,31427,2370,52199,0,0.0,12,consolidado_publicacao
+Brasil,2024,Pessoa Localizada,20148,33093,2723,55964,0,0.0,12,consolidado_publicacao
+Brasil,2025,Pessoa Localizada,20745,34143,2784,57672,0,0.0,12,consolidado_publicacao
+Brasil,2026,Pessoa Localizada,14077,23093,1883,39053,0,0.0,8,parcial
+Brasil,2019,Realização de vistorias,0,0,0,0,1192754,0.0,12,consolidado_publicacao
+Brasil,2020,Realização de vistorias,0,0,0,0,819746,0.0,12,consolidado_publicacao
+Brasil,2021,Realização de vistorias,0,0,0,0,865146,0.0,12,consolidado_publicacao
+Brasil,2022,Realização de vistorias,0,0,0,0,758239,0.0,12,consolidado_publicacao
+Brasil,2023,Realização de vistorias,0,0,0,0,717261,0.0,12,consolidado_publicacao
+Brasil,2024,Realização de vistorias,0,0,0,0,724303,0.0,12,consolidado_publicacao
+Brasil,2025,Realização de vistorias,0,0,0,0,760400,0.0,12,consolidado_publicacao
+Brasil,2026,Realização de vistorias,0,0,0,0,428586,0.0,8,parcial
+Brasil,2019,Roubo a instituição financeira,0,0,0,0,398,0.0,12,consolidado_publicacao
+Brasil,2020,Roubo a instituição financeira,0,0,0,0,271,0.0,12,consolidado_publicacao
+Brasil,2021,Roubo a instituição financeira,0,0,0,0,296,0.0,12,consolidado_publicacao
+Brasil,2022,Roubo a instituição financeira,0,0,0,0,220,0.0,12,consolidado_publicacao
+Brasil,2023,Roubo a instituição financeira,0,0,0,0,107,0.0,12,consolidado_publicacao
+Brasil,2024,Roubo a instituição financeira,0,0,0,0,104,0.0,12,consolidado_publicacao
+Brasil,2025,Roubo a instituição financeira,0,0,0,0,60,0.0,12,consolidado_publicacao
+Brasil,2026,Roubo a instituição financeira,0,0,0,0,19,0.0,8,parcial
+Brasil,2019,Roubo de carga,0,0,0,0,17683,0.0,12,consolidado_publicacao
+Brasil,2020,Roubo de carga,0,0,0,0,13283,0.0,12,consolidado_publicacao
+Brasil,2021,Roubo de carga,0,0,0,0,13563,0.0,12,consolidado_publicacao
+Brasil,2022,Roubo de carga,0,0,0,0,13126,0.0,12,consolidado_publicacao
+Brasil,2023,Roubo de carga,0,0,0,0,11807,0.0,12,consolidado_publicacao
+Brasil,2024,Roubo de carga,0,0,0,0,10344,0.0,12,consolidado_publicacao
+Brasil,2025,Roubo de carga,0,0,0,0,8565,0.0,12,consolidado_publicacao
+Brasil,2026,Roubo de carga,0,0,0,0,4822,0.0,8,parcial
+Brasil,2019,Roubo de veículo,0,0,0,0,189032,0.0,12,consolidado_publicacao
+Brasil,2020,Roubo de veículo,0,0,0,0,144993,0.0,12,consolidado_publicacao
+Brasil,2021,Roubo de veículo,0,0,0,0,141904,0.0,12,consolidado_publicacao
+Brasil,2022,Roubo de veículo,0,0,0,0,148102,0.0,12,consolidado_publicacao
+Brasil,2023,Roubo de veículo,0,0,0,0,135041,0.0,12,consolidado_publicacao
+Brasil,2024,Roubo de veículo,0,0,0,0,126274,0.0,12,consolidado_publicacao
+Brasil,2025,Roubo de veículo,0,0,0,0,104534,0.0,12,consolidado_publicacao
+Brasil,2026,Roubo de veículo,0,0,0,0,54590,0.0,8,parcial
+Brasil,2019,Roubo seguido de morte (latrocínio),192,1403,8,1603,0,0.0,12,consolidado_publicacao
+Brasil,2020,Roubo seguido de morte (latrocínio),133,1321,7,1461,0,0.0,12,consolidado_publicacao
+Brasil,2021,Roubo seguido de morte (latrocínio),148,1289,21,1458,0,0.0,12,consolidado_publicacao
+Brasil,2022,Roubo seguido de morte (latrocínio),117,1121,5,1243,0,0.0,12,consolidado_publicacao
+Brasil,2023,Roubo seguido de morte (latrocínio),90,911,3,1004,0,0.0,12,consolidado_publicacao
+Brasil,2024,Roubo seguido de morte (latrocínio),100,862,5,967,0,0.0,12,consolidado_publicacao
+Brasil,2025,Roubo seguido de morte (latrocínio),83,714,6,803,0,0.0,12,consolidado_publicacao
+Brasil,2026,Roubo seguido de morte (latrocínio),42,351,0,393,0,0.0,8,parcial
+Brasil,2019,Suicídio,2699,10105,49,12853,0,0.0,12,consolidado_publicacao
+Brasil,2020,Suicídio,2871,10248,45,13164,0,0.0,12,consolidado_publicacao
+Brasil,2021,Suicídio,3174,11417,64,14655,0,0.0,12,consolidado_publicacao
+Brasil,2022,Suicídio,3418,12519,76,16013,0,0.0,12,consolidado_publicacao
+Brasil,2023,Suicídio,3565,12830,76,16471,0,0.0,12,consolidado_publicacao
+Brasil,2024,Suicídio,3514,12819,79,16412,0,0.0,12,consolidado_publicacao
+Brasil,2025,Suicídio,3615,12917,60,16592,0,0.0,12,consolidado_publicacao
+Brasil,2026,Suicídio,2385,8459,67,10911,0,0.0,8,parcial
+Brasil,2019,Suicídio de Agente do Estado,10,88,7,105,0,0.0,12,consolidado_publicacao
+Brasil,2020,Suicídio de Agente do Estado,8,102,5,115,0,0.0,12,consolidado_publicacao
+Brasil,2021,Suicídio de Agente do Estado,11,116,5,132,0,0.0,12,consolidado_publicacao
+Brasil,2022,Suicídio de Agente do Estado,11,118,4,133,0,0.0,12,consolidado_publicacao
+Brasil,2023,Suicídio de Agente do Estado,11,151,4,166,0,0.0,12,consolidado_publicacao
+Brasil,2024,Suicídio de Agente do Estado,12,138,5,155,0,0.0,12,consolidado_publicacao
+Brasil,2025,Suicídio de Agente do Estado,7,121,7,135,0,0.0,12,consolidado_publicacao
+Brasil,2026,Suicídio de Agente do Estado,4,68,2,74,0,0.0,8,parcial
+Brasil,2019,Tentativa de feminicídio,2328,5,7,2340,0,0.0,12,consolidado_publicacao
+Brasil,2020,Tentativa de feminicídio,2193,12,4,2209,0,0.0,12,consolidado_publicacao
+Brasil,2021,Tentativa de feminicídio,2246,11,5,2262,0,0.0,12,consolidado_publicacao
+Brasil,2022,Tentativa de feminicídio,2866,20,1,2887,0,0.0,12,consolidado_publicacao
+Brasil,2023,Tentativa de feminicídio,3009,27,3,3039,0,0.0,12,consolidado_publicacao
+Brasil,2024,Tentativa de feminicídio,3803,54,5,3862,0,0.0,12,consolidado_publicacao
+Brasil,2025,Tentativa de feminicídio,4140,45,3,4188,0,0.0,12,consolidado_publicacao
+Brasil,2026,Tentativa de feminicídio,2891,32,15,2938,0,0.0,8,parcial
+Brasil,2019,Tentativa de homicídio,6523,33424,2407,42354,0,0.0,12,consolidado_publicacao
+Brasil,2020,Tentativa de homicídio,5430,30898,1968,38296,0,0.0,12,consolidado_publicacao
+Brasil,2021,Tentativa de homicídio,5151,28717,2136,36004,0,0.0,12,consolidado_publicacao
+Brasil,2022,Tentativa de homicídio,5762,30058,1044,36864,0,0.0,12,consolidado_publicacao
+Brasil,2023,Tentativa de homicídio,5674,28557,713,34944,0,0.0,12,consolidado_publicacao
+Brasil,2024,Tentativa de homicídio,5704,30477,792,36973,0,0.0,12,consolidado_publicacao
+Brasil,2025,Tentativa de homicídio,4778,28320,783,33881,0,0.0,12,consolidado_publicacao
+Brasil,2026,Tentativa de homicídio,2942,18743,521,22206,0,0.0,8,parcial
+Brasil,2019,Tráfico de drogas,0,0,0,0,195023,0.0,12,consolidado_publicacao
+Brasil,2020,Tráfico de drogas,0,0,0,0,195977,0.0,12,consolidado_publicacao
+Brasil,2021,Tráfico de drogas,0,0,0,0,192425,0.0,12,consolidado_publicacao
+Brasil,2022,Tráfico de drogas,0,0,0,0,166708,0.0,12,consolidado_publicacao
+Brasil,2023,Tráfico de drogas,0,0,0,0,179881,0.0,12,consolidado_publicacao
+Brasil,2024,Tráfico de drogas,0,0,0,0,184325,0.0,12,consolidado_publicacao
+Brasil,2025,Tráfico de drogas,0,0,0,0,215946,0.0,12,consolidado_publicacao
+Brasil,2026,Tráfico de drogas,0,0,0,0,154072,0.0,8,parcial
+Santa Catarina,2019,Apreensão de Cocaína,0,0,0,0,0,671.85,12,consolidado_publicacao
+Santa Catarina,2020,Apreensão de Cocaína,0,0,0,0,0,1320.98,12,consolidado_publicacao
+Santa Catarina,2021,Apreensão de Cocaína,0,0,0,0,0,1126.09,12,consolidado_publicacao
+Santa Catarina,2022,Apreensão de Cocaína,0,0,0,0,0,1793.57,12,consolidado_publicacao
+Santa Catarina,2023,Apreensão de Cocaína,0,0,0,0,0,7136.68,12,consolidado_publicacao
+Santa Catarina,2024,Apreensão de Cocaína,0,0,0,0,0,3394.51,12,consolidado_publicacao
+Santa Catarina,2025,Apreensão de Cocaína,0,0,0,0,0,2138.17,12,consolidado_publicacao
+Santa Catarina,2026,Apreensão de Cocaína,0,0,0,0,0,4689.62,8,parcial
+Santa Catarina,2019,Apreensão de Maconha,0,0,0,0,0,28100.17,12,consolidado_publicacao
+Santa Catarina,2020,Apreensão de Maconha,0,0,0,0,0,35555.09,12,consolidado_publicacao
+Santa Catarina,2021,Apreensão de Maconha,0,0,0,0,0,22617.68,12,consolidado_publicacao
+Santa Catarina,2022,Apreensão de Maconha,0,0,0,0,0,43290.76,12,consolidado_publicacao
+Santa Catarina,2023,Apreensão de Maconha,0,0,0,0,0,51243.6,12,consolidado_publicacao
+Santa Catarina,2024,Apreensão de Maconha,0,0,0,0,0,39934.587,12,consolidado_publicacao
+Santa Catarina,2025,Apreensão de Maconha,0,0,0,0,0,84082.11,12,consolidado_publicacao
+Santa Catarina,2026,Apreensão de Maconha,0,0,0,0,0,51578.489,8,parcial
+Santa Catarina,2019,Arma de Fogo Apreendida,0,0,0,0,2852,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Arma de Fogo Apreendida,0,0,0,0,2445,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Arma de Fogo Apreendida,0,0,0,0,2498,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Arma de Fogo Apreendida,0,0,0,0,2248,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Arma de Fogo Apreendida,0,0,0,0,2480,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Arma de Fogo Apreendida,0,0,0,0,2585,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Arma de Fogo Apreendida,0,0,0,0,2214,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Arma de Fogo Apreendida,0,0,0,0,1505,0.0,8,parcial
+Santa Catarina,2019,Atendimento pré-hospitalar,0,0,0,0,129627,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Atendimento pré-hospitalar,0,0,0,0,106884,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Atendimento pré-hospitalar,0,0,0,0,130165,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Atendimento pré-hospitalar,0,0,0,0,143843,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Atendimento pré-hospitalar,0,0,0,0,145922,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Atendimento pré-hospitalar,0,0,0,0,161399,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Atendimento pré-hospitalar,0,0,0,0,165514,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Atendimento pré-hospitalar,0,0,0,0,114743,0.0,8,parcial
+Santa Catarina,2019,Busca e salvamento,0,0,0,0,12082,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Busca e salvamento,0,0,0,0,11926,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Busca e salvamento,0,0,0,0,12985,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Busca e salvamento,0,0,0,0,13017,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Busca e salvamento,0,0,0,0,13627,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Busca e salvamento,0,0,0,0,13599,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Busca e salvamento,0,0,0,0,15090,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Busca e salvamento,0,0,0,0,10267,0.0,8,parcial
+Santa Catarina,2019,Combate a incêndios,0,0,0,0,10270,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Combate a incêndios,0,0,0,0,12157,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Combate a incêndios,0,0,0,0,10192,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Combate a incêndios,0,0,0,0,8894,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Combate a incêndios,0,0,0,0,8047,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Combate a incêndios,0,0,0,0,8914,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Combate a incêndios,0,0,0,0,10036,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Combate a incêndios,0,0,0,0,6448,0.0,8,parcial
+Santa Catarina,2019,Emissão de Alvarás de licença,0,0,0,0,255626,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Emissão de Alvarás de licença,0,0,0,0,254579,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Emissão de Alvarás de licença,0,0,0,0,292757,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Emissão de Alvarás de licença,0,0,0,0,268966,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Emissão de Alvarás de licença,0,0,0,0,359853,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Emissão de Alvarás de licença,0,0,0,0,390753,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Emissão de Alvarás de licença,0,0,0,0,431314,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Emissão de Alvarás de licença,0,0,0,0,287672,0.0,8,parcial
+Santa Catarina,2019,Estupro,3783,592,6,4381,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Estupro,1059,99,0,1158,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Estupro,1402,133,0,1535,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Estupro,1436,138,0,1574,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Estupro,1402,140,2,1544,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Estupro,1411,173,3,1587,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Estupro,1066,111,3,1180,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Estupro,712,81,1,794,0,0.0,8,parcial
+Santa Catarina,2019,Estupro de vulnerável,2639,436,3,3078,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Estupro de vulnerável,2332,380,0,2712,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Estupro de vulnerável,2489,369,0,2858,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Estupro de vulnerável,2860,440,3,3303,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Estupro de vulnerável,3080,504,4,3588,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Estupro de vulnerável,2847,517,2,3366,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Estupro de vulnerável,2161,440,4,2605,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Estupro de vulnerável,1496,314,5,1815,0,0.0,8,parcial
+Santa Catarina,2019,Feminicídio,58,0,0,58,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Feminicídio,57,0,0,57,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Feminicídio,55,0,0,55,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Feminicídio,57,0,0,57,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Feminicídio,57,0,0,57,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Feminicídio,51,0,0,51,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Feminicídio,52,0,0,52,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Feminicídio,38,0,0,38,0,0.0,8,parcial
+Santa Catarina,2019,Furto de veículo,0,0,0,0,8899,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Furto de veículo,0,0,0,0,7640,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Furto de veículo,0,0,0,0,7561,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Furto de veículo,0,0,0,0,8106,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Furto de veículo,0,0,0,0,7112,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Furto de veículo,0,0,0,0,6467,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Furto de veículo,0,0,0,0,5996,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Furto de veículo,0,0,0,0,4390,0.0,8,parcial
+Santa Catarina,2019,Homicídio doloso,75,566,1,642,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Homicídio doloso,46,580,0,626,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Homicídio doloso,51,530,0,581,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Homicídio doloso,43,492,0,535,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Homicídio doloso,49,463,1,513,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Homicídio doloso,34,473,5,512,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Homicídio doloso,31,390,8,429,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Homicídio doloso,18,244,2,264,0,0.0,8,parcial
+Santa Catarina,2019,Lesão corporal seguida de morte,0,14,0,14,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Lesão corporal seguida de morte,2,14,0,16,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Lesão corporal seguida de morte,0,15,0,15,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Lesão corporal seguida de morte,1,18,0,19,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Lesão corporal seguida de morte,0,14,0,14,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Lesão corporal seguida de morte,0,28,0,28,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Lesão corporal seguida de morte,1,22,0,23,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Lesão corporal seguida de morte,0,15,0,15,0,0.0,8,parcial
+Santa Catarina,2019,Mandado de prisão cumprido,0,0,0,0,9834,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Mandado de prisão cumprido,0,0,0,0,8451,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Mandado de prisão cumprido,0,0,0,0,8683,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Mandado de prisão cumprido,0,0,0,0,11063,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Mandado de prisão cumprido,0,0,0,0,12994,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Mandado de prisão cumprido,0,0,0,0,14347,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Mandado de prisão cumprido,0,0,0,0,16335,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Mandado de prisão cumprido,0,0,0,0,11884,0.0,8,parcial
+Santa Catarina,2019,Morte de Agente do Estado,0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Morte de Agente do Estado,0,1,0,1,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Morte de Agente do Estado,0,5,0,5,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Morte de Agente do Estado,0,3,0,3,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Morte de Agente do Estado,0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Morte de Agente do Estado,0,1,0,1,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Morte de Agente do Estado,0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Morte de Agente do Estado,0,0,0,0,0,0.0,8,parcial
+Santa Catarina,2019,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),120,404,0,524,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),92,320,0,412,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),110,310,2,422,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),101,296,0,397,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),94,332,2,428,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),139,450,1,590,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),123,360,0,483,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Morte no trânsito ou em decorrência dele (exceto homicídio doloso),73,206,0,279,0,0.0,8,parcial
+Santa Catarina,2019,Morte por intervenção de Agente do Estado,0,78,0,78,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Morte por intervenção de Agente do Estado,0,86,0,86,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Morte por intervenção de Agente do Estado,1,69,0,70,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Morte por intervenção de Agente do Estado,0,44,0,44,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Morte por intervenção de Agente do Estado,0,80,0,80,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Morte por intervenção de Agente do Estado,1,77,0,78,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Morte por intervenção de Agente do Estado,3,97,0,100,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Morte por intervenção de Agente do Estado,0,93,0,93,0,0.0,8,parcial
+Santa Catarina,2019,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Mortes a esclarecer (sem indício de crime),0,0,0,0,0,0.0,8,parcial
+Santa Catarina,2019,Pessoa Desaparecida,1983,2612,0,4595,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Pessoa Desaparecida,1348,2061,1,3410,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Pessoa Desaparecida,1382,2363,5,3750,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Pessoa Desaparecida,1466,2539,5,4010,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Pessoa Desaparecida,1461,2690,4,4155,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Pessoa Desaparecida,1625,2588,11,4224,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Pessoa Desaparecida,1619,2695,3,4317,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Pessoa Desaparecida,1171,1808,6,2985,0,0.0,8,parcial
+Santa Catarina,2019,Pessoa Localizada,2070,2732,0,4802,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Pessoa Localizada,1623,2226,0,3849,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Pessoa Localizada,1588,2502,1,4091,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Pessoa Localizada,1563,2729,2,4294,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Pessoa Localizada,1444,2675,1,4120,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Pessoa Localizada,1674,2716,1,4391,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Pessoa Localizada,1764,2905,3,4672,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Pessoa Localizada,1344,2108,2,3454,0,0.0,8,parcial
+Santa Catarina,2019,Realização de vistorias,0,0,0,0,383951,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Realização de vistorias,0,0,0,0,291202,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Realização de vistorias,0,0,0,0,235638,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Realização de vistorias,0,0,0,0,115068,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Realização de vistorias,0,0,0,0,76488,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Realização de vistorias,0,0,0,0,63763,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Realização de vistorias,0,0,0,0,71758,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Realização de vistorias,0,0,0,0,37508,0.0,8,parcial
+Santa Catarina,2019,Roubo a instituição financeira,0,0,0,0,16,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Roubo a instituição financeira,0,0,0,0,8,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Roubo a instituição financeira,0,0,0,0,15,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Roubo a instituição financeira,0,0,0,0,8,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Roubo a instituição financeira,0,0,0,0,5,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Roubo a instituição financeira,0,0,0,0,4,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Roubo a instituição financeira,0,0,0,0,1,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Roubo a instituição financeira,0,0,0,0,1,0.0,8,parcial
+Santa Catarina,2019,Roubo de carga,0,0,0,0,38,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Roubo de carga,0,0,0,0,15,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Roubo de carga,0,0,0,0,17,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Roubo de carga,0,0,0,0,23,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Roubo de carga,0,0,0,0,7,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Roubo de carga,0,0,0,0,23,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Roubo de carga,0,0,0,0,13,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Roubo de carga,0,0,0,0,8,0.0,8,parcial
+Santa Catarina,2019,Roubo de veículo,0,0,0,0,1704,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Roubo de veículo,0,0,0,0,1348,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Roubo de veículo,0,0,0,0,1408,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Roubo de veículo,0,0,0,0,1279,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Roubo de veículo,0,0,0,0,1071,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Roubo de veículo,0,0,0,0,779,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Roubo de veículo,0,0,0,0,656,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Roubo de veículo,0,0,0,0,396,0.0,8,parcial
+Santa Catarina,2019,Roubo seguido de morte (latrocínio),5,23,0,28,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Roubo seguido de morte (latrocínio),2,18,0,20,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Roubo seguido de morte (latrocínio),1,22,0,23,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Roubo seguido de morte (latrocínio),3,22,0,25,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Roubo seguido de morte (latrocínio),1,10,0,11,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Roubo seguido de morte (latrocínio),5,12,0,17,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Roubo seguido de morte (latrocínio),3,15,0,18,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Roubo seguido de morte (latrocínio),1,12,0,13,0,0.0,8,parcial
+Santa Catarina,2019,Suicídio,202,807,0,1009,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Suicídio,168,651,0,819,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Suicídio,192,783,0,975,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Suicídio,230,796,6,1032,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Suicídio,232,733,7,972,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Suicídio,212,761,8,981,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Suicídio,195,770,3,968,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Suicídio,111,446,0,557,0,0.0,8,parcial
+Santa Catarina,2019,Suicídio de Agente do Estado,1,2,0,3,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Suicídio de Agente do Estado,0,6,0,6,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Suicídio de Agente do Estado,0,7,0,7,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Suicídio de Agente do Estado,1,5,0,6,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Suicídio de Agente do Estado,0,5,0,5,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Suicídio de Agente do Estado,0,4,0,4,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Suicídio de Agente do Estado,0,3,0,3,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Suicídio de Agente do Estado,0,2,0,2,0,0.0,8,parcial
+Santa Catarina,2019,Tentativa de feminicídio,257,0,0,257,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Tentativa de feminicídio,147,0,0,147,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Tentativa de feminicídio,153,0,0,153,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Tentativa de feminicídio,176,0,0,176,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Tentativa de feminicídio,232,0,0,232,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Tentativa de feminicídio,211,0,0,211,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Tentativa de feminicídio,222,3,0,225,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Tentativa de feminicídio,154,0,0,154,0,0.0,8,parcial
+Santa Catarina,2019,Tentativa de homicídio,181,1212,0,1393,0,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Tentativa de homicídio,218,1400,0,1618,0,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Tentativa de homicídio,206,1346,0,1552,0,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Tentativa de homicídio,198,1431,0,1629,0,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Tentativa de homicídio,214,1461,3,1678,0,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Tentativa de homicídio,219,1440,2,1661,0,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Tentativa de homicídio,230,1327,3,1560,0,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Tentativa de homicídio,116,805,0,921,0,0.0,8,parcial
+Santa Catarina,2019,Tráfico de drogas,0,0,0,0,7856,0.0,12,consolidado_publicacao
+Santa Catarina,2020,Tráfico de drogas,0,0,0,0,6824,0.0,12,consolidado_publicacao
+Santa Catarina,2021,Tráfico de drogas,0,0,0,0,6033,0.0,12,consolidado_publicacao
+Santa Catarina,2022,Tráfico de drogas,0,0,0,0,5838,0.0,12,consolidado_publicacao
+Santa Catarina,2023,Tráfico de drogas,0,0,0,0,5682,0.0,12,consolidado_publicacao
+Santa Catarina,2024,Tráfico de drogas,0,0,0,0,5804,0.0,12,consolidado_publicacao
+Santa Catarina,2025,Tráfico de drogas,0,0,0,0,7258,0.0,12,consolidado_publicacao
+Santa Catarina,2026,Tráfico de drogas,0,0,0,0,5407,0.0,8,parcial

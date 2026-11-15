@@ -1,0 +1,20 @@
+{
+  "gerado_em": "2026-10-15",
+  "periodo_sim": [
+    2019,
+    2024
+  ],
+  "denominador": "Censo 2022, mulheres por cor ou raça",
+  "controles": {
+    "sim_obitos_brasil_2019_2024": 22691,
+    "sim_obitos_sc_2019_2024": 580,
+    "sinan_notificacoes_brasil_2024": 289220,
+    "sinan_notificacoes_sc_2024": 9647
+  },
+  "regras": [
+    "Negra corresponde a preta mais parda.",
+    "A parcela sem cor ou raça informada permanece visível.",
+    "As taxas municipais do SIM são médias anuais do período 2019 a 2024.",
+    "O SINAN mede notificações e não pessoas únicas."
+  ]
+}

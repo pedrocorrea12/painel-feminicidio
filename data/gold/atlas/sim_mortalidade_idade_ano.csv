@@ -1,0 +1,865 @@
+﻿ano,territorio,grupo_causa,grupo_etario,obitos,populacao,taxa_100mil,data_maxima,meses_observados,situacao_dado
+2015,Brasil,acidente_transporte,0 a 4 anos,444,14679432.0,3.02,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,10 a 14 anos,606,15981250.0,3.79,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,15 a 19 anos,3174,17083436.0,18.58,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,20 a 29 anos,9437,33775807.0,27.94,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,30 a 39 anos,7830,32950916.0,23.76,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,40 a 49 anos,6219,26585523.0,23.39,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,5 a 9 anos,390,14841043.0,2.63,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,50 a 59 anos,5001,21588617.0,23.16,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,60 a 69 anos,3261,13924549.0,23.42,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,70 a 79 anos,1978,7431138.0,26.62,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,80 anos e mais,979,3561931.0,27.49,2015-12-31,12,definitivo
+2015,Brasil,acidente_transporte,Idade não informada,224,,,2015-12-31,12,definitivo
+2015,Brasil,agressao,0 a 4 anos,210,14679432.0,1.43,2015-12-31,12,definitivo
+2015,Brasil,agressao,10 a 14 anos,635,15981250.0,3.97,2015-12-31,12,definitivo
+2015,Brasil,agressao,15 a 19 anos,9655,17083436.0,56.52,2015-12-31,12,definitivo
+2015,Brasil,agressao,20 a 29 anos,20838,33775807.0,61.7,2015-12-31,12,definitivo
+2015,Brasil,agressao,30 a 39 anos,13190,32950916.0,40.03,2015-12-31,12,definitivo
+2015,Brasil,agressao,40 a 49 anos,6726,26585523.0,25.3,2015-12-31,12,definitivo
+2015,Brasil,agressao,5 a 9 anos,112,14841043.0,0.75,2015-12-31,12,definitivo
+2015,Brasil,agressao,50 a 59 anos,3424,21588617.0,15.86,2015-12-31,12,definitivo
+2015,Brasil,agressao,60 a 69 anos,1541,13924549.0,11.07,2015-12-31,12,definitivo
+2015,Brasil,agressao,70 a 79 anos,611,7431138.0,8.22,2015-12-31,12,definitivo
+2015,Brasil,agressao,80 anos e mais,276,3561931.0,7.75,2015-12-31,12,definitivo
+2015,Brasil,agressao,Idade não informada,920,,,2015-12-31,12,definitivo
+2015,Brasil,suicidio,0 a 4 anos,0,14679432.0,0.0,2015-12-31,12,definitivo
+2015,Brasil,suicidio,10 a 14 anos,132,15981250.0,0.83,2015-12-31,12,definitivo
+2015,Brasil,suicidio,15 a 19 anos,722,17083436.0,4.23,2015-12-31,12,definitivo
+2015,Brasil,suicidio,20 a 29 anos,2214,33775807.0,6.55,2015-12-31,12,definitivo
+2015,Brasil,suicidio,30 a 39 anos,2388,32950916.0,7.25,2015-12-31,12,definitivo
+2015,Brasil,suicidio,40 a 49 anos,2027,26585523.0,7.62,2015-12-31,12,definitivo
+2015,Brasil,suicidio,5 a 9 anos,3,14841043.0,0.02,2015-12-31,12,definitivo
+2015,Brasil,suicidio,50 a 59 anos,1726,21588617.0,7.99,2015-12-31,12,definitivo
+2015,Brasil,suicidio,60 a 69 anos,1049,13924549.0,7.53,2015-12-31,12,definitivo
+2015,Brasil,suicidio,70 a 79 anos,616,7431138.0,8.29,2015-12-31,12,definitivo
+2015,Brasil,suicidio,80 anos e mais,278,3561931.0,7.8,2015-12-31,12,definitivo
+2015,Brasil,suicidio,Idade não informada,23,,,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,0 a 4 anos,22,460507.0,4.78,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,10 a 14 anos,25,468322.0,5.34,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,15 a 19 anos,149,552427.0,26.97,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,20 a 29 anos,436,1204961.0,36.18,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,30 a 39 anos,281,1144481.0,24.55,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,40 a 49 anos,224,957205.0,23.4,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,5 a 9 anos,20,445565.0,4.49,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,50 a 59 anos,220,811254.0,27.12,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,60 a 69 anos,114,500319.0,22.79,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,70 a 79 anos,70,241786.0,28.95,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,80 anos e mais,23,103087.0,22.31,2015-12-31,12,definitivo
+2015,Santa Catarina,acidente_transporte,Idade não informada,2,,,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,0 a 4 anos,6,460507.0,1.3,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,10 a 14 anos,8,468322.0,1.71,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,15 a 19 anos,112,552427.0,20.27,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,20 a 29 anos,310,1204961.0,25.73,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,30 a 39 anos,220,1144481.0,19.22,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,40 a 49 anos,131,957205.0,13.69,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,5 a 9 anos,1,445565.0,0.22,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,50 a 59 anos,78,811254.0,9.61,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,60 a 69 anos,34,500319.0,6.8,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,70 a 79 anos,18,241786.0,7.44,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,80 anos e mais,9,103087.0,8.73,2015-12-31,12,definitivo
+2015,Santa Catarina,agressao,Idade não informada,2,,,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,0 a 4 anos,0,460507.0,0.0,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,10 a 14 anos,6,468322.0,1.28,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,15 a 19 anos,26,552427.0,4.71,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,20 a 29 anos,94,1204961.0,7.8,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,30 a 39 anos,116,1144481.0,10.14,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,40 a 49 anos,138,957205.0,14.42,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,5 a 9 anos,0,445565.0,0.0,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,50 a 59 anos,124,811254.0,15.28,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,60 a 69 anos,70,500319.0,13.99,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,70 a 79 anos,42,241786.0,17.37,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,80 anos e mais,20,103087.0,19.4,2015-12-31,12,definitivo
+2015,Santa Catarina,suicidio,Idade não informada,0,,,2015-12-31,12,definitivo
+2016,Brasil,acidente_transporte,0 a 4 anos,406,14705019.0,2.76,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,10 a 14 anos,554,15735526.0,3.52,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,15 a 19 anos,3029,16928752.0,17.89,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,20 a 29 anos,8931,33590312.0,26.59,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,30 a 39 anos,7629,33324599.0,22.89,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,40 a 49 anos,5994,26944608.0,22.25,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,5 a 9 anos,360,14662314.0,2.46,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,50 a 59 anos,4881,22109407.0,22.08,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,60 a 69 anos,3246,14479976.0,22.42,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,70 a 79 anos,2004,7696509.0,26.04,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,80 anos e mais,1021,3694903.0,27.63,2016-12-31,12,definitivo
+2016,Brasil,acidente_transporte,Idade não informada,210,,,2016-12-31,12,definitivo
+2016,Brasil,agressao,0 a 4 anos,204,14705019.0,1.39,2016-12-31,12,definitivo
+2016,Brasil,agressao,10 a 14 anos,628,15735526.0,3.99,2016-12-31,12,definitivo
+2016,Brasil,agressao,15 a 19 anos,10258,16928752.0,60.6,2016-12-31,12,definitivo
+2016,Brasil,agressao,20 a 29 anos,22214,33590312.0,66.13,2016-12-31,12,definitivo
+2016,Brasil,agressao,30 a 39 anos,13741,33324599.0,41.23,2016-12-31,12,definitivo
+2016,Brasil,agressao,40 a 49 anos,6891,26944608.0,25.57,2016-12-31,12,definitivo
+2016,Brasil,agressao,5 a 9 anos,89,14662314.0,0.61,2016-12-31,12,definitivo
+2016,Brasil,agressao,50 a 59 anos,3575,22109407.0,16.17,2016-12-31,12,definitivo
+2016,Brasil,agressao,60 a 69 anos,1646,14479976.0,11.37,2016-12-31,12,definitivo
+2016,Brasil,agressao,70 a 79 anos,687,7696509.0,8.93,2016-12-31,12,definitivo
+2016,Brasil,agressao,80 anos e mais,259,3694903.0,7.01,2016-12-31,12,definitivo
+2016,Brasil,agressao,Idade não informada,951,,,2016-12-31,12,definitivo
+2016,Brasil,suicidio,0 a 4 anos,2,14705019.0,0.01,2016-12-31,12,definitivo
+2016,Brasil,suicidio,10 a 14 anos,143,15735526.0,0.91,2016-12-31,12,definitivo
+2016,Brasil,suicidio,15 a 19 anos,754,16928752.0,4.45,2016-12-31,12,definitivo
+2016,Brasil,suicidio,20 a 29 anos,2200,33590312.0,6.55,2016-12-31,12,definitivo
+2016,Brasil,suicidio,30 a 39 anos,2410,33324599.0,7.23,2016-12-31,12,definitivo
+2016,Brasil,suicidio,40 a 49 anos,2094,26944608.0,7.77,2016-12-31,12,definitivo
+2016,Brasil,suicidio,5 a 9 anos,4,14662314.0,0.03,2016-12-31,12,definitivo
+2016,Brasil,suicidio,50 a 59 anos,1802,22109407.0,8.15,2016-12-31,12,definitivo
+2016,Brasil,suicidio,60 a 69 anos,1104,14479976.0,7.62,2016-12-31,12,definitivo
+2016,Brasil,suicidio,70 a 79 anos,621,7696509.0,8.07,2016-12-31,12,definitivo
+2016,Brasil,suicidio,80 anos e mais,271,3694903.0,7.33,2016-12-31,12,definitivo
+2016,Brasil,suicidio,Idade não informada,28,,,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,0 a 4 anos,14,471471.0,2.97,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,10 a 14 anos,21,464753.0,4.52,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,15 a 19 anos,142,543474.0,26.13,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,20 a 29 anos,390,1212545.0,32.16,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,30 a 39 anos,262,1175161.0,22.29,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,40 a 49 anos,235,969604.0,24.24,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,5 a 9 anos,19,448626.0,4.24,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,50 a 59 anos,214,836995.0,25.57,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,60 a 69 anos,116,526113.0,22.05,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,70 a 79 anos,74,254539.0,29.07,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,80 anos e mais,34,108192.0,31.43,2016-12-31,12,definitivo
+2016,Santa Catarina,acidente_transporte,Idade não informada,0,,,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,0 a 4 anos,3,471471.0,0.64,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,10 a 14 anos,9,464753.0,1.94,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,15 a 19 anos,130,543474.0,23.92,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,20 a 29 anos,329,1212545.0,27.13,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,30 a 39 anos,231,1175161.0,19.66,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,40 a 49 anos,134,969604.0,13.82,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,5 a 9 anos,1,448626.0,0.22,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,50 a 59 anos,65,836995.0,7.77,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,60 a 69 anos,43,526113.0,8.17,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,70 a 79 anos,12,254539.0,4.71,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,80 anos e mais,4,108192.0,3.7,2016-12-31,12,definitivo
+2016,Santa Catarina,agressao,Idade não informada,0,,,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,0 a 4 anos,0,471471.0,0.0,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,10 a 14 anos,8,464753.0,1.72,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,15 a 19 anos,31,543474.0,5.7,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,20 a 29 anos,99,1212545.0,8.16,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,30 a 39 anos,124,1175161.0,10.55,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,40 a 49 anos,140,969604.0,14.44,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,5 a 9 anos,0,448626.0,0.0,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,50 a 59 anos,154,836995.0,18.4,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,60 a 69 anos,77,526113.0,14.64,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,70 a 79 anos,31,254539.0,12.18,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,80 anos e mais,10,108192.0,9.24,2016-12-31,12,definitivo
+2016,Santa Catarina,suicidio,Idade não informada,0,,,2016-12-31,12,definitivo
+2017,Brasil,acidente_transporte,0 a 4 anos,381,14647172.0,2.6,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,10 a 14 anos,498,15476458.0,3.22,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,15 a 19 anos,2654,16710472.0,15.88,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,20 a 29 anos,8317,33411073.0,24.89,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,30 a 39 anos,7372,33555614.0,21.97,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,40 a 49 anos,5884,27379708.0,21.49,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,5 a 9 anos,332,14581565.0,2.28,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,50 a 59 anos,4706,22587605.0,20.83,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,60 a 69 anos,3207,15039714.0,21.32,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,70 a 79 anos,1920,7983938.0,24.05,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,80 anos e mais,903,3838238.0,23.53,2017-12-31,12,definitivo
+2017,Brasil,acidente_transporte,Idade não informada,256,,,2017-12-31,12,definitivo
+2017,Brasil,agressao,0 a 4 anos,202,14647172.0,1.38,2017-12-31,12,definitivo
+2017,Brasil,agressao,10 a 14 anos,638,15476458.0,4.12,2017-12-31,12,definitivo
+2017,Brasil,agressao,15 a 19 anos,10569,16710472.0,63.25,2017-12-31,12,definitivo
+2017,Brasil,agressao,20 a 29 anos,23742,33411073.0,71.06,2017-12-31,12,definitivo
+2017,Brasil,agressao,30 a 39 anos,14369,33555614.0,42.82,2017-12-31,12,definitivo
+2017,Brasil,agressao,40 a 49 anos,6989,27379708.0,25.53,2017-12-31,12,definitivo
+2017,Brasil,agressao,5 a 9 anos,93,14581565.0,0.64,2017-12-31,12,definitivo
+2017,Brasil,agressao,50 a 59 anos,3654,22587605.0,16.18,2017-12-31,12,definitivo
+2017,Brasil,agressao,60 a 69 anos,1601,15039714.0,10.65,2017-12-31,12,definitivo
+2017,Brasil,agressao,70 a 79 anos,684,7983938.0,8.57,2017-12-31,12,definitivo
+2017,Brasil,agressao,80 anos e mais,241,3838238.0,6.28,2017-12-31,12,definitivo
+2017,Brasil,agressao,Idade não informada,966,,,2017-12-31,12,definitivo
+2017,Brasil,suicidio,0 a 4 anos,0,14647172.0,0.0,2017-12-31,12,definitivo
+2017,Brasil,suicidio,10 a 14 anos,174,15476458.0,1.12,2017-12-31,12,definitivo
+2017,Brasil,suicidio,15 a 19 anos,873,16710472.0,5.22,2017-12-31,12,definitivo
+2017,Brasil,suicidio,20 a 29 anos,2390,33411073.0,7.15,2017-12-31,12,definitivo
+2017,Brasil,suicidio,30 a 39 anos,2619,33555614.0,7.8,2017-12-31,12,definitivo
+2017,Brasil,suicidio,40 a 49 anos,2267,27379708.0,8.28,2017-12-31,12,definitivo
+2017,Brasil,suicidio,5 a 9 anos,8,14581565.0,0.05,2017-12-31,12,definitivo
+2017,Brasil,suicidio,50 a 59 anos,1928,22587605.0,8.54,2017-12-31,12,definitivo
+2017,Brasil,suicidio,60 a 69 anos,1264,15039714.0,8.4,2017-12-31,12,definitivo
+2017,Brasil,suicidio,70 a 79 anos,659,7983938.0,8.25,2017-12-31,12,definitivo
+2017,Brasil,suicidio,80 anos e mais,287,3838238.0,7.48,2017-12-31,12,definitivo
+2017,Brasil,suicidio,Idade não informada,26,,,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,0 a 4 anos,17,480483.0,3.54,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,10 a 14 anos,21,463137.0,4.53,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,15 a 19 anos,118,532505.0,22.16,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,20 a 29 anos,363,1218480.0,29.79,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,30 a 39 anos,308,1203243.0,25.6,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,40 a 49 anos,269,986223.0,27.28,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,5 a 9 anos,13,456320.0,2.85,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,50 a 59 anos,176,860590.0,20.45,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,60 a 69 anos,131,552208.0,23.72,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,70 a 79 anos,71,268634.0,26.43,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,80 anos e mais,32,113636.0,28.16,2017-12-31,12,definitivo
+2017,Santa Catarina,acidente_transporte,Idade não informada,0,,,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,0 a 4 anos,5,480483.0,1.04,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,10 a 14 anos,3,463137.0,0.65,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,15 a 19 anos,141,532505.0,26.48,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,20 a 29 anos,364,1218480.0,29.87,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,30 a 39 anos,254,1203243.0,21.11,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,40 a 49 anos,135,986223.0,13.69,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,5 a 9 anos,1,456320.0,0.22,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,50 a 59 anos,89,860590.0,10.34,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,60 a 69 anos,30,552208.0,5.43,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,70 a 79 anos,9,268634.0,3.35,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,80 anos e mais,3,113636.0,2.64,2017-12-31,12,definitivo
+2017,Santa Catarina,agressao,Idade não informada,1,,,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,0 a 4 anos,0,480483.0,0.0,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,10 a 14 anos,12,463137.0,2.59,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,15 a 19 anos,37,532505.0,6.95,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,20 a 29 anos,122,1218480.0,10.01,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,30 a 39 anos,118,1203243.0,9.81,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,40 a 49 anos,131,986223.0,13.28,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,5 a 9 anos,0,456320.0,0.0,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,50 a 59 anos,163,860590.0,18.94,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,60 a 69 anos,91,552208.0,16.48,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,70 a 79 anos,49,268634.0,18.24,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,80 anos e mais,15,113636.0,13.2,2017-12-31,12,definitivo
+2017,Santa Catarina,suicidio,Idade não informada,0,,,2017-12-31,12,definitivo
+2018,Brasil,acidente_transporte,0 a 4 anos,338,14636517.0,2.31,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,10 a 14 anos,448,15246274.0,2.94,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,15 a 19 anos,2255,16442716.0,13.71,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,20 a 29 anos,7487,33247806.0,22.52,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,30 a 39 anos,6655,33628251.0,19.79,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,40 a 49 anos,5476,27897621.0,19.63,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,5 a 9 anos,261,14518069.0,1.8,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,50 a 59 anos,4645,23022266.0,20.18,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,60 a 69 anos,3130,15603592.0,20.06,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,70 a 79 anos,1808,8296971.0,21.79,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,80 anos e mais,896,3988955.0,22.46,2018-12-31,12,definitivo
+2018,Brasil,acidente_transporte,Idade não informada,226,,,2018-12-31,12,definitivo
+2018,Brasil,agressao,0 a 4 anos,212,14636517.0,1.45,2018-12-31,12,definitivo
+2018,Brasil,agressao,10 a 14 anos,518,15246274.0,3.4,2018-12-31,12,definitivo
+2018,Brasil,agressao,15 a 19 anos,8696,16442716.0,52.89,2018-12-31,12,definitivo
+2018,Brasil,agressao,20 a 29 anos,20554,33247806.0,61.82,2018-12-31,12,definitivo
+2018,Brasil,agressao,30 a 39 anos,12833,33628251.0,38.16,2018-12-31,12,definitivo
+2018,Brasil,agressao,40 a 49 anos,6560,27897621.0,23.51,2018-12-31,12,definitivo
+2018,Brasil,agressao,5 a 9 anos,73,14518069.0,0.5,2018-12-31,12,definitivo
+2018,Brasil,agressao,50 a 59 anos,3269,23022266.0,14.2,2018-12-31,12,definitivo
+2018,Brasil,agressao,60 a 69 anos,1415,15603592.0,9.07,2018-12-31,12,definitivo
+2018,Brasil,agressao,70 a 79 anos,646,8296971.0,7.79,2018-12-31,12,definitivo
+2018,Brasil,agressao,80 anos e mais,246,3988955.0,6.17,2018-12-31,12,definitivo
+2018,Brasil,agressao,Idade não informada,892,,,2018-12-31,12,definitivo
+2018,Brasil,suicidio,0 a 4 anos,0,14636517.0,0.0,2018-12-31,12,definitivo
+2018,Brasil,suicidio,10 a 14 anos,163,15246274.0,1.07,2018-12-31,12,definitivo
+2018,Brasil,suicidio,15 a 19 anos,886,16442716.0,5.39,2018-12-31,12,definitivo
+2018,Brasil,suicidio,20 a 29 anos,2510,33247806.0,7.55,2018-12-31,12,definitivo
+2018,Brasil,suicidio,30 a 39 anos,2637,33628251.0,7.84,2018-12-31,12,definitivo
+2018,Brasil,suicidio,40 a 49 anos,2307,27897621.0,8.27,2018-12-31,12,definitivo
+2018,Brasil,suicidio,5 a 9 anos,4,14518069.0,0.03,2018-12-31,12,definitivo
+2018,Brasil,suicidio,50 a 59 anos,1912,23022266.0,8.31,2018-12-31,12,definitivo
+2018,Brasil,suicidio,60 a 69 anos,1277,15603592.0,8.18,2018-12-31,12,definitivo
+2018,Brasil,suicidio,70 a 79 anos,705,8296971.0,8.5,2018-12-31,12,definitivo
+2018,Brasil,suicidio,80 anos e mais,298,3988955.0,7.47,2018-12-31,12,definitivo
+2018,Brasil,suicidio,Idade não informada,34,,,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,0 a 4 anos,6,490571.0,1.22,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,10 a 14 anos,7,464767.0,1.51,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,15 a 19 anos,89,520808.0,17.09,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,20 a 29 anos,353,1223744.0,28.85,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,30 a 39 anos,260,1228568.0,21.16,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,40 a 49 anos,218,1007720.0,21.63,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,5 a 9 anos,8,465539.0,1.72,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,50 a 59 anos,231,881929.0,26.19,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,60 a 69 anos,128,578865.0,22.11,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,70 a 79 anos,59,284139.0,20.76,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,80 anos e mais,36,119477.0,30.13,2018-12-31,12,definitivo
+2018,Santa Catarina,acidente_transporte,Idade não informada,0,,,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,0 a 4 anos,2,490571.0,0.41,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,10 a 14 anos,4,464767.0,0.86,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,15 a 19 anos,101,520808.0,19.39,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,20 a 29 anos,260,1223744.0,21.25,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,30 a 39 anos,189,1228568.0,15.38,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,40 a 49 anos,109,1007720.0,10.82,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,5 a 9 anos,0,465539.0,0.0,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,50 a 59 anos,82,881929.0,9.3,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,60 a 69 anos,30,578865.0,5.18,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,70 a 79 anos,18,284139.0,6.33,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,80 anos e mais,5,119477.0,4.18,2018-12-31,12,definitivo
+2018,Santa Catarina,agressao,Idade não informada,1,,,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,0 a 4 anos,0,490571.0,0.0,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,10 a 14 anos,7,464767.0,1.51,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,15 a 19 anos,41,520808.0,7.87,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,20 a 29 anos,122,1223744.0,9.97,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,30 a 39 anos,128,1228568.0,10.42,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,40 a 49 anos,125,1007720.0,12.4,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,5 a 9 anos,0,465539.0,0.0,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,50 a 59 anos,160,881929.0,18.14,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,60 a 69 anos,91,578865.0,15.72,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,70 a 79 anos,48,284139.0,16.89,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,80 anos e mais,13,119477.0,10.88,2018-12-31,12,definitivo
+2018,Santa Catarina,suicidio,Idade não informada,0,,,2018-12-31,12,definitivo
+2019,Brasil,acidente_transporte,0 a 4 anos,308,14570633.0,2.11,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,10 a 14 anos,400,15044385.0,2.66,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,15 a 19 anos,2188,16161907.0,13.54,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,20 a 29 anos,7137,33170226.0,21.52,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,30 a 39 anos,6483,33584919.0,19.3,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,40 a 49 anos,5533,28491342.0,19.42,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,5 a 9 anos,260,14506665.0,1.79,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,50 a 59 anos,4501,23419261.0,19.22,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,60 a 69 anos,3159,16171929.0,19.53,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,70 a 79 anos,1828,8638628.0,21.16,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,80 anos e mais,848,4140204.0,20.48,2019-12-31,12,definitivo
+2019,Brasil,acidente_transporte,Idade não informada,234,,,2019-12-31,12,definitivo
+2019,Brasil,agressao,0 a 4 anos,188,14570633.0,1.29,2019-12-31,12,definitivo
+2019,Brasil,agressao,10 a 14 anos,386,15044385.0,2.57,2019-12-31,12,definitivo
+2019,Brasil,agressao,15 a 19 anos,6175,16161907.0,38.21,2019-12-31,12,definitivo
+2019,Brasil,agressao,20 a 29 anos,16053,33170226.0,48.4,2019-12-31,12,definitivo
+2019,Brasil,agressao,30 a 39 anos,10349,33584919.0,30.81,2019-12-31,12,definitivo
+2019,Brasil,agressao,40 a 49 anos,5499,28491342.0,19.3,2019-12-31,12,definitivo
+2019,Brasil,agressao,5 a 9 anos,69,14506665.0,0.48,2019-12-31,12,definitivo
+2019,Brasil,agressao,50 a 59 anos,2743,23419261.0,11.71,2019-12-31,12,definitivo
+2019,Brasil,agressao,60 a 69 anos,1250,16171929.0,7.73,2019-12-31,12,definitivo
+2019,Brasil,agressao,70 a 79 anos,498,8638628.0,5.76,2019-12-31,12,definitivo
+2019,Brasil,agressao,80 anos e mais,207,4140204.0,5.0,2019-12-31,12,definitivo
+2019,Brasil,agressao,Idade não informada,616,,,2019-12-31,12,definitivo
+2019,Brasil,suicidio,0 a 4 anos,0,14570633.0,0.0,2019-12-31,12,definitivo
+2019,Brasil,suicidio,10 a 14 anos,189,15044385.0,1.26,2019-12-31,12,definitivo
+2019,Brasil,suicidio,15 a 19 anos,1022,16161907.0,6.32,2019-12-31,12,definitivo
+2019,Brasil,suicidio,20 a 29 anos,2840,33170226.0,8.56,2019-12-31,12,definitivo
+2019,Brasil,suicidio,30 a 39 anos,2761,33584919.0,8.22,2019-12-31,12,definitivo
+2019,Brasil,suicidio,40 a 49 anos,2400,28491342.0,8.42,2019-12-31,12,definitivo
+2019,Brasil,suicidio,5 a 9 anos,2,14506665.0,0.01,2019-12-31,12,definitivo
+2019,Brasil,suicidio,50 a 59 anos,2000,23419261.0,8.54,2019-12-31,12,definitivo
+2019,Brasil,suicidio,60 a 69 anos,1290,16171929.0,7.98,2019-12-31,12,definitivo
+2019,Brasil,suicidio,70 a 79 anos,732,8638628.0,8.47,2019-12-31,12,definitivo
+2019,Brasil,suicidio,80 anos e mais,271,4140204.0,6.55,2019-12-31,12,definitivo
+2019,Brasil,suicidio,Idade não informada,13,,,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,0 a 4 anos,11,498897.0,2.2,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,10 a 14 anos,20,469384.0,4.26,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,15 a 19 anos,84,509689.0,16.48,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,20 a 29 anos,327,1230077.0,26.58,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,30 a 39 anos,249,1251766.0,19.89,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,40 a 49 anos,258,1033793.0,24.96,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,5 a 9 anos,10,476152.0,2.1,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,50 a 59 anos,214,900919.0,23.75,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,60 a 69 anos,156,606330.0,25.73,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,70 a 79 anos,79,301016.0,26.24,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,80 anos e mais,36,125700.0,28.64,2019-12-31,12,definitivo
+2019,Santa Catarina,acidente_transporte,Idade não informada,2,,,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,0 a 4 anos,5,498897.0,1.0,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,10 a 14 anos,5,469384.0,1.07,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,15 a 19 anos,83,509689.0,16.28,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,20 a 29 anos,225,1230077.0,18.29,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,30 a 39 anos,170,1251766.0,13.58,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,40 a 49 anos,129,1033793.0,12.48,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,5 a 9 anos,1,476152.0,0.21,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,50 a 59 anos,61,900919.0,6.77,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,60 a 69 anos,38,606330.0,6.27,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,70 a 79 anos,11,301016.0,3.65,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,80 anos e mais,2,125700.0,1.59,2019-12-31,12,definitivo
+2019,Santa Catarina,agressao,Idade não informada,0,,,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,0 a 4 anos,0,498897.0,0.0,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,10 a 14 anos,6,469384.0,1.28,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,15 a 19 anos,50,509689.0,9.81,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,20 a 29 anos,128,1230077.0,10.41,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,30 a 39 anos,135,1251766.0,10.78,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,40 a 49 anos,158,1033793.0,15.28,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,5 a 9 anos,0,476152.0,0.0,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,50 a 59 anos,148,900919.0,16.43,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,60 a 69 anos,96,606330.0,15.83,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,70 a 79 anos,57,301016.0,18.94,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,80 anos e mais,20,125700.0,15.91,2019-12-31,12,definitivo
+2019,Santa Catarina,suicidio,Idade não informada,0,,,2019-12-31,12,definitivo
+2020,Brasil,acidente_transporte,0 a 4 anos,316,14349330.0,2.2,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,10 a 14 anos,403,14830142.0,2.72,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,15 a 19 anos,2277,15893053.0,14.33,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,20 a 29 anos,7704,33146264.0,23.24,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,30 a 39 anos,6885,33462446.0,20.58,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,40 a 49 anos,5661,29125629.0,19.44,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,5 a 9 anos,261,14609239.0,1.79,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,50 a 59 anos,4738,23769343.0,19.93,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,60 a 69 anos,3053,16721048.0,18.26,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,70 a 79 anos,1553,8988696.0,17.28,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,80 anos e mais,708,4269699.0,16.58,2020-12-31,12,definitivo
+2020,Brasil,acidente_transporte,Idade não informada,157,,,2020-12-31,12,definitivo
+2020,Brasil,agressao,0 a 4 anos,173,14349330.0,1.21,2020-12-31,12,definitivo
+2020,Brasil,agressao,10 a 14 anos,349,14830142.0,2.35,2020-12-31,12,definitivo
+2020,Brasil,agressao,15 a 19 anos,6314,15893053.0,39.73,2020-12-31,12,definitivo
+2020,Brasil,agressao,20 a 29 anos,17869,33146264.0,53.91,2020-12-31,12,definitivo
+2020,Brasil,agressao,30 a 39 anos,11181,33462446.0,33.41,2020-12-31,12,definitivo
+2020,Brasil,agressao,40 a 49 anos,5972,29125629.0,20.5,2020-12-31,12,definitivo
+2020,Brasil,agressao,5 a 9 anos,66,14609239.0,0.45,2020-12-31,12,definitivo
+2020,Brasil,agressao,50 a 59 anos,3023,23769343.0,12.72,2020-12-31,12,definitivo
+2020,Brasil,agressao,60 a 69 anos,1334,16721048.0,7.98,2020-12-31,12,definitivo
+2020,Brasil,agressao,70 a 79 anos,494,8988696.0,5.5,2020-12-31,12,definitivo
+2020,Brasil,agressao,80 anos e mais,204,4269699.0,4.78,2020-12-31,12,definitivo
+2020,Brasil,agressao,Idade não informada,701,,,2020-12-31,12,definitivo
+2020,Brasil,suicidio,0 a 4 anos,0,14349330.0,0.0,2020-12-31,12,definitivo
+2020,Brasil,suicidio,10 a 14 anos,164,14830142.0,1.11,2020-12-31,12,definitivo
+2020,Brasil,suicidio,15 a 19 anos,1004,15893053.0,6.32,2020-12-31,12,definitivo
+2020,Brasil,suicidio,20 a 29 anos,2767,33146264.0,8.35,2020-12-31,12,definitivo
+2020,Brasil,suicidio,30 a 39 anos,2680,33462446.0,8.01,2020-12-31,12,definitivo
+2020,Brasil,suicidio,40 a 49 anos,2488,29125629.0,8.54,2020-12-31,12,definitivo
+2020,Brasil,suicidio,5 a 9 anos,4,14609239.0,0.03,2020-12-31,12,definitivo
+2020,Brasil,suicidio,50 a 59 anos,2084,23769343.0,8.77,2020-12-31,12,definitivo
+2020,Brasil,suicidio,60 a 69 anos,1420,16721048.0,8.49,2020-12-31,12,definitivo
+2020,Brasil,suicidio,70 a 79 anos,845,8988696.0,9.4,2020-12-31,12,definitivo
+2020,Brasil,suicidio,80 anos e mais,354,4269699.0,8.29,2020-12-31,12,definitivo
+2020,Brasil,suicidio,Idade não informada,25,,,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,0 a 4 anos,15,502973.0,2.98,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,10 a 14 anos,19,474670.0,4.0,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,15 a 19 anos,86,500340.0,17.19,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,20 a 29 anos,321,1235752.0,25.98,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,30 a 39 anos,276,1272795.0,21.68,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,40 a 49 anos,224,1063328.0,21.07,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,5 a 9 anos,11,490242.0,2.24,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,50 a 59 anos,215,917080.0,23.44,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,60 a 69 anos,116,634171.0,18.29,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,70 a 79 anos,56,318721.0,17.57,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,80 anos e mais,20,131903.0,15.16,2020-12-31,12,definitivo
+2020,Santa Catarina,acidente_transporte,Idade não informada,1,,,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,0 a 4 anos,6,502973.0,1.19,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,10 a 14 anos,3,474670.0,0.63,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,15 a 19 anos,71,500340.0,14.19,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,20 a 29 anos,214,1235752.0,17.32,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,30 a 39 anos,186,1272795.0,14.61,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,40 a 49 anos,105,1063328.0,9.87,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,5 a 9 anos,0,490242.0,0.0,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,50 a 59 anos,64,917080.0,6.98,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,60 a 69 anos,30,634171.0,4.73,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,70 a 79 anos,3,318721.0,0.94,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,80 anos e mais,6,131903.0,4.55,2020-12-31,12,definitivo
+2020,Santa Catarina,agressao,Idade não informada,2,,,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,0 a 4 anos,0,502973.0,0.0,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,10 a 14 anos,8,474670.0,1.69,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,15 a 19 anos,38,500340.0,7.59,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,20 a 29 anos,138,1235752.0,11.17,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,30 a 39 anos,134,1272795.0,10.53,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,40 a 49 anos,130,1063328.0,12.23,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,5 a 9 anos,0,490242.0,0.0,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,50 a 59 anos,143,917080.0,15.59,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,60 a 69 anos,95,634171.0,14.98,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,70 a 79 anos,66,318721.0,20.71,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,80 anos e mais,25,131903.0,18.95,2020-12-31,12,definitivo
+2020,Santa Catarina,suicidio,Idade não informada,1,,,2020-12-31,12,definitivo
+2021,Brasil,acidente_transporte,0 a 4 anos,330,14102904.0,2.34,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,10 a 14 anos,362,14653596.0,2.47,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,15 a 19 anos,2124,15663254.0,13.56,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,20 a 29 anos,7880,33065916.0,23.83,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,30 a 39 anos,7028,33284526.0,21.11,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,40 a 49 anos,6200,29739189.0,20.85,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,5 a 9 anos,274,14638890.0,1.87,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,50 a 59 anos,4824,24052250.0,20.06,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,60 a 69 anos,3294,17222091.0,19.13,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,70 a 79 anos,1823,9324120.0,19.55,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,80 anos e mais,736,4356906.0,16.89,2021-12-31,12,definitivo
+2021,Brasil,acidente_transporte,Idade não informada,157,,,2021-12-31,12,definitivo
+2021,Brasil,agressao,0 a 4 anos,152,14102904.0,1.08,2021-12-31,12,definitivo
+2021,Brasil,agressao,10 a 14 anos,306,14653596.0,2.09,2021-12-31,12,definitivo
+2021,Brasil,agressao,15 a 19 anos,5512,15663254.0,35.19,2021-12-31,12,definitivo
+2021,Brasil,agressao,20 a 29 anos,16972,33065916.0,51.33,2021-12-31,12,definitivo
+2021,Brasil,agressao,30 a 39 anos,10990,33284526.0,33.02,2021-12-31,12,definitivo
+2021,Brasil,agressao,40 a 49 anos,5986,29739189.0,20.13,2021-12-31,12,definitivo
+2021,Brasil,agressao,5 a 9 anos,58,14638890.0,0.4,2021-12-31,12,definitivo
+2021,Brasil,agressao,50 a 59 anos,2946,24052250.0,12.25,2021-12-31,12,definitivo
+2021,Brasil,agressao,60 a 69 anos,1368,17222091.0,7.94,2021-12-31,12,definitivo
+2021,Brasil,agressao,70 a 79 anos,535,9324120.0,5.74,2021-12-31,12,definitivo
+2021,Brasil,agressao,80 anos e mais,200,4356906.0,4.59,2021-12-31,12,definitivo
+2021,Brasil,agressao,Idade não informada,537,,,2021-12-31,12,definitivo
+2021,Brasil,suicidio,0 a 4 anos,0,14102904.0,0.0,2021-12-31,12,definitivo
+2021,Brasil,suicidio,10 a 14 anos,218,14653596.0,1.49,2021-12-31,12,definitivo
+2021,Brasil,suicidio,15 a 19 anos,1075,15663254.0,6.86,2021-12-31,12,definitivo
+2021,Brasil,suicidio,20 a 29 anos,3159,33065916.0,9.55,2021-12-31,12,definitivo
+2021,Brasil,suicidio,30 a 39 anos,3103,33284526.0,9.32,2021-12-31,12,definitivo
+2021,Brasil,suicidio,40 a 49 anos,2787,29739189.0,9.37,2021-12-31,12,definitivo
+2021,Brasil,suicidio,5 a 9 anos,6,14638890.0,0.04,2021-12-31,12,definitivo
+2021,Brasil,suicidio,50 a 59 anos,2310,24052250.0,9.6,2021-12-31,12,definitivo
+2021,Brasil,suicidio,60 a 69 anos,1516,17222091.0,8.8,2021-12-31,12,definitivo
+2021,Brasil,suicidio,70 a 79 anos,896,9324120.0,9.61,2021-12-31,12,definitivo
+2021,Brasil,suicidio,80 anos e mais,399,4356906.0,9.16,2021-12-31,12,definitivo
+2021,Brasil,suicidio,Idade não informada,30,,,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,0 a 4 anos,12,504760.0,2.38,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,10 a 14 anos,14,479180.0,2.92,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,15 a 19 anos,76,498260.0,15.25,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,20 a 29 anos,364,1236664.0,29.43,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,30 a 39 anos,266,1291881.0,20.59,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,40 a 49 anos,245,1094485.0,22.38,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,5 a 9 anos,20,502866.0,3.98,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,50 a 59 anos,208,929554.0,22.38,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,60 a 69 anos,125,660955.0,18.91,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,70 a 79 anos,83,336058.0,24.7,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,80 anos e mais,23,136985.0,16.79,2021-12-31,12,definitivo
+2021,Santa Catarina,acidente_transporte,Idade não informada,0,,,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,0 a 4 anos,6,504760.0,1.19,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,10 a 14 anos,4,479180.0,0.83,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,15 a 19 anos,60,498260.0,12.04,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,20 a 29 anos,208,1236664.0,16.82,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,30 a 39 anos,194,1291881.0,15.02,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,40 a 49 anos,95,1094485.0,8.68,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,5 a 9 anos,1,502866.0,0.2,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,50 a 59 anos,62,929554.0,6.67,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,60 a 69 anos,40,660955.0,6.05,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,70 a 79 anos,6,336058.0,1.79,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,80 anos e mais,4,136985.0,2.92,2021-12-31,12,definitivo
+2021,Santa Catarina,agressao,Idade não informada,0,,,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,0 a 4 anos,0,504760.0,0.0,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,10 a 14 anos,4,479180.0,0.83,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,15 a 19 anos,36,498260.0,7.23,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,20 a 29 anos,134,1236664.0,10.84,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,30 a 39 anos,164,1291881.0,12.69,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,40 a 49 anos,142,1094485.0,12.97,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,5 a 9 anos,0,502866.0,0.0,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,50 a 59 anos,154,929554.0,16.57,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,60 a 69 anos,144,660955.0,21.79,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,70 a 79 anos,58,336058.0,17.26,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,80 anos e mais,19,136985.0,13.87,2021-12-31,12,definitivo
+2021,Santa Catarina,suicidio,Idade não informada,0,,,2021-12-31,12,definitivo
+2022,Brasil,acidente_transporte,0 a 4 anos,281,13820837.0,2.03,,0,definitivo
+2022,Brasil,acidente_transporte,10 a 14 anos,333,14575329.0,2.28,,0,definitivo
+2022,Brasil,acidente_transporte,15 a 19 anos,1999,15402409.0,12.98,,0,definitivo
+2022,Brasil,acidente_transporte,20 a 29 anos,7670,32864711.0,23.34,,0,definitivo
+2022,Brasil,acidente_transporte,30 a 39 anos,6694,33088470.0,20.23,,0,definitivo
+2022,Brasil,acidente_transporte,40 a 49 anos,6243,30328447.0,20.58,,0,definitivo
+2022,Brasil,acidente_transporte,5 a 9 anos,234,14588148.0,1.6,,0,definitivo
+2022,Brasil,acidente_transporte,50 a 59 anos,5036,24330133.0,20.7,,0,definitivo
+2022,Brasil,acidente_transporte,60 a 69 anos,3466,17735798.0,19.54,,0,definitivo
+2022,Brasil,acidente_transporte,70 a 79 anos,1963,9688415.0,20.26,,0,definitivo
+2022,Brasil,acidente_transporte,80 anos e mais,792,4440286.0,17.84,,0,definitivo
+2022,Brasil,acidente_transporte,Idade não informada,181,,,,0,definitivo
+2022,Brasil,agressao,0 a 4 anos,146,13820837.0,1.06,,0,definitivo
+2022,Brasil,agressao,10 a 14 anos,278,14575329.0,1.91,,0,definitivo
+2022,Brasil,agressao,15 a 19 anos,4843,15402409.0,31.44,,0,definitivo
+2022,Brasil,agressao,20 a 29 anos,16502,32864711.0,50.21,,0,definitivo
+2022,Brasil,agressao,30 a 39 anos,10876,33088470.0,32.87,,0,definitivo
+2022,Brasil,agressao,40 a 49 anos,6289,30328447.0,20.74,,0,definitivo
+2022,Brasil,agressao,5 a 9 anos,64,14588148.0,0.44,,0,definitivo
+2022,Brasil,agressao,50 a 59 anos,2851,24330133.0,11.72,,0,definitivo
+2022,Brasil,agressao,60 a 69 anos,1310,17735798.0,7.39,,0,definitivo
+2022,Brasil,agressao,70 a 79 anos,483,9688415.0,4.99,,0,definitivo
+2022,Brasil,agressao,80 anos e mais,171,4440286.0,3.85,,0,definitivo
+2022,Brasil,agressao,Idade não informada,554,,,,0,definitivo
+2022,Brasil,suicidio,0 a 4 anos,0,13820837.0,0.0,,0,definitivo
+2022,Brasil,suicidio,10 a 14 anos,203,14575329.0,1.39,,0,definitivo
+2022,Brasil,suicidio,15 a 19 anos,1053,15402409.0,6.84,,0,definitivo
+2022,Brasil,suicidio,20 a 29 anos,3404,32864711.0,10.36,,0,definitivo
+2022,Brasil,suicidio,30 a 39 anos,3456,33088470.0,10.44,,0,definitivo
+2022,Brasil,suicidio,40 a 49 anos,3090,30328447.0,10.19,,0,definitivo
+2022,Brasil,suicidio,5 a 9 anos,4,14588148.0,0.03,,0,definitivo
+2022,Brasil,suicidio,50 a 59 anos,2384,24330133.0,9.8,,0,definitivo
+2022,Brasil,suicidio,60 a 69 anos,1581,17735798.0,8.91,,0,definitivo
+2022,Brasil,suicidio,70 a 79 anos,879,9688415.0,9.07,,0,definitivo
+2022,Brasil,suicidio,80 anos e mais,385,4440286.0,8.67,,0,definitivo
+2022,Brasil,suicidio,Idade não informada,23,,,,0,definitivo
+2022,Santa Catarina,acidente_transporte,0 a 4 anos,12,505558.0,2.37,,0,definitivo
+2022,Santa Catarina,acidente_transporte,10 a 14 anos,12,488050.0,2.46,,0,definitivo
+2022,Santa Catarina,acidente_transporte,15 a 19 anos,85,497389.0,17.09,,0,definitivo
+2022,Santa Catarina,acidente_transporte,20 a 29 anos,307,1231490.0,24.93,,0,definitivo
+2022,Santa Catarina,acidente_transporte,30 a 39 anos,280,1309577.0,21.38,,0,definitivo
+2022,Santa Catarina,acidente_transporte,40 a 49 anos,235,1127078.0,20.85,,0,definitivo
+2022,Santa Catarina,acidente_transporte,5 a 9 anos,15,513270.0,2.92,,0,definitivo
+2022,Santa Catarina,acidente_transporte,50 a 59 anos,238,940542.0,25.3,,0,definitivo
+2022,Santa Catarina,acidente_transporte,60 a 69 anos,139,688215.0,20.2,,0,definitivo
+2022,Santa Catarina,acidente_transporte,70 a 79 anos,97,353973.0,27.4,,0,definitivo
+2022,Santa Catarina,acidente_transporte,80 anos e mais,17,141675.0,12.0,,0,definitivo
+2022,Santa Catarina,acidente_transporte,Idade não informada,0,,,,0,definitivo
+2022,Santa Catarina,agressao,0 a 4 anos,5,505558.0,0.99,,0,definitivo
+2022,Santa Catarina,agressao,10 a 14 anos,3,488050.0,0.61,,0,definitivo
+2022,Santa Catarina,agressao,15 a 19 anos,42,497389.0,8.44,,0,definitivo
+2022,Santa Catarina,agressao,20 a 29 anos,164,1231490.0,13.32,,0,definitivo
+2022,Santa Catarina,agressao,30 a 39 anos,186,1309577.0,14.2,,0,definitivo
+2022,Santa Catarina,agressao,40 a 49 anos,124,1127078.0,11.0,,0,definitivo
+2022,Santa Catarina,agressao,5 a 9 anos,3,513270.0,0.58,,0,definitivo
+2022,Santa Catarina,agressao,50 a 59 anos,65,940542.0,6.91,,0,definitivo
+2022,Santa Catarina,agressao,60 a 69 anos,34,688215.0,4.94,,0,definitivo
+2022,Santa Catarina,agressao,70 a 79 anos,8,353973.0,2.26,,0,definitivo
+2022,Santa Catarina,agressao,80 anos e mais,3,141675.0,2.12,,0,definitivo
+2022,Santa Catarina,agressao,Idade não informada,1,,,,0,definitivo
+2022,Santa Catarina,suicidio,0 a 4 anos,0,505558.0,0.0,,0,definitivo
+2022,Santa Catarina,suicidio,10 a 14 anos,9,488050.0,1.84,,0,definitivo
+2022,Santa Catarina,suicidio,15 a 19 anos,38,497389.0,7.64,,0,definitivo
+2022,Santa Catarina,suicidio,20 a 29 anos,161,1231490.0,13.07,,0,definitivo
+2022,Santa Catarina,suicidio,30 a 39 anos,168,1309577.0,12.83,,0,definitivo
+2022,Santa Catarina,suicidio,40 a 49 anos,169,1127078.0,14.99,,0,definitivo
+2022,Santa Catarina,suicidio,5 a 9 anos,1,513270.0,0.19,,0,definitivo
+2022,Santa Catarina,suicidio,50 a 59 anos,174,940542.0,18.5,,0,definitivo
+2022,Santa Catarina,suicidio,60 a 69 anos,133,688215.0,19.33,,0,definitivo
+2022,Santa Catarina,suicidio,70 a 79 anos,58,353973.0,16.39,,0,definitivo
+2022,Santa Catarina,suicidio,80 anos e mais,25,141675.0,17.65,,0,definitivo
+2022,Santa Catarina,suicidio,Idade não informada,1,,,,0,definitivo
+2023,Brasil,acidente_transporte,0 a 4 anos,303,13421242.0,2.26,,0,definitivo
+2023,Brasil,acidente_transporte,10 a 14 anos,382,14515508.0,2.63,,0,definitivo
+2023,Brasil,acidente_transporte,15 a 19 anos,2085,15169410.0,13.74,,0,definitivo
+2023,Brasil,acidente_transporte,20 a 29 anos,7707,32576988.0,23.66,,0,definitivo
+2023,Brasil,acidente_transporte,30 a 39 anos,6722,32893858.0,20.44,,0,definitivo
+2023,Brasil,acidente_transporte,40 a 49 anos,6376,30910229.0,20.63,,0,definitivo
+2023,Brasil,acidente_transporte,5 a 9 anos,236,14589745.0,1.62,,0,definitivo
+2023,Brasil,acidente_transporte,50 a 59 anos,5175,24636687.0,21.01,,0,definitivo
+2023,Brasil,acidente_transporte,60 a 69 anos,3755,18291312.0,20.53,,0,definitivo
+2023,Brasil,acidente_transporte,70 a 79 anos,2192,10117249.0,21.67,,0,definitivo
+2023,Brasil,acidente_transporte,80 anos e mais,869,4572930.0,19.0,,0,definitivo
+2023,Brasil,acidente_transporte,Idade não informada,136,,,,0,definitivo
+2023,Brasil,agressao,0 a 4 anos,162,13421242.0,1.21,,0,definitivo
+2023,Brasil,agressao,10 a 14 anos,271,14515508.0,1.87,,0,definitivo
+2023,Brasil,agressao,15 a 19 anos,4355,15169410.0,28.71,,0,definitivo
+2023,Brasil,agressao,20 a 29 anos,15830,32576988.0,48.59,,0,definitivo
+2023,Brasil,agressao,30 a 39 anos,10715,32893858.0,32.57,,0,definitivo
+2023,Brasil,agressao,40 a 49 anos,6587,30910229.0,21.31,,0,definitivo
+2023,Brasil,agressao,5 a 9 anos,63,14589745.0,0.43,,0,definitivo
+2023,Brasil,agressao,50 a 59 anos,2941,24636687.0,11.94,,0,definitivo
+2023,Brasil,agressao,60 a 69 anos,1304,18291312.0,7.13,,0,definitivo
+2023,Brasil,agressao,70 a 79 anos,496,10117249.0,4.9,,0,definitivo
+2023,Brasil,agressao,80 anos e mais,186,4572930.0,4.07,,0,definitivo
+2023,Brasil,agressao,Idade não informada,533,,,,0,definitivo
+2023,Brasil,suicidio,0 a 4 anos,0,13421242.0,0.0,,0,definitivo
+2023,Brasil,suicidio,10 a 14 anos,169,14515508.0,1.16,,0,definitivo
+2023,Brasil,suicidio,15 a 19 anos,951,15169410.0,6.27,,0,definitivo
+2023,Brasil,suicidio,20 a 29 anos,3535,32576988.0,10.85,,0,definitivo
+2023,Brasil,suicidio,30 a 39 anos,3632,32893858.0,11.04,,0,definitivo
+2023,Brasil,suicidio,40 a 49 anos,3232,30910229.0,10.46,,0,definitivo
+2023,Brasil,suicidio,5 a 9 anos,0,14589745.0,0.0,,0,definitivo
+2023,Brasil,suicidio,50 a 59 anos,2476,24636687.0,10.05,,0,definitivo
+2023,Brasil,suicidio,60 a 69 anos,1656,18291312.0,9.05,,0,definitivo
+2023,Brasil,suicidio,70 a 79 anos,938,10117249.0,9.27,,0,definitivo
+2023,Brasil,suicidio,80 anos e mais,394,4572930.0,8.62,,0,definitivo
+2023,Brasil,suicidio,Idade não informada,19,,,,0,definitivo
+2023,Santa Catarina,acidente_transporte,0 a 4 anos,18,504102.0,3.57,,0,definitivo
+2023,Santa Catarina,acidente_transporte,10 a 14 anos,12,497960.0,2.41,,0,definitivo
+2023,Santa Catarina,acidente_transporte,15 a 19 anos,94,499345.0,18.82,,0,definitivo
+2023,Santa Catarina,acidente_transporte,20 a 29 anos,344,1221871.0,28.15,,0,definitivo
+2023,Santa Catarina,acidente_transporte,30 a 39 anos,274,1326454.0,20.66,,0,definitivo
+2023,Santa Catarina,acidente_transporte,40 a 49 anos,244,1161828.0,21.0,,0,definitivo
+2023,Santa Catarina,acidente_transporte,5 a 9 anos,10,524343.0,1.91,,0,definitivo
+2023,Santa Catarina,acidente_transporte,50 a 59 anos,219,952546.0,22.99,,0,definitivo
+2023,Santa Catarina,acidente_transporte,60 a 69 anos,148,716334.0,20.66,,0,definitivo
+2023,Santa Catarina,acidente_transporte,70 a 79 anos,81,374282.0,21.64,,0,definitivo
+2023,Santa Catarina,acidente_transporte,80 anos e mais,23,148147.0,15.53,,0,definitivo
+2023,Santa Catarina,acidente_transporte,Idade não informada,2,,,,0,definitivo
+2023,Santa Catarina,agressao,0 a 4 anos,4,504102.0,0.79,,0,definitivo
+2023,Santa Catarina,agressao,10 a 14 anos,1,497960.0,0.2,,0,definitivo
+2023,Santa Catarina,agressao,15 a 19 anos,39,499345.0,7.81,,0,definitivo
+2023,Santa Catarina,agressao,20 a 29 anos,181,1221871.0,14.81,,0,definitivo
+2023,Santa Catarina,agressao,30 a 39 anos,150,1326454.0,11.31,,0,definitivo
+2023,Santa Catarina,agressao,40 a 49 anos,128,1161828.0,11.02,,0,definitivo
+2023,Santa Catarina,agressao,5 a 9 anos,3,524343.0,0.57,,0,definitivo
+2023,Santa Catarina,agressao,50 a 59 anos,64,952546.0,6.72,,0,definitivo
+2023,Santa Catarina,agressao,60 a 69 anos,34,716334.0,4.75,,0,definitivo
+2023,Santa Catarina,agressao,70 a 79 anos,11,374282.0,2.94,,0,definitivo
+2023,Santa Catarina,agressao,80 anos e mais,0,148147.0,0.0,,0,definitivo
+2023,Santa Catarina,agressao,Idade não informada,3,,,,0,definitivo
+2023,Santa Catarina,suicidio,0 a 4 anos,0,504102.0,0.0,,0,definitivo
+2023,Santa Catarina,suicidio,10 a 14 anos,6,497960.0,1.2,,0,definitivo
+2023,Santa Catarina,suicidio,15 a 19 anos,36,499345.0,7.21,,0,definitivo
+2023,Santa Catarina,suicidio,20 a 29 anos,147,1221871.0,12.03,,0,definitivo
+2023,Santa Catarina,suicidio,30 a 39 anos,181,1326454.0,13.65,,0,definitivo
+2023,Santa Catarina,suicidio,40 a 49 anos,186,1161828.0,16.01,,0,definitivo
+2023,Santa Catarina,suicidio,5 a 9 anos,0,524343.0,0.0,,0,definitivo
+2023,Santa Catarina,suicidio,50 a 59 anos,178,952546.0,18.69,,0,definitivo
+2023,Santa Catarina,suicidio,60 a 69 anos,122,716334.0,17.03,,0,definitivo
+2023,Santa Catarina,suicidio,70 a 79 anos,84,374282.0,22.44,,0,definitivo
+2023,Santa Catarina,suicidio,80 anos e mais,23,148147.0,15.53,,0,definitivo
+2023,Santa Catarina,suicidio,Idade não informada,0,,,,0,definitivo
+2024,Brasil,acidente_transporte,0 a 4 anos,335,13017992.0,2.57,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,10 a 14 anos,363,14505688.0,2.5,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,15 a 19 anos,2182,14971635.0,14.57,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,20 a 29 anos,8206,32278607.0,25.42,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,30 a 39 anos,7138,32708600.0,21.82,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,40 a 49 anos,6858,31464840.0,21.8,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,5 a 9 anos,260,14531027.0,1.79,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,50 a 59 anos,5425,24935747.0,21.76,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,60 a 69 anos,4124,18845303.0,21.88,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,70 a 79 anos,2267,10573106.0,21.44,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,80 anos e mais,968,4751205.0,20.37,2024-12-31,12,definitivo
+2024,Brasil,acidente_transporte,Idade não informada,127,,,2024-12-31,12,definitivo
+2024,Brasil,agressao,0 a 4 anos,179,13017992.0,1.38,2024-12-31,12,definitivo
+2024,Brasil,agressao,10 a 14 anos,245,14505688.0,1.69,2024-12-31,12,definitivo
+2024,Brasil,agressao,15 a 19 anos,4103,14971635.0,27.41,2024-12-31,12,definitivo
+2024,Brasil,agressao,20 a 29 anos,13878,32278607.0,42.99,2024-12-31,12,definitivo
+2024,Brasil,agressao,30 a 39 anos,10057,32708600.0,30.75,2024-12-31,12,definitivo
+2024,Brasil,agressao,40 a 49 anos,6225,31464840.0,19.78,2024-12-31,12,definitivo
+2024,Brasil,agressao,5 a 9 anos,67,14531027.0,0.46,2024-12-31,12,definitivo
+2024,Brasil,agressao,50 a 59 anos,2796,24935747.0,11.21,2024-12-31,12,definitivo
+2024,Brasil,agressao,60 a 69 anos,1282,18845303.0,6.8,2024-12-31,12,definitivo
+2024,Brasil,agressao,70 a 79 anos,517,10573106.0,4.89,2024-12-31,12,definitivo
+2024,Brasil,agressao,80 anos e mais,193,4751205.0,4.06,2024-12-31,12,definitivo
+2024,Brasil,agressao,Idade não informada,404,,,2024-12-31,12,definitivo
+2024,Brasil,suicidio,0 a 4 anos,4,13017992.0,0.03,2024-12-31,12,definitivo
+2024,Brasil,suicidio,10 a 14 anos,157,14505688.0,1.08,2024-12-31,12,definitivo
+2024,Brasil,suicidio,15 a 19 anos,845,14971635.0,5.64,2024-12-31,12,definitivo
+2024,Brasil,suicidio,20 a 29 anos,3490,32278607.0,10.81,2024-12-31,12,definitivo
+2024,Brasil,suicidio,30 a 39 anos,3590,32708600.0,10.98,2024-12-31,12,definitivo
+2024,Brasil,suicidio,40 a 49 anos,3283,31464840.0,10.43,2024-12-31,12,definitivo
+2024,Brasil,suicidio,5 a 9 anos,4,14531027.0,0.03,2024-12-31,12,definitivo
+2024,Brasil,suicidio,50 a 59 anos,2431,24935747.0,9.75,2024-12-31,12,definitivo
+2024,Brasil,suicidio,60 a 69 anos,1620,18845303.0,8.6,2024-12-31,12,definitivo
+2024,Brasil,suicidio,70 a 79 anos,937,10573106.0,8.86,2024-12-31,12,definitivo
+2024,Brasil,suicidio,80 anos e mais,368,4751205.0,7.75,2024-12-31,12,definitivo
+2024,Brasil,suicidio,Idade não informada,22,,,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,0 a 4 anos,14,501275.0,2.79,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,10 a 14 anos,15,508785.0,2.95,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,15 a 19 anos,92,504176.0,18.25,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,20 a 29 anos,330,1210383.0,27.26,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,30 a 39 anos,281,1342306.0,20.93,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,40 a 49 anos,274,1197956.0,22.87,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,5 a 9 anos,8,533039.0,1.5,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,50 a 59 anos,220,963817.0,22.83,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,60 a 69 anos,196,744412.0,26.33,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,70 a 79 anos,78,395870.0,19.7,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,80 anos e mais,29,156422.0,18.54,2024-12-31,12,definitivo
+2024,Santa Catarina,acidente_transporte,Idade não informada,1,,,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,0 a 4 anos,9,501275.0,1.8,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,10 a 14 anos,3,508785.0,0.59,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,15 a 19 anos,31,504176.0,6.15,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,20 a 29 anos,171,1210383.0,14.13,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,30 a 39 anos,170,1342306.0,12.66,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,40 a 49 anos,114,1197956.0,9.52,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,5 a 9 anos,2,533039.0,0.38,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,50 a 59 anos,63,963817.0,6.54,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,60 a 69 anos,21,744412.0,2.82,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,70 a 79 anos,13,395870.0,3.28,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,80 anos e mais,7,156422.0,4.48,2024-12-31,12,definitivo
+2024,Santa Catarina,agressao,Idade não informada,4,,,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,0 a 4 anos,0,501275.0,0.0,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,10 a 14 anos,2,508785.0,0.39,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,15 a 19 anos,25,504176.0,4.96,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,20 a 29 anos,149,1210383.0,12.31,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,30 a 39 anos,212,1342306.0,15.79,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,40 a 49 anos,188,1197956.0,15.69,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,5 a 9 anos,0,533039.0,0.0,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,50 a 59 anos,180,963817.0,18.68,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,60 a 69 anos,131,744412.0,17.6,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,70 a 79 anos,73,395870.0,18.44,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,80 anos e mais,26,156422.0,16.62,2024-12-31,12,definitivo
+2024,Santa Catarina,suicidio,Idade não informada,1,,,2024-12-31,12,definitivo
+2025,Brasil,acidente_transporte,0 a 4 anos,186,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,10 a 14 anos,197,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,15 a 19 anos,1209,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,20 a 29 anos,4469,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,30 a 39 anos,3894,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,40 a 49 anos,3825,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,5 a 9 anos,171,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,50 a 59 anos,2890,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,60 a 69 anos,2227,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,70 a 79 anos,1334,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,80 anos e mais,548,,,2025-08-31,8,preliminar
+2025,Brasil,acidente_transporte,Idade não informada,50,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,0 a 4 anos,92,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,10 a 14 anos,117,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,15 a 19 anos,1955,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,20 a 29 anos,7048,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,30 a 39 anos,5101,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,40 a 49 anos,3256,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,5 a 9 anos,32,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,50 a 59 anos,1410,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,60 a 69 anos,664,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,70 a 79 anos,263,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,80 anos e mais,81,,,2025-08-31,8,preliminar
+2025,Brasil,agressao,Idade não informada,150,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,0 a 4 anos,0,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,10 a 14 anos,110,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,15 a 19 anos,468,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,20 a 29 anos,1747,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,30 a 39 anos,1896,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,40 a 49 anos,1725,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,5 a 9 anos,4,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,50 a 59 anos,1216,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,60 a 69 anos,846,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,70 a 79 anos,470,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,80 anos e mais,211,,,2025-08-31,8,preliminar
+2025,Brasil,suicidio,Idade não informada,12,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,0 a 4 anos,11,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,10 a 14 anos,17,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,15 a 19 anos,54,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,20 a 29 anos,215,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,30 a 39 anos,197,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,40 a 49 anos,165,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,5 a 9 anos,8,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,50 a 59 anos,127,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,60 a 69 anos,106,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,70 a 79 anos,59,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,80 anos e mais,22,,,2025-08-31,8,preliminar
+2025,Santa Catarina,acidente_transporte,Idade não informada,1,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,0 a 4 anos,3,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,10 a 14 anos,2,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,15 a 19 anos,10,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,20 a 29 anos,90,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,30 a 39 anos,80,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,40 a 49 anos,67,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,5 a 9 anos,1,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,50 a 59 anos,34,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,60 a 69 anos,12,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,70 a 79 anos,4,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,80 anos e mais,4,,,2025-08-31,8,preliminar
+2025,Santa Catarina,agressao,Idade não informada,1,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,0 a 4 anos,0,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,10 a 14 anos,5,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,15 a 19 anos,18,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,20 a 29 anos,84,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,30 a 39 anos,125,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,40 a 49 anos,117,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,5 a 9 anos,0,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,50 a 59 anos,97,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,60 a 69 anos,80,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,70 a 79 anos,36,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,80 anos e mais,13,,,2025-08-31,8,preliminar
+2025,Santa Catarina,suicidio,Idade não informada,0,,,2025-08-31,8,preliminar
+2026,Brasil,acidente_transporte,0 a 4 anos,158,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,10 a 14 anos,201,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,15 a 19 anos,1308,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,20 a 29 anos,4545,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,30 a 39 anos,3926,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,40 a 49 anos,3933,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,5 a 9 anos,138,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,50 a 59 anos,2952,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,60 a 69 anos,2342,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,70 a 79 anos,1389,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,80 anos e mais,602,,,2026-08-30,8,previa
+2026,Brasil,acidente_transporte,Idade não informada,44,,,2026-08-30,8,previa
+2026,Brasil,agressao,0 a 4 anos,65,,,2026-08-30,8,previa
+2026,Brasil,agressao,10 a 14 anos,83,,,2026-08-30,8,previa
+2026,Brasil,agressao,15 a 19 anos,1732,,,2026-08-30,8,previa
+2026,Brasil,agressao,20 a 29 anos,5969,,,2026-08-30,8,previa
+2026,Brasil,agressao,30 a 39 anos,4406,,,2026-08-30,8,previa
+2026,Brasil,agressao,40 a 49 anos,2932,,,2026-08-30,8,previa
+2026,Brasil,agressao,5 a 9 anos,20,,,2026-08-30,8,previa
+2026,Brasil,agressao,50 a 59 anos,1334,,,2026-08-30,8,previa
+2026,Brasil,agressao,60 a 69 anos,630,,,2026-08-30,8,previa
+2026,Brasil,agressao,70 a 79 anos,213,,,2026-08-30,8,previa
+2026,Brasil,agressao,80 anos e mais,108,,,2026-08-30,8,previa
+2026,Brasil,agressao,Idade não informada,136,,,2026-08-30,8,previa
+2026,Brasil,suicidio,0 a 4 anos,0,,,2026-08-30,8,previa
+2026,Brasil,suicidio,10 a 14 anos,127,,,2026-08-30,8,previa
+2026,Brasil,suicidio,15 a 19 anos,524,,,2026-08-30,8,previa
+2026,Brasil,suicidio,20 a 29 anos,1809,,,2026-08-30,8,previa
+2026,Brasil,suicidio,30 a 39 anos,1919,,,2026-08-30,8,previa
+2026,Brasil,suicidio,40 a 49 anos,1819,,,2026-08-30,8,previa
+2026,Brasil,suicidio,5 a 9 anos,1,,,2026-08-30,8,previa
+2026,Brasil,suicidio,50 a 59 anos,1267,,,2026-08-30,8,previa
+2026,Brasil,suicidio,60 a 69 anos,867,,,2026-08-30,8,previa
+2026,Brasil,suicidio,70 a 79 anos,473,,,2026-08-30,8,previa
+2026,Brasil,suicidio,80 anos e mais,207,,,2026-08-30,8,previa
+2026,Brasil,suicidio,Idade não informada,6,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,0 a 4 anos,15,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,10 a 14 anos,11,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,15 a 19 anos,59,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,20 a 29 anos,195,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,30 a 39 anos,167,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,40 a 49 anos,158,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,5 a 9 anos,7,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,50 a 59 anos,132,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,60 a 69 anos,138,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,70 a 79 anos,47,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,80 anos e mais,36,,,2026-08-30,8,previa
+2026,Santa Catarina,acidente_transporte,Idade não informada,0,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,0 a 4 anos,0,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,10 a 14 anos,1,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,15 a 19 anos,27,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,20 a 29 anos,90,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,30 a 39 anos,85,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,40 a 49 anos,56,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,5 a 9 anos,0,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,50 a 59 anos,26,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,60 a 69 anos,15,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,70 a 79 anos,5,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,80 anos e mais,5,,,2026-08-30,8,previa
+2026,Santa Catarina,agressao,Idade não informada,1,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,0 a 4 anos,0,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,10 a 14 anos,5,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,15 a 19 anos,14,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,20 a 29 anos,89,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,30 a 39 anos,104,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,40 a 49 anos,107,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,5 a 9 anos,0,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,50 a 59 anos,86,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,60 a 69 anos,81,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,70 a 79 anos,39,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,80 anos e mais,19,,,2026-08-30,8,previa
+2026,Santa Catarina,suicidio,Idade não informada,0,,,2026-08-30,8,previa

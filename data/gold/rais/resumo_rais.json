@@ -1,0 +1,29 @@
+{
+  "gerado_em": "2026-10-15",
+  "periodo": [
+    2019,
+    2025
+  ],
+  "raca_usavel": [
+    2024,
+    2025
+  ],
+  "controles": {
+    "brasil_igual_soma_ufs": true,
+    "sc_vinculos_2019": 2319210,
+    "sc_vinculos_2025": 2949150
+  },
+  "linhas": {
+    "silver_estoque": 26036,
+    "silver_movimento": 30900,
+    "silver_escolaridade": 28064,
+    "gold_sexo": 196,
+    "gold_sexo_municipios": 295,
+    "gold_movimento": 4704,
+    "gold_insercao": 56,
+    "gold_salario_raca": 56,
+    "gold_salario_raca_municipios": 295,
+    "gold_escolaridade": 2455,
+    "gold_qualidade": 56
+  }
+}

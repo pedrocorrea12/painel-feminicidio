@@ -1,0 +1,29 @@
+{
+  "gerado_em": "2026-10-14",
+  "arquivos": {
+    "historico": "data\\gold\\integrado\\historico_integrado_2019_2024.csv",
+    "monitoramento": "data\\gold\\integrado\\monitoramento_atual_2025_2026.csv",
+    "validacao_municipios": "data\\gold\\integrado\\validacao_municipios_sinesp_sc.csv",
+    "relatorio": "docs\\RELATORIO_INTEGRACAO_DADOS.md"
+  },
+  "controle": {
+    "linhas_historico": 1782,
+    "linhas_monitoramento": 1485,
+    "registros_validacao_municipios": 296,
+    "municipios_sc_correspondencia_encontrada": 295,
+    "registros_especiais_sinesp": 1,
+    "municipios_sc_com_feminicidio_2025": 32
+  },
+  "atuais": {
+    "sinan_2025_brasil": 294188,
+    "sinan_2025_sc": 11773,
+    "sinesp_2025_brasil": 1578,
+    "sinesp_2025_sc": 52,
+    "sinesp_2026_jan_ago_brasil": 983,
+    "sinesp_2026_jan_ago_sc": 38,
+    "sim_2025_ate_26_ago_brasil": 1842,
+    "sim_2025_ate_26_ago_sc": 49,
+    "sim_2026_ate_26_ago_brasil": 1606,
+    "sim_2026_ate_26_ago_sc": 49
+  }
+}

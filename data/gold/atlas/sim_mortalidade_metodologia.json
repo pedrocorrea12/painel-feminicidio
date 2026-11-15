@@ -1,0 +1,17 @@
+{
+  "fonte": "Portal de Dados Abertos do SUS, Sistema de Informações sobre Mortalidade",
+  "documentacao": "https://svs.aids.gov.br/daent/cgiae/coesv/sistemas-informacao/sim/documentacao/dicionario-de-dados-SIM-tabela-DO.pdf",
+  "territorio_taxas": "município de residência",
+  "grupos_cid10": {
+    "agressao": "X85 a Y09",
+    "suicidio": "X60 a X84",
+    "acidente_transporte": "V01 a V99"
+  },
+  "denominadores": "população total, por sexo e por idade, de 2015 a 2024",
+  "limite": "sexo e idade não podem ser cruzados porque a fonte populacional os fornece separadamente",
+  "situacao_dado": {
+    "2015 a 2024": "definitivo",
+    "2025": "preliminar",
+    "2026": "prévia"
+  }
+}
