@@ -1,0 +1,2456 @@
+﻿ano,nivel_territorial,id_territorio,territorio,sigla_uf,grupo_raca,cd_escolaridade,escolaridade,vinculos,vinculos_grupo_raca,distribuicao_escolaridade_pct
+2024,uf,AC,AC,AC,Amarela,1,Analfabeto,3,904,0.33
+2024,uf,AC,AC,AC,Amarela,2,Até 5 ano incompleto,10,904,1.11
+2024,uf,AC,AC,AC,Amarela,3,5 ano completo,5,904,0.55
+2024,uf,AC,AC,AC,Amarela,4,6 a 9 ano incompleto,11,904,1.22
+2024,uf,AC,AC,AC,Amarela,5,Fundamental completo,19,904,2.1
+2024,uf,AC,AC,AC,Amarela,6,Médio incompleto,28,904,3.1
+2024,uf,AC,AC,AC,Amarela,7,Médio completo,379,904,41.92
+2024,uf,AC,AC,AC,Amarela,8,Superior incompleto,33,904,3.65
+2024,uf,AC,AC,AC,Amarela,9,Superior completo,401,904,44.36
+2024,uf,AC,AC,AC,Amarela,10,Mestrado,9,904,1.0
+2024,uf,AC,AC,AC,Amarela,11,Doutorado,6,904,0.66
+2024,uf,AC,AC,AC,Branca,1,Analfabeto,4,11171,0.04
+2024,uf,AC,AC,AC,Branca,2,Até 5 ano incompleto,78,11171,0.7
+2024,uf,AC,AC,AC,Branca,3,5 ano completo,51,11171,0.46
+2024,uf,AC,AC,AC,Branca,4,6 a 9 ano incompleto,123,11171,1.1
+2024,uf,AC,AC,AC,Branca,5,Fundamental completo,245,11171,2.19
+2024,uf,AC,AC,AC,Branca,6,Médio incompleto,163,11171,1.46
+2024,uf,AC,AC,AC,Branca,7,Médio completo,3392,11171,30.36
+2024,uf,AC,AC,AC,Branca,8,Superior incompleto,318,11171,2.85
+2024,uf,AC,AC,AC,Branca,9,Superior completo,6438,11171,57.63
+2024,uf,AC,AC,AC,Branca,10,Mestrado,235,11171,2.1
+2024,uf,AC,AC,AC,Branca,11,Doutorado,124,11171,1.11
+2024,uf,AC,AC,AC,Indígena,1,Analfabeto,2,370,0.54
+2024,uf,AC,AC,AC,Indígena,2,Até 5 ano incompleto,6,370,1.62
+2024,uf,AC,AC,AC,Indígena,3,5 ano completo,4,370,1.08
+2024,uf,AC,AC,AC,Indígena,4,6 a 9 ano incompleto,2,370,0.54
+2024,uf,AC,AC,AC,Indígena,5,Fundamental completo,14,370,3.78
+2024,uf,AC,AC,AC,Indígena,6,Médio incompleto,4,370,1.08
+2024,uf,AC,AC,AC,Indígena,7,Médio completo,118,370,31.89
+2024,uf,AC,AC,AC,Indígena,8,Superior incompleto,6,370,1.62
+2024,uf,AC,AC,AC,Indígena,9,Superior completo,204,370,55.14
+2024,uf,AC,AC,AC,Indígena,10,Mestrado,10,370,2.7
+2024,uf,AC,AC,AC,Negra,1,Analfabeto,63,62867,0.1
+2024,uf,AC,AC,AC,Negra,2,Até 5 ano incompleto,516,62867,0.82
+2024,uf,AC,AC,AC,Negra,3,5 ano completo,341,62867,0.54
+2024,uf,AC,AC,AC,Negra,4,6 a 9 ano incompleto,744,62867,1.18
+2024,uf,AC,AC,AC,Negra,5,Fundamental completo,1733,62867,2.76
+2024,uf,AC,AC,AC,Negra,6,Médio incompleto,1114,62867,1.77
+2024,uf,AC,AC,AC,Negra,7,Médio completo,27758,62867,44.15
+2024,uf,AC,AC,AC,Negra,8,Superior incompleto,1533,62867,2.44
+2024,uf,AC,AC,AC,Negra,9,Superior completo,28418,62867,45.2
+2024,uf,AC,AC,AC,Negra,10,Mestrado,507,62867,0.81
+2024,uf,AC,AC,AC,Negra,11,Doutorado,140,62867,0.22
+2024,uf,AL,AL,AL,Amarela,1,Analfabeto,37,7570,0.49
+2024,uf,AL,AL,AL,Amarela,2,Até 5 ano incompleto,232,7570,3.06
+2024,uf,AL,AL,AL,Amarela,3,5 ano completo,97,7570,1.28
+2024,uf,AL,AL,AL,Amarela,4,6 a 9 ano incompleto,85,7570,1.12
+2024,uf,AL,AL,AL,Amarela,5,Fundamental completo,492,7570,6.5
+2024,uf,AL,AL,AL,Amarela,6,Médio incompleto,194,7570,2.56
+2024,uf,AL,AL,AL,Amarela,7,Médio completo,2997,7570,39.59
+2024,uf,AL,AL,AL,Amarela,8,Superior incompleto,280,7570,3.7
+2024,uf,AL,AL,AL,Amarela,9,Superior completo,2858,7570,37.75
+2024,uf,AL,AL,AL,Amarela,10,Mestrado,237,7570,3.13
+2024,uf,AL,AL,AL,Amarela,11,Doutorado,61,7570,0.81
+2024,uf,AL,AL,AL,Branca,1,Analfabeto,209,64225,0.33
+2024,uf,AL,AL,AL,Branca,2,Até 5 ano incompleto,577,64225,0.9
+2024,uf,AL,AL,AL,Branca,3,5 ano completo,410,64225,0.64
+2024,uf,AL,AL,AL,Branca,4,6 a 9 ano incompleto,657,64225,1.02
+2024,uf,AL,AL,AL,Branca,5,Fundamental completo,3465,64225,5.4
+2024,uf,AL,AL,AL,Branca,6,Médio incompleto,1354,64225,2.11
+2024,uf,AL,AL,AL,Branca,7,Médio completo,22093,64225,34.4
+2024,uf,AL,AL,AL,Branca,8,Superior incompleto,2178,64225,3.39
+2024,uf,AL,AL,AL,Branca,9,Superior completo,30771,64225,47.91
+2024,uf,AL,AL,AL,Branca,10,Mestrado,1116,64225,1.74
+2024,uf,AL,AL,AL,Branca,11,Doutorado,1395,64225,2.17
+2024,uf,AL,AL,AL,Indígena,1,Analfabeto,5,675,0.74
+2024,uf,AL,AL,AL,Indígena,2,Até 5 ano incompleto,8,675,1.19
+2024,uf,AL,AL,AL,Indígena,3,5 ano completo,12,675,1.78
+2024,uf,AL,AL,AL,Indígena,4,6 a 9 ano incompleto,8,675,1.19
+2024,uf,AL,AL,AL,Indígena,5,Fundamental completo,18,675,2.67
+2024,uf,AL,AL,AL,Indígena,6,Médio incompleto,19,675,2.81
+2024,uf,AL,AL,AL,Indígena,7,Médio completo,227,675,33.63
+2024,uf,AL,AL,AL,Indígena,8,Superior incompleto,11,675,1.63
+2024,uf,AL,AL,AL,Indígena,9,Superior completo,351,675,52.0
+2024,uf,AL,AL,AL,Indígena,10,Mestrado,8,675,1.19
+2024,uf,AL,AL,AL,Indígena,11,Doutorado,8,675,1.19
+2024,uf,AL,AL,AL,Negra,1,Analfabeto,565,159810,0.35
+2024,uf,AL,AL,AL,Negra,2,Até 5 ano incompleto,1947,159810,1.22
+2024,uf,AL,AL,AL,Negra,3,5 ano completo,1159,159810,0.73
+2024,uf,AL,AL,AL,Negra,4,6 a 9 ano incompleto,2781,159810,1.74
+2024,uf,AL,AL,AL,Negra,5,Fundamental completo,5728,159810,3.58
+2024,uf,AL,AL,AL,Negra,6,Médio incompleto,4939,159810,3.09
+2024,uf,AL,AL,AL,Negra,7,Médio completo,84784,159810,53.05
+2024,uf,AL,AL,AL,Negra,8,Superior incompleto,5429,159810,3.4
+2024,uf,AL,AL,AL,Negra,9,Superior completo,50382,159810,31.53
+2024,uf,AL,AL,AL,Negra,10,Mestrado,1380,159810,0.86
+2024,uf,AL,AL,AL,Negra,11,Doutorado,716,159810,0.45
+2024,uf,AM,AM,AM,Amarela,1,Analfabeto,6,1833,0.33
+2024,uf,AM,AM,AM,Amarela,2,Até 5 ano incompleto,14,1833,0.76
+2024,uf,AM,AM,AM,Amarela,3,5 ano completo,10,1833,0.55
+2024,uf,AM,AM,AM,Amarela,4,6 a 9 ano incompleto,29,1833,1.58
+2024,uf,AM,AM,AM,Amarela,5,Fundamental completo,34,1833,1.85
+2024,uf,AM,AM,AM,Amarela,6,Médio incompleto,43,1833,2.35
+2024,uf,AM,AM,AM,Amarela,7,Médio completo,979,1833,53.41
+2024,uf,AM,AM,AM,Amarela,8,Superior incompleto,61,1833,3.33
+2024,uf,AM,AM,AM,Amarela,9,Superior completo,607,1833,33.12
+2024,uf,AM,AM,AM,Amarela,10,Mestrado,26,1833,1.42
+2024,uf,AM,AM,AM,Amarela,11,Doutorado,24,1833,1.31
+2024,uf,AM,AM,AM,Branca,1,Analfabeto,42,46668,0.09
+2024,uf,AM,AM,AM,Branca,2,Até 5 ano incompleto,297,46668,0.64
+2024,uf,AM,AM,AM,Branca,3,5 ano completo,294,46668,0.63
+2024,uf,AM,AM,AM,Branca,4,6 a 9 ano incompleto,511,46668,1.09
+2024,uf,AM,AM,AM,Branca,5,Fundamental completo,1179,46668,2.53
+2024,uf,AM,AM,AM,Branca,6,Médio incompleto,974,46668,2.09
+2024,uf,AM,AM,AM,Branca,7,Médio completo,19670,46668,42.15
+2024,uf,AM,AM,AM,Branca,8,Superior incompleto,1623,46668,3.48
+2024,uf,AM,AM,AM,Branca,9,Superior completo,20600,46668,44.14
+2024,uf,AM,AM,AM,Branca,10,Mestrado,879,46668,1.88
+2024,uf,AM,AM,AM,Branca,11,Doutorado,599,46668,1.28
+2024,uf,AM,AM,AM,Indígena,1,Analfabeto,6,2458,0.24
+2024,uf,AM,AM,AM,Indígena,2,Até 5 ano incompleto,18,2458,0.73
+2024,uf,AM,AM,AM,Indígena,3,5 ano completo,12,2458,0.49
+2024,uf,AM,AM,AM,Indígena,4,6 a 9 ano incompleto,32,2458,1.3
+2024,uf,AM,AM,AM,Indígena,5,Fundamental completo,74,2458,3.01
+2024,uf,AM,AM,AM,Indígena,6,Médio incompleto,38,2458,1.55
+2024,uf,AM,AM,AM,Indígena,7,Médio completo,1140,2458,46.38
+2024,uf,AM,AM,AM,Indígena,8,Superior incompleto,60,2458,2.44
+2024,uf,AM,AM,AM,Indígena,9,Superior completo,1043,2458,42.43
+2024,uf,AM,AM,AM,Indígena,10,Mestrado,27,2458,1.1
+2024,uf,AM,AM,AM,Indígena,11,Doutorado,8,2458,0.33
+2024,uf,AM,AM,AM,Negra,1,Analfabeto,335,275899,0.12
+2024,uf,AM,AM,AM,Negra,2,Até 5 ano incompleto,1552,275899,0.56
+2024,uf,AM,AM,AM,Negra,3,5 ano completo,1145,275899,0.42
+2024,uf,AM,AM,AM,Negra,4,6 a 9 ano incompleto,3184,275899,1.15
+2024,uf,AM,AM,AM,Negra,5,Fundamental completo,7768,275899,2.82
+2024,uf,AM,AM,AM,Negra,6,Médio incompleto,6283,275899,2.28
+2024,uf,AM,AM,AM,Negra,7,Médio completo,153451,275899,55.62
+2024,uf,AM,AM,AM,Negra,8,Superior incompleto,7571,275899,2.74
+2024,uf,AM,AM,AM,Negra,9,Superior completo,91748,275899,33.25
+2024,uf,AM,AM,AM,Negra,10,Mestrado,1812,275899,0.66
+2024,uf,AM,AM,AM,Negra,11,Doutorado,1050,275899,0.38
+2024,uf,AP,AP,AP,Amarela,1,Analfabeto,5,748,0.67
+2024,uf,AP,AP,AP,Amarela,2,Até 5 ano incompleto,9,748,1.2
+2024,uf,AP,AP,AP,Amarela,3,5 ano completo,3,748,0.4
+2024,uf,AP,AP,AP,Amarela,4,6 a 9 ano incompleto,6,748,0.8
+2024,uf,AP,AP,AP,Amarela,5,Fundamental completo,52,748,6.95
+2024,uf,AP,AP,AP,Amarela,6,Médio incompleto,24,748,3.21
+2024,uf,AP,AP,AP,Amarela,7,Médio completo,306,748,40.91
+2024,uf,AP,AP,AP,Amarela,8,Superior incompleto,29,748,3.88
+2024,uf,AP,AP,AP,Amarela,9,Superior completo,308,748,41.18
+2024,uf,AP,AP,AP,Amarela,10,Mestrado,3,748,0.4
+2024,uf,AP,AP,AP,Amarela,11,Doutorado,3,748,0.4
+2024,uf,AP,AP,AP,Branca,1,Analfabeto,895,16141,5.54
+2024,uf,AP,AP,AP,Branca,2,Até 5 ano incompleto,41,16141,0.25
+2024,uf,AP,AP,AP,Branca,3,5 ano completo,37,16141,0.23
+2024,uf,AP,AP,AP,Branca,4,6 a 9 ano incompleto,76,16141,0.47
+2024,uf,AP,AP,AP,Branca,5,Fundamental completo,381,16141,2.36
+2024,uf,AP,AP,AP,Branca,6,Médio incompleto,149,16141,0.92
+2024,uf,AP,AP,AP,Branca,7,Médio completo,5525,16141,34.23
+2024,uf,AP,AP,AP,Branca,8,Superior incompleto,257,16141,1.59
+2024,uf,AP,AP,AP,Branca,9,Superior completo,8548,16141,52.96
+2024,uf,AP,AP,AP,Branca,10,Mestrado,138,16141,0.85
+2024,uf,AP,AP,AP,Branca,11,Doutorado,94,16141,0.58
+2024,uf,AP,AP,AP,Indígena,1,Analfabeto,4,379,1.06
+2024,uf,AP,AP,AP,Indígena,2,Até 5 ano incompleto,10,379,2.64
+2024,uf,AP,AP,AP,Indígena,3,5 ano completo,3,379,0.79
+2024,uf,AP,AP,AP,Indígena,4,6 a 9 ano incompleto,17,379,4.49
+2024,uf,AP,AP,AP,Indígena,5,Fundamental completo,38,379,10.03
+2024,uf,AP,AP,AP,Indígena,6,Médio incompleto,27,379,7.12
+2024,uf,AP,AP,AP,Indígena,7,Médio completo,113,379,29.82
+2024,uf,AP,AP,AP,Indígena,8,Superior incompleto,6,379,1.58
+2024,uf,AP,AP,AP,Indígena,9,Superior completo,157,379,41.42
+2024,uf,AP,AP,AP,Indígena,10,Mestrado,4,379,1.06
+2024,uf,AP,AP,AP,Negra,1,Analfabeto,477,53560,0.89
+2024,uf,AP,AP,AP,Negra,2,Até 5 ano incompleto,354,53560,0.66
+2024,uf,AP,AP,AP,Negra,3,5 ano completo,230,53560,0.43
+2024,uf,AP,AP,AP,Negra,4,6 a 9 ano incompleto,720,53560,1.34
+2024,uf,AP,AP,AP,Negra,5,Fundamental completo,2932,53560,5.47
+2024,uf,AP,AP,AP,Negra,6,Médio incompleto,1258,53560,2.35
+2024,uf,AP,AP,AP,Negra,7,Médio completo,25180,53560,47.01
+2024,uf,AP,AP,AP,Negra,8,Superior incompleto,1204,53560,2.25
+2024,uf,AP,AP,AP,Negra,9,Superior completo,20803,53560,38.84
+2024,uf,AP,AP,AP,Negra,10,Mestrado,267,53560,0.5
+2024,uf,AP,AP,AP,Negra,11,Doutorado,135,53560,0.25
+2024,uf,BA,BA,BA,Amarela,1,Analfabeto,9,9190,0.1
+2024,uf,BA,BA,BA,Amarela,2,Até 5 ano incompleto,63,9190,0.69
+2024,uf,BA,BA,BA,Amarela,3,5 ano completo,45,9190,0.49
+2024,uf,BA,BA,BA,Amarela,4,6 a 9 ano incompleto,144,9190,1.57
+2024,uf,BA,BA,BA,Amarela,5,Fundamental completo,216,9190,2.35
+2024,uf,BA,BA,BA,Amarela,6,Médio incompleto,293,9190,3.19
+2024,uf,BA,BA,BA,Amarela,7,Médio completo,4558,9190,49.6
+2024,uf,BA,BA,BA,Amarela,8,Superior incompleto,336,9190,3.66
+2024,uf,BA,BA,BA,Amarela,9,Superior completo,3393,9190,36.92
+2024,uf,BA,BA,BA,Amarela,10,Mestrado,94,9190,1.02
+2024,uf,BA,BA,BA,Amarela,11,Doutorado,39,9190,0.42
+2024,uf,BA,BA,BA,Branca,1,Analfabeto,230,169035,0.14
+2024,uf,BA,BA,BA,Branca,2,Até 5 ano incompleto,1000,169035,0.59
+2024,uf,BA,BA,BA,Branca,3,5 ano completo,923,169035,0.55
+2024,uf,BA,BA,BA,Branca,4,6 a 9 ano incompleto,2010,169035,1.19
+2024,uf,BA,BA,BA,Branca,5,Fundamental completo,3770,169035,2.23
+2024,uf,BA,BA,BA,Branca,6,Médio incompleto,3899,169035,2.31
+2024,uf,BA,BA,BA,Branca,7,Médio completo,70055,169035,41.44
+2024,uf,BA,BA,BA,Branca,8,Superior incompleto,5384,169035,3.19
+2024,uf,BA,BA,BA,Branca,9,Superior completo,77437,169035,45.81
+2024,uf,BA,BA,BA,Branca,10,Mestrado,2618,169035,1.55
+2024,uf,BA,BA,BA,Branca,11,Doutorado,1709,169035,1.01
+2024,uf,BA,BA,BA,Indígena,1,Analfabeto,6,3558,0.17
+2024,uf,BA,BA,BA,Indígena,2,Até 5 ano incompleto,55,3558,1.55
+2024,uf,BA,BA,BA,Indígena,3,5 ano completo,63,3558,1.77
+2024,uf,BA,BA,BA,Indígena,4,6 a 9 ano incompleto,90,3558,2.53
+2024,uf,BA,BA,BA,Indígena,5,Fundamental completo,90,3558,2.53
+2024,uf,BA,BA,BA,Indígena,6,Médio incompleto,152,3558,4.27
+2024,uf,BA,BA,BA,Indígena,7,Médio completo,1711,3558,48.09
+2024,uf,BA,BA,BA,Indígena,8,Superior incompleto,77,3558,2.16
+2024,uf,BA,BA,BA,Indígena,9,Superior completo,1253,3558,35.22
+2024,uf,BA,BA,BA,Indígena,10,Mestrado,44,3558,1.24
+2024,uf,BA,BA,BA,Indígena,11,Doutorado,17,3558,0.48
+2024,uf,BA,BA,BA,Negra,1,Analfabeto,1276,933359,0.14
+2024,uf,BA,BA,BA,Negra,2,Até 5 ano incompleto,8812,933359,0.94
+2024,uf,BA,BA,BA,Negra,3,5 ano completo,6365,933359,0.68
+2024,uf,BA,BA,BA,Negra,4,6 a 9 ano incompleto,14667,933359,1.57
+2024,uf,BA,BA,BA,Negra,5,Fundamental completo,20616,933359,2.21
+2024,uf,BA,BA,BA,Negra,6,Médio incompleto,30349,933359,3.25
+2024,uf,BA,BA,BA,Negra,7,Médio completo,519659,933359,55.68
+2024,uf,BA,BA,BA,Negra,8,Superior incompleto,26628,933359,2.85
+2024,uf,BA,BA,BA,Negra,9,Superior completo,296488,933359,31.77
+2024,uf,BA,BA,BA,Negra,10,Mestrado,6325,933359,0.68
+2024,uf,BA,BA,BA,Negra,11,Doutorado,2174,933359,0.23
+2024,brasil,BR,Brasil,BR,Amarela,1,Analfabeto,789,293826,0.27
+2024,brasil,BR,Brasil,BR,Amarela,2,Até 5 ano incompleto,2856,293826,0.97
+2024,brasil,BR,Brasil,BR,Amarela,3,5 ano completo,2350,293826,0.8
+2024,brasil,BR,Brasil,BR,Amarela,4,6 a 9 ano incompleto,5428,293826,1.85
+2024,brasil,BR,Brasil,BR,Amarela,5,Fundamental completo,11341,293826,3.86
+2024,brasil,BR,Brasil,BR,Amarela,6,Médio incompleto,9620,293826,3.27
+2024,brasil,BR,Brasil,BR,Amarela,7,Médio completo,117267,293826,39.91
+2024,brasil,BR,Brasil,BR,Amarela,8,Superior incompleto,9803,293826,3.34
+2024,brasil,BR,Brasil,BR,Amarela,9,Superior completo,127940,293826,43.54
+2024,brasil,BR,Brasil,BR,Amarela,10,Mestrado,4245,293826,1.44
+2024,brasil,BR,Brasil,BR,Amarela,11,Doutorado,2187,293826,0.74
+2024,brasil,BR,Brasil,BR,Branca,1,Analfabeto,21876,12429231,0.18
+2024,brasil,BR,Brasil,BR,Branca,2,Até 5 ano incompleto,92940,12429231,0.75
+2024,brasil,BR,Brasil,BR,Branca,3,5 ano completo,101626,12429231,0.82
+2024,brasil,BR,Brasil,BR,Branca,4,6 a 9 ano incompleto,238502,12429231,1.92
+2024,brasil,BR,Brasil,BR,Branca,5,Fundamental completo,523963,12429231,4.22
+2024,brasil,BR,Brasil,BR,Branca,6,Médio incompleto,448315,12429231,3.61
+2024,brasil,BR,Brasil,BR,Branca,7,Médio completo,5226601,12429231,42.05
+2024,brasil,BR,Brasil,BR,Branca,8,Superior incompleto,492861,12429231,3.97
+2024,brasil,BR,Brasil,BR,Branca,9,Superior completo,5052805,12429231,40.65
+2024,brasil,BR,Brasil,BR,Branca,10,Mestrado,145176,12429231,1.17
+2024,brasil,BR,Brasil,BR,Branca,11,Doutorado,84566,12429231,0.68
+2024,brasil,BR,Brasil,BR,Indígena,1,Analfabeto,552,85029,0.65
+2024,brasil,BR,Brasil,BR,Indígena,2,Até 5 ano incompleto,2006,85029,2.36
+2024,brasil,BR,Brasil,BR,Indígena,3,5 ano completo,932,85029,1.1
+2024,brasil,BR,Brasil,BR,Indígena,4,6 a 9 ano incompleto,2377,85029,2.8
+2024,brasil,BR,Brasil,BR,Indígena,5,Fundamental completo,4635,85029,5.45
+2024,brasil,BR,Brasil,BR,Indígena,6,Médio incompleto,3667,85029,4.31
+2024,brasil,BR,Brasil,BR,Indígena,7,Médio completo,36662,85029,43.12
+2024,brasil,BR,Brasil,BR,Indígena,8,Superior incompleto,2361,85029,2.78
+2024,brasil,BR,Brasil,BR,Indígena,9,Superior completo,30830,85029,36.26
+2024,brasil,BR,Brasil,BR,Indígena,10,Mestrado,710,85029,0.84
+2024,brasil,BR,Brasil,BR,Indígena,11,Doutorado,297,85029,0.35
+2024,brasil,BR,Brasil,BR,Negra,1,Analfabeto,32658,11954517,0.27
+2024,brasil,BR,Brasil,BR,Negra,2,Até 5 ano incompleto,131275,11954517,1.1
+2024,brasil,BR,Brasil,BR,Negra,3,5 ano completo,99602,11954517,0.83
+2024,brasil,BR,Brasil,BR,Negra,4,6 a 9 ano incompleto,296897,11954517,2.48
+2024,brasil,BR,Brasil,BR,Negra,5,Fundamental completo,535561,11954517,4.48
+2024,brasil,BR,Brasil,BR,Negra,6,Médio incompleto,526997,11954517,4.41
+2024,brasil,BR,Brasil,BR,Negra,7,Médio completo,6343988,11954517,53.07
+2024,brasil,BR,Brasil,BR,Negra,8,Superior incompleto,394574,11954517,3.3
+2024,brasil,BR,Brasil,BR,Negra,9,Superior completo,3489818,11954517,29.19
+2024,brasil,BR,Brasil,BR,Negra,10,Mestrado,69026,11954517,0.58
+2024,brasil,BR,Brasil,BR,Negra,11,Doutorado,34121,11954517,0.29
+2024,uf,CE,CE,CE,Amarela,1,Analfabeto,12,6653,0.18
+2024,uf,CE,CE,CE,Amarela,2,Até 5 ano incompleto,39,6653,0.59
+2024,uf,CE,CE,CE,Amarela,3,5 ano completo,43,6653,0.65
+2024,uf,CE,CE,CE,Amarela,4,6 a 9 ano incompleto,115,6653,1.73
+2024,uf,CE,CE,CE,Amarela,5,Fundamental completo,205,6653,3.08
+2024,uf,CE,CE,CE,Amarela,6,Médio incompleto,169,6653,2.54
+2024,uf,CE,CE,CE,Amarela,7,Médio completo,3326,6653,49.99
+2024,uf,CE,CE,CE,Amarela,8,Superior incompleto,244,6653,3.67
+2024,uf,CE,CE,CE,Amarela,9,Superior completo,2406,6653,36.16
+2024,uf,CE,CE,CE,Amarela,10,Mestrado,58,6653,0.87
+2024,uf,CE,CE,CE,Amarela,11,Doutorado,36,6653,0.54
+2024,uf,CE,CE,CE,Branca,1,Analfabeto,351,163350,0.21
+2024,uf,CE,CE,CE,Branca,2,Até 5 ano incompleto,1111,163350,0.68
+2024,uf,CE,CE,CE,Branca,3,5 ano completo,895,163350,0.55
+2024,uf,CE,CE,CE,Branca,4,6 a 9 ano incompleto,2568,163350,1.57
+2024,uf,CE,CE,CE,Branca,5,Fundamental completo,5013,163350,3.07
+2024,uf,CE,CE,CE,Branca,6,Médio incompleto,3542,163350,2.17
+2024,uf,CE,CE,CE,Branca,7,Médio completo,63337,163350,38.77
+2024,uf,CE,CE,CE,Branca,8,Superior incompleto,6407,163350,3.92
+2024,uf,CE,CE,CE,Branca,9,Superior completo,76811,163350,47.02
+2024,uf,CE,CE,CE,Branca,10,Mestrado,2111,163350,1.29
+2024,uf,CE,CE,CE,Branca,11,Doutorado,1204,163350,0.74
+2024,uf,CE,CE,CE,Indígena,1,Analfabeto,36,3716,0.97
+2024,uf,CE,CE,CE,Indígena,2,Até 5 ano incompleto,29,3716,0.78
+2024,uf,CE,CE,CE,Indígena,3,5 ano completo,12,3716,0.32
+2024,uf,CE,CE,CE,Indígena,4,6 a 9 ano incompleto,23,3716,0.62
+2024,uf,CE,CE,CE,Indígena,5,Fundamental completo,143,3716,3.85
+2024,uf,CE,CE,CE,Indígena,6,Médio incompleto,81,3716,2.18
+2024,uf,CE,CE,CE,Indígena,7,Médio completo,1308,3716,35.2
+2024,uf,CE,CE,CE,Indígena,8,Superior incompleto,177,3716,4.76
+2024,uf,CE,CE,CE,Indígena,9,Superior completo,1883,3716,50.67
+2024,uf,CE,CE,CE,Indígena,10,Mestrado,17,3716,0.46
+2024,uf,CE,CE,CE,Indígena,11,Doutorado,7,3716,0.19
+2024,uf,CE,CE,CE,Negra,1,Analfabeto,1528,600034,0.25
+2024,uf,CE,CE,CE,Negra,2,Até 5 ano incompleto,4914,600034,0.82
+2024,uf,CE,CE,CE,Negra,3,5 ano completo,2671,600034,0.45
+2024,uf,CE,CE,CE,Negra,4,6 a 9 ano incompleto,10420,600034,1.74
+2024,uf,CE,CE,CE,Negra,5,Fundamental completo,21989,600034,3.66
+2024,uf,CE,CE,CE,Negra,6,Médio incompleto,16369,600034,2.73
+2024,uf,CE,CE,CE,Negra,7,Médio completo,295216,600034,49.2
+2024,uf,CE,CE,CE,Negra,8,Superior incompleto,20269,600034,3.38
+2024,uf,CE,CE,CE,Negra,9,Superior completo,220127,600034,36.69
+2024,uf,CE,CE,CE,Negra,10,Mestrado,4594,600034,0.77
+2024,uf,CE,CE,CE,Negra,11,Doutorado,1937,600034,0.32
+2024,uf,DF,DF,DF,Amarela,1,Analfabeto,4,10256,0.04
+2024,uf,DF,DF,DF,Amarela,2,Até 5 ano incompleto,27,10256,0.26
+2024,uf,DF,DF,DF,Amarela,3,5 ano completo,19,10256,0.19
+2024,uf,DF,DF,DF,Amarela,4,6 a 9 ano incompleto,113,10256,1.1
+2024,uf,DF,DF,DF,Amarela,5,Fundamental completo,219,10256,2.14
+2024,uf,DF,DF,DF,Amarela,6,Médio incompleto,239,10256,2.33
+2024,uf,DF,DF,DF,Amarela,7,Médio completo,3170,10256,30.91
+2024,uf,DF,DF,DF,Amarela,8,Superior incompleto,378,10256,3.69
+2024,uf,DF,DF,DF,Amarela,9,Superior completo,5704,10256,55.62
+2024,uf,DF,DF,DF,Amarela,10,Mestrado,268,10256,2.61
+2024,uf,DF,DF,DF,Amarela,11,Doutorado,115,10256,1.12
+2024,uf,DF,DF,DF,Branca,1,Analfabeto,159,268274,0.06
+2024,uf,DF,DF,DF,Branca,2,Até 5 ano incompleto,519,268274,0.19
+2024,uf,DF,DF,DF,Branca,3,5 ano completo,500,268274,0.19
+2024,uf,DF,DF,DF,Branca,4,6 a 9 ano incompleto,2050,268274,0.76
+2024,uf,DF,DF,DF,Branca,5,Fundamental completo,4747,268274,1.77
+2024,uf,DF,DF,DF,Branca,6,Médio incompleto,4124,268274,1.54
+2024,uf,DF,DF,DF,Branca,7,Médio completo,65766,268274,24.51
+2024,uf,DF,DF,DF,Branca,8,Superior incompleto,8869,268274,3.31
+2024,uf,DF,DF,DF,Branca,9,Superior completo,168074,268274,62.65
+2024,uf,DF,DF,DF,Branca,10,Mestrado,9515,268274,3.55
+2024,uf,DF,DF,DF,Branca,11,Doutorado,3951,268274,1.47
+2024,uf,DF,DF,DF,Indígena,1,Analfabeto,6,2534,0.24
+2024,uf,DF,DF,DF,Indígena,2,Até 5 ano incompleto,17,2534,0.67
+2024,uf,DF,DF,DF,Indígena,3,5 ano completo,3,2534,0.12
+2024,uf,DF,DF,DF,Indígena,4,6 a 9 ano incompleto,27,2534,1.07
+2024,uf,DF,DF,DF,Indígena,5,Fundamental completo,47,2534,1.85
+2024,uf,DF,DF,DF,Indígena,6,Médio incompleto,58,2534,2.29
+2024,uf,DF,DF,DF,Indígena,7,Médio completo,672,2534,26.52
+2024,uf,DF,DF,DF,Indígena,8,Superior incompleto,89,2534,3.51
+2024,uf,DF,DF,DF,Indígena,9,Superior completo,1555,2534,61.37
+2024,uf,DF,DF,DF,Indígena,10,Mestrado,40,2534,1.58
+2024,uf,DF,DF,DF,Indígena,11,Doutorado,20,2534,0.79
+2024,uf,DF,DF,DF,Negra,1,Analfabeto,490,380257,0.13
+2024,uf,DF,DF,DF,Negra,2,Até 5 ano incompleto,1698,380257,0.45
+2024,uf,DF,DF,DF,Negra,3,5 ano completo,1380,380257,0.36
+2024,uf,DF,DF,DF,Negra,4,6 a 9 ano incompleto,6404,380257,1.68
+2024,uf,DF,DF,DF,Negra,5,Fundamental completo,11541,380257,3.04
+2024,uf,DF,DF,DF,Negra,6,Médio incompleto,12565,380257,3.3
+2024,uf,DF,DF,DF,Negra,7,Médio completo,164943,380257,43.38
+2024,uf,DF,DF,DF,Negra,8,Superior incompleto,14940,380257,3.93
+2024,uf,DF,DF,DF,Negra,9,Superior completo,159654,380257,41.99
+2024,uf,DF,DF,DF,Negra,10,Mestrado,5015,380257,1.32
+2024,uf,DF,DF,DF,Negra,11,Doutorado,1627,380257,0.43
+2024,uf,ES,ES,ES,Amarela,1,Analfabeto,2,3587,0.06
+2024,uf,ES,ES,ES,Amarela,2,Até 5 ano incompleto,50,3587,1.39
+2024,uf,ES,ES,ES,Amarela,3,5 ano completo,19,3587,0.53
+2024,uf,ES,ES,ES,Amarela,4,6 a 9 ano incompleto,99,3587,2.76
+2024,uf,ES,ES,ES,Amarela,5,Fundamental completo,148,3587,4.13
+2024,uf,ES,ES,ES,Amarela,6,Médio incompleto,204,3587,5.69
+2024,uf,ES,ES,ES,Amarela,7,Médio completo,1756,3587,48.95
+2024,uf,ES,ES,ES,Amarela,8,Superior incompleto,168,3587,4.68
+2024,uf,ES,ES,ES,Amarela,9,Superior completo,1073,3587,29.91
+2024,uf,ES,ES,ES,Amarela,10,Mestrado,50,3587,1.39
+2024,uf,ES,ES,ES,Amarela,11,Doutorado,18,3587,0.5
+2024,uf,ES,ES,ES,Branca,1,Analfabeto,161,176900,0.09
+2024,uf,ES,ES,ES,Branca,2,Até 5 ano incompleto,1426,176900,0.81
+2024,uf,ES,ES,ES,Branca,3,5 ano completo,1402,176900,0.79
+2024,uf,ES,ES,ES,Branca,4,6 a 9 ano incompleto,3154,176900,1.78
+2024,uf,ES,ES,ES,Branca,5,Fundamental completo,6922,176900,3.91
+2024,uf,ES,ES,ES,Branca,6,Médio incompleto,6130,176900,3.47
+2024,uf,ES,ES,ES,Branca,7,Médio completo,72213,176900,40.82
+2024,uf,ES,ES,ES,Branca,8,Superior incompleto,6982,176900,3.95
+2024,uf,ES,ES,ES,Branca,9,Superior completo,74292,176900,42.0
+2024,uf,ES,ES,ES,Branca,10,Mestrado,3091,176900,1.75
+2024,uf,ES,ES,ES,Branca,11,Doutorado,1127,176900,0.64
+2024,uf,ES,ES,ES,Indígena,1,Analfabeto,7,1045,0.67
+2024,uf,ES,ES,ES,Indígena,2,Até 5 ano incompleto,16,1045,1.53
+2024,uf,ES,ES,ES,Indígena,3,5 ano completo,12,1045,1.15
+2024,uf,ES,ES,ES,Indígena,4,6 a 9 ano incompleto,44,1045,4.21
+2024,uf,ES,ES,ES,Indígena,5,Fundamental completo,72,1045,6.89
+2024,uf,ES,ES,ES,Indígena,6,Médio incompleto,64,1045,6.12
+2024,uf,ES,ES,ES,Indígena,7,Médio completo,493,1045,47.18
+2024,uf,ES,ES,ES,Indígena,8,Superior incompleto,40,1045,3.83
+2024,uf,ES,ES,ES,Indígena,9,Superior completo,286,1045,27.37
+2024,uf,ES,ES,ES,Indígena,10,Mestrado,6,1045,0.57
+2024,uf,ES,ES,ES,Indígena,11,Doutorado,5,1045,0.48
+2024,uf,ES,ES,ES,Negra,1,Analfabeto,486,290360,0.17
+2024,uf,ES,ES,ES,Negra,2,Até 5 ano incompleto,3362,290360,1.16
+2024,uf,ES,ES,ES,Negra,3,5 ano completo,2659,290360,0.92
+2024,uf,ES,ES,ES,Negra,4,6 a 9 ano incompleto,10262,290360,3.53
+2024,uf,ES,ES,ES,Negra,5,Fundamental completo,17069,290360,5.88
+2024,uf,ES,ES,ES,Negra,6,Médio incompleto,16967,290360,5.84
+2024,uf,ES,ES,ES,Negra,7,Médio completo,152643,290360,52.57
+2024,uf,ES,ES,ES,Negra,8,Superior incompleto,10592,290360,3.65
+2024,uf,ES,ES,ES,Negra,9,Superior completo,73779,290360,25.41
+2024,uf,ES,ES,ES,Negra,10,Mestrado,2015,290360,0.69
+2024,uf,ES,ES,ES,Negra,11,Doutorado,526,290360,0.18
+2024,uf,GO,GO,GO,Amarela,1,Analfabeto,66,12449,0.53
+2024,uf,GO,GO,GO,Amarela,2,Até 5 ano incompleto,150,12449,1.2
+2024,uf,GO,GO,GO,Amarela,3,5 ano completo,102,12449,0.82
+2024,uf,GO,GO,GO,Amarela,4,6 a 9 ano incompleto,345,12449,2.77
+2024,uf,GO,GO,GO,Amarela,5,Fundamental completo,488,12449,3.92
+2024,uf,GO,GO,GO,Amarela,6,Médio incompleto,696,12449,5.59
+2024,uf,GO,GO,GO,Amarela,7,Médio completo,5604,12449,45.02
+2024,uf,GO,GO,GO,Amarela,8,Superior incompleto,510,12449,4.1
+2024,uf,GO,GO,GO,Amarela,9,Superior completo,4339,12449,34.85
+2024,uf,GO,GO,GO,Amarela,10,Mestrado,82,12449,0.66
+2024,uf,GO,GO,GO,Amarela,11,Doutorado,67,12449,0.54
+2024,uf,GO,GO,GO,Branca,1,Analfabeto,577,276907,0.21
+2024,uf,GO,GO,GO,Branca,2,Até 5 ano incompleto,2848,276907,1.03
+2024,uf,GO,GO,GO,Branca,3,5 ano completo,1837,276907,0.66
+2024,uf,GO,GO,GO,Branca,4,6 a 9 ano incompleto,5579,276907,2.01
+2024,uf,GO,GO,GO,Branca,5,Fundamental completo,9518,276907,3.44
+2024,uf,GO,GO,GO,Branca,6,Médio incompleto,11406,276907,4.12
+2024,uf,GO,GO,GO,Branca,7,Médio completo,107876,276907,38.96
+2024,uf,GO,GO,GO,Branca,8,Superior incompleto,10181,276907,3.68
+2024,uf,GO,GO,GO,Branca,9,Superior completo,120878,276907,43.65
+2024,uf,GO,GO,GO,Branca,10,Mestrado,3157,276907,1.14
+2024,uf,GO,GO,GO,Branca,11,Doutorado,3050,276907,1.1
+2024,uf,GO,GO,GO,Indígena,1,Analfabeto,90,1984,4.54
+2024,uf,GO,GO,GO,Indígena,2,Até 5 ano incompleto,32,1984,1.61
+2024,uf,GO,GO,GO,Indígena,3,5 ano completo,20,1984,1.01
+2024,uf,GO,GO,GO,Indígena,4,6 a 9 ano incompleto,75,1984,3.78
+2024,uf,GO,GO,GO,Indígena,5,Fundamental completo,92,1984,4.64
+2024,uf,GO,GO,GO,Indígena,6,Médio incompleto,131,1984,6.6
+2024,uf,GO,GO,GO,Indígena,7,Médio completo,719,1984,36.24
+2024,uf,GO,GO,GO,Indígena,8,Superior incompleto,60,1984,3.02
+2024,uf,GO,GO,GO,Indígena,9,Superior completo,746,1984,37.6
+2024,uf,GO,GO,GO,Indígena,10,Mestrado,13,1984,0.66
+2024,uf,GO,GO,GO,Indígena,11,Doutorado,6,1984,0.3
+2024,uf,GO,GO,GO,Negra,1,Analfabeto,1137,535050,0.21
+2024,uf,GO,GO,GO,Negra,2,Até 5 ano incompleto,7066,535050,1.32
+2024,uf,GO,GO,GO,Negra,3,5 ano completo,3915,535050,0.73
+2024,uf,GO,GO,GO,Negra,4,6 a 9 ano incompleto,16365,535050,3.06
+2024,uf,GO,GO,GO,Negra,5,Fundamental completo,22515,535050,4.21
+2024,uf,GO,GO,GO,Negra,6,Médio incompleto,28962,535050,5.41
+2024,uf,GO,GO,GO,Negra,7,Médio completo,277729,535050,51.91
+2024,uf,GO,GO,GO,Negra,8,Superior incompleto,17668,535050,3.3
+2024,uf,GO,GO,GO,Negra,9,Superior completo,155029,535050,28.97
+2024,uf,GO,GO,GO,Negra,10,Mestrado,2088,535050,0.39
+2024,uf,GO,GO,GO,Negra,11,Doutorado,2576,535050,0.48
+2024,uf,MA,MA,MA,Amarela,1,Analfabeto,70,16445,0.43
+2024,uf,MA,MA,MA,Amarela,2,Até 5 ano incompleto,100,16445,0.61
+2024,uf,MA,MA,MA,Amarela,3,5 ano completo,35,16445,0.21
+2024,uf,MA,MA,MA,Amarela,4,6 a 9 ano incompleto,113,16445,0.69
+2024,uf,MA,MA,MA,Amarela,5,Fundamental completo,591,16445,3.59
+2024,uf,MA,MA,MA,Amarela,6,Médio incompleto,165,16445,1.0
+2024,uf,MA,MA,MA,Amarela,7,Médio completo,5784,16445,35.17
+2024,uf,MA,MA,MA,Amarela,8,Superior incompleto,332,16445,2.02
+2024,uf,MA,MA,MA,Amarela,9,Superior completo,9102,16445,55.35
+2024,uf,MA,MA,MA,Amarela,10,Mestrado,76,16445,0.46
+2024,uf,MA,MA,MA,Amarela,11,Doutorado,77,16445,0.47
+2024,uf,MA,MA,MA,Branca,1,Analfabeto,192,110777,0.17
+2024,uf,MA,MA,MA,Branca,2,Até 5 ano incompleto,515,110777,0.46
+2024,uf,MA,MA,MA,Branca,3,5 ano completo,528,110777,0.48
+2024,uf,MA,MA,MA,Branca,4,6 a 9 ano incompleto,592,110777,0.53
+2024,uf,MA,MA,MA,Branca,5,Fundamental completo,2142,110777,1.93
+2024,uf,MA,MA,MA,Branca,6,Médio incompleto,1189,110777,1.07
+2024,uf,MA,MA,MA,Branca,7,Médio completo,36730,110777,33.16
+2024,uf,MA,MA,MA,Branca,8,Superior incompleto,2636,110777,2.38
+2024,uf,MA,MA,MA,Branca,9,Superior completo,64378,110777,58.11
+2024,uf,MA,MA,MA,Branca,10,Mestrado,1467,110777,1.32
+2024,uf,MA,MA,MA,Branca,11,Doutorado,408,110777,0.37
+2024,uf,MA,MA,MA,Indígena,1,Analfabeto,29,2995,0.97
+2024,uf,MA,MA,MA,Indígena,2,Até 5 ano incompleto,8,2995,0.27
+2024,uf,MA,MA,MA,Indígena,3,5 ano completo,5,2995,0.17
+2024,uf,MA,MA,MA,Indígena,4,6 a 9 ano incompleto,19,2995,0.63
+2024,uf,MA,MA,MA,Indígena,5,Fundamental completo,318,2995,10.62
+2024,uf,MA,MA,MA,Indígena,6,Médio incompleto,49,2995,1.64
+2024,uf,MA,MA,MA,Indígena,7,Médio completo,1631,2995,54.46
+2024,uf,MA,MA,MA,Indígena,8,Superior incompleto,48,2995,1.6
+2024,uf,MA,MA,MA,Indígena,9,Superior completo,880,2995,29.38
+2024,uf,MA,MA,MA,Indígena,10,Mestrado,7,2995,0.23
+2024,uf,MA,MA,MA,Indígena,11,Doutorado,1,2995,0.03
+2024,uf,MA,MA,MA,Negra,1,Analfabeto,716,288785,0.25
+2024,uf,MA,MA,MA,Negra,2,Até 5 ano incompleto,1219,288785,0.42
+2024,uf,MA,MA,MA,Negra,3,5 ano completo,1051,288785,0.36
+2024,uf,MA,MA,MA,Negra,4,6 a 9 ano incompleto,2323,288785,0.8
+2024,uf,MA,MA,MA,Negra,5,Fundamental completo,8790,288785,3.04
+2024,uf,MA,MA,MA,Negra,6,Médio incompleto,4952,288785,1.71
+2024,uf,MA,MA,MA,Negra,7,Médio completo,153874,288785,53.28
+2024,uf,MA,MA,MA,Negra,8,Superior incompleto,7411,288785,2.57
+2024,uf,MA,MA,MA,Negra,9,Superior completo,106242,288785,36.79
+2024,uf,MA,MA,MA,Negra,10,Mestrado,1696,288785,0.59
+2024,uf,MA,MA,MA,Negra,11,Doutorado,511,288785,0.18
+2024,uf,MG,MG,MG,Amarela,1,Analfabeto,66,30554,0.22
+2024,uf,MG,MG,MG,Amarela,2,Até 5 ano incompleto,426,30554,1.39
+2024,uf,MG,MG,MG,Amarela,3,5 ano completo,521,30554,1.71
+2024,uf,MG,MG,MG,Amarela,4,6 a 9 ano incompleto,826,30554,2.7
+2024,uf,MG,MG,MG,Amarela,5,Fundamental completo,1357,30554,4.44
+2024,uf,MG,MG,MG,Amarela,6,Médio incompleto,1349,30554,4.42
+2024,uf,MG,MG,MG,Amarela,7,Médio completo,13753,30554,45.01
+2024,uf,MG,MG,MG,Amarela,8,Superior incompleto,1030,30554,3.37
+2024,uf,MG,MG,MG,Amarela,9,Superior completo,10897,30554,35.66
+2024,uf,MG,MG,MG,Amarela,10,Mestrado,215,30554,0.7
+2024,uf,MG,MG,MG,Amarela,11,Doutorado,114,30554,0.37
+2024,uf,MG,MG,MG,Branca,1,Analfabeto,1956,1174510,0.17
+2024,uf,MG,MG,MG,Branca,2,Até 5 ano incompleto,11312,1174510,0.96
+2024,uf,MG,MG,MG,Branca,3,5 ano completo,15518,1174510,1.32
+2024,uf,MG,MG,MG,Branca,4,6 a 9 ano incompleto,26450,1174510,2.25
+2024,uf,MG,MG,MG,Branca,5,Fundamental completo,49287,1174510,4.2
+2024,uf,MG,MG,MG,Branca,6,Médio incompleto,47471,1174510,4.04
+2024,uf,MG,MG,MG,Branca,7,Médio completo,479149,1174510,40.8
+2024,uf,MG,MG,MG,Branca,8,Superior incompleto,41580,1174510,3.54
+2024,uf,MG,MG,MG,Branca,9,Superior completo,478983,1174510,40.78
+2024,uf,MG,MG,MG,Branca,10,Mestrado,14319,1174510,1.22
+2024,uf,MG,MG,MG,Branca,11,Doutorado,8485,1174510,0.72
+2024,uf,MG,MG,MG,Indígena,1,Analfabeto,79,11917,0.66
+2024,uf,MG,MG,MG,Indígena,2,Até 5 ano incompleto,131,11917,1.1
+2024,uf,MG,MG,MG,Indígena,3,5 ano completo,180,11917,1.51
+2024,uf,MG,MG,MG,Indígena,4,6 a 9 ano incompleto,318,11917,2.67
+2024,uf,MG,MG,MG,Indígena,5,Fundamental completo,578,11917,4.85
+2024,uf,MG,MG,MG,Indígena,6,Médio incompleto,454,11917,3.81
+2024,uf,MG,MG,MG,Indígena,7,Médio completo,5582,11917,46.84
+2024,uf,MG,MG,MG,Indígena,8,Superior incompleto,268,11917,2.25
+2024,uf,MG,MG,MG,Indígena,9,Superior completo,4278,11917,35.9
+2024,uf,MG,MG,MG,Indígena,10,Mestrado,24,11917,0.2
+2024,uf,MG,MG,MG,Indígena,11,Doutorado,25,11917,0.21
+2024,uf,MG,MG,MG,Negra,1,Analfabeto,3381,1417601,0.24
+2024,uf,MG,MG,MG,Negra,2,Até 5 ano incompleto,19934,1417601,1.41
+2024,uf,MG,MG,MG,Negra,3,5 ano completo,19903,1417601,1.4
+2024,uf,MG,MG,MG,Negra,4,6 a 9 ano incompleto,43014,1417601,3.03
+2024,uf,MG,MG,MG,Negra,5,Fundamental completo,63992,1417601,4.51
+2024,uf,MG,MG,MG,Negra,6,Médio incompleto,77520,1417601,5.47
+2024,uf,MG,MG,MG,Negra,7,Médio completo,733551,1417601,51.75
+2024,uf,MG,MG,MG,Negra,8,Superior incompleto,45756,1417601,3.23
+2024,uf,MG,MG,MG,Negra,9,Superior completo,401158,1417601,28.3
+2024,uf,MG,MG,MG,Negra,10,Mestrado,6568,1417601,0.46
+2024,uf,MG,MG,MG,Negra,11,Doutorado,2824,1417601,0.2
+2024,uf,MS,MS,MS,Amarela,1,Analfabeto,13,4322,0.3
+2024,uf,MS,MS,MS,Amarela,2,Até 5 ano incompleto,62,4322,1.43
+2024,uf,MS,MS,MS,Amarela,3,5 ano completo,39,4322,0.9
+2024,uf,MS,MS,MS,Amarela,4,6 a 9 ano incompleto,127,4322,2.94
+2024,uf,MS,MS,MS,Amarela,5,Fundamental completo,207,4322,4.79
+2024,uf,MS,MS,MS,Amarela,6,Médio incompleto,189,4322,4.37
+2024,uf,MS,MS,MS,Amarela,7,Médio completo,1545,4322,35.75
+2024,uf,MS,MS,MS,Amarela,8,Superior incompleto,142,4322,3.29
+2024,uf,MS,MS,MS,Amarela,9,Superior completo,1840,4322,42.57
+2024,uf,MS,MS,MS,Amarela,10,Mestrado,84,4322,1.94
+2024,uf,MS,MS,MS,Amarela,11,Doutorado,74,4322,1.71
+2024,uf,MS,MS,MS,Branca,1,Analfabeto,318,154427,0.21
+2024,uf,MS,MS,MS,Branca,2,Até 5 ano incompleto,1804,154427,1.17
+2024,uf,MS,MS,MS,Branca,3,5 ano completo,1432,154427,0.93
+2024,uf,MS,MS,MS,Branca,4,6 a 9 ano incompleto,3838,154427,2.49
+2024,uf,MS,MS,MS,Branca,5,Fundamental completo,6825,154427,4.42
+2024,uf,MS,MS,MS,Branca,6,Médio incompleto,6699,154427,4.34
+2024,uf,MS,MS,MS,Branca,7,Médio completo,59298,154427,38.4
+2024,uf,MS,MS,MS,Branca,8,Superior incompleto,5991,154427,3.88
+2024,uf,MS,MS,MS,Branca,9,Superior completo,63979,154427,41.43
+2024,uf,MS,MS,MS,Branca,10,Mestrado,2305,154427,1.49
+2024,uf,MS,MS,MS,Branca,11,Doutorado,1938,154427,1.25
+2024,uf,MS,MS,MS,Indígena,1,Analfabeto,18,4995,0.36
+2024,uf,MS,MS,MS,Indígena,2,Até 5 ano incompleto,151,4995,3.02
+2024,uf,MS,MS,MS,Indígena,3,5 ano completo,117,4995,2.34
+2024,uf,MS,MS,MS,Indígena,4,6 a 9 ano incompleto,330,4995,6.61
+2024,uf,MS,MS,MS,Indígena,5,Fundamental completo,492,4995,9.85
+2024,uf,MS,MS,MS,Indígena,6,Médio incompleto,399,4995,7.99
+2024,uf,MS,MS,MS,Indígena,7,Médio completo,2076,4995,41.56
+2024,uf,MS,MS,MS,Indígena,8,Superior incompleto,71,4995,1.42
+2024,uf,MS,MS,MS,Indígena,9,Superior completo,1291,4995,25.85
+2024,uf,MS,MS,MS,Indígena,10,Mestrado,38,4995,0.76
+2024,uf,MS,MS,MS,Indígena,11,Doutorado,12,4995,0.24
+2024,uf,MS,MS,MS,Negra,1,Analfabeto,626,179920,0.35
+2024,uf,MS,MS,MS,Negra,2,Até 5 ano incompleto,3258,179920,1.81
+2024,uf,MS,MS,MS,Negra,3,5 ano completo,2026,179920,1.13
+2024,uf,MS,MS,MS,Negra,4,6 a 9 ano incompleto,6703,179920,3.73
+2024,uf,MS,MS,MS,Negra,5,Fundamental completo,9864,179920,5.48
+2024,uf,MS,MS,MS,Negra,6,Médio incompleto,11758,179920,6.54
+2024,uf,MS,MS,MS,Negra,7,Médio completo,91781,179920,51.01
+2024,uf,MS,MS,MS,Negra,8,Superior incompleto,6354,179920,3.53
+2024,uf,MS,MS,MS,Negra,9,Superior completo,46021,179920,25.58
+2024,uf,MS,MS,MS,Negra,10,Mestrado,974,179920,0.54
+2024,uf,MS,MS,MS,Negra,11,Doutorado,555,179920,0.31
+2024,uf,MT,MT,MT,Amarela,1,Analfabeto,13,5635,0.23
+2024,uf,MT,MT,MT,Amarela,2,Até 5 ano incompleto,65,5635,1.15
+2024,uf,MT,MT,MT,Amarela,3,5 ano completo,47,5635,0.83
+2024,uf,MT,MT,MT,Amarela,4,6 a 9 ano incompleto,101,5635,1.79
+2024,uf,MT,MT,MT,Amarela,5,Fundamental completo,165,5635,2.93
+2024,uf,MT,MT,MT,Amarela,6,Médio incompleto,312,5635,5.54
+2024,uf,MT,MT,MT,Amarela,7,Médio completo,2338,5635,41.49
+2024,uf,MT,MT,MT,Amarela,8,Superior incompleto,216,5635,3.83
+2024,uf,MT,MT,MT,Amarela,9,Superior completo,2278,5635,40.43
+2024,uf,MT,MT,MT,Amarela,10,Mestrado,59,5635,1.05
+2024,uf,MT,MT,MT,Amarela,11,Doutorado,41,5635,0.73
+2024,uf,MT,MT,MT,Branca,1,Analfabeto,220,142415,0.15
+2024,uf,MT,MT,MT,Branca,2,Até 5 ano incompleto,1091,142415,0.77
+2024,uf,MT,MT,MT,Branca,3,5 ano completo,901,142415,0.63
+2024,uf,MT,MT,MT,Branca,4,6 a 9 ano incompleto,2337,142415,1.64
+2024,uf,MT,MT,MT,Branca,5,Fundamental completo,4512,142415,3.17
+2024,uf,MT,MT,MT,Branca,6,Médio incompleto,6106,142415,4.29
+2024,uf,MT,MT,MT,Branca,7,Médio completo,49219,142415,34.56
+2024,uf,MT,MT,MT,Branca,8,Superior incompleto,5738,142415,4.03
+2024,uf,MT,MT,MT,Branca,9,Superior completo,67931,142415,47.7
+2024,uf,MT,MT,MT,Branca,10,Mestrado,2746,142415,1.93
+2024,uf,MT,MT,MT,Branca,11,Doutorado,1614,142415,1.13
+2024,uf,MT,MT,MT,Indígena,1,Analfabeto,8,2059,0.39
+2024,uf,MT,MT,MT,Indígena,2,Até 5 ano incompleto,30,2059,1.46
+2024,uf,MT,MT,MT,Indígena,3,5 ano completo,14,2059,0.68
+2024,uf,MT,MT,MT,Indígena,4,6 a 9 ano incompleto,32,2059,1.55
+2024,uf,MT,MT,MT,Indígena,5,Fundamental completo,166,2059,8.06
+2024,uf,MT,MT,MT,Indígena,6,Médio incompleto,91,2059,4.42
+2024,uf,MT,MT,MT,Indígena,7,Médio completo,1007,2059,48.91
+2024,uf,MT,MT,MT,Indígena,8,Superior incompleto,31,2059,1.51
+2024,uf,MT,MT,MT,Indígena,9,Superior completo,639,2059,31.03
+2024,uf,MT,MT,MT,Indígena,10,Mestrado,31,2059,1.51
+2024,uf,MT,MT,MT,Indígena,11,Doutorado,10,2059,0.49
+2024,uf,MT,MT,MT,Negra,1,Analfabeto,810,351231,0.23
+2024,uf,MT,MT,MT,Negra,2,Até 5 ano incompleto,3760,351231,1.07
+2024,uf,MT,MT,MT,Negra,3,5 ano completo,2710,351231,0.77
+2024,uf,MT,MT,MT,Negra,4,6 a 9 ano incompleto,7842,351231,2.23
+2024,uf,MT,MT,MT,Negra,5,Fundamental completo,13966,351231,3.98
+2024,uf,MT,MT,MT,Negra,6,Médio incompleto,20799,351231,5.92
+2024,uf,MT,MT,MT,Negra,7,Médio completo,172916,351231,49.23
+2024,uf,MT,MT,MT,Negra,8,Superior incompleto,10891,351231,3.1
+2024,uf,MT,MT,MT,Negra,9,Superior completo,113219,351231,32.23
+2024,uf,MT,MT,MT,Negra,10,Mestrado,2731,351231,0.78
+2024,uf,MT,MT,MT,Negra,11,Doutorado,1587,351231,0.45
+2024,uf,PA,PA,PA,Amarela,1,Analfabeto,16,7246,0.22
+2024,uf,PA,PA,PA,Amarela,2,Até 5 ano incompleto,71,7246,0.98
+2024,uf,PA,PA,PA,Amarela,3,5 ano completo,58,7246,0.8
+2024,uf,PA,PA,PA,Amarela,4,6 a 9 ano incompleto,653,7246,9.01
+2024,uf,PA,PA,PA,Amarela,5,Fundamental completo,442,7246,6.1
+2024,uf,PA,PA,PA,Amarela,6,Médio incompleto,240,7246,3.31
+2024,uf,PA,PA,PA,Amarela,7,Médio completo,2246,7246,31.0
+2024,uf,PA,PA,PA,Amarela,8,Superior incompleto,207,7246,2.86
+2024,uf,PA,PA,PA,Amarela,9,Superior completo,2680,7246,36.99
+2024,uf,PA,PA,PA,Amarela,10,Mestrado,593,7246,8.18
+2024,uf,PA,PA,PA,Amarela,11,Doutorado,40,7246,0.55
+2024,uf,PA,PA,PA,Branca,1,Analfabeto,184,108391,0.17
+2024,uf,PA,PA,PA,Branca,2,Até 5 ano incompleto,613,108391,0.57
+2024,uf,PA,PA,PA,Branca,3,5 ano completo,549,108391,0.51
+2024,uf,PA,PA,PA,Branca,4,6 a 9 ano incompleto,2581,108391,2.38
+2024,uf,PA,PA,PA,Branca,5,Fundamental completo,5549,108391,5.12
+2024,uf,PA,PA,PA,Branca,6,Médio incompleto,2342,108391,2.16
+2024,uf,PA,PA,PA,Branca,7,Médio completo,40984,108391,37.81
+2024,uf,PA,PA,PA,Branca,8,Superior incompleto,2707,108391,2.5
+2024,uf,PA,PA,PA,Branca,9,Superior completo,50901,108391,46.96
+2024,uf,PA,PA,PA,Branca,10,Mestrado,1109,108391,1.02
+2024,uf,PA,PA,PA,Branca,11,Doutorado,872,108391,0.8
+2024,uf,PA,PA,PA,Indígena,1,Analfabeto,7,4375,0.16
+2024,uf,PA,PA,PA,Indígena,2,Até 5 ano incompleto,31,4375,0.71
+2024,uf,PA,PA,PA,Indígena,3,5 ano completo,43,4375,0.98
+2024,uf,PA,PA,PA,Indígena,4,6 a 9 ano incompleto,243,4375,5.55
+2024,uf,PA,PA,PA,Indígena,5,Fundamental completo,219,4375,5.01
+2024,uf,PA,PA,PA,Indígena,6,Médio incompleto,156,4375,3.57
+2024,uf,PA,PA,PA,Indígena,7,Médio completo,2536,4375,57.97
+2024,uf,PA,PA,PA,Indígena,8,Superior incompleto,129,4375,2.95
+2024,uf,PA,PA,PA,Indígena,9,Superior completo,977,4375,22.33
+2024,uf,PA,PA,PA,Indígena,10,Mestrado,21,4375,0.48
+2024,uf,PA,PA,PA,Indígena,11,Doutorado,13,4375,0.3
+2024,uf,PA,PA,PA,Negra,1,Analfabeto,2223,430235,0.52
+2024,uf,PA,PA,PA,Negra,2,Até 5 ano incompleto,3536,430235,0.82
+2024,uf,PA,PA,PA,Negra,3,5 ano completo,2420,430235,0.56
+2024,uf,PA,PA,PA,Negra,4,6 a 9 ano incompleto,14108,430235,3.28
+2024,uf,PA,PA,PA,Negra,5,Fundamental completo,26960,430235,6.27
+2024,uf,PA,PA,PA,Negra,6,Médio incompleto,13127,430235,3.05
+2024,uf,PA,PA,PA,Negra,7,Médio completo,221869,430235,51.57
+2024,uf,PA,PA,PA,Negra,8,Superior incompleto,11281,430235,2.62
+2024,uf,PA,PA,PA,Negra,9,Superior completo,130046,430235,30.23
+2024,uf,PA,PA,PA,Negra,10,Mestrado,2569,430235,0.6
+2024,uf,PA,PA,PA,Negra,11,Doutorado,2096,430235,0.49
+2024,uf,PB,PB,PB,Amarela,1,Analfabeto,15,4369,0.34
+2024,uf,PB,PB,PB,Amarela,2,Até 5 ano incompleto,21,4369,0.48
+2024,uf,PB,PB,PB,Amarela,3,5 ano completo,20,4369,0.46
+2024,uf,PB,PB,PB,Amarela,4,6 a 9 ano incompleto,35,4369,0.8
+2024,uf,PB,PB,PB,Amarela,5,Fundamental completo,144,4369,3.3
+2024,uf,PB,PB,PB,Amarela,6,Médio incompleto,51,4369,1.17
+2024,uf,PB,PB,PB,Amarela,7,Médio completo,1784,4369,40.83
+2024,uf,PB,PB,PB,Amarela,8,Superior incompleto,162,4369,3.71
+2024,uf,PB,PB,PB,Amarela,9,Superior completo,2049,4369,46.9
+2024,uf,PB,PB,PB,Amarela,10,Mestrado,65,4369,1.49
+2024,uf,PB,PB,PB,Amarela,11,Doutorado,23,4369,0.53
+2024,uf,PB,PB,PB,Branca,1,Analfabeto,359,91214,0.39
+2024,uf,PB,PB,PB,Branca,2,Até 5 ano incompleto,608,91214,0.67
+2024,uf,PB,PB,PB,Branca,3,5 ano completo,485,91214,0.53
+2024,uf,PB,PB,PB,Branca,4,6 a 9 ano incompleto,1076,91214,1.18
+2024,uf,PB,PB,PB,Branca,5,Fundamental completo,2144,91214,2.35
+2024,uf,PB,PB,PB,Branca,6,Médio incompleto,1624,91214,1.78
+2024,uf,PB,PB,PB,Branca,7,Médio completo,36148,91214,39.63
+2024,uf,PB,PB,PB,Branca,8,Superior incompleto,3661,91214,4.01
+2024,uf,PB,PB,PB,Branca,9,Superior completo,42129,91214,46.19
+2024,uf,PB,PB,PB,Branca,10,Mestrado,1742,91214,1.91
+2024,uf,PB,PB,PB,Branca,11,Doutorado,1238,91214,1.36
+2024,uf,PB,PB,PB,Indígena,1,Analfabeto,6,1316,0.46
+2024,uf,PB,PB,PB,Indígena,2,Até 5 ano incompleto,16,1316,1.22
+2024,uf,PB,PB,PB,Indígena,3,5 ano completo,11,1316,0.84
+2024,uf,PB,PB,PB,Indígena,4,6 a 9 ano incompleto,18,1316,1.37
+2024,uf,PB,PB,PB,Indígena,5,Fundamental completo,50,1316,3.8
+2024,uf,PB,PB,PB,Indígena,6,Médio incompleto,32,1316,2.43
+2024,uf,PB,PB,PB,Indígena,7,Médio completo,492,1316,37.39
+2024,uf,PB,PB,PB,Indígena,8,Superior incompleto,83,1316,6.31
+2024,uf,PB,PB,PB,Indígena,9,Superior completo,563,1316,42.78
+2024,uf,PB,PB,PB,Indígena,10,Mestrado,42,1316,3.19
+2024,uf,PB,PB,PB,Indígena,11,Doutorado,3,1316,0.23
+2024,uf,PB,PB,PB,Negra,1,Analfabeto,1680,212369,0.79
+2024,uf,PB,PB,PB,Negra,2,Até 5 ano incompleto,1628,212369,0.77
+2024,uf,PB,PB,PB,Negra,3,5 ano completo,1366,212369,0.64
+2024,uf,PB,PB,PB,Negra,4,6 a 9 ano incompleto,2762,212369,1.3
+2024,uf,PB,PB,PB,Negra,5,Fundamental completo,5871,212369,2.76
+2024,uf,PB,PB,PB,Negra,6,Médio incompleto,5649,212369,2.66
+2024,uf,PB,PB,PB,Negra,7,Médio completo,108698,212369,51.18
+2024,uf,PB,PB,PB,Negra,8,Superior incompleto,7300,212369,3.44
+2024,uf,PB,PB,PB,Negra,9,Superior completo,73310,212369,34.52
+2024,uf,PB,PB,PB,Negra,10,Mestrado,2624,212369,1.24
+2024,uf,PB,PB,PB,Negra,11,Doutorado,1481,212369,0.7
+2024,uf,PE,PE,PE,Amarela,1,Analfabeto,22,14197,0.15
+2024,uf,PE,PE,PE,Amarela,2,Até 5 ano incompleto,125,14197,0.88
+2024,uf,PE,PE,PE,Amarela,3,5 ano completo,89,14197,0.63
+2024,uf,PE,PE,PE,Amarela,4,6 a 9 ano incompleto,158,14197,1.11
+2024,uf,PE,PE,PE,Amarela,5,Fundamental completo,446,14197,3.14
+2024,uf,PE,PE,PE,Amarela,6,Médio incompleto,197,14197,1.39
+2024,uf,PE,PE,PE,Amarela,7,Médio completo,5943,14197,41.86
+2024,uf,PE,PE,PE,Amarela,8,Superior incompleto,362,14197,2.55
+2024,uf,PE,PE,PE,Amarela,9,Superior completo,6572,14197,46.29
+2024,uf,PE,PE,PE,Amarela,10,Mestrado,218,14197,1.54
+2024,uf,PE,PE,PE,Amarela,11,Doutorado,65,14197,0.46
+2024,uf,PE,PE,PE,Branca,1,Analfabeto,679,282844,0.24
+2024,uf,PE,PE,PE,Branca,2,Até 5 ano incompleto,1348,282844,0.48
+2024,uf,PE,PE,PE,Branca,3,5 ano completo,1123,282844,0.4
+2024,uf,PE,PE,PE,Branca,4,6 a 9 ano incompleto,2716,282844,0.96
+2024,uf,PE,PE,PE,Branca,5,Fundamental completo,6597,282844,2.33
+2024,uf,PE,PE,PE,Branca,6,Médio incompleto,4178,282844,1.48
+2024,uf,PE,PE,PE,Branca,7,Médio completo,113007,282844,39.95
+2024,uf,PE,PE,PE,Branca,8,Superior incompleto,7684,282844,2.72
+2024,uf,PE,PE,PE,Branca,9,Superior completo,137796,282844,48.72
+2024,uf,PE,PE,PE,Branca,10,Mestrado,5254,282844,1.86
+2024,uf,PE,PE,PE,Branca,11,Doutorado,2462,282844,0.87
+2024,uf,PE,PE,PE,Indígena,1,Analfabeto,12,6644,0.18
+2024,uf,PE,PE,PE,Indígena,2,Até 5 ano incompleto,669,6644,10.07
+2024,uf,PE,PE,PE,Indígena,3,5 ano completo,29,6644,0.44
+2024,uf,PE,PE,PE,Indígena,4,6 a 9 ano incompleto,59,6644,0.89
+2024,uf,PE,PE,PE,Indígena,5,Fundamental completo,217,6644,3.27
+2024,uf,PE,PE,PE,Indígena,6,Médio incompleto,153,6644,2.3
+2024,uf,PE,PE,PE,Indígena,7,Médio completo,2266,6644,34.11
+2024,uf,PE,PE,PE,Indígena,8,Superior incompleto,94,6644,1.41
+2024,uf,PE,PE,PE,Indígena,9,Superior completo,3113,6644,46.85
+2024,uf,PE,PE,PE,Indígena,10,Mestrado,24,6644,0.36
+2024,uf,PE,PE,PE,Indígena,11,Doutorado,8,6644,0.12
+2024,uf,PE,PE,PE,Negra,1,Analfabeto,1315,476775,0.28
+2024,uf,PE,PE,PE,Negra,2,Até 5 ano incompleto,4156,476775,0.87
+2024,uf,PE,PE,PE,Negra,3,5 ano completo,2822,476775,0.59
+2024,uf,PE,PE,PE,Negra,4,6 a 9 ano incompleto,8422,476775,1.77
+2024,uf,PE,PE,PE,Negra,5,Fundamental completo,13727,476775,2.88
+2024,uf,PE,PE,PE,Negra,6,Médio incompleto,11807,476775,2.48
+2024,uf,PE,PE,PE,Negra,7,Médio completo,271624,476775,56.97
+2024,uf,PE,PE,PE,Negra,8,Superior incompleto,14231,476775,2.98
+2024,uf,PE,PE,PE,Negra,9,Superior completo,143257,476775,30.05
+2024,uf,PE,PE,PE,Negra,10,Mestrado,3958,476775,0.83
+2024,uf,PE,PE,PE,Negra,11,Doutorado,1456,476775,0.31
+2024,uf,PI,PI,PI,Amarela,1,Analfabeto,72,9407,0.77
+2024,uf,PI,PI,PI,Amarela,2,Até 5 ano incompleto,108,9407,1.15
+2024,uf,PI,PI,PI,Amarela,3,5 ano completo,244,9407,2.59
+2024,uf,PI,PI,PI,Amarela,4,6 a 9 ano incompleto,138,9407,1.47
+2024,uf,PI,PI,PI,Amarela,5,Fundamental completo,467,9407,4.96
+2024,uf,PI,PI,PI,Amarela,6,Médio incompleto,164,9407,1.74
+2024,uf,PI,PI,PI,Amarela,7,Médio completo,2429,9407,25.82
+2024,uf,PI,PI,PI,Amarela,8,Superior incompleto,199,9407,2.12
+2024,uf,PI,PI,PI,Amarela,9,Superior completo,5411,9407,57.52
+2024,uf,PI,PI,PI,Amarela,10,Mestrado,156,9407,1.66
+2024,uf,PI,PI,PI,Amarela,11,Doutorado,19,9407,0.2
+2024,uf,PI,PI,PI,Branca,1,Analfabeto,82,39207,0.21
+2024,uf,PI,PI,PI,Branca,2,Até 5 ano incompleto,191,39207,0.49
+2024,uf,PI,PI,PI,Branca,3,5 ano completo,370,39207,0.94
+2024,uf,PI,PI,PI,Branca,4,6 a 9 ano incompleto,393,39207,1.0
+2024,uf,PI,PI,PI,Branca,5,Fundamental completo,1073,39207,2.74
+2024,uf,PI,PI,PI,Branca,6,Médio incompleto,689,39207,1.76
+2024,uf,PI,PI,PI,Branca,7,Médio completo,12625,39207,32.2
+2024,uf,PI,PI,PI,Branca,8,Superior incompleto,1213,39207,3.09
+2024,uf,PI,PI,PI,Branca,9,Superior completo,21501,39207,54.84
+2024,uf,PI,PI,PI,Branca,10,Mestrado,701,39207,1.79
+2024,uf,PI,PI,PI,Branca,11,Doutorado,369,39207,0.94
+2024,uf,PI,PI,PI,Indígena,2,Até 5 ano incompleto,5,397,1.26
+2024,uf,PI,PI,PI,Indígena,3,5 ano completo,5,397,1.26
+2024,uf,PI,PI,PI,Indígena,4,6 a 9 ano incompleto,4,397,1.01
+2024,uf,PI,PI,PI,Indígena,5,Fundamental completo,31,397,7.81
+2024,uf,PI,PI,PI,Indígena,6,Médio incompleto,12,397,3.02
+2024,uf,PI,PI,PI,Indígena,7,Médio completo,90,397,22.67
+2024,uf,PI,PI,PI,Indígena,8,Superior incompleto,9,397,2.27
+2024,uf,PI,PI,PI,Indígena,9,Superior completo,223,397,56.17
+2024,uf,PI,PI,PI,Indígena,10,Mestrado,16,397,4.03
+2024,uf,PI,PI,PI,Indígena,11,Doutorado,2,397,0.5
+2024,uf,PI,PI,PI,Negra,1,Analfabeto,478,172048,0.28
+2024,uf,PI,PI,PI,Negra,2,Até 5 ano incompleto,1393,172048,0.81
+2024,uf,PI,PI,PI,Negra,3,5 ano completo,1218,172048,0.71
+2024,uf,PI,PI,PI,Negra,4,6 a 9 ano incompleto,2526,172048,1.47
+2024,uf,PI,PI,PI,Negra,5,Fundamental completo,6699,172048,3.89
+2024,uf,PI,PI,PI,Negra,6,Médio incompleto,4849,172048,2.82
+2024,uf,PI,PI,PI,Negra,7,Médio completo,81818,172048,47.56
+2024,uf,PI,PI,PI,Negra,8,Superior incompleto,6027,172048,3.5
+2024,uf,PI,PI,PI,Negra,9,Superior completo,65286,172048,37.95
+2024,uf,PI,PI,PI,Negra,10,Mestrado,1246,172048,0.72
+2024,uf,PI,PI,PI,Negra,11,Doutorado,508,172048,0.3
+2024,uf,PR,PR,PR,Amarela,1,Analfabeto,37,15209,0.24
+2024,uf,PR,PR,PR,Amarela,2,Até 5 ano incompleto,179,15209,1.18
+2024,uf,PR,PR,PR,Amarela,3,5 ano completo,93,15209,0.61
+2024,uf,PR,PR,PR,Amarela,4,6 a 9 ano incompleto,279,15209,1.83
+2024,uf,PR,PR,PR,Amarela,5,Fundamental completo,555,15209,3.65
+2024,uf,PR,PR,PR,Amarela,6,Médio incompleto,656,15209,4.31
+2024,uf,PR,PR,PR,Amarela,7,Médio completo,5509,15209,36.22
+2024,uf,PR,PR,PR,Amarela,8,Superior incompleto,655,15209,4.31
+2024,uf,PR,PR,PR,Amarela,9,Superior completo,6717,15209,44.16
+2024,uf,PR,PR,PR,Amarela,10,Mestrado,301,15209,1.98
+2024,uf,PR,PR,PR,Amarela,11,Doutorado,228,15209,1.5
+2024,uf,PR,PR,PR,Branca,1,Analfabeto,2586,1216243,0.21
+2024,uf,PR,PR,PR,Branca,2,Até 5 ano incompleto,11395,1216243,0.94
+2024,uf,PR,PR,PR,Branca,3,5 ano completo,10914,1216243,0.9
+2024,uf,PR,PR,PR,Branca,4,6 a 9 ano incompleto,27731,1216243,2.28
+2024,uf,PR,PR,PR,Branca,5,Fundamental completo,61539,1216243,5.06
+2024,uf,PR,PR,PR,Branca,6,Médio incompleto,53698,1216243,4.42
+2024,uf,PR,PR,PR,Branca,7,Médio completo,540231,1216243,44.42
+2024,uf,PR,PR,PR,Branca,8,Superior incompleto,51728,1216243,4.25
+2024,uf,PR,PR,PR,Branca,9,Superior completo,433634,1216243,35.65
+2024,uf,PR,PR,PR,Branca,10,Mestrado,14623,1216243,1.2
+2024,uf,PR,PR,PR,Branca,11,Doutorado,8164,1216243,0.67
+2024,uf,PR,PR,PR,Indígena,1,Analfabeto,26,2970,0.88
+2024,uf,PR,PR,PR,Indígena,2,Até 5 ano incompleto,77,2970,2.59
+2024,uf,PR,PR,PR,Indígena,3,5 ano completo,40,2970,1.35
+2024,uf,PR,PR,PR,Indígena,4,6 a 9 ano incompleto,148,2970,4.98
+2024,uf,PR,PR,PR,Indígena,5,Fundamental completo,235,2970,7.91
+2024,uf,PR,PR,PR,Indígena,6,Médio incompleto,201,2970,6.77
+2024,uf,PR,PR,PR,Indígena,7,Médio completo,1368,2970,46.06
+2024,uf,PR,PR,PR,Indígena,8,Superior incompleto,100,2970,3.37
+2024,uf,PR,PR,PR,Indígena,9,Superior completo,677,2970,22.79
+2024,uf,PR,PR,PR,Indígena,10,Mestrado,94,2970,3.16
+2024,uf,PR,PR,PR,Indígena,11,Doutorado,4,2970,0.13
+2024,uf,PR,PR,PR,Negra,1,Analfabeto,2493,413518,0.6
+2024,uf,PR,PR,PR,Negra,2,Até 5 ano incompleto,8074,413518,1.95
+2024,uf,PR,PR,PR,Negra,3,5 ano completo,5148,413518,1.24
+2024,uf,PR,PR,PR,Negra,4,6 a 9 ano incompleto,18077,413518,4.37
+2024,uf,PR,PR,PR,Negra,5,Fundamental completo,25830,413518,6.25
+2024,uf,PR,PR,PR,Negra,6,Médio incompleto,28773,413518,6.96
+2024,uf,PR,PR,PR,Negra,7,Médio completo,213477,413518,51.62
+2024,uf,PR,PR,PR,Negra,8,Superior incompleto,17042,413518,4.12
+2024,uf,PR,PR,PR,Negra,9,Superior completo,91559,413518,22.14
+2024,uf,PR,PR,PR,Negra,10,Mestrado,2133,413518,0.52
+2024,uf,PR,PR,PR,Negra,11,Doutorado,912,413518,0.22
+2024,uf,RJ,RJ,RJ,Amarela,1,Analfabeto,60,18967,0.32
+2024,uf,RJ,RJ,RJ,Amarela,2,Até 5 ano incompleto,117,18967,0.62
+2024,uf,RJ,RJ,RJ,Amarela,3,5 ano completo,123,18967,0.65
+2024,uf,RJ,RJ,RJ,Amarela,4,6 a 9 ano incompleto,316,18967,1.67
+2024,uf,RJ,RJ,RJ,Amarela,5,Fundamental completo,721,18967,3.8
+2024,uf,RJ,RJ,RJ,Amarela,6,Médio incompleto,503,18967,2.65
+2024,uf,RJ,RJ,RJ,Amarela,7,Médio completo,8368,18967,44.12
+2024,uf,RJ,RJ,RJ,Amarela,8,Superior incompleto,641,18967,3.38
+2024,uf,RJ,RJ,RJ,Amarela,9,Superior completo,7525,18967,39.67
+2024,uf,RJ,RJ,RJ,Amarela,10,Mestrado,377,18967,1.99
+2024,uf,RJ,RJ,RJ,Amarela,11,Doutorado,216,18967,1.14
+2024,uf,RJ,RJ,RJ,Branca,1,Analfabeto,611,929756,0.07
+2024,uf,RJ,RJ,RJ,Branca,2,Até 5 ano incompleto,4682,929756,0.5
+2024,uf,RJ,RJ,RJ,Branca,3,5 ano completo,6015,929756,0.65
+2024,uf,RJ,RJ,RJ,Branca,4,6 a 9 ano incompleto,13718,929756,1.48
+2024,uf,RJ,RJ,RJ,Branca,5,Fundamental completo,36647,929756,3.94
+2024,uf,RJ,RJ,RJ,Branca,6,Médio incompleto,25650,929756,2.76
+2024,uf,RJ,RJ,RJ,Branca,7,Médio completo,372488,929756,40.06
+2024,uf,RJ,RJ,RJ,Branca,8,Superior incompleto,35931,929756,3.86
+2024,uf,RJ,RJ,RJ,Branca,9,Superior completo,408383,929756,43.92
+2024,uf,RJ,RJ,RJ,Branca,10,Mestrado,16861,929756,1.81
+2024,uf,RJ,RJ,RJ,Branca,11,Doutorado,8770,929756,0.94
+2024,uf,RJ,RJ,RJ,Indígena,1,Analfabeto,4,3896,0.1
+2024,uf,RJ,RJ,RJ,Indígena,2,Até 5 ano incompleto,28,3896,0.72
+2024,uf,RJ,RJ,RJ,Indígena,3,5 ano completo,45,3896,1.16
+2024,uf,RJ,RJ,RJ,Indígena,4,6 a 9 ano incompleto,84,3896,2.16
+2024,uf,RJ,RJ,RJ,Indígena,5,Fundamental completo,160,3896,4.11
+2024,uf,RJ,RJ,RJ,Indígena,6,Médio incompleto,134,3896,3.44
+2024,uf,RJ,RJ,RJ,Indígena,7,Médio completo,1492,3896,38.3
+2024,uf,RJ,RJ,RJ,Indígena,8,Superior incompleto,155,3896,3.98
+2024,uf,RJ,RJ,RJ,Indígena,9,Superior completo,1664,3896,42.71
+2024,uf,RJ,RJ,RJ,Indígena,10,Mestrado,98,3896,2.52
+2024,uf,RJ,RJ,RJ,Indígena,11,Doutorado,32,3896,0.82
+2024,uf,RJ,RJ,RJ,Negra,1,Analfabeto,1046,999205,0.1
+2024,uf,RJ,RJ,RJ,Negra,2,Até 5 ano incompleto,8231,999205,0.82
+2024,uf,RJ,RJ,RJ,Negra,3,5 ano completo,8311,999205,0.83
+2024,uf,RJ,RJ,RJ,Negra,4,6 a 9 ano incompleto,25452,999205,2.55
+2024,uf,RJ,RJ,RJ,Negra,5,Fundamental completo,49413,999205,4.95
+2024,uf,RJ,RJ,RJ,Negra,6,Médio incompleto,42750,999205,4.28
+2024,uf,RJ,RJ,RJ,Negra,7,Médio completo,549190,999205,54.96
+2024,uf,RJ,RJ,RJ,Negra,8,Superior incompleto,35092,999205,3.51
+2024,uf,RJ,RJ,RJ,Negra,9,Superior completo,269613,999205,26.98
+2024,uf,RJ,RJ,RJ,Negra,10,Mestrado,7228,999205,0.72
+2024,uf,RJ,RJ,RJ,Negra,11,Doutorado,2879,999205,0.29
+2024,uf,RN,RN,RN,Amarela,1,Analfabeto,8,3173,0.25
+2024,uf,RN,RN,RN,Amarela,2,Até 5 ano incompleto,28,3173,0.88
+2024,uf,RN,RN,RN,Amarela,3,5 ano completo,12,3173,0.38
+2024,uf,RN,RN,RN,Amarela,4,6 a 9 ano incompleto,43,3173,1.36
+2024,uf,RN,RN,RN,Amarela,5,Fundamental completo,262,3173,8.26
+2024,uf,RN,RN,RN,Amarela,6,Médio incompleto,95,3173,2.99
+2024,uf,RN,RN,RN,Amarela,7,Médio completo,1409,3173,44.41
+2024,uf,RN,RN,RN,Amarela,8,Superior incompleto,78,3173,2.46
+2024,uf,RN,RN,RN,Amarela,9,Superior completo,1184,3173,37.31
+2024,uf,RN,RN,RN,Amarela,10,Mestrado,20,3173,0.63
+2024,uf,RN,RN,RN,Amarela,11,Doutorado,34,3173,1.07
+2024,uf,RN,RN,RN,Branca,1,Analfabeto,156,92353,0.17
+2024,uf,RN,RN,RN,Branca,2,Até 5 ano incompleto,488,92353,0.53
+2024,uf,RN,RN,RN,Branca,3,5 ano completo,450,92353,0.49
+2024,uf,RN,RN,RN,Branca,4,6 a 9 ano incompleto,1183,92353,1.28
+2024,uf,RN,RN,RN,Branca,5,Fundamental completo,2790,92353,3.02
+2024,uf,RN,RN,RN,Branca,6,Médio incompleto,2581,92353,2.79
+2024,uf,RN,RN,RN,Branca,7,Médio completo,39800,92353,43.1
+2024,uf,RN,RN,RN,Branca,8,Superior incompleto,2996,92353,3.24
+2024,uf,RN,RN,RN,Branca,9,Superior completo,38992,92353,42.22
+2024,uf,RN,RN,RN,Branca,10,Mestrado,1723,92353,1.87
+2024,uf,RN,RN,RN,Branca,11,Doutorado,1194,92353,1.29
+2024,uf,RN,RN,RN,Indígena,1,Analfabeto,3,760,0.39
+2024,uf,RN,RN,RN,Indígena,2,Até 5 ano incompleto,9,760,1.18
+2024,uf,RN,RN,RN,Indígena,3,5 ano completo,3,760,0.39
+2024,uf,RN,RN,RN,Indígena,4,6 a 9 ano incompleto,14,760,1.84
+2024,uf,RN,RN,RN,Indígena,5,Fundamental completo,20,760,2.63
+2024,uf,RN,RN,RN,Indígena,6,Médio incompleto,24,760,3.16
+2024,uf,RN,RN,RN,Indígena,7,Médio completo,314,760,41.32
+2024,uf,RN,RN,RN,Indígena,8,Superior incompleto,31,760,4.08
+2024,uf,RN,RN,RN,Indígena,9,Superior completo,332,760,43.68
+2024,uf,RN,RN,RN,Indígena,10,Mestrado,6,760,0.79
+2024,uf,RN,RN,RN,Indígena,11,Doutorado,4,760,0.53
+2024,uf,RN,RN,RN,Negra,1,Analfabeto,656,160732,0.41
+2024,uf,RN,RN,RN,Negra,2,Até 5 ano incompleto,1452,160732,0.9
+2024,uf,RN,RN,RN,Negra,3,5 ano completo,859,160732,0.53
+2024,uf,RN,RN,RN,Negra,4,6 a 9 ano incompleto,3593,160732,2.24
+2024,uf,RN,RN,RN,Negra,5,Fundamental completo,6962,160732,4.33
+2024,uf,RN,RN,RN,Negra,6,Médio incompleto,7312,160732,4.55
+2024,uf,RN,RN,RN,Negra,7,Médio completo,86578,160732,53.86
+2024,uf,RN,RN,RN,Negra,8,Superior incompleto,4365,160732,2.72
+2024,uf,RN,RN,RN,Negra,9,Superior completo,46350,160732,28.84
+2024,uf,RN,RN,RN,Negra,10,Mestrado,1745,160732,1.09
+2024,uf,RN,RN,RN,Negra,11,Doutorado,860,160732,0.54
+2024,uf,RO,RO,RO,Amarela,1,Analfabeto,9,4718,0.19
+2024,uf,RO,RO,RO,Amarela,2,Até 5 ano incompleto,212,4718,4.49
+2024,uf,RO,RO,RO,Amarela,3,5 ano completo,47,4718,1.0
+2024,uf,RO,RO,RO,Amarela,4,6 a 9 ano incompleto,74,4718,1.57
+2024,uf,RO,RO,RO,Amarela,5,Fundamental completo,256,4718,5.43
+2024,uf,RO,RO,RO,Amarela,6,Médio incompleto,151,4718,3.2
+2024,uf,RO,RO,RO,Amarela,7,Médio completo,1621,4718,34.36
+2024,uf,RO,RO,RO,Amarela,8,Superior incompleto,109,4718,2.31
+2024,uf,RO,RO,RO,Amarela,9,Superior completo,2200,4718,46.63
+2024,uf,RO,RO,RO,Amarela,10,Mestrado,25,4718,0.53
+2024,uf,RO,RO,RO,Amarela,11,Doutorado,14,4718,0.3
+2024,uf,RO,RO,RO,Branca,1,Analfabeto,81,52305,0.15
+2024,uf,RO,RO,RO,Branca,2,Até 5 ano incompleto,425,52305,0.81
+2024,uf,RO,RO,RO,Branca,3,5 ano completo,474,52305,0.91
+2024,uf,RO,RO,RO,Branca,4,6 a 9 ano incompleto,828,52305,1.58
+2024,uf,RO,RO,RO,Branca,5,Fundamental completo,1689,52305,3.23
+2024,uf,RO,RO,RO,Branca,6,Médio incompleto,1811,52305,3.46
+2024,uf,RO,RO,RO,Branca,7,Médio completo,19348,52305,36.99
+2024,uf,RO,RO,RO,Branca,8,Superior incompleto,1734,52305,3.32
+2024,uf,RO,RO,RO,Branca,9,Superior completo,24859,52305,47.53
+2024,uf,RO,RO,RO,Branca,10,Mestrado,733,52305,1.4
+2024,uf,RO,RO,RO,Branca,11,Doutorado,323,52305,0.62
+2024,uf,RO,RO,RO,Indígena,2,Até 5 ano incompleto,6,618,0.97
+2024,uf,RO,RO,RO,Indígena,3,5 ano completo,3,618,0.49
+2024,uf,RO,RO,RO,Indígena,4,6 a 9 ano incompleto,14,618,2.27
+2024,uf,RO,RO,RO,Indígena,5,Fundamental completo,24,618,3.88
+2024,uf,RO,RO,RO,Indígena,6,Médio incompleto,34,618,5.5
+2024,uf,RO,RO,RO,Indígena,7,Médio completo,303,618,49.03
+2024,uf,RO,RO,RO,Indígena,8,Superior incompleto,24,618,3.88
+2024,uf,RO,RO,RO,Indígena,9,Superior completo,206,618,33.33
+2024,uf,RO,RO,RO,Indígena,10,Mestrado,2,618,0.32
+2024,uf,RO,RO,RO,Indígena,11,Doutorado,2,618,0.32
+2024,uf,RO,RO,RO,Negra,1,Analfabeto,288,125833,0.23
+2024,uf,RO,RO,RO,Negra,2,Até 5 ano incompleto,1248,125833,0.99
+2024,uf,RO,RO,RO,Negra,3,5 ano completo,1131,125833,0.9
+2024,uf,RO,RO,RO,Negra,4,6 a 9 ano incompleto,2736,125833,2.17
+2024,uf,RO,RO,RO,Negra,5,Fundamental completo,3811,125833,3.03
+2024,uf,RO,RO,RO,Negra,6,Médio incompleto,6305,125833,5.01
+2024,uf,RO,RO,RO,Negra,7,Médio completo,63699,125833,50.62
+2024,uf,RO,RO,RO,Negra,8,Superior incompleto,4042,125833,3.21
+2024,uf,RO,RO,RO,Negra,9,Superior completo,41473,125833,32.96
+2024,uf,RO,RO,RO,Negra,10,Mestrado,797,125833,0.63
+2024,uf,RO,RO,RO,Negra,11,Doutorado,303,125833,0.24
+2024,uf,RR,RR,RR,Amarela,1,Analfabeto,3,820,0.37
+2024,uf,RR,RR,RR,Amarela,2,Até 5 ano incompleto,4,820,0.49
+2024,uf,RR,RR,RR,Amarela,3,5 ano completo,3,820,0.37
+2024,uf,RR,RR,RR,Amarela,4,6 a 9 ano incompleto,9,820,1.1
+2024,uf,RR,RR,RR,Amarela,5,Fundamental completo,27,820,3.29
+2024,uf,RR,RR,RR,Amarela,6,Médio incompleto,21,820,2.56
+2024,uf,RR,RR,RR,Amarela,7,Médio completo,303,820,36.95
+2024,uf,RR,RR,RR,Amarela,8,Superior incompleto,22,820,2.68
+2024,uf,RR,RR,RR,Amarela,9,Superior completo,329,820,40.12
+2024,uf,RR,RR,RR,Amarela,10,Mestrado,2,820,0.24
+2024,uf,RR,RR,RR,Amarela,11,Doutorado,97,820,11.83
+2024,uf,RR,RR,RR,Branca,1,Analfabeto,48,11569,0.41
+2024,uf,RR,RR,RR,Branca,2,Até 5 ano incompleto,37,11569,0.32
+2024,uf,RR,RR,RR,Branca,3,5 ano completo,31,11569,0.27
+2024,uf,RR,RR,RR,Branca,4,6 a 9 ano incompleto,95,11569,0.82
+2024,uf,RR,RR,RR,Branca,5,Fundamental completo,214,11569,1.85
+2024,uf,RR,RR,RR,Branca,6,Médio incompleto,159,11569,1.37
+2024,uf,RR,RR,RR,Branca,7,Médio completo,3446,11569,29.79
+2024,uf,RR,RR,RR,Branca,8,Superior incompleto,282,11569,2.44
+2024,uf,RR,RR,RR,Branca,9,Superior completo,6710,11569,58.0
+2024,uf,RR,RR,RR,Branca,10,Mestrado,178,11569,1.54
+2024,uf,RR,RR,RR,Branca,11,Doutorado,369,11569,3.19
+2024,uf,RR,RR,RR,Indígena,1,Analfabeto,10,1957,0.51
+2024,uf,RR,RR,RR,Indígena,2,Até 5 ano incompleto,10,1957,0.51
+2024,uf,RR,RR,RR,Indígena,3,5 ano completo,5,1957,0.26
+2024,uf,RR,RR,RR,Indígena,4,6 a 9 ano incompleto,17,1957,0.87
+2024,uf,RR,RR,RR,Indígena,5,Fundamental completo,46,1957,2.35
+2024,uf,RR,RR,RR,Indígena,6,Médio incompleto,34,1957,1.74
+2024,uf,RR,RR,RR,Indígena,7,Médio completo,639,1957,32.65
+2024,uf,RR,RR,RR,Indígena,8,Superior incompleto,47,1957,2.4
+2024,uf,RR,RR,RR,Indígena,9,Superior completo,1095,1957,55.95
+2024,uf,RR,RR,RR,Indígena,10,Mestrado,9,1957,0.46
+2024,uf,RR,RR,RR,Indígena,11,Doutorado,45,1957,2.3
+2024,uf,RR,RR,RR,Negra,1,Analfabeto,285,55724,0.51
+2024,uf,RR,RR,RR,Negra,2,Até 5 ano incompleto,264,55724,0.47
+2024,uf,RR,RR,RR,Negra,3,5 ano completo,196,55724,0.35
+2024,uf,RR,RR,RR,Negra,4,6 a 9 ano incompleto,664,55724,1.19
+2024,uf,RR,RR,RR,Negra,5,Fundamental completo,1773,55724,3.18
+2024,uf,RR,RR,RR,Negra,6,Médio incompleto,1121,55724,2.01
+2024,uf,RR,RR,RR,Negra,7,Médio completo,26480,55724,47.52
+2024,uf,RR,RR,RR,Negra,8,Superior incompleto,1253,55724,2.25
+2024,uf,RR,RR,RR,Negra,9,Superior completo,20875,55724,37.46
+2024,uf,RR,RR,RR,Negra,10,Mestrado,370,55724,0.66
+2024,uf,RR,RR,RR,Negra,11,Doutorado,2443,55724,4.38
+2024,uf,RS,RS,RS,Amarela,1,Analfabeto,22,3941,0.56
+2024,uf,RS,RS,RS,Amarela,2,Até 5 ano incompleto,64,3941,1.62
+2024,uf,RS,RS,RS,Amarela,3,5 ano completo,56,3941,1.42
+2024,uf,RS,RS,RS,Amarela,4,6 a 9 ano incompleto,197,3941,5.0
+2024,uf,RS,RS,RS,Amarela,5,Fundamental completo,236,3941,5.99
+2024,uf,RS,RS,RS,Amarela,6,Médio incompleto,299,3941,7.59
+2024,uf,RS,RS,RS,Amarela,7,Médio completo,1673,3941,42.45
+2024,uf,RS,RS,RS,Amarela,8,Superior incompleto,210,3941,5.33
+2024,uf,RS,RS,RS,Amarela,9,Superior completo,1136,3941,28.83
+2024,uf,RS,RS,RS,Amarela,10,Mestrado,32,3941,0.81
+2024,uf,RS,RS,RS,Amarela,11,Doutorado,16,3941,0.41
+2024,uf,RS,RS,RS,Branca,1,Analfabeto,1363,1274946,0.11
+2024,uf,RS,RS,RS,Branca,2,Até 5 ano incompleto,12060,1274946,0.95
+2024,uf,RS,RS,RS,Branca,3,5 ano completo,12630,1274946,0.99
+2024,uf,RS,RS,RS,Branca,4,6 a 9 ano incompleto,45033,1274946,3.53
+2024,uf,RS,RS,RS,Branca,5,Fundamental completo,69055,1274946,5.42
+2024,uf,RS,RS,RS,Branca,6,Médio incompleto,70452,1274946,5.53
+2024,uf,RS,RS,RS,Branca,7,Médio completo,529332,1274946,41.52
+2024,uf,RS,RS,RS,Branca,8,Superior incompleto,74271,1274946,5.83
+2024,uf,RS,RS,RS,Branca,9,Superior completo,436795,1274946,34.26
+2024,uf,RS,RS,RS,Branca,10,Mestrado,15469,1274946,1.21
+2024,uf,RS,RS,RS,Branca,11,Doutorado,8486,1274946,0.67
+2024,uf,RS,RS,RS,Indígena,1,Analfabeto,16,6023,0.27
+2024,uf,RS,RS,RS,Indígena,2,Até 5 ano incompleto,105,6023,1.74
+2024,uf,RS,RS,RS,Indígena,3,5 ano completo,102,6023,1.69
+2024,uf,RS,RS,RS,Indígena,4,6 a 9 ano incompleto,186,6023,3.09
+2024,uf,RS,RS,RS,Indígena,5,Fundamental completo,341,6023,5.66
+2024,uf,RS,RS,RS,Indígena,6,Médio incompleto,242,6023,4.02
+2024,uf,RS,RS,RS,Indígena,7,Médio completo,1762,6023,29.25
+2024,uf,RS,RS,RS,Indígena,8,Superior incompleto,157,6023,2.61
+2024,uf,RS,RS,RS,Indígena,9,Superior completo,3074,6023,51.04
+2024,uf,RS,RS,RS,Indígena,10,Mestrado,31,6023,0.51
+2024,uf,RS,RS,RS,Indígena,11,Doutorado,7,6023,0.12
+2024,uf,RS,RS,RS,Negra,1,Analfabeto,766,223379,0.34
+2024,uf,RS,RS,RS,Negra,2,Até 5 ano incompleto,3390,223379,1.52
+2024,uf,RS,RS,RS,Negra,3,5 ano completo,2730,223379,1.22
+2024,uf,RS,RS,RS,Negra,4,6 a 9 ano incompleto,12614,223379,5.65
+2024,uf,RS,RS,RS,Negra,5,Fundamental completo,18174,223379,8.14
+2024,uf,RS,RS,RS,Negra,6,Médio incompleto,19600,223379,8.77
+2024,uf,RS,RS,RS,Negra,7,Médio completo,108616,223379,48.62
+2024,uf,RS,RS,RS,Negra,8,Superior incompleto,11799,223379,5.28
+2024,uf,RS,RS,RS,Negra,9,Superior completo,44056,223379,19.72
+2024,uf,RS,RS,RS,Negra,10,Mestrado,1147,223379,0.51
+2024,uf,RS,RS,RS,Negra,11,Doutorado,487,223379,0.22
+2024,uf,SC,SC,SC,Amarela,1,Analfabeto,103,11139,0.92
+2024,uf,SC,SC,SC,Amarela,2,Até 5 ano incompleto,146,11139,1.31
+2024,uf,SC,SC,SC,Amarela,3,5 ano completo,136,11139,1.22
+2024,uf,SC,SC,SC,Amarela,4,6 a 9 ano incompleto,334,11139,3.0
+2024,uf,SC,SC,SC,Amarela,5,Fundamental completo,864,11139,7.76
+2024,uf,SC,SC,SC,Amarela,6,Médio incompleto,657,11139,5.9
+2024,uf,SC,SC,SC,Amarela,7,Médio completo,5536,11139,49.7
+2024,uf,SC,SC,SC,Amarela,8,Superior incompleto,517,11139,4.64
+2024,uf,SC,SC,SC,Amarela,9,Superior completo,2725,11139,24.46
+2024,uf,SC,SC,SC,Amarela,10,Mestrado,69,11139,0.62
+2024,uf,SC,SC,SC,Amarela,11,Doutorado,52,11139,0.47
+2024,uf,SC,SC,SC,Branca,1,Analfabeto,3768,989459,0.38
+2024,uf,SC,SC,SC,Branca,2,Até 5 ano incompleto,10860,989459,1.1
+2024,uf,SC,SC,SC,Branca,3,5 ano completo,12265,989459,1.24
+2024,uf,SC,SC,SC,Branca,4,6 a 9 ano incompleto,28388,989459,2.87
+2024,uf,SC,SC,SC,Branca,5,Fundamental completo,64442,989459,6.51
+2024,uf,SC,SC,SC,Branca,6,Médio incompleto,55295,989459,5.59
+2024,uf,SC,SC,SC,Branca,7,Médio completo,432536,989459,43.71
+2024,uf,SC,SC,SC,Branca,8,Superior incompleto,51909,989459,5.25
+2024,uf,SC,SC,SC,Branca,9,Superior completo,316693,989459,32.01
+2024,uf,SC,SC,SC,Branca,10,Mestrado,8923,989459,0.9
+2024,uf,SC,SC,SC,Branca,11,Doutorado,4380,989459,0.44
+2024,uf,SC,SC,SC,Indígena,1,Analfabeto,80,3646,2.19
+2024,uf,SC,SC,SC,Indígena,2,Até 5 ano incompleto,105,3646,2.88
+2024,uf,SC,SC,SC,Indígena,3,5 ano completo,61,3646,1.67
+2024,uf,SC,SC,SC,Indígena,4,6 a 9 ano incompleto,252,3646,6.91
+2024,uf,SC,SC,SC,Indígena,5,Fundamental completo,470,3646,12.89
+2024,uf,SC,SC,SC,Indígena,6,Médio incompleto,386,3646,10.59
+2024,uf,SC,SC,SC,Indígena,7,Médio completo,1664,3646,45.64
+2024,uf,SC,SC,SC,Indígena,8,Superior incompleto,123,3646,3.37
+2024,uf,SC,SC,SC,Indígena,9,Superior completo,486,3646,13.33
+2024,uf,SC,SC,SC,Indígena,10,Mestrado,17,3646,0.47
+2024,uf,SC,SC,SC,Indígena,11,Doutorado,2,3646,0.05
+2024,uf,SC,SC,SC,Negra,1,Analfabeto,3048,263350,1.16
+2024,uf,SC,SC,SC,Negra,2,Até 5 ano incompleto,4169,263350,1.58
+2024,uf,SC,SC,SC,Negra,3,5 ano completo,3409,263350,1.29
+2024,uf,SC,SC,SC,Negra,4,6 a 9 ano incompleto,12686,263350,4.82
+2024,uf,SC,SC,SC,Negra,5,Fundamental completo,23858,263350,9.06
+2024,uf,SC,SC,SC,Negra,6,Médio incompleto,20931,263350,7.95
+2024,uf,SC,SC,SC,Negra,7,Médio completo,138067,263350,52.43
+2024,uf,SC,SC,SC,Negra,8,Superior incompleto,12206,263350,4.63
+2024,uf,SC,SC,SC,Negra,9,Superior completo,43784,263350,16.63
+2024,uf,SC,SC,SC,Negra,10,Mestrado,822,263350,0.31
+2024,uf,SC,SC,SC,Negra,11,Doutorado,370,263350,0.14
+2024,uf,SE,SE,SE,Amarela,1,Analfabeto,4,2101,0.19
+2024,uf,SE,SE,SE,Amarela,2,Até 5 ano incompleto,29,2101,1.38
+2024,uf,SE,SE,SE,Amarela,3,5 ano completo,13,2101,0.62
+2024,uf,SE,SE,SE,Amarela,4,6 a 9 ano incompleto,30,2101,1.43
+2024,uf,SE,SE,SE,Amarela,5,Fundamental completo,68,2101,3.24
+2024,uf,SE,SE,SE,Amarela,6,Médio incompleto,67,2101,3.19
+2024,uf,SE,SE,SE,Amarela,7,Médio completo,957,2101,45.55
+2024,uf,SE,SE,SE,Amarela,8,Superior incompleto,85,2101,4.05
+2024,uf,SE,SE,SE,Amarela,9,Superior completo,822,2101,39.12
+2024,uf,SE,SE,SE,Amarela,10,Mestrado,15,2101,0.71
+2024,uf,SE,SE,SE,Amarela,11,Doutorado,11,2101,0.52
+2024,uf,SE,SE,SE,Branca,1,Analfabeto,55,46417,0.12
+2024,uf,SE,SE,SE,Branca,2,Até 5 ano incompleto,228,46417,0.49
+2024,uf,SE,SE,SE,Branca,3,5 ano completo,240,46417,0.52
+2024,uf,SE,SE,SE,Branca,4,6 a 9 ano incompleto,585,46417,1.26
+2024,uf,SE,SE,SE,Branca,5,Fundamental completo,1408,46417,3.03
+2024,uf,SE,SE,SE,Branca,6,Médio incompleto,1197,46417,2.58
+2024,uf,SE,SE,SE,Branca,7,Médio completo,19122,46417,41.2
+2024,uf,SE,SE,SE,Branca,8,Superior incompleto,1738,46417,3.74
+2024,uf,SE,SE,SE,Branca,9,Superior completo,21082,46417,45.42
+2024,uf,SE,SE,SE,Branca,10,Mestrado,482,46417,1.04
+2024,uf,SE,SE,SE,Branca,11,Doutorado,280,46417,0.6
+2024,uf,SE,SE,SE,Indígena,1,Analfabeto,7,659,1.06
+2024,uf,SE,SE,SE,Indígena,2,Até 5 ano incompleto,9,659,1.37
+2024,uf,SE,SE,SE,Indígena,4,6 a 9 ano incompleto,12,659,1.82
+2024,uf,SE,SE,SE,Indígena,5,Fundamental completo,20,659,3.03
+2024,uf,SE,SE,SE,Indígena,6,Médio incompleto,21,659,3.19
+2024,uf,SE,SE,SE,Indígena,7,Médio completo,272,659,41.27
+2024,uf,SE,SE,SE,Indígena,8,Superior incompleto,15,659,2.28
+2024,uf,SE,SE,SE,Indígena,9,Superior completo,284,659,43.1
+2024,uf,SE,SE,SE,Indígena,10,Mestrado,13,659,1.97
+2024,uf,SE,SE,SE,Indígena,11,Doutorado,6,659,0.91
+2024,uf,SE,SE,SE,Negra,1,Analfabeto,265,147662,0.18
+2024,uf,SE,SE,SE,Negra,2,Até 5 ano incompleto,1583,147662,1.07
+2024,uf,SE,SE,SE,Negra,3,5 ano completo,1036,147662,0.7
+2024,uf,SE,SE,SE,Negra,4,6 a 9 ano incompleto,2503,147662,1.7
+2024,uf,SE,SE,SE,Negra,5,Fundamental completo,4728,147662,3.2
+2024,uf,SE,SE,SE,Negra,6,Médio incompleto,4817,147662,3.26
+2024,uf,SE,SE,SE,Negra,7,Médio completo,72845,147662,49.33
+2024,uf,SE,SE,SE,Negra,8,Superior incompleto,5387,147662,3.65
+2024,uf,SE,SE,SE,Negra,9,Superior completo,52416,147662,35.5
+2024,uf,SE,SE,SE,Negra,10,Mestrado,1683,147662,1.14
+2024,uf,SE,SE,SE,Negra,11,Doutorado,399,147662,0.27
+2024,uf,SP,SP,SP,Amarela,1,Analfabeto,106,85970,0.12
+2024,uf,SP,SP,SP,Amarela,2,Até 5 ano incompleto,439,85970,0.51
+2024,uf,SP,SP,SP,Amarela,3,5 ano completo,464,85970,0.54
+2024,uf,SP,SP,SP,Amarela,4,6 a 9 ano incompleto,1020,85970,1.19
+2024,uf,SP,SP,SP,Amarela,5,Fundamental completo,2608,85970,3.03
+2024,uf,SP,SP,SP,Amarela,6,Médio incompleto,2528,85970,2.94
+2024,uf,SP,SP,SP,Amarela,7,Médio completo,32022,85970,37.25
+2024,uf,SP,SP,SP,Amarela,8,Superior incompleto,2724,85970,3.17
+2024,uf,SP,SP,SP,Amarela,9,Superior completo,42289,85970,49.19
+2024,uf,SP,SP,SP,Amarela,10,Mestrado,1085,85970,1.26
+2024,uf,SP,SP,SP,Amarela,11,Doutorado,685,85970,0.8
+2024,uf,SP,SP,SP,Branca,1,Analfabeto,6445,4483556,0.14
+2024,uf,SP,SP,SP,Branca,2,Até 5 ano incompleto,26988,4483556,0.6
+2024,uf,SP,SP,SP,Branca,3,5 ano completo,31280,4483556,0.7
+2024,uf,SP,SP,SP,Branca,4,6 a 9 ano incompleto,63996,4483556,1.43
+2024,uf,SP,SP,SP,Branca,5,Fundamental completo,171893,4483556,3.83
+2024,uf,SP,SP,SP,Branca,6,Médio incompleto,134776,4483556,3.01
+2024,uf,SP,SP,SP,Branca,7,Médio completo,2000175,4483556,44.61
+2024,uf,SP,SP,SP,Branca,8,Superior incompleto,157902,4483556,3.52
+2024,uf,SP,SP,SP,Branca,9,Superior completo,1835344,4483556,40.94
+2024,uf,SP,SP,SP,Branca,10,Mestrado,33194,4483556,0.74
+2024,uf,SP,SP,SP,Branca,11,Doutorado,21563,4483556,0.48
+2024,uf,SP,SP,SP,Indígena,1,Analfabeto,78,12123,0.64
+2024,uf,SP,SP,SP,Indígena,2,Até 5 ano incompleto,113,12123,0.93
+2024,uf,SP,SP,SP,Indígena,3,5 ano completo,128,12123,1.06
+2024,uf,SP,SP,SP,Indígena,4,6 a 9 ano incompleto,306,12123,2.52
+2024,uf,SP,SP,SP,Indígena,5,Fundamental completo,649,12123,5.35
+2024,uf,SP,SP,SP,Indígena,6,Médio incompleto,658,12123,5.43
+2024,uf,SP,SP,SP,Indígena,7,Médio completo,6396,12123,52.76
+2024,uf,SP,SP,SP,Indígena,8,Superior incompleto,444,12123,3.66
+2024,uf,SP,SP,SP,Indígena,9,Superior completo,3238,12123,26.71
+2024,uf,SP,SP,SP,Indígena,10,Mestrado,66,12123,0.54
+2024,uf,SP,SP,SP,Indígena,11,Doutorado,47,12123,0.39
+2024,uf,SP,SP,SP,Negra,1,Analfabeto,5970,2600639,0.23
+2024,uf,SP,SP,SP,Negra,2,Até 5 ano incompleto,26206,2600639,1.01
+2024,uf,SP,SP,SP,Negra,3,5 ano completo,23084,2600639,0.89
+2024,uf,SP,SP,SP,Negra,4,6 a 9 ano incompleto,64098,2600639,2.46
+2024,uf,SP,SP,SP,Negra,5,Fundamental completo,136238,2600639,5.24
+2024,uf,SP,SP,SP,Negra,6,Médio incompleto,121504,2600639,4.67
+2024,uf,SP,SP,SP,Negra,7,Médio completo,1480724,2600639,56.94
+2024,uf,SP,SP,SP,Negra,8,Superior incompleto,85103,2600639,3.27
+2024,uf,SP,SP,SP,Negra,9,Superior completo,648382,2600639,24.93
+2024,uf,SP,SP,SP,Negra,10,Mestrado,6111,2600639,0.23
+2024,uf,SP,SP,SP,Negra,11,Doutorado,3219,2600639,0.12
+2024,uf,TO,TO,TO,Amarela,1,Analfabeto,6,2423,0.25
+2024,uf,TO,TO,TO,Amarela,2,Até 5 ano incompleto,66,2423,2.72
+2024,uf,TO,TO,TO,Amarela,3,5 ano completo,7,2423,0.29
+2024,uf,TO,TO,TO,Amarela,4,6 a 9 ano incompleto,28,2423,1.16
+2024,uf,TO,TO,TO,Amarela,5,Fundamental completo,52,2423,2.15
+2024,uf,TO,TO,TO,Amarela,6,Médio incompleto,86,2423,3.55
+2024,uf,TO,TO,TO,Amarela,7,Médio completo,972,2423,40.12
+2024,uf,TO,TO,TO,Amarela,8,Superior incompleto,73,2423,3.01
+2024,uf,TO,TO,TO,Amarela,9,Superior completo,1095,2423,45.19
+2024,uf,TO,TO,TO,Amarela,10,Mestrado,26,2423,1.07
+2024,uf,TO,TO,TO,Amarela,11,Doutorado,12,2423,0.5
+2024,uf,TO,TO,TO,Branca,1,Analfabeto,145,36171,0.4
+2024,uf,TO,TO,TO,Branca,2,Até 5 ano incompleto,398,36171,1.1
+2024,uf,TO,TO,TO,Branca,3,5 ano completo,72,36171,0.2
+2024,uf,TO,TO,TO,Branca,4,6 a 9 ano incompleto,234,36171,0.65
+2024,uf,TO,TO,TO,Branca,5,Fundamental completo,917,36171,2.54
+2024,uf,TO,TO,TO,Branca,6,Médio incompleto,657,36171,1.82
+2024,uf,TO,TO,TO,Branca,7,Médio completo,13036,36171,36.04
+2024,uf,TO,TO,TO,Branca,8,Superior incompleto,961,36171,2.66
+2024,uf,TO,TO,TO,Branca,9,Superior completo,18866,36171,52.16
+2024,uf,TO,TO,TO,Branca,10,Mestrado,487,36171,1.35
+2024,uf,TO,TO,TO,Branca,11,Doutorado,398,36171,1.1
+2024,uf,TO,TO,TO,Indígena,1,Analfabeto,7,960,0.73
+2024,uf,TO,TO,TO,Indígena,2,Até 5 ano incompleto,312,960,32.5
+2024,uf,TO,TO,TO,Indígena,4,6 a 9 ano incompleto,3,960,0.31
+2024,uf,TO,TO,TO,Indígena,5,Fundamental completo,11,960,1.15
+2024,uf,TO,TO,TO,Indígena,6,Médio incompleto,13,960,1.35
+2024,uf,TO,TO,TO,Indígena,7,Médio completo,271,960,28.23
+2024,uf,TO,TO,TO,Indígena,8,Superior incompleto,6,960,0.62
+2024,uf,TO,TO,TO,Indígena,9,Superior completo,332,960,34.58
+2024,uf,TO,TO,TO,Indígena,10,Mestrado,2,960,0.21
+2024,uf,TO,TO,TO,Indígena,11,Doutorado,3,960,0.31
+2024,uf,TO,TO,TO,Negra,1,Analfabeto,255,144315,0.18
+2024,uf,TO,TO,TO,Negra,2,Até 5 ano incompleto,7553,144315,5.23
+2024,uf,TO,TO,TO,Negra,3,5 ano completo,317,144315,0.22
+2024,uf,TO,TO,TO,Negra,4,6 a 9 ano incompleto,1227,144315,0.85
+2024,uf,TO,TO,TO,Negra,5,Fundamental completo,3014,144315,2.09
+2024,uf,TO,TO,TO,Negra,6,Médio incompleto,4617,144315,3.2
+2024,uf,TO,TO,TO,Negra,7,Médio completo,66818,144315,46.3
+2024,uf,TO,TO,TO,Negra,8,Superior incompleto,3200,144315,2.22
+2024,uf,TO,TO,TO,Negra,9,Superior completo,56343,144315,39.04
+2024,uf,TO,TO,TO,Negra,10,Mestrado,621,144315,0.43
+2024,uf,TO,TO,TO,Negra,11,Doutorado,350,144315,0.24
+2025,uf,AC,AC,AC,Amarela,1,Analfabeto,2,935,0.21
+2025,uf,AC,AC,AC,Amarela,2,Até 5 ano incompleto,7,935,0.75
+2025,uf,AC,AC,AC,Amarela,3,5 ano completo,5,935,0.53
+2025,uf,AC,AC,AC,Amarela,4,6 a 9 ano incompleto,10,935,1.07
+2025,uf,AC,AC,AC,Amarela,5,Fundamental completo,17,935,1.82
+2025,uf,AC,AC,AC,Amarela,6,Médio incompleto,33,935,3.53
+2025,uf,AC,AC,AC,Amarela,7,Médio completo,414,935,44.28
+2025,uf,AC,AC,AC,Amarela,8,Superior incompleto,33,935,3.53
+2025,uf,AC,AC,AC,Amarela,9,Superior completo,399,935,42.67
+2025,uf,AC,AC,AC,Amarela,10,Mestrado,9,935,0.96
+2025,uf,AC,AC,AC,Amarela,11,Doutorado,6,935,0.64
+2025,uf,AC,AC,AC,Branca,1,Analfabeto,10,12238,0.08
+2025,uf,AC,AC,AC,Branca,2,Até 5 ano incompleto,73,12238,0.6
+2025,uf,AC,AC,AC,Branca,3,5 ano completo,49,12238,0.4
+2025,uf,AC,AC,AC,Branca,4,6 a 9 ano incompleto,140,12238,1.14
+2025,uf,AC,AC,AC,Branca,5,Fundamental completo,266,12238,2.17
+2025,uf,AC,AC,AC,Branca,6,Médio incompleto,189,12238,1.54
+2025,uf,AC,AC,AC,Branca,7,Médio completo,3793,12238,30.99
+2025,uf,AC,AC,AC,Branca,8,Superior incompleto,327,12238,2.67
+2025,uf,AC,AC,AC,Branca,9,Superior completo,7027,12238,57.42
+2025,uf,AC,AC,AC,Branca,10,Mestrado,244,12238,1.99
+2025,uf,AC,AC,AC,Branca,11,Doutorado,120,12238,0.98
+2025,uf,AC,AC,AC,Indígena,1,Analfabeto,2,412,0.49
+2025,uf,AC,AC,AC,Indígena,2,Até 5 ano incompleto,4,412,0.97
+2025,uf,AC,AC,AC,Indígena,3,5 ano completo,3,412,0.73
+2025,uf,AC,AC,AC,Indígena,4,6 a 9 ano incompleto,13,412,3.16
+2025,uf,AC,AC,AC,Indígena,5,Fundamental completo,21,412,5.1
+2025,uf,AC,AC,AC,Indígena,6,Médio incompleto,8,412,1.94
+2025,uf,AC,AC,AC,Indígena,7,Médio completo,139,412,33.74
+2025,uf,AC,AC,AC,Indígena,8,Superior incompleto,4,412,0.97
+2025,uf,AC,AC,AC,Indígena,9,Superior completo,208,412,50.49
+2025,uf,AC,AC,AC,Indígena,10,Mestrado,10,412,2.43
+2025,uf,AC,AC,AC,Negra,1,Analfabeto,111,74766,0.15
+2025,uf,AC,AC,AC,Negra,2,Até 5 ano incompleto,600,74766,0.8
+2025,uf,AC,AC,AC,Negra,3,5 ano completo,403,74766,0.54
+2025,uf,AC,AC,AC,Negra,4,6 a 9 ano incompleto,1006,74766,1.35
+2025,uf,AC,AC,AC,Negra,5,Fundamental completo,2328,74766,3.11
+2025,uf,AC,AC,AC,Negra,6,Médio incompleto,1355,74766,1.81
+2025,uf,AC,AC,AC,Negra,7,Médio completo,32390,74766,43.32
+2025,uf,AC,AC,AC,Negra,8,Superior incompleto,1702,74766,2.28
+2025,uf,AC,AC,AC,Negra,9,Superior completo,34207,74766,45.75
+2025,uf,AC,AC,AC,Negra,10,Mestrado,525,74766,0.7
+2025,uf,AC,AC,AC,Negra,11,Doutorado,139,74766,0.19
+2025,uf,AL,AL,AL,Amarela,1,Analfabeto,42,9819,0.43
+2025,uf,AL,AL,AL,Amarela,2,Até 5 ano incompleto,287,9819,2.92
+2025,uf,AL,AL,AL,Amarela,3,5 ano completo,117,9819,1.19
+2025,uf,AL,AL,AL,Amarela,4,6 a 9 ano incompleto,129,9819,1.31
+2025,uf,AL,AL,AL,Amarela,5,Fundamental completo,565,9819,5.75
+2025,uf,AL,AL,AL,Amarela,6,Médio incompleto,250,9819,2.55
+2025,uf,AL,AL,AL,Amarela,7,Médio completo,3843,9819,39.14
+2025,uf,AL,AL,AL,Amarela,8,Superior incompleto,360,9819,3.67
+2025,uf,AL,AL,AL,Amarela,9,Superior completo,3909,9819,39.81
+2025,uf,AL,AL,AL,Amarela,10,Mestrado,246,9819,2.51
+2025,uf,AL,AL,AL,Amarela,11,Doutorado,71,9819,0.72
+2025,uf,AL,AL,AL,Branca,1,Analfabeto,276,77466,0.36
+2025,uf,AL,AL,AL,Branca,2,Até 5 ano incompleto,664,77466,0.86
+2025,uf,AL,AL,AL,Branca,3,5 ano completo,478,77466,0.62
+2025,uf,AL,AL,AL,Branca,4,6 a 9 ano incompleto,730,77466,0.94
+2025,uf,AL,AL,AL,Branca,5,Fundamental completo,4261,77466,5.5
+2025,uf,AL,AL,AL,Branca,6,Médio incompleto,1510,77466,1.95
+2025,uf,AL,AL,AL,Branca,7,Médio completo,26471,77466,34.17
+2025,uf,AL,AL,AL,Branca,8,Superior incompleto,2720,77466,3.51
+2025,uf,AL,AL,AL,Branca,9,Superior completo,37659,77466,48.61
+2025,uf,AL,AL,AL,Branca,10,Mestrado,1284,77466,1.66
+2025,uf,AL,AL,AL,Branca,11,Doutorado,1413,77466,1.82
+2025,uf,AL,AL,AL,Indígena,1,Analfabeto,8,1783,0.45
+2025,uf,AL,AL,AL,Indígena,2,Até 5 ano incompleto,39,1783,2.19
+2025,uf,AL,AL,AL,Indígena,3,5 ano completo,50,1783,2.8
+2025,uf,AL,AL,AL,Indígena,4,6 a 9 ano incompleto,393,1783,22.04
+2025,uf,AL,AL,AL,Indígena,5,Fundamental completo,166,1783,9.31
+2025,uf,AL,AL,AL,Indígena,6,Médio incompleto,35,1783,1.96
+2025,uf,AL,AL,AL,Indígena,7,Médio completo,458,1783,25.69
+2025,uf,AL,AL,AL,Indígena,8,Superior incompleto,40,1783,2.24
+2025,uf,AL,AL,AL,Indígena,9,Superior completo,562,1783,31.52
+2025,uf,AL,AL,AL,Indígena,10,Mestrado,8,1783,0.45
+2025,uf,AL,AL,AL,Indígena,11,Doutorado,24,1783,1.35
+2025,uf,AL,AL,AL,Negra,1,Analfabeto,1188,198713,0.6
+2025,uf,AL,AL,AL,Negra,2,Até 5 ano incompleto,2102,198713,1.06
+2025,uf,AL,AL,AL,Negra,3,5 ano completo,1260,198713,0.63
+2025,uf,AL,AL,AL,Negra,4,6 a 9 ano incompleto,3111,198713,1.57
+2025,uf,AL,AL,AL,Negra,5,Fundamental completo,6674,198713,3.36
+2025,uf,AL,AL,AL,Negra,6,Médio incompleto,5721,198713,2.88
+2025,uf,AL,AL,AL,Negra,7,Médio completo,103088,198713,51.88
+2025,uf,AL,AL,AL,Negra,8,Superior incompleto,6611,198713,3.33
+2025,uf,AL,AL,AL,Negra,9,Superior completo,66603,198713,33.52
+2025,uf,AL,AL,AL,Negra,10,Mestrado,1581,198713,0.8
+2025,uf,AL,AL,AL,Negra,11,Doutorado,774,198713,0.39
+2025,uf,AM,AM,AM,Amarela,1,Analfabeto,6,1966,0.31
+2025,uf,AM,AM,AM,Amarela,2,Até 5 ano incompleto,11,1966,0.56
+2025,uf,AM,AM,AM,Amarela,3,5 ano completo,12,1966,0.61
+2025,uf,AM,AM,AM,Amarela,4,6 a 9 ano incompleto,18,1966,0.92
+2025,uf,AM,AM,AM,Amarela,5,Fundamental completo,32,1966,1.63
+2025,uf,AM,AM,AM,Amarela,6,Médio incompleto,40,1966,2.03
+2025,uf,AM,AM,AM,Amarela,7,Médio completo,1037,1966,52.75
+2025,uf,AM,AM,AM,Amarela,8,Superior incompleto,72,1966,3.66
+2025,uf,AM,AM,AM,Amarela,9,Superior completo,684,1966,34.79
+2025,uf,AM,AM,AM,Amarela,10,Mestrado,24,1966,1.22
+2025,uf,AM,AM,AM,Amarela,11,Doutorado,30,1966,1.53
+2025,uf,AM,AM,AM,Branca,1,Analfabeto,70,52207,0.13
+2025,uf,AM,AM,AM,Branca,2,Até 5 ano incompleto,323,52207,0.62
+2025,uf,AM,AM,AM,Branca,3,5 ano completo,308,52207,0.59
+2025,uf,AM,AM,AM,Branca,4,6 a 9 ano incompleto,551,52207,1.06
+2025,uf,AM,AM,AM,Branca,5,Fundamental completo,1309,52207,2.51
+2025,uf,AM,AM,AM,Branca,6,Médio incompleto,1065,52207,2.04
+2025,uf,AM,AM,AM,Branca,7,Médio completo,21666,52207,41.5
+2025,uf,AM,AM,AM,Branca,8,Superior incompleto,1779,52207,3.41
+2025,uf,AM,AM,AM,Branca,9,Superior completo,23512,52207,45.04
+2025,uf,AM,AM,AM,Branca,10,Mestrado,975,52207,1.87
+2025,uf,AM,AM,AM,Branca,11,Doutorado,649,52207,1.24
+2025,uf,AM,AM,AM,Indígena,1,Analfabeto,9,4035,0.22
+2025,uf,AM,AM,AM,Indígena,2,Até 5 ano incompleto,22,4035,0.55
+2025,uf,AM,AM,AM,Indígena,3,5 ano completo,27,4035,0.67
+2025,uf,AM,AM,AM,Indígena,4,6 a 9 ano incompleto,57,4035,1.41
+2025,uf,AM,AM,AM,Indígena,5,Fundamental completo,148,4035,3.67
+2025,uf,AM,AM,AM,Indígena,6,Médio incompleto,72,4035,1.78
+2025,uf,AM,AM,AM,Indígena,7,Médio completo,2086,4035,51.7
+2025,uf,AM,AM,AM,Indígena,8,Superior incompleto,102,4035,2.53
+2025,uf,AM,AM,AM,Indígena,9,Superior completo,1470,4035,36.43
+2025,uf,AM,AM,AM,Indígena,10,Mestrado,32,4035,0.79
+2025,uf,AM,AM,AM,Indígena,11,Doutorado,10,4035,0.25
+2025,uf,AM,AM,AM,Negra,1,Analfabeto,461,323648,0.14
+2025,uf,AM,AM,AM,Negra,2,Até 5 ano incompleto,1874,323648,0.58
+2025,uf,AM,AM,AM,Negra,3,5 ano completo,1359,323648,0.42
+2025,uf,AM,AM,AM,Negra,4,6 a 9 ano incompleto,3600,323648,1.11
+2025,uf,AM,AM,AM,Negra,5,Fundamental completo,8757,323648,2.71
+2025,uf,AM,AM,AM,Negra,6,Médio incompleto,7249,323648,2.24
+2025,uf,AM,AM,AM,Negra,7,Médio completo,177392,323648,54.81
+2025,uf,AM,AM,AM,Negra,8,Superior incompleto,8945,323648,2.76
+2025,uf,AM,AM,AM,Negra,9,Superior completo,110045,323648,34.0
+2025,uf,AM,AM,AM,Negra,10,Mestrado,2051,323648,0.63
+2025,uf,AM,AM,AM,Negra,11,Doutorado,1915,323648,0.59
+2025,uf,AP,AP,AP,Amarela,1,Analfabeto,10,845,1.18
+2025,uf,AP,AP,AP,Amarela,2,Até 5 ano incompleto,9,845,1.07
+2025,uf,AP,AP,AP,Amarela,3,5 ano completo,3,845,0.36
+2025,uf,AP,AP,AP,Amarela,4,6 a 9 ano incompleto,7,845,0.83
+2025,uf,AP,AP,AP,Amarela,5,Fundamental completo,50,845,5.92
+2025,uf,AP,AP,AP,Amarela,6,Médio incompleto,21,845,2.49
+2025,uf,AP,AP,AP,Amarela,7,Médio completo,377,845,44.62
+2025,uf,AP,AP,AP,Amarela,8,Superior incompleto,27,845,3.2
+2025,uf,AP,AP,AP,Amarela,9,Superior completo,333,845,39.41
+2025,uf,AP,AP,AP,Amarela,10,Mestrado,4,845,0.47
+2025,uf,AP,AP,AP,Amarela,11,Doutorado,4,845,0.47
+2025,uf,AP,AP,AP,Branca,1,Analfabeto,737,18199,4.05
+2025,uf,AP,AP,AP,Branca,2,Até 5 ano incompleto,35,18199,0.19
+2025,uf,AP,AP,AP,Branca,3,5 ano completo,35,18199,0.19
+2025,uf,AP,AP,AP,Branca,4,6 a 9 ano incompleto,81,18199,0.45
+2025,uf,AP,AP,AP,Branca,5,Fundamental completo,465,18199,2.56
+2025,uf,AP,AP,AP,Branca,6,Médio incompleto,163,18199,0.9
+2025,uf,AP,AP,AP,Branca,7,Médio completo,6538,18199,35.93
+2025,uf,AP,AP,AP,Branca,8,Superior incompleto,294,18199,1.62
+2025,uf,AP,AP,AP,Branca,9,Superior completo,9606,18199,52.78
+2025,uf,AP,AP,AP,Branca,10,Mestrado,142,18199,0.78
+2025,uf,AP,AP,AP,Branca,11,Doutorado,103,18199,0.57
+2025,uf,AP,AP,AP,Indígena,1,Analfabeto,5,479,1.04
+2025,uf,AP,AP,AP,Indígena,2,Até 5 ano incompleto,12,479,2.51
+2025,uf,AP,AP,AP,Indígena,3,5 ano completo,3,479,0.63
+2025,uf,AP,AP,AP,Indígena,4,6 a 9 ano incompleto,18,479,3.76
+2025,uf,AP,AP,AP,Indígena,5,Fundamental completo,38,479,7.93
+2025,uf,AP,AP,AP,Indígena,6,Médio incompleto,33,479,6.89
+2025,uf,AP,AP,AP,Indígena,7,Médio completo,135,479,28.18
+2025,uf,AP,AP,AP,Indígena,8,Superior incompleto,8,479,1.67
+2025,uf,AP,AP,AP,Indígena,9,Superior completo,223,479,46.56
+2025,uf,AP,AP,AP,Indígena,10,Mestrado,3,479,0.63
+2025,uf,AP,AP,AP,Indígena,11,Doutorado,1,479,0.21
+2025,uf,AP,AP,AP,Negra,1,Analfabeto,594,67659,0.88
+2025,uf,AP,AP,AP,Negra,2,Até 5 ano incompleto,385,67659,0.57
+2025,uf,AP,AP,AP,Negra,3,5 ano completo,245,67659,0.36
+2025,uf,AP,AP,AP,Negra,4,6 a 9 ano incompleto,726,67659,1.07
+2025,uf,AP,AP,AP,Negra,5,Fundamental completo,3147,67659,4.65
+2025,uf,AP,AP,AP,Negra,6,Médio incompleto,1317,67659,1.95
+2025,uf,AP,AP,AP,Negra,7,Médio completo,30148,67659,44.56
+2025,uf,AP,AP,AP,Negra,8,Superior incompleto,1323,67659,1.96
+2025,uf,AP,AP,AP,Negra,9,Superior completo,29313,67659,43.32
+2025,uf,AP,AP,AP,Negra,10,Mestrado,304,67659,0.45
+2025,uf,AP,AP,AP,Negra,11,Doutorado,157,67659,0.23
+2025,uf,BA,BA,BA,Amarela,1,Analfabeto,15,10756,0.14
+2025,uf,BA,BA,BA,Amarela,2,Até 5 ano incompleto,91,10756,0.85
+2025,uf,BA,BA,BA,Amarela,3,5 ano completo,66,10756,0.61
+2025,uf,BA,BA,BA,Amarela,4,6 a 9 ano incompleto,171,10756,1.59
+2025,uf,BA,BA,BA,Amarela,5,Fundamental completo,266,10756,2.47
+2025,uf,BA,BA,BA,Amarela,6,Médio incompleto,354,10756,3.29
+2025,uf,BA,BA,BA,Amarela,7,Médio completo,5489,10756,51.03
+2025,uf,BA,BA,BA,Amarela,8,Superior incompleto,348,10756,3.24
+2025,uf,BA,BA,BA,Amarela,9,Superior completo,3811,10756,35.43
+2025,uf,BA,BA,BA,Amarela,10,Mestrado,101,10756,0.94
+2025,uf,BA,BA,BA,Amarela,11,Doutorado,44,10756,0.41
+2025,uf,BA,BA,BA,Branca,1,Analfabeto,280,188262,0.15
+2025,uf,BA,BA,BA,Branca,2,Até 5 ano incompleto,1024,188262,0.54
+2025,uf,BA,BA,BA,Branca,3,5 ano completo,921,188262,0.49
+2025,uf,BA,BA,BA,Branca,4,6 a 9 ano incompleto,2059,188262,1.09
+2025,uf,BA,BA,BA,Branca,5,Fundamental completo,3916,188262,2.08
+2025,uf,BA,BA,BA,Branca,6,Médio incompleto,4162,188262,2.21
+2025,uf,BA,BA,BA,Branca,7,Médio completo,77393,188262,41.11
+2025,uf,BA,BA,BA,Branca,8,Superior incompleto,5919,188262,3.14
+2025,uf,BA,BA,BA,Branca,9,Superior completo,87741,188262,46.61
+2025,uf,BA,BA,BA,Branca,10,Mestrado,3006,188262,1.6
+2025,uf,BA,BA,BA,Branca,11,Doutorado,1841,188262,0.98
+2025,uf,BA,BA,BA,Indígena,1,Analfabeto,11,4238,0.26
+2025,uf,BA,BA,BA,Indígena,2,Até 5 ano incompleto,64,4238,1.51
+2025,uf,BA,BA,BA,Indígena,3,5 ano completo,72,4238,1.7
+2025,uf,BA,BA,BA,Indígena,4,6 a 9 ano incompleto,112,4238,2.64
+2025,uf,BA,BA,BA,Indígena,5,Fundamental completo,157,4238,3.7
+2025,uf,BA,BA,BA,Indígena,6,Médio incompleto,209,4238,4.93
+2025,uf,BA,BA,BA,Indígena,7,Médio completo,1907,4238,45.0
+2025,uf,BA,BA,BA,Indígena,8,Superior incompleto,103,4238,2.43
+2025,uf,BA,BA,BA,Indígena,9,Superior completo,1534,4238,36.2
+2025,uf,BA,BA,BA,Indígena,10,Mestrado,52,4238,1.23
+2025,uf,BA,BA,BA,Indígena,11,Doutorado,17,4238,0.4
+2025,uf,BA,BA,BA,Negra,1,Analfabeto,1485,1097621,0.14
+2025,uf,BA,BA,BA,Negra,2,Até 5 ano incompleto,9729,1097621,0.89
+2025,uf,BA,BA,BA,Negra,3,5 ano completo,7026,1097621,0.64
+2025,uf,BA,BA,BA,Negra,4,6 a 9 ano incompleto,16267,1097621,1.48
+2025,uf,BA,BA,BA,Negra,5,Fundamental completo,25435,1097621,2.32
+2025,uf,BA,BA,BA,Negra,6,Médio incompleto,34169,1097621,3.11
+2025,uf,BA,BA,BA,Negra,7,Médio completo,606472,1097621,55.25
+2025,uf,BA,BA,BA,Negra,8,Superior incompleto,29440,1097621,2.68
+2025,uf,BA,BA,BA,Negra,9,Superior completo,357703,1097621,32.59
+2025,uf,BA,BA,BA,Negra,10,Mestrado,7341,1097621,0.67
+2025,uf,BA,BA,BA,Negra,11,Doutorado,2554,1097621,0.23
+2025,brasil,BR,Brasil,BR,Amarela,1,Analfabeto,911,306849,0.3
+2025,brasil,BR,Brasil,BR,Amarela,2,Até 5 ano incompleto,3131,306849,1.02
+2025,brasil,BR,Brasil,BR,Amarela,3,5 ano completo,2430,306849,0.79
+2025,brasil,BR,Brasil,BR,Amarela,4,6 a 9 ano incompleto,5370,306849,1.75
+2025,brasil,BR,Brasil,BR,Amarela,5,Fundamental completo,11391,306849,3.71
+2025,brasil,BR,Brasil,BR,Amarela,6,Médio incompleto,9601,306849,3.13
+2025,brasil,BR,Brasil,BR,Amarela,7,Médio completo,121335,306849,39.54
+2025,brasil,BR,Brasil,BR,Amarela,8,Superior incompleto,10088,306849,3.29
+2025,brasil,BR,Brasil,BR,Amarela,9,Superior completo,135972,306849,44.31
+2025,brasil,BR,Brasil,BR,Amarela,10,Mestrado,4357,306849,1.42
+2025,brasil,BR,Brasil,BR,Amarela,11,Doutorado,2263,306849,0.74
+2025,brasil,BR,Brasil,BR,Branca,1,Analfabeto,26084,12963064,0.2
+2025,brasil,BR,Brasil,BR,Branca,2,Até 5 ano incompleto,94391,12963064,0.73
+2025,brasil,BR,Brasil,BR,Branca,3,5 ano completo,101660,12963064,0.78
+2025,brasil,BR,Brasil,BR,Branca,4,6 a 9 ano incompleto,237950,12963064,1.84
+2025,brasil,BR,Brasil,BR,Branca,5,Fundamental completo,519914,12963064,4.01
+2025,brasil,BR,Brasil,BR,Branca,6,Médio incompleto,461994,12963064,3.56
+2025,brasil,BR,Brasil,BR,Branca,7,Médio completo,5405715,12963064,41.7
+2025,brasil,BR,Brasil,BR,Branca,8,Superior incompleto,512819,12963064,3.96
+2025,brasil,BR,Brasil,BR,Branca,9,Superior completo,5361997,12963064,41.36
+2025,brasil,BR,Brasil,BR,Branca,10,Mestrado,151555,12963064,1.17
+2025,brasil,BR,Brasil,BR,Branca,11,Doutorado,88985,12963064,0.69
+2025,brasil,BR,Brasil,BR,Indígena,1,Analfabeto,830,94003,0.88
+2025,brasil,BR,Brasil,BR,Indígena,2,Até 5 ano incompleto,2283,94003,2.43
+2025,brasil,BR,Brasil,BR,Indígena,3,5 ano completo,1005,94003,1.07
+2025,brasil,BR,Brasil,BR,Indígena,4,6 a 9 ano incompleto,3077,94003,3.27
+2025,brasil,BR,Brasil,BR,Indígena,5,Fundamental completo,4944,94003,5.26
+2025,brasil,BR,Brasil,BR,Indígena,6,Médio incompleto,4027,94003,4.28
+2025,brasil,BR,Brasil,BR,Indígena,7,Médio completo,40236,94003,42.8
+2025,brasil,BR,Brasil,BR,Indígena,8,Superior incompleto,2828,94003,3.01
+2025,brasil,BR,Brasil,BR,Indígena,9,Superior completo,33406,94003,35.54
+2025,brasil,BR,Brasil,BR,Indígena,10,Mestrado,1031,94003,1.1
+2025,brasil,BR,Brasil,BR,Indígena,11,Doutorado,336,94003,0.36
+2025,brasil,BR,Brasil,BR,Negra,1,Analfabeto,42503,13413634,0.32
+2025,brasil,BR,Brasil,BR,Negra,2,Até 5 ano incompleto,144116,13413634,1.07
+2025,brasil,BR,Brasil,BR,Negra,3,5 ano completo,110268,13413634,0.82
+2025,brasil,BR,Brasil,BR,Negra,4,6 a 9 ano incompleto,318898,13413634,2.38
+2025,brasil,BR,Brasil,BR,Negra,5,Fundamental completo,576672,13413634,4.3
+2025,brasil,BR,Brasil,BR,Negra,6,Médio incompleto,579359,13413634,4.32
+2025,brasil,BR,Brasil,BR,Negra,7,Médio completo,7067644,13413634,52.69
+2025,brasil,BR,Brasil,BR,Negra,8,Superior incompleto,434431,13413634,3.24
+2025,brasil,BR,Brasil,BR,Negra,9,Superior completo,4027316,13413634,30.02
+2025,brasil,BR,Brasil,BR,Negra,10,Mestrado,74683,13413634,0.56
+2025,brasil,BR,Brasil,BR,Negra,11,Doutorado,37744,13413634,0.28
+2025,uf,CE,CE,CE,Amarela,1,Analfabeto,10,7353,0.14
+2025,uf,CE,CE,CE,Amarela,2,Até 5 ano incompleto,49,7353,0.67
+2025,uf,CE,CE,CE,Amarela,3,5 ano completo,46,7353,0.63
+2025,uf,CE,CE,CE,Amarela,4,6 a 9 ano incompleto,116,7353,1.58
+2025,uf,CE,CE,CE,Amarela,5,Fundamental completo,256,7353,3.48
+2025,uf,CE,CE,CE,Amarela,6,Médio incompleto,218,7353,2.96
+2025,uf,CE,CE,CE,Amarela,7,Médio completo,3531,7353,48.02
+2025,uf,CE,CE,CE,Amarela,8,Superior incompleto,243,7353,3.3
+2025,uf,CE,CE,CE,Amarela,9,Superior completo,2787,7353,37.9
+2025,uf,CE,CE,CE,Amarela,10,Mestrado,67,7353,0.91
+2025,uf,CE,CE,CE,Amarela,11,Doutorado,30,7353,0.41
+2025,uf,CE,CE,CE,Branca,1,Analfabeto,442,193229,0.23
+2025,uf,CE,CE,CE,Branca,2,Até 5 ano incompleto,1266,193229,0.66
+2025,uf,CE,CE,CE,Branca,3,5 ano completo,926,193229,0.48
+2025,uf,CE,CE,CE,Branca,4,6 a 9 ano incompleto,2833,193229,1.47
+2025,uf,CE,CE,CE,Branca,5,Fundamental completo,5592,193229,2.89
+2025,uf,CE,CE,CE,Branca,6,Médio incompleto,3800,193229,1.97
+2025,uf,CE,CE,CE,Branca,7,Médio completo,72605,193229,37.57
+2025,uf,CE,CE,CE,Branca,8,Superior incompleto,7435,193229,3.85
+2025,uf,CE,CE,CE,Branca,9,Superior completo,94763,193229,49.04
+2025,uf,CE,CE,CE,Branca,10,Mestrado,2259,193229,1.17
+2025,uf,CE,CE,CE,Branca,11,Doutorado,1308,193229,0.68
+2025,uf,CE,CE,CE,Indígena,1,Analfabeto,41,4898,0.84
+2025,uf,CE,CE,CE,Indígena,2,Até 5 ano incompleto,33,4898,0.67
+2025,uf,CE,CE,CE,Indígena,3,5 ano completo,14,4898,0.29
+2025,uf,CE,CE,CE,Indígena,4,6 a 9 ano incompleto,31,4898,0.63
+2025,uf,CE,CE,CE,Indígena,5,Fundamental completo,175,4898,3.57
+2025,uf,CE,CE,CE,Indígena,6,Médio incompleto,99,4898,2.02
+2025,uf,CE,CE,CE,Indígena,7,Médio completo,1431,4898,29.22
+2025,uf,CE,CE,CE,Indígena,8,Superior incompleto,252,4898,5.14
+2025,uf,CE,CE,CE,Indígena,9,Superior completo,2793,4898,57.02
+2025,uf,CE,CE,CE,Indígena,10,Mestrado,22,4898,0.45
+2025,uf,CE,CE,CE,Indígena,11,Doutorado,7,4898,0.14
+2025,uf,CE,CE,CE,Negra,1,Analfabeto,2025,691624,0.29
+2025,uf,CE,CE,CE,Negra,2,Até 5 ano incompleto,5474,691624,0.79
+2025,uf,CE,CE,CE,Negra,3,5 ano completo,3493,691624,0.51
+2025,uf,CE,CE,CE,Negra,4,6 a 9 ano incompleto,11139,691624,1.61
+2025,uf,CE,CE,CE,Negra,5,Fundamental completo,23971,691624,3.47
+2025,uf,CE,CE,CE,Negra,6,Médio incompleto,18339,691624,2.65
+2025,uf,CE,CE,CE,Negra,7,Médio completo,330178,691624,47.74
+2025,uf,CE,CE,CE,Negra,8,Superior incompleto,23126,691624,3.34
+2025,uf,CE,CE,CE,Negra,9,Superior completo,267045,691624,38.61
+2025,uf,CE,CE,CE,Negra,10,Mestrado,4750,691624,0.69
+2025,uf,CE,CE,CE,Negra,11,Doutorado,2084,691624,0.3
+2025,uf,DF,DF,DF,Amarela,1,Analfabeto,11,11296,0.1
+2025,uf,DF,DF,DF,Amarela,2,Até 5 ano incompleto,31,11296,0.27
+2025,uf,DF,DF,DF,Amarela,3,5 ano completo,25,11296,0.22
+2025,uf,DF,DF,DF,Amarela,4,6 a 9 ano incompleto,113,11296,1.0
+2025,uf,DF,DF,DF,Amarela,5,Fundamental completo,209,11296,1.85
+2025,uf,DF,DF,DF,Amarela,6,Médio incompleto,223,11296,1.97
+2025,uf,DF,DF,DF,Amarela,7,Médio completo,3492,11296,30.91
+2025,uf,DF,DF,DF,Amarela,8,Superior incompleto,408,11296,3.61
+2025,uf,DF,DF,DF,Amarela,9,Superior completo,6388,11296,56.55
+2025,uf,DF,DF,DF,Amarela,10,Mestrado,281,11296,2.49
+2025,uf,DF,DF,DF,Amarela,11,Doutorado,115,11296,1.02
+2025,uf,DF,DF,DF,Branca,1,Analfabeto,164,289873,0.06
+2025,uf,DF,DF,DF,Branca,2,Até 5 ano incompleto,548,289873,0.19
+2025,uf,DF,DF,DF,Branca,3,5 ano completo,523,289873,0.18
+2025,uf,DF,DF,DF,Branca,4,6 a 9 ano incompleto,2001,289873,0.69
+2025,uf,DF,DF,DF,Branca,5,Fundamental completo,4578,289873,1.58
+2025,uf,DF,DF,DF,Branca,6,Médio incompleto,4306,289873,1.49
+2025,uf,DF,DF,DF,Branca,7,Médio completo,68734,289873,23.71
+2025,uf,DF,DF,DF,Branca,8,Superior incompleto,9418,289873,3.25
+2025,uf,DF,DF,DF,Branca,9,Superior completo,184958,289873,63.81
+2025,uf,DF,DF,DF,Branca,10,Mestrado,10325,289873,3.56
+2025,uf,DF,DF,DF,Branca,11,Doutorado,4318,289873,1.49
+2025,uf,DF,DF,DF,Indígena,1,Analfabeto,13,7546,0.17
+2025,uf,DF,DF,DF,Indígena,2,Até 5 ano incompleto,91,7546,1.21
+2025,uf,DF,DF,DF,Indígena,3,5 ano completo,53,7546,0.7
+2025,uf,DF,DF,DF,Indígena,4,6 a 9 ano incompleto,195,7546,2.58
+2025,uf,DF,DF,DF,Indígena,5,Fundamental completo,208,7546,2.76
+2025,uf,DF,DF,DF,Indígena,6,Médio incompleto,199,7546,2.64
+2025,uf,DF,DF,DF,Indígena,7,Médio completo,3587,7546,47.54
+2025,uf,DF,DF,DF,Indígena,8,Superior incompleto,224,7546,2.97
+2025,uf,DF,DF,DF,Indígena,9,Superior completo,2877,7546,38.13
+2025,uf,DF,DF,DF,Indígena,10,Mestrado,69,7546,0.91
+2025,uf,DF,DF,DF,Indígena,11,Doutorado,30,7546,0.4
+2025,uf,DF,DF,DF,Negra,1,Analfabeto,522,424376,0.12
+2025,uf,DF,DF,DF,Negra,2,Até 5 ano incompleto,1893,424376,0.45
+2025,uf,DF,DF,DF,Negra,3,5 ano completo,1600,424376,0.38
+2025,uf,DF,DF,DF,Negra,4,6 a 9 ano incompleto,6589,424376,1.55
+2025,uf,DF,DF,DF,Negra,5,Fundamental completo,11697,424376,2.76
+2025,uf,DF,DF,DF,Negra,6,Médio incompleto,13243,424376,3.12
+2025,uf,DF,DF,DF,Negra,7,Médio completo,179757,424376,42.36
+2025,uf,DF,DF,DF,Negra,8,Superior incompleto,16471,424376,3.88
+2025,uf,DF,DF,DF,Negra,9,Superior completo,185227,424376,43.65
+2025,uf,DF,DF,DF,Negra,10,Mestrado,5602,424376,1.32
+2025,uf,DF,DF,DF,Negra,11,Doutorado,1775,424376,0.42
+2025,uf,ES,ES,ES,Amarela,1,Analfabeto,4,3711,0.11
+2025,uf,ES,ES,ES,Amarela,2,Até 5 ano incompleto,42,3711,1.13
+2025,uf,ES,ES,ES,Amarela,3,5 ano completo,23,3711,0.62
+2025,uf,ES,ES,ES,Amarela,4,6 a 9 ano incompleto,114,3711,3.07
+2025,uf,ES,ES,ES,Amarela,5,Fundamental completo,167,3711,4.5
+2025,uf,ES,ES,ES,Amarela,6,Médio incompleto,207,3711,5.58
+2025,uf,ES,ES,ES,Amarela,7,Médio completo,1803,3711,48.59
+2025,uf,ES,ES,ES,Amarela,8,Superior incompleto,163,3711,4.39
+2025,uf,ES,ES,ES,Amarela,9,Superior completo,1125,3711,30.32
+2025,uf,ES,ES,ES,Amarela,10,Mestrado,43,3711,1.16
+2025,uf,ES,ES,ES,Amarela,11,Doutorado,20,3711,0.54
+2025,uf,ES,ES,ES,Branca,1,Analfabeto,177,184158,0.1
+2025,uf,ES,ES,ES,Branca,2,Até 5 ano incompleto,1396,184158,0.76
+2025,uf,ES,ES,ES,Branca,3,5 ano completo,1397,184158,0.76
+2025,uf,ES,ES,ES,Branca,4,6 a 9 ano incompleto,3233,184158,1.76
+2025,uf,ES,ES,ES,Branca,5,Fundamental completo,6636,184158,3.6
+2025,uf,ES,ES,ES,Branca,6,Médio incompleto,6432,184158,3.49
+2025,uf,ES,ES,ES,Branca,7,Médio completo,72850,184158,39.56
+2025,uf,ES,ES,ES,Branca,8,Superior incompleto,7316,184158,3.97
+2025,uf,ES,ES,ES,Branca,9,Superior completo,80188,184158,43.54
+2025,uf,ES,ES,ES,Branca,10,Mestrado,3242,184158,1.76
+2025,uf,ES,ES,ES,Branca,11,Doutorado,1291,184158,0.7
+2025,uf,ES,ES,ES,Indígena,1,Analfabeto,5,1127,0.44
+2025,uf,ES,ES,ES,Indígena,2,Até 5 ano incompleto,18,1127,1.6
+2025,uf,ES,ES,ES,Indígena,3,5 ano completo,19,1127,1.69
+2025,uf,ES,ES,ES,Indígena,4,6 a 9 ano incompleto,59,1127,5.24
+2025,uf,ES,ES,ES,Indígena,5,Fundamental completo,81,1127,7.19
+2025,uf,ES,ES,ES,Indígena,6,Médio incompleto,77,1127,6.83
+2025,uf,ES,ES,ES,Indígena,7,Médio completo,515,1127,45.7
+2025,uf,ES,ES,ES,Indígena,8,Superior incompleto,45,1127,3.99
+2025,uf,ES,ES,ES,Indígena,9,Superior completo,296,1127,26.26
+2025,uf,ES,ES,ES,Indígena,10,Mestrado,6,1127,0.53
+2025,uf,ES,ES,ES,Indígena,11,Doutorado,6,1127,0.53
+2025,uf,ES,ES,ES,Negra,1,Analfabeto,600,314551,0.19
+2025,uf,ES,ES,ES,Negra,2,Até 5 ano incompleto,3688,314551,1.17
+2025,uf,ES,ES,ES,Negra,3,5 ano completo,2849,314551,0.91
+2025,uf,ES,ES,ES,Negra,4,6 a 9 ano incompleto,10785,314551,3.43
+2025,uf,ES,ES,ES,Negra,5,Fundamental completo,16710,314551,5.31
+2025,uf,ES,ES,ES,Negra,6,Médio incompleto,18712,314551,5.95
+2025,uf,ES,ES,ES,Negra,7,Médio completo,162943,314551,51.8
+2025,uf,ES,ES,ES,Negra,8,Superior incompleto,11216,314551,3.57
+2025,uf,ES,ES,ES,Negra,9,Superior completo,84260,314551,26.79
+2025,uf,ES,ES,ES,Negra,10,Mestrado,2147,314551,0.68
+2025,uf,ES,ES,ES,Negra,11,Doutorado,641,314551,0.2
+2025,uf,GO,GO,GO,Amarela,1,Analfabeto,64,13323,0.48
+2025,uf,GO,GO,GO,Amarela,2,Até 5 ano incompleto,175,13323,1.31
+2025,uf,GO,GO,GO,Amarela,3,5 ano completo,103,13323,0.77
+2025,uf,GO,GO,GO,Amarela,4,6 a 9 ano incompleto,318,13323,2.39
+2025,uf,GO,GO,GO,Amarela,5,Fundamental completo,500,13323,3.75
+2025,uf,GO,GO,GO,Amarela,6,Médio incompleto,692,13323,5.19
+2025,uf,GO,GO,GO,Amarela,7,Médio completo,5971,13323,44.82
+2025,uf,GO,GO,GO,Amarela,8,Superior incompleto,560,13323,4.2
+2025,uf,GO,GO,GO,Amarela,9,Superior completo,4791,13323,35.96
+2025,uf,GO,GO,GO,Amarela,10,Mestrado,85,13323,0.64
+2025,uf,GO,GO,GO,Amarela,11,Doutorado,64,13323,0.48
+2025,uf,GO,GO,GO,Branca,1,Analfabeto,590,287297,0.21
+2025,uf,GO,GO,GO,Branca,2,Até 5 ano incompleto,2998,287297,1.04
+2025,uf,GO,GO,GO,Branca,3,5 ano completo,1781,287297,0.62
+2025,uf,GO,GO,GO,Branca,4,6 a 9 ano incompleto,5551,287297,1.93
+2025,uf,GO,GO,GO,Branca,5,Fundamental completo,9304,287297,3.24
+2025,uf,GO,GO,GO,Branca,6,Médio incompleto,11742,287297,4.09
+2025,uf,GO,GO,GO,Branca,7,Médio completo,111471,287297,38.8
+2025,uf,GO,GO,GO,Branca,8,Superior incompleto,10503,287297,3.66
+2025,uf,GO,GO,GO,Branca,9,Superior completo,126967,287297,44.19
+2025,uf,GO,GO,GO,Branca,10,Mestrado,3253,287297,1.13
+2025,uf,GO,GO,GO,Branca,11,Doutorado,3137,287297,1.09
+2025,uf,GO,GO,GO,Indígena,1,Analfabeto,87,2144,4.06
+2025,uf,GO,GO,GO,Indígena,2,Até 5 ano incompleto,33,2144,1.54
+2025,uf,GO,GO,GO,Indígena,3,5 ano completo,24,2144,1.12
+2025,uf,GO,GO,GO,Indígena,4,6 a 9 ano incompleto,105,2144,4.9
+2025,uf,GO,GO,GO,Indígena,5,Fundamental completo,93,2144,4.34
+2025,uf,GO,GO,GO,Indígena,6,Médio incompleto,177,2144,8.26
+2025,uf,GO,GO,GO,Indígena,7,Médio completo,761,2144,35.49
+2025,uf,GO,GO,GO,Indígena,8,Superior incompleto,69,2144,3.22
+2025,uf,GO,GO,GO,Indígena,9,Superior completo,777,2144,36.24
+2025,uf,GO,GO,GO,Indígena,10,Mestrado,13,2144,0.61
+2025,uf,GO,GO,GO,Indígena,11,Doutorado,5,2144,0.23
+2025,uf,GO,GO,GO,Negra,1,Analfabeto,1330,581801,0.23
+2025,uf,GO,GO,GO,Negra,2,Até 5 ano incompleto,7770,581801,1.34
+2025,uf,GO,GO,GO,Negra,3,5 ano completo,4213,581801,0.72
+2025,uf,GO,GO,GO,Negra,4,6 a 9 ano incompleto,17464,581801,3.0
+2025,uf,GO,GO,GO,Negra,5,Fundamental completo,23993,581801,4.12
+2025,uf,GO,GO,GO,Negra,6,Médio incompleto,30718,581801,5.28
+2025,uf,GO,GO,GO,Negra,7,Médio completo,301329,581801,51.79
+2025,uf,GO,GO,GO,Negra,8,Superior incompleto,18477,581801,3.18
+2025,uf,GO,GO,GO,Negra,9,Superior completo,171821,581801,29.53
+2025,uf,GO,GO,GO,Negra,10,Mestrado,2119,581801,0.36
+2025,uf,GO,GO,GO,Negra,11,Doutorado,2567,581801,0.44
+2025,uf,MA,MA,MA,Amarela,1,Analfabeto,85,18341,0.46
+2025,uf,MA,MA,MA,Amarela,2,Até 5 ano incompleto,113,18341,0.62
+2025,uf,MA,MA,MA,Amarela,3,5 ano completo,34,18341,0.19
+2025,uf,MA,MA,MA,Amarela,4,6 a 9 ano incompleto,111,18341,0.61
+2025,uf,MA,MA,MA,Amarela,5,Fundamental completo,686,18341,3.74
+2025,uf,MA,MA,MA,Amarela,6,Médio incompleto,186,18341,1.01
+2025,uf,MA,MA,MA,Amarela,7,Médio completo,6840,18341,37.29
+2025,uf,MA,MA,MA,Amarela,8,Superior incompleto,353,18341,1.92
+2025,uf,MA,MA,MA,Amarela,9,Superior completo,9773,18341,53.28
+2025,uf,MA,MA,MA,Amarela,10,Mestrado,75,18341,0.41
+2025,uf,MA,MA,MA,Amarela,11,Doutorado,85,18341,0.46
+2025,uf,MA,MA,MA,Branca,1,Analfabeto,269,118450,0.23
+2025,uf,MA,MA,MA,Branca,2,Até 5 ano incompleto,490,118450,0.41
+2025,uf,MA,MA,MA,Branca,3,5 ano completo,516,118450,0.44
+2025,uf,MA,MA,MA,Branca,4,6 a 9 ano incompleto,619,118450,0.52
+2025,uf,MA,MA,MA,Branca,5,Fundamental completo,2348,118450,1.98
+2025,uf,MA,MA,MA,Branca,6,Médio incompleto,1208,118450,1.02
+2025,uf,MA,MA,MA,Branca,7,Médio completo,40140,118450,33.89
+2025,uf,MA,MA,MA,Branca,8,Superior incompleto,2798,118450,2.36
+2025,uf,MA,MA,MA,Branca,9,Superior completo,68070,118450,57.47
+2025,uf,MA,MA,MA,Branca,10,Mestrado,1541,118450,1.3
+2025,uf,MA,MA,MA,Branca,11,Doutorado,451,118450,0.38
+2025,uf,MA,MA,MA,Indígena,1,Analfabeto,29,2775,1.05
+2025,uf,MA,MA,MA,Indígena,2,Até 5 ano incompleto,12,2775,0.43
+2025,uf,MA,MA,MA,Indígena,3,5 ano completo,9,2775,0.32
+2025,uf,MA,MA,MA,Indígena,4,6 a 9 ano incompleto,15,2775,0.54
+2025,uf,MA,MA,MA,Indígena,5,Fundamental completo,305,2775,10.99
+2025,uf,MA,MA,MA,Indígena,6,Médio incompleto,41,2775,1.48
+2025,uf,MA,MA,MA,Indígena,7,Médio completo,1415,2775,50.99
+2025,uf,MA,MA,MA,Indígena,8,Superior incompleto,73,2775,2.63
+2025,uf,MA,MA,MA,Indígena,9,Superior completo,866,2775,31.21
+2025,uf,MA,MA,MA,Indígena,10,Mestrado,9,2775,0.32
+2025,uf,MA,MA,MA,Indígena,11,Doutorado,1,2775,0.04
+2025,uf,MA,MA,MA,Negra,1,Analfabeto,1437,341402,0.42
+2025,uf,MA,MA,MA,Negra,2,Até 5 ano incompleto,1614,341402,0.47
+2025,uf,MA,MA,MA,Negra,3,5 ano completo,1176,341402,0.34
+2025,uf,MA,MA,MA,Negra,4,6 a 9 ano incompleto,2689,341402,0.79
+2025,uf,MA,MA,MA,Negra,5,Fundamental completo,10311,341402,3.02
+2025,uf,MA,MA,MA,Negra,6,Médio incompleto,5454,341402,1.6
+2025,uf,MA,MA,MA,Negra,7,Médio completo,178589,341402,52.31
+2025,uf,MA,MA,MA,Negra,8,Superior incompleto,8289,341402,2.43
+2025,uf,MA,MA,MA,Negra,9,Superior completo,129462,341402,37.92
+2025,uf,MA,MA,MA,Negra,10,Mestrado,1801,341402,0.53
+2025,uf,MA,MA,MA,Negra,11,Doutorado,580,341402,0.17
+2025,uf,MG,MG,MG,Amarela,1,Analfabeto,63,33446,0.19
+2025,uf,MG,MG,MG,Amarela,2,Até 5 ano incompleto,442,33446,1.32
+2025,uf,MG,MG,MG,Amarela,3,5 ano completo,555,33446,1.66
+2025,uf,MG,MG,MG,Amarela,4,6 a 9 ano incompleto,903,33446,2.7
+2025,uf,MG,MG,MG,Amarela,5,Fundamental completo,1457,33446,4.36
+2025,uf,MG,MG,MG,Amarela,6,Médio incompleto,1383,33446,4.14
+2025,uf,MG,MG,MG,Amarela,7,Médio completo,14802,33446,44.26
+2025,uf,MG,MG,MG,Amarela,8,Superior incompleto,1077,33446,3.22
+2025,uf,MG,MG,MG,Amarela,9,Superior completo,12438,33446,37.19
+2025,uf,MG,MG,MG,Amarela,10,Mestrado,214,33446,0.64
+2025,uf,MG,MG,MG,Amarela,11,Doutorado,112,33446,0.33
+2025,uf,MG,MG,MG,Branca,1,Analfabeto,2037,1245644,0.16
+2025,uf,MG,MG,MG,Branca,2,Até 5 ano incompleto,11219,1245644,0.9
+2025,uf,MG,MG,MG,Branca,3,5 ano completo,16017,1245644,1.29
+2025,uf,MG,MG,MG,Branca,4,6 a 9 ano incompleto,26837,1245644,2.15
+2025,uf,MG,MG,MG,Branca,5,Fundamental completo,49630,1245644,3.98
+2025,uf,MG,MG,MG,Branca,6,Médio incompleto,49008,1245644,3.93
+2025,uf,MG,MG,MG,Branca,7,Médio completo,501034,1245644,40.22
+2025,uf,MG,MG,MG,Branca,8,Superior incompleto,43796,1245644,3.52
+2025,uf,MG,MG,MG,Branca,9,Superior completo,522019,1245644,41.91
+2025,uf,MG,MG,MG,Branca,10,Mestrado,14980,1245644,1.2
+2025,uf,MG,MG,MG,Branca,11,Doutorado,9067,1245644,0.73
+2025,uf,MG,MG,MG,Indígena,1,Analfabeto,203,11101,1.83
+2025,uf,MG,MG,MG,Indígena,2,Até 5 ano incompleto,114,11101,1.03
+2025,uf,MG,MG,MG,Indígena,3,5 ano completo,198,11101,1.78
+2025,uf,MG,MG,MG,Indígena,4,6 a 9 ano incompleto,294,11101,2.65
+2025,uf,MG,MG,MG,Indígena,5,Fundamental completo,420,11101,3.78
+2025,uf,MG,MG,MG,Indígena,6,Médio incompleto,459,11101,4.13
+2025,uf,MG,MG,MG,Indígena,7,Médio completo,4617,11101,41.59
+2025,uf,MG,MG,MG,Indígena,8,Superior incompleto,268,11101,2.41
+2025,uf,MG,MG,MG,Indígena,9,Superior completo,4478,11101,40.34
+2025,uf,MG,MG,MG,Indígena,10,Mestrado,26,11101,0.23
+2025,uf,MG,MG,MG,Indígena,11,Doutorado,24,11101,0.22
+2025,uf,MG,MG,MG,Negra,1,Analfabeto,3765,1564476,0.24
+2025,uf,MG,MG,MG,Negra,2,Até 5 ano incompleto,20767,1564476,1.33
+2025,uf,MG,MG,MG,Negra,3,5 ano completo,22252,1564476,1.42
+2025,uf,MG,MG,MG,Negra,4,6 a 9 ano incompleto,45929,1564476,2.94
+2025,uf,MG,MG,MG,Negra,5,Fundamental completo,69149,1564476,4.42
+2025,uf,MG,MG,MG,Negra,6,Médio incompleto,84196,1564476,5.38
+2025,uf,MG,MG,MG,Negra,7,Médio completo,805140,1564476,51.46
+2025,uf,MG,MG,MG,Negra,8,Superior incompleto,49685,1564476,3.18
+2025,uf,MG,MG,MG,Negra,9,Superior completo,453669,1564476,29.0
+2025,uf,MG,MG,MG,Negra,10,Mestrado,6918,1564476,0.44
+2025,uf,MG,MG,MG,Negra,11,Doutorado,3006,1564476,0.19
+2025,uf,MS,MS,MS,Amarela,1,Analfabeto,16,4787,0.33
+2025,uf,MS,MS,MS,Amarela,2,Até 5 ano incompleto,83,4787,1.73
+2025,uf,MS,MS,MS,Amarela,3,5 ano completo,50,4787,1.04
+2025,uf,MS,MS,MS,Amarela,4,6 a 9 ano incompleto,120,4787,2.51
+2025,uf,MS,MS,MS,Amarela,5,Fundamental completo,228,4787,4.76
+2025,uf,MS,MS,MS,Amarela,6,Médio incompleto,189,4787,3.95
+2025,uf,MS,MS,MS,Amarela,7,Médio completo,1842,4787,38.48
+2025,uf,MS,MS,MS,Amarela,8,Superior incompleto,148,4787,3.09
+2025,uf,MS,MS,MS,Amarela,9,Superior completo,1951,4787,40.76
+2025,uf,MS,MS,MS,Amarela,10,Mestrado,85,4787,1.78
+2025,uf,MS,MS,MS,Amarela,11,Doutorado,75,4787,1.57
+2025,uf,MS,MS,MS,Branca,1,Analfabeto,334,160366,0.21
+2025,uf,MS,MS,MS,Branca,2,Até 5 ano incompleto,1918,160366,1.2
+2025,uf,MS,MS,MS,Branca,3,5 ano completo,1450,160366,0.9
+2025,uf,MS,MS,MS,Branca,4,6 a 9 ano incompleto,3747,160366,2.34
+2025,uf,MS,MS,MS,Branca,5,Fundamental completo,6872,160366,4.29
+2025,uf,MS,MS,MS,Branca,6,Médio incompleto,6744,160366,4.21
+2025,uf,MS,MS,MS,Branca,7,Médio completo,61573,160366,38.4
+2025,uf,MS,MS,MS,Branca,8,Superior incompleto,6107,160366,3.81
+2025,uf,MS,MS,MS,Branca,9,Superior completo,67378,160366,42.02
+2025,uf,MS,MS,MS,Branca,10,Mestrado,2320,160366,1.45
+2025,uf,MS,MS,MS,Branca,11,Doutorado,1923,160366,1.2
+2025,uf,MS,MS,MS,Indígena,1,Analfabeto,17,4891,0.35
+2025,uf,MS,MS,MS,Indígena,2,Até 5 ano incompleto,147,4891,3.01
+2025,uf,MS,MS,MS,Indígena,3,5 ano completo,105,4891,2.15
+2025,uf,MS,MS,MS,Indígena,4,6 a 9 ano incompleto,310,4891,6.34
+2025,uf,MS,MS,MS,Indígena,5,Fundamental completo,371,4891,7.59
+2025,uf,MS,MS,MS,Indígena,6,Médio incompleto,399,4891,8.16
+2025,uf,MS,MS,MS,Indígena,7,Médio completo,1944,4891,39.75
+2025,uf,MS,MS,MS,Indígena,8,Superior incompleto,75,4891,1.53
+2025,uf,MS,MS,MS,Indígena,9,Superior completo,1477,4891,30.2
+2025,uf,MS,MS,MS,Indígena,10,Mestrado,36,4891,0.74
+2025,uf,MS,MS,MS,Indígena,11,Doutorado,10,4891,0.2
+2025,uf,MS,MS,MS,Negra,1,Analfabeto,775,194448,0.4
+2025,uf,MS,MS,MS,Negra,2,Até 5 ano incompleto,3780,194448,1.94
+2025,uf,MS,MS,MS,Negra,3,5 ano completo,2213,194448,1.14
+2025,uf,MS,MS,MS,Negra,4,6 a 9 ano incompleto,7062,194448,3.63
+2025,uf,MS,MS,MS,Negra,5,Fundamental completo,10554,194448,5.43
+2025,uf,MS,MS,MS,Negra,6,Médio incompleto,12303,194448,6.33
+2025,uf,MS,MS,MS,Negra,7,Médio completo,99466,194448,51.15
+2025,uf,MS,MS,MS,Negra,8,Superior incompleto,6574,194448,3.38
+2025,uf,MS,MS,MS,Negra,9,Superior completo,50139,194448,25.79
+2025,uf,MS,MS,MS,Negra,10,Mestrado,1022,194448,0.53
+2025,uf,MS,MS,MS,Negra,11,Doutorado,560,194448,0.29
+2025,uf,MT,MT,MT,Amarela,1,Analfabeto,14,6007,0.23
+2025,uf,MT,MT,MT,Amarela,2,Até 5 ano incompleto,115,6007,1.91
+2025,uf,MT,MT,MT,Amarela,3,5 ano completo,52,6007,0.87
+2025,uf,MT,MT,MT,Amarela,4,6 a 9 ano incompleto,104,6007,1.73
+2025,uf,MT,MT,MT,Amarela,5,Fundamental completo,145,6007,2.41
+2025,uf,MT,MT,MT,Amarela,6,Médio incompleto,308,6007,5.13
+2025,uf,MT,MT,MT,Amarela,7,Médio completo,2536,6007,42.22
+2025,uf,MT,MT,MT,Amarela,8,Superior incompleto,214,6007,3.56
+2025,uf,MT,MT,MT,Amarela,9,Superior completo,2415,6007,40.2
+2025,uf,MT,MT,MT,Amarela,10,Mestrado,61,6007,1.02
+2025,uf,MT,MT,MT,Amarela,11,Doutorado,43,6007,0.72
+2025,uf,MT,MT,MT,Branca,1,Analfabeto,263,152134,0.17
+2025,uf,MT,MT,MT,Branca,2,Até 5 ano incompleto,1177,152134,0.77
+2025,uf,MT,MT,MT,Branca,3,5 ano completo,914,152134,0.6
+2025,uf,MT,MT,MT,Branca,4,6 a 9 ano incompleto,2314,152134,1.52
+2025,uf,MT,MT,MT,Branca,5,Fundamental completo,4835,152134,3.18
+2025,uf,MT,MT,MT,Branca,6,Médio incompleto,6340,152134,4.17
+2025,uf,MT,MT,MT,Branca,7,Médio completo,54167,152134,35.6
+2025,uf,MT,MT,MT,Branca,8,Superior incompleto,6023,152134,3.96
+2025,uf,MT,MT,MT,Branca,9,Superior completo,71525,152134,47.01
+2025,uf,MT,MT,MT,Branca,10,Mestrado,2838,152134,1.87
+2025,uf,MT,MT,MT,Branca,11,Doutorado,1738,152134,1.14
+2025,uf,MT,MT,MT,Indígena,1,Analfabeto,10,2212,0.45
+2025,uf,MT,MT,MT,Indígena,2,Até 5 ano incompleto,35,2212,1.58
+2025,uf,MT,MT,MT,Indígena,3,5 ano completo,16,2212,0.72
+2025,uf,MT,MT,MT,Indígena,4,6 a 9 ano incompleto,33,2212,1.49
+2025,uf,MT,MT,MT,Indígena,5,Fundamental completo,169,2212,7.64
+2025,uf,MT,MT,MT,Indígena,6,Médio incompleto,106,2212,4.79
+2025,uf,MT,MT,MT,Indígena,7,Médio completo,1126,2212,50.9
+2025,uf,MT,MT,MT,Indígena,8,Superior incompleto,32,2212,1.45
+2025,uf,MT,MT,MT,Indígena,9,Superior completo,653,2212,29.52
+2025,uf,MT,MT,MT,Indígena,10,Mestrado,22,2212,0.99
+2025,uf,MT,MT,MT,Indígena,11,Doutorado,10,2212,0.45
+2025,uf,MT,MT,MT,Negra,1,Analfabeto,846,385642,0.22
+2025,uf,MT,MT,MT,Negra,2,Até 5 ano incompleto,4219,385642,1.09
+2025,uf,MT,MT,MT,Negra,3,5 ano completo,2810,385642,0.73
+2025,uf,MT,MT,MT,Negra,4,6 a 9 ano incompleto,7887,385642,2.05
+2025,uf,MT,MT,MT,Negra,5,Fundamental completo,14958,385642,3.88
+2025,uf,MT,MT,MT,Negra,6,Médio incompleto,21881,385642,5.67
+2025,uf,MT,MT,MT,Negra,7,Médio completo,193933,385642,50.29
+2025,uf,MT,MT,MT,Negra,8,Superior incompleto,11628,385642,3.02
+2025,uf,MT,MT,MT,Negra,9,Superior completo,122779,385642,31.84
+2025,uf,MT,MT,MT,Negra,10,Mestrado,2841,385642,0.74
+2025,uf,MT,MT,MT,Negra,11,Doutorado,1860,385642,0.48
+2025,uf,PA,PA,PA,Amarela,1,Analfabeto,13,6845,0.19
+2025,uf,PA,PA,PA,Amarela,2,Até 5 ano incompleto,65,6845,0.95
+2025,uf,PA,PA,PA,Amarela,3,5 ano completo,54,6845,0.79
+2025,uf,PA,PA,PA,Amarela,4,6 a 9 ano incompleto,521,6845,7.61
+2025,uf,PA,PA,PA,Amarela,5,Fundamental completo,400,6845,5.84
+2025,uf,PA,PA,PA,Amarela,6,Médio incompleto,179,6845,2.62
+2025,uf,PA,PA,PA,Amarela,7,Médio completo,2307,6845,33.7
+2025,uf,PA,PA,PA,Amarela,8,Superior incompleto,156,6845,2.28
+2025,uf,PA,PA,PA,Amarela,9,Superior completo,2504,6845,36.58
+2025,uf,PA,PA,PA,Amarela,10,Mestrado,596,6845,8.71
+2025,uf,PA,PA,PA,Amarela,11,Doutorado,50,6845,0.73
+2025,uf,PA,PA,PA,Branca,1,Analfabeto,199,116061,0.17
+2025,uf,PA,PA,PA,Branca,2,Até 5 ano incompleto,620,116061,0.53
+2025,uf,PA,PA,PA,Branca,3,5 ano completo,601,116061,0.52
+2025,uf,PA,PA,PA,Branca,4,6 a 9 ano incompleto,2576,116061,2.22
+2025,uf,PA,PA,PA,Branca,5,Fundamental completo,5946,116061,5.12
+2025,uf,PA,PA,PA,Branca,6,Médio incompleto,2487,116061,2.14
+2025,uf,PA,PA,PA,Branca,7,Médio completo,43931,116061,37.85
+2025,uf,PA,PA,PA,Branca,8,Superior incompleto,2984,116061,2.57
+2025,uf,PA,PA,PA,Branca,9,Superior completo,54317,116061,46.8
+2025,uf,PA,PA,PA,Branca,10,Mestrado,1384,116061,1.19
+2025,uf,PA,PA,PA,Branca,11,Doutorado,1016,116061,0.88
+2025,uf,PA,PA,PA,Indígena,1,Analfabeto,29,4560,0.64
+2025,uf,PA,PA,PA,Indígena,2,Até 5 ano incompleto,21,4560,0.46
+2025,uf,PA,PA,PA,Indígena,3,5 ano completo,27,4560,0.59
+2025,uf,PA,PA,PA,Indígena,4,6 a 9 ano incompleto,263,4560,5.77
+2025,uf,PA,PA,PA,Indígena,5,Fundamental completo,230,4560,5.04
+2025,uf,PA,PA,PA,Indígena,6,Médio incompleto,114,4560,2.5
+2025,uf,PA,PA,PA,Indígena,7,Médio completo,2250,4560,49.34
+2025,uf,PA,PA,PA,Indígena,8,Superior incompleto,140,4560,3.07
+2025,uf,PA,PA,PA,Indígena,9,Superior completo,1161,4560,25.46
+2025,uf,PA,PA,PA,Indígena,10,Mestrado,313,4560,6.86
+2025,uf,PA,PA,PA,Indígena,11,Doutorado,12,4560,0.26
+2025,uf,PA,PA,PA,Negra,1,Analfabeto,2555,520685,0.49
+2025,uf,PA,PA,PA,Negra,2,Até 5 ano incompleto,4264,520685,0.82
+2025,uf,PA,PA,PA,Negra,3,5 ano completo,3032,520685,0.58
+2025,uf,PA,PA,PA,Negra,4,6 a 9 ano incompleto,17777,520685,3.41
+2025,uf,PA,PA,PA,Negra,5,Fundamental completo,33432,520685,6.42
+2025,uf,PA,PA,PA,Negra,6,Médio incompleto,14857,520685,2.85
+2025,uf,PA,PA,PA,Negra,7,Médio completo,261607,520685,50.24
+2025,uf,PA,PA,PA,Negra,8,Superior incompleto,13473,520685,2.59
+2025,uf,PA,PA,PA,Negra,9,Superior completo,164237,520685,31.54
+2025,uf,PA,PA,PA,Negra,10,Mestrado,2891,520685,0.56
+2025,uf,PA,PA,PA,Negra,11,Doutorado,2560,520685,0.49
+2025,uf,PB,PB,PB,Amarela,1,Analfabeto,22,5630,0.39
+2025,uf,PB,PB,PB,Amarela,2,Até 5 ano incompleto,21,5630,0.37
+2025,uf,PB,PB,PB,Amarela,3,5 ano completo,19,5630,0.34
+2025,uf,PB,PB,PB,Amarela,4,6 a 9 ano incompleto,36,5630,0.64
+2025,uf,PB,PB,PB,Amarela,5,Fundamental completo,175,5630,3.11
+2025,uf,PB,PB,PB,Amarela,6,Médio incompleto,56,5630,0.99
+2025,uf,PB,PB,PB,Amarela,7,Médio completo,2300,5630,40.85
+2025,uf,PB,PB,PB,Amarela,8,Superior incompleto,169,5630,3.0
+2025,uf,PB,PB,PB,Amarela,9,Superior completo,2732,5630,48.53
+2025,uf,PB,PB,PB,Amarela,10,Mestrado,74,5630,1.31
+2025,uf,PB,PB,PB,Amarela,11,Doutorado,26,5630,0.46
+2025,uf,PB,PB,PB,Branca,1,Analfabeto,536,106449,0.5
+2025,uf,PB,PB,PB,Branca,2,Até 5 ano incompleto,641,106449,0.6
+2025,uf,PB,PB,PB,Branca,3,5 ano completo,500,106449,0.47
+2025,uf,PB,PB,PB,Branca,4,6 a 9 ano incompleto,1261,106449,1.18
+2025,uf,PB,PB,PB,Branca,5,Fundamental completo,2527,106449,2.37
+2025,uf,PB,PB,PB,Branca,6,Médio incompleto,1728,106449,1.62
+2025,uf,PB,PB,PB,Branca,7,Médio completo,41656,106449,39.13
+2025,uf,PB,PB,PB,Branca,8,Superior incompleto,4222,106449,3.97
+2025,uf,PB,PB,PB,Branca,9,Superior completo,50249,106449,47.2
+2025,uf,PB,PB,PB,Branca,10,Mestrado,1813,106449,1.7
+2025,uf,PB,PB,PB,Branca,11,Doutorado,1316,106449,1.24
+2025,uf,PB,PB,PB,Indígena,1,Analfabeto,7,1708,0.41
+2025,uf,PB,PB,PB,Indígena,2,Até 5 ano incompleto,28,1708,1.64
+2025,uf,PB,PB,PB,Indígena,3,5 ano completo,9,1708,0.53
+2025,uf,PB,PB,PB,Indígena,4,6 a 9 ano incompleto,23,1708,1.35
+2025,uf,PB,PB,PB,Indígena,5,Fundamental completo,70,1708,4.1
+2025,uf,PB,PB,PB,Indígena,6,Médio incompleto,33,1708,1.93
+2025,uf,PB,PB,PB,Indígena,7,Médio completo,643,1708,37.65
+2025,uf,PB,PB,PB,Indígena,8,Superior incompleto,84,1708,4.92
+2025,uf,PB,PB,PB,Indígena,9,Superior completo,769,1708,45.02
+2025,uf,PB,PB,PB,Indígena,10,Mestrado,38,1708,2.22
+2025,uf,PB,PB,PB,Indígena,11,Doutorado,4,1708,0.23
+2025,uf,PB,PB,PB,Negra,1,Analfabeto,2373,257159,0.92
+2025,uf,PB,PB,PB,Negra,2,Até 5 ano incompleto,1893,257159,0.74
+2025,uf,PB,PB,PB,Negra,3,5 ano completo,1619,257159,0.63
+2025,uf,PB,PB,PB,Negra,4,6 a 9 ano incompleto,3407,257159,1.32
+2025,uf,PB,PB,PB,Negra,5,Fundamental completo,7454,257159,2.9
+2025,uf,PB,PB,PB,Negra,6,Médio incompleto,6404,257159,2.49
+2025,uf,PB,PB,PB,Negra,7,Médio completo,131420,257159,51.1
+2025,uf,PB,PB,PB,Negra,8,Superior incompleto,8429,257159,3.28
+2025,uf,PB,PB,PB,Negra,9,Superior completo,89784,257159,34.91
+2025,uf,PB,PB,PB,Negra,10,Mestrado,2800,257159,1.09
+2025,uf,PB,PB,PB,Negra,11,Doutorado,1576,257159,0.61
+2025,uf,PE,PE,PE,Amarela,1,Analfabeto,32,14591,0.22
+2025,uf,PE,PE,PE,Amarela,2,Até 5 ano incompleto,120,14591,0.82
+2025,uf,PE,PE,PE,Amarela,3,5 ano completo,86,14591,0.59
+2025,uf,PE,PE,PE,Amarela,4,6 a 9 ano incompleto,157,14591,1.08
+2025,uf,PE,PE,PE,Amarela,5,Fundamental completo,438,14591,3.0
+2025,uf,PE,PE,PE,Amarela,6,Médio incompleto,200,14591,1.37
+2025,uf,PE,PE,PE,Amarela,7,Médio completo,6040,14591,41.4
+2025,uf,PE,PE,PE,Amarela,8,Superior incompleto,427,14591,2.93
+2025,uf,PE,PE,PE,Amarela,9,Superior completo,6805,14591,46.64
+2025,uf,PE,PE,PE,Amarela,10,Mestrado,220,14591,1.51
+2025,uf,PE,PE,PE,Amarela,11,Doutorado,66,14591,0.45
+2025,uf,PE,PE,PE,Branca,1,Analfabeto,1318,307809,0.43
+2025,uf,PE,PE,PE,Branca,2,Até 5 ano incompleto,1354,307809,0.44
+2025,uf,PE,PE,PE,Branca,3,5 ano completo,1136,307809,0.37
+2025,uf,PE,PE,PE,Branca,4,6 a 9 ano incompleto,2821,307809,0.92
+2025,uf,PE,PE,PE,Branca,5,Fundamental completo,6902,307809,2.24
+2025,uf,PE,PE,PE,Branca,6,Médio incompleto,4396,307809,1.43
+2025,uf,PE,PE,PE,Branca,7,Médio completo,123092,307809,39.99
+2025,uf,PE,PE,PE,Branca,8,Superior incompleto,8496,307809,2.76
+2025,uf,PE,PE,PE,Branca,9,Superior completo,150316,307809,48.83
+2025,uf,PE,PE,PE,Branca,10,Mestrado,5414,307809,1.76
+2025,uf,PE,PE,PE,Branca,11,Doutorado,2564,307809,0.83
+2025,uf,PE,PE,PE,Indígena,1,Analfabeto,14,6078,0.23
+2025,uf,PE,PE,PE,Indígena,2,Até 5 ano incompleto,683,6078,11.24
+2025,uf,PE,PE,PE,Indígena,3,5 ano completo,31,6078,0.51
+2025,uf,PE,PE,PE,Indígena,4,6 a 9 ano incompleto,71,6078,1.17
+2025,uf,PE,PE,PE,Indígena,5,Fundamental completo,159,6078,2.62
+2025,uf,PE,PE,PE,Indígena,6,Médio incompleto,118,6078,1.94
+2025,uf,PE,PE,PE,Indígena,7,Médio completo,1707,6078,28.08
+2025,uf,PE,PE,PE,Indígena,8,Superior incompleto,101,6078,1.66
+2025,uf,PE,PE,PE,Indígena,9,Superior completo,3159,6078,51.97
+2025,uf,PE,PE,PE,Indígena,10,Mestrado,27,6078,0.44
+2025,uf,PE,PE,PE,Indígena,11,Doutorado,8,6078,0.13
+2025,uf,PE,PE,PE,Negra,1,Analfabeto,1739,553069,0.31
+2025,uf,PE,PE,PE,Negra,2,Até 5 ano incompleto,4680,553069,0.85
+2025,uf,PE,PE,PE,Negra,3,5 ano completo,3344,553069,0.6
+2025,uf,PE,PE,PE,Negra,4,6 a 9 ano incompleto,9077,553069,1.64
+2025,uf,PE,PE,PE,Negra,5,Fundamental completo,15705,553069,2.84
+2025,uf,PE,PE,PE,Negra,6,Médio incompleto,13092,553069,2.37
+2025,uf,PE,PE,PE,Negra,7,Médio completo,312969,553069,56.59
+2025,uf,PE,PE,PE,Negra,8,Superior incompleto,16028,553069,2.9
+2025,uf,PE,PE,PE,Negra,9,Superior completo,170746,553069,30.87
+2025,uf,PE,PE,PE,Negra,10,Mestrado,4144,553069,0.75
+2025,uf,PE,PE,PE,Negra,11,Doutorado,1545,553069,0.28
+2025,uf,PI,PI,PI,Amarela,1,Analfabeto,72,10045,0.72
+2025,uf,PI,PI,PI,Amarela,2,Até 5 ano incompleto,106,10045,1.06
+2025,uf,PI,PI,PI,Amarela,3,5 ano completo,233,10045,2.32
+2025,uf,PI,PI,PI,Amarela,4,6 a 9 ano incompleto,135,10045,1.34
+2025,uf,PI,PI,PI,Amarela,5,Fundamental completo,477,10045,4.75
+2025,uf,PI,PI,PI,Amarela,6,Médio incompleto,172,10045,1.71
+2025,uf,PI,PI,PI,Amarela,7,Médio completo,2681,10045,26.69
+2025,uf,PI,PI,PI,Amarela,8,Superior incompleto,232,10045,2.31
+2025,uf,PI,PI,PI,Amarela,9,Superior completo,5761,10045,57.35
+2025,uf,PI,PI,PI,Amarela,10,Mestrado,156,10045,1.55
+2025,uf,PI,PI,PI,Amarela,11,Doutorado,20,10045,0.2
+2025,uf,PI,PI,PI,Branca,1,Analfabeto,278,47701,0.58
+2025,uf,PI,PI,PI,Branca,2,Até 5 ano incompleto,216,47701,0.45
+2025,uf,PI,PI,PI,Branca,3,5 ano completo,408,47701,0.86
+2025,uf,PI,PI,PI,Branca,4,6 a 9 ano incompleto,415,47701,0.87
+2025,uf,PI,PI,PI,Branca,5,Fundamental completo,1151,47701,2.41
+2025,uf,PI,PI,PI,Branca,6,Médio incompleto,762,47701,1.6
+2025,uf,PI,PI,PI,Branca,7,Médio completo,15036,47701,31.52
+2025,uf,PI,PI,PI,Branca,8,Superior incompleto,1563,47701,3.28
+2025,uf,PI,PI,PI,Branca,9,Superior completo,26728,47701,56.03
+2025,uf,PI,PI,PI,Branca,10,Mestrado,752,47701,1.58
+2025,uf,PI,PI,PI,Branca,11,Doutorado,392,47701,0.82
+2025,uf,PI,PI,PI,Indígena,2,Até 5 ano incompleto,7,459,1.53
+2025,uf,PI,PI,PI,Indígena,3,5 ano completo,4,459,0.87
+2025,uf,PI,PI,PI,Indígena,4,6 a 9 ano incompleto,9,459,1.96
+2025,uf,PI,PI,PI,Indígena,5,Fundamental completo,32,459,6.97
+2025,uf,PI,PI,PI,Indígena,6,Médio incompleto,14,459,3.05
+2025,uf,PI,PI,PI,Indígena,7,Médio completo,102,459,22.22
+2025,uf,PI,PI,PI,Indígena,8,Superior incompleto,10,459,2.18
+2025,uf,PI,PI,PI,Indígena,9,Superior completo,260,459,56.64
+2025,uf,PI,PI,PI,Indígena,10,Mestrado,18,459,3.92
+2025,uf,PI,PI,PI,Indígena,11,Doutorado,3,459,0.65
+2025,uf,PI,PI,PI,Negra,1,Analfabeto,1375,209732,0.66
+2025,uf,PI,PI,PI,Negra,2,Até 5 ano incompleto,1596,209732,0.76
+2025,uf,PI,PI,PI,Negra,3,5 ano completo,1408,209732,0.67
+2025,uf,PI,PI,PI,Negra,4,6 a 9 ano incompleto,2676,209732,1.28
+2025,uf,PI,PI,PI,Negra,5,Fundamental completo,7686,209732,3.66
+2025,uf,PI,PI,PI,Negra,6,Médio incompleto,5339,209732,2.55
+2025,uf,PI,PI,PI,Negra,7,Médio completo,95909,209732,45.73
+2025,uf,PI,PI,PI,Negra,8,Superior incompleto,7227,209732,3.45
+2025,uf,PI,PI,PI,Negra,9,Superior completo,84526,209732,40.3
+2025,uf,PI,PI,PI,Negra,10,Mestrado,1419,209732,0.68
+2025,uf,PI,PI,PI,Negra,11,Doutorado,571,209732,0.27
+2025,uf,PR,PR,PR,Amarela,1,Analfabeto,40,15757,0.25
+2025,uf,PR,PR,PR,Amarela,2,Até 5 ano incompleto,231,15757,1.47
+2025,uf,PR,PR,PR,Amarela,3,5 ano completo,96,15757,0.61
+2025,uf,PR,PR,PR,Amarela,4,6 a 9 ano incompleto,290,15757,1.84
+2025,uf,PR,PR,PR,Amarela,5,Fundamental completo,550,15757,3.49
+2025,uf,PR,PR,PR,Amarela,6,Médio incompleto,640,15757,4.06
+2025,uf,PR,PR,PR,Amarela,7,Médio completo,5450,15757,34.59
+2025,uf,PR,PR,PR,Amarela,8,Superior incompleto,691,15757,4.39
+2025,uf,PR,PR,PR,Amarela,9,Superior completo,7195,15757,45.66
+2025,uf,PR,PR,PR,Amarela,10,Mestrado,325,15757,2.06
+2025,uf,PR,PR,PR,Amarela,11,Doutorado,249,15757,1.58
+2025,uf,PR,PR,PR,Branca,1,Analfabeto,3116,1271278,0.25
+2025,uf,PR,PR,PR,Branca,2,Até 5 ano incompleto,11655,1271278,0.92
+2025,uf,PR,PR,PR,Branca,3,5 ano completo,10792,1271278,0.85
+2025,uf,PR,PR,PR,Branca,4,6 a 9 ano incompleto,26934,1271278,2.12
+2025,uf,PR,PR,PR,Branca,5,Fundamental completo,61180,1271278,4.81
+2025,uf,PR,PR,PR,Branca,6,Médio incompleto,53612,1271278,4.22
+2025,uf,PR,PR,PR,Branca,7,Médio completo,553031,1271278,43.5
+2025,uf,PR,PR,PR,Branca,8,Superior incompleto,54374,1271278,4.28
+2025,uf,PR,PR,PR,Branca,9,Superior completo,471627,1271278,37.1
+2025,uf,PR,PR,PR,Branca,10,Mestrado,15855,1271278,1.25
+2025,uf,PR,PR,PR,Branca,11,Doutorado,9102,1271278,0.72
+2025,uf,PR,PR,PR,Indígena,1,Analfabeto,22,3434,0.64
+2025,uf,PR,PR,PR,Indígena,2,Até 5 ano incompleto,83,3434,2.42
+2025,uf,PR,PR,PR,Indígena,3,5 ano completo,45,3434,1.31
+2025,uf,PR,PR,PR,Indígena,4,6 a 9 ano incompleto,190,3434,5.53
+2025,uf,PR,PR,PR,Indígena,5,Fundamental completo,216,3434,6.29
+2025,uf,PR,PR,PR,Indígena,6,Médio incompleto,196,3434,5.71
+2025,uf,PR,PR,PR,Indígena,7,Médio completo,1441,3434,41.96
+2025,uf,PR,PR,PR,Indígena,8,Superior incompleto,99,3434,2.88
+2025,uf,PR,PR,PR,Indígena,9,Superior completo,1044,3434,30.4
+2025,uf,PR,PR,PR,Indígena,10,Mestrado,94,3434,2.74
+2025,uf,PR,PR,PR,Indígena,11,Doutorado,4,3434,0.12
+2025,uf,PR,PR,PR,Negra,1,Analfabeto,2670,463393,0.58
+2025,uf,PR,PR,PR,Negra,2,Até 5 ano incompleto,9144,463393,1.97
+2025,uf,PR,PR,PR,Negra,3,5 ano completo,5718,463393,1.23
+2025,uf,PR,PR,PR,Negra,4,6 a 9 ano incompleto,18678,463393,4.03
+2025,uf,PR,PR,PR,Negra,5,Fundamental completo,27241,463393,5.88
+2025,uf,PR,PR,PR,Negra,6,Médio incompleto,30682,463393,6.62
+2025,uf,PR,PR,PR,Negra,7,Médio completo,238572,463393,51.48
+2025,uf,PR,PR,PR,Negra,8,Superior incompleto,19121,463393,4.13
+2025,uf,PR,PR,PR,Negra,9,Superior completo,108088,463393,23.33
+2025,uf,PR,PR,PR,Negra,10,Mestrado,2473,463393,0.53
+2025,uf,PR,PR,PR,Negra,11,Doutorado,1006,463393,0.22
+2025,uf,RJ,RJ,RJ,Amarela,1,Analfabeto,61,18741,0.33
+2025,uf,RJ,RJ,RJ,Amarela,2,Até 5 ano incompleto,107,18741,0.57
+2025,uf,RJ,RJ,RJ,Amarela,3,5 ano completo,115,18741,0.61
+2025,uf,RJ,RJ,RJ,Amarela,4,6 a 9 ano incompleto,320,18741,1.71
+2025,uf,RJ,RJ,RJ,Amarela,5,Fundamental completo,689,18741,3.68
+2025,uf,RJ,RJ,RJ,Amarela,6,Médio incompleto,530,18741,2.83
+2025,uf,RJ,RJ,RJ,Amarela,7,Médio completo,8275,18741,44.15
+2025,uf,RJ,RJ,RJ,Amarela,8,Superior incompleto,647,18741,3.45
+2025,uf,RJ,RJ,RJ,Amarela,9,Superior completo,7431,18741,39.65
+2025,uf,RJ,RJ,RJ,Amarela,10,Mestrado,355,18741,1.89
+2025,uf,RJ,RJ,RJ,Amarela,11,Doutorado,211,18741,1.13
+2025,uf,RJ,RJ,RJ,Branca,1,Analfabeto,706,953500,0.07
+2025,uf,RJ,RJ,RJ,Branca,2,Até 5 ano incompleto,4538,953500,0.48
+2025,uf,RJ,RJ,RJ,Branca,3,5 ano completo,5811,953500,0.61
+2025,uf,RJ,RJ,RJ,Branca,4,6 a 9 ano incompleto,13650,953500,1.43
+2025,uf,RJ,RJ,RJ,Branca,5,Fundamental completo,35712,953500,3.75
+2025,uf,RJ,RJ,RJ,Branca,6,Médio incompleto,25853,953500,2.71
+2025,uf,RJ,RJ,RJ,Branca,7,Médio completo,381451,953500,40.01
+2025,uf,RJ,RJ,RJ,Branca,8,Superior incompleto,36948,953500,3.87
+2025,uf,RJ,RJ,RJ,Branca,9,Superior completo,422196,953500,44.28
+2025,uf,RJ,RJ,RJ,Branca,10,Mestrado,17476,953500,1.83
+2025,uf,RJ,RJ,RJ,Branca,11,Doutorado,9159,953500,0.96
+2025,uf,RJ,RJ,RJ,Indígena,1,Analfabeto,5,3958,0.13
+2025,uf,RJ,RJ,RJ,Indígena,2,Até 5 ano incompleto,27,3958,0.68
+2025,uf,RJ,RJ,RJ,Indígena,3,5 ano completo,45,3958,1.14
+2025,uf,RJ,RJ,RJ,Indígena,4,6 a 9 ano incompleto,79,3958,2.0
+2025,uf,RJ,RJ,RJ,Indígena,5,Fundamental completo,163,3958,4.12
+2025,uf,RJ,RJ,RJ,Indígena,6,Médio incompleto,135,3958,3.41
+2025,uf,RJ,RJ,RJ,Indígena,7,Médio completo,1498,3958,37.85
+2025,uf,RJ,RJ,RJ,Indígena,8,Superior incompleto,145,3958,3.66
+2025,uf,RJ,RJ,RJ,Indígena,9,Superior completo,1725,3958,43.58
+2025,uf,RJ,RJ,RJ,Indígena,10,Mestrado,98,3958,2.48
+2025,uf,RJ,RJ,RJ,Indígena,11,Doutorado,38,3958,0.96
+2025,uf,RJ,RJ,RJ,Negra,1,Analfabeto,1163,1090303,0.11
+2025,uf,RJ,RJ,RJ,Negra,2,Até 5 ano incompleto,8705,1090303,0.8
+2025,uf,RJ,RJ,RJ,Negra,3,5 ano completo,8641,1090303,0.79
+2025,uf,RJ,RJ,RJ,Negra,4,6 a 9 ano incompleto,27126,1090303,2.49
+2025,uf,RJ,RJ,RJ,Negra,5,Fundamental completo,50576,1090303,4.64
+2025,uf,RJ,RJ,RJ,Negra,6,Médio incompleto,47411,1090303,4.35
+2025,uf,RJ,RJ,RJ,Negra,7,Médio completo,603647,1090303,55.37
+2025,uf,RJ,RJ,RJ,Negra,8,Superior incompleto,38403,1090303,3.52
+2025,uf,RJ,RJ,RJ,Negra,9,Superior completo,294142,1090303,26.98
+2025,uf,RJ,RJ,RJ,Negra,10,Mestrado,7480,1090303,0.69
+2025,uf,RJ,RJ,RJ,Negra,11,Doutorado,3009,1090303,0.28
+2025,uf,RN,RN,RN,Amarela,1,Analfabeto,7,3457,0.2
+2025,uf,RN,RN,RN,Amarela,2,Até 5 ano incompleto,25,3457,0.72
+2025,uf,RN,RN,RN,Amarela,3,5 ano completo,13,3457,0.38
+2025,uf,RN,RN,RN,Amarela,4,6 a 9 ano incompleto,47,3457,1.36
+2025,uf,RN,RN,RN,Amarela,5,Fundamental completo,297,3457,8.59
+2025,uf,RN,RN,RN,Amarela,6,Médio incompleto,116,3457,3.36
+2025,uf,RN,RN,RN,Amarela,7,Médio completo,1522,3457,44.03
+2025,uf,RN,RN,RN,Amarela,8,Superior incompleto,82,3457,2.37
+2025,uf,RN,RN,RN,Amarela,9,Superior completo,1292,3457,37.37
+2025,uf,RN,RN,RN,Amarela,10,Mestrado,18,3457,0.52
+2025,uf,RN,RN,RN,Amarela,11,Doutorado,38,3457,1.1
+2025,uf,RN,RN,RN,Branca,1,Analfabeto,167,100195,0.17
+2025,uf,RN,RN,RN,Branca,2,Até 5 ano incompleto,510,100195,0.51
+2025,uf,RN,RN,RN,Branca,3,5 ano completo,452,100195,0.45
+2025,uf,RN,RN,RN,Branca,4,6 a 9 ano incompleto,1154,100195,1.15
+2025,uf,RN,RN,RN,Branca,5,Fundamental completo,3373,100195,3.37
+2025,uf,RN,RN,RN,Branca,6,Médio incompleto,2654,100195,2.65
+2025,uf,RN,RN,RN,Branca,7,Médio completo,42436,100195,42.35
+2025,uf,RN,RN,RN,Branca,8,Superior incompleto,3217,100195,3.21
+2025,uf,RN,RN,RN,Branca,9,Superior completo,43181,100195,43.1
+2025,uf,RN,RN,RN,Branca,10,Mestrado,1789,100195,1.79
+2025,uf,RN,RN,RN,Branca,11,Doutorado,1262,100195,1.26
+2025,uf,RN,RN,RN,Indígena,1,Analfabeto,4,778,0.51
+2025,uf,RN,RN,RN,Indígena,2,Até 5 ano incompleto,11,778,1.41
+2025,uf,RN,RN,RN,Indígena,3,5 ano completo,6,778,0.77
+2025,uf,RN,RN,RN,Indígena,4,6 a 9 ano incompleto,16,778,2.06
+2025,uf,RN,RN,RN,Indígena,5,Fundamental completo,24,778,3.08
+2025,uf,RN,RN,RN,Indígena,6,Médio incompleto,33,778,4.24
+2025,uf,RN,RN,RN,Indígena,7,Médio completo,327,778,42.03
+2025,uf,RN,RN,RN,Indígena,8,Superior incompleto,28,778,3.6
+2025,uf,RN,RN,RN,Indígena,9,Superior completo,322,778,41.39
+2025,uf,RN,RN,RN,Indígena,10,Mestrado,3,778,0.39
+2025,uf,RN,RN,RN,Indígena,11,Doutorado,4,778,0.51
+2025,uf,RN,RN,RN,Negra,1,Analfabeto,776,184305,0.42
+2025,uf,RN,RN,RN,Negra,2,Até 5 ano incompleto,1495,184305,0.81
+2025,uf,RN,RN,RN,Negra,3,5 ano completo,932,184305,0.51
+2025,uf,RN,RN,RN,Negra,4,6 a 9 ano incompleto,3914,184305,2.12
+2025,uf,RN,RN,RN,Negra,5,Fundamental completo,8828,184305,4.79
+2025,uf,RN,RN,RN,Negra,6,Médio incompleto,8021,184305,4.35
+2025,uf,RN,RN,RN,Negra,7,Médio completo,96059,184305,52.12
+2025,uf,RN,RN,RN,Negra,8,Superior incompleto,4793,184305,2.6
+2025,uf,RN,RN,RN,Negra,9,Superior completo,56678,184305,30.75
+2025,uf,RN,RN,RN,Negra,10,Mestrado,1862,184305,1.01
+2025,uf,RN,RN,RN,Negra,11,Doutorado,947,184305,0.51
+2025,uf,RO,RO,RO,Amarela,1,Analfabeto,8,4801,0.17
+2025,uf,RO,RO,RO,Amarela,2,Até 5 ano incompleto,207,4801,4.31
+2025,uf,RO,RO,RO,Amarela,3,5 ano completo,45,4801,0.94
+2025,uf,RO,RO,RO,Amarela,4,6 a 9 ano incompleto,62,4801,1.29
+2025,uf,RO,RO,RO,Amarela,5,Fundamental completo,239,4801,4.98
+2025,uf,RO,RO,RO,Amarela,6,Médio incompleto,154,4801,3.21
+2025,uf,RO,RO,RO,Amarela,7,Médio completo,1672,4801,34.83
+2025,uf,RO,RO,RO,Amarela,8,Superior incompleto,112,4801,2.33
+2025,uf,RO,RO,RO,Amarela,9,Superior completo,2260,4801,47.07
+2025,uf,RO,RO,RO,Amarela,10,Mestrado,29,4801,0.6
+2025,uf,RO,RO,RO,Amarela,11,Doutorado,13,4801,0.27
+2025,uf,RO,RO,RO,Branca,1,Analfabeto,98,56650,0.17
+2025,uf,RO,RO,RO,Branca,2,Até 5 ano incompleto,424,56650,0.75
+2025,uf,RO,RO,RO,Branca,3,5 ano completo,461,56650,0.81
+2025,uf,RO,RO,RO,Branca,4,6 a 9 ano incompleto,804,56650,1.42
+2025,uf,RO,RO,RO,Branca,5,Fundamental completo,1759,56650,3.11
+2025,uf,RO,RO,RO,Branca,6,Médio incompleto,1891,56650,3.34
+2025,uf,RO,RO,RO,Branca,7,Médio completo,20618,56650,36.4
+2025,uf,RO,RO,RO,Branca,8,Superior incompleto,1866,56650,3.29
+2025,uf,RO,RO,RO,Branca,9,Superior completo,27552,56650,48.64
+2025,uf,RO,RO,RO,Branca,10,Mestrado,837,56650,1.48
+2025,uf,RO,RO,RO,Branca,11,Doutorado,340,56650,0.6
+2025,uf,RO,RO,RO,Indígena,1,Analfabeto,1,700,0.14
+2025,uf,RO,RO,RO,Indígena,2,Até 5 ano incompleto,10,700,1.43
+2025,uf,RO,RO,RO,Indígena,3,5 ano completo,3,700,0.43
+2025,uf,RO,RO,RO,Indígena,4,6 a 9 ano incompleto,12,700,1.71
+2025,uf,RO,RO,RO,Indígena,5,Fundamental completo,34,700,4.86
+2025,uf,RO,RO,RO,Indígena,6,Médio incompleto,36,700,5.14
+2025,uf,RO,RO,RO,Indígena,7,Médio completo,345,700,49.29
+2025,uf,RO,RO,RO,Indígena,8,Superior incompleto,29,700,4.14
+2025,uf,RO,RO,RO,Indígena,9,Superior completo,223,700,31.86
+2025,uf,RO,RO,RO,Indígena,10,Mestrado,4,700,0.57
+2025,uf,RO,RO,RO,Indígena,11,Doutorado,3,700,0.43
+2025,uf,RO,RO,RO,Negra,1,Analfabeto,340,140124,0.24
+2025,uf,RO,RO,RO,Negra,2,Até 5 ano incompleto,1306,140124,0.93
+2025,uf,RO,RO,RO,Negra,3,5 ano completo,1146,140124,0.82
+2025,uf,RO,RO,RO,Negra,4,6 a 9 ano incompleto,2855,140124,2.04
+2025,uf,RO,RO,RO,Negra,5,Fundamental completo,4043,140124,2.89
+2025,uf,RO,RO,RO,Negra,6,Médio incompleto,6550,140124,4.67
+2025,uf,RO,RO,RO,Negra,7,Médio completo,69853,140124,49.85
+2025,uf,RO,RO,RO,Negra,8,Superior incompleto,4439,140124,3.17
+2025,uf,RO,RO,RO,Negra,9,Superior completo,48326,140124,34.49
+2025,uf,RO,RO,RO,Negra,10,Mestrado,955,140124,0.68
+2025,uf,RO,RO,RO,Negra,11,Doutorado,311,140124,0.22
+2025,uf,RR,RR,RR,Amarela,1,Analfabeto,13,815,1.6
+2025,uf,RR,RR,RR,Amarela,2,Até 5 ano incompleto,4,815,0.49
+2025,uf,RR,RR,RR,Amarela,3,5 ano completo,3,815,0.37
+2025,uf,RR,RR,RR,Amarela,4,6 a 9 ano incompleto,10,815,1.23
+2025,uf,RR,RR,RR,Amarela,5,Fundamental completo,29,815,3.56
+2025,uf,RR,RR,RR,Amarela,6,Médio incompleto,16,815,1.96
+2025,uf,RR,RR,RR,Amarela,7,Médio completo,304,815,37.3
+2025,uf,RR,RR,RR,Amarela,8,Superior incompleto,18,815,2.21
+2025,uf,RR,RR,RR,Amarela,9,Superior completo,319,815,39.14
+2025,uf,RR,RR,RR,Amarela,10,Mestrado,1,815,0.12
+2025,uf,RR,RR,RR,Amarela,11,Doutorado,98,815,12.02
+2025,uf,RR,RR,RR,Branca,1,Analfabeto,475,12481,3.81
+2025,uf,RR,RR,RR,Branca,2,Até 5 ano incompleto,42,12481,0.34
+2025,uf,RR,RR,RR,Branca,3,5 ano completo,34,12481,0.27
+2025,uf,RR,RR,RR,Branca,4,6 a 9 ano incompleto,120,12481,0.96
+2025,uf,RR,RR,RR,Branca,5,Fundamental completo,221,12481,1.77
+2025,uf,RR,RR,RR,Branca,6,Médio incompleto,159,12481,1.27
+2025,uf,RR,RR,RR,Branca,7,Médio completo,4120,12481,33.01
+2025,uf,RR,RR,RR,Branca,8,Superior incompleto,318,12481,2.55
+2025,uf,RR,RR,RR,Branca,9,Superior completo,6448,12481,51.66
+2025,uf,RR,RR,RR,Branca,10,Mestrado,183,12481,1.47
+2025,uf,RR,RR,RR,Branca,11,Doutorado,361,12481,2.89
+2025,uf,RR,RR,RR,Indígena,1,Analfabeto,69,2688,2.57
+2025,uf,RR,RR,RR,Indígena,2,Até 5 ano incompleto,10,2688,0.37
+2025,uf,RR,RR,RR,Indígena,3,5 ano completo,5,2688,0.19
+2025,uf,RR,RR,RR,Indígena,4,6 a 9 ano incompleto,20,2688,0.74
+2025,uf,RR,RR,RR,Indígena,5,Fundamental completo,93,2688,3.46
+2025,uf,RR,RR,RR,Indígena,6,Médio incompleto,45,2688,1.67
+2025,uf,RR,RR,RR,Indígena,7,Médio completo,1159,2688,43.12
+2025,uf,RR,RR,RR,Indígena,8,Superior incompleto,73,2688,2.72
+2025,uf,RR,RR,RR,Indígena,9,Superior completo,1156,2688,43.01
+2025,uf,RR,RR,RR,Indígena,10,Mestrado,12,2688,0.45
+2025,uf,RR,RR,RR,Indígena,11,Doutorado,46,2688,1.71
+2025,uf,RR,RR,RR,Negra,1,Analfabeto,1621,60697,2.67
+2025,uf,RR,RR,RR,Negra,2,Até 5 ano incompleto,277,60697,0.46
+2025,uf,RR,RR,RR,Negra,3,5 ano completo,204,60697,0.34
+2025,uf,RR,RR,RR,Negra,4,6 a 9 ano incompleto,694,60697,1.14
+2025,uf,RR,RR,RR,Negra,5,Fundamental completo,1816,60697,2.99
+2025,uf,RR,RR,RR,Negra,6,Médio incompleto,1086,60697,1.79
+2025,uf,RR,RR,RR,Negra,7,Médio completo,30148,60697,49.67
+2025,uf,RR,RR,RR,Negra,8,Superior incompleto,1339,60697,2.21
+2025,uf,RR,RR,RR,Negra,9,Superior completo,20653,60697,34.03
+2025,uf,RR,RR,RR,Negra,10,Mestrado,399,60697,0.66
+2025,uf,RR,RR,RR,Negra,11,Doutorado,2460,60697,4.05
+2025,uf,RS,RS,RS,Amarela,1,Analfabeto,27,4502,0.6
+2025,uf,RS,RS,RS,Amarela,2,Até 5 ano incompleto,77,4502,1.71
+2025,uf,RS,RS,RS,Amarela,3,5 ano completo,63,4502,1.4
+2025,uf,RS,RS,RS,Amarela,4,6 a 9 ano incompleto,211,4502,4.69
+2025,uf,RS,RS,RS,Amarela,5,Fundamental completo,269,4502,5.98
+2025,uf,RS,RS,RS,Amarela,6,Médio incompleto,316,4502,7.02
+2025,uf,RS,RS,RS,Amarela,7,Médio completo,1929,4502,42.85
+2025,uf,RS,RS,RS,Amarela,8,Superior incompleto,216,4502,4.8
+2025,uf,RS,RS,RS,Amarela,9,Superior completo,1340,4502,29.76
+2025,uf,RS,RS,RS,Amarela,10,Mestrado,35,4502,0.78
+2025,uf,RS,RS,RS,Amarela,11,Doutorado,19,4502,0.42
+2025,uf,RS,RS,RS,Branca,1,Analfabeto,1503,1320215,0.11
+2025,uf,RS,RS,RS,Branca,2,Até 5 ano incompleto,12424,1320215,0.94
+2025,uf,RS,RS,RS,Branca,3,5 ano completo,12584,1320215,0.95
+2025,uf,RS,RS,RS,Branca,4,6 a 9 ano incompleto,45056,1320215,3.41
+2025,uf,RS,RS,RS,Branca,5,Fundamental completo,68442,1320215,5.18
+2025,uf,RS,RS,RS,Branca,6,Médio incompleto,71593,1320215,5.42
+2025,uf,RS,RS,RS,Branca,7,Médio completo,546562,1320215,41.4
+2025,uf,RS,RS,RS,Branca,8,Superior incompleto,75268,1320215,5.7
+2025,uf,RS,RS,RS,Branca,9,Superior completo,462470,1320215,35.03
+2025,uf,RS,RS,RS,Branca,10,Mestrado,15601,1320215,1.18
+2025,uf,RS,RS,RS,Branca,11,Doutorado,8712,1320215,0.66
+2025,uf,RS,RS,RS,Indígena,1,Analfabeto,29,3594,0.81
+2025,uf,RS,RS,RS,Indígena,2,Até 5 ano incompleto,129,3594,3.59
+2025,uf,RS,RS,RS,Indígena,3,5 ano completo,42,3594,1.17
+2025,uf,RS,RS,RS,Indígena,4,6 a 9 ano incompleto,246,3594,6.84
+2025,uf,RS,RS,RS,Indígena,5,Fundamental completo,411,3594,11.44
+2025,uf,RS,RS,RS,Indígena,6,Médio incompleto,323,3594,8.99
+2025,uf,RS,RS,RS,Indígena,7,Médio completo,1576,3594,43.85
+2025,uf,RS,RS,RS,Indígena,8,Superior incompleto,167,3594,4.65
+2025,uf,RS,RS,RS,Indígena,9,Superior completo,642,3594,17.86
+2025,uf,RS,RS,RS,Indígena,10,Mestrado,22,3594,0.61
+2025,uf,RS,RS,RS,Indígena,11,Doutorado,7,3594,0.19
+2025,uf,RS,RS,RS,Negra,1,Analfabeto,1028,252413,0.41
+2025,uf,RS,RS,RS,Negra,2,Até 5 ano incompleto,3850,252413,1.53
+2025,uf,RS,RS,RS,Negra,3,5 ano completo,3018,252413,1.2
+2025,uf,RS,RS,RS,Negra,4,6 a 9 ano incompleto,13655,252413,5.41
+2025,uf,RS,RS,RS,Negra,5,Fundamental completo,20079,252413,7.95
+2025,uf,RS,RS,RS,Negra,6,Médio incompleto,21948,252413,8.7
+2025,uf,RS,RS,RS,Negra,7,Médio completo,124253,252413,49.23
+2025,uf,RS,RS,RS,Negra,8,Superior incompleto,13066,252413,5.18
+2025,uf,RS,RS,RS,Negra,9,Superior completo,49789,252413,19.73
+2025,uf,RS,RS,RS,Negra,10,Mestrado,1203,252413,0.48
+2025,uf,RS,RS,RS,Negra,11,Doutorado,524,252413,0.21
+2025,uf,SC,SC,SC,Amarela,1,Analfabeto,140,11610,1.21
+2025,uf,SC,SC,SC,Amarela,2,Até 5 ano incompleto,193,11610,1.66
+2025,uf,SC,SC,SC,Amarela,3,5 ano completo,140,11610,1.21
+2025,uf,SC,SC,SC,Amarela,4,6 a 9 ano incompleto,350,11610,3.01
+2025,uf,SC,SC,SC,Amarela,5,Fundamental completo,892,11610,7.68
+2025,uf,SC,SC,SC,Amarela,6,Médio incompleto,693,11610,5.97
+2025,uf,SC,SC,SC,Amarela,7,Médio completo,5799,11610,49.95
+2025,uf,SC,SC,SC,Amarela,8,Superior incompleto,508,11610,4.38
+2025,uf,SC,SC,SC,Amarela,9,Superior completo,2780,11610,23.94
+2025,uf,SC,SC,SC,Amarela,10,Mestrado,67,11610,0.58
+2025,uf,SC,SC,SC,Amarela,11,Doutorado,48,11610,0.41
+2025,uf,SC,SC,SC,Branca,1,Analfabeto,4695,1020040,0.46
+2025,uf,SC,SC,SC,Branca,2,Até 5 ano incompleto,11159,1020040,1.09
+2025,uf,SC,SC,SC,Branca,3,5 ano completo,12230,1020040,1.2
+2025,uf,SC,SC,SC,Branca,4,6 a 9 ano incompleto,28166,1020040,2.76
+2025,uf,SC,SC,SC,Branca,5,Fundamental completo,62958,1020040,6.17
+2025,uf,SC,SC,SC,Branca,6,Médio incompleto,57132,1020040,5.6
+2025,uf,SC,SC,SC,Branca,7,Médio completo,441214,1020040,43.25
+2025,uf,SC,SC,SC,Branca,8,Superior incompleto,53450,1020040,5.24
+2025,uf,SC,SC,SC,Branca,9,Superior completo,335583,1020040,32.9
+2025,uf,SC,SC,SC,Branca,10,Mestrado,8946,1020040,0.88
+2025,uf,SC,SC,SC,Branca,11,Doutorado,4507,1020040,0.44
+2025,uf,SC,SC,SC,Indígena,1,Analfabeto,111,3843,2.89
+2025,uf,SC,SC,SC,Indígena,2,Até 5 ano incompleto,144,3843,3.75
+2025,uf,SC,SC,SC,Indígena,3,5 ano completo,62,3843,1.61
+2025,uf,SC,SC,SC,Indígena,4,6 a 9 ano incompleto,216,3843,5.62
+2025,uf,SC,SC,SC,Indígena,5,Fundamental completo,461,3843,12.0
+2025,uf,SC,SC,SC,Indígena,6,Médio incompleto,373,3843,9.71
+2025,uf,SC,SC,SC,Indígena,7,Médio completo,1797,3843,46.76
+2025,uf,SC,SC,SC,Indígena,8,Superior incompleto,132,3843,3.43
+2025,uf,SC,SC,SC,Indígena,9,Superior completo,531,3843,13.82
+2025,uf,SC,SC,SC,Indígena,10,Mestrado,13,3843,0.34
+2025,uf,SC,SC,SC,Indígena,11,Doutorado,3,3843,0.08
+2025,uf,SC,SC,SC,Negra,1,Analfabeto,3998,299802,1.33
+2025,uf,SC,SC,SC,Negra,2,Até 5 ano incompleto,5163,299802,1.72
+2025,uf,SC,SC,SC,Negra,3,5 ano completo,3788,299802,1.26
+2025,uf,SC,SC,SC,Negra,4,6 a 9 ano incompleto,13919,299802,4.64
+2025,uf,SC,SC,SC,Negra,5,Fundamental completo,26344,299802,8.79
+2025,uf,SC,SC,SC,Negra,6,Médio incompleto,23935,299802,7.98
+2025,uf,SC,SC,SC,Negra,7,Médio completo,157067,299802,52.39
+2025,uf,SC,SC,SC,Negra,8,Superior incompleto,13641,299802,4.55
+2025,uf,SC,SC,SC,Negra,9,Superior completo,50762,299802,16.93
+2025,uf,SC,SC,SC,Negra,10,Mestrado,806,299802,0.27
+2025,uf,SC,SC,SC,Negra,11,Doutorado,379,299802,0.13
+2025,uf,SE,SE,SE,Amarela,1,Analfabeto,4,2307,0.17
+2025,uf,SE,SE,SE,Amarela,2,Até 5 ano incompleto,22,2307,0.95
+2025,uf,SE,SE,SE,Amarela,3,5 ano completo,13,2307,0.56
+2025,uf,SE,SE,SE,Amarela,4,6 a 9 ano incompleto,34,2307,1.47
+2025,uf,SE,SE,SE,Amarela,5,Fundamental completo,65,2307,2.82
+2025,uf,SE,SE,SE,Amarela,6,Médio incompleto,65,2307,2.82
+2025,uf,SE,SE,SE,Amarela,7,Médio completo,1053,2307,45.64
+2025,uf,SE,SE,SE,Amarela,8,Superior incompleto,95,2307,4.12
+2025,uf,SE,SE,SE,Amarela,9,Superior completo,932,2307,40.4
+2025,uf,SE,SE,SE,Amarela,10,Mestrado,12,2307,0.52
+2025,uf,SE,SE,SE,Amarela,11,Doutorado,12,2307,0.52
+2025,uf,SE,SE,SE,Branca,1,Analfabeto,66,50226,0.13
+2025,uf,SE,SE,SE,Branca,2,Até 5 ano incompleto,241,50226,0.48
+2025,uf,SE,SE,SE,Branca,3,5 ano completo,246,50226,0.49
+2025,uf,SE,SE,SE,Branca,4,6 a 9 ano incompleto,616,50226,1.23
+2025,uf,SE,SE,SE,Branca,5,Fundamental completo,1426,50226,2.84
+2025,uf,SE,SE,SE,Branca,6,Médio incompleto,1278,50226,2.54
+2025,uf,SE,SE,SE,Branca,7,Médio completo,20017,50226,39.85
+2025,uf,SE,SE,SE,Branca,8,Superior incompleto,1848,50226,3.68
+2025,uf,SE,SE,SE,Branca,9,Superior completo,23587,50226,46.96
+2025,uf,SE,SE,SE,Branca,10,Mestrado,567,50226,1.13
+2025,uf,SE,SE,SE,Branca,11,Doutorado,334,50226,0.66
+2025,uf,SE,SE,SE,Indígena,1,Analfabeto,7,750,0.93
+2025,uf,SE,SE,SE,Indígena,2,Até 5 ano incompleto,12,750,1.6
+2025,uf,SE,SE,SE,Indígena,3,5 ano completo,3,750,0.4
+2025,uf,SE,SE,SE,Indígena,4,6 a 9 ano incompleto,19,750,2.53
+2025,uf,SE,SE,SE,Indígena,5,Fundamental completo,23,750,3.07
+2025,uf,SE,SE,SE,Indígena,6,Médio incompleto,24,750,3.2
+2025,uf,SE,SE,SE,Indígena,7,Médio completo,317,750,42.27
+2025,uf,SE,SE,SE,Indígena,8,Superior incompleto,17,750,2.27
+2025,uf,SE,SE,SE,Indígena,9,Superior completo,313,750,41.73
+2025,uf,SE,SE,SE,Indígena,10,Mestrado,9,750,1.2
+2025,uf,SE,SE,SE,Indígena,11,Doutorado,6,750,0.8
+2025,uf,SE,SE,SE,Negra,1,Analfabeto,298,168509,0.18
+2025,uf,SE,SE,SE,Negra,2,Até 5 ano incompleto,1543,168509,0.92
+2025,uf,SE,SE,SE,Negra,3,5 ano completo,1237,168509,0.73
+2025,uf,SE,SE,SE,Negra,4,6 a 9 ano incompleto,2735,168509,1.62
+2025,uf,SE,SE,SE,Negra,5,Fundamental completo,5491,168509,3.26
+2025,uf,SE,SE,SE,Negra,6,Médio incompleto,5382,168509,3.19
+2025,uf,SE,SE,SE,Negra,7,Médio completo,82294,168509,48.84
+2025,uf,SE,SE,SE,Negra,8,Superior incompleto,6004,168509,3.56
+2025,uf,SE,SE,SE,Negra,9,Superior completo,61037,168509,36.22
+2025,uf,SE,SE,SE,Negra,10,Mestrado,2026,168509,1.2
+2025,uf,SE,SE,SE,Negra,11,Doutorado,462,168509,0.27
+2025,uf,SP,SP,SP,Amarela,1,Analfabeto,123,82574,0.15
+2025,uf,SP,SP,SP,Amarela,2,Até 5 ano incompleto,428,82574,0.52
+2025,uf,SP,SP,SP,Amarela,3,5 ano completo,452,82574,0.55
+2025,uf,SP,SP,SP,Amarela,4,6 a 9 ano incompleto,933,82574,1.13
+2025,uf,SP,SP,SP,Amarela,5,Fundamental completo,2235,82574,2.71
+2025,uf,SP,SP,SP,Amarela,6,Médio incompleto,2268,82574,2.75
+2025,uf,SP,SP,SP,Amarela,7,Médio completo,28978,82574,35.09
+2025,uf,SP,SP,SP,Amarela,8,Superior incompleto,2649,82574,3.21
+2025,uf,SP,SP,SP,Amarela,9,Superior completo,42659,82574,51.66
+2025,uf,SP,SP,SP,Amarela,10,Mestrado,1148,82574,1.39
+2025,uf,SP,SP,SP,Amarela,11,Doutorado,701,82574,0.85
+2025,uf,SP,SP,SP,Branca,1,Analfabeto,7101,4581191,0.16
+2025,uf,SP,SP,SP,Branca,2,Até 5 ano incompleto,26994,4581191,0.59
+2025,uf,SP,SP,SP,Branca,3,5 ano completo,31018,4581191,0.68
+2025,uf,SP,SP,SP,Branca,4,6 a 9 ano incompleto,63460,4581191,1.39
+2025,uf,SP,SP,SP,Branca,5,Fundamental completo,167398,4581191,3.65
+2025,uf,SP,SP,SP,Branca,6,Médio incompleto,141003,4581191,3.08
+2025,uf,SP,SP,SP,Branca,7,Médio completo,2039660,4581191,44.52
+2025,uf,SP,SP,SP,Branca,8,Superior incompleto,162798,4581191,3.55
+2025,uf,SP,SP,SP,Branca,9,Superior completo,1885583,4581191,41.16
+2025,uf,SP,SP,SP,Branca,10,Mestrado,34030,4581191,0.74
+2025,uf,SP,SP,SP,Branca,11,Doutorado,22146,4581191,0.48
+2025,uf,SP,SP,SP,Indígena,1,Analfabeto,83,12625,0.66
+2025,uf,SP,SP,SP,Indígena,2,Até 5 ano incompleto,128,12625,1.01
+2025,uf,SP,SP,SP,Indígena,3,5 ano completo,130,12625,1.03
+2025,uf,SP,SP,SP,Indígena,4,6 a 9 ano incompleto,274,12625,2.17
+2025,uf,SP,SP,SP,Indígena,5,Fundamental completo,656,12625,5.2
+2025,uf,SP,SP,SP,Indígena,6,Médio incompleto,657,12625,5.2
+2025,uf,SP,SP,SP,Indígena,7,Médio completo,6624,12625,52.47
+2025,uf,SP,SP,SP,Indígena,8,Superior incompleto,502,12625,3.98
+2025,uf,SP,SP,SP,Indígena,9,Superior completo,3451,12625,27.33
+2025,uf,SP,SP,SP,Indígena,10,Mestrado,71,12625,0.56
+2025,uf,SP,SP,SP,Indígena,11,Doutorado,49,12625,0.39
+2025,uf,SP,SP,SP,Negra,1,Analfabeto,7104,2789906,0.25
+2025,uf,SP,SP,SP,Negra,2,Até 5 ano incompleto,28217,2789906,1.01
+2025,uf,SP,SP,SP,Negra,3,5 ano completo,24943,2789906,0.89
+2025,uf,SP,SP,SP,Negra,4,6 a 9 ano incompleto,66788,2789906,2.39
+2025,uf,SP,SP,SP,Negra,5,Fundamental completo,137111,2789906,4.91
+2025,uf,SP,SP,SP,Negra,6,Médio incompleto,135582,2789906,4.86
+2025,uf,SP,SP,SP,Negra,7,Médio completo,1588081,2789906,56.92
+2025,uf,SP,SP,SP,Negra,8,Superior incompleto,91500,2789906,3.28
+2025,uf,SP,SP,SP,Negra,9,Superior completo,700598,2789906,25.11
+2025,uf,SP,SP,SP,Negra,10,Mestrado,6581,2789906,0.24
+2025,uf,SP,SP,SP,Negra,11,Doutorado,3401,2789906,0.12
+2025,uf,TO,TO,TO,Amarela,1,Analfabeto,7,2589,0.27
+2025,uf,TO,TO,TO,Amarela,2,Até 5 ano incompleto,70,2589,2.7
+2025,uf,TO,TO,TO,Amarela,3,5 ano completo,7,2589,0.27
+2025,uf,TO,TO,TO,Amarela,4,6 a 9 ano incompleto,30,2589,1.16
+2025,uf,TO,TO,TO,Amarela,5,Fundamental completo,58,2589,2.24
+2025,uf,TO,TO,TO,Amarela,6,Médio incompleto,92,2589,3.55
+2025,uf,TO,TO,TO,Amarela,7,Médio completo,1048,2589,40.48
+2025,uf,TO,TO,TO,Amarela,8,Superior incompleto,80,2589,3.09
+2025,uf,TO,TO,TO,Amarela,9,Superior completo,1158,2589,44.73
+2025,uf,TO,TO,TO,Amarela,10,Mestrado,26,2589,1.0
+2025,uf,TO,TO,TO,Amarela,11,Doutorado,13,2589,0.5
+2025,uf,TO,TO,TO,Branca,1,Analfabeto,177,39745,0.45
+2025,uf,TO,TO,TO,Branca,2,Até 5 ano incompleto,442,39745,1.11
+2025,uf,TO,TO,TO,Branca,3,5 ano completo,72,39745,0.18
+2025,uf,TO,TO,TO,Branca,4,6 a 9 ano incompleto,221,39745,0.56
+2025,uf,TO,TO,TO,Branca,5,Fundamental completo,907,39745,2.28
+2025,uf,TO,TO,TO,Branca,6,Médio incompleto,777,39745,1.95
+2025,uf,TO,TO,TO,Branca,7,Médio completo,14456,39745,36.37
+2025,uf,TO,TO,TO,Branca,8,Superior incompleto,1032,39745,2.6
+2025,uf,TO,TO,TO,Branca,9,Superior completo,20747,39745,52.2
+2025,uf,TO,TO,TO,Branca,10,Mestrado,499,39745,1.26
+2025,uf,TO,TO,TO,Branca,11,Doutorado,415,39745,1.04
+2025,uf,TO,TO,TO,Indígena,1,Analfabeto,9,1187,0.76
+2025,uf,TO,TO,TO,Indígena,2,Até 5 ano incompleto,366,1187,30.83
+2025,uf,TO,TO,TO,Indígena,4,6 a 9 ano incompleto,4,1187,0.34
+2025,uf,TO,TO,TO,Indígena,5,Fundamental completo,20,1187,1.68
+2025,uf,TO,TO,TO,Indígena,6,Médio incompleto,12,1187,1.01
+2025,uf,TO,TO,TO,Indígena,7,Médio completo,329,1187,27.72
+2025,uf,TO,TO,TO,Indígena,8,Superior incompleto,6,1187,0.51
+2025,uf,TO,TO,TO,Indígena,9,Superior completo,436,1187,36.73
+2025,uf,TO,TO,TO,Indígena,10,Mestrado,1,1187,0.08
+2025,uf,TO,TO,TO,Indígena,11,Doutorado,4,1187,0.34
+2025,uf,TO,TO,TO,Negra,1,Analfabeto,324,162810,0.2
+2025,uf,TO,TO,TO,Negra,2,Até 5 ano incompleto,8088,162810,4.97
+2025,uf,TO,TO,TO,Negra,3,5 ano completo,339,162810,0.21
+2025,uf,TO,TO,TO,Negra,4,6 a 9 ano incompleto,1343,162810,0.82
+2025,uf,TO,TO,TO,Negra,5,Fundamental completo,3182,162810,1.95
+2025,uf,TO,TO,TO,Negra,6,Médio incompleto,4413,162810,2.71
+2025,uf,TO,TO,TO,Negra,7,Médio completo,74940,162810,46.03
+2025,uf,TO,TO,TO,Negra,8,Superior incompleto,3481,162810,2.14
+2025,uf,TO,TO,TO,Negra,9,Superior completo,65677,162810,40.34
+2025,uf,TO,TO,TO,Negra,10,Mestrado,642,162810,0.39
+2025,uf,TO,TO,TO,Negra,11,Doutorado,381,162810,0.23

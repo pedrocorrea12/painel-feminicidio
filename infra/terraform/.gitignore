@@ -1,0 +1,12 @@
+# Estado e variáveis locais nunca vão para o Git
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+*.tfplan
+*.tfplan
+tfplan

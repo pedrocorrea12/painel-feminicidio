@@ -1,0 +1,6 @@
+ano,mes,sigla_uf,municipio,evento,abrangencia,agente,arma,faixa_etaria,vitimas_feminino,vitimas_masculino,vitimas_nao_informado,total_vitimas,total_ocorrencias,total_peso,arquivo_origem,situacao_dado
+2024,1,SC,ITAJAÍ,Feminicídio,Estadual,,,,1.0,0.0,0.0,1.0,,,bancovde-2024.xlsx,consolidado_publicacao
+2024,1,DF,BRASÍLIA,Estupro,Estadual,,,,2.0,0.0,0.0,2.0,,,bancovde-2024.xlsx,consolidado_publicacao
+2024,1,DF,BRASÍLIA,Estupro,Estadual,,,,3.0,0.0,0.0,3.0,,,bancovde-2024.xlsx,consolidado_publicacao
+2024,1,SC,NÃO INFORMADO,Feminicídio,Polícia Federal,,,,0.0,0.0,0.0,0.0,,,bancovde-2024.xlsx,consolidado_publicacao
+2025,1,SC,ITAJAÍ,Feminicídio,Estadual,,,,0.0,0.0,0.0,0.0,,,bancovde-2025.xlsx,parcial

@@ -22,7 +22,7 @@ Painel de tela única (HTML estático) com indicadores de feminicídio e violên
 | **População MS** | **Baixado e tratado** | 2015–2024 no Silver | Dados Abertos do SUS / DEMAS |
 | **Diretório municípios** | OK | Atual | API de Localidades do IBGE |
 | **SINAN Violência** | **Validado via FTP** | 2009–2024 (consolidado) + 2025 (preliminar) | FTP DataSUS via PySUS — ver `SINAN_FTP.md` |
-| **Sinesp-VDE** (feminicídio) | Não iniciado | 2015–2026 | CSV gov.br |
+| **Sinesp-VDE** (feminicídio e 30 outros eventos) | Extraído 2019–2026 (`pipeline/extract_sinesp.py`) | 2015–2026 | xlsx anual gov.br (`bancovde-AAAA.xlsx`); ver `docs/SINESP_VDE.md` |
 | **CNJ** (medidas protetivas) | Não iniciado | — | Painel CNJ |
 
 **Base dos Dados está encerrada.** Não há Sinesp, CNJ, FBSP nem dataset de segurança pública no catálogo. O que faltar vem de fora.
@@ -405,20 +405,163 @@ df = await load_result if inspect.iscoroutine(load_result) else load_result
 
 ## 11. Próximos passos
 
+Atualizado em 2026-10-29. Itens marcados como concluídos ficam para histórico.
+
 1. ~~**SINAN via PySUS/FTP**~~ — **concluído em 2026-08-24.** VIOL vai até 2024
    consolidado + 2025 preliminar. Parquet filtrado pronto em
    `data/silver/sinan_viol_mulheres_interpessoal.parquet`. A camada Gold é gerada
    por `pipeline/build_gold.py` e consumida pelo painel estático.
-   O parquet entra no join final com SIM/população.
 2. ~~**População feminina municipal**~~ — **concluído em 2026-10-01.** Fonte
-   oficial do Ministério da Saúde baixada diretamente e recortada para
-   2015–2024 em `data/silver/populacao_feminina_municipio.parquet`. O cruzamento
-   com o SINAN está materializado em `data/silver/indicadores_territorio_ano.parquet`,
-   e as taxas por 100 mil mulheres já são exportadas para a Gold.
-3. **Sinesp-VDE** — baixar CSV do gov.br, checar granularidade (municipal? mensal?), testar join por `id_municipio`. Maior risco técnico: formatos variam por UF.
-4. **Recortes agregados** — segunda tabela com raça × idade × meio por UF/Brasil. Agora dá pra fazer o mesmo recorte pro SINAN (colunas `CS_RACA`, `NU_IDADE_N`, `VIOL_FISIC`/`_PSICO`/`_SEXU` já mapeadas — ver §5.3).
-5. **Protótipo HTML** — layout e narrativa antes de plugar o dado real.
-6. **CNJ** (opcional) — medidas protetivas por comarca. Exige tabela de correspondência comarca → município.
+   oficial do Ministério da Saúde em `data/silver/populacao_feminina_municipio.parquet`,
+   cruzamento com o SINAN em `data/silver/indicadores_territorio_ano.parquet`.
+3. ~~**Sinesp-VDE**~~ — **concluído em 2026-10-14.** `pipeline/extract_sinesp.py`
+   baixa `bancovde-AAAA.xlsx` do MJSP (2019–2026), gera
+   `data/silver/sinesp_vde_ocorrencias.parquet`, `sinesp_feminicidio.parquet` e
+   CSVs em `data/gold/sinesp/`. O `painel.json` já traz a seção
+   `sinesp_feminicidio`. Regras e quebras de série em `docs/SINESP_VDE.md`.
+4. ~~**RAIS por sexo e raça (extração)**~~ — **concluído em 2026-10-15.** SQLs em
+   `pipeline/sql/rais_obsref_raca_sexo.sql`, CSVs em `data/bronze/rais/obsref/`,
+   conferências e decisões em `docs/RAIS.md`. Raça só é usável em 2024–2025.
+
+5. ~~**Taxas de morte de mulheres por agressão por cor ou raça, SIM e Censo 2022**~~,
+   **concluído em 2026-10-15.** `pipeline/build_race_analysis.py` gera quatro
+   tabelas em `data/gold/raca/`. O SIM usa `RACACOR`, denominador fixo do Censo
+   2022, negra como preta mais parda e parcela sem raça informada visível. A
+   tabela municipal de Santa Catarina anualiza o período 2019 a 2024. O SINAN
+   recebe índice de representação e permanece identificado como notificações,
+   não pessoas únicas. A visão local `Raça e trabalho` consome essas saídas.
+6. ~~**Silver e Gold da RAIS**~~, **concluído em 2026-10-15.**
+   `pipeline/build_rais.py` lê os quatro CSVs de `data/bronze/rais/obsref/` e
+   gera três Parquets Silver e oito tabelas Gold em `data/gold/rais/`.
+   Conferências codificadas: Brasil igual à soma das UFs, Santa Catarina com
+   2.319.210 vínculos em 2019 e 2.949.150 em 2025, saldo mensal reconciliado.
+   Sexo cobre 2019 a 2025. Raça usa somente 2024 e 2025. O protótipo local já
+   mostra participação feminina, razão salarial e os recortes raciais centrais.
+7. **Exibir a série Sinesp no painel publicado.** A série, a razão SIM e Sinesp,
+   tentativas, homicídio doloso e sazonalidade já estão no protótipo local em
+   `dashboard/prototipos/monitoramento-atual/`. Falta migrar a versão aprovada
+   para `dashboard/dist/` e publicar. Nenhuma publicação foi feita nesta etapa.
+8. **Cruzamento mensal Sinesp × emprego.** Tentativa de feminicídio e
+   feminicídio por UF e mês (`data/gold/sinesp/sinesp_sc_brasil_mensal.csv` e
+   a Silver completa) contra o saldo mensal da RAIS por sexo (bloco 4) ou o
+   CAGED. Só nível UF e Brasil; desenho de Bhalotra, Britto, Pinotti e Sampaio.
+9. ~~**Corrigir `pipeline/validate_project.py`**~~, **concluído.** A validação
+   reconhece SIM definitivo de 2015 a 2024, 2025 preliminar e 2026 prévia. Em
+   2026-10-15 também passou a validar as saídas de raça e RAIS.
+10. **Opcionais, só se a narrativa pedir:** deflacionar salários da RAIS com o
+    INPC (tabela 1736 do espelho `obsref.sidra.flat_unificado`) para mostrar
+    nível e não só razão; estender RAIS e Sinesp para 2015 (trocar `>= 2019`
+    por `>= 2015` nos SQLs e `--inicio 2015` no extrator); escolaridade da
+    vítima no SIM (campo `ESC`) contra a tabela 10061 do Censo, lembrando que
+    10061, 10295 e 9605 não estão no espelho e a API do SIDRA só abre no
+    navegador; CNJ (medidas protetivas) continua opcional.
+11. ~~**Catálogo para ampliação em atlas territorial**~~, **concluído em
+    2026-10-26.** `pipeline/build_atlas_catalog.py` registra 48 indicadores e
+    seis fontes em `data/gold/atlas/`. O catálogo informa cobertura, dimensões,
+    denominadores, prontidão, prioridade, transformação necessária e ressalva.
+    O plano completo está em `docs/ATLAS_VIOLENCIA.md`.
+12. ~~**Denominadores gerais de população**~~, **concluído em 2026-10-26.**
+    `pipeline/fetch_populacao_geral.py` processa população total, por sexo e por
+    idade para os 5.570 municípios, de 2015 a 2024. As saídas ficam em três
+    arquivos `populacao_municipio_*.parquet` na Silver. As somas de sexo e idade
+    são reconciliadas com o total em cada município e ano. Sexo e idade são
+    recortes independentes da fonte, não um cruzamento. Naquele momento, a
+    próxima etapa era reprocessar SIM e SINAN sem o filtro feminino.
+13. ~~**SIM para o atlas territorial**~~, **concluído em 2026-10-26.**
+    `pipeline/build_sim_atlas.py` processa todos os sexos para agressões,
+    suicídios e acidentes de transporte. A Silver contém 1.101.514 registros.
+    As Gold trazem taxas territoriais e por idade até 2024, além das contagens
+    preliminares de 2025 e da prévia de 2026. O controle feminino de agressões
+    coincide com a série anterior em todos os anos. A próxima etapa é o SINAN.
+14. ~~**SINAN para o atlas territorial**~~, **concluído em 2026-10-26.**
+    `pipeline/build_sinan_atlas.py` processa 4.292.317 notificações de 2015 a
+    2025 para todos os sexos. A camada separa violência interpessoal e
+    autoprovocada e preserva sete marcações de tipo. As Gold territoriais e por
+    idade usam taxas até 2024. A camada territorial calcula taxas de 2025 com
+    população total oficial e população por sexo estimada pela proporção de
+    2024. O numerador de 2025 permanece identificado como preliminar. O controle
+    de mulheres em violência interpessoal coincide com a série anterior em todos
+    os anos.
+15. ~~**Sinesp prioritário para o atlas territorial**~~, **concluído em
+    2026-10-26.** `pipeline/build_sinesp_atlas.py` validou os nove eventos
+    prioritários em todas as UFs. Os 12 meses de 2019 a 2025 e os 8 meses de
+    2026 estão presentes. A Gold anual reúne Brasil, UFs e os cinco eventos
+    com cobertura dos 295 municípios de Santa Catarina. A Gold mensal reúne
+    Brasil e Santa Catarina. As taxas de 2025 usam população total oficial e
+    população por sexo estimada pela proporção de 2024. Estupro, estupro de
+    vulnerável, pessoa desaparecida e pessoa localizada não têm identificação
+    municipal no arquivo atual. O próximo passo é prototipar a navegação do
+    atlas sem alterar o painel publicado.
+16. ~~**Estrutura navegável e mapa municipal do atlas**~~, **concluído em
+    2026-10-29.** A versão local em `dashboard/atlas/` reúne visão geral,
+    cartões, série histórica, seletor de território e estado da consulta na
+    URL. O mapa usa a malha dos 295 municípios de Santa Catarina e permite
+    escolher indicador, ano, sexo e período. A leitura padrão acumula três
+    anos, mantém o número absoluto acessível, sinaliza dado insuficiente por
+    hachura e limita o ranking a municípios com pelo menos cinco registros.
+    O clique no mapa ou no ranking seleciona o município e atualiza os demais
+    componentes. A validação de dados, a sintaxe do JavaScript e o teste no
+    navegador passaram sem erros. Nada foi migrado para `dashboard/dist/` e
+    nenhuma publicação foi feita. O próximo bloco é Desigualdades, com sexo,
+    idade, raça ou cor e trabalho, preservando as limitações de cada fonte.
+17. ~~**Navegação analítica e novos recortes do atlas**~~, **concluído em
+    2026-10-29.** A versão local em `dashboard/atlas/` passou a ter as seções
+    Panorama SC, Municípios, Comparar, Desigualdades, Mulheres, Monitoramento e
+    Dados e métodos. O território permanece disponível em todas as seções. A
+    comparação situa Santa Catarina entre as UFs, com Brasil, mediana estadual,
+    outro estado e município selecionado. Desigualdades incorpora idade, taxas
+    de mulheres por raça ou cor com denominador do Censo 2022 e indicadores da
+    RAIS. Mulheres reúne SINAN, SIM e Sinesp sem somar universos. Monitoramento
+    compara 2024, 2025 e 2026 no mesmo período mensal. O novo arquivo
+    `dashboard/atlas/data/desigualdades.json` é produzido por
+    `pipeline/build_atlas_site_data.py`. A referência visual aprovada está em
+    `docs/referencias-visuais/referencia-01-bi-claro.png`. A versão foi testada
+    em larguras de celular e desktop. Nenhuma publicação foi feita.
+18. ~~**Remodelagem compacta do atlas**~~, **concluído em 2026-10-29.** As
+    seções passaram a funcionar como visões independentes, sem empilhar todo o
+    conteúdo em uma página longa. O cabeçalho e a tipografia foram reduzidos, os
+    cartões ficaram mais densos e a série histórica passou a dividir a tela com
+    filtros e notas metodológicas. Desigualdades usa uma grade com idade ao lado
+    dos blocos de raça ou cor e trabalho. O seletor territorial principal ficou
+    restrito a Santa Catarina e seus municípios. Brasil e as demais UFs aparecem
+    na seção Comparar. A versão foi verificada em 390, 1.440 e 1.880 pixels de
+    largura. Nenhuma publicação foi feita.
+19. ~~**Aprofundamento de Desigualdades e Mulheres**~~, **concluído em
+    2026-10-29.** Em Desigualdades, a grade foi reequilibrada para impedir que
+    o gráfico de idade domine a tela. Quatro indicadores resumem a principal
+    faixa etária e a distância entre Santa Catarina e Brasil. Raça ou cor passou
+    a exibir taxas, razão, diferença, completude do campo e uma leitura calculada.
+    Trabalho e renda passou a mostrar participação feminina, razão e diferença
+    salarial, além de uma leitura calculada. Em Mulheres, os quatro cartões de
+    SINAN, SIM e Sinesp foram mantidos e ganharam duas análises: a razão entre
+    feminicídios policiais e mortes de mulheres por agressão de 2019 a 2024,
+    comparada com o Brasil, e a relação entre tentativas e feminicídios
+    consumados em 2024, 2025 e 2026 parcial. O recorte municipal permanece nos
+    cartões, mas a razão SIM e Sinesp é identificada como análise estadual,
+    devido à diferença entre residência e local do fato. A versão foi testada
+    no navegador sem erros. Nenhuma publicação foi feita. O próximo passo
+    autorizado é preparar e publicar esta versão no GitHub Pages.
+20. ~~**Revisão editorial dos quadros**~~, **concluído em 2026-10-29.** O
+    atlas deixou de usar cartões analíticos com borda completa, cantos
+    arredondados, sombra e faixa colorida superior. Panorama, série histórica,
+    mapa, comparações, Desigualdades, Mulheres e Dados e métodos passaram a ser
+    organizados por espaço, tipografia, linhas horizontais e divisores internos.
+    Contornos completos foram preservados apenas em componentes funcionais,
+    como filtros, botões, janela de território, dicas e amostras de legenda.
+    A linguagem foi conferida em tela ampla e celular, sem erros no console.
+    Nenhuma publicação foi feita.
+
+### Fora de escopo, por decisão
+
+- Gini por UF: relação fraca com feminicídio, 27 observações, substituído pela
+  razão salarial da RAIS.
+- Série racial da RAIS antes de 2024: não identificação de 30% a 64% por UF.
+- Estupro e estupro de vulnerável como séries automaticamente comparáveis.
+  A soma das categorias pode ser exibida, mas não elimina a quebra de
+  classificação observada em Santa Catarina entre 2019 e 2020.
+- Perfil racial dos feminicídios policiais: o MJSP não publica raça no VDE.
+- Bloco 3 da RAIS (município de SC × escolaridade × faixa etária) e recortes
+  por CBO ou CNAE.
 
 **Fonte do Sinesp:**
 https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/estatistica/dados-nacionais-1/base-de-dados-e-notas-metodologicas-dos-gestores-estaduais-sinesp-vde-2022-e-2023

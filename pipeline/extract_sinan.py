@@ -74,7 +74,9 @@ async def _baixar_ano(client, sinan, ano: int) -> pd.DataFrame:
     ]
     situacao = "preliminar" if ano >= 2025 else "definitivo"
     pasta_esperada = "PRELIM" if situacao == "preliminar" else "FINAIS"
-    candidatos_situacao = [f for f in candidatos if pasta_esperada in f.path.upper()]
+    candidatos_situacao = [
+        f for f in candidatos if pasta_esperada in str(f.path).upper()
+    ]
     if candidatos_situacao:
         candidatos = candidatos_situacao
     if not candidatos:

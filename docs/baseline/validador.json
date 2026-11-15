@@ -1,0 +1,16 @@
+{
+  "python": "3.12.7",
+  "original_passa": false,
+  "assercoes_que_falham": [
+    {
+      "linha_original": 327,
+      "assercao": "assert sinan_atlas_territorio.loc[ sinan_atlas_territorio.ano.eq(2025), \"taxa_100mil\" ].isna().all()"
+    },
+    {
+      "linha_original": 360,
+      "assercao": "assert sinesp_territorio.loc[sinesp_territorio.ano.ge(2025), \"taxa_100mil\"].isna().all()"
+    }
+  ],
+  "restante_passa": true,
+  "segundos_ultima_execucao": 4.5
+}

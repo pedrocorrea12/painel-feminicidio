@@ -66,3 +66,21 @@ C:\Users\User\anaconda3\python.exe pipeline\fetch_populacao_feminina.py
 
 O painel diferencia explicitamente notificações do SINAN, mortes por agressão do SIM e feminicídio jurídico-policial.
 
+## Evolução para engenharia de dados
+
+O plano de evolução local e AWS está salvo em
+[`docs/projeto-engenharia-dados/README.md`](docs/projeto-engenharia-dados/README.md).
+Ele preserva o painel e o pipeline atuais enquanto adiciona, em etapas, testes,
+configuração portátil, observabilidade, CI e um laboratório AWS controlado.
+
+O scaffolding em `src/painel_dados` ainda não substitui os scripts em
+`pipeline/`. Durante a transição, os comandos atuais permanecem canônicos e a
+migração será feita fonte por fonte, começando por SINAN e SINESP.
+
+Para executar o diagnóstico estrutural sem processar dados:
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m painel_dados.cli diagnose
+```
+
