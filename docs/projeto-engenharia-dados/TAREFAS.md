@@ -27,7 +27,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
 | T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
-| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | em andamento | T20 (publicação conjunta) |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | pendente | nenhuma |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
@@ -325,6 +325,48 @@ integração (ignorado pelo Git; não apagar nem versionar).
   comando, saída, resultado e tempo. Se o runbook falhar, registrar o defeito como pedido.
 - **Aceite:** documento com os cinco incidentes e a recuperação comprovada; nenhum dado real
   alterado; pytest e `ruff check src tests` verdes. Sem push.
+
+**Entrega (Claude, 16/11/2026):**
+
+- Feito: `docs/runbooks/incidentes-simulados.md` com os cinco incidentes (Gold inválida, ZIP
+  corrompido em três variações, backup órfão, falha na segunda troca, falha na restauração),
+  cada um com cenário, como provocar, comando, saída, resultado, tempo e se o runbook bastou.
+  Tudo rodou em cópias temporárias fora do repositório; `dashboard/atlas`, `src/`, `pipeline/`
+  e os dados reais não foram tocados. Nos incidentes 1, 2 e 4 o conjunto voltou idêntico (mesma
+  impressão digital); nos 3 e 5 a recuperação seguiu o runbook e o conjunto restaurado também
+  ficou idêntico e válido. O script de provocação está no apêndice do documento.
+  Não foi criado `tests/test_incidentes_publicacao.py`: `tests/test_publish.py` já cobre as
+  falhas em memória.
+- **Revisão cruzada (Codex, leitura): reprovada com 4 achados, tratados:** (1) a impressão digital agora
+  tem implementação reproduzível (`Get-Digital`, `Get-Residuos`, `Novo-Sim` e o roteiro `rodar_tudo.ps1`, apêndices B e C),
+  considera caminho e conteúdo, e os cinco incidentes foram reexecutados com ela (digital do conjunto `528EDE06…`,
+  321 arquivos, igual antes e depois, sem resíduos, validação passando); (2) `publicar_sim.py` recusa raiz sem
+  `SIMULACAO.txt` ou com `.git`/`pyproject.toml`, e a trava foi testada contra a raiz do repositório; (3) registrada a
+  lacuna E (vários backups por pasta) e o pedido 5; (4) "o runbook bastou" trocado por "em parte" nos incidentes 3 e 5.
+- **Segunda rodada (Codex): reprovada, 1 achado ainda aberto e 1 novo, tratados:** o incidente 3 não imprimia
+  "idêntico, válido e sem resíduos" para o estado recuperado; o roteiro ganhou a checagem `I3 depois da recuperacao`
+  (321 arquivos, digital idêntico, sem resíduos, validação passando) antes da nova publicação. O bloco de saída do
+  apêndice C agora é a transcrição literal das 27 linhas do roteiro (só o caminho da raiz abreviado). Os `.ps1`
+  passaram a ser gravados com BOM UTF-8, para o PowerShell 5.1 não corromper os acentos. Itens 2 a 5 da primeira
+  correção foram confirmados como resolvidos.
+- **Terceira rodada (revisor independente, Claude em sessão nova, só leitura): aprovada com ressalvas.** O revisor
+  reexecutou o roteiro `rodar_tudo.ps1` a partir dos apêndices (321 arquivos, digital `528EDE06…`, linhas iguais às do
+  documento, só mudam UUIDs e caminho), confirmou a trava e as contagens e não achou lacuna nova no runbook. Duas
+  ressalvas baixas, tratadas: as saídas citadas na recuperação do incidente 3 vêm da execução manual do runbook (agora
+  dito no texto), e a transcrição passa a ser descrita como as 27 linhas rotuladas, com as quatro linhas de rastro do
+  PowerShell por trava explicadas e omitidas.
+- Pendente: o dono decide o merge.
+
+**Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
+
+1. Validar backup de uma só pasta: dizer que se usa a outra pasta atual
+   (`validar_diretorio_site(<backup de data>, 'dashboard/atlas/downloads')`).
+2. Incluir o caso em que uma pasta ficou na versão nova e a outra ausente (restauração parcial):
+   decidir pelo conjunto e pôr o destino novo em quarentena. Não foi simulado.
+3. Trocar `Select-Object FullName, LastWriteTime` por `Format-List` (o caminho sai truncado).
+4. Tratar a listagem sem backup (`$backup` nulo) com mensagem clara.
+5. Vários backups por pasta: parear `data` e `downloads` pelos instantes de criação em vez de escolher o
+   mais recente de cada uma de forma independente, e validar o par antes de qualquer `Move-Item`.
 
 ## T22 Varredura de segredos e dados pessoais
 
