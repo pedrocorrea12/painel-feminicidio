@@ -31,6 +31,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | em revisão | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
+| T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | em revisão | decisão do dono em 16/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -396,6 +397,40 @@ integração (ignorado pelo Git; não apagar nem versionar).
 - **Arquivos alterados:** `AGENTS.md`, `.claude/agents/revisor-independente.md` (novo), `docs/projeto-engenharia-dados/TAREFAS.md`.
 - **Limite conhecido:** o `Bash` do revisor não é tecnicamente só leitura; a proteção é a instrução do agente, por isso o autor confere
   `git status` e o diff depois de cada revisão. O revisor é da mesma família do autor: tarefas de segurança, custo ou dados reais pedem a leitura do dono.
+
+## T25 Agente executor de tarefas
+
+- **Decisão do dono (16/11/2026), pedida em chat:** criar mais um agente para dar celeridade ao processo. **Dono:** Claude.
+  **Branch:** `tarefa/t25-agente-executor`, a partir da `develope`. **Arquivos:** `.claude/agents/executor-tarefa.md` (novo) e a
+  própria linha e esta seção no quadro. O `AGENTS.md` não muda: as regras 5 e 9 continuam como estão.
+- **Papéis:** o coordenador (a sessão principal) escolhe a tarefa, cria a branch e o worktree, **escreve a linha e a seção da tarefa
+  no quadro dessa branch** (o executor para se não as encontrar), chama o `executor-tarefa`, pede a revisão ao `revisor-independente` e
+  cuida de push, PR e merge dentro da regra 5. O executor só escreve e commita na branch da tarefa e deixa o status em `em revisão`.
+  Quem escreveu não aprova (regra 9): o revisor continua sendo uma sessão nova, sem o contexto de autoria.
+- **Paralelismo:** um executor por tarefa, cada um no seu worktree, e só para tarefas cujos arquivos permitidos não se sobrepõem. O
+  `TAREFAS.md` é a exceção inevitável: toda tarefa edita a própria linha e seção, então o segundo merge pode conflitar nele. Quem
+  resolve é o coordenador, atualizando a branch antes do PR; o executor não faz `merge` nem `rebase`.
+- **Entrega (Claude):** agente com travas de autoria: todo comando ancorado no worktree (`cd` na mesma chamada ou `git -C`), lista
+  positiva de comandos `git` (correção é commit novo, sem `--amend`), `gh` proibido por inteiro, `git add` só com caminhos explícitos
+  e conferência do que está preparado antes do commit, `dashboard/atlas`, `data/` e `infra/` intactos como no revisor, `.venv`
+  próprio do worktree, pytest e ruff antes de cada commit e resposta com a linha final `ESTADO:`.
+  **Verificado:** pytest e Ruff verdes (o diff só tem Markdown). **Não verificado:** o agente ainda não executou nenhuma tarefa; ele só
+  fica disponível numa sessão aberta depois do merge.
+  **Revisão independente (Claude, sessão nova, só leitura), 1ª rodada: aprovada com ressalvas, tratadas:** (1, média) nada ancorava
+  os comandos ao worktree e um commit podia cair na `develope` do checkout principal: agora todo comando leva o worktree e o commit
+  confere a branch na mesma chamada; (2, média) furos na lista de proibidos (`gh workflow run`, `commit --amend`, `pull`, `clean`,
+  `config`): trocada por lista positiva; (3) sem trava contra `git add -A`: caminhos explícitos e conferência do índice; (4) trava de
+  dados mais estreita que a do revisor: igualada, e `pipeline/` e `dashboard/` citados; (5) comandos em sintaxe PowerShell numa
+  ferramenta que é o Git Bash: barras normais; (6) ninguém registrava a tarefa no quadro da branch: é o coordenador, e "pare" virou
+  devolver `ESTADO: bloqueada`; (7) pedido de arquivo extra ia para a Entrega: vai para "Pedidos" (regra 2); (8) critério de
+  paralelismo ignorava o `TAREFAS.md`: exceção descrita acima. O mesmo defeito do item 5 existe no `revisor-independente.md` e fica
+  para outra tarefa. **2ª rodada: aprovada com ressalvas**, os 8 achados resolvidos e 5 novos, todos baixos, tratados no agente:
+  comparação do caminho do worktree ignora o sentido das barras; pedido de arquivo extra é commitado; índice sujo após `add` errado
+  fica para o coordenador limpar; remoção e renomeação por `git add`; `commit` sem `--no-verify` e `ESTADO: incompleta` definido.
+  Estas últimas correções não passaram por nova rodada. **Pendente:** **leitura do dono antes do merge** (ressalva 9 do revisor: o arquivo
+  define o que um agente com escrita pode fazer, o que toca segurança no sentido da regra 9) e a primeira tarefa real como teste.
+- **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
+  `git log` da branch **e do checkout principal** depois de cada execução.
 
 ## T06 e T07
 
