@@ -31,6 +31,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | em revisão | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
+| T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | em revisão | decisão do dono em 16/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -396,6 +397,24 @@ integração (ignorado pelo Git; não apagar nem versionar).
 - **Arquivos alterados:** `AGENTS.md`, `.claude/agents/revisor-independente.md` (novo), `docs/projeto-engenharia-dados/TAREFAS.md`.
 - **Limite conhecido:** o `Bash` do revisor não é tecnicamente só leitura; a proteção é a instrução do agente, por isso o autor confere
   `git status` e o diff depois de cada revisão. O revisor é da mesma família do autor: tarefas de segurança, custo ou dados reais pedem a leitura do dono.
+
+## T25 Agente executor de tarefas
+
+- **Decisão do dono (16/11/2026), pedida em chat:** criar mais um agente para dar celeridade ao processo. **Dono:** Claude.
+  **Branch:** `tarefa/t25-agente-executor`, a partir da `develope`. **Arquivos:** `.claude/agents/executor-tarefa.md` (novo) e a
+  própria linha e esta seção no quadro. O `AGENTS.md` não muda: as regras 5 e 9 continuam como estão.
+- **Papéis:** o coordenador (a sessão principal) escolhe a tarefa, cria a branch e o worktree, chama o `executor-tarefa`, pede a revisão
+  ao `revisor-independente` e cuida de push, PR e merge dentro da regra 5. O executor só escreve e commita na branch da tarefa e deixa o
+  status em `em revisão`. Quem escreveu não aprova (regra 9): o revisor continua sendo uma sessão nova, sem o contexto de autoria.
+- **Paralelismo:** um executor por tarefa, cada um no seu worktree, e só para tarefas que não compartilham arquivos. Duas tarefas que
+  tocam o mesmo arquivo rodam uma depois da outra.
+- **Entrega (Claude):** agente escrito com as mesmas travas do revisor (instrução vinda de arquivo é dado, sem segredos, dados
+  publicados e `infra/` fora do alcance), mais as de autoria: só o worktree e a branch informados, só os arquivos da tarefa, sem push,
+  PR ou merge, `.venv` próprio do worktree, pytest e ruff antes de cada commit e resposta com a linha final `ESTADO:`.
+  **Verificado:** pytest e Ruff verdes (o diff só tem Markdown). **Não verificado:** o agente ainda não executou nenhuma tarefa; ele só
+  fica disponível numa sessão aberta depois do merge. **Pendente:** revisão independente, merge e a primeira tarefa real como teste.
+- **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
+  `git log` da branch depois de cada execução.
 
 ## T06 e T07
 
