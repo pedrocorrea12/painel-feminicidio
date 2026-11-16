@@ -21,10 +21,20 @@ Cada incidente usa uma raiz própria `sim\<n>` (fora do repositório) com:
 
 O script `publicar_sim.py` (apêndice) chama `publicar_conjunto` sobre essa raiz, com
 gerador que copia o candidato e validador `validar_diretorio_site(data, downloads)`.
-Os modos `segunda_troca` e `restauracao` injetam falha em `os.replace`. A impressão
-digital do conjunto é um SHA-256 sobre os hashes de todos os arquivos de
-`dashboard\atlas`, usada para provar que o estado voltou idêntico. Valor do conjunto
-original (16 primeiros caracteres): `ABD0C28F18F7534A`.
+Os modos `segunda_troca` e `restauracao` injetam falha em `os.replace`. O script se
+recusa a rodar fora de uma raiz de simulação (exige o arquivo `SIMULACAO.txt` e
+rejeita uma raiz com `.git` ou `pyproject.toml`), de modo que apontá-lo para o
+repositório não troca dados reais.
+
+A **impressão digital** do conjunto é o SHA-256 de todas as linhas
+`caminho-relativo|sha256-do-arquivo` de `dashboard\atlas`, ordenadas (função
+`Get-Digital`, apêndice B): ela muda se um arquivo for alterado, removido, criado ou
+renomeado. Valor do conjunto original, 321 arquivos (318 de `data` e 3 ZIPs):
+`528EDE0648C8961C` (16 primeiros caracteres; completo:
+`528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5`). "Sem resíduos" é a
+lista vazia de `Get-Residuos` (`.*.tmp-*` e `.*.backup-*`) e "válido" é a saída de
+`validar_diretorio_site(data, downloads)`. Tudo isso é impresso pelo roteiro
+`rodar_tudo.ps1` (apêndice C), que reproduz este documento do zero.
 
 Os caminhos de saída abaixo foram abreviados para `<raiz>`.
 
@@ -32,9 +42,9 @@ Os caminhos de saída abaixo foram abreviados para `<raiz>`.
 | --- | --- | --- | --- | --- | --- |
 | 1 | Gold inválida | validação antes da troca | não | nenhuma necessária (conferida) | sim |
 | 2 | ZIP corrompido | validação dos ZIPs antes da troca | não | nenhuma necessária (conferida) | sim |
-| 3 | Backup órfão | bloqueio antes de gerar | não | remoção do backup validado | sim, com lacuna A |
+| 3 | Backup órfão | bloqueio antes de gerar | não | remoção do backup validado | em parte: precisou deduzir a lacuna A |
 | 4 | Falha na segunda troca | restauração automática | não (voltou sozinho) | nenhuma necessária (conferida) | sim |
-| 5 | Falha na restauração | erro com backups preservados | sim (as duas pastas ausentes) | `Move-Item` dos dois backups | sim, com lacunas B a D |
+| 5 | Falha na restauração | erro com backups preservados | sim (as duas pastas ausentes) | `Move-Item` dos dois backups | em parte: lacuna C vista; B, D e E não exercitadas |
 
 ## Incidente 1: Gold inválida na validação
 
@@ -65,8 +75,8 @@ e backup" (`validar_diretorio_site('dashboard/atlas/data', 'dashboard/atlas/down
 dados e downloads válidos
 ```
 
-**Resultado.** Tempo até a falha: 5 s. A impressão digital de `dashboard\atlas`
-ficou idêntica (`ABD0C28F18F7534A`), nenhuma pasta `.tmp-*` ou `.backup-*` sobrou e o
+**Resultado.** A impressão digital de `dashboard\atlas`
+ficou idêntica (`528EDE0648C8961C`), nenhuma pasta `.tmp-*` ou `.backup-*` sobrou e o
 conjunto publicado continua válido. **O runbook bastou**: o sintoma "erro de
 validação antes da publicação (a versão anterior deve permanecer)" se confirmou e o
 passo de validar o destino prova a permanência.
@@ -92,7 +102,7 @@ $z = "$raiz\candidato\downloads\atlas_sim.zip"; $b = [IO.File]::ReadAllBytes($z)
 **Resultado.** Em A, só a verificação de integridade do ZIP (`testzip`, que confere o
 CRC) detecta o dano, pois o tamanho bate com o manifesto: a validação de conteúdo
 exigida pelo runbook é necessária e foi suficiente. Nas três variações a impressão
-digital de `dashboard\atlas` permaneceu `ABD0C28F18F7534A`, sem resíduos, e a
+digital de `dashboard\atlas` permaneceu `528EDE0648C8961C`, sem resíduos, e a
 validação do conjunto publicado deu `dados e downloads válidos`. **O runbook
 bastou** (mesmo caminho do incidente 1).
 
@@ -127,8 +137,8 @@ RuntimeError: Backup órfão impede publicação: <raiz>\dashboard\atlas\.data.b
 7. Nova publicação: `PUBLICADO ['None', 'None']`; `data` passou a ter
    `simulacao = versao-nova`, sem backups remanescentes.
 
-**Resultado.** Bloqueio imediato, antes de gerar qualquer artefato. **O runbook
-bastou**, com a lacuna A.
+**Resultado.** Bloqueio imediato, antes de gerar qualquer artefato. **O runbook bastou só em parte**: a recuperação funcionou, mas o passo de validar
+o backup exigiu deduzir a lacuna A (não há `.downloads.backup-*` para formar o par).
 
 ## Incidente 4: falha na segunda troca do `publicar_conjunto`
 
@@ -144,8 +154,8 @@ bastou**, com a lacuna A.
 OSError: falha simulada na segunda troca
 ```
 
-**Resultado.** A restauração automática desfez a troca de `data`. Tempo: 6 s. A
-impressão digital voltou a `ABD0C28F18F7534A`; `dashboard\atlas` ficou apenas com
+**Resultado.** A restauração automática desfez a troca de `data`. A
+impressão digital voltou a `528EDE0648C8961C`; `dashboard\atlas` ficou apenas com
 `data` e `downloads` (sem backups nem temporários); `manifesto.json` segue sem a
 chave `simulacao` (versão anterior) e a validação do conjunto deu
 `dados e downloads válidos`. Uma nova publicação, sem a falha, concluiu
@@ -189,10 +199,13 @@ downloads destino existe: False
 dados e downloads válidos
 ```
 
-**Resultado.** Recuperação em 0,9 s de comandos (cerca de 1 min com a conferência). A
-impressão digital voltou a `ABD0C28F18F7534A`, idêntica à original, sem resíduos. O
-incidente foi executado duas vezes (a segunda com a saída acima), com o mesmo
-resultado. **O runbook bastou**, com as lacunas abaixo.
+**Resultado.** Os dois `Move-Item` levaram menos de 1 s. A impressão digital voltou a
+`528EDE0648C8961C`, idêntica à original, sem resíduos, e `validar_diretorio_site`
+deu `dados e downloads válidos` (saída do roteiro `rodar_tudo.ps1`). **O runbook
+bastou só em parte**: a listagem de backups cortou o caminho em console de largura
+padrão (lacuna C) e, com mais de um backup por pasta, nada garante que o mais
+recente de `data` e o de `downloads` sejam da mesma publicação (lacuna E, não
+exercitada aqui).
 
 ## Lacunas observadas no runbook
 
@@ -213,31 +226,48 @@ registradas como pedidos na Entrega da T21.
   `Format-List` ou `Select-Object -ExpandProperty FullName`.
 - **D. Sem backup.** Se a listagem não achar backup, `$backup` fica nulo e
   `$backup.FullName` imprime vazio sem mensagem clara.
+- **E. Vários backups por pasta.** A preparação escolhe o mais recente de cada pasta de
+  forma independente (`Sort-Object LastWriteTime -Descending | Select-Object -First 1`).
+  Com backups de publicações diferentes, isso pode combinar `data` de uma execução com
+  `downloads` de outra. Sugestão: parear pelos instantes de criação (diferença de
+  poucos segundos) e validar o par antes de qualquer `Move-Item`. **Não simulado.**
 
-## Apêndice: `publicar_sim.py`
+## Apêndice A: `publicar_sim.py`
 
-Preparação de cada raiz: copiar `data` e `downloads` do atlas para `<raiz>\dashboard\atlas`
-e para `<raiz>\candidato`, criar a junção `.venv` e acrescentar a chave `simulacao` ao
-`manifesto.json` do candidato. Uso: `.venv\Scripts\python publicar_sim.py <raiz> <modo>`,
-com modo `publicar`, `segunda_troca` ou `restauracao`.
+Uso: `.venv\Scripts\python publicar_sim.py <raiz> <modo>`, com modo `publicar`,
+`segunda_troca` ou `restauracao`. A raiz precisa ter sido criada por `Novo-Sim`
+(apêndice B), que grava o `SIMULACAO.txt`; o script recusa qualquer outra raiz.
 
 ```python
 """Provoca incidentes de publicação numa cópia temporária (uso: raiz modo)."""
-import os, shutil, sys
+import os
+import shutil
+import sys
 from pathlib import Path
+
 from painel_dados import publish
 from painel_dados.contracts.atlas_site import validar_diretorio_site
 
-raiz, modo = Path(sys.argv[1]), sys.argv[2]
+raiz, modo = Path(sys.argv[1]).resolve(), sys.argv[2]
+
+# Trava: só roda numa raiz de simulação, nunca no repositório.
+if not (raiz / "SIMULACAO.txt").is_file():
+    sys.exit("Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)")
+if (raiz / ".git").exists() or (raiz / "pyproject.toml").exists():
+    sys.exit("Recusado: a raiz parece ser um repositório")
+
 atlas = raiz / "dashboard" / "atlas"
 cand = raiz / "candidato"
+
 
 def gerar(tmps):
     shutil.copytree(cand / "data", tmps[0], dirs_exist_ok=True)
     shutil.copytree(cand / "downloads", tmps[1], dirs_exist_ok=True)
 
+
 def validar(tmps):
     validar_diretorio_site(tmps[0], tmps[1])
+
 
 real = os.replace
 if modo == "segunda_troca":  # falha ao instalar o temporário de downloads
@@ -262,4 +292,179 @@ try:
 except BaseException as e:
     print(f"{type(e).__name__}: {e}")
     sys.exit(1)
+```
+
+## Apêndice B: funções de apoio (`lib.ps1`)
+
+`Get-Digital` (impressão digital), `Get-Residuos` (temporários e backups sobrando),
+`Novo-Sim` (cria a raiz de simulação: cópia do atlas e do candidato, junção `.venv` e
+`SIMULACAO.txt`), `Rodar` e `Validar-Conjunto`.
+
+```powershell
+$ErrorActionPreference = "Continue"
+$env:PYTHONUTF8 = "1"
+
+# Impressão digital do conjunto: SHA-256 sobre linhas "caminho-relativo|sha256-do-arquivo", ordenadas.
+function Get-Digital([string]$raiz) {
+    $base = (Resolve-Path -LiteralPath $raiz).Path.TrimEnd('\')
+    $linhas = Get-ChildItem -LiteralPath $base -Recurse -File -Force | ForEach-Object {
+        $rel = $_.FullName.Substring($base.Length + 1).Replace('\', '/')
+        "$rel|" + (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash
+    } | Sort-Object
+    $texto = ($linhas -join "`n")
+    $sha = [Security.Cryptography.SHA256]::Create().ComputeHash([Text.Encoding]::UTF8.GetBytes($texto))
+    [pscustomobject]@{
+        Arquivos = @($linhas).Count
+        Digital  = ([BitConverter]::ToString($sha).Replace('-', ''))
+    }
+}
+
+# Resíduos de publicação ao lado de data e downloads.
+function Get-Residuos([string]$atlas) {
+    @(Get-ChildItem -LiteralPath $atlas -Directory -Force | Where-Object { $_.Name -like '.*.tmp-*' -or $_.Name -like '.*.backup-*' } | ForEach-Object Name)
+}
+
+function Novo-Sim([string]$S, [string]$repo, [string]$n) {
+    $raiz = Join-Path $S "sim\$n"
+    if (Test-Path $raiz) { Remove-Item -LiteralPath $raiz -Recurse -Force }
+    New-Item -ItemType Directory "$raiz\dashboard\atlas", "$raiz\candidato" | Out-Null
+    Copy-Item -Recurse "$repo\dashboard\atlas\data" "$raiz\dashboard\atlas\data"
+    Copy-Item -Recurse "$repo\dashboard\atlas\downloads" "$raiz\dashboard\atlas\downloads"
+    Copy-Item -Recurse "$repo\dashboard\atlas\data" "$raiz\candidato\data"
+    Copy-Item -Recurse "$repo\dashboard\atlas\downloads" "$raiz\candidato\downloads"
+    cmd /c mklink /J "$raiz\.venv" "$repo\.venv" | Out-Null
+    $p = "$raiz\candidato\data\manifesto.json"
+    $j = Get-Content -Raw -Encoding UTF8 $p | ConvertFrom-Json
+    $j | Add-Member simulacao "versao-nova"
+    [IO.File]::WriteAllText($p, ($j | ConvertTo-Json -Depth 50 -Compress), (New-Object Text.UTF8Encoding $false))
+    Set-Content -LiteralPath "$raiz\SIMULACAO.txt" -Value "raiz de simulação; segura para publicar_sim.py"
+    $raiz
+}
+
+function Rodar([string]$raiz, [string]$modo) {
+    Push-Location $raiz
+    try { $saida = & .venv\Scripts\python (Join-Path $script:S "publicar_sim.py") $raiz $modo 2>&1 | Out-String } finally { Pop-Location }
+    $saida.Trim()
+}
+
+function Validar-Conjunto([string]$raiz) {
+    Push-Location $raiz
+    try { & .venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data', r'dashboard/atlas/downloads'); print('dados e downloads válidos')" 2>&1 | Out-String } finally { Pop-Location }
+}
+```
+
+## Apêndice C: roteiro `rodar_tudo.ps1`
+
+Reproduz os cinco incidentes do zero e imprime, para cada um, saída, impressão digital,
+resíduos e validação. Uso, a partir de um worktree com `.venv`:
+`powershell -File rodar_tudo.ps1 -S <pasta com os scripts> -repo <raiz do repositório>`.
+
+```powershell
+param([string]$S, [string]$repo)
+. "$S\lib.ps1"
+$script:S = $S
+
+function Mostrar($t, $v) { "[$t] $v" }
+
+# Original
+$ref = "$S\sim\original\atlas"
+if (Test-Path "$S\sim\original") { Remove-Item -LiteralPath "$S\sim\original" -Recurse -Force }
+New-Item -ItemType Directory $ref | Out-Null
+Copy-Item -Recurse "$repo\dashboard\atlas\data" "$ref\data"
+Copy-Item -Recurse "$repo\dashboard\atlas\downloads" "$ref\downloads"
+$orig = Get-Digital $ref
+Mostrar "ORIGINAL" "$($orig.Arquivos) arquivos; $($orig.Digital)"
+
+# Trava: raiz do repositório e raiz sem marcador
+Push-Location $repo
+$t1 = (& .venv\Scripts\python "$S\publicar_sim.py" $repo publicar 2>&1 | Out-String).Trim()
+Pop-Location
+Mostrar "TRAVA repo" $t1
+New-Item -ItemType Directory "$S\sim\vazia" -Force | Out-Null
+Push-Location $repo
+$t2 = (& .venv\Scripts\python "$S\publicar_sim.py" "$S\sim\vazia" publicar 2>&1 | Out-String).Trim()
+Pop-Location
+Mostrar "TRAVA sem marcador" $t2
+
+function Checar($raiz, $rotulo, $antes) {
+    $d = Get-Digital "$raiz\dashboard\atlas"
+    $res = Get-Residuos "$raiz\dashboard\atlas"
+    $v = Validar-Conjunto $raiz
+    Mostrar $rotulo ("arquivos=$($d.Arquivos); digital=$($d.Digital); igual_ao_original=" + ($d.Digital -eq $antes.Digital) + "; residuos=[" + ($res -join ',') + "]; validacao=" + $v.Trim())
+}
+
+# 1. Gold inválida
+$r = Novo-Sim $S $repo "i1"
+$p = "$r\candidato\data\nacional.json"; $j = [IO.File]::ReadAllText($p) | ConvertFrom-Json
+$col = [array]::IndexOf($j.colunas, 'indicador'); $j.linhas[0][$col] = 'indicador_inexistente'
+[IO.File]::WriteAllText($p, ($j | ConvertTo-Json -Depth 50 -Compress), (New-Object Text.UTF8Encoding $false))
+Mostrar "I1 saida" (Rodar $r "publicar")
+Checar $r "I1 depois" $orig
+
+# 2A/B/C ZIP corrompido
+foreach ($v in "A","B","C") {
+    $r = Novo-Sim $S $repo "i2$v"
+    $z = "$r\candidato\downloads\atlas_sim.zip"
+    if ($v -eq "A") { $b = [IO.File]::ReadAllBytes($z); 1..64 | % { $b[100000+$_] = $b[100000+$_] -bxor 0xFF }; [IO.File]::WriteAllBytes($z,$b) }
+    if ($v -eq "B") { $b = [IO.File]::ReadAllBytes($z); [IO.File]::WriteAllBytes($z, $b[0..200000]) }
+    if ($v -eq "C") { [IO.File]::WriteAllBytes($z, [byte[]]@()) }
+    Mostrar "I2$v saida" (Rodar $r "publicar")
+    Checar $r "I2$v depois" $orig
+}
+
+# 3. Backup órfão
+$r = Novo-Sim $S $repo "i3"
+Copy-Item -Recurse "$r\dashboard\atlas\data" "$r\dashboard\atlas\.data.backup-0123456789abcdef0123456789abcdef"
+Mostrar "I3 saida" (Rodar $r "publicar")
+Checar $r "I3 antes da recuperacao" $orig
+$atlas = "$r\dashboard\atlas"
+$bk = Get-ChildItem -LiteralPath $atlas -Directory -Force | Where-Object { $_.Name -like ".data.backup-*" } | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+Push-Location $r
+$vb = & .venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; import sys; validar_diretorio_site(sys.argv[1], r'dashboard/atlas/downloads'); print('backup de data valido')" $bk.FullName 2>&1 | Out-String
+Pop-Location
+Mostrar "I3 backup validado" $vb.Trim()
+$dBk = Get-Digital $bk.FullName; $dDest = Get-Digital "$atlas\data"
+Mostrar "I3 comparacao" "backup=$($dBk.Arquivos)/$($dBk.Digital); destino=$($dDest.Arquivos)/$($dDest.Digital); iguais=$($dBk.Digital -eq $dDest.Digital)"
+Remove-Item -LiteralPath $bk.FullName -Recurse
+Mostrar "I3 nova publicacao" (Rodar $r "publicar")
+Mostrar "I3 residuos" ("[" + ((Get-Residuos $atlas) -join ',') + "]")
+
+# 4. Falha na segunda troca
+$r = Novo-Sim $S $repo "i4"
+Mostrar "I4 saida" (Rodar $r "segunda_troca")
+Checar $r "I4 depois" $orig
+Mostrar "I4 nova publicacao" (Rodar $r "publicar")
+
+# 5. Falha na restauração
+$r = Novo-Sim $S $repo "i5"
+$antes = Get-Digital "$r\dashboard\atlas"
+Mostrar "I5 digital antes" "$($antes.Arquivos); $($antes.Digital)"
+Mostrar "I5 saida" (Rodar $r "restauracao")
+$atlas = "$r\dashboard\atlas"
+Mostrar "I5 conteudo do atlas" ((Get-ChildItem -LiteralPath $atlas -Force | ForEach-Object Name) -join ' | ')
+$sw = [Diagnostics.Stopwatch]::StartNew()
+foreach ($nome in "data","downloads") {
+    $destino = Join-Path $atlas $nome
+    $b = Get-ChildItem -LiteralPath $atlas -Directory -Force | Where-Object { $_.Name -like ".$nome.backup-*" } | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+    Move-Item -LiteralPath $b.FullName -Destination $destino
+}
+$sw.Stop()
+Mostrar "I5 recuperacao" "$([math]::Round($sw.Elapsed.TotalSeconds,2)) s"
+Checar $r "I5 depois" $antes
+$d5 = Get-Digital "$atlas"
+Mostrar "I5 igual_ao_original" ($d5.Digital -eq $orig.Digital)
+```
+
+### Saída da reexecução de 16/11/2026 (caminhos abreviados)
+
+```text
+[ORIGINAL] 321 arquivos; 528EDE0648C8961C...
+[TRAVA repo] Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
+[TRAVA sem marcador] Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
+[I1 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I2A/B/C depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I3 comparacao] backup=318/D3CE0D4C...; destino=318/D3CE0D4C...; iguais=True
+[I3 nova publicacao] PUBLICADO ['None', 'None']
+[I4 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I5 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
 ```

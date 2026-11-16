@@ -337,7 +337,13 @@ integração (ignorado pelo Git; não apagar nem versionar).
   ficou idêntico e válido. O script de provocação está no apêndice do documento.
   Não foi criado `tests/test_incidentes_publicacao.py`: `tests/test_publish.py` já cobre as
   falhas em memória.
-- Pendente: o dono decide o merge.
+- **Revisão cruzada (Codex, leitura): reprovada com 4 achados, tratados:** (1) a impressão digital agora
+  tem implementação reproduzível (`Get-Digital`, `Get-Residuos`, `Novo-Sim` e o roteiro `rodar_tudo.ps1`, apêndices B e C),
+  considera caminho e conteúdo, e os cinco incidentes foram reexecutados com ela (digital do conjunto `528EDE06…`,
+  321 arquivos, igual antes e depois, sem resíduos, validação passando); (2) `publicar_sim.py` recusa raiz sem
+  `SIMULACAO.txt` ou com `.git`/`pyproject.toml`, e a trava foi testada contra a raiz do repositório; (3) registrada a
+  lacuna E (vários backups por pasta) e o pedido 5; (4) "o runbook bastou" trocado por "em parte" nos incidentes 3 e 5.
+- Pendente: segunda rodada de revisão do Codex; o dono decide o merge.
 
 **Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
 
@@ -347,6 +353,8 @@ integração (ignorado pelo Git; não apagar nem versionar).
    decidir pelo conjunto e pôr o destino novo em quarentena. Não foi simulado.
 3. Trocar `Select-Object FullName, LastWriteTime` por `Format-List` (o caminho sai truncado).
 4. Tratar a listagem sem backup (`$backup` nulo) com mensagem clara.
+5. Vários backups por pasta: parear `data` e `downloads` pelos instantes de criação em vez de escolher o
+   mais recente de cada uma de forma independente, e validar o par antes de qualquer `Move-Item`.
 
 ## T22 Varredura de segredos e dados pessoais
 
