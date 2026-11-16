@@ -424,7 +424,10 @@ integração (ignorado pelo Git; não apagar nem versionar).
   ferramenta que é o Git Bash: barras normais; (6) ninguém registrava a tarefa no quadro da branch: é o coordenador, e "pare" virou
   devolver `ESTADO: bloqueada`; (7) pedido de arquivo extra ia para a Entrega: vai para "Pedidos" (regra 2); (8) critério de
   paralelismo ignorava o `TAREFAS.md`: exceção descrita acima. O mesmo defeito do item 5 existe no `revisor-independente.md` e fica
-  para outra tarefa. **Pendente:** segunda rodada de revisão, **leitura do dono antes do merge** (ressalva 9 do revisor: o arquivo
+  para outra tarefa. **2ª rodada: aprovada com ressalvas**, os 8 achados resolvidos e 5 novos, todos baixos, tratados no agente:
+  comparação do caminho do worktree ignora o sentido das barras; pedido de arquivo extra é commitado; índice sujo após `add` errado
+  fica para o coordenador limpar; remoção e renomeação por `git add`; `commit` sem `--no-verify` e `ESTADO: incompleta` definido.
+  Estas últimas correções não passaram por nova rodada. **Pendente:** **leitura do dono antes do merge** (ressalva 9 do revisor: o arquivo
   define o que um agente com escrita pode fazer, o que toca segurança no sentido da regra 9) e a primeira tarefa real como teste.
 - **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
   `git log` da branch **e do checkout principal** depois de cada execução.
