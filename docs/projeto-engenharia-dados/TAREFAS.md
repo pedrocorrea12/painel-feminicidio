@@ -343,7 +343,13 @@ integração (ignorado pelo Git; não apagar nem versionar).
   321 arquivos, igual antes e depois, sem resíduos, validação passando); (2) `publicar_sim.py` recusa raiz sem
   `SIMULACAO.txt` ou com `.git`/`pyproject.toml`, e a trava foi testada contra a raiz do repositório; (3) registrada a
   lacuna E (vários backups por pasta) e o pedido 5; (4) "o runbook bastou" trocado por "em parte" nos incidentes 3 e 5.
-- Pendente: segunda rodada de revisão do Codex; o dono decide o merge.
+- **Segunda rodada (Codex): reprovada, 1 achado ainda aberto e 1 novo, tratados:** o incidente 3 não imprimia
+  "idêntico, válido e sem resíduos" para o estado recuperado; o roteiro ganhou a checagem `I3 depois da recuperacao`
+  (321 arquivos, digital idêntico, sem resíduos, validação passando) antes da nova publicação. O bloco de saída do
+  apêndice C agora é a transcrição literal das 27 linhas do roteiro (só o caminho da raiz abreviado). Os `.ps1`
+  passaram a ser gravados com BOM UTF-8, para o PowerShell 5.1 não corromper os acentos. Itens 2 a 5 da primeira
+  correção foram confirmados como resolvidos.
+- Pendente: terceira rodada de revisão do Codex; o dono decide o merge.
 
 **Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
 

@@ -298,11 +298,14 @@ except BaseException as e:
 
 `Get-Digital` (impressão digital), `Get-Residuos` (temporários e backups sobrando),
 `Novo-Sim` (cria a raiz de simulação: cópia do atlas e do candidato, junção `.venv` e
-`SIMULACAO.txt`), `Rodar` e `Validar-Conjunto`.
+`SIMULACAO.txt`), `Rodar` e `Validar-Conjunto`. Grave os `.ps1` em UTF-8 **com BOM**:
+o PowerShell 5.1 lê arquivo sem BOM como ANSI e corrompe os acentos.
 
 ```powershell
 $ErrorActionPreference = "Continue"
 $env:PYTHONUTF8 = "1"
+[Console]::OutputEncoding = New-Object Text.UTF8Encoding $false
+$OutputEncoding = [Console]::OutputEncoding
 
 # Impressão digital do conjunto: SHA-256 sobre linhas "caminho-relativo|sha256-do-arquivo", ordenadas.
 function Get-Digital([string]$raiz) {
@@ -356,8 +359,9 @@ function Validar-Conjunto([string]$raiz) {
 ## Apêndice C: roteiro `rodar_tudo.ps1`
 
 Reproduz os cinco incidentes do zero e imprime, para cada um, saída, impressão digital,
-resíduos e validação. Uso, a partir de um worktree com `.venv`:
-`powershell -File rodar_tudo.ps1 -S <pasta com os scripts> -repo <raiz do repositório>`.
+resíduos e validação. No incidente 3, a checagem `I3 depois da recuperacao` roda depois
+de remover o backup órfão e **antes** da nova publicação. Uso, a partir de um worktree
+com `.venv`: `powershell -File rodar_tudo.ps1 -S <pasta com os scripts> -repo <raiz do repositório>`.
 
 ```powershell
 param([string]$S, [string]$repo)
@@ -426,6 +430,7 @@ Mostrar "I3 backup validado" $vb.Trim()
 $dBk = Get-Digital $bk.FullName; $dDest = Get-Digital "$atlas\data"
 Mostrar "I3 comparacao" "backup=$($dBk.Arquivos)/$($dBk.Digital); destino=$($dDest.Arquivos)/$($dDest.Digital); iguais=$($dBk.Digital -eq $dDest.Digital)"
 Remove-Item -LiteralPath $bk.FullName -Recurse
+Checar $r "I3 depois da recuperacao" $orig
 Mostrar "I3 nova publicacao" (Rodar $r "publicar")
 Mostrar "I3 residuos" ("[" + ((Get-Residuos $atlas) -join ',') + "]")
 
@@ -455,16 +460,39 @@ $d5 = Get-Digital "$atlas"
 Mostrar "I5 igual_ao_original" ($d5.Digital -eq $orig.Digital)
 ```
 
-### Saída da reexecução de 16/11/2026 (caminhos abreviados)
+### Saída real da reexecução de 16/11/2026
+
+Transcrição literal do roteiro (27 linhas); só o caminho da raiz de simulação foi
+abreviado para `<raiz>`. Em `[I3 antes da recuperacao]` o `igual_ao_original=False` é
+esperado: o backup órfão ainda está ao lado de `data`. As linhas `[TRAVA ...]` vêm
+do PowerShell 5.1, que prefixa `python.exe :` na mensagem do `stderr`.
 
 ```text
-[ORIGINAL] 321 arquivos; 528EDE0648C8961C...
-[TRAVA repo] Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
-[TRAVA sem marcador] Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
-[I1 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
-[I2A/B/C depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
-[I3 comparacao] backup=318/D3CE0D4C...; destino=318/D3CE0D4C...; iguais=True
+[ORIGINAL] 321 arquivos; 528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5
+[TRAVA repo] python.exe : Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
+[TRAVA sem marcador] python.exe : Recusado: a raiz não tem SIMULACAO.txt (não é uma raiz de simulação)
+[I1 saida] ValueError: nacional.json: indicador fora do manifesto: indicador_inexistente
+[I1 depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I2A saida] ValueError: Download corrompido: downloads/atlas_sim.zip
+[I2A depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I2B saida] ValueError: Download com tamanho divergente: downloads/atlas_sim.zip (manifesto 359977, arquivo 200001)
+[I2B depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I2C saida] ValueError: Download com tamanho divergente: downloads/atlas_sim.zip (manifesto 359977, arquivo 0)
+[I2C depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I3 saida] RuntimeError: Backup órfão impede publicação: <raiz>\dashboard\atlas\.data.backup-0123456789abcdef0123456789abcdef
+[I3 antes da recuperacao] arquivos=639; digital=377FBEA58851706CC552ACF2E29A69D8EECCEB904ADC8D43EFE14B66BB20E3A3; igual_ao_original=False; residuos=[.data.backup-0123456789abcdef0123456789abcdef]; validacao=dados e downloads válidos
+[I3 backup validado] backup de data valido
+[I3 comparacao] backup=318/D3CE0D4CAF6967176D8840184D03CF9053733B9A4BE9157E9E47B730A8B06B8D; destino=318/D3CE0D4CAF6967176D8840184D03CF9053733B9A4BE9157E9E47B730A8B06B8D; iguais=True
+[I3 depois da recuperacao] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
 [I3 nova publicacao] PUBLICADO ['None', 'None']
-[I4 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
-[I5 depois] 321; 528EDE0648C8961C; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I3 residuos] []
+[I4 saida] OSError: falha simulada na segunda troca
+[I4 depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I4 nova publicacao] PUBLICADO ['None', 'None']
+[I5 digital antes] 321; 528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5
+[I5 saida] RuntimeError: Falha na troca conjunta dos destinos publicados: falha simulada na segunda troca. Falha também na restauração; backups preservados em: <raiz>\dashboard\atlas\.downloads.backup-99b0031d2f794c709b195fd310b09b11, <raiz>\dashboard\atlas\.data.backup-aa16956e36084f128d4582808c08dc80
+[I5 conteudo do atlas] .data.backup-aa16956e36084f128d4582808c08dc80 | .downloads.backup-99b0031d2f794c709b195fd310b09b11
+[I5 recuperacao] 0.02 s
+[I5 depois] arquivos=321; digital=528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5; igual_ao_original=True; residuos=[]; validacao=dados e downloads válidos
+[I5 igual_ao_original] True
 ```
