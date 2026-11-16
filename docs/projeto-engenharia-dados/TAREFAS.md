@@ -29,7 +29,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
 | T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
-| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | pendente (aguarda o ok do dono) | T21 |
+| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | em revisão | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
@@ -380,6 +380,12 @@ integração (ignorado pelo Git; não apagar nem versionar).
   fixtures. Cada achado leva arquivo, commit, gravidade e ação sugerida, **sem copiar o valor do segredo**.
 - **Aceite:** relatório com método, comandos, achados (ou "sem achados") e conclusão; nenhum valor
   sensível no relatório. Sem push.
+
+## T23 Correção do runbook de publicação
+
+- **Dono:** Claude. **Branch:** `tarefa/t23-corrige-runbook-publicacao`, a partir da `develope`. **Arquivos:** `docs/runbooks/publicacao-gold.md` e a própria linha e Entrega no quadro.
+- **Escopo:** os 5 pedidos da T21 (par de backups com uma só pasta, restauração parcial, listagem truncada, backup nulo, vários backups por pasta).
+- **Entrega (Claude):** (A) validação de backup de uma só pasta com a outra pasta atual; (B) caso "uma pasta na versão nova e a outra ausente": quarentena da pasta nova e restauração dos dois backups; (C) listagem com `Format-List`; (D) função `Get-Backup` que falha com mensagem clara quando não há backup e avisa quando há vários; (E) pareamento por proximidade de horário, com diferença impressa, parada obrigatória se for grande e validação do par como condição. **Verificado:** os comandos do runbook foram extraídos do próprio arquivo e executados em cópias temporárias (mesmos scripts da T21): dois backups pareados (0 s) e recuperados, conjunto idêntico ao original; backup só de `data` validado com o `downloads` atual; sem backup, mensagem clara; restauração parcial com a pasta nova em quarentena, conjunto válido e idêntico ao original, sem `.tmp-*` nem `.backup-*`; dois backups de `downloads` (3 s e 9 dias), escolhido o de 3 s. 130 testes e Ruff verdes. **Revisão independente (Claude, sessão nova, só leitura): aprovada com ressalvas, todas tratadas:** (1, média) com vários backups, o `$backup` da preparação podia não ser o do par validado; a seção Recuperar agora redefine `$backup` como `$bd`/`$bz` (o par validado) e proíbe `Move-Item` antes da validação; (2) `Format-List` da função `Get-Backup` vazava para o pipeline e `$bd` virava array; agora vai ao console por `Out-Host` e `$bd` é um único `DirectoryInfo`; (3) caso de backup de uma só pasta: o texto diz definir só a variável da pasta que tem backup; (4) a restauração parcial ganhou comandos próprios com `$nova`, `$bd` e `$bz`. Reexecutados os cinco cenários com os blocos extraídos do runbook: todos passam, conjunto idêntico ao original. **Pendente:** merge.
 
 ## T24 Regras de convivência e revisor independente
 
