@@ -53,7 +53,7 @@ function Get-Backup([string]$nome) {
     }
     if ($todos.Count -gt 1) {
         Write-Warning "$($todos.Count) backups de '$nome'; usando o mais recente. Confira o pareamento abaixo."
-        $todos | Format-List FullName, LastWriteTime
+        $todos | Format-List FullName, LastWriteTime | Out-Host
     }
     $todos[0]
 }
@@ -85,6 +85,11 @@ if (-not $bz) { throw "Nenhum backup de 'downloads' para formar o par." }
    minutos ou mais indica publicações diferentes: **pare** e decida pelo dono. O
    horário é só uma heurística: o par só vale depois de passar na validação do par,
    na próxima seção.
+
+   Se existir o backup de **uma só** pasta, o bloco acima para na pasta que não tem
+   backup. Nesse caso defina apenas a variável da pasta que tem (`$bd = Get-Backup
+   "data"` **ou** `$bz = Get-Backup "downloads"`) e use os comandos de "uma só
+   pasta" da próxima seção.
 
 ## Validar destino e backup
 
@@ -141,8 +146,22 @@ explicada antes de qualquer remoção.
 ## Recuperar
 
 Decida pelo **conjunto**: nunca deixe `data` de uma versão com `downloads` de outra.
-Aplique o caso abaixo a cada pasta, com `$nome`, `$destino` e `$backup` definidos
-como na preparação e o par validado na seção anterior.
+**Não rode nenhum `Move-Item` antes de o par de backups ter passado na validação da
+seção anterior.**
+
+O `$backup` da preparação é só o mais recente da pasta e, havendo vários, pode não
+ser o do par validado. Antes de recuperar, aponte `$backup` para o backup que foi
+**validado** (`$bd` para `data`, `$bz` para `downloads`):
+
+```powershell
+$nome = "data"   # depois repita com "downloads"
+$destino = Join-Path $atlas $nome
+$backup = if ($nome -eq "data") { $bd } else { $bz }
+$backup.FullName   # confira: é o caminho exato que passou na validação
+```
+
+Aplique o caso abaixo a cada pasta, com `$nome`, `$destino` e `$backup` assim
+definidos.
 
 ### Destino ausente e backup válido
 
@@ -189,10 +208,19 @@ não deve ficar publicada. Decida pelo conjunto, voltando as duas à versão ant
 
 1. Confirme o par de backups e valide-o (seções anteriores). Sem backup das duas
    pastas, **pare** e acione o dono.
-2. Para a pasta que ficou na versão nova, ponha-a em quarentena (como no caso
-   anterior) e restaure o backup dela.
-3. Para a pasta ausente, restaure o backup (caso "Destino ausente").
-4. Rode a validação do conjunto e confira que não restaram `.tmp-*` nem `.backup-*`.
+2. Ponha em quarentena a pasta que ficou na versão nova e restaure as duas pastas a
+   partir do par validado (`$bd` e `$bz`):
+
+```powershell
+$nova = "data"   # a pasta que ficou na versão nova; use "downloads" se for o caso
+$quarentena = Join-Path $atlas (".$nova.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
+Move-Item -LiteralPath (Join-Path $atlas $nova) -Destination $quarentena
+Move-Item -LiteralPath $bd.FullName -Destination (Join-Path $atlas "data")
+Move-Item -LiteralPath $bz.FullName -Destination (Join-Path $atlas "downloads")
+```
+
+3. Rode a validação do conjunto e confira que não restaram `.tmp-*` nem `.backup-*`.
+   Mantenha a quarentena até registrar a causa e confirmar o site restaurado.
 
 Esta seção e o pareamento de vários backups foram simulados na T23, em cópia
 temporária, com os mesmos scripts de `incidentes-simulados.md`: a versão nova de
