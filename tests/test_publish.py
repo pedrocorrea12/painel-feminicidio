@@ -244,3 +244,271 @@ def test_backup_orfao_impede_publicacao_com_mensagem_estavel(tmp_path: Path) -> 
     assert _retrato(destino) == anterior
     assert orfao.exists()
     assert list(tmp_path.glob(f".{destino.name}.tmp-*")) == []
+
+
+# --- publicação conjunta (T20) ---------------------------------------------
+
+
+def _conjunto(tmp_path: Path) -> tuple[Path, Path]:
+    dados = tmp_path / "data"
+    downloads = tmp_path / "downloads"
+    _escrever_versao(dados, "anterior")
+    _escrever_versao(downloads, "anterior")
+    return dados, downloads
+
+
+def _gerar_conjunto(versao: str):
+    def gerar(temporarios) -> None:
+        for temporario in temporarios:
+            temporario.mkdir(parents=True, exist_ok=True)
+            _escrever_versao(temporario, versao)
+
+    return gerar
+
+
+def _validar_conjunto(versao: str):
+    def validar(temporarios) -> None:
+        for temporario in temporarios:
+            assert (temporario / "versao.txt").read_text(encoding="utf-8") == versao
+
+    return validar
+
+
+def _assert_conjunto_sem_residuos(tmp_path: Path) -> None:
+    residuos = [
+        item.name
+        for item in tmp_path.iterdir()
+        if item.name.startswith(".") and (".tmp-" in item.name or ".backup-" in item.name)
+    ]
+    assert residuos == []
+
+
+def _replace_que_falha_na_segunda_instalacao(monkeypatch, bloquear_restauracao=False):
+    replace_original = os.replace
+    instalacoes = 0
+
+    def replace_com_falha(origem, destino):
+        nonlocal instalacoes
+        nome = Path(origem).name
+        if ".tmp-" in nome:
+            instalacoes += 1
+            if instalacoes == 2:
+                raise OSError("troca do segundo destino falhou")
+        if bloquear_restauracao and ".backup-" in nome:
+            raise OSError("restauração bloqueada")
+        return replace_original(origem, destino)
+
+    monkeypatch.setattr(modulo_publicacao.os, "replace", replace_com_falha)
+
+
+def test_conjunto_valido_substitui_todos_os_destinos(tmp_path: Path) -> None:
+    dados, downloads = _conjunto(tmp_path)
+
+    resultados = modulo_publicacao.publicar_conjunto(
+        [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+    )
+
+    assert [r.destino for r in resultados] == [dados.resolve(), downloads.resolve()]
+    assert all(r.backup_remanescente is None for r in resultados)
+    assert (dados / "versao.txt").read_text(encoding="utf-8") == "novo"
+    assert (downloads / "versao.txt").read_text(encoding="utf-8") == "novo"
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_conjunto_cria_destinos_que_ainda_nao_existem(tmp_path: Path) -> None:
+    dados = tmp_path / "data"
+    downloads = tmp_path / "downloads"
+
+    modulo_publicacao.publicar_conjunto(
+        [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+    )
+
+    assert (dados / "versao.txt").is_file()
+    assert (downloads / "versao.txt").is_file()
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_falha_na_geracao_preserva_todos_os_destinos(tmp_path: Path) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    antes = (_retrato(dados), _retrato(downloads))
+
+    def gerar(temporarios) -> None:
+        _escrever_versao(temporarios[0], "novo")
+        raise RuntimeError("geração interrompida")
+
+    with pytest.raises(RuntimeError, match="^geração interrompida$"):
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], gerar, lambda _temporarios: None
+        )
+
+    assert (_retrato(dados), _retrato(downloads)) == antes
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_falha_na_validacao_preserva_todos_os_destinos(tmp_path: Path) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    antes = (_retrato(dados), _retrato(downloads))
+
+    def validar(_temporarios) -> None:
+        raise ValueError("downloads inválidos")
+
+    with pytest.raises(ValueError, match="^downloads inválidos$"):
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), validar
+        )
+
+    assert (_retrato(dados), _retrato(downloads)) == antes
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_falha_na_segunda_troca_desfaz_a_primeira(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    antes = (_retrato(dados), _retrato(downloads))
+    _replace_que_falha_na_segunda_instalacao(monkeypatch)
+
+    with pytest.raises(OSError, match="^troca do segundo destino falhou$"):
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert (_retrato(dados), _retrato(downloads)) == antes
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_falha_na_segunda_troca_sem_destinos_anteriores_nao_deixa_resto(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados = tmp_path / "data"
+    downloads = tmp_path / "downloads"
+    _replace_que_falha_na_segunda_instalacao(monkeypatch)
+
+    with pytest.raises(OSError, match="^troca do segundo destino falhou$"):
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert not dados.exists()
+    assert not downloads.exists()
+    _assert_conjunto_sem_residuos(tmp_path)
+
+
+def test_falha_na_restauracao_preserva_backups_e_informa_caminhos(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    _replace_que_falha_na_segunda_instalacao(monkeypatch, bloquear_restauracao=True)
+
+    with pytest.raises(RuntimeError) as capturado:
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    mensagem = str(capturado.value)
+    assert mensagem.startswith("Falha na troca conjunta dos destinos publicados: ")
+    assert "backups preservados em: " in mensagem
+    backups = sorted(tmp_path.glob(".*.backup-*"))
+    assert len(backups) == 2
+    assert all(str(backup) in mensagem for backup in backups)
+
+
+def test_conjunto_com_backup_orfao_nao_gera_nada(tmp_path: Path) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    orfao = tmp_path / f".{downloads.name}.backup-interrompido"
+    _escrever_versao(orfao, "backup")
+    gerou = False
+
+    def gerar(_temporarios) -> None:
+        nonlocal gerou
+        gerou = True
+
+    with pytest.raises(
+        RuntimeError,
+        match=rf"^Backup órfão impede publicação: {re.escape(str(orfao))}$",
+    ):
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], gerar, lambda _temporarios: None
+        )
+
+    assert not gerou
+    assert list(tmp_path.glob(".*.tmp-*")) == []
+
+
+def test_conjunto_rejeita_destinos_duplicados_e_lista_vazia(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="^Destinos duplicados na publicação conjunta$"):
+        modulo_publicacao.publicar_conjunto(
+            [tmp_path / "a", tmp_path / "a"],
+            lambda _t: None,
+            lambda _t: None,
+        )
+    with pytest.raises(
+        ValueError, match="^Nenhum destino informado para a publicação conjunta$"
+    ):
+        modulo_publicacao.publicar_conjunto([], lambda _t: None, lambda _t: None)
+
+
+def test_conjunto_rejeita_destinos_aninhados(tmp_path: Path) -> None:
+    gerou = False
+
+    def gerar(_temporarios) -> None:
+        nonlocal gerou
+        gerou = True
+
+    with pytest.raises(ValueError, match="^Destinos aninhados na publicação conjunta: "):
+        modulo_publicacao.publicar_conjunto(
+            [tmp_path / "data", tmp_path / "data" / "downloads"], gerar, lambda _t: None
+        )
+    assert not gerou
+    assert list(tmp_path.iterdir()) == []
+
+
+def test_falha_ao_remover_versao_nova_na_reversao_e_informada(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados = tmp_path / "data"
+    downloads = tmp_path / "downloads"
+    _escrever_versao(downloads, "anterior")
+    _replace_que_falha_na_segunda_instalacao(monkeypatch)
+    # Ordem [dados, downloads]: dados (inexistente) é instalado primeiro; a
+    # segunda troca falha e a remoção da versão nova de dados também.
+    remover_real = modulo_publicacao._remover
+
+    def remover_com_falha(caminho):
+        if Path(caminho) == dados.resolve():
+            raise OSError("remoção bloqueada")
+        return remover_real(caminho)
+
+    monkeypatch.setattr(modulo_publicacao, "_remover", remover_com_falha)
+
+    with pytest.raises(RuntimeError) as capturado:
+        modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert "versão nova não removida em: " in str(capturado.value)
+    assert str(dados.resolve()) in str(capturado.value)
+    assert (downloads / "versao.txt").read_text(encoding="utf-8") == "anterior"
+
+
+def test_backup_remanescente_e_atribuido_so_ao_destino_dono(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    dados, downloads = _conjunto(tmp_path)
+    remover_real = modulo_publicacao._remover
+
+    def remover_com_falha(caminho):
+        if ".downloads.backup-" in Path(caminho).name:
+            raise OSError("remoção bloqueada")
+        return remover_real(caminho)
+
+    monkeypatch.setattr(modulo_publicacao, "_remover", remover_com_falha)
+
+    with pytest.warns(RuntimeWarning):
+        resultados = modulo_publicacao.publicar_conjunto(
+            [dados, downloads], _gerar_conjunto("novo"), _validar_conjunto("novo")
+        )
+
+    assert resultados[0].backup_remanescente is None
+    assert resultados[1].backup_remanescente is not None
+    assert ".downloads.backup-" in resultados[1].backup_remanescente.name

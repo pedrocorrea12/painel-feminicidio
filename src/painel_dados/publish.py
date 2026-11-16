@@ -7,12 +7,14 @@ import shutil
 import tempfile
 import uuid
 import warnings
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
 GeradorArtefatos = Callable[[Path], None]
 ValidadorArtefatos = Callable[[Path], None]
+GeradorConjunto = Callable[[Sequence[Path]], None]
+ValidadorConjunto = Callable[[Sequence[Path]], None]
 
 
 @dataclass(frozen=True)
@@ -123,3 +125,131 @@ def publicar_diretorio(
         return ResultadoPublicacao(destino, backup_remanescente)
     finally:
         _remover(temporario)
+
+
+def _remover_backups(backups: list[tuple[Path, Path | None]]) -> list[Path | None]:
+    """Remove os backups e devolve, na mesma ordem, o resíduo de cada destino."""
+
+    remanescentes: list[Path | None] = []
+    for _, backup in backups:
+        remanescente = None
+        if backup is not None:
+            try:
+                _remover(backup)
+            except OSError as erro_limpeza:
+                if _existe(backup):
+                    remanescente = backup
+                warnings.warn(
+                    "Publicação concluída, mas o backup não pôde ser removido: "
+                    f"{backup}. Erro: {erro_limpeza}",
+                    RuntimeWarning,
+                    stacklevel=4,
+                )
+        remanescentes.append(remanescente)
+    return remanescentes
+
+
+def _trocar_conjunto(
+    temporarios: Sequence[Path], destinos: Sequence[Path]
+) -> tuple[ResultadoPublicacao, ...]:
+    backups: list[tuple[Path, Path | None]] = []
+    instalados: set[Path] = set()
+    try:
+        for temporario, destino in zip(temporarios, destinos, strict=True):
+            backup = None
+            if _existe(destino):
+                if not destino.is_dir():
+                    raise NotADirectoryError(
+                        f"Destino publicado não é diretório: {destino}"
+                    )
+                backup = destino.parent / f".{destino.name}.backup-{uuid.uuid4().hex}"
+                os.replace(destino, backup)
+            backups.append((destino, backup))
+            os.replace(temporario, destino)
+            instalados.add(destino)
+    except BaseException as erro_troca:
+        preservados: list[Path] = []
+        sem_reversao: list[Path] = []
+        for destino, backup in reversed(backups):
+            try:
+                if backup is not None:
+                    _restaurar_destino(destino, backup)
+                elif destino in instalados:
+                    _remover(destino)
+            except BaseException as erro_restauracao:
+                if backup is not None and _existe(backup):
+                    preservados.append(backup)
+                elif backup is None and _existe(destino):
+                    sem_reversao.append(destino)
+                erro_troca.add_note(
+                    f"Erro de restauração de {destino}: {erro_restauracao}"
+                )
+        if preservados or sem_reversao:
+            detalhes = ""
+            if preservados:
+                detalhes += "backups preservados em: " + ", ".join(
+                    str(caminho) for caminho in preservados
+                )
+            if sem_reversao:
+                detalhes += "; " if detalhes else ""
+                detalhes += "versão nova não removida em: " + ", ".join(
+                    str(caminho) for caminho in sem_reversao
+                )
+            falha = RuntimeError(
+                "Falha na troca conjunta dos destinos publicados: "
+                f"{erro_troca}. Falha também na restauração; {detalhes}"
+            )
+            raise falha from erro_troca
+        raise
+
+    remanescentes = _remover_backups(backups)
+    return tuple(
+        ResultadoPublicacao(destino, remanescente)
+        for (destino, _), remanescente in zip(backups, remanescentes, strict=True)
+    )
+
+
+def publicar_conjunto(
+    destinos_publicados: Sequence[str | Path],
+    gerar_artefatos: GeradorConjunto,
+    validar_artefatos: ValidadorConjunto,
+) -> tuple[ResultadoPublicacao, ...]:
+    """Gera, valida e publica vários diretórios como uma única unidade.
+
+    Cada destino recebe um diretório temporário irmão. Os geradores e os
+    validadores recebem a lista de temporários na mesma ordem dos destinos, o
+    que permite validar os diretórios entre si antes de qualquer troca. A troca
+    ocorre destino a destino; se uma delas falhar, as já feitas são desfeitas e
+    todos os destinos voltam à versão anterior. Como em ``publicar_diretorio``,
+    no Windows há um intervalo em que um destino não existe durante sua troca.
+    """
+
+    destinos = [Path(destino).resolve() for destino in destinos_publicados]
+    if not destinos:
+        raise ValueError("Nenhum destino informado para a publicação conjunta")
+    if len(set(destinos)) != len(destinos):
+        raise ValueError("Destinos duplicados na publicação conjunta")
+    for destino in destinos:
+        for outro in destinos:
+            if destino != outro and destino in outro.parents:
+                raise ValueError(
+                    f"Destinos aninhados na publicação conjunta: {destino} contém {outro}"
+                )
+    for destino in destinos:
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        orfao = _backup_orfao(destino)
+        if orfao is not None:
+            raise RuntimeError(f"Backup órfão impede publicação: {orfao}")
+
+    temporarios: list[Path] = []
+    try:
+        for destino in destinos:
+            temporarios.append(
+                Path(tempfile.mkdtemp(prefix=f".{destino.name}.tmp-", dir=destino.parent))
+            )
+        gerar_artefatos(tuple(temporarios))
+        validar_artefatos(tuple(temporarios))
+        return _trocar_conjunto(temporarios, destinos)
+    finally:
+        for temporario in temporarios:
+            _remover(temporario)
