@@ -27,7 +27,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
 | T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
-| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | em revisão | T20 (publicação conjunta) |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | pendente | nenhuma |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
@@ -349,7 +349,13 @@ integração (ignorado pelo Git; não apagar nem versionar).
   apêndice C agora é a transcrição literal das 27 linhas do roteiro (só o caminho da raiz abreviado). Os `.ps1`
   passaram a ser gravados com BOM UTF-8, para o PowerShell 5.1 não corromper os acentos. Itens 2 a 5 da primeira
   correção foram confirmados como resolvidos.
-- Pendente: terceira rodada de revisão do Codex; o dono decide o merge.
+- **Terceira rodada (revisor independente, Claude em sessão nova, só leitura): aprovada com ressalvas.** O revisor
+  reexecutou o roteiro `rodar_tudo.ps1` a partir dos apêndices (321 arquivos, digital `528EDE06…`, linhas iguais às do
+  documento, só mudam UUIDs e caminho), confirmou a trava e as contagens e não achou lacuna nova no runbook. Duas
+  ressalvas baixas, tratadas: as saídas citadas na recuperação do incidente 3 vêm da execução manual do runbook (agora
+  dito no texto), e a transcrição passa a ser descrita como as 27 linhas rotuladas, com as quatro linhas de rastro do
+  PowerShell por trava explicadas e omitidas.
+- Pendente: o dono decide o merge.
 
 **Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
 

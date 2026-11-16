@@ -123,7 +123,9 @@ Copy-Item -Recurse dashboard\atlas\data dashboard\atlas\.data.backup-0123456789a
 RuntimeError: Backup órfão impede publicação: <raiz>\dashboard\atlas\.data.backup-0123456789abcdef0123456789abcdef
 ```
 
-**Recuperação, passo a passo do runbook.**
+**Recuperação, passo a passo do runbook.** Executada à mão, seguindo o texto do
+runbook; as saídas citadas nesta lista vêm dessa execução manual. O roteiro
+`rodar_tudo.ps1` reproduz só a verificação por impressão digital (apêndice C).
 
 1. Listar backups (`Get-ChildItem ... -like ".data.backup-*"`): um item, o acima.
 2. Definir `$nome = "data"`, `$destino` e `$backup`: `Test-Path` devolve `True`.
@@ -177,7 +179,8 @@ levanta `OSError` para qualquer origem `.*.backup-*`.
 RuntimeError: Falha na troca conjunta dos destinos publicados: falha simulada na segunda troca. Falha também na restauração; backups preservados em: <raiz>\dashboard\atlas\.downloads.backup-9d03d8ba002646919b72f79aaef1d557, <raiz>\dashboard\atlas\.data.backup-c6ceb134258049aa85fd4ee89a1b0e77
 ```
 
-Estado: `dashboard\atlas` contém somente os dois backups. A validação do conjunto
+Estado (conferido à mão, fora do roteiro `rodar_tudo.ps1`): `dashboard\atlas` contém
+somente os dois backups. A validação do conjunto
 atual falha (`ValueError: Arquivo obrigatório ausente: manifesto.json`) e a validação
 do par de backups dá `backups válidos`.
 
@@ -462,10 +465,14 @@ Mostrar "I5 igual_ao_original" ($d5.Digital -eq $orig.Digital)
 
 ### Saída real da reexecução de 16/11/2026
 
-Transcrição literal do roteiro (27 linhas); só o caminho da raiz de simulação foi
-abreviado para `<raiz>`. Em `[I3 antes da recuperacao]` o `igual_ao_original=False` é
-esperado: o backup órfão ainda está ao lado de `data`. As linhas `[TRAVA ...]` vêm
-do PowerShell 5.1, que prefixa `python.exe :` na mensagem do `stderr`.
+Transcrição das 27 linhas rotuladas (`[...]`) do roteiro; só o caminho da raiz de
+simulação foi abreviado para `<raiz>`. Em `[I3 antes da recuperacao]` o
+`igual_ao_original=False` é esperado: o backup órfão ainda está ao lado de `data`.
+As linhas `[TRAVA ...]` vêm do PowerShell 5.1, que prefixa `python.exe :` na mensagem do
+`stderr` e, na execução real, acrescenta quatro linhas de rastro de erro
+(`No ...rodar_tudo.ps1:NN caractere:8`, `+ $t1 = ...`, `CategoryInfo` e
+`FullyQualifiedErrorId : NativeCommandError`) logo após cada uma; elas foram omitidas
+aqui por não serem saída do roteiro, e sim do console.
 
 ```text
 [ORIGINAL] 321 arquivos; 528EDE0648C8961CA7000C9223B720ADA04E227A5F90439EC358C3F1C9EBB5D5
