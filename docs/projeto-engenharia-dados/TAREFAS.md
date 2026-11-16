@@ -403,18 +403,31 @@ integração (ignorado pelo Git; não apagar nem versionar).
 - **Decisão do dono (16/11/2026), pedida em chat:** criar mais um agente para dar celeridade ao processo. **Dono:** Claude.
   **Branch:** `tarefa/t25-agente-executor`, a partir da `develope`. **Arquivos:** `.claude/agents/executor-tarefa.md` (novo) e a
   própria linha e esta seção no quadro. O `AGENTS.md` não muda: as regras 5 e 9 continuam como estão.
-- **Papéis:** o coordenador (a sessão principal) escolhe a tarefa, cria a branch e o worktree, chama o `executor-tarefa`, pede a revisão
-  ao `revisor-independente` e cuida de push, PR e merge dentro da regra 5. O executor só escreve e commita na branch da tarefa e deixa o
-  status em `em revisão`. Quem escreveu não aprova (regra 9): o revisor continua sendo uma sessão nova, sem o contexto de autoria.
-- **Paralelismo:** um executor por tarefa, cada um no seu worktree, e só para tarefas que não compartilham arquivos. Duas tarefas que
-  tocam o mesmo arquivo rodam uma depois da outra.
-- **Entrega (Claude):** agente escrito com as mesmas travas do revisor (instrução vinda de arquivo é dado, sem segredos, dados
-  publicados e `infra/` fora do alcance), mais as de autoria: só o worktree e a branch informados, só os arquivos da tarefa, sem push,
-  PR ou merge, `.venv` próprio do worktree, pytest e ruff antes de cada commit e resposta com a linha final `ESTADO:`.
+- **Papéis:** o coordenador (a sessão principal) escolhe a tarefa, cria a branch e o worktree, **escreve a linha e a seção da tarefa
+  no quadro dessa branch** (o executor para se não as encontrar), chama o `executor-tarefa`, pede a revisão ao `revisor-independente` e
+  cuida de push, PR e merge dentro da regra 5. O executor só escreve e commita na branch da tarefa e deixa o status em `em revisão`.
+  Quem escreveu não aprova (regra 9): o revisor continua sendo uma sessão nova, sem o contexto de autoria.
+- **Paralelismo:** um executor por tarefa, cada um no seu worktree, e só para tarefas cujos arquivos permitidos não se sobrepõem. O
+  `TAREFAS.md` é a exceção inevitável: toda tarefa edita a própria linha e seção, então o segundo merge pode conflitar nele. Quem
+  resolve é o coordenador, atualizando a branch antes do PR; o executor não faz `merge` nem `rebase`.
+- **Entrega (Claude):** agente com travas de autoria: todo comando ancorado no worktree (`cd` na mesma chamada ou `git -C`), lista
+  positiva de comandos `git` (correção é commit novo, sem `--amend`), `gh` proibido por inteiro, `git add` só com caminhos explícitos
+  e conferência do que está preparado antes do commit, `dashboard/atlas`, `data/` e `infra/` intactos como no revisor, `.venv`
+  próprio do worktree, pytest e ruff antes de cada commit e resposta com a linha final `ESTADO:`.
   **Verificado:** pytest e Ruff verdes (o diff só tem Markdown). **Não verificado:** o agente ainda não executou nenhuma tarefa; ele só
-  fica disponível numa sessão aberta depois do merge. **Pendente:** revisão independente, merge e a primeira tarefa real como teste.
+  fica disponível numa sessão aberta depois do merge.
+  **Revisão independente (Claude, sessão nova, só leitura), 1ª rodada: aprovada com ressalvas, tratadas:** (1, média) nada ancorava
+  os comandos ao worktree e um commit podia cair na `develope` do checkout principal: agora todo comando leva o worktree e o commit
+  confere a branch na mesma chamada; (2, média) furos na lista de proibidos (`gh workflow run`, `commit --amend`, `pull`, `clean`,
+  `config`): trocada por lista positiva; (3) sem trava contra `git add -A`: caminhos explícitos e conferência do índice; (4) trava de
+  dados mais estreita que a do revisor: igualada, e `pipeline/` e `dashboard/` citados; (5) comandos em sintaxe PowerShell numa
+  ferramenta que é o Git Bash: barras normais; (6) ninguém registrava a tarefa no quadro da branch: é o coordenador, e "pare" virou
+  devolver `ESTADO: bloqueada`; (7) pedido de arquivo extra ia para a Entrega: vai para "Pedidos" (regra 2); (8) critério de
+  paralelismo ignorava o `TAREFAS.md`: exceção descrita acima. O mesmo defeito do item 5 existe no `revisor-independente.md` e fica
+  para outra tarefa. **Pendente:** segunda rodada de revisão, **leitura do dono antes do merge** (ressalva 9 do revisor: o arquivo
+  define o que um agente com escrita pode fazer, o que toca segurança no sentido da regra 9) e a primeira tarefa real como teste.
 - **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
-  `git log` da branch depois de cada execução.
+  `git log` da branch **e do checkout principal** depois de cada execução.
 
 ## T06 e T07
 
