@@ -24,26 +24,67 @@ completo está em `docs/contracts/atlas_site.md`.
 1. Pare novas execuções de `build_atlas_site_data.py`; não faça duas publicações
    concorrentes.
 2. Feche processos que mantenham arquivos do atlas abertos.
-3. Liste os backups das duas pastas, sem remover nada:
+3. Liste os backups das duas pastas, sem remover nada. `Format-List` evita que o
+   caminho seja cortado em consoles estreitos:
 
 ```powershell
 $atlas = (Resolve-Path "dashboard/atlas").Path
-Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".data.backup-*" -or $_.Name -like ".downloads.backup-*" } | Select-Object FullName, LastWriteTime
+Get-ChildItem -LiteralPath $atlas -Directory -Force |
+    Where-Object { $_.Name -like ".data.backup-*" -or $_.Name -like ".downloads.backup-*" } |
+    Sort-Object LastWriteTime -Descending |
+    Format-List FullName, LastWriteTime
 ```
 
 Os dois destinos formam um conjunto: `data` e `downloads` devem voltar juntos à
 mesma versão. Os passos abaixo valem para **cada pasta separadamente**; defina
-`$nome` como `data` ou `downloads` e repita o procedimento para a outra. Se houver
-mais de um backup da mesma pasta, trate cada um individualmente e preserve o mais
-recente até concluir a recuperação.
+`$nome` como `data` ou `downloads` e repita o procedimento para a outra.
+
+4. Escolha o backup de cada pasta com a função abaixo. Ela falha com uma mensagem
+   clara quando não há backup (em vez de imprimir um valor vazio) e, quando há mais
+   de um, mostra todos e usa o mais recente:
 
 ```powershell
+function Get-Backup([string]$nome) {
+    $todos = @(Get-ChildItem -LiteralPath $atlas -Directory -Force |
+        Where-Object { $_.Name -like ".$nome.backup-*" } |
+        Sort-Object LastWriteTime -Descending)
+    if ($todos.Count -eq 0) {
+        throw "Nenhum backup de '$nome' em $atlas. Se o destino existe e é válido, não há o que recuperar; se não existe, não improvise: pare e acione o dono."
+    }
+    if ($todos.Count -gt 1) {
+        Write-Warning "$($todos.Count) backups de '$nome'; usando o mais recente. Confira o pareamento abaixo."
+        $todos | Format-List FullName, LastWriteTime
+    }
+    $todos[0]
+}
+
 $nome = "data"   # depois repita com "downloads"
 $destino = Join-Path $atlas $nome
-$backup = Get-ChildItem -LiteralPath $atlas -Directory | Where-Object { $_.Name -like ".$nome.backup-*" } | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$backup = Get-Backup $nome
 Test-Path -LiteralPath $destino
 $backup.FullName
 ```
+
+5. **Pareie os backups.** Com um backup por pasta, o par é óbvio. Com mais de um, o
+   "mais recente de cada pasta" pode vir de publicações diferentes. Escolha o
+   `downloads` mais próximo, no tempo, do `data` e confira a diferença:
+
+```powershell
+$bd = Get-Backup "data"
+$bz = Get-ChildItem -LiteralPath $atlas -Directory -Force |
+    Where-Object { $_.Name -like ".downloads.backup-*" } |
+    Sort-Object { [math]::Abs(($_.LastWriteTime - $bd.LastWriteTime).TotalSeconds) } |
+    Select-Object -First 1
+if (-not $bz) { throw "Nenhum backup de 'downloads' para formar o par." }
+"data:      $($bd.FullName)  $($bd.LastWriteTime)"
+"downloads: $($bz.FullName)  $($bz.LastWriteTime)"
+"diferença: " + [math]::Round([math]::Abs(($bd.LastWriteTime - $bz.LastWriteTime).TotalSeconds)) + " s"
+```
+
+   Backups da mesma publicação têm horários próximos (segundos). Uma diferença de
+   minutos ou mais indica publicações diferentes: **pare** e decida pelo dono. O
+   horário é só uma heurística: o par só vale depois de passar na validação do par,
+   na próxima seção.
 
 ## Validar destino e backup
 
@@ -54,14 +95,27 @@ e a contagem de linhas de cada ZIP.
 .venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data', r'dashboard/atlas/downloads'); print('dados e downloads válidos')"
 ```
 
-Para validar a versão anterior, monte o par de backups (`.data.backup-*` com
-`.downloads.backup-*`) e passe os dois caminhos exatos:
+Para validar a versão anterior, passe o par de backups escolhido no passo 5:
 
 ```powershell
-.venv\Scripts\python -c "from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'<backup de data>', r'<backup de downloads>'); print('backups válidos')"
+.venv\Scripts\python -c "import sys; from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(sys.argv[1], sys.argv[2]); print('backups válidos')" $bd.FullName $bz.FullName
 ```
 
-Para comparar as árvores de uma pasta (`$destino` e `$backup` do passo anterior) por
+Se existir o backup de **uma só** pasta (por exemplo, só `.data.backup-*`), valide-o
+com a outra pasta **atual** (a que não foi trocada):
+
+```powershell
+# só existe o backup de data: usa o downloads atual
+.venv\Scripts\python -c "import sys; from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(sys.argv[1], r'dashboard/atlas/downloads'); print('backup de data válido')" $bd.FullName
+
+# só existe o backup de downloads: usa o data atual
+.venv\Scripts\python -c "import sys; from painel_dados.contracts.atlas_site import validar_diretorio_site; validar_diretorio_site(r'dashboard/atlas/data', sys.argv[1]); print('backup de downloads válido')" $bz.FullName
+```
+
+Isso só vale se a pasta atual for a da mesma versão do backup (por exemplo, o
+backup órfão de uma publicação que já terminou); confira com a comparação abaixo.
+
+Para comparar as árvores de uma pasta (`$destino` e `$backup` da preparação) por
 caminho relativo, tamanho e SHA-256:
 
 ```powershell
@@ -88,7 +142,7 @@ explicada antes de qualquer remoção.
 
 Decida pelo **conjunto**: nunca deixe `data` de uma versão com `downloads` de outra.
 Aplique o caso abaixo a cada pasta, com `$nome`, `$destino` e `$backup` definidos
-como na preparação.
+como na preparação e o par validado na seção anterior.
 
 ### Destino ausente e backup válido
 
@@ -126,6 +180,25 @@ Move-Item -LiteralPath $backup.FullName -Destination $destino
 Depois de restaurar as duas pastas, rode a validação do conjunto. Mantenha as
 quarentenas até registrar a causa e confirmar o site restaurado.
 
+### Uma pasta na versão nova e a outra ausente (restauração parcial)
+
+Acontece quando a restauração automática falha no meio: por exemplo, `data` ficou
+na versão **nova** (válida isoladamente) e `downloads` sumiu, com o backup de cada
+pasta preservado. A versão nova de uma pasta sozinha é incoerente com o conjunto e
+não deve ficar publicada. Decida pelo conjunto, voltando as duas à versão anterior:
+
+1. Confirme o par de backups e valide-o (seções anteriores). Sem backup das duas
+   pastas, **pare** e acione o dono.
+2. Para a pasta que ficou na versão nova, ponha-a em quarentena (como no caso
+   anterior) e restaure o backup dela.
+3. Para a pasta ausente, restaure o backup (caso "Destino ausente").
+4. Rode a validação do conjunto e confira que não restaram `.tmp-*` nem `.backup-*`.
+
+Esta seção e o pareamento de vários backups foram simulados na T23, em cópia
+temporária, com os mesmos scripts de `incidentes-simulados.md`: a versão nova de
+`data` ao lado dos dois backups voltou ao conjunto anterior, idêntico ao original, e,
+com dois backups de `downloads` (3 s e 9 dias de diferença), o pareamento escolheu o
+de 3 s. Como o horário é só uma heurística, a validação do par continua obrigatória.
 
 ## Interpretar `RuntimeWarning`
 
