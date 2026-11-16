@@ -18,12 +18,22 @@ e decisões em `docs/adr/`.
 3. **Commits pequenos**, em português, no imperativo, com um assunto por commit.
 4. **Rodar antes de commitar**: `.venv\Scripts\python -m pytest` e
    `.venv\Scripts\python -m ruff check src tests`. Não commite com falha.
-5. **Push só de branches de tarefa; merge, PR e AWS são do dono.** O dono autorizou
-   (16/11/2026) o push de branches de tarefa e de integração, nunca de `develope`,
-   `engenharia-dados` ou `atlas`. Merge em `develope`, abertura de PR, liberação da
-   T07 e qualquer custo ou recurso AWS continuam dependendo do dono. Os commits
-   usam o e-mail `noreply` do dono e não levam a linha `Co-Authored-By` de agentes,
-   para não poluir o histórico nem a lista de contribuidores.
+5. **Autonomia dos agentes e limites do dono.** O dono delegou (16/11/2026):
+   - push de branches de tarefa e de integração, nunca de `develope`,
+     `engenharia-dados` ou `atlas`, e nunca com `--force`;
+   - abrir PR para `develope`;
+   - fazer o merge desse PR, **só se**: a CI estiver verde; houver aprovação do
+     revisor independente (regra 9); o PR alterar apenas documentação, testes,
+     `src/` ou `pipeline/` já cobertos pela tarefa; e não alterar dados publicados
+     (`dashboard/atlas/data`, `dashboard/atlas/downloads`, `data/gold`), `infra/`
+     nem `.github/`. Depois do merge, confirmar o `Publicar Atlas` e apagar a
+     branch.
+   **Continuam sempre com o dono**: qualquer custo ou recurso AWS (incluindo
+   `terraform apply`), a liberação da T07, a confirmação do Gate C, PRs que alterem
+   dados publicados, `infra/` ou `.github/`, reescrita de histórico, `--force`,
+   credenciais e segredos, e qualquer mudança nesta regra e na 9.
+   Os commits usam o e-mail `noreply` do dono e não levam a linha `Co-Authored-By`
+   de agentes, para não poluir o histórico nem a lista de contribuidores.
 6. **Não alterar o dashboard nem os scripts de `pipeline/`**, exceto se a tarefa
    disser. Dados em `data/bronze` e `data/silver` nunca vão para o git; os testes
    usam fixtures pequenas e sintéticas em `tests/fixtures/`.

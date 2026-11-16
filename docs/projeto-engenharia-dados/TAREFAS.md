@@ -385,7 +385,7 @@ integração (ignorado pelo Git; não apagar nem versionar).
 
 - **Decisão do dono (16/11/2026), pedida em chat:** reduzir a participação manual do dono. (1) Regra 9: revisão cruzada por revisor
   independente (agente `revisor-independente`, Claude em sessão nova, só leitura); Codex como segundo olhar opcional. (2) Regra 5: push de
-  branches de tarefa autorizado; merge em `develope`, PR, T07 e AWS seguem com o dono. (3) Commits com e-mail `noreply` e sem `Co-Authored-By`
+  branches de tarefa, abrir PR e fazer merge (com CI verde, revisor independente aprovado e sem tocar dados publicados, `infra/` ou `.github/`) delegados aos agentes; AWS, T07, Gate C, `--force`, segredos e mudanças nas regras 5 e 9 seguem com o dono. Abrir PR e fazer merge exigem o `gh` instalado e autenticado pelo dono. (3) Commits com e-mail `noreply` e sem `Co-Authored-By`
   de agentes. (4) Agente versionado em `.claude/agents/`.
 - **Arquivos alterados:** `AGENTS.md`, `.claude/agents/revisor-independente.md` (novo), `docs/projeto-engenharia-dados/TAREFAS.md`.
 - **Limite conhecido:** o `Bash` do revisor não é tecnicamente só leitura; a proteção é a instrução do agente, por isso o autor confere
