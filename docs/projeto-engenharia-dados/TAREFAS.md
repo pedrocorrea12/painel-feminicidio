@@ -27,7 +27,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
 | T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
-| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | em andamento | T20 (publicação conjunta) |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | em revisão | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | pendente | nenhuma |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
@@ -325,6 +325,28 @@ integração (ignorado pelo Git; não apagar nem versionar).
   comando, saída, resultado e tempo. Se o runbook falhar, registrar o defeito como pedido.
 - **Aceite:** documento com os cinco incidentes e a recuperação comprovada; nenhum dado real
   alterado; pytest e `ruff check src tests` verdes. Sem push.
+
+**Entrega (Claude, 16/11/2026):**
+
+- Feito: `docs/runbooks/incidentes-simulados.md` com os cinco incidentes (Gold inválida, ZIP
+  corrompido em três variações, backup órfão, falha na segunda troca, falha na restauração),
+  cada um com cenário, como provocar, comando, saída, resultado, tempo e se o runbook bastou.
+  Tudo rodou em cópias temporárias fora do repositório; `dashboard/atlas`, `src/`, `pipeline/`
+  e os dados reais não foram tocados. Nos incidentes 1, 2 e 4 o conjunto voltou idêntico (mesma
+  impressão digital); nos 3 e 5 a recuperação seguiu o runbook e o conjunto restaurado também
+  ficou idêntico e válido. O script de provocação está no apêndice do documento.
+  Não foi criado `tests/test_incidentes_publicacao.py`: `tests/test_publish.py` já cobre as
+  falhas em memória.
+- Pendente: o dono decide o merge.
+
+**Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
+
+1. Validar backup de uma só pasta: dizer que se usa a outra pasta atual
+   (`validar_diretorio_site(<backup de data>, 'dashboard/atlas/downloads')`).
+2. Incluir o caso em que uma pasta ficou na versão nova e a outra ausente (restauração parcial):
+   decidir pelo conjunto e pôr o destino novo em quarentena. Não foi simulado.
+3. Trocar `Select-Object FullName, LastWriteTime` por `Format-List` (o caminho sai truncado).
+4. Tratar a listagem sem backup (`$backup` nulo) com mensagem clara.
 
 ## T22 Varredura de segredos e dados pessoais
 
