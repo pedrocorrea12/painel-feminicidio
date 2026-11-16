@@ -29,6 +29,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
 | T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
+| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | pendente (aguarda o ok do dono) | T21 |
+| T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -378,6 +380,16 @@ integração (ignorado pelo Git; não apagar nem versionar).
   fixtures. Cada achado leva arquivo, commit, gravidade e ação sugerida, **sem copiar o valor do segredo**.
 - **Aceite:** relatório com método, comandos, achados (ou "sem achados") e conclusão; nenhum valor
   sensível no relatório. Sem push.
+
+## T24 Regras de convivência e revisor independente
+
+- **Decisão do dono (16/11/2026), pedida em chat:** reduzir a participação manual do dono. (1) Regra 9: revisão cruzada por revisor
+  independente (agente `revisor-independente`, Claude em sessão nova, só leitura); Codex como segundo olhar opcional. (2) Regra 5: push de
+  branches de tarefa autorizado; merge em `develope`, PR, T07 e AWS seguem com o dono. (3) Commits com e-mail `noreply` e sem `Co-Authored-By`
+  de agentes. (4) Agente versionado em `.claude/agents/`.
+- **Arquivos alterados:** `AGENTS.md`, `.claude/agents/revisor-independente.md` (novo), `docs/projeto-engenharia-dados/TAREFAS.md`.
+- **Limite conhecido:** o `Bash` do revisor não é tecnicamente só leitura; a proteção é a instrução do agente, por isso o autor confere
+  `git status` e o diff depois de cada revisão. O revisor é da mesma família do autor: tarefas de segurança, custo ou dados reais pedem a leitura do dono.
 
 ## T06 e T07
 
