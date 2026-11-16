@@ -25,8 +25,12 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T16 | Publicar a Gold no bucket pelo login local (código e runbook) | Codex | tarefa/t16-publicar-gold-s3 | integrada | nenhuma (segue a decisão do contexto acima) |
 | T17 | CI: `terraform fmt -check` e `validate` sem credenciais | Codex | tarefa/t17-ci-terraform | integrada | T15 (lock file); ok do dono para tocar `.github/` |
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
-| T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | aprovada | T18; ok do dono para tocar `.github/` |
-| T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | aprovada | T05 (publicação segura) |
+| T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
+| T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
+| T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
+| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | pendente (aguarda o ok do dono) | T21 |
+| T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -310,6 +314,83 @@ integração (ignorado pelo Git; não apagar nem versionar).
   carimbos de data; pytest e `ruff check src tests` verdes. Sem push.
 - **Fora do escopo:** mudar o formato dos ZIPs ou das colunas.
 
+## T21 Incidentes simulados e recuperação
+
+- **Dono:** Claude. **Branch:** `tarefa/t21-incidentes-simulados`, a partir da `develope`.
+- **Contexto:** item do Gate C "incidentes simulados e recuperação demonstrada". Os testes
+  cobrem as falhas em memória; falta um registro reproduzível, com o runbook seguido passo a passo.
+- **Arquivos permitidos:** `docs/runbooks/incidentes-simulados.md` (novo), `tests/test_incidentes_publicacao.py`
+  (novo, se útil), `docs/projeto-engenharia-dados/TAREFAS.md` (só a própria linha e Entrega).
+  Não alterar `src/`, `pipeline/` nem dados reais; a simulação roda em cópia temporária.
+- **Escopo:** simular Gold inválida, ZIP corrompido, backup órfão, falha na segunda troca e
+  falha na restauração; seguir `docs/runbooks/publicacao-gold.md` em cada caso e registrar
+  comando, saída, resultado e tempo. Se o runbook falhar, registrar o defeito como pedido.
+- **Aceite:** documento com os cinco incidentes e a recuperação comprovada; nenhum dado real
+  alterado; pytest e `ruff check src tests` verdes. Sem push.
+
+**Entrega (Claude, 16/11/2026):**
+
+- Feito: `docs/runbooks/incidentes-simulados.md` com os cinco incidentes (Gold inválida, ZIP
+  corrompido em três variações, backup órfão, falha na segunda troca, falha na restauração),
+  cada um com cenário, como provocar, comando, saída, resultado, tempo e se o runbook bastou.
+  Tudo rodou em cópias temporárias fora do repositório; `dashboard/atlas`, `src/`, `pipeline/`
+  e os dados reais não foram tocados. Nos incidentes 1, 2 e 4 o conjunto voltou idêntico (mesma
+  impressão digital); nos 3 e 5 a recuperação seguiu o runbook e o conjunto restaurado também
+  ficou idêntico e válido. O script de provocação está no apêndice do documento.
+  Não foi criado `tests/test_incidentes_publicacao.py`: `tests/test_publish.py` já cobre as
+  falhas em memória.
+- **Revisão cruzada (Codex, leitura): reprovada com 4 achados, tratados:** (1) a impressão digital agora
+  tem implementação reproduzível (`Get-Digital`, `Get-Residuos`, `Novo-Sim` e o roteiro `rodar_tudo.ps1`, apêndices B e C),
+  considera caminho e conteúdo, e os cinco incidentes foram reexecutados com ela (digital do conjunto `528EDE06…`,
+  321 arquivos, igual antes e depois, sem resíduos, validação passando); (2) `publicar_sim.py` recusa raiz sem
+  `SIMULACAO.txt` ou com `.git`/`pyproject.toml`, e a trava foi testada contra a raiz do repositório; (3) registrada a
+  lacuna E (vários backups por pasta) e o pedido 5; (4) "o runbook bastou" trocado por "em parte" nos incidentes 3 e 5.
+- **Segunda rodada (Codex): reprovada, 1 achado ainda aberto e 1 novo, tratados:** o incidente 3 não imprimia
+  "idêntico, válido e sem resíduos" para o estado recuperado; o roteiro ganhou a checagem `I3 depois da recuperacao`
+  (321 arquivos, digital idêntico, sem resíduos, validação passando) antes da nova publicação. O bloco de saída do
+  apêndice C agora é a transcrição literal das 27 linhas do roteiro (só o caminho da raiz abreviado). Os `.ps1`
+  passaram a ser gravados com BOM UTF-8, para o PowerShell 5.1 não corromper os acentos. Itens 2 a 5 da primeira
+  correção foram confirmados como resolvidos.
+- **Terceira rodada (revisor independente, Claude em sessão nova, só leitura): aprovada com ressalvas.** O revisor
+  reexecutou o roteiro `rodar_tudo.ps1` a partir dos apêndices (321 arquivos, digital `528EDE06…`, linhas iguais às do
+  documento, só mudam UUIDs e caminho), confirmou a trava e as contagens e não achou lacuna nova no runbook. Duas
+  ressalvas baixas, tratadas: as saídas citadas na recuperação do incidente 3 vêm da execução manual do runbook (agora
+  dito no texto), e a transcrição passa a ser descrita como as 27 linhas rotuladas, com as quatro linhas de rastro do
+  PowerShell por trava explicadas e omitidas.
+- Pendente: o dono decide o merge.
+
+**Pedidos** (defeitos do runbook `docs/runbooks/publicacao-gold.md`, não corrigidos aqui):
+
+1. Validar backup de uma só pasta: dizer que se usa a outra pasta atual
+   (`validar_diretorio_site(<backup de data>, 'dashboard/atlas/downloads')`).
+2. Incluir o caso em que uma pasta ficou na versão nova e a outra ausente (restauração parcial):
+   decidir pelo conjunto e pôr o destino novo em quarentena. Não foi simulado.
+3. Trocar `Select-Object FullName, LastWriteTime` por `Format-List` (o caminho sai truncado).
+4. Tratar a listagem sem backup (`$backup` nulo) com mensagem clara.
+5. Vários backups por pasta: parear `data` e `downloads` pelos instantes de criação em vez de escolher o
+   mais recente de cada uma de forma independente, e validar o par antes de qualquer `Move-Item`.
+
+## T22 Varredura de segredos e dados pessoais
+
+- **Dono:** Codex, **somente leitura**. **Branch:** `tarefa/t22-varredura-segredos`, a partir da `develope`.
+- **Arquivos permitidos:** `docs/auditoria/varredura-segredos.md` (novo) e a própria linha do quadro.
+  **Não alterar nenhum outro arquivo nem reescrever histórico.**
+- **Escopo:** procurar na árvore e no histórico Git chaves AWS e tokens, senhas, `.env`, estado do
+  Terraform, IDs de conta, e-mails, CPF e outros dados pessoais; conferir `.gitignore`, `data/` e as
+  fixtures. Cada achado leva arquivo, commit, gravidade e ação sugerida, **sem copiar o valor do segredo**.
+- **Aceite:** relatório com método, comandos, achados (ou "sem achados") e conclusão; nenhum valor
+  sensível no relatório. Sem push.
+
+## T24 Regras de convivência e revisor independente
+
+- **Decisão do dono (16/11/2026), pedida em chat:** reduzir a participação manual do dono. (1) Regra 9: revisão cruzada por revisor
+  independente (agente `revisor-independente`, Claude em sessão nova, só leitura); Codex como segundo olhar opcional. (2) Regra 5: push de
+  branches de tarefa, abrir PR e fazer merge (com CI verde, revisor independente aprovado e sem tocar dados publicados, `infra/` ou `.github/`) delegados aos agentes; AWS, T07, Gate C, `--force`, segredos e mudanças nas regras 5 e 9 seguem com o dono. Abrir PR e fazer merge exigem o `gh` instalado e autenticado pelo dono. (3) Commits com e-mail `noreply` e sem `Co-Authored-By`
+  de agentes. (4) Agente versionado em `.claude/agents/`.
+- **Arquivos alterados:** `AGENTS.md`, `.claude/agents/revisor-independente.md` (novo), `docs/projeto-engenharia-dados/TAREFAS.md`.
+- **Limite conhecido:** o `Bash` do revisor não é tecnicamente só leitura; a proteção é a instrução do agente, por isso o autor confere
+  `git status` e o diff depois de cada revisão. O revisor é da mesma família do autor: tarefas de segurança, custo ou dados reais pedem a leitura do dono.
+
 ## T06 e T07
 
 T06: **aplicada em parte** com aprovação do dono (S3 privado, logs e orçamento);
@@ -321,12 +402,12 @@ custo observado em `docs/costs.md` após a primeira fatura e desligar o
 laboratório (`docs/runbooks/desligar-laboratorio-aws.md`) antes de 14/05/2027.
 
 T07 continua **bloqueada**. Só o dono a libera, depois de confirmar **todos** os itens do
-Gate C (`docs/projeto-engenharia-dados/README.md`). Situação em 15/11/2026, sem nenhum
+Gate C (`docs/projeto-engenharia-dados/README.md`). Situação em 16/11/2026, sem nenhum
 item confirmado ainda:
 
 | Item do Gate C | Situação | O que falta |
 | --- | --- | --- |
-| CI visível e aprovado | CI verde no PR 1 e na `develope` | confirmar; T19 amplia o que a CI valida |
+| CI visível e aprovado | CI verde nos PRs 1 e 2 e na `develope` | confirmar; T19 amplia o que a CI valida |
 | Incidentes simulados e recuperação demonstrada | não feito | simular falhas (Gold inválida, ZIP corrompido, backup órfão) e registrar; T20 cobre os ZIPs |
 | Métricas reais, limitações e custos observados | parcial: benchmark e estimativa existem | registrar o custo da primeira fatura AWS em `docs/costs.md` |
 | Nenhum segredo ou dado pessoal desnecessário | não confirmado | varredura final do repositório antes da demo |
@@ -396,5 +477,6 @@ da entrega.
 - T17 (fechamento): **Revisão cruzada (Claude, leitura): aprovada, sem achados** (ações por tag como no job existente; `setup-terraform@v4` e `checkout@v6` existem; permissões `contents: read`). Integrada localmente; **a CI do job `terraform` só roda no GitHub depois do push**, que depende do dono.
 - T18: **Entrega:** `.gitattributes` na raiz marca `dashboard/dist/data/**`, `data/gold/**`, `dashboard/atlas/data/**` e `dashboard/atlas/downloads/**` com o atributo booleano `linguist-generated`, sem desabilitar diff, declarar arquivos binários ou alterar normalização de fim de linha. **Verificado:** `git check-attr linguist-generated` retorna `set` para amostras dos quatro caminhos e `unspecified` para amostras de `src/`, `tests/`, `docs/` e `infra/`; status da tarefa sem outros arquivos modificados; 99 testes e Ruff verdes. **Pedidos:** nenhum. **Pendente:** revisão cruzada.
 - T18 (fechamento): **Revisão cruzada (Claude, leitura): aprovada, sem achados** (`git check-attr` confirmou `set` nos quatro caminhos e `unspecified` em `src/`, `tests/`, `docs/`, `infra/` e nos HTML do dashboard). Integrada localmente.
-- T20: ZIPs de `dashboard/atlas/downloads` agora entram na publicação segura. **Entrega:** nova `publicar_conjunto` em `src/painel_dados/publish.py` (gera e valida vários diretórios em temporários irmãos e troca todos como uma unidade; falha em qualquer etapa devolve todos à versão anterior; falha na restauração preserva os backups e lista os caminhos); `validar_diretorio_site(diretorio, diretorio_downloads=None)` ganhou validação a fundo dos ZIPs (caminho, tamanho, ZIP íntegro, CSV esperado, linhas e arquivos fora do manifesto; mensagens estáveis); `build_atlas_site_data.py` publica `data/` e `downloads/` juntos. Contrato (`docs/contracts/atlas_site.md`) e runbook (`docs/runbooks/publicacao-gold.md`) atualizados. **Verificado:** 120 testes e Ruff verdes antes da revisão (21 novos: troca conjunta com falha na geração, na validação, na segunda troca, na restauração e com backup órfão; ZIP corrompido, sem CSV, contagem e tamanho divergentes, arquivo sobrando e caminho inválido); execução sobre os dados reais regenerou o site e os 3 ZIPs com o mesmo conteúdo (CSV com o mesmo SHA-256; só mudam `atualizado_em` e o carimbo interno dos ZIPs), e a regeneração foi descartada; o comando novo do runbook valida os arquivos reais. **Pedidos (arquivos fora da lista inicial, justificados):** (1) `src/painel_dados/publish.py` (previsto como condicional): `publicar_diretorio` só troca um diretório, e trocar `data/` e `downloads/` separadamente deixaria uma falha entre as duas trocas com versões misturadas; a função nova não altera a existente. (2) `src/painel_dados/contracts/atlas_site.py`: o teste da validação de ZIP precisa de código importável de `src/` (o `pipeline/` não é pacote) e o contrato do site é o lugar natural; a assinatura antiga continua valendo. Os dois pedem a aprovação do dono na revisão. **Revisão cruzada (Codex, modo leitura): reprovada com 6 achados, todos tratados:** (1) destinos aninhados agora são rejeitados ("Destinos aninhados na publicação conjunta"); (2) falha ao remover a versão nova de um destino que não existia antes, durante a reversão, agora vira `RuntimeError` listando o caminho ("versão nova não removida em"); (3) `backup_remanescente` é atribuído só ao destino dono do backup; (4) CSV só com cabeçalho é rejeitado ("Download sem registros"); (5) runbook reescrito para tratar `data` e `downloads` como conjunto, com `$nome` por pasta e validação do par de backups; (6) introdução do contrato corrigida para `publicar_conjunto`. O Codex aprovou os dois pedidos (publish.py e contracts/atlas_site.py). Testes novos para os achados 1 a 4; 124 testes e Ruff verdes. **Segunda rodada (Codex): aprovada com ressalvas;** os 7 itens resolvidos, com 1 achado novo baixo (a seção final do runbook só citava `.data.*`), corrigido no último commit. **Pedidos aprovados pelo dono (publish.py e contracts/atlas_site.py).** **Pendente:** merge do PR pelo dono.
-- T19: **Entrega:** análise do `pipeline/validate_project.py`: dependem dos dados reais a presença da Silver e da Gold, a igualdade entre a Gold e a cópia do dashboard, os controles exatos do `painel.json`, contagens, domínios, chaves, totais, cobertura temporal, taxas e situações de SINAN, SIM, Sinesp, população, raça e RAIS, as consistências entre Parquets/CSVs, a reconciliação dos municípios com SC e o confronto final do site com a Gold. Dependem somente de estrutura ou arquivos versionados a presença de `dashboard/dist/{index.html,styles.css,app.js}` e, na parte estrutural de `validar_dados_site`, o manifesto, os 295 JSONs municipais, o limite de tamanho, a relação indicador/mapa e a igualdade dos IDs da malha; essa função ainda mistura no final o confronto com a Gold. O menor caminho sem editar `pipeline/` usa as unidades já desacopladas: a CI executa `tests/test_validate_project.py` sobre três CSVs sintéticos mínimos, sem municípios reais; a reconciliação válida passa e adulterações parametrizadas de SIM, SINAN e Sinesp falham com o prefixo estável `<arquivo>: municípios não fecham com SC:`. A estrutura completa do site, inclusive uma Gold sintética mínima para atravessar o confronto final, é gerada em `tmp_path`: o caso válido percorre manifesto, 295 JSONs, limite de tamanho, relação indicador/mapa e IDs da malha, e a malha adulterada falha com `malha não casa com municípios`. Nenhum dos 295 arquivos é versionado. **Verificado:** 105 testes e Ruff verdes; nenhum dado real, pessoal ou segredo foi acrescentado. **Pedidos:** nenhum, pois não foi necessário separar `validar_estrutura_dados_site`. **Pendente:** o `main()` integral continua fora da CI porque exige toda a Silver e controles reais; a CI só poderá ficar verde no GitHub depois do push do dono. Revisão cruzada: Claude.
+- T20: ZIPs de `dashboard/atlas/downloads` agora entram na publicação segura. **Entrega:** nova `publicar_conjunto` em `src/painel_dados/publish.py` (gera e valida vários diretórios em temporários irmãos e troca todos como uma unidade; falha em qualquer etapa devolve todos à versão anterior; falha na restauração preserva os backups e lista os caminhos); `validar_diretorio_site(diretorio, diretorio_downloads=None)` ganhou validação a fundo dos ZIPs (caminho, tamanho, ZIP íntegro, CSV esperado, linhas e arquivos fora do manifesto; mensagens estáveis); `build_atlas_site_data.py` publica `data/` e `downloads/` juntos. Contrato (`docs/contracts/atlas_site.md`) e runbook (`docs/runbooks/publicacao-gold.md`) atualizados. **Verificado:** 120 testes e Ruff verdes antes da revisão (21 novos: troca conjunta com falha na geração, na validação, na segunda troca, na restauração e com backup órfão; ZIP corrompido, sem CSV, contagem e tamanho divergentes, arquivo sobrando e caminho inválido); execução sobre os dados reais regenerou o site e os 3 ZIPs com o mesmo conteúdo (CSV com o mesmo SHA-256; só mudam `atualizado_em` e o carimbo interno dos ZIPs), e a regeneração foi descartada; o comando novo do runbook valida os arquivos reais. **Pedidos (arquivos fora da lista inicial, justificados):** (1) `src/painel_dados/publish.py` (previsto como condicional): `publicar_diretorio` só troca um diretório, e trocar `data/` e `downloads/` separadamente deixaria uma falha entre as duas trocas com versões misturadas; a função nova não altera a existente. (2) `src/painel_dados/contracts/atlas_site.py`: o teste da validação de ZIP precisa de código importável de `src/` (o `pipeline/` não é pacote) e o contrato do site é o lugar natural; a assinatura antiga continua valendo. Os dois pedem a aprovação do dono na revisão. **Revisão cruzada (Codex, modo leitura): reprovada com 6 achados, todos tratados:** (1) destinos aninhados agora são rejeitados ("Destinos aninhados na publicação conjunta"); (2) falha ao remover a versão nova de um destino que não existia antes, durante a reversão, agora vira `RuntimeError` listando o caminho ("versão nova não removida em"); (3) `backup_remanescente` é atribuído só ao destino dono do backup; (4) CSV só com cabeçalho é rejeitado ("Download sem registros"); (5) runbook reescrito para tratar `data` e `downloads` como conjunto, com `$nome` por pasta e validação do par de backups; (6) introdução do contrato corrigida para `publicar_conjunto`. O Codex aprovou os dois pedidos (publish.py e contracts/atlas_site.py). Testes novos para os achados 1 a 4; 124 testes e Ruff verdes. **Segunda rodada (Codex): aprovada com ressalvas;** os 7 itens resolvidos, com 1 achado novo baixo (a seção final do runbook só citava `.data.*`), corrigido no último commit. **Pedidos aprovados pelo dono (publish.py e contracts/atlas_site.py).** **Integrada na `develope` pelo PR #2 (merge `40faa5d`, CI e Publicar Atlas verdes).**
+- T19: **Entrega:** análise do `pipeline/validate_project.py`: dependem dos dados reais a presença da Silver e da Gold, a igualdade entre a Gold e a cópia do dashboard, os controles exatos do `painel.json`, contagens, domínios, chaves, totais, cobertura temporal, taxas e situações de SINAN, SIM, Sinesp, população, raça e RAIS, as consistências entre Parquets/CSVs, a reconciliação dos municípios com SC e o confronto final do site com a Gold. Dependem somente de estrutura ou arquivos versionados a presença de `dashboard/dist/{index.html,styles.css,app.js}` e, na parte estrutural de `validar_dados_site`, o manifesto, os 295 JSONs municipais, o limite de tamanho, a relação indicador/mapa e a igualdade dos IDs da malha; essa função ainda mistura no final o confronto com a Gold. O menor caminho sem editar `pipeline/` usa as unidades já desacopladas: a CI executa `tests/test_validate_project.py` sobre três CSVs sintéticos mínimos, sem municípios reais; a reconciliação válida passa e adulterações parametrizadas de SIM, SINAN e Sinesp falham com o prefixo estável `<arquivo>: municípios não fecham com SC:`. A estrutura completa do site, inclusive uma Gold sintética mínima para atravessar o confronto final, é gerada em `tmp_path`: o caso válido percorre manifesto, 295 JSONs, limite de tamanho, relação indicador/mapa e IDs da malha, e a malha adulterada falha com `malha não casa com municípios`. Nenhum dos 295 arquivos é versionado. **Verificado:** 105 testes e Ruff verdes; nenhum dado real, pessoal ou segredo foi acrescentado. **Pedidos:** nenhum, pois não foi necessário separar `validar_estrutura_dados_site`. **Pendente:** o `main()` integral continua fora da CI porque exige toda a Silver e controles reais; a CI só poderá ficar verde no GitHub depois do push do dono. Revisão cruzada: Claude (aprovada). **Integrada na `develope` pelo PR #2 (merge `40faa5d`).**
+- T22: **Entrega:** relatório `docs/auditoria/varredura-segredos.md` com varredura mascarada de 506 arquivos rastreados e 152 commits por `git grep` em todos os snapshots, `git log -p`, nomes históricos, mensagens e metadados de commit. Foram conferidos chaves e tokens conhecidos, atribuições de segredo, chaves privadas, `.env`, `*.tfstate`, ARNs/IDs de conta AWS, e-mails, CPF com dígitos verificadores, outros campos pessoais, `.gitignore`, `data/` e `tests/fixtures/`. **Achados:** nenhum de gravidade alta ou média; um achado baixo, o e-mail pessoal mascarado `p***@g***.com` nos metadados de autoria de 145 commits. Não há credencial ativa e não foi feita reescrita de histórico. Candidatos em documentação, teste, Gold agregada e inventário foram classificados como referências variáveis, placeholders ou falsos positivos. `.env`, estado Terraform, Bronze e Silver estão ignorados e não apareceram por nome no histórico. **Verificado:** relatório sem valor sensível não mascarado; 130 testes e Ruff verdes. **Pedidos:** nenhum. **Pendente:** revisão cruzada pelo Claude e decisão do dono sobre usar endereço `noreply` nos commits futuros. **Revisão cruzada (Claude, leitura): aprovada.** Refeitas as buscas críticas no histórico de todas as referências (chaves AWS, chaves privadas, tokens, `.tfstate`/`.env`/`.tfvars`, ARNs com conta): zero ocorrências, como no relatório; os três e-mails de autoria e commit (dois `noreply`, um pessoal) conferem com o achado de baixa gravidade. Decisão do dono em 16/11/2026: usar e-mail `noreply` nos commits futuros (configurado) e ligar no GitHub o bloqueio de push que expõe o e-mail (confirmado); o histórico não é reescrito.

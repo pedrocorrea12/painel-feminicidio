@@ -18,8 +18,22 @@ e decisões em `docs/adr/`.
 3. **Commits pequenos**, em português, no imperativo, com um assunto por commit.
 4. **Rodar antes de commitar**: `.venv\Scripts\python -m pytest` e
    `.venv\Scripts\python -m ruff check src tests`. Não commite com falha.
-5. **Sem push, sem merge, sem PR.** Só o dono do projeto aprova push, merge em
-   `develope` e qualquer custo ou recurso AWS.
+5. **Autonomia dos agentes e limites do dono.** O dono delegou (16/11/2026):
+   - push de branches de tarefa e de integração, nunca de `develope`,
+     `engenharia-dados` ou `atlas`, e nunca com `--force`;
+   - abrir PR para `develope`;
+   - fazer o merge desse PR, **só se**: a CI estiver verde; houver aprovação do
+     revisor independente (regra 9); o PR alterar apenas documentação, testes,
+     `src/` ou `pipeline/` já cobertos pela tarefa; e não alterar dados publicados
+     (`dashboard/atlas/data`, `dashboard/atlas/downloads`, `data/gold`), `infra/`
+     nem `.github/`. Depois do merge, confirmar o `Publicar Atlas` e apagar a
+     branch.
+   **Continuam sempre com o dono**: qualquer custo ou recurso AWS (incluindo
+   `terraform apply`), a liberação da T07, a confirmação do Gate C, PRs que alterem
+   dados publicados, `infra/` ou `.github/`, reescrita de histórico, `--force`,
+   credenciais e segredos, e qualquer mudança nesta regra e na 9.
+   Os commits usam o e-mail `noreply` do dono e não levam a linha `Co-Authored-By`
+   de agentes, para não poluir o histórico nem a lista de contribuidores.
 6. **Não alterar o dashboard nem os scripts de `pipeline/`**, exceto se a tarefa
    disser. Dados em `data/bronze` e `data/silver` nunca vão para o git; os testes
    usam fixtures pequenas e sintéticas em `tests/fixtures/`.
@@ -27,8 +41,13 @@ e decisões em `docs/adr/`.
 8. **Ao terminar**: atualize o status da sua tarefa em `TAREFAS.md` (no mesmo
    branch, último commit), escreva em "Entrega" o que foi feito e o que ficou
    pendente, e pare. O dono decide o merge.
-9. **Revisão cruzada**: o autor de uma tarefa não a aprova. A revisão é feita
-   pelo outro agente em modo leitura.
+9. **Revisão cruzada**: o autor de uma tarefa não a aprova. A revisão é feita em
+   modo leitura por um revisor independente: o agente `revisor-independente`
+   (`.claude/agents/revisor-independente.md`), numa sessão nova e sem o contexto
+   de autoria. O Codex pode revisar como segundo olhar, a pedido do dono. O
+   revisor só lê; quem escreveu corrige os achados e pede nova rodada. Tarefas
+   que mexem em segurança, custo ou dados reais pedem também a leitura do dono.
+   Decisão do dono em 16/11/2026.
 
 ## Ambiente
 
