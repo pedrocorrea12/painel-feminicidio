@@ -27,6 +27,8 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
 | T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | em andamento | T20 (publicação conjunta) |
+| T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | pendente | nenhuma |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -309,6 +311,31 @@ integração (ignorado pelo Git; não apagar nem versionar).
   (a versão anterior permanece); site e ZIPs regenerados sem diferença de conteúdo além dos
   carimbos de data; pytest e `ruff check src tests` verdes. Sem push.
 - **Fora do escopo:** mudar o formato dos ZIPs ou das colunas.
+
+## T21 Incidentes simulados e recuperação
+
+- **Dono:** Claude. **Branch:** `tarefa/t21-incidentes-simulados`, a partir da `develope`.
+- **Contexto:** item do Gate C "incidentes simulados e recuperação demonstrada". Os testes
+  cobrem as falhas em memória; falta um registro reproduzível, com o runbook seguido passo a passo.
+- **Arquivos permitidos:** `docs/runbooks/incidentes-simulados.md` (novo), `tests/test_incidentes_publicacao.py`
+  (novo, se útil), `docs/projeto-engenharia-dados/TAREFAS.md` (só a própria linha e Entrega).
+  Não alterar `src/`, `pipeline/` nem dados reais; a simulação roda em cópia temporária.
+- **Escopo:** simular Gold inválida, ZIP corrompido, backup órfão, falha na segunda troca e
+  falha na restauração; seguir `docs/runbooks/publicacao-gold.md` em cada caso e registrar
+  comando, saída, resultado e tempo. Se o runbook falhar, registrar o defeito como pedido.
+- **Aceite:** documento com os cinco incidentes e a recuperação comprovada; nenhum dado real
+  alterado; pytest e `ruff check src tests` verdes. Sem push.
+
+## T22 Varredura de segredos e dados pessoais
+
+- **Dono:** Codex, **somente leitura**. **Branch:** `tarefa/t22-varredura-segredos`, a partir da `develope`.
+- **Arquivos permitidos:** `docs/auditoria/varredura-segredos.md` (novo) e a própria linha do quadro.
+  **Não alterar nenhum outro arquivo nem reescrever histórico.**
+- **Escopo:** procurar na árvore e no histórico Git chaves AWS e tokens, senhas, `.env`, estado do
+  Terraform, IDs de conta, e-mails, CPF e outros dados pessoais; conferir `.gitignore`, `data/` e as
+  fixtures. Cada achado leva arquivo, commit, gravidade e ação sugerida, **sem copiar o valor do segredo**.
+- **Aceite:** relatório com método, comandos, achados (ou "sem achados") e conclusão; nenhum valor
+  sensível no relatório. Sem push.
 
 ## T06 e T07
 
