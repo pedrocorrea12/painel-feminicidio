@@ -56,6 +56,7 @@ Painel de faturamento da conta, lido pelo dono em 17/11/2026: valor devido US$ 0
 custo acumulado do mês US$ 0,00; créditos restantes US$ 120,00 (o painel mostra mais
 que os US$ 100 anotados em 14/11); plano gratuito, 180 dias restantes (até 14/05/2027).
 Todo o uso é coberto pelos créditos. O painel agrupa por projeto da conta e mostra um
-único projeto, com nome diferente de `dados-violencia-sc-lab`; o gasto é da conta toda.
+único projeto, na região `us-east-2` (a do laboratório), com um nome de projeto do painel
+diferente de `dados-violencia-sc-lab`, que é o nome usado nos recursos; o gasto é da conta toda.
 Fonte: leitura manual do painel, sem exportação da fatura. A primeira fatura fechada
 (dezembro/2026) ainda não existe: reconferir o valor quando fechar.
