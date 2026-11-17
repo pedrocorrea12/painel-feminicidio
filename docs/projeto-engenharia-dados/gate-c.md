@@ -10,10 +10,10 @@ do Gate C é do dono (regra 5 do `AGENTS.md`).
 | --- | --- | --- | --- |
 | CI visível e aprovado | Workflows `CI` e `Publicar Atlas` com sucesso em `8e8d989` | nenhuma | a fazer |
 | Incidentes simulados e recuperação demonstrada | `docs/runbooks/incidentes-simulados.md` e `docs/runbooks/publicacao-gold.md` | `incidentes-simulados.md` ainda mostra os comandos antigos de restauração | a fazer |
-| Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | **custo da primeira fatura AWS não registrado** | a fazer |
+| Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | custo observado registrado em 17/11 (US$ 0,00); reconferir quando a fatura fechar | a fazer |
 | Nenhum segredo ou dado pessoal desnecessário | `docs/auditoria/varredura-segredos.md` | um achado de gravidade baixa (e-mail nos metadados Git) | a fazer |
 
-Nenhum item depende de novo trabalho dos agentes. Dependem do dono: o custo da primeira fatura da AWS, a decisão sobre o
+Nenhum item depende de novo trabalho dos agentes. Dependem do dono: a decisão sobre o
 e-mail nos metadados Git e a confirmação final.
 
 ## 1. CI visível e aprovado
@@ -43,8 +43,8 @@ e-mail nos metadados Git e a confirmação final.
   medidos em 3 repetições. É medição local; não representa o tempo em um executor remoto.
 - **Custo estimado:** `docs/costs.md` traz a estimativa preliminar do benchmark e o custo esperado do laboratório (centavos de
   armazenamento e requisições).
-- **Custo observado:** ainda **não registrado**. `docs/costs.md` diz "a registrar após a primeira fatura". Depende do dono:
-  conferir a fatura da AWS e preencher o valor.
+- **Custo observado:** registrado em `docs/costs.md` em 17/11/2026, lido no painel de faturamento: US$ 0,00 devido e no
+  mês, créditos restantes US$ 120,00. É leitura manual do painel; a primeira fatura fechada só existe em dezembro.
 - **Prazo:** o laboratório deve ser desligado antes de 14/05/2027, pelo roteiro `docs/runbooks/desligar-laboratorio-aws.md`.
 - **Limitações conhecidas:** a federação OIDC do GitHub ficou desligada por uma SCP da organização da conta (ADR 0002), então a
   publicação na AWS é por login local temporário.
@@ -63,7 +63,7 @@ e-mail nos metadados Git e a confirmação final.
 
 ## O que falta para liberar a T07
 
-1. Dono: registrar o custo da primeira fatura AWS em `docs/costs.md`.
+1. Dono: reconferir o custo quando a primeira fatura fechar (dezembro/2026); não bloqueia a T07.
 2. Dono: decidir sobre o e-mail nos metadados Git (aceitar ou reescrever o histórico).
 3. Dono: confirmar os quatro itens e liberar a T07 no quadro.
 4. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.
