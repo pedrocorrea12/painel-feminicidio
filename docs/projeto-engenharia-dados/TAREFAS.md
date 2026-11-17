@@ -585,12 +585,15 @@ integração (ignorado pelo Git; não apagar nem versionar).
 - **Entrega (Claude):** `gate-c.md` lista, para cada item do Gate C, a evidência no repositório, a pendência e o campo de
   confirmação do dono; não confirma nada. Pendências que são do dono: custo da primeira fatura AWS em `docs/costs.md` e a decisão
   sobre o e-mail nos metadados Git (achado baixo da T22). Teto: 2 rodadas para tarefa só de documentação; depois, só achado médio
-  ou alto reabre; vale para esta tarefa também. **Verificado:** as afirmações do `gate-c.md` foram conferidas contra os arquivos
+  ou alto reabre; esta tarefa altera o `AGENTS.md`, então pela definição nova não está sob o teto; seguiu 2 rodadas por decisão do dono. **Verificado:** as afirmações do `gate-c.md` foram conferidas contra os arquivos
   citados e contra o resultado da CI em `8e8d989`. **Não verificado:** a data da última varredura de segredos (16/11/2026) é a da
   auditoria; nenhuma varredura nova foi feita. **Revisão independente, 1ª rodada: aprovada com ressalvas** (1 média: "só documentação" sem definição, que deixaria
   `AGENTS.md`, `.github/` e `infra/` escaparem; 6 baixas: gravidade atribuída por quem?, "reabre" ambíguo, registro dos achados
   baixos, e três exageros do `gate-c.md`). Todos corrigidos; o médio reabriu a revisão, como a própria regra manda.
-  **Pendente:** 2ª rodada curta; **leitura do dono** (a mudança na regra 9 e o
+  **2ª rodada: aprovada com ressalvas**, os 7 achados resolvidos e 3 novos, todos baixos e corrigidos pelo autor **sem nova
+  rodada**, como a regra manda: (N1) a frase sobre o teto valer para esta tarefa; (N2) documentação de runbooks, custos e auditoria
+  entra no teto, com leitura do dono mantida (**decisão que o dono deve confirmar ao ler a regra**); (N3) risco aceito: a correção
+  sem revisão de um achado baixo pode tocar mais que o achado, mitigado por este registro. **Pendente:** **leitura do dono** (a mudança na regra 9 e o
   resumo do Gate C são dele).
 
 ## T06 e T07

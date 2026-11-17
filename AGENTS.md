@@ -57,7 +57,10 @@ e decisões em `docs/adr/`.
    atribuída pelo revisor, não pelo autor. Os achados de gravidade baixa são
    corrigidos pelo autor sem nova rodada e **registrados na Entrega** (o que foi
    corrigido sem revisão) ou deixados como pendência registrada. O teto não vale
-   para código, segurança, custo ou dados reais.
+   para código, segurança, custo ou dados reais. Documentação que só descreve ou
+   instrui operação sobre esses temas (runbooks, `docs/costs.md`, auditorias)
+   entra no teto, desde que a tarefa não altere nenhum arquivo fora da definição
+   acima; a leitura do dono continua obrigatória nesses casos.
 
 ## Ambiente
 
