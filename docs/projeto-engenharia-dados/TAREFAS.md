@@ -515,7 +515,9 @@ integração (ignorado pelo Git; não apagar nem versionar).
   - **Achado 5 (só registro):** sem correção; segue declarado abaixo como não executado.
   - **Executado nesta rodada** (Windows PowerShell 5.1.26100, blocos extraídos do próprio runbook, árvores sintéticas de 3
     arquivos por pasta numa pasta temporária fora do repositório; colagem simulada invocando cada instrução de topo do bloco
-    separadamente na mesma sessão; arquivo mantido aberto por outro processo `powershell.exe`): 55 verificações, 0 falhas.
+    separadamente na mesma sessão; arquivo mantido aberto por outro processo `powershell.exe`): 55 verificações, 0 falhas
+    (o número vem de um roteiro do executor que ficou na pasta temporária e **não está no repositório**; não é reproduzível a
+    partir dele).
     Achado 1: "Destino inválido" com arquivo aberto em `.data.backup-*\municipio\a.json` (erro de restauração, destino ausente,
     backup e quarentena inteiros; repetição com o arquivo ainda aberto não muda nada; liberado, `data` volta completa e idêntica
     ao backup, uma quarentena); "Destino ausente" (mesmo comportamento); restauração parcial com falha em `downloads` depois de
@@ -532,8 +534,40 @@ integração (ignorado pelo Git; não apagar nem versionar).
     máquina), como na primeira rodada; os comandos Python de validação do contrato e a comparação de árvores (não mudaram e as
     árvores desta rodada são sintéticas, não passam no contrato); volumes diferentes entre backup e destino; nada sobre
     `dashboard/atlas` nem `data/` do repositório.
-  - **Pendente:** nova rodada de revisão independente. `incidentes-simulados.md` cita os comandos antigos (`Move-Item`) e não foi
-    tocado (fora dos arquivos permitidos).
+  - **Pendente ao fim da segunda rodada:** `incidentes-simulados.md` cita os comandos antigos (`Move-Item`) e não foi tocado (fora
+    dos arquivos permitidos).
+- **Revisão independente da segunda rodada: aprovada com ressalvas.** Os 5 achados da primeira rodada foram dados como resolvidos
+  e a atomicidade do `Move-Pasta` foi confirmada pelo revisor (12 casos dele, incluindo `FileShare.None` e processo com diretório
+  de trabalho dentro da pasta). Ficaram 4 ressalvas baixas, tratadas na terceira rodada (commit `90f747d`), **só em texto**: os 14
+  blocos PowerShell do runbook são idênticos aos de `ceb703e` e a primitiva de movimentação não mudou.
+  - **Ressalva 1, `Backup ausente` afirmava uma causa que o código não confere:** a entrada diz agora que a mensagem não prova que
+    a pasta foi restaurada. A saída por "Destino ausente e backup válido" só vale se a execução anterior do mesmo bloco parou em
+    `Restauração de ... falhou e nada foi movido` na outra pasta, com conferência do estado (pasta do backup ausente no lugar,
+    outra pasta ausente com backup intacto, quarentena `.<nova>.quarentena-*` se a pasta nova existia). Na primeira execução, ou se
+    a conferência não fecha, o texto manda não restaurar só uma pasta (conjunto misto), refazer o passo 5 e a validação do par e,
+    sem backup das duas, parar. O passo 2 da restauração parcial aponta para essa entrada.
+  - **Ressalva 2, "nada foi movido" sempre atribuído a arquivo aberto:** parágrafo novo manda ler a `Causa:` antes de repetir;
+    repetir só quando for acesso negado ou arquivo em uso, citando o terminal ou programa com a pasta como diretório atual;
+    qualquer outra causa (caminho inválido, permissão, volumes diferentes) é parar e acionar o dono. As entradas de quarentena e de
+    restauração e a nota de "Destino ausente e backup válido" foram reescritas nesse sentido.
+  - **Ressalva 3, mensagens sem entrada própria:** "Se a restauração parar" tem agora uma entrada para cada mensagem emitida pelas
+    funções e blocos de "Recuperar": além das que já existiam, `Defina $nova` (corrigir e repetir), `Par de backups não definido`,
+    `Backup não definido para`, `Backup de '...' não definido ou ausente` (na repetição depois do sucesso significa "já
+    restaurado"; na primeira execução, variável nula ou antiga), `A pasta '...' existe` e o aviso `Destino ausente (já está em
+    quarentena?)`. "Qualquer outro erro" continua como regra final.
+  - **Ressalva 4, volumes diferentes:** o runbook diz que quarentena, backup e destino ficam sob `$atlas`, no mesmo volume, e que
+    entre volumes `Directory.Move` falha sem mover nada, com o motivo na `Causa:`. Esse comportamento foi **verificado pelo
+    revisor, não pelo executor**. A origem do número "55 verificações" está registrada acima.
+  - **Verificado nesta rodada:** como só o texto mudou, nenhum bloco foi reexecutado (o cenário da ressalva 1 não foi rodado: o
+    código que responde `Backup ausente` é o mesmo já exercitado). Conferência por comparação de cadeias, com um roteiro
+    temporário fora do repositório: os 14 blocos PowerShell são idênticos aos de `ceb703e`; as 13 mensagens (`throw` e
+    `Write-Warning`) dos blocos de "Recuperar" têm entrada na seção, e as 12 entradas casam literalmente com o texto emitido
+    (trechos separados por `...` conferidos em ordem). 130 testes e Ruff verdes.
+  - **Não verificado:** o comportamento entre volumes diferentes e as causas alternativas de "nada foi movido" (diretório de
+    trabalho dentro da pasta, permissão, caminho inválido) não foram reproduzidos pelo executor; a orientação apoia-se no relato
+    do revisor. Continuam sem execução: console interativo com PSReadLine e PowerShell 7.
+  - **Pendente:** nova rodada de revisão independente, se o coordenador julgar necessária. `incidentes-simulados.md` segue citando
+    `Move-Item` (fora dos arquivos permitidos).
 
 ## T06 e T07
 
