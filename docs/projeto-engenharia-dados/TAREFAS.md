@@ -29,9 +29,10 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
 | T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
 | T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
-| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | em revisão | T21 |
+| T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | integrada | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
-| T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | em revisão | decisão do dono em 16/11/2026 |
+| T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | integrada | decisão do dono em 16/11/2026 |
+| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | aprovada | T23, T25 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -386,7 +387,7 @@ integração (ignorado pelo Git; não apagar nem versionar).
 
 - **Dono:** Claude. **Branch:** `tarefa/t23-corrige-runbook-publicacao`, a partir da `develope`. **Arquivos:** `docs/runbooks/publicacao-gold.md` e a própria linha e Entrega no quadro.
 - **Escopo:** os 5 pedidos da T21 (par de backups com uma só pasta, restauração parcial, listagem truncada, backup nulo, vários backups por pasta).
-- **Entrega (Claude):** (A) validação de backup de uma só pasta com a outra pasta atual; (B) caso "uma pasta na versão nova e a outra ausente": quarentena da pasta nova e restauração dos dois backups; (C) listagem com `Format-List`; (D) função `Get-Backup` que falha com mensagem clara quando não há backup e avisa quando há vários; (E) pareamento por proximidade de horário, com diferença impressa, parada obrigatória se for grande e validação do par como condição. **Verificado:** os comandos do runbook foram extraídos do próprio arquivo e executados em cópias temporárias (mesmos scripts da T21): dois backups pareados (0 s) e recuperados, conjunto idêntico ao original; backup só de `data` validado com o `downloads` atual; sem backup, mensagem clara; restauração parcial com a pasta nova em quarentena, conjunto válido e idêntico ao original, sem `.tmp-*` nem `.backup-*`; dois backups de `downloads` (3 s e 9 dias), escolhido o de 3 s. 130 testes e Ruff verdes. **Revisão independente (Claude, sessão nova, só leitura): aprovada com ressalvas, todas tratadas:** (1, média) com vários backups, o `$backup` da preparação podia não ser o do par validado; a seção Recuperar agora redefine `$backup` como `$bd`/`$bz` (o par validado) e proíbe `Move-Item` antes da validação; (2) `Format-List` da função `Get-Backup` vazava para o pipeline e `$bd` virava array; agora vai ao console por `Out-Host` e `$bd` é um único `DirectoryInfo`; (3) caso de backup de uma só pasta: o texto diz definir só a variável da pasta que tem backup; (4) a restauração parcial ganhou comandos próprios com `$nova`, `$bd` e `$bz`. Reexecutados os cinco cenários com os blocos extraídos do runbook: todos passam, conjunto idêntico ao original. **Pendente:** merge.
+- **Entrega (Claude):** (A) validação de backup de uma só pasta com a outra pasta atual; (B) caso "uma pasta na versão nova e a outra ausente": quarentena da pasta nova e restauração dos dois backups; (C) listagem com `Format-List`; (D) função `Get-Backup` que falha com mensagem clara quando não há backup e avisa quando há vários; (E) pareamento por proximidade de horário, com diferença impressa, parada obrigatória se for grande e validação do par como condição. **Verificado:** os comandos do runbook foram extraídos do próprio arquivo e executados em cópias temporárias (mesmos scripts da T21): dois backups pareados (0 s) e recuperados, conjunto idêntico ao original; backup só de `data` validado com o `downloads` atual; sem backup, mensagem clara; restauração parcial com a pasta nova em quarentena, conjunto válido e idêntico ao original, sem `.tmp-*` nem `.backup-*`; dois backups de `downloads` (3 s e 9 dias), escolhido o de 3 s. 130 testes e Ruff verdes. **Revisão independente (Claude, sessão nova, só leitura): aprovada com ressalvas, todas tratadas:** (1, média) com vários backups, o `$backup` da preparação podia não ser o do par validado; a seção Recuperar agora redefine `$backup` como `$bd`/`$bz` (o par validado) e proíbe `Move-Item` antes da validação; (2) `Format-List` da função `Get-Backup` vazava para o pipeline e `$bd` virava array; agora vai ao console por `Out-Host` e `$bd` é um único `DirectoryInfo`; (3) caso de backup de uma só pasta: o texto diz definir só a variável da pasta que tem backup; (4) a restauração parcial ganhou comandos próprios com `$nova`, `$bd` e `$bz`. Reexecutados os cinco cenários com os blocos extraídos do runbook: todos passam, conjunto idêntico ao original. **Integrada** à `develope` pelo PR #4 (merge `beaa953`); os achados da segunda rodada de revisão, feita depois do merge, ficaram para a T26.
 
 ## T24 Regras de convivência e revisor independente
 
@@ -431,6 +432,146 @@ integração (ignorado pelo Git; não apagar nem versionar).
   define o que um agente com escrita pode fazer, o que toca segurança no sentido da regra 9) e a primeira tarefa real como teste.
 - **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
   `git log` da branch **e do checkout principal** depois de cada execução.
+
+## T26 Achados da segunda rodada da T23 no runbook de publicação
+
+- **Dono:** Claude, pelo agente `executor-tarefa` (primeira tarefa real dele). **Branch:** `tarefa/t26-runbook-achados-t23`, a partir
+  da `develope`. **Pedido do dono em chat (16/11/2026).**
+- **Arquivos permitidos:** `docs/runbooks/publicacao-gold.md`; e, em `docs/projeto-engenharia-dados/TAREFAS.md`, só: a linha da T26
+  e esta seção, o status na linha da T23, o trecho "**Pendente:** merge." no fim da Entrega da T23, e o status na linha da T25.
+- **Escopo, parte 1 (runbook):** os 4 achados da segunda rodada de revisão independente da T23, feita depois do merge do PR #4. Os
+  números de linha são os do runbook na `develope` e servem de orientação.
+  1. **(média) `Move-Item` sem guarda aninha o backup dentro do destino quando a quarentena falha** (bloco da restauração parcial,
+     por volta das linhas 214-220; o mesmo padrão nas linhas 195-196 e 172). Cenário reproduzido pelo revisor: `data` na versão nova
+     com um arquivo aberto por outro processo; o `Move-Item` da quarentena dá erro não terminante e move só parte da pasta; o comando
+     seguinte encontra `data` ainda existente e move o backup para dentro dela (`data\.data.backup-*`), onde a listagem do runbook,
+     que não é recursiva, não o encontra. Correção esperada: `-ErrorAction Stop` nos `Move-Item` e, antes de cada restauração, parar
+     com mensagem clara se o destino ainda existir; e dizer no runbook o que fazer nesse caso.
+  2. **(baixa/média) A comparação de árvores usa o `$backup` da preparação e a remoção usa o do par validado** (linhas 123, 138-140,
+     159 e 183). Com vários backups de uma pasta, compara-se um e apaga-se outro, que nunca foi comparado. Correção esperada:
+     comparar o mesmo backup que será removido (o do par, `$bd`/`$bz`).
+  3. **(baixa) O bloco de pareamento, colado no console, não para no `throw`** (linhas 73-81): as linhas seguintes rodam com `$bd`
+     nulo ou com um `$bd` antigo da mesma sessão. Correção esperada: zerar `$bd` e `$bz` no início do bloco e não seguir com valor
+     nulo.
+  4. **(baixa) Não há comando para conferir `.tmp-*`** (as linhas 222 e 250 pedem a conferência; a listagem das linhas 32-35 só
+     filtra `.backup-*`). Correção esperada: dar o comando.
+- **Verificação exigida:** extrair os blocos PowerShell do runbook corrigido e executá-los em cópias temporárias fora do
+  repositório (Windows PowerShell 5.1), incluindo o cenário do achado 1 com um arquivo mantido aberto. Nunca sobre `dashboard/atlas`
+  nem `data/` do repositório. Dizer na Entrega o que foi executado e o que não foi.
+- **Escopo, parte 2 (quadro):** T23 e T25 já estão na `develope` (PRs #4 e #5, merges `beaa953` e `8001d93`): mudar o status das duas
+  linhas para `integrada` e trocar o "**Pendente:** merge." da Entrega da T23 por uma frase dizendo que foi integrada pelo PR #4 e que
+  os achados da segunda rodada ficaram para a T26.
+- **Pedidos:** (nenhum até agora)
+- **Entrega (Claude, `executor-tarefa`), primeira rodada** (commits `eb70a6c`, `03b6f42`, `530219f`; o que a segunda rodada mudou
+  está logo abaixo e prevalece):
+  - **Achado 1:** toda restauração passa pela função `Restore-Backup`, que para com `Destino ainda existe: ...` sem mover nada e
+    usa `Move-Item -ErrorAction Stop`; os `Move-Item` de quarentena também levam `-ErrorAction Stop`. Os blocos de mais de um passo
+    ("Destino inválido e backup válido" e a restauração parcial) vêm dentro de `& { ... }` e conferem o backup antes de mover, para
+    pararem no primeiro erro mesmo colados no console. Seção nova "Se a restauração parar" diz o que fazer: fechar o processo e
+    repetir o bloco (o resto do destino vai para uma segunda quarentena).
+  - **Achado 2:** o passo 4 virou só inspeção e não define mais `$backup`; a comparação de árvores define `$backup` a partir do par
+    (`$bd`/`$bz`), o mesmo que "Recuperar" restaura ou remove.
+  - **Achado 3:** o bloco de pareamento zera `$bd` e `$bz`, só calcula `$bz` com `$bd` definido e só imprime o par com os dois
+    definidos; senão avisa `Par de backups incompleto`. O `throw` de "Nenhum backup de 'downloads'" saiu: esse caso cai no aviso.
+  - **Achado 4:** comando em "Encerramento e evidências" que lista `.tmp-*`, `.backup-*` e quarentenas das duas pastas,
+    recursivo (acha também backup aninhado); a restauração parcial aponta para ele.
+  - **Parte 2:** T23 e T25 como `integrada`; "Pendente: merge." da T23 trocado pela frase do PR #4.
+  - **Executado** (Windows PowerShell 5.1, blocos extraídos do próprio runbook, em cópias de `data` e `downloads` numa pasta
+    temporária fora do repositório; "colado" = linhas entregues uma a uma por `powershell -Command -`, que segue depois de um erro):
+    (a) controle com os blocos do runbook antigo e um arquivo de `data` aberto por outro processo: reproduziu o defeito
+    (quarentena parcial e `data\.data.backup-*` aninhado); o comando novo de resíduos acha esse backup aninhado e a listagem da
+    preparação não; (b) o mesmo cenário com os blocos novos, na restauração parcial e em "Destino inválido": a primeira tentativa
+    para na quarentena, backups intactos, nada aninhado, `downloads` não restaurado; liberado o arquivo, a repetição do bloco
+    restaura, o conjunto valida e fica idêntico ao original, com duas quarentenas; (c) sem backups e com `$bd`/`$bz` antigos na
+    sessão, todos os blocos colados em sequência: variáveis zeradas, aviso de par incompleto, nada movido nem removido; (d) backup
+    só de `data`: validação de "uma só pasta", comparação vazia, `Restore-Backup` recusado com destino existente, remoção
+    (com backup só de `downloads`, apenas o pareamento e a validação de "uma só pasta"); (e) dois backups de `downloads` (3 s e 9 dias): o passo 4 mostra o de 9 dias, a comparação e a
+    remoção usam o de 3 s, e o outro fica; (f) as duas pastas ausentes: restauradas, conjunto válido e idêntico ao original, sem
+    resíduos; (g) restauração parcial sem arquivo aberto, como script (`-File`). 130 testes e Ruff verdes.
+  - **Não executado:** colagem num console interativo de verdade (com PSReadLine): o "colado" foi simulado pela entrada padrão;
+    PowerShell 7; o caso "Quarentena já existe" (bloco repetido no mesmo segundo); nada sobre `dashboard/atlas` nem `data/` do
+    repositório. O arquivo aberto foi sempre `data\manifesto.json`; arquivo aberto em subpasta ou em `downloads` não foi testado.
+  - **Limite da primeira rodada, resolvido na segunda:** com `-ErrorAction Stop` a quarentena ainda podia ficar parcial (o
+    `Move-Item` do PowerShell 5.1 movia os outros arquivos antes de falhar no que estava aberto); o runbook parava e explicava,
+    não evitava.
+- **Revisão independente da primeira rodada: aprovada com ressalvas.** Os 4 achados originais foram dados como resolvidos; a
+  revisão trouxe 5 achados novos, tratados na segunda rodada (commit `5979a59`):
+  - **Achado 1 (média), arquivo aberto dentro do backup deixava o destino incompleto sem erro:** a causa era o `Move-Item`, que
+    move arquivo por arquivo. Quarentena e restauração passaram a usar a função nova `Move-Pasta`
+    (`[System.IO.Directory]::Move`), que renomeia a pasta inteira ou falha sem mover nada; não existe mais estado parcial para o
+    operador repetir por cima. Cada etapa tem mensagem própria (`Quarentena de '...' falhou e nada foi movido` e `Restauração de
+    ... falhou e nada foi movido`), e a função confere o estado depois da falha (se não for "origem inteira, alvo ausente", manda
+    não repetir e acionar o dono). Os blocos ficaram repetíveis: com o destino já em quarentena, a repetição avisa e só restaura,
+    sem criar outra quarentena. "Se a restauração parar" foi reescrita por mensagem, incluindo a saída da restauração parcial que
+    para em `downloads` com `data` já restaurada (repetição responde `Backup ausente` e aponta para "Destino ausente e backup
+    válido").
+  - **Achado 2 (baixa), bloco da restauração parcial:** antes de mover qualquer coisa, o bloco agora valida `$nova`, confere cada
+    backup do par e para com `A pasta '...' existe: este não é o caso de restauração parcial. Nada foi movido.` se a outra pasta
+    existir. A repetição depois de uma restauração bem-sucedida não refaz nada: responde `Backup ausente` com a saída indicada.
+  - **Achado 3 (baixa), "param no primeiro erro":** cada bloco `& { ... }` e as duas funções começam com
+    `$ErrorActionPreference = 'Stop'`; a atribuição é local ao bloco e a preferência da sessão não muda (conferido). O texto diz
+    isso.
+  - **Achado 4 (baixa), "segunda quarentena":** o texto saiu; como a quarentena não fica mais parcial, há no máximo uma por pasta.
+  - **Achado 5 (só registro):** sem correção; segue declarado abaixo como não executado.
+  - **Executado nesta rodada** (Windows PowerShell 5.1.26100, blocos extraídos do próprio runbook, árvores sintéticas de 3
+    arquivos por pasta numa pasta temporária fora do repositório; colagem simulada invocando cada instrução de topo do bloco
+    separadamente na mesma sessão; arquivo mantido aberto por outro processo `powershell.exe`): 55 verificações, 0 falhas
+    (o número vem de um roteiro do executor que ficou na pasta temporária e **não está no repositório**; não é reproduzível a
+    partir dele).
+    Achado 1: "Destino inválido" com arquivo aberto em `.data.backup-*\municipio\a.json` (erro de restauração, destino ausente,
+    backup e quarentena inteiros; repetição com o arquivo ainda aberto não muda nada; liberado, `data` volta completa e idêntica
+    ao backup, uma quarentena); "Destino ausente" (mesmo comportamento); restauração parcial com falha em `downloads` depois de
+    `data` restaurada (`downloads` ausente e backup inteiro; repetição responde `Backup ausente`; a saída indicada conclui o
+    conjunto anterior completo), com falha já em `data`, e com `$nova = "downloads"`. Achado 2: `downloads` presente, nada
+    movido, também na repetição; `$nova` inválida recusada. Achado 3: controle sem a preferência segue adiante; com ela para;
+    "Destino inválido" e restauração parcial com `$atlas` nulo dão um único erro e não movem nada; preferência da sessão continua
+    `Continue`. Regressão: arquivo aberto no destino (para na quarentena sem mover nada; liberado, restaura), dois backups de
+    `downloads` (3 s e 9 dias: par usa o de 3 s, o outro fica), sessão com `$bd`/`$bz`/`$backup` antigos e nenhum backup (nada
+    movido), `Restore-Backup` com destino existente, "Quarentena já existe" e as duas pastas ausentes. Sonda à parte: com um
+    arquivo aberto em subpasta, `Directory.Move` falhou sem mover nada com compartilhamento `None`, `ReadWrite` e
+    `ReadWrite, Delete`; o `Move-Item` no mesmo cenário deixou 2 arquivos de cada lado. 130 testes e Ruff verdes.
+  - **Não executado nesta rodada:** colagem num console interativo de verdade (com PSReadLine) e PowerShell 7 (não instalado na
+    máquina), como na primeira rodada; os comandos Python de validação do contrato e a comparação de árvores (não mudaram e as
+    árvores desta rodada são sintéticas, não passam no contrato); volumes diferentes entre backup e destino; nada sobre
+    `dashboard/atlas` nem `data/` do repositório.
+  - **Pendente ao fim da segunda rodada:** `incidentes-simulados.md` cita os comandos antigos (`Move-Item`) e não foi tocado (fora
+    dos arquivos permitidos).
+- **Revisão independente da segunda rodada: aprovada com ressalvas.** Os 5 achados da primeira rodada foram dados como resolvidos
+  e a atomicidade do `Move-Pasta` foi confirmada pelo revisor (12 casos dele, incluindo `FileShare.None` e processo com diretório
+  de trabalho dentro da pasta). Ficaram 4 ressalvas baixas, tratadas na terceira rodada (commit `90f747d`), **só em texto**: os 14
+  blocos PowerShell do runbook são idênticos aos de `ceb703e` e a primitiva de movimentação não mudou.
+  - **Ressalva 1, `Backup ausente` afirmava uma causa que o código não confere:** a entrada diz agora que a mensagem não prova que
+    a pasta foi restaurada. A saída por "Destino ausente e backup válido" só vale se a execução anterior do mesmo bloco parou em
+    `Restauração de ... falhou e nada foi movido` na outra pasta, com conferência do estado (pasta do backup ausente no lugar,
+    outra pasta ausente com backup intacto, quarentena `.<nova>.quarentena-*` se a pasta nova existia). Na primeira execução, ou se
+    a conferência não fecha, o texto manda não restaurar só uma pasta (conjunto misto), refazer o passo 5 e a validação do par e,
+    sem backup das duas, parar. O passo 2 da restauração parcial aponta para essa entrada.
+  - **Ressalva 2, "nada foi movido" sempre atribuído a arquivo aberto:** parágrafo novo manda ler a `Causa:` antes de repetir;
+    repetir só quando for acesso negado ou arquivo em uso, citando o terminal ou programa com a pasta como diretório atual;
+    qualquer outra causa (caminho inválido, permissão, volumes diferentes) é parar e acionar o dono. As entradas de quarentena e de
+    restauração e a nota de "Destino ausente e backup válido" foram reescritas nesse sentido.
+  - **Ressalva 3, mensagens sem entrada própria:** "Se a restauração parar" tem agora uma entrada para cada mensagem emitida pelas
+    funções e blocos de "Recuperar": além das que já existiam, `Defina $nova` (corrigir e repetir), `Par de backups não definido`,
+    `Backup não definido para`, `Backup de '...' não definido ou ausente` (na repetição depois do sucesso significa "já
+    restaurado"; na primeira execução, variável nula ou antiga), `A pasta '...' existe` e o aviso `Destino ausente (já está em
+    quarentena?)`. "Qualquer outro erro" continua como regra final.
+  - **Ressalva 4, volumes diferentes:** o runbook diz que quarentena, backup e destino ficam sob `$atlas`, no mesmo volume, e que
+    entre volumes `Directory.Move` falha sem mover nada, com o motivo na `Causa:`. Esse comportamento foi **verificado pelo
+    revisor, não pelo executor**. A origem do número "55 verificações" está registrada acima.
+  - **Verificado nesta rodada:** como só o texto mudou, nenhum bloco foi reexecutado (o cenário da ressalva 1 não foi rodado: o
+    código que responde `Backup ausente` é o mesmo já exercitado). Conferência por comparação de cadeias, com um roteiro
+    temporário fora do repositório: os 14 blocos PowerShell são idênticos aos de `ceb703e`; as 12 mensagens distintas (14 instruções `throw` e
+    `Write-Warning`) dos blocos de "Recuperar" têm entrada na seção, e as 12 entradas casam literalmente com o texto emitido
+    (trechos separados por `...` conferidos em ordem). 130 testes e Ruff verdes.
+  - **Não verificado:** o comportamento entre volumes diferentes e as causas alternativas de "nada foi movido" (diretório de
+    trabalho dentro da pasta, permissão, caminho inválido) não foram reproduzidos pelo executor; a orientação apoia-se no relato
+    do revisor. Continuam sem execução: console interativo com PSReadLine e PowerShell 7.
+  - **Terceira rodada de revisão independente (curta, só o diff `ceb703e..2d54aa7`): aprovada com ressalvas.** As quatro ressalvas
+    estão resolvidas e os 14 blocos são idênticos (conferido pelo revisor por SHA-256). Dois achados baixos, de redação, corrigidos
+    pelo coordenador no commit seguinte: a contagem de mensagens acima (era "13"; são 12 distintas em 14 instruções) e a frase do
+    runbook sobre onde a mensagem diz que nada foi movido. Essa última correção não passou por nova rodada.
+  - **Pendente:** `docs/runbooks/incidentes-simulados.md` segue citando os comandos antigos com `Move-Item` (fora dos arquivos
+    permitidos; pede tarefa própria). Sem execução por ninguém: console interativo com PSReadLine e PowerShell 7.
 
 ## T06 e T07
 
