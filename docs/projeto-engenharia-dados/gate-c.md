@@ -61,9 +61,8 @@ A decisão sobre o e-mail nos metadados Git foi tomada em 17/11/2026 (aceitar).
 - **Limite declarado pela auditoria:** a busca não prova a ausência de um segredo com formato novo, ofuscado ou criptografado.
 - **Antes da demo:** repetir a varredura nos arquivos que mudaram desde 16/11/2026 (esta data é da auditoria).
 
-## O que falta para liberar a T07
+## Depois da liberação da T07
 
-1. Dono: reconferir o custo quando a primeira fatura fechar (dezembro/2026); não bloqueia a T07.
-2. ~~Decidir sobre o e-mail nos metadados Git~~: o dono aceitou em 17/11/2026.
-3. Dono: confirmar os quatro itens e liberar a T07 no quadro.
-4. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.
+1. Executar a T07 (demo profissional), já liberada pelo dono em 17/11/2026.
+2. Reconferir o custo quando a primeira fatura fechar (dezembro/2026); não bloqueia a T07.
+3. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.

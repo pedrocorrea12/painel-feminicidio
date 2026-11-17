@@ -33,7 +33,9 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | integrada | decisão do dono em 16/11/2026 |
 | T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | integrada | T23, T25 |
-| T27 | Resumo do Gate C com evidências (`docs/projeto-engenharia-dados/gate-c.md`) e teto de 2 rodadas de revisão para tarefas só de documentação (regra 9 do `AGENTS.md`) | Claude | tarefa/t27-resumo-gate-c | em revisão | pedido do dono em 17/11/2026 |
+| T27 | Resumo do Gate C com evidências (`docs/projeto-engenharia-dados/gate-c.md`) e teto de 2 rodadas de revisão para tarefas só de documentação (regra 9 do `AGENTS.md`) | Claude | tarefa/t27-resumo-gate-c | integrada | pedido do dono em 17/11/2026 |
+| T28 | Registrar o custo observado da AWS e a decisão sobre o e-mail nos metadados Git | Claude | tarefa/t28-custo-observado | integrada | T27; leitura do dono |
+| T29 | Registrar a confirmação do Gate C e liberar a T07 | Claude | tarefa/t29-gate-c-confirmado | em revisão | T28; confirmação do dono |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | liberada (Gate C confirmado em 17/11/2026) | Gate C |
 
@@ -595,6 +597,25 @@ integração (ignorado pelo Git; não apagar nem versionar).
   entra no teto, com leitura do dono mantida (**decisão que o dono deve confirmar ao ler a regra**); (N3) risco aceito: a correção
   sem revisão de um achado baixo pode tocar mais que o achado, mitigado por este registro. **Pendente:** **leitura do dono** (a mudança na regra 9 e o
   resumo do Gate C são dele).
+
+## T28 Custo observado e decisão sobre o e-mail
+
+- **Dono:** Claude. **Branch:** `tarefa/t28-custo-observado`. **Arquivos:** `docs/costs.md`,
+  `docs/projeto-engenharia-dados/gate-c.md` e a própria linha e Entrega no quadro.
+- **Entrega:** custo observado em 17/11/2026 registrado como US$ 0,00, com créditos restantes de
+  US$ 120,00; decisão do dono de aceitar o e-mail pessoal já presente nos metadados Git, sem
+  reescrever o histórico. Integrada pelo PR #8 (`6d67db5`).
+
+## T29 Confirmação do Gate C e liberação da T07
+
+- **Dono:** Claude, por confirmação expressa do dono em 17/11/2026. **Branch:**
+  `tarefa/t29-gate-c-confirmado`. **Arquivos:** `docs/projeto-engenharia-dados/gate-c.md` e a
+  própria linha e Entrega no quadro.
+- **Entrega:** os quatro itens do Gate C foram marcados como confirmados e a T07 foi liberada.
+  A revisão independente encontrou duas inconsistências médias de documentação e um achado baixo
+  de autoria; as inconsistências foram corrigidas neste commit, e o PR será integrado por squash
+  para que o commit anterior com `Co-Authored-By` não entre no histórico da `develope`.
+- **Pendente:** segunda rodada curta de revisão, CI verde e merge.
 
 ## T06 e T07
 
