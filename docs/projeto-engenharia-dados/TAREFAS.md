@@ -37,7 +37,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T28 | Registrar o custo observado da AWS e a decisão sobre o e-mail nos metadados Git | Claude | tarefa/t28-custo-observado | integrada | T27; leitura do dono |
 | T29 | Registrar a confirmação do Gate C e liberar a T07 | Claude | tarefa/t29-gate-c-confirmado | em revisão | T28; confirmação do dono |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
-| T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | liberada (Gate C confirmado em 17/11/2026) | Gate C |
+| T07 | Demo profissional (entrega 8) | Codex (`executor-tarefa`) | tarefa/t07-demo | em andamento | Gate C confirmado em 17/11/2026 |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
 arquivo. T01 também é independente.
@@ -616,6 +616,20 @@ integração (ignorado pelo Git; não apagar nem versionar).
   de autoria; as inconsistências foram corrigidas neste commit, e o PR será integrado por squash
   para que o commit anterior com `Co-Authored-By` não entre no histórico da `develope`.
 - **Pendente:** segunda rodada curta de revisão, CI verde e merge.
+
+## T07 Demo profissional
+
+- **Dono:** Codex, com execução pelo agente `executor-tarefa`. **Branch:** `tarefa/t07-demo`, a partir da `develope` já com o
+  Gate C confirmado. **Arquivos permitidos:** `docs/demo/README.md` (novo) e, nesta `TAREFAS.md`, somente a linha e esta seção.
+- **Escopo mínimo:** roteiro Markdown reproduzível de 10 a 15 minutos, sem slides obrigatórios e sem criar ou alterar pipeline,
+  dashboard, dados, infraestrutura, CI, benchmark, custos, ADRs ou runbooks. Deve contar uma única história: arquitetura;
+  contratos e qualidade; publicação e recuperação; benchmark; laboratório AWS, custos e limitações; painel público.
+- **Critérios de aceite:** comandos locais somente leitura ou sobre cópia temporária; resultado esperado junto de cada comando;
+  plano alternativo sem GitHub, AWS, fontes externas ou Silver local; nenhuma credencial, ID de conta ou nome real de bucket;
+  referência explícita ao procedimento vigente em `publicacao-gold.md`; pytest e Ruff verdes; revisão independente aprovada.
+- **Não refazer:** pipeline, dashboard, benchmark, incidentes, publicação AWS ou varredura histórica. Antes da entrega, fazer
+  apenas uma checagem direcionada dos arquivos alterados desde a auditoria de 16/11/2026.
+- **Pendente:** execução, revisão independente e merge.
 
 ## T06 e T07
 
