@@ -32,6 +32,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | em revisão | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | em revisão | decisão do dono em 16/11/2026 |
+| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | em andamento | T23, T25 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -431,6 +432,37 @@ integração (ignorado pelo Git; não apagar nem versionar).
   define o que um agente com escrita pode fazer, o que toca segurança no sentido da regra 9) e a primeira tarefa real como teste.
 - **Limite conhecido:** como no revisor, as travas são instrução, não bloqueio técnico; o coordenador confere `git status`, o diff e o
   `git log` da branch **e do checkout principal** depois de cada execução.
+
+## T26 Achados da segunda rodada da T23 no runbook de publicação
+
+- **Dono:** Claude, pelo agente `executor-tarefa` (primeira tarefa real dele). **Branch:** `tarefa/t26-runbook-achados-t23`, a partir
+  da `develope`. **Pedido do dono em chat (16/11/2026).**
+- **Arquivos permitidos:** `docs/runbooks/publicacao-gold.md`; e, em `docs/projeto-engenharia-dados/TAREFAS.md`, só: a linha da T26
+  e esta seção, o status na linha da T23, o trecho "**Pendente:** merge." no fim da Entrega da T23, e o status na linha da T25.
+- **Escopo, parte 1 (runbook):** os 4 achados da segunda rodada de revisão independente da T23, feita depois do merge do PR #4. Os
+  números de linha são os do runbook na `develope` e servem de orientação.
+  1. **(média) `Move-Item` sem guarda aninha o backup dentro do destino quando a quarentena falha** (bloco da restauração parcial,
+     por volta das linhas 214-220; o mesmo padrão nas linhas 195-196 e 172). Cenário reproduzido pelo revisor: `data` na versão nova
+     com um arquivo aberto por outro processo; o `Move-Item` da quarentena dá erro não terminante e move só parte da pasta; o comando
+     seguinte encontra `data` ainda existente e move o backup para dentro dela (`data\.data.backup-*`), onde a listagem do runbook,
+     que não é recursiva, não o encontra. Correção esperada: `-ErrorAction Stop` nos `Move-Item` e, antes de cada restauração, parar
+     com mensagem clara se o destino ainda existir; e dizer no runbook o que fazer nesse caso.
+  2. **(baixa/média) A comparação de árvores usa o `$backup` da preparação e a remoção usa o do par validado** (linhas 123, 138-140,
+     159 e 183). Com vários backups de uma pasta, compara-se um e apaga-se outro, que nunca foi comparado. Correção esperada:
+     comparar o mesmo backup que será removido (o do par, `$bd`/`$bz`).
+  3. **(baixa) O bloco de pareamento, colado no console, não para no `throw`** (linhas 73-81): as linhas seguintes rodam com `$bd`
+     nulo ou com um `$bd` antigo da mesma sessão. Correção esperada: zerar `$bd` e `$bz` no início do bloco e não seguir com valor
+     nulo.
+  4. **(baixa) Não há comando para conferir `.tmp-*`** (as linhas 222 e 250 pedem a conferência; a listagem das linhas 32-35 só
+     filtra `.backup-*`). Correção esperada: dar o comando.
+- **Verificação exigida:** extrair os blocos PowerShell do runbook corrigido e executá-los em cópias temporárias fora do
+  repositório (Windows PowerShell 5.1), incluindo o cenário do achado 1 com um arquivo mantido aberto. Nunca sobre `dashboard/atlas`
+  nem `data/` do repositório. Dizer na Entrega o que foi executado e o que não foi.
+- **Escopo, parte 2 (quadro):** T23 e T25 já estão na `develope` (PRs #4 e #5, merges `beaa953` e `8001d93`): mudar o status das duas
+  linhas para `integrada` e trocar o "**Pendente:** merge." da Entrega da T23 por uma frase dizendo que foi integrada pelo PR #4 e que
+  os achados da segunda rodada ficaram para a T26.
+- **Pedidos:** (nenhum até agora)
+- **Entrega:** (a preencher pelo executor)
 
 ## T06 e T07
 
