@@ -32,7 +32,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | integrada | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | integrada | decisão do dono em 16/11/2026 |
-| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | em andamento | T23, T25 |
+| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | em revisão | T23, T25 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -462,7 +462,37 @@ integração (ignorado pelo Git; não apagar nem versionar).
   linhas para `integrada` e trocar o "**Pendente:** merge." da Entrega da T23 por uma frase dizendo que foi integrada pelo PR #4 e que
   os achados da segunda rodada ficaram para a T26.
 - **Pedidos:** (nenhum até agora)
-- **Entrega:** (a preencher pelo executor)
+- **Entrega (Claude, `executor-tarefa`):**
+  - **Achado 1:** toda restauração passa pela função `Restore-Backup`, que para com `Destino ainda existe: ...` sem mover nada e
+    usa `Move-Item -ErrorAction Stop`; os `Move-Item` de quarentena também levam `-ErrorAction Stop`. Os blocos de mais de um passo
+    ("Destino inválido e backup válido" e a restauração parcial) vêm dentro de `& { ... }` e conferem o backup antes de mover, para
+    pararem no primeiro erro mesmo colados no console. Seção nova "Se a restauração parar" diz o que fazer: fechar o processo e
+    repetir o bloco (o resto do destino vai para uma segunda quarentena).
+  - **Achado 2:** o passo 4 virou só inspeção e não define mais `$backup`; a comparação de árvores define `$backup` a partir do par
+    (`$bd`/`$bz`), o mesmo que "Recuperar" restaura ou remove.
+  - **Achado 3:** o bloco de pareamento zera `$bd` e `$bz`, só calcula `$bz` com `$bd` definido e só imprime o par com os dois
+    definidos; senão avisa `Par de backups incompleto`. O `throw` de "Nenhum backup de 'downloads'" saiu: esse caso cai no aviso.
+  - **Achado 4:** comando em "Encerramento e evidências" que lista `.tmp-*`, `.backup-*` e quarentenas das duas pastas,
+    recursivo (acha também backup aninhado); a restauração parcial aponta para ele.
+  - **Parte 2:** T23 e T25 como `integrada`; "Pendente: merge." da T23 trocado pela frase do PR #4.
+  - **Executado** (Windows PowerShell 5.1, blocos extraídos do próprio runbook, em cópias de `data` e `downloads` numa pasta
+    temporária fora do repositório; "colado" = linhas entregues uma a uma por `powershell -Command -`, que segue depois de um erro):
+    (a) controle com os blocos do runbook antigo e um arquivo de `data` aberto por outro processo: reproduziu o defeito
+    (quarentena parcial e `data\.data.backup-*` aninhado); o comando novo de resíduos acha esse backup aninhado e a listagem da
+    preparação não; (b) o mesmo cenário com os blocos novos, na restauração parcial e em "Destino inválido": a primeira tentativa
+    para na quarentena, backups intactos, nada aninhado, `downloads` não restaurado; liberado o arquivo, a repetição do bloco
+    restaura, o conjunto valida e fica idêntico ao original, com duas quarentenas; (c) sem backups e com `$bd`/`$bz` antigos na
+    sessão, todos os blocos colados em sequência: variáveis zeradas, aviso de par incompleto, nada movido nem removido; (d) backup
+    só de `data`: validação de "uma só pasta", comparação vazia, `Restore-Backup` recusado com destino existente, remoção
+    (com backup só de `downloads`, apenas o pareamento e a validação de "uma só pasta"); (e) dois backups de `downloads` (3 s e 9 dias): o passo 4 mostra o de 9 dias, a comparação e a
+    remoção usam o de 3 s, e o outro fica; (f) as duas pastas ausentes: restauradas, conjunto válido e idêntico ao original, sem
+    resíduos; (g) restauração parcial sem arquivo aberto, como script (`-File`). 130 testes e Ruff verdes.
+  - **Não executado:** colagem num console interativo de verdade (com PSReadLine): o "colado" foi simulado pela entrada padrão;
+    PowerShell 7; o caso "Quarentena já existe" (bloco repetido no mesmo segundo); nada sobre `dashboard/atlas` nem `data/` do
+    repositório. O arquivo aberto foi sempre `data\manifesto.json`; arquivo aberto em subpasta ou em `downloads` não foi testado.
+  - **Pendente:** revisão independente. Limite que continua: com `-ErrorAction Stop` a quarentena ainda pode ficar parcial
+    (nos testes o `Move-Item` do PowerShell 5.1 moveu os outros arquivos antes de falhar no que estava aberto); o runbook agora
+    para e explica, não evita. `incidentes-simulados.md` cita os comandos antigos e não foi tocado (fora dos arquivos permitidos).
 
 ## T06 e T07
 
