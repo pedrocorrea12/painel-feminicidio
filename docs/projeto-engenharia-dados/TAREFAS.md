@@ -35,7 +35,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | integrada | T23, T25 |
 | T27 | Resumo do Gate C com evidências (`docs/projeto-engenharia-dados/gate-c.md`) e teto de 2 rodadas de revisão para tarefas só de documentação (regra 9 do `AGENTS.md`) | Claude | tarefa/t27-resumo-gate-c | em revisão | pedido do dono em 17/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
-| T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
+| T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | liberada (Gate C confirmado em 17/11/2026) | Gate C |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
 arquivo. T01 também é independente.
@@ -606,9 +606,9 @@ foi integrado à `develope` pelo PR #1 (merge `def2685`). Pendente: registrar o
 custo observado em `docs/costs.md` após a primeira fatura e desligar o
 laboratório (`docs/runbooks/desligar-laboratorio-aws.md`) antes de 14/05/2027.
 
-T07 continua **bloqueada**. Só o dono a libera, depois de confirmar **todos** os itens do
-Gate C (`docs/projeto-engenharia-dados/README.md`). Situação em 16/11/2026, sem nenhum
-item confirmado ainda:
+T07 **liberada pelo dono em 17/11/2026**, que confirmou os quatro itens do Gate C
+(resumo e evidências em `docs/projeto-engenharia-dados/gate-c.md`). A tabela abaixo é a
+situação de 16/11/2026, anterior à confirmação:
 
 | Item do Gate C | Situação | O que falta |
 | --- | --- | --- |
