@@ -48,6 +48,11 @@ e decisões em `docs/adr/`.
    revisor só lê; quem escreveu corrige os achados e pede nova rodada. Tarefas
    que mexem em segurança, custo ou dados reais pedem também a leitura do dono.
    Decisão do dono em 16/11/2026.
+   **Teto de rodadas (decisão do dono em 17/11/2026):** tarefa que só altera
+   documentação tem no máximo 2 rodadas de revisão independente. Depois da 2ª,
+   só um achado de gravidade média ou alta reabre a revisão; os de gravidade
+   baixa são corrigidos pelo autor sem nova rodada ou registrados na Entrega
+   como pendência. O teto não vale para código, segurança, custo ou dados reais.
 
 ## Ambiente
 

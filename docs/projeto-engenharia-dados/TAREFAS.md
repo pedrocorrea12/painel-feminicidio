@@ -27,12 +27,13 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T18 | Marcar artefatos gerados no Git (`.gitattributes`) para o diff do PR ficar legível | Codex | tarefa/t18-artefatos-gerados | integrada | T17 |
 | T19 | Analisar e rodar `pipeline/validate_project.py` na CI (hoje fora dela porque `data/silver` não é versionada) | Codex | tarefa/t19-validate-project-ci | integrada | T18; ok do dono para tocar `.github/` |
 | T20 | Incluir os ZIPs de `dashboard/atlas/downloads` na publicação segura (geração, validação e troca com backup) | Claude | tarefa/t20-zips-publicacao-segura | integrada | T05 (publicação segura) |
-| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | aprovada | T20 (publicação conjunta) |
-| T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | aprovada | nenhuma |
+| T21 | Simular incidentes da publicação (Gold inválida, ZIP corrompido, backup órfão, falha na troca) e registrar a recuperação | Claude | tarefa/t21-incidentes-simulados | integrada | T20 (publicação conjunta) |
+| T22 | Varredura de segredos e dados pessoais no repositório e no histórico (somente leitura, relatório) | Codex | tarefa/t22-varredura-segredos | integrada | nenhuma |
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | integrada | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | integrada | decisão do dono em 16/11/2026 |
-| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | aprovada | T23, T25 |
+| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | integrada | T23, T25 |
+| T27 | Resumo do Gate C com evidências (`docs/projeto-engenharia-dados/gate-c.md`) e teto de 2 rodadas de revisão para tarefas só de documentação (regra 9 do `AGENTS.md`) | Claude | tarefa/t27-resumo-gate-c | em revisão | pedido do dono em 17/11/2026 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -572,6 +573,22 @@ integração (ignorado pelo Git; não apagar nem versionar).
     runbook sobre onde a mensagem diz que nada foi movido. Essa última correção não passou por nova rodada.
   - **Pendente:** `docs/runbooks/incidentes-simulados.md` segue citando os comandos antigos com `Move-Item` (fora dos arquivos
     permitidos; pede tarefa própria). Sem execução por ninguém: console interativo com PSReadLine e PowerShell 7.
+
+## T27 Resumo do Gate C e teto de rodadas de revisão
+
+- **Pedido do dono (17/11/2026), em chat:** depois de 6 rodadas de revisão num único runbook (T23 e T26), fechar o Gate C com um
+  resumo de evidências e limitar as rodadas de revisão de documentação. **Dono:** Claude. **Branch:** `tarefa/t27-resumo-gate-c`, a
+  partir da `develope`.
+- **Arquivos:** `docs/projeto-engenharia-dados/gate-c.md` (novo), `AGENTS.md` (só o acréscimo à regra 9, por decisão do dono), e
+  nesta `TAREFAS.md` a linha e a seção da T27 e o status das linhas da T21, T22 e T26 (já integradas na `develope`: `1088c3b`,
+  `87c7e1f` e `8e8d989`).
+- **Entrega (Claude):** `gate-c.md` lista, para cada item do Gate C, a evidência no repositório, a pendência e o campo de
+  confirmação do dono; não confirma nada. Pendências que são do dono: custo da primeira fatura AWS em `docs/costs.md` e a decisão
+  sobre o e-mail nos metadados Git (achado baixo da T22). Teto: 2 rodadas para tarefa só de documentação; depois, só achado médio
+  ou alto reabre; vale para esta tarefa também. **Verificado:** as afirmações do `gate-c.md` foram conferidas contra os arquivos
+  citados e contra o resultado da CI em `8e8d989`. **Não verificado:** a data da última varredura de segredos (16/11/2026) é a da
+  auditoria; nenhuma varredura nova foi feita. **Pendente:** revisão independente; **leitura do dono** (a mudança na regra 9 e o
+  resumo do Gate C são dele).
 
 ## T06 e T07
 

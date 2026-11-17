@@ -1,0 +1,66 @@
+# Gate C: situação e evidências
+
+Resumo para o dono confirmar, item a item, antes de liberar a T07 (demo). Posição em
+17/11/2026, na `develope` em `8e8d989`. Este documento não confirma nada: a confirmação
+do Gate C é do dono (regra 5 do `AGENTS.md`).
+
+## Resumo
+
+| Item do Gate C | Evidência | Pendência | Confirmação do dono |
+| --- | --- | --- | --- |
+| CI visível e aprovado | Workflows `CI` e `Publicar Atlas` com sucesso em `8e8d989` | nenhuma | a fazer |
+| Incidentes simulados e recuperação demonstrada | `docs/runbooks/incidentes-simulados.md` e `docs/runbooks/publicacao-gold.md` | `incidentes-simulados.md` ainda mostra os comandos antigos de restauração | a fazer |
+| Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | **custo da primeira fatura AWS não registrado** | a fazer |
+| Nenhum segredo ou dado pessoal desnecessário | `docs/auditoria/varredura-segredos.md` | um achado de gravidade baixa (e-mail nos metadados Git) | a fazer |
+
+O único item que não fecha por conta própria é o de custos: depende da primeira fatura da AWS.
+
+## 1. CI visível e aprovado
+
+- Os workflows `CI` (lint, testes, validação do projeto e Terraform sem credenciais) e `Publicar Atlas` concluíram com
+  sucesso no merge `8e8d989`. A mesma coisa vale para os merges anteriores desta etapa (PRs 4, 5 e 6).
+- Como conferir: aba Actions do repositório no GitHub, ramo `develope`.
+- O que a CI não cobre: nada que use credenciais AWS. O `terraform apply` e a publicação no bucket são manuais e do dono.
+
+## 2. Incidentes simulados e recuperação demonstrada
+
+- **O que foi feito (T21):** cinco incidentes reproduzidos numa raiz de simulação, nunca no repositório: Gold inválida na
+  validação, ZIP corrompido, backup órfão que bloqueia a publicação, falha na segunda troca do `publicar_conjunto` e falha na
+  restauração com backups preservados. O relatório traz o roteiro, a saída real da reexecução de 16/11/2026 e as lacunas
+  encontradas no runbook.
+- **Correções do runbook (T23 e T26):** as lacunas viraram correção em `docs/runbooks/publicacao-gold.md`. A restauração agora
+  usa uma movimentação que renomeia a pasta inteira ou falha sem mover nada, e cada mensagem de erro tem orientação.
+- **Limites declarados:** a colagem dos blocos num console interativo real (PSReadLine) e o PowerShell 7 não foram testados por
+  ninguém. Os testes foram feitos no Windows PowerShell 5.1.
+- **Pendência:** `docs/runbooks/incidentes-simulados.md` ainda cita os comandos antigos com `Move-Item`. Quem for repetir a
+  simulação deve seguir o `publicacao-gold.md`, que é o texto vigente.
+
+## 3. Métricas reais, limitações e custos observados
+
+- **Métricas:** `docs/benchmark/` (T12): pipeline completo sem rede em cerca de 183 s, pico de memória de 5,2 GB, 13 estágios
+  medidos em 3 repetições. É medição local; não representa o tempo em um executor remoto.
+- **Custo estimado:** `docs/costs.md` traz a estimativa preliminar do benchmark e o custo esperado do laboratório (centavos de
+  armazenamento e requisições).
+- **Custo observado:** ainda **não registrado**. `docs/costs.md` diz "a registrar após a primeira fatura". Depende do dono:
+  conferir a fatura da AWS e preencher o valor.
+- **Prazo:** o laboratório deve ser desligado antes de 14/05/2027, pelo roteiro `docs/runbooks/desligar-laboratorio-aws.md`.
+- **Limitações conhecidas:** a federação OIDC do GitHub ficou desligada por uma SCP da organização da conta (ADR 0002), então a
+  publicação na AWS é por login local temporário.
+
+## 4. Nenhum segredo ou dado pessoal desnecessário
+
+- **O que foi feito (T22):** varredura mascarada de 506 arquivos rastreados e 152 commits (relatório em
+  `docs/auditoria/varredura-segredos.md`). Sem achados de gravidade alta ou média: nenhuma credencial, token, chave privada,
+  `.env`, estado Terraform, CPF ou dado pessoal individual.
+- **Achado de gravidade baixa:** o e-mail pessoal do dono aparece nos metadados de autoria de 145 commits. Não é credencial.
+  Decisão do dono: aceitar a exposição ou reescrever o histórico. Reescrever o histórico é ação exclusiva do dono (regra 5) e
+  muda todos os hashes; os commits novos já usam o endereço `noreply`.
+- **Limite declarado pela auditoria:** a busca não prova a ausência de um segredo com formato novo, ofuscado ou criptografado.
+- **Antes da demo:** repetir a varredura nos arquivos que mudaram desde 16/11/2026 (esta data é da auditoria).
+
+## O que falta para liberar a T07
+
+1. Dono: registrar o custo da primeira fatura AWS em `docs/costs.md`.
+2. Dono: decidir sobre o e-mail nos metadados Git (aceitar ou reescrever o histórico).
+3. Dono: confirmar os quatro itens e liberar a T07 no quadro.
+4. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.
