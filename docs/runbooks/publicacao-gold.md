@@ -167,7 +167,7 @@ explicada antes de qualquer remoção.
 ## Recuperar
 
 Decida pelo **conjunto**: nunca deixe `data` de uma versão com `downloads` de outra.
-**Não rode nenhum `Move-Item` antes de o par de backups ter passado na validação da
+**Não mova nenhuma pasta antes de o par de backups ter passado na validação da
 seção anterior.**
 
 O backup mais recente de uma pasta pode não ser o do par validado quando há vários.
@@ -184,41 +184,78 @@ $backup.FullName   # confira: é o caminho exato que passou na validação
 Aplique o caso abaixo a cada pasta, com `$nome`, `$destino` e `$backup` assim
 definidos.
 
-Toda restauração usa a função abaixo. Ela **não move nada** se o destino ainda
-existir: um `Move-Item` para um destino existente não substitui a pasta, e sim põe
-o backup **dentro** dela (`data\.data.backup-*`), onde a listagem da preparação não
-o encontra.
+Toda movimentação de pasta deste runbook usa as duas funções abaixo.
+
+- `Move-Pasta` renomeia a pasta inteira de uma vez (`[System.IO.Directory]::Move`,
+  a mesma operação de renomeação que a publicação usa). Se algum arquivo da pasta
+  estiver aberto por outro processo, a renomeação falha **sem mover nada**. Não
+  troque por `Move-Item`: no Windows PowerShell 5.1 ele move arquivo por arquivo e,
+  ao falhar no arquivo aberto, deixa a pasta dividida entre a origem e o destino.
+- `Restore-Backup` **não move nada** se o destino ainda existir: mover um backup
+  para um destino existente não substitui a pasta e pode pôr o backup **dentro**
+  dela (`data\.data.backup-*`), onde a listagem da preparação não o encontra.
 
 ```powershell
+function Move-Pasta([string]$origem, [string]$alvo, [string]$etapa) {
+    $ErrorActionPreference = 'Stop'
+    try {
+        [System.IO.Directory]::Move($origem, $alvo)
+    } catch {
+        $causa = $_.Exception.GetBaseException().Message
+        if ((Test-Path -LiteralPath $origem) -and -not (Test-Path -LiteralPath $alvo)) {
+            throw "$etapa falhou e nada foi movido: $origem continua inteira e $alvo não foi criada. Veja 'Se a restauração parar' no runbook. Causa: $causa"
+        }
+        throw "$etapa falhou em estado inesperado (origem: $origem; alvo: $alvo). Não repita o bloco: pare e acione o dono. Causa: $causa"
+    }
+}
+
 function Restore-Backup($backup, [string]$destino) {
+    $ErrorActionPreference = 'Stop'
     if (-not $backup) {
         throw "Backup não definido para $destino. Nada foi movido."
+    }
+    if (-not (Test-Path -LiteralPath $backup.FullName)) {
+        throw "Backup ausente: $($backup.FullName). Nada foi movido. Se $destino já foi restaurado por uma execução anterior, não há o que repetir."
     }
     if (Test-Path -LiteralPath $destino) {
         throw "Destino ainda existe: $destino. O backup não foi movido. Veja 'Se a restauração parar' no runbook."
     }
-    Move-Item -LiteralPath $backup.FullName -Destination $destino -ErrorAction Stop
+    Move-Pasta $backup.FullName $destino "Restauração de $destino"
 }
 ```
 
-Os blocos com mais de um passo vêm dentro de `& { ... }` para que, mesmo colados no
-console, parem no primeiro erro em vez de seguir para a linha seguinte.
+Os blocos com mais de um passo vêm dentro de `& { ... }` e começam com
+`$ErrorActionPreference = 'Stop'`: mesmo colados no console, param no primeiro erro
+de qualquer comando, em vez de seguir para a linha seguinte. A preferência vale só
+dentro do bloco (e dentro das duas funções); a da sessão do operador não muda.
 
 ### Se a restauração parar
 
-- **Erro do `Move-Item` da quarentena** (por exemplo, "o arquivo está sendo usado por
-  outro processo") **ou `Destino ainda existe`**: a quarentena não tirou a pasta
-  inteira do lugar, quase sempre porque outro processo mantém um arquivo dela aberto.
-  O `Move-Item` pode ter movido só **parte** da pasta antes de falhar; o que ficou no
-  destino está incompleto e o backup continua intacto ao lado. Não mova o backup à
-  mão. Feche o processo que segura o arquivo (passo 2 da preparação) e rode o mesmo
-  bloco de novo: o resto do destino vai para uma segunda quarentena (as duas, juntas,
-  são a versão retirada) e só então o backup é restaurado.
+Cada mensagem diz qual etapa parou. Nenhuma delas deixa pasta pela metade: a
+quarentena e a restauração movem a pasta inteira ou não movem nada.
+
+- **`Quarentena de '...' falhou e nada foi movido`**: outro processo mantém aberto
+  um arquivo do **destino**. O destino continua inteiro no lugar e o backup, intacto
+  ao lado. Feche o processo (passo 2 da preparação) e rode o mesmo bloco de novo.
+- **`Restauração de ... falhou e nada foi movido`**: outro processo mantém aberto um
+  arquivo do **backup**. O backup continua inteiro; o destino **não existe** (se o
+  bloco tinha quarentena, ela já levou a pasta inteira). Não mova o backup à mão,
+  nem arquivo por arquivo. Feche o processo e rode o mesmo bloco de novo: ele avisa
+  que o destino está ausente, não cria outra quarentena e só restaura o backup.
+- **`Backup ausente: ...`** ao repetir o bloco da restauração parcial: a pasta desse
+  backup já foi restaurada na execução anterior, que parou na **outra** pasta. A
+  outra está ausente com o backup intacto: conclua por "Destino ausente e backup
+  válido", com `$nome`, `$destino` e `$backup` apontados para ela, e rode a
+  validação do conjunto.
+- **`Destino ainda existe`**: o backup não foi movido. Dentro de um bloco com
+  quarentena isso não deveria acontecer; confira `$nome`, `$destino` e `$backup` e se
+  não há uma publicação rodando (passo 1 da preparação).
 - **`Quarentena já existe`**: o bloco foi repetido no mesmo segundo. Nada foi movido;
   rode de novo.
-- Qualquer outro erro do `Move-Item`: nada mais foi executado depois dele. Liste os
-  resíduos com o comando da seção "Encerramento e evidências" e, se o estado não
-  corresponder a nenhum caso deste runbook, **pare** e acione o dono.
+- **`falhou em estado inesperado`** ou qualquer outro erro: nada mais foi executado
+  depois dele. Não repita o bloco. Liste os resíduos com o comando da seção
+  "Encerramento e evidências" e, se o estado não corresponder a nenhum caso deste
+  runbook, **pare** e acione o dono.
 
 ### Destino ausente e backup válido
 
@@ -228,6 +265,9 @@ validado no mesmo volume:
 ```powershell
 Restore-Backup $backup $destino
 ```
+
+Se parar com `Restauração de ... falhou e nada foi movido`, um arquivo do backup está
+aberto: feche o processo e repita o comando.
 
 Depois de restaurar as duas pastas, rode a validação do conjunto (acima).
 
@@ -249,19 +289,25 @@ Preserve o destino para diagnóstico e restaure o backup:
 
 ```powershell
 & {
+    $ErrorActionPreference = 'Stop'
     if (-not $backup -or -not (Test-Path -LiteralPath $backup.FullName)) {
         throw "Backup de '$nome' não definido ou ausente. Nada foi movido."
     }
-    $quarentena = Join-Path $atlas (".$nome.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
-    if (Test-Path -LiteralPath $quarentena) {
-        throw "Quarentena já existe: $quarentena. Nada foi movido."
+    if (Test-Path -LiteralPath $destino) {
+        $quarentena = Join-Path $atlas (".$nome.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
+        if (Test-Path -LiteralPath $quarentena) {
+            throw "Quarentena já existe: $quarentena. Nada foi movido."
+        }
+        Move-Pasta $destino $quarentena "Quarentena de '$nome'"
+    } else {
+        Write-Warning "Destino ausente (já está em quarentena?): $destino. Só o backup será restaurado."
     }
-    Move-Item -LiteralPath $destino -Destination $quarentena -ErrorAction Stop
     Restore-Backup $backup $destino
 }
 ```
 
-Se o bloco parar, veja "Se a restauração parar".
+Se o bloco parar, veja "Se a restauração parar". O bloco pode ser repetido: se a
+quarentena já tirou o destino e a restauração falhou, a repetição só restaura.
 
 Depois de restaurar as duas pastas, rode a validação do conjunto. Mantenha as
 quarentenas até registrar a causa e confirmar o site restaurado.
@@ -281,21 +327,42 @@ não deve ficar publicada. Decida pelo conjunto, voltando as duas à versão ant
 ```powershell
 $nova = "data"   # a pasta que ficou na versão nova; use "downloads" se for o caso
 & {
-    if (-not $bd -or -not $bz -or
-        -not (Test-Path -LiteralPath $bd.FullName) -or -not (Test-Path -LiteralPath $bz.FullName)) {
-        throw "Par de backups não definido ou ausente. Nada foi movido."
+    $ErrorActionPreference = 'Stop'
+    if ($nova -ne "data" -and $nova -ne "downloads") {
+        throw 'Defina $nova como "data" ou "downloads". Nada foi movido.'
     }
-    $quarentena = Join-Path $atlas (".$nova.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
-    if (Test-Path -LiteralPath $quarentena) {
-        throw "Quarentena já existe: $quarentena. Nada foi movido."
+    if (-not $bd -or -not $bz) {
+        throw "Par de backups não definido. Nada foi movido."
     }
-    Move-Item -LiteralPath (Join-Path $atlas $nova) -Destination $quarentena -ErrorAction Stop
+    foreach ($b in $bd, $bz) {
+        if (-not (Test-Path -LiteralPath $b.FullName)) {
+            throw "Backup ausente: $($b.FullName). Nada foi movido. Se este bloco já restaurou essa pasta e parou na outra, veja 'Se a restauração parar' no runbook."
+        }
+    }
+    $outra = if ($nova -eq "data") { "downloads" } else { "data" }
+    if (Test-Path -LiteralPath (Join-Path $atlas $outra)) {
+        throw "A pasta '$outra' existe: este não é o caso de restauração parcial. Nada foi movido."
+    }
+    $destinoNova = Join-Path $atlas $nova
+    if (Test-Path -LiteralPath $destinoNova) {
+        $quarentena = Join-Path $atlas (".$nova.quarentena-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
+        if (Test-Path -LiteralPath $quarentena) {
+            throw "Quarentena já existe: $quarentena. Nada foi movido."
+        }
+        Move-Pasta $destinoNova $quarentena "Quarentena de '$nova'"
+    } else {
+        Write-Warning "Destino ausente (já está em quarentena?): $destinoNova. Só os backups serão restaurados."
+    }
     Restore-Backup $bd (Join-Path $atlas "data")
     Restore-Backup $bz (Join-Path $atlas "downloads")
 }
 ```
 
-   Se o bloco parar, veja "Se a restauração parar".
+   O bloco confere tudo antes de mover: se a **outra** pasta existir, o diagnóstico
+   está errado (não é este caso) e nada é movido. Se o bloco parar, veja "Se a
+   restauração parar": parando antes de restaurar `data`, ele pode ser repetido;
+   parando em `downloads` com `data` já restaurada, a repetição responde `Backup
+   ausente` e a saída é o caso "Destino ausente e backup válido" para `downloads`.
 
 3. Rode a validação do conjunto e confira que não restaram `.tmp-*` nem `.backup-*`
    com o comando da seção "Encerramento e evidências". Mantenha a quarentena até
@@ -308,10 +375,11 @@ com dois backups de `downloads` (3 s e 9 dias de diferença), o pareamento escol
 de 3 s. Como o horário é só uma heurística, a validação do par continua obrigatória.
 
 Na T26 os blocos deste runbook foram reexecutados em cópias temporárias (Windows
-PowerShell 5.1), incluindo a restauração com um arquivo de `data` mantido aberto por
-outro processo: o bloco parou na quarentena, que ficou parcial, sem mover nenhum
-backup; liberado o arquivo, a repetição do bloco devolveu o conjunto anterior,
-idêntico ao original, com duas quarentenas e nenhum backup aninhado.
+PowerShell 5.1) com um arquivo mantido aberto por outro processo, ora no destino,
+ora dentro do backup: em todos os casos o bloco parou sem deixar pasta pela metade
+e, liberado o arquivo, o caminho indicado em "Se a restauração parar" devolveu o
+conjunto anterior, idêntico ao original, com uma só quarentena por pasta e nenhum
+backup aninhado.
 
 ## Interpretar `RuntimeWarning`
 
