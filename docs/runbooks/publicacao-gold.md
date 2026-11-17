@@ -195,6 +195,11 @@ Toda movimentação de pasta deste runbook usa as duas funções abaixo.
   para um destino existente não substitui a pasta e pode pôr o backup **dentro**
   dela (`data\.data.backup-*`), onde a listagem da preparação não o encontra.
 
+Quarentena, backup e destino ficam todos sob `$atlas`, portanto no mesmo volume, e
+a renomeação nunca atravessa volumes. Não troque o alvo por uma pasta de outra
+unidade: entre volumes diferentes `[System.IO.Directory]::Move` falha sem mover
+nada, com o motivo na `Causa:` da mensagem.
+
 ```powershell
 function Move-Pasta([string]$origem, [string]$alvo, [string]$etapa) {
     $ErrorActionPreference = 'Stop'
@@ -232,30 +237,89 @@ dentro do bloco (e dentro das duas funções); a da sessão do operador não mud
 ### Se a restauração parar
 
 Cada mensagem diz qual etapa parou. Nenhuma delas deixa pasta pela metade: a
-quarentena e a restauração movem a pasta inteira ou não movem nada.
+quarentena e a restauração movem a pasta inteira ou não movem nada. As mensagens
+abaixo são todas as que as funções e os blocos da seção "Recuperar" emitem.
 
-- **`Quarentena de '...' falhou e nada foi movido`**: outro processo mantém aberto
-  um arquivo do **destino**. O destino continua inteiro no lugar e o backup, intacto
-  ao lado. Feche o processo (passo 2 da preparação) e rode o mesmo bloco de novo.
-- **`Restauração de ... falhou e nada foi movido`**: outro processo mantém aberto um
-  arquivo do **backup**. O backup continua inteiro; o destino **não existe** (se o
-  bloco tinha quarentena, ela já levou a pasta inteira). Não mova o backup à mão,
-  nem arquivo por arquivo. Feche o processo e rode o mesmo bloco de novo: ele avisa
-  que o destino está ausente, não cria outra quarentena e só restaura o backup.
-- **`Backup ausente: ...`** ao repetir o bloco da restauração parcial: a pasta desse
-  backup já foi restaurada na execução anterior, que parou na **outra** pasta. A
-  outra está ausente com o backup intacto: conclua por "Destino ausente e backup
-  válido", com `$nome`, `$destino` e `$backup` apontados para ela, e rode a
-  validação do conjunto.
+**Leia a `Causa:` antes de repetir** qualquer bloco que parou em `falhou e nada foi
+movido`. Repetir só resolve quando a causa é acesso negado ou arquivo em uso por
+outro processo, o que inclui um terminal ou programa com a pasta (ou uma subpasta
+dela) como diretório atual: feche o processo, ou saia da pasta, e repita. Qualquer
+outra causa (caminho inválido ou não encontrado, permissão que continua negada sem
+nenhum processo usando a pasta, volumes diferentes) não se resolve repetindo:
+**pare** e acione o dono.
+
+Etapa que falhou:
+
+- **`Quarentena de '...' falhou e nada foi movido`**: o **destino** não pôde ser
+  renomeado. Ele continua inteiro no lugar e o backup, intacto ao lado. O caso comum
+  é um arquivo do destino aberto por outro processo (passo 2 da preparação). Se a
+  `Causa:` for essa, libere a pasta e rode o mesmo bloco de novo; senão, pare.
+- **`Restauração de ... falhou e nada foi movido`**: o **backup** não pôde ser
+  renomeado. Ele continua inteiro; o destino **não existe** (se o bloco tinha
+  quarentena, ela já levou a pasta inteira). Não mova o backup à mão, nem arquivo por
+  arquivo. O caso comum é um arquivo do backup aberto por outro processo. Se a
+  `Causa:` for essa, libere a pasta e rode o mesmo bloco de novo: ele avisa que o
+  destino está ausente, não cria outra quarentena e só restaura o backup. Senão,
+  pare.
+- **`falhou em estado inesperado`**: depois da falha, a origem e o alvo não estão
+  como deveriam. Não repita o bloco. Liste os resíduos com o comando da seção
+  "Encerramento e evidências", **pare** e acione o dono.
+
+Conferência que parou antes de mover (a mensagem termina dizendo que nada, ou que o
+backup, não foi movido):
+
+- **`Defina $nova`**: `$nova` não é `data` nem `downloads`. Corrija a variável e
+  rode o bloco de novo.
+- **`Par de backups não definido`**: `$bd` ou `$bz` está nulo. Refaça o pareamento
+  (passo 5 da preparação) e a validação do par. Se só uma pasta tem backup, este não
+  é o caso de restauração parcial: **pare** e acione o dono.
+- **`Backup não definido para`**: `$backup` está nulo. Defina `$nome`, `$destino` e
+  `$backup` com o bloco do início de "Recuperar" e repita o comando.
+- **`Backup de '...' não definido ou ausente`** (bloco "Destino inválido e backup
+  válido"): se você está repetindo o bloco depois de ele ter terminado sem erro, a
+  pasta já foi restaurada e não há o que repetir; confirme que o destino existe e
+  que há uma quarentena `.<nome>.quarentena-*` e siga para a validação do conjunto.
+  Na primeira execução, `$backup` está nulo ou aponta para um backup que não existe
+  mais (variável antiga da sessão): refaça o passo 5 e a validação antes de repetir.
+- **`Backup ausente: ...`**: o backup indicado não existe. A mensagem **não** prova
+  que a pasta já foi restaurada; confira antes de seguir.
+  - No bloco da restauração parcial, a saída a seguir só vale se a execução anterior
+    **deste mesmo bloco** parou em `Restauração de ... falhou e nada foi movido` na
+    **outra** pasta. Confirme com o comando de resíduos de "Encerramento e
+    evidências" e olhando as pastas: a pasta do backup ausente está no lugar, a outra
+    pasta está ausente com o backup dela intacto e, se a pasta nova existia quando o
+    bloco começou, há uma quarentena `.<nova>.quarentena-*`. Confirmado isso, conclua
+    a outra pasta por "Destino ausente e backup válido", com `$nome`, `$destino` e
+    `$backup` apontados para ela, e rode a validação do conjunto.
+  - Se a mensagem saiu na **primeira** execução do bloco, ou se a conferência acima
+    não fecha, `$bd` ou `$bz` aponta para um backup que não existe mais (variável
+    antiga da sessão, validação do par pulada). **Não** restaure só a outra pasta:
+    ficaria uma pasta na versão nova e a outra na anterior, o conjunto misto que este
+    runbook proíbe. Refaça o passo 5 e a validação do par; sem backup das duas
+    pastas, **pare** e acione o dono.
+  - No comando de "Destino ausente e backup válido": se o destino existe porque você
+    acabou de restaurá-lo, não há o que repetir; se não existe, `$backup` está
+    desatualizado: refaça o passo 5.
 - **`Destino ainda existe`**: o backup não foi movido. Dentro de um bloco com
   quarentena isso não deveria acontecer; confira `$nome`, `$destino` e `$backup` e se
   não há uma publicação rodando (passo 1 da preparação).
-- **`Quarentena já existe`**: o bloco foi repetido no mesmo segundo. Nada foi movido;
-  rode de novo.
-- **`falhou em estado inesperado`** ou qualquer outro erro: nada mais foi executado
-  depois dele. Não repita o bloco. Liste os resíduos com o comando da seção
-  "Encerramento e evidências" e, se o estado não corresponder a nenhum caso deste
-  runbook, **pare** e acione o dono.
+- **`A pasta '...' existe`**: a outra pasta está no lugar, então este não é o caso de
+  restauração parcial. Não insista no bloco: valide o conjunto atual e escolha o caso
+  pelo estado de cada pasta ("Destino existente e válido" ou "Destino inválido e
+  backup válido").
+- **`Quarentena já existe`**: o bloco foi repetido no mesmo segundo. Rode de novo.
+
+Aviso, que não para o bloco:
+
+- **`Destino ausente (já está em quarentena?)`**: o destino não existe, então o bloco
+  não cria quarentena e só restaura. É o esperado ao repetir depois de uma
+  restauração que falhou. Na primeira execução do bloco "Destino inválido e backup
+  válido", significa que o caso era "Destino ausente e backup válido"; o resultado é
+  o mesmo.
+
+Qualquer outro erro: nada mais foi executado depois dele. Não repita o bloco. Liste
+os resíduos com o comando da seção "Encerramento e evidências" e, se o estado não
+corresponder a nenhum caso deste runbook, **pare** e acione o dono.
 
 ### Destino ausente e backup válido
 
@@ -266,8 +330,10 @@ validado no mesmo volume:
 Restore-Backup $backup $destino
 ```
 
-Se parar com `Restauração de ... falhou e nada foi movido`, um arquivo do backup está
-aberto: feche o processo e repita o comando.
+Se parar com `Restauração de ... falhou e nada foi movido`, leia a `Causa:`: se for
+arquivo em uso ou acesso negado (um arquivo do backup aberto, ou um terminal com a
+pasta como diretório atual), libere a pasta e repita o comando; se for outra, pare
+(veja "Se a restauração parar").
 
 Depois de restaurar as duas pastas, rode a validação do conjunto (acima).
 
@@ -363,6 +429,9 @@ $nova = "data"   # a pasta que ficou na versão nova; use "downloads" se for o c
    restauração parar": parando antes de restaurar `data`, ele pode ser repetido;
    parando em `downloads` com `data` já restaurada, a repetição responde `Backup
    ausente` e a saída é o caso "Destino ausente e backup válido" para `downloads`.
+   `Backup ausente` na **primeira** execução é outra coisa (`$bd` ou `$bz`
+   desatualizado): não restaure só uma pasta; veja a entrada dessa mensagem em "Se a
+   restauração parar".
 
 3. Rode a validação do conjunto e confira que não restaram `.tmp-*` nem `.backup-*`
    com o comando da seção "Encerramento e evidências". Mantenha a quarentena até
