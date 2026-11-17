@@ -265,7 +265,7 @@ Etapa que falhou:
   como deveriam. Não repita o bloco. Liste os resíduos com o comando da seção
   "Encerramento e evidências", **pare** e acione o dono.
 
-Conferência que parou antes de mover (a mensagem termina dizendo que nada, ou que o
+Conferência que parou antes de mover (a mensagem diz que nada, ou que o
 backup, não foi movido):
 
 - **`Defina $nova`**: `$nova` não é `data` nem `downloads`. Corrija a variável e

@@ -32,7 +32,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T23 | Corrigir `docs/runbooks/publicacao-gold.md` com os 5 defeitos achados na T21 (par de backups, restauração parcial, listagem truncada, backup nulo, vários backups por pasta) | Claude | tarefa/t23-corrige-runbook-publicacao | integrada | T21 |
 | T24 | Atualizar as regras 5 e 9 do `AGENTS.md` (push de branches de tarefa; revisor independente) e versionar `.claude/agents/revisor-independente.md` | Claude | integracao/gate-c | aprovada pelo dono | decisão do dono em 16/11/2026 |
 | T25 | Versionar o agente `executor-tarefa` (`.claude/agents/executor-tarefa.md`) para tarefas independentes rodarem em paralelo, cada uma no seu worktree | Claude | tarefa/t25-agente-executor | integrada | decisão do dono em 16/11/2026 |
-| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | em revisão | T23, T25 |
+| T26 | Corrigir `docs/runbooks/publicacao-gold.md` com os 4 achados da segunda rodada de revisão da T23 e acertar no quadro os status da T23 e da T25 | Claude (`executor-tarefa`) | tarefa/t26-runbook-achados-t23 | aprovada | T23, T25 |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
 | T07 | Demo profissional (entrega 8) | a definir | tarefa/t07-demo | bloqueada | Gate C |
 
@@ -560,14 +560,18 @@ integração (ignorado pelo Git; não apagar nem versionar).
     revisor, não pelo executor**. A origem do número "55 verificações" está registrada acima.
   - **Verificado nesta rodada:** como só o texto mudou, nenhum bloco foi reexecutado (o cenário da ressalva 1 não foi rodado: o
     código que responde `Backup ausente` é o mesmo já exercitado). Conferência por comparação de cadeias, com um roteiro
-    temporário fora do repositório: os 14 blocos PowerShell são idênticos aos de `ceb703e`; as 13 mensagens (`throw` e
+    temporário fora do repositório: os 14 blocos PowerShell são idênticos aos de `ceb703e`; as 12 mensagens distintas (14 instruções `throw` e
     `Write-Warning`) dos blocos de "Recuperar" têm entrada na seção, e as 12 entradas casam literalmente com o texto emitido
     (trechos separados por `...` conferidos em ordem). 130 testes e Ruff verdes.
   - **Não verificado:** o comportamento entre volumes diferentes e as causas alternativas de "nada foi movido" (diretório de
     trabalho dentro da pasta, permissão, caminho inválido) não foram reproduzidos pelo executor; a orientação apoia-se no relato
     do revisor. Continuam sem execução: console interativo com PSReadLine e PowerShell 7.
-  - **Pendente:** nova rodada de revisão independente, se o coordenador julgar necessária. `incidentes-simulados.md` segue citando
-    `Move-Item` (fora dos arquivos permitidos).
+  - **Terceira rodada de revisão independente (curta, só o diff `ceb703e..2d54aa7`): aprovada com ressalvas.** As quatro ressalvas
+    estão resolvidas e os 14 blocos são idênticos (conferido pelo revisor por SHA-256). Dois achados baixos, de redação, corrigidos
+    pelo coordenador no commit seguinte: a contagem de mensagens acima (era "13"; são 12 distintas em 14 instruções) e a frase do
+    runbook sobre onde a mensagem diz que nada foi movido. Essa última correção não passou por nova rodada.
+  - **Pendente:** `docs/runbooks/incidentes-simulados.md` segue citando os comandos antigos com `Move-Item` (fora dos arquivos
+    permitidos; pede tarefa própria). Sem execução por ninguém: console interativo com PSReadLine e PowerShell 7.
 
 ## T06 e T07
 
