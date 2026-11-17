@@ -587,7 +587,10 @@ integração (ignorado pelo Git; não apagar nem versionar).
   sobre o e-mail nos metadados Git (achado baixo da T22). Teto: 2 rodadas para tarefa só de documentação; depois, só achado médio
   ou alto reabre; vale para esta tarefa também. **Verificado:** as afirmações do `gate-c.md` foram conferidas contra os arquivos
   citados e contra o resultado da CI em `8e8d989`. **Não verificado:** a data da última varredura de segredos (16/11/2026) é a da
-  auditoria; nenhuma varredura nova foi feita. **Pendente:** revisão independente; **leitura do dono** (a mudança na regra 9 e o
+  auditoria; nenhuma varredura nova foi feita. **Revisão independente, 1ª rodada: aprovada com ressalvas** (1 média: "só documentação" sem definição, que deixaria
+  `AGENTS.md`, `.github/` e `infra/` escaparem; 6 baixas: gravidade atribuída por quem?, "reabre" ambíguo, registro dos achados
+  baixos, e três exageros do `gate-c.md`). Todos corrigidos; o médio reabriu a revisão, como a própria regra manda.
+  **Pendente:** 2ª rodada curta; **leitura do dono** (a mudança na regra 9 e o
   resumo do Gate C são dele).
 
 ## T06 e T07

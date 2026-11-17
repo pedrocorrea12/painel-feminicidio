@@ -13,12 +13,14 @@ do Gate C é do dono (regra 5 do `AGENTS.md`).
 | Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | **custo da primeira fatura AWS não registrado** | a fazer |
 | Nenhum segredo ou dado pessoal desnecessário | `docs/auditoria/varredura-segredos.md` | um achado de gravidade baixa (e-mail nos metadados Git) | a fazer |
 
-O único item que não fecha por conta própria é o de custos: depende da primeira fatura da AWS.
+Nenhum item depende de novo trabalho dos agentes. Dependem do dono: o custo da primeira fatura da AWS, a decisão sobre o
+e-mail nos metadados Git e a confirmação final.
 
 ## 1. CI visível e aprovado
 
 - Os workflows `CI` (lint, testes, validação do projeto e Terraform sem credenciais) e `Publicar Atlas` concluíram com
-  sucesso no merge `8e8d989`. A mesma coisa vale para os merges anteriores desta etapa (PRs 4, 5 e 6).
+  sucesso no merge `8e8d989`. O mesmo vale para os três últimos merges (PRs 4, 5 e 6), conferidos pela
+  API do GitHub; os PRs 1 a 3 não foram conferidos neste resumo.
 - Como conferir: aba Actions do repositório no GitHub, ramo `develope`.
 - O que a CI não cobre: nada que use credenciais AWS. O `terraform apply` e a publicação no bucket são manuais e do dono.
 
@@ -52,7 +54,8 @@ O único item que não fecha por conta própria é o de custos: depende da prime
 - **O que foi feito (T22):** varredura mascarada de 506 arquivos rastreados e 152 commits (relatório em
   `docs/auditoria/varredura-segredos.md`). Sem achados de gravidade alta ou média: nenhuma credencial, token, chave privada,
   `.env`, estado Terraform, CPF ou dado pessoal individual.
-- **Achado de gravidade baixa:** o e-mail pessoal do dono aparece nos metadados de autoria de 145 commits. Não é credencial.
+- **Achado de gravidade baixa:** um e-mail pessoal aparece nos metadados de autoria de 145 commits (a auditoria o mascara;
+  o dono deve confirmar se é o seu). Não é credencial.
   Decisão do dono: aceitar a exposição ou reescrever o histórico. Reescrever o histórico é ação exclusiva do dono (regra 5) e
   muda todos os hashes; os commits novos já usam o endereço `noreply`.
 - **Limite declarado pela auditoria:** a busca não prova a ausência de um segredo com formato novo, ofuscado ou criptografado.
