@@ -48,5 +48,15 @@ Execução `20261115T013546Z-c752be7` (commit c752be7), pelo runbook
 `docs/runbooks/publicar-gold-na-aws.md` e login local temporário. 53 objetos
 (52 arquivos da Gold e o manifesto), 34,8 MB, em `gold/<id-da-execução>/` do bucket
 privado. Verificado: contagem de objetos, hash do manifesto igual ao local, objeto
-criptografado e acesso público bloqueado. Custo observado: a registrar após a
-primeira fatura (esperado: centavos de armazenamento e requisições).
+criptografado e acesso público bloqueado.
+
+## Custo observado (17/11/2026)
+
+Painel de faturamento da conta, lido pelo dono em 17/11/2026: valor devido US$ 0,00;
+custo acumulado do mês US$ 0,00; créditos restantes US$ 120,00 (o painel mostra mais
+que os US$ 100 anotados em 14/11); plano gratuito, 180 dias restantes (até 14/05/2027).
+Todo o uso é coberto pelos créditos. O painel agrupa por projeto da conta e mostra um
+único projeto, na região `us-east-2` (a do laboratório), com um nome de projeto do painel
+diferente de `dados-violencia-sc-lab`, que é o nome usado nos recursos; o gasto é da conta toda.
+Fonte: leitura manual do painel, sem exportação da fatura. A primeira fatura fechada
+(dezembro/2026) ainda não existe: reconferir o valor quando fechar.
