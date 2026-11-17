@@ -1,17 +1,17 @@
 # Gate C: situação e evidências
 
 Resumo para o dono confirmar, item a item, antes de liberar a T07 (demo). Posição em
-17/11/2026, na `develope` em `8e8d989`. Este documento não confirma nada: a confirmação
-do Gate C é do dono (regra 5 do `AGENTS.md`).
+17/11/2026, na `develope` em `8e8d989`. A confirmação do Gate C é do dono (regra 5 do `AGENTS.md`); o dono confirmou os quatro
+itens em 17/11/2026 e liberou a T07.
 
 ## Resumo
 
 | Item do Gate C | Evidência | Pendência | Confirmação do dono |
 | --- | --- | --- | --- |
-| CI visível e aprovado | Workflows `CI` e `Publicar Atlas` com sucesso em `8e8d989` | nenhuma | a fazer |
-| Incidentes simulados e recuperação demonstrada | `docs/runbooks/incidentes-simulados.md` e `docs/runbooks/publicacao-gold.md` | `incidentes-simulados.md` ainda mostra os comandos antigos de restauração | a fazer |
-| Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | custo observado registrado em 17/11 (US$ 0,00); reconferir quando a fatura fechar | a fazer |
-| Nenhum segredo ou dado pessoal desnecessário | `docs/auditoria/varredura-segredos.md` | um achado de gravidade baixa (e-mail nos metadados Git), aceito pelo dono em 17/11/2026 | a fazer |
+| CI visível e aprovado | Workflows `CI` e `Publicar Atlas` com sucesso em `8e8d989` | nenhuma | confirmado em 17/11/2026 |
+| Incidentes simulados e recuperação demonstrada | `docs/runbooks/incidentes-simulados.md` e `docs/runbooks/publicacao-gold.md` | `incidentes-simulados.md` ainda mostra os comandos antigos de restauração | confirmado em 17/11/2026 |
+| Métricas reais, limitações e custos observados | `docs/benchmark/`, `docs/costs.md` | custo observado registrado em 17/11 (US$ 0,00); reconferir quando a fatura fechar | confirmado em 17/11/2026 |
+| Nenhum segredo ou dado pessoal desnecessário | `docs/auditoria/varredura-segredos.md` | um achado de gravidade baixa (e-mail nos metadados Git), aceito pelo dono em 17/11/2026 | confirmado em 17/11/2026 |
 
 Nenhum item depende de novo trabalho dos agentes. Depende do dono: a confirmação final.
 A decisão sobre o e-mail nos metadados Git foi tomada em 17/11/2026 (aceitar).
@@ -61,9 +61,8 @@ A decisão sobre o e-mail nos metadados Git foi tomada em 17/11/2026 (aceitar).
 - **Limite declarado pela auditoria:** a busca não prova a ausência de um segredo com formato novo, ofuscado ou criptografado.
 - **Antes da demo:** repetir a varredura nos arquivos que mudaram desde 16/11/2026 (esta data é da auditoria).
 
-## O que falta para liberar a T07
+## Depois da liberação da T07
 
-1. Dono: reconferir o custo quando a primeira fatura fechar (dezembro/2026); não bloqueia a T07.
-2. ~~Decidir sobre o e-mail nos metadados Git~~: o dono aceitou em 17/11/2026.
-3. Dono: confirmar os quatro itens e liberar a T07 no quadro.
-4. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.
+1. Executar a T07 (demo profissional), já liberada pelo dono em 17/11/2026.
+2. Reconferir o custo quando a primeira fatura fechar (dezembro/2026); não bloqueia a T07.
+3. Opcional, sem bloquear: alinhar `incidentes-simulados.md` ao runbook novo.
