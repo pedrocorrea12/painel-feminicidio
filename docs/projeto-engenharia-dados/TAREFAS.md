@@ -37,7 +37,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T28 | Registrar o custo observado da AWS e a decisão sobre o e-mail nos metadados Git | Claude | tarefa/t28-custo-observado | integrada | T27; leitura do dono |
 | T29 | Registrar a confirmação do Gate C e liberar a T07 | Claude | tarefa/t29-gate-c-confirmado | em revisão | T28; confirmação do dono |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
-| T07 | Demo profissional (entrega 8) | Codex (`executor-tarefa`) | tarefa/t07-demo | em revisão | Gate C confirmado em 17/11/2026 |
+| T07 | Demo profissional (entrega 8) | Codex (`executor-tarefa`) | tarefa/t07-demo | aprovada | Gate C confirmado em 17/11/2026 |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
 arquivo. T01 também é independente.
@@ -647,7 +647,11 @@ integração (ignorado pelo Git; não apagar nem versionar).
   rede não foram medidos, que a primeira fatura fechada ainda será reconferida e que
   a transcrição de incidentes é histórica.
 - **Pedidos:** nenhum.
-- **Pendente:** revisão independente e merge.
+- **Revisão independente:** aprovada, sem achados. O revisor executou os comandos
+  seguros, confirmou os números versionados, a duração de 13min30s, o plano offline,
+  o escopo e a ausência de valores sensíveis nos arquivos alterados. Pytest: 130
+  aprovados; Ruff: sem erros.
+- **Pendente:** merge.
 
 ## T06 e T07
 
