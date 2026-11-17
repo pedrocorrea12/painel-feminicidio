@@ -37,7 +37,7 @@ Backlog de origem: `README.md` desta pasta (entregas 1 a 8).
 | T28 | Registrar o custo observado da AWS e a decisão sobre o e-mail nos metadados Git | Claude | tarefa/t28-custo-observado | integrada | T27; leitura do dono |
 | T29 | Registrar a confirmação do Gate C e liberar a T07 | Claude | tarefa/t29-gate-c-confirmado | em revisão | T28; confirmação do dono |
 | T06 | Laboratório AWS (entrega 7) | Claude | tarefa/t06-aws | integrada (parcial) | T12, estimativa de custo, aprovação do dono |
-| T07 | Demo profissional (entrega 8) | Codex (`executor-tarefa`) | tarefa/t07-demo | em andamento | Gate C confirmado em 17/11/2026 |
+| T07 | Demo profissional (entrega 8) | Codex (`executor-tarefa`) | tarefa/t07-demo | em revisão | Gate C confirmado em 17/11/2026 |
 
 T02 e T03 são independentes e podem rodar em paralelo: não compartilham nenhum
 arquivo. T01 também é independente.
@@ -629,7 +629,25 @@ integração (ignorado pelo Git; não apagar nem versionar).
   referência explícita ao procedimento vigente em `publicacao-gold.md`; pytest e Ruff verdes; revisão independente aprovada.
 - **Não refazer:** pipeline, dashboard, benchmark, incidentes, publicação AWS ou varredura histórica. Antes da entrega, fazer
   apenas uma checagem direcionada dos arquivos alterados desde a auditoria de 16/11/2026.
-- **Pendente:** execução, revisão independente e merge.
+- **Entrega:** `docs/demo/README.md` traz um roteiro único de 10 a 15 minutos,
+  dividido por tempo, sobre arquitetura, contratos e qualidade, publicação e
+  recuperação, benchmark, laboratório AWS, custos, limitações e painel público.
+  Cada comando é somente leitura, tem resultado esperado e há um plano alternativo
+  sem GitHub, AWS, fontes externas, Silver local ou servidor do painel. O roteiro
+  aponta explicitamente `docs/runbooks/publicacao-gold.md` como procedimento vigente
+  e não refaz pipeline, dashboard, benchmark, incidentes, publicação AWS ou
+  auditoria histórica.
+- **Verificação:** 130 testes aprovados e Ruff sem erros. A checagem direcionada dos
+  9 arquivos rastreados alterados desde a auditoria, incluindo esta entrega, não encontrou,
+  por nome de arquivo e sem imprimir valores, chave privada, chave AWS, token GitHub,
+  segredo atribuído, ARN com conta nem CPF formatado.
+- **Limites:** a checagem direcionada não substitui a auditoria histórica e não
+  prova ausência de segredo ofuscado ou em formato desconhecido; não houve acesso a
+  GitHub, AWS, fontes externas ou dados reais. A demo declara que os estágios de
+  rede não foram medidos, que a primeira fatura fechada ainda será reconferida e que
+  a transcrição de incidentes é histórica.
+- **Pedidos:** nenhum.
+- **Pendente:** revisão independente e merge.
 
 ## T06 e T07
 
