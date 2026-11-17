@@ -48,6 +48,19 @@ e decisões em `docs/adr/`.
    revisor só lê; quem escreveu corrige os achados e pede nova rodada. Tarefas
    que mexem em segurança, custo ou dados reais pedem também a leitura do dono.
    Decisão do dono em 16/11/2026.
+   **Teto de rodadas (decisão do dono em 17/11/2026):** tarefa que só altera
+   documentação tem no máximo 2 rodadas de revisão independente. "Só documentação"
+   são arquivos `.md` e `docs/`; qualquer mudança em `AGENTS.md`, `.claude/`,
+   `.github/`, `infra/`, `src/`, `pipeline/`, `tests/` ou dados nunca conta como
+   só documentação. Depois da 2ª rodada, só um achado de gravidade média ou alta
+   reabre a revisão (com rodadas sem limite até ser resolvido). A gravidade é a
+   atribuída pelo revisor, não pelo autor. Os achados de gravidade baixa são
+   corrigidos pelo autor sem nova rodada e **registrados na Entrega** (o que foi
+   corrigido sem revisão) ou deixados como pendência registrada. O teto não vale
+   para código, segurança, custo ou dados reais. Documentação que só descreve ou
+   instrui operação sobre esses temas (runbooks, `docs/costs.md`, auditorias)
+   entra no teto, desde que a tarefa não altere nenhum arquivo fora da definição
+   acima; a leitura do dono continua obrigatória nesses casos.
 
 ## Ambiente
 
