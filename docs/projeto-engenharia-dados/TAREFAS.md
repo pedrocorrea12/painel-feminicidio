@@ -462,7 +462,8 @@ integração (ignorado pelo Git; não apagar nem versionar).
   linhas para `integrada` e trocar o "**Pendente:** merge." da Entrega da T23 por uma frase dizendo que foi integrada pelo PR #4 e que
   os achados da segunda rodada ficaram para a T26.
 - **Pedidos:** (nenhum até agora)
-- **Entrega (Claude, `executor-tarefa`):**
+- **Entrega (Claude, `executor-tarefa`), primeira rodada** (commits `eb70a6c`, `03b6f42`, `530219f`; o que a segunda rodada mudou
+  está logo abaixo e prevalece):
   - **Achado 1:** toda restauração passa pela função `Restore-Backup`, que para com `Destino ainda existe: ...` sem mover nada e
     usa `Move-Item -ErrorAction Stop`; os `Move-Item` de quarentena também levam `-ErrorAction Stop`. Os blocos de mais de um passo
     ("Destino inválido e backup válido" e a restauração parcial) vêm dentro de `& { ... }` e conferem o backup antes de mover, para
@@ -490,9 +491,49 @@ integração (ignorado pelo Git; não apagar nem versionar).
   - **Não executado:** colagem num console interativo de verdade (com PSReadLine): o "colado" foi simulado pela entrada padrão;
     PowerShell 7; o caso "Quarentena já existe" (bloco repetido no mesmo segundo); nada sobre `dashboard/atlas` nem `data/` do
     repositório. O arquivo aberto foi sempre `data\manifesto.json`; arquivo aberto em subpasta ou em `downloads` não foi testado.
-  - **Pendente:** revisão independente. Limite que continua: com `-ErrorAction Stop` a quarentena ainda pode ficar parcial
-    (nos testes o `Move-Item` do PowerShell 5.1 moveu os outros arquivos antes de falhar no que estava aberto); o runbook agora
-    para e explica, não evita. `incidentes-simulados.md` cita os comandos antigos e não foi tocado (fora dos arquivos permitidos).
+  - **Limite da primeira rodada, resolvido na segunda:** com `-ErrorAction Stop` a quarentena ainda podia ficar parcial (o
+    `Move-Item` do PowerShell 5.1 movia os outros arquivos antes de falhar no que estava aberto); o runbook parava e explicava,
+    não evitava.
+- **Revisão independente da primeira rodada: aprovada com ressalvas.** Os 4 achados originais foram dados como resolvidos; a
+  revisão trouxe 5 achados novos, tratados na segunda rodada (commit `5979a59`):
+  - **Achado 1 (média), arquivo aberto dentro do backup deixava o destino incompleto sem erro:** a causa era o `Move-Item`, que
+    move arquivo por arquivo. Quarentena e restauração passaram a usar a função nova `Move-Pasta`
+    (`[System.IO.Directory]::Move`), que renomeia a pasta inteira ou falha sem mover nada; não existe mais estado parcial para o
+    operador repetir por cima. Cada etapa tem mensagem própria (`Quarentena de '...' falhou e nada foi movido` e `Restauração de
+    ... falhou e nada foi movido`), e a função confere o estado depois da falha (se não for "origem inteira, alvo ausente", manda
+    não repetir e acionar o dono). Os blocos ficaram repetíveis: com o destino já em quarentena, a repetição avisa e só restaura,
+    sem criar outra quarentena. "Se a restauração parar" foi reescrita por mensagem, incluindo a saída da restauração parcial que
+    para em `downloads` com `data` já restaurada (repetição responde `Backup ausente` e aponta para "Destino ausente e backup
+    válido").
+  - **Achado 2 (baixa), bloco da restauração parcial:** antes de mover qualquer coisa, o bloco agora valida `$nova`, confere cada
+    backup do par e para com `A pasta '...' existe: este não é o caso de restauração parcial. Nada foi movido.` se a outra pasta
+    existir. A repetição depois de uma restauração bem-sucedida não refaz nada: responde `Backup ausente` com a saída indicada.
+  - **Achado 3 (baixa), "param no primeiro erro":** cada bloco `& { ... }` e as duas funções começam com
+    `$ErrorActionPreference = 'Stop'`; a atribuição é local ao bloco e a preferência da sessão não muda (conferido). O texto diz
+    isso.
+  - **Achado 4 (baixa), "segunda quarentena":** o texto saiu; como a quarentena não fica mais parcial, há no máximo uma por pasta.
+  - **Achado 5 (só registro):** sem correção; segue declarado abaixo como não executado.
+  - **Executado nesta rodada** (Windows PowerShell 5.1.26100, blocos extraídos do próprio runbook, árvores sintéticas de 3
+    arquivos por pasta numa pasta temporária fora do repositório; colagem simulada invocando cada instrução de topo do bloco
+    separadamente na mesma sessão; arquivo mantido aberto por outro processo `powershell.exe`): 55 verificações, 0 falhas.
+    Achado 1: "Destino inválido" com arquivo aberto em `.data.backup-*\municipio\a.json` (erro de restauração, destino ausente,
+    backup e quarentena inteiros; repetição com o arquivo ainda aberto não muda nada; liberado, `data` volta completa e idêntica
+    ao backup, uma quarentena); "Destino ausente" (mesmo comportamento); restauração parcial com falha em `downloads` depois de
+    `data` restaurada (`downloads` ausente e backup inteiro; repetição responde `Backup ausente`; a saída indicada conclui o
+    conjunto anterior completo), com falha já em `data`, e com `$nova = "downloads"`. Achado 2: `downloads` presente, nada
+    movido, também na repetição; `$nova` inválida recusada. Achado 3: controle sem a preferência segue adiante; com ela para;
+    "Destino inválido" e restauração parcial com `$atlas` nulo dão um único erro e não movem nada; preferência da sessão continua
+    `Continue`. Regressão: arquivo aberto no destino (para na quarentena sem mover nada; liberado, restaura), dois backups de
+    `downloads` (3 s e 9 dias: par usa o de 3 s, o outro fica), sessão com `$bd`/`$bz`/`$backup` antigos e nenhum backup (nada
+    movido), `Restore-Backup` com destino existente, "Quarentena já existe" e as duas pastas ausentes. Sonda à parte: com um
+    arquivo aberto em subpasta, `Directory.Move` falhou sem mover nada com compartilhamento `None`, `ReadWrite` e
+    `ReadWrite, Delete`; o `Move-Item` no mesmo cenário deixou 2 arquivos de cada lado. 130 testes e Ruff verdes.
+  - **Não executado nesta rodada:** colagem num console interativo de verdade (com PSReadLine) e PowerShell 7 (não instalado na
+    máquina), como na primeira rodada; os comandos Python de validação do contrato e a comparação de árvores (não mudaram e as
+    árvores desta rodada são sintéticas, não passam no contrato); volumes diferentes entre backup e destino; nada sobre
+    `dashboard/atlas` nem `data/` do repositório.
+  - **Pendente:** nova rodada de revisão independente. `incidentes-simulados.md` cita os comandos antigos (`Move-Item`) e não foi
+    tocado (fora dos arquivos permitidos).
 
 ## T06 e T07
 
